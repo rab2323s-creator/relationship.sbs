@@ -3,37 +3,150 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>relationship.sbs — 60-sec relationship tests</title>
-  <meta name="description" content="Fast relationship micro-tests with instant results you can share." />
-  <link rel="stylesheet" href="styles.css" />
+  <title>relationship.sbs — Micro relationship tests (60 seconds)</title>
+  <meta name="description" content="Fast, shareable micro-tests for relationships: attachment style, love language, conflict style. Instant results + one practical next step." />
+
+  <link rel="canonical" href="https://relationship.sbs/" />
+
+  <meta property="og:title" content="relationship.sbs — Micro relationship tests (60 seconds)" />
+  <meta property="og:description" content="Fast, shareable micro-tests for relationships. Instant results + one practical next step." />
+  <meta property="og:url" content="https://relationship.sbs/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="relationship.sbs" />
+
+  <meta name="twitter:card" content="summary" />
+
+  <link rel="stylesheet" href="/assets/styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"relationship.sbs",
+    "url":"https://relationship.sbs/",
+    "inLanguage":"en",
+    "description":"Micro relationship tests with instant, shareable results and practical next steps.",
+    "potentialAction":{
+      "@type":"SearchAction",
+      "target":"https://relationship.sbs/?q={search_term_string}",
+      "query-input":"required name=search_term_string"
+    }
+  }
+  </script>
 </head>
 <body>
-  <header class="top">
-    <a class="logo" href="/">relationship.sbs</a>
-    <nav class="nav">
-      <a href="#tests">Tests</a>
-      <a href="#about">About</a>
-    </nav>
-  </header>
+  <header id="siteHeader"></header>
 
   <main class="wrap">
     <section class="hero">
-      <h1>60-second relationship tests.</h1>
-      <p>Instant results. Practical next step. No sign-up.</p>
-      <button id="startBtn" class="btn">Start a test</button>
+      <div class="heroCard">
+        <h1>Micro-tests for modern relationships.</h1>
+        <p>
+          No sign-up. No long forms. Just <strong>60 seconds</strong> to get a clear, shareable snapshot—
+          plus one practical next step you can try today.
+        </p>
+        <div class="row">
+          <a class="btn" href="#tests">Start a test</a>
+          <a class="btn secondary" href="/tools/text-decoder/">Decode a text</a>
+        </div>
+        <div class="pills" style="margin-top:14px;">
+          <span class="pill">Instant result</span>
+          <span class="pill">Share link</span>
+          <span class="pill">Actionable next step</span>
+        </div>
+      </div>
+
+      <div class="heroCard" style="background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));">
+        <h2 style="margin:0 0 10px;">Trending right now</h2>
+        <div class="card" style="margin:0; background:rgba(0,0,0,.12); box-shadow:none;">
+          <div class="row" style="justify-content:space-between;">
+            <div>
+              <div style="font-weight:800;">Attachment Style Snapshot</div>
+              <div class="small">Why you chase, freeze, or stay calm.</div>
+            </div>
+            <a class="btn small" href="/tests/attachment-style/">Open</a>
+          </div>
+          <hr />
+          <div class="row" style="justify-content:space-between;">
+            <div>
+              <div style="font-weight:800;">Text Decoder</div>
+              <div class="small">What they might mean + what to reply.</div>
+            </div>
+            <a class="btn small secondary" href="/tools/text-decoder/">Open</a>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="tests" class="grid"></section>
+    <section id="tests">
+      <h2 style="margin:0 0 10px;">Tests</h2>
+      <p class="muted" style="margin:0 0 12px;">
+        Built for clicks and completion: tiny questions, clear outputs, and results people actually share.
+      </p>
+      <div id="testsGrid" class="grid"></div>
+    </section>
 
-    <section id="quiz" class="card hidden"></section>
-    <section id="result" class="card hidden"></section>
+    <section class="card">
+      <h2>What you’ll get</h2>
+      <div class="grid" style="margin:12px 0 0;">
+        <div class="card" style="margin:0; box-shadow:none; background:rgba(0,0,0,.12);">
+          <h3>Clarity in plain English</h3>
+          <p class="muted" style="margin:0;">No therapy-speak. No vague “it depends”.</p>
+        </div>
+        <div class="card" style="margin:0; box-shadow:none; background:rgba(0,0,0,.12);">
+          <h3>One next step</h3>
+          <p class="muted" style="margin:0;">A single action to try today—not a lecture.</p>
+        </div>
+        <div class="card" style="margin:0; box-shadow:none; background:rgba(0,0,0,.12);">
+          <h3>Shareable results</h3>
+          <p class="muted" style="margin:0;">A link that opens your result instantly.</p>
+        </div>
+      </div>
+    </section>
 
-    <section id="about" class="foot">
-      <p>Educational content only. Not medical advice.</p>
+    <section class="card">
+      <h2>Quick FAQs</h2>
+      <div style="margin-top:10px;">
+        <div style="font-weight:800;margin:0 0 6px;">Is this a diagnosis?</div>
+        <div class="muted">No. This is educational self-reflection content, not medical advice.</div>
+        <hr />
+        <div style="font-weight:800;margin:0 0 6px;">Do I need an account?</div>
+        <div class="muted">No. Everything runs in your browser.</div>
+        <hr />
+        <div style="font-weight:800;margin:0 0 6px;">Can I share my result?</div>
+        <div class="muted">Yes—each result creates a clean share link.</div>
+      </div>
+
+      <script type="application/ld+json">
+      {
+        "@context":"https://schema.org",
+        "@type":"FAQPage",
+        "mainEntity":[
+          {
+            "@type":"Question",
+            "name":"Is this a diagnosis?",
+            "acceptedAnswer":{"@type":"Answer","text":"No. This is educational self-reflection content, not medical advice."}
+          },
+          {
+            "@type":"Question",
+            "name":"Do I need an account?",
+            "acceptedAnswer":{"@type":"Answer","text":"No. Everything runs in your browser."}
+          },
+          {
+            "@type":"Question",
+            "name":"Can I share my result?",
+            "acceptedAnswer":{"@type":"Answer","text":"Yes—each result creates a clean share link."}
+          }
+        ]
+      }
+      </script>
     </section>
   </main>
 
-  <script src="tests.js"></script>
-  <script src="app.js"></script>
+  <footer id="siteFooter"></footer>
+
+  <script src="/assets/tests.js"></script>
+  <script src="/assets/shared.js"></script>
+  <script src="/assets/app.js"></script>
 </body>
 </html>
