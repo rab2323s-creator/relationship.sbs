@@ -1,0 +1,90 @@
+  <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Text Decoder — relationship.sbs</title>
+  <meta name="description" content="Paste a message. Get 3 likely meanings and calm reply options. Free, instant, no sign-up." />
+
+  <link rel="canonical" href="https://relationship.sbs/tools/text-decoder/" />
+
+  <meta property="og:title" content="Text Decoder — relationship.sbs" />
+  <meta property="og:description" content="Paste a message. Get likely meanings + calm reply options." />
+  <meta property="og:url" content="https://relationship.sbs/tools/text-decoder/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="relationship.sbs" />
+
+  <meta name="twitter:card" content="summary" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebApplication",
+    "name":"Text Decoder",
+    "applicationCategory":"LifestyleApplication",
+    "operatingSystem":"Any",
+    "url":"https://relationship.sbs/tools/text-decoder/",
+    "description":"Paste a message and get likely meanings and reply suggestions."
+  }
+  </script>
+</head>
+<body>
+  <header id="siteHeader"></header>
+
+  <main class="wrap">
+    <section class="card">
+      <div class="kicker">
+        <div class="crumbs">
+          <a href="/">Home</a> / <span>Text Decoder</span>
+        </div>
+        <div class="row">
+          <a class="btn small secondary" href="/#tests">Take a test</a>
+        </div>
+      </div>
+
+      <h1 style="margin:0 0 8px;font-size:34px;line-height:1.1;">Text Decoder</h1>
+      <p class="muted" style="margin:0 0 14px;">
+        Paste a message. Choose context. Get likely meanings and calm reply options.
+      </p>
+
+      <div class="card" style="margin:0; box-shadow:none; background:rgba(0,0,0,.12);">
+        <label class="small" for="msg">Message</label>
+        <textarea id="msg" rows="4" style="width:100%; margin-top:8px; padding:12px; border-radius:16px; border:1px solid rgba(255,255,255,.14); background:rgba(0,0,0,.20); color:var(--text);"></textarea>
+
+        <div class="row" style="margin-top:12px;">
+          <label class="small" style="display:flex; align-items:center; gap:8px;">
+            <input id="seen" type="checkbox" /> Seen but no reply
+          </label>
+
+          <label class="small" style="display:flex; align-items:center; gap:8px;">
+            Hours since message:
+            <input id="hours" type="number" min="0" value="0" style="width:90px; padding:8px; border-radius:12px; border:1px solid rgba(255,255,255,.14); background:rgba(0,0,0,.20); color:var(--text);" />
+          </label>
+
+          <button class="btn" id="analyzeBtn" type="button">Decode</button>
+          <span class="small">Tip: Ctrl/⌘ + Enter</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="out" class="card">
+      <h2 style="margin:0 0 10px;">Start by pasting a message</h2>
+      <p class="muted" style="margin:0;">We’ll generate a few grounded interpretations and reply options.</p>
+    </section>
+
+    <section class="card">
+      <h2>Try these next</h2>
+      <div class="row">
+        <a class="btn secondary" href="/tests/attachment-style/">Attachment Style Snapshot</a>
+        <a class="btn secondary" href="/tests/conflict-style/">Conflict Style Quick Scan</a>
+      </div>
+    </section>
+  </main>
+
+  <footer id="siteFooter"></footer>
+
+  <script src="/assets/shared.js"></script>
+  <script src="/assets/decoder.js"></script>
+</body>
+</html>
