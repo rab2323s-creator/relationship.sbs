@@ -189,3 +189,55 @@ hr{ border:0; border-top:1px solid var(--line); margin:18px 0; }
 .footer{ padding:22px 0 40px; color:var(--muted2); font-size:13px; }
 .footer a{ color:var(--muted); }
 .footer a:hover{ color:var(--text); }
+
+
+/* Quiz accessibility + UX */
+.q{ border:0; padding:0; }
+.q legend{ font-weight:800; margin:0 0 10px; padding:0; }
+.inline-msg{
+  margin: 10px 0 0;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.06);
+  color: var(--text);
+  font-size: 14px;
+}
+.q-missing{
+  outline: 2px solid rgba(255,184,77,.75);
+  outline-offset: 6px;
+  border-radius: 16px;
+}
+
+/* Text Decoder */
+.replyList{ display:flex; flex-direction:column; gap:10px; }
+.replyItem{
+  display:flex; gap:10px; align-items:flex-start;
+  padding:10px 12px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:14px;
+  background: rgba(255,255,255,.04);
+}
+
+
+/* SEO longform blocks */
+.seo h2{ margin:0 0 10px; }
+.seo h3{ margin:0 0 8px; font-size:16px; }
+.seo p{ color:var(--muted); line-height:1.7; }
+.seo ul{ color:var(--muted); line-height:1.7; padding-left:18px; }
+.grid2{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:12px; margin:12px 0; }
+.mini{ background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.08); border-radius:16px; padding:14px; }
+details{ border:1px solid rgba(255,255,255,.10); border-radius:14px; padding:10px 12px; margin:10px 0; background:rgba(255,255,255,.03); }
+details summary{ cursor:pointer; font-weight:700; }
+.inline-msg{ margin:10px 0 0; padding:10px 12px; border-radius:12px; border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.04); color:var(--text); }
+.q-missing{ outline:2px solid rgba(255,255,255,.25); border-radius:14px; }
+
+
+/* Prose content (SEO-friendly longform) */
+.prose p{ max-width:72ch; }
+.prose ul,.prose ol{ max-width:72ch; }
+.prose h2{ margin-top:0; }
+.prose h3{ margin-top:18px; }
+.faq details{ border:1px solid var(--line); border-radius:14px; padding:10px 12px; margin:10px 0; background:rgba(255,255,255,.02); }
+.faq summary{ cursor:pointer; font-weight:700; }
+.faq p{ margin:8px 0 0; color:var(--muted); }

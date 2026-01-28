@@ -9,17 +9,91 @@
     return (window.TESTS || []).find(t => t.slug === slug) || null;
   }
 
-  function computeResult(test, answers){
+  function safeGet(obj, path, fallback=null){
+    try{
+      const parts = path.split(".");
+      let cur = obj;
+      for (const p of parts){
+        if (!cur || cur[p] === undefined) return fallback;
+        cur = cur[p];
+      }
+      return cur;
+    }catch{
+      return fallback;
+    }
+  }
+
+  function setQueryParam(k, v){
+    const url = new URL(window.location.href);
+    url.searchParams.set(k, v);
+    history.replaceState({}, "", url.toString());
+  }
+
+  function setInlineMessage(rootEl, msg){
+    const box = rootEl.querySelector("[data-inline-msg]");
+    if (!box) return;
+    box.textContent = msg || "";
+    box.style.display = msg ? "block" : "none";
+  }
+
+  function highlightAndFocusQuestion(formEl, qIndex){
+    const qWrap = formEl.querySelector(`[data-qindex="${qIndex}"]`);
+    if (!qWrap) return;
+    qWrap.classList.add("q-missing");
+    qWrap.scrollIntoView({ behavior:"smooth", block:"center" });
+    const firstInput = qWrap.querySelector("input");
+    if (firstInput) firstInput.focus({ preventScroll:true });
+    setTimeout(() => qWrap.classList.remove("q-missing"), 1400);
+  }
+
+  function computeResultSafe(test, answers){
+    if (!test || !Array.isArray(test.questions) || !test.results) return null;
+
     const totals = {};
-    test.questions.forEach((q, qi) => {
-      const opt = q.options[answers[qi]];
-      Object.entries(opt.score).forEach(([k, v]) => totals[k] = (totals[k] || 0) + v);
-    });
-    let bestKey = null, bestVal = -Infinity;
-    Object.entries(totals).forEach(([k,v]) => {
-      if (v > bestVal){ bestVal = v; bestKey = k; }
-    });
-    return bestKey || Object.keys(test.results)[0];
+    for (let qi = 0; qi < test.questions.length; qi++){
+      const q = test.questions[qi];
+      const ans = answers[qi];
+      const opt = safeGet(q, `options.${ans}`, null);
+      const score = opt && opt.score;
+
+      if (!opt || !score || typeof score !== "object") return null;
+
+      for (const [k, v] of Object.entries(score)){
+        const add = Number(v);
+        if (!Number.isFinite(add)) continue;
+        totals[k] = (totals[k] || 0) + add;
+      }
+    }
+
+    const entries = Object.entries(totals);
+    if (!entries.length){
+      const first = Object.keys(test.results || {})[0];
+      return first || null;
+    }
+
+    // Find max and detect ties deterministically.
+    let maxVal = -Infinity;
+    for (const [, v] of entries) maxVal = Math.max(maxVal, v);
+
+    const tiedKeys = entries.filter(([, v]) => v === maxVal).map(([k]) => k);
+
+    if (tiedKeys.length === 1) return tiedKeys[0];
+
+    // If the test provides a dedicated mixed result, prefer it.
+    if (test.results.mixed) return "mixed";
+
+    // Deterministic tie-break:
+    // 1) Prefer an explicit priority list if provided
+    const priority = Array.isArray(test.tieBreakPriority) ? test.tieBreakPriority : null;
+    if (priority){
+      for (const k of priority){
+        if (tiedKeys.includes(k)) return k;
+      }
+    }
+
+    // 2) Otherwise, alphabetical (stable)
+    tiedKeys.sort();
+    return tiedKeys[0];
   }
 
   function renderHome(){
@@ -46,20 +120,19 @@
     });
   }
 
-  function setQueryParam(k, v){
-    const url = new URL(window.location.href);
-    url.searchParams.set(k, v);
-    history.replaceState({}, "", url.toString());
-  }
-
   function renderQuizPage(){
     const root = $("#quizRoot");
     if (!root) return;
 
     const slug = root.dataset.slug;
     const test = getTestBySlug(slug);
+
     if (!test){
-      root.innerHTML = `<div class="card"><h2>Test not found</h2><p class="muted">This page may be missing a test configuration.</p></div>`;
+      root.innerHTML = `
+        <div class="card">
+          <h2>Test not found</h2>
+          <p class="muted">This page may be missing a test configuration.</p>
+        </div>`;
       return;
     }
 
@@ -87,11 +160,13 @@
         <h1 style="margin:0 0 8px;font-size:34px;line-height:1.1;">${test.title}</h1>
         <p class="muted" style="margin:0 0 14px;">${test.blurb} • <strong>${test.time}</strong></p>
 
-        <form id="quizForm"></form>
+        <form id="quizForm" novalidate></form>
+
+        <p class="inline-msg" data-inline-msg style="display:none;" role="status" aria-live="polite"></p>
 
         <div class="row">
           <button class="btn" id="submitBtn" type="button">See result</button>
-          <span class="small" id="progress"></span>
+          <span class="small" id="progress" aria-live="polite"></span>
         </div>
       </section>
 
@@ -103,22 +178,32 @@
       </section>
     `;
 
-    $("#resetBtn").addEventListener("click", () => window.location.href = window.location.pathname);
+    $("#resetBtn").addEventListener("click", () => {
+      // Clear query params while staying on the same clean URL
+      window.location.href = window.location.pathname;
+    });
 
     const form = $("#quizForm");
+
     test.questions.forEach((q, qi) => {
-      const qDiv = document.createElement("div");
-      qDiv.className = "q";
-      qDiv.innerHTML = `<h4>${qi + 1}. ${q.text}</h4>`;
-      q.options.forEach((opt, oi) => {
+      const fieldset = document.createElement("fieldset");
+      fieldset.className = "q";
+      fieldset.dataset.qindex = String(qi);
+
+      const legend = document.createElement("legend");
+      legend.textContent = `${qi + 1}. ${q.text}`;
+      fieldset.appendChild(legend);
+
+      (q.options || []).forEach((opt, oi) => {
         const id = `q${qi}o${oi}`;
         const label = document.createElement("label");
         label.className = "opt";
         label.setAttribute("for", id);
         label.innerHTML = `<input type="radio" id="${id}" name="q${qi}" value="${oi}"/><span>${opt.label}</span>`;
-        qDiv.appendChild(label);
+        fieldset.appendChild(label);
       });
-      form.appendChild(qDiv);
+
+      form.appendChild(fieldset);
     });
 
     function updateProgress(){
@@ -131,15 +216,26 @@
       const m = (e.target.name || "").match(/^q(\d+)$/);
       if (!m) return;
       answers[Number(m[1])] = Number(e.target.value);
+      setInlineMessage(root, "");
       updateProgress();
     });
 
-    $("#submitBtn").addEventListener("click", async () => {
-      if (answers.some(a => a === null)){
-        alert("Answer all questions first.");
+    $("#submitBtn").addEventListener("click", () => {
+      setInlineMessage(root, "");
+
+      const firstMissing = answers.findIndex(a => a === null);
+      if (firstMissing !== -1){
+        setInlineMessage(root, "Please answer the highlighted question first.");
+        highlightAndFocusQuestion(form, firstMissing);
         return;
       }
-      const key = computeResult(test, answers);
+
+      const key = computeResultSafe(test, answers);
+      if (!key || !test.results[key]){
+        setInlineMessage(root, "This test seems misconfigured. Please try another test.");
+        return;
+      }
+
       setQueryParam("result", key);
       renderResult(test, key);
     });
@@ -188,7 +284,15 @@
         $("#copyBtn").textContent = "Copied!";
         setTimeout(() => $("#copyBtn").textContent = "Copy share link", 1200);
       }catch{
-        alert("Copy failed. You can select and copy the link manually.");
+        // Minimal fallback without alert noise
+        const code = card.querySelector("code");
+        if (code){
+          const range = document.createRange();
+          range.selectNodeContents(code);
+          const sel = window.getSelection();
+          sel.removeAllRanges();
+          sel.addRange(range);
+        }
       }
     });
 

@@ -81,7 +81,9 @@
   }
 
   function analyze(){
-    const msg = $("#msg").value || "";
+    const msgEl = $("#msg");
+    const msgRaw = (msgEl?.value || "");
+    const msg = msgRaw.length > 600 ? msgRaw.slice(0, 600) : msgRaw;
     const seen = $("#seen").checked;
     const hours = Number($("#hours").value || "0");
     const data = { msg, seen, hours };
@@ -91,6 +93,7 @@
 
     $("#out").innerHTML = `
       <h2 style="margin:0 0 10px;">${out.title}</h2>
+      ${msgRaw.length > 600 ? `<p class="small" style="margin:0 0 10px;color:var(--muted);">Note: message truncated to 600 characters for analysis.</p>` : ``}
       <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); margin:0;">
         <div class="card" style="margin:0; box-shadow:none; background:rgba(0,0,0,.12);">
           <h3>What it could mean</h3>
@@ -100,27 +103,44 @@
         </div>
         <div class="card" style="margin:0; box-shadow:none; background:rgba(0,0,0,.12);">
           <h3>Replies you can send</h3>
-          <ul style="margin:0; padding-left:18px;">
-            ${out.replies.map(x => `<li style="margin:6px 0;color:var(--muted);">${x}</li>`).join("")}
-          </ul>
+          <div class="replyList">
+            ${out.replies.map((x,i) => `
+              <div class="replyItem">
+                <div class="muted" style="flex:1; line-height:1.55;">${x}</div>
+                <button class="btn small secondary" type="button" data-copy="${i}">Copy</button>
+              </div>
+            `).join("")}
+          </div>
         </div>
       </div>
       <div class="row" style="margin-top:12px;">
-        <button class="btn" id="copyReply">Copy first reply</button>
         <span class="small">Tip: choose the calmest option that still asks for clarity.</span>
       </div>
     `;
-
-    $("#copyReply").addEventListener("click", async () => {
-      const text = out.replies[0] || "";
-      try{
-        await navigator.clipboard.writeText(text);
-        $("#copyReply").textContent = "Copied!";
-        setTimeout(() => $("#copyReply").textContent = "Copy first reply", 1200);
-      }catch{
-        alert("Copy failed.");
-      }
+    // Copy buttons for each reply
+    document.querySelectorAll("[data-copy]").forEach(btn => {
+      btn.addEventListener("click", async () => {
+        const idx = Number(btn.getAttribute("data-copy"));
+        const text = out.replies[idx] || "";
+        try{
+          await navigator.clipboard.writeText(text);
+          const prev = btn.textContent;
+          btn.textContent = "Copied!";
+          setTimeout(() => (btn.textContent = prev), 900);
+        }catch{
+          // fallback: select text in place
+          const div = btn.parentElement?.querySelector("div");
+          if (div){
+            const range = document.createRange();
+            range.selectNodeContents(div);
+            const sel = window.getSelection();
+            sel.removeAllRanges();
+            sel.addRange(range);
+          }
+        }
+      });
     });
+
   }
 
   function boot(){
