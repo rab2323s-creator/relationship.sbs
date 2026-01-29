@@ -80,6 +80,41 @@
     };
   }
 
+  
+  function inferAttachmentSignal({msg, seen, hours}){
+    const t = (msg||"").toLowerCase();
+
+    const anxiousHits = [
+      /\?\?+/, /\bare we ok\b/, /\bare you mad\b/, /\bplease\b/, /\bwhy (aren't|arent) you\b/,
+      /\byou (never|always)\b/, /\bi miss you\b/, /\brespond\b/, /\banswer\b/, /\bhello\?\b/
+    ].reduce((n,rx)=> n + (rx.test(t)?1:0), 0) + (seen && hours >= 2 ? 1 : 0) + (hours >= 12 ? 1 : 0);
+
+    const avoidantHits = [
+      /\bi need space\b/, /\bcan we not\b/, /\bi'm fine\b/, /\bim fine\b/, /\bwhatever\b/, /\bok\b$/, /\bk\b$/,
+      /\btoo much\b/, /\bstop\b/, /\bnot talking\b/, /\blet's drop it\b/
+    ].reduce((n,rx)=> n + (rx.test(t)?1:0), 0) + (hours === 0 && !seen ? 0 : 0);
+
+    const secureHits = [
+      /\bwhen you're free\b/, /\bno worries\b/, /\bwe can talk\b/, /\bwhat works for you\b/, /\bcan we check in\b/
+    ].reduce((n,rx)=> n + (rx.test(t)?1:0), 0);
+
+    // Convert to a rough label (this is NOT a diagnosis)
+    let label = "Neutral / unclear";
+    let note = "One message rarely tells the whole story. Patterns over time matter more.";
+    if (anxiousHits >= avoidantHits + 2 && anxiousHits >= 2){
+      label = "Leans anxious (pursuit / reassurance-seeking)";
+      note = "Reads like high uncertainty sensitivity. Ask for a timeline instead of chasing clarity.";
+    }else if (avoidantHits >= anxiousHits + 2 && avoidantHits >= 2){
+      label = "Leans avoidant (distance / shutdown)";
+      note = "Reads like protective distance. A calm time-out with a return time beats disappearing.";
+    }else if (secureHits >= 2){
+      label = "Leans secure (direct + regulated)";
+      note = "Reads like clear requests with low threat. This tends to reduce escalation.";
+    }
+    return {label, note};
+  }
+
+
   function analyze(){
     const msgEl = $("#msg");
     const msgRaw = (msgEl?.value || "");
