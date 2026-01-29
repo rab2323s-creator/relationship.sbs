@@ -1,80 +1,53 @@
-<!-- /privacy/index.html -->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Privacy Policy | Relationship.sbs</title>
-  <meta name="description" content="Privacy Policy for Relationship.sbs: what data we collect, how we use it, and your choices." />
-  <link rel="canonical" href="https://relationship.sbs/privacy/" />
-  <meta name="robots" content="index,follow" />
 
-  <meta property="og:title" content="Privacy Policy | Relationship.sbs" />
-  <meta property="og:description" content="How Relationship.sbs handles data." />
+  <title>Privacy Policy | relationship.sbs</title>
+  <meta name="description" content="Privacy Policy for relationship.sbs: what data we collect, how we use it, and your choices." />
+  <link rel="canonical" href="https://relationship.sbs/privacy/" />
+
+  <meta property="og:title" content="Privacy Policy | relationship.sbs" />
+  <meta property="og:description" content="How relationship.sbs handles data." />
   <meta property="og:url" content="https://relationship.sbs/privacy/" />
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="relationship.sbs" />
 
-  <style>
-    :root{
-      --fg:#0f172a;--muted:#475569;--bg:#ffffff;--card:#f8fafc;
-      --border:#e2e8f0;--link:#0b63f6;--shadow:0 1px 0 rgba(15,23,42,.04);
-      --radius:16px
-    }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;line-height:1.95;color:var(--fg);background:var(--bg)}
-    header,main,footer{max-width:980px;margin:auto;padding:20px}
-    nav{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
-    a{color:var(--link);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .topbar{padding:14px 20px;border-bottom:1px solid var(--border);background:#fff;position:sticky;top:0;z-index:10}
-    .container{max-width:980px;margin:auto}
-    h1{margin:12px 0 6px;font-size:30px;letter-spacing:-.2px}
-    h2{margin:24px 0 10px;font-size:20px}
-    p,li{color:var(--muted)}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
-    ul{margin:10px 0;padding:0 0 0 18px}
-    .small{font-size:13px;color:var(--muted)}
-    .meta{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-    .pill{display:inline-flex;gap:8px;align-items:center;background:#eef2ff;border:1px solid #e0e7ff;color:#3730a3;padding:6px 12px;border-radius:999px;font-size:12px}
-    .footer{border-top:1px solid var(--border);margin-top:20px;padding-top:16px}
-  </style>
+  <meta name="twitter:card" content="summary" />
 
+  <link rel="stylesheet" href="/assets/styles.css" />
+  
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"WebPage",
     "name":"Privacy Policy",
     "url":"https://relationship.sbs/privacy/",
-    "isPartOf":{"@type":"WebSite","name":"Relationship.sbs","url":"https://relationship.sbs/"},
-    "publisher":{"@type":"Organization","name":"Relationship.sbs Team","email":"info@relationship.sbs"}
+    "isPartOf":{"@type":"WebSite","name":"relationship.sbs","url":"https://relationship.sbs/"},
+    "publisher":{"@type":"Organization","name":"relationship.sbs","url":"https://relationship.sbs/"},
+    "contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"info@relationship.sbs"}
   }
   </script>
 </head>
+
 <body>
-  <div class="topbar">
-    <div class="container">
-      <nav>
-        <a href="/">Home</a>
-        <a href="/blog/">Blog</a>
-        <a href="/about/">About</a>
-        <a href="/contact/">Contact</a>
-        <a href="/privacy/" aria-current="page">Privacy</a>
-        <a href="/terms/">Terms</a>
-      </nav>
-    </div>
-  </div>
+  <header id="siteHeader"></header>
 
-  <header>
-    <h1>Privacy Policy</h1>
-    <div class="meta">
-      <span class="pill">Publisher: Relationship.sbs Team</span>
-      <span class="pill">Contact: <a href="mailto:info@relationship.sbs">info@relationship.sbs</a></span>
-      <span class="pill">Last updated: <strong>2026-01-29</strong></span>
-    </div>
-  </header>
+  <main class="wrap">
+    <section class="hero" style="grid-template-columns: 1fr;">
+      <div class="heroCard">
+        <h1 style="margin:0 0 10px;">Privacy Policy</h1>
+        <div class="row" style="gap:10px; flex-wrap:wrap;">
+          <span class="badge">Publisher: relationship.sbs</span>
+          <span class="badge">Contact: <a href="mailto:info@relationship.sbs">info@relationship.sbs</a></span>
+          <span class="badge">Last updated: <strong>2026-01-29</strong></span>
+        </div>
+      </div>
+    </section>
 
-  <main>
-    <section class="card">
+    <section class="card prose">
+      <section class="card">
       <p>
         This Privacy Policy explains how <strong>Relationship.sbs</strong> (“we”, “us”, “our”; publisher: <strong>Relationship.sbs Team</strong>)
         handles information when you use the website.
@@ -170,12 +143,15 @@
         If you operate in specific jurisdictions (e.g., EU/Germany) and use analytics/ads, you may need additional disclosures (legal basis, cookie consent, etc.).
       </p>
     </section>
-
-    <footer class="footer small">
-      © <span id="y"></span> Relationship.sbs
-    </footer>
+    </section>
   </main>
 
-  <script>document.getElementById("y").textContent=new Date().getFullYear()</script>
+  <footer id="siteFooter"></footer>
+
+  <script src="/assets/shared.js"></script>
+
+  <script>
+    if (window.Site) { Site.renderHeader(); Site.renderFooter(); Site.applyOGDefaults(); }
+  </script>
 </body>
 </html>
