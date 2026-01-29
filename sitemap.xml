@@ -8,6 +8,36 @@
     <priority>1.0</priority>
   </url>
 
+  <!-- Trust / policy pages -->
+  <url>
+    <loc>https://relationship.sbs/about/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://relationship.sbs/contact/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://relationship.sbs/privacy/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
+  <url>
+    <loc>https://relationship.sbs/terms/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
+  <!-- Tests -->
   <url>
     <loc>https://relationship.sbs/tests/attachment-style/</loc>
     <lastmod>2026-01-29</lastmod>
@@ -29,6 +59,7 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Tools -->
   <url>
     <loc>https://relationship.sbs/tools/text-decoder/</loc>
     <lastmod>2026-01-29</lastmod>
@@ -36,6 +67,7 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Blog -->
   <url>
     <loc>https://relationship.sbs/blog/what-is-attachment-style/</loc>
     <lastmod>2026-01-29</lastmod>
