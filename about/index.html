@@ -1,0 +1,127 @@
+<!-- /about/index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About | Relationship.sbs</title>
+  <meta name="description" content="Relationship.sbs is an independent educational platform by the Relationship.sbs Team. Practical tools and guides for communication, boundaries, and attachment patterns." />
+  <link rel="canonical" href="https://relationship.sbs/about/" />
+  <meta name="robots" content="index,follow" />
+
+  <meta property="og:title" content="About | Relationship.sbs" />
+  <meta property="og:description" content="Practical tools and guides for communication, boundaries, and attachment patterns." />
+  <meta property="og:url" content="https://relationship.sbs/about/" />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      --fg:#0f172a;--muted:#475569;--bg:#ffffff;--card:#f8fafc;
+      --border:#e2e8f0;--link:#0b63f6;--shadow:0 1px 0 rgba(15,23,42,.04);
+      --radius:16px
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;line-height:1.85;color:var(--fg);background:var(--bg)}
+    header,main,footer{max-width:980px;margin:auto;padding:20px}
+    nav{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+    a{color:var(--link);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .topbar{padding:14px 20px;border-bottom:1px solid var(--border);background:#fff;position:sticky;top:0;z-index:10}
+    .container{max-width:980px;margin:auto}
+    .hero{padding:10px 0 0}
+    h1{margin:12px 0 6px;font-size:30px;letter-spacing:-.2px}
+    h2{margin:24px 0 10px;font-size:20px}
+    p{margin:10px 0;color:var(--muted)}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+    .kpi{font-size:13px;color:var(--muted)}
+    .badge{display:inline-flex;gap:8px;align-items:center;background:#eef2ff;border:1px solid #e0e7ff;color:#3730a3;padding:6px 12px;border-radius:999px;font-size:12px}
+    ul{margin:10px 0;padding:0 0 0 18px;color:var(--muted)}
+    .small{font-size:13px;color:var(--muted)}
+    .footer{border-top:1px solid var(--border);margin-top:20px;padding-top:16px}
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"AboutPage",
+    "name":"About",
+    "url":"https://relationship.sbs/about/",
+    "isPartOf":{"@type":"WebSite","name":"Relationship.sbs","url":"https://relationship.sbs/"},
+    "publisher":{"@type":"Organization","name":"Relationship.sbs Team","email":"info@relationship.sbs"}
+  }
+  </script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container">
+      <nav>
+        <a href="/">Home</a>
+        <a href="/blog/">Blog</a>
+        <a href="/tests/attachment-style/">Tests</a>
+        <a href="/tools/text-decoder/">Tools</a>
+        <a href="/about/" aria-current="page">About</a>
+        <a href="/contact/">Contact</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/terms/">Terms</a>
+      </nav>
+    </div>
+  </div>
+
+  <header class="hero">
+    <h1>About</h1>
+    <div class="badge">Relationship.sbs Team · <a href="mailto:info@relationship.sbs">info@relationship.sbs</a></div>
+    <p class="kpi">An independent platform with practical, research-informed content for healthier communication and boundaries.</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <p>
+        <strong>Relationship.sbs</strong> is an independent educational platform created by the <strong>Relationship.sbs Team</strong>.
+        We publish practical tools and concise guides to help people improve communication, build healthy boundaries, and understand
+        attachment patterns in everyday relationships.
+      </p>
+      <p class="small">
+        Suggestions, corrections, or collaboration: <a href="mailto:info@relationship.sbs">info@relationship.sbs</a>
+      </p>
+    </section>
+
+    <section>
+      <h2>What we publish</h2>
+      <div class="grid">
+        <div class="card">
+          <h3 style="margin:0 0 6px">Short tests</h3>
+          <p>Lightweight quizzes to explore attachment, communication needs, and conflict style.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin:0 0 6px">Actionable scripts</h3>
+          <p>Practical wording for boundaries, repair attempts, apologies, and difficult conversations.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin:0 0 6px">Focused articles</h3>
+          <p>Single-topic posts with clear examples and next-step takeaways.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Editorial approach</h2>
+      <ul>
+        <li><strong>Clarity over hype:</strong> practical guidance, no unrealistic promises.</li>
+        <li><strong>Usefulness first:</strong> steps you can apply immediately.</li>
+        <li><strong>Context matters:</strong> we avoid one-size-fits-all advice.</li>
+        <li><strong>Continuous improvement:</strong> we refine content based on feedback and performance.</li>
+      </ul>
+      <p class="small">
+        Note: Content is educational and not a substitute for professional medical, psychological, or legal advice.
+      </p>
+    </section>
+
+    <footer class="footer small">
+      © <span id="y"></span> Relationship.sbs · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a>
+    </footer>
+  </main>
+
+  <script>document.getElementById("y").textContent=new Date().getFullYear()</script>
+</body>
+</html>
