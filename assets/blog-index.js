@@ -5,9 +5,7 @@
   const POSTS_PER_PAGE = 12;
 
   const els = {};
-  function $(id) {
-    return document.getElementById(id);
-  }
+  const $ = (id) => document.getElementById(id);
 
   function normalize(str) {
     return (str || "").toString().trim().toLowerCase();
@@ -88,6 +86,16 @@
     return arr;
   }
 
+  function escapeHtml(str) {
+    return (str || "").replace(/[&<>"']/g, (m) => ({
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#039;",
+    }[m]));
+  }
+
   function renderFeatured(posts) {
     const root = els.featuredArea;
     root.innerHTML = "";
@@ -98,29 +106,32 @@
     featured.forEach((p) => {
       const a = document.createElement("a");
       a.href = `/blog/${p.slug}/`;
-      a.className = "featured-card";
+      a.className = "card";
       a.style.textDecoration = "none";
-      a.style.color = "inherit";
+      a.style.display = "grid";
+      a.style.gridTemplateColumns = "1fr 1fr";
+      a.style.gap = "14px";
+      a.style.alignItems = "stretch";
+      a.style.overflow = "hidden";
+      a.style.borderRadius = "24px";
 
       const img = document.createElement("img");
-      img.className = "post-cover";
+      img.className = "postImg";
       img.src = p.cover || "/assets/img/blog/default.webp";
       img.alt = p.title || "Blog post cover";
       img.loading = "lazy";
+      img.style.margin = "0";
+      img.style.borderRadius = "18px";
 
       const content = document.createElement("div");
-      content.className = "featured-content";
+      content.className = "prose";
       content.innerHTML = `
-        <div class="post-meta">
-          <span>${fmtDate(p.date)}</span>
-          <span>•</span>
-          <span>${p.readingMinutes || 5} min read</span>
-          <span>•</span>
-          <span>${escapeHtml(p.category || "General")}</span>
+        <div class="small" style="margin-bottom:8px;">
+          ${fmtDate(p.date)} • ${p.readingMinutes || 5} min read • ${escapeHtml(p.category || "General")}
         </div>
-        <h2>${escapeHtml(p.title)}</h2>
-        <p class="post-excerpt">${escapeHtml(p.excerpt || "")}</p>
-        <div style="opacity:.9; font-size:13px;">Read article →</div>
+        <h2 style="margin:0 0 8px;">${escapeHtml(p.title)}</h2>
+        <p class="muted" style="margin:0 0 10px;">${escapeHtml(p.excerpt || "")}</p>
+        <div class="small">Read article →</div>
       `;
 
       a.appendChild(img);
@@ -157,9 +168,7 @@
     const cats = unique(allPosts.map((p) => p.category));
     const select = els.categorySelect;
 
-    // reset except first option
     select.innerHTML = `<option value="">All categories</option>`;
-
     cats.forEach((c) => {
       const opt = document.createElement("option");
       opt.value = c;
@@ -174,7 +183,6 @@
 
     const filtered = sortPosts(posts.filter((p) => matches(p, state)), state.sort);
 
-    // Pagination
     const total = filtered.length;
     const totalPages = Math.max(1, Math.ceil(total / POSTS_PER_PAGE));
     const page = Math.min(Math.max(state.page, 1), totalPages);
@@ -190,46 +198,34 @@
 
     pageItems.forEach((p) => {
       const card = document.createElement("article");
-      card.className = "post-card";
+      card.className = "tile";
 
       const coverSrc = p.cover || "/assets/img/blog/default.webp";
       const href = `/blog/${p.slug}/`;
 
       card.innerHTML = `
         <a href="${href}" style="text-decoration:none; color:inherit;">
-          <img class="post-cover" src="${coverSrc}" alt="${escapeHtml(
-        p.title
-      )}" loading="lazy" />
+          <img class="postImg" src="${coverSrc}" alt="${escapeHtml(p.title)}" loading="lazy" />
         </a>
-        <div class="post-body">
-          <div class="post-meta">
-            <span>${fmtDate(p.date)}</span>
-            <span>•</span>
-            <span>${p.readingMinutes || 5} min</span>
-            <span>•</span>
-            <span>${escapeHtml(p.category || "General")}</span>
-          </div>
 
-          <h3 class="post-title">
-            <a href="${href}" style="text-decoration:none; color:inherit;">
-              ${escapeHtml(p.title)}
-            </a>
-          </h3>
+        <div class="meta small" style="margin-bottom:10px;">
+          <span>${fmtDate(p.date)}</span>
+          <span>•</span>
+          <span>${p.readingMinutes || 5} min</span>
+          <span>•</span>
+          <span>${escapeHtml(p.category || "General")}</span>
+        </div>
 
-          <p class="post-excerpt">${escapeHtml(p.excerpt || "")}</p>
+        <h3 style="margin:0 0 8px;">
+          <a href="${href}" style="text-decoration:none; color:inherit;">${escapeHtml(p.title)}</a>
+        </h3>
 
-          <div class="tags" style="margin-top:auto;">
-            ${(p.tags || [])
-              .slice(0, 3)
-              .map(
-                (tag) => `
-              <button type="button" class="tag" data-tag="${escapeHtml(
-                tag
-              )}">${escapeHtml(tag)}</button>
-            `
-              )
-              .join("")}
-          </div>
+        <p class="muted" style="margin:0 0 12px;">${escapeHtml(p.excerpt || "")}</p>
+
+        <div class="row" style="gap:8px; flex-wrap:wrap;">
+          ${(p.tags || []).slice(0, 3).map(tag =>
+            `<button type="button" class="badge" data-tag="${escapeHtml(tag)}">${escapeHtml(tag)}</button>`
+          ).join("")}
         </div>
       `;
 
@@ -256,7 +252,7 @@
 
     function addBtn(label, targetPage, disabled = false, current = false) {
       const b = document.createElement("button");
-      b.className = "page-btn";
+      b.className = "btn secondary small";
       b.type = "button";
       b.textContent = label;
       if (current) b.setAttribute("aria-current", "page");
@@ -274,7 +270,6 @@
 
     addBtn("Prev", Math.max(1, page - 1), page === 1);
 
-    // windowed pages
     const windowSize = 5;
     const start = Math.max(1, page - Math.floor(windowSize / 2));
     const end = Math.min(totalPages, start + windowSize - 1);
@@ -290,7 +285,6 @@
     const state = getParams();
     const allPosts = Array.isArray(window.BLOG_POSTS) ? window.BLOG_POSTS : [];
 
-    // sync UI controls
     els.qInput.value = state.q;
     els.categorySelect.value = state.category;
     els.sortSelect.value = state.sort;
@@ -300,20 +294,12 @@
     renderPosts(allPosts, state);
   }
 
-  // ✅ HTML escape (avoid XSS)
-  function escapeHtml(str) {
-    return (str || "").replace(/[&<>"']/g, (m) => ({
-      "&": "&amp;",
-      "<": "&lt;",
-      ">": "&gt;",
-      '"': "&quot;",
-      "'": "&#039;",
-    }[m]));
-  }
-
   document.addEventListener("DOMContentLoaded", () => {
-    // shared header/footer injection
-    if (window.injectShared) window.injectShared();
+    if (window.Site) {
+      Site.renderHeader();
+      Site.renderFooter();
+      Site.applyOGDefaults();
+    }
 
     els.featuredArea = $("featuredArea");
     els.qInput = $("qInput");
@@ -329,7 +315,6 @@
     const allPosts = Array.isArray(window.BLOG_POSTS) ? window.BLOG_POSTS : [];
     renderCategories(allPosts);
 
-    // events
     els.qInput.addEventListener("input", () => {
       setParams({ q: els.qInput.value, page: 1 });
       hydrateFromUrl();

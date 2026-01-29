@@ -46,7 +46,7 @@
           <nav class="nav" aria-label="Primary">
             <a href="/#tests">Tests</a>
             <a href="/tools/text-decoder/">Text Decoder</a>
-            <a href="/blog/what-is-attachment-style/">Guides</a>
+            <a href="/blog/">Guides</a>
             ${headerExtras}
           </nav>
         </div>

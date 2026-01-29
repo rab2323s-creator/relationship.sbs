@@ -1,4 +1,4 @@
- // assets/blog-data.js
+// assets/blog-data.js
 // Blog posts index (Static JSON-like data)
 
 window.BLOG_POSTS = [
