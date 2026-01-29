@@ -1,120 +1,108 @@
-<!-- /contact/index.html -->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Contact | Relationship.sbs</title>
-  <meta name="description" content="Contact the Relationship.sbs Team for suggestions, corrections, or collaboration." />
-  <link rel="canonical" href="https://relationship.sbs/contact/" />
-  <meta name="robots" content="index,follow" />
 
-  <meta property="og:title" content="Contact | Relationship.sbs" />
-  <meta property="og:description" content="Get in touch with the Relationship.sbs Team." />
+  <title>Contact | relationship.sbs</title>
+  <meta name="description" content="Contact relationship.sbs for suggestions, corrections, or collaboration." />
+  <link rel="canonical" href="https://relationship.sbs/contact/" />
+
+  <meta property="og:title" content="Contact | relationship.sbs" />
+  <meta property="og:description" content="Get in touch with relationship.sbs." />
   <meta property="og:url" content="https://relationship.sbs/contact/" />
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="relationship.sbs" />
 
-  <style>
-    :root{
-      --fg:#0f172a;--muted:#475569;--bg:#ffffff;--card:#f8fafc;
-      --border:#e2e8f0;--link:#0b63f6;--shadow:0 1px 0 rgba(15,23,42,.04);
-      --radius:16px
-    }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;line-height:1.85;color:var(--fg);background:var(--bg)}
-    header,main,footer{max-width:980px;margin:auto;padding:20px}
-    nav{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
-    a{color:var(--link);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .topbar{padding:14px 20px;border-bottom:1px solid var(--border);background:#fff;position:sticky;top:0;z-index:10}
-    .container{max-width:980px;margin:auto}
-    h1{margin:12px 0 6px;font-size:30px;letter-spacing:-.2px}
-    p{margin:10px 0;color:var(--muted)}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
-    label{display:block;margin:10px 0 6px;color:var(--muted);font-size:14px}
-    input,textarea{width:100%;border:1px solid var(--border);border-radius:12px;padding:12px;font:inherit;background:#fff}
-    textarea{min-height:140px;resize:vertical}
-    button{margin-top:12px;border:1px solid var(--border);border-radius:12px;padding:12px 16px;font:inherit;background:#111827;color:#fff;cursor:pointer}
-    button:hover{opacity:.92}
-    .small{font-size:13px;color:var(--muted)}
-    .footer{border-top:1px solid var(--border);margin-top:20px;padding-top:16px}
-  </style>
+  <meta name="twitter:card" content="summary" />
 
+  <link rel="stylesheet" href="/assets/styles.css" />
+  
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"ContactPage",
     "name":"Contact",
     "url":"https://relationship.sbs/contact/",
-    "isPartOf":{"@type":"WebSite","name":"Relationship.sbs","url":"https://relationship.sbs/"},
-    "publisher":{"@type":"Organization","name":"Relationship.sbs Team","email":"info@relationship.sbs"}
+    "isPartOf":{"@type":"WebSite","name":"relationship.sbs","url":"https://relationship.sbs/"},
+    "publisher":{"@type":"Organization","name":"relationship.sbs","url":"https://relationship.sbs/"},
+    "contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"info@relationship.sbs"}
   }
   </script>
+
+  <style>
+    /* Keep form layout consistent with site UI */
+    textarea.control{ min-height: 140px; resize: vertical; }
+    .formActions{ display:flex; gap:10px; flex-wrap:wrap; margin-top:12px; }
+  </style>
 </head>
+
 <body>
-  <div class="topbar">
-    <div class="container">
-      <nav>
-        <a href="/">Home</a>
-        <a href="/blog/">Blog</a>
-        <a href="/tests/attachment-style/">Tests</a>
-        <a href="/tools/text-decoder/">Tools</a>
-        <a href="/about/">About</a>
-        <a href="/contact/" aria-current="page">Contact</a>
-        <a href="/privacy/">Privacy</a>
-        <a href="/terms/">Terms</a>
-      </nav>
-    </div>
-  </div>
+  <header id="siteHeader"></header>
 
-  <header>
-    <h1>Contact</h1>
-    <p class="small">Suggestions, corrections, press, or collaboration.</p>
-  </header>
-
-  <main>
-    <section class="card">
-      <h2 style="margin:0 0 10px">Email</h2>
-      <p>
-        <a href="mailto:info@relationship.sbs">info@relationship.sbs</a>
-      </p>
-      <p class="small">
-        We typically respond within a reasonable time. Please avoid sharing sensitive personal information.
-      </p>
+  <main class="wrap">
+    <section class="hero" style="grid-template-columns: 1fr;">
+      <div class="heroCard">
+        <h1 style="margin:0 0 10px;">Contact</h1>
+        <p style="margin:0;color:var(--muted);">
+          Suggestions, corrections, press, or collaboration.
+          Please avoid sharing sensitive personal information.
+        </p>
+        <div class="row" style="margin-top:12px;">
+          <a class="btn secondary" href="mailto:info@relationship.sbs">info@relationship.sbs</a>
+        </div>
+      </div>
     </section>
 
-    <section class="card" style="margin-top:14px">
-      <h2 style="margin:0 0 10px">Message form (optional)</h2>
+    <section class="card prose">
+      <h2>Email</h2>
+      <p class="muted">For anything urgent or simple, email is best.</p>
+      <p><a class="btn" href="mailto:info@relationship.sbs">Email: info@relationship.sbs</a></p>
+
+      <hr />
+
+      <h2>Message form (optional)</h2>
       <p class="small">
-        If your site is static, connect the form action to a form service (e.g., Formspree / Netlify Forms).
+        This website is static. To make this form deliver messages, connect the <code>action</code> to a form service
+        (e.g., Formspree / Netlify Forms).
       </p>
 
-      <form method="post" action="#">
-        <label for="name">Name</label>
-        <input id="name" name="name" autocomplete="name" required />
+      <form method="post" action="#" style="margin-top:12px;">
+        <div class="formGrid">
+          <div>
+            <label class="label" for="name">Name</label>
+            <input id="name" name="name" class="control" autocomplete="name" required />
+          </div>
+          <div>
+            <label class="label" for="email">Email</label>
+            <input id="email" name="email" class="control" type="email" autocomplete="email" required />
+          </div>
+        </div>
 
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" autocomplete="email" required />
+        <label class="label" for="topic">Subject</label>
+        <input id="topic" name="topic" class="control" required />
 
-        <label for="topic">Subject</label>
-        <input id="topic" name="topic" required />
+        <label class="label" for="message">Message</label>
+        <textarea id="message" name="message" class="control" required></textarea>
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" required></textarea>
+        <div class="formActions">
+          <button type="submit" class="btn">Send</button>
+          <a class="btn secondary" href="/privacy/">Privacy Policy</a>
+        </div>
 
-        <button type="submit">Send</button>
-
-        <p class="small">
-          By sending this message you agree to our <a href="/privacy/">Privacy Policy</a>.
+        <p class="small" style="margin-top:10px;">
+          By sending this message you agree to our Privacy Policy.
         </p>
       </form>
     </section>
-
-    <footer class="footer small">
-      © <span id="y"></span> Relationship.sbs
-    </footer>
   </main>
 
-  <script>document.getElementById("y").textContent=new Date().getFullYear()</script>
+  <footer id="siteFooter"></footer>
+
+  <script src="/assets/shared.js"></script>
+
+  <script>
+    if (window.Site) { Site.renderHeader(); Site.renderFooter(); Site.applyOGDefaults(); }
+  </script>
 </body>
 </html>
