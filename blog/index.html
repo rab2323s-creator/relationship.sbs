@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>Blog | Relationship.sbs</title>
+  <meta name="description" content="Practical, psychology-backed articles on relationships, dating, attachment, and emotional clarity. Search, filter, and sort to find what you need fast." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Blog | Relationship.sbs" />
+  <meta property="og:description" content="Psychology-backed articles on relationships, dating, attachment, and emotional clarity." />
+  <meta property="og:image" content="https://relationship.sbs/assets/og-default.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="canonical" href="https://relationship.sbs/blog/" />
+  <link rel="stylesheet" href="/assets/style.css" />
+
+  <script defer src="/assets/shared.js"></script>
+  <script defer src="/assets/blog-data.js"></script>
+  <script defer src="/assets/blog-index.js"></script>
+
+  <!-- JSON-LD: Blog + Site Search -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Blog",
+    "name":"Relationship.sbs Blog",
+    "url":"https://relationship.sbs/blog/",
+    "description":"Articles on relationships, dating, attachment, and emotional clarity.",
+    "inLanguage":"en",
+    "publisher":{
+      "@type":"Organization",
+      "name":"Relationship.sbs",
+      "url":"https://relationship.sbs/"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "url":"https://relationship.sbs/",
+    "potentialAction":{
+      "@type":"SearchAction",
+      "target":"https://relationship.sbs/blog/?q={search_term_string}",
+      "query-input":"required name=search_term_string"
+    }
+  }
+  </script>
+
+  <style>
+    /* Blog-only styling (kept local and minimal) */
+    .blog-hero{
+      padding: 22px 0 10px;
+    }
+    .blog-hero h1{
+      margin: 0 0 6px;
+      font-size: 28px;
+      line-height: 1.2;
+    }
+    .blog-hero p{
+      margin: 0;
+      opacity: .85;
+      line-height: 1.7;
+      max-width: 70ch;
+    }
+
+    .blog-toolbar{
+      display: grid;
+      grid-template-columns: 1.2fr .8fr .8fr auto;
+      gap: 10px;
+      margin-top: 18px;
+      align-items: center;
+    }
+    @media (max-width:900px){
+      .blog-toolbar{ grid-template-columns: 1fr; }
+    }
+
+    .control{
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 14px;
+      padding: 12px 14px;
+      width: 100%;
+      color: inherit;
+      outline: none;
+    }
+    .control::placeholder{ opacity:.7; }
+
+    .posts-grid{
+      display:grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 14px;
+      margin-top: 18px;
+    }
+    @media (max-width:1100px){ .posts-grid{ grid-template-columns: repeat(2,1fr); } }
+    @media (max-width:700px){ .posts-grid{ grid-template-columns: 1fr; } }
+
+    .post-card{
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.05);
+      overflow: hidden;
+      transition: transform .12s ease, border-color .12s ease;
+      display:flex;
+      flex-direction:column;
+      min-height: 100%;
+    }
+    .post-card:hover{
+      transform: translateY(-2px);
+      border-color: rgba(255,255,255,.18);
+    }
+
+    .post-cover{
+      aspect-ratio: 16/9;
+      width: 100%;
+      background: rgba(255,255,255,.08);
+      display:block;
+      object-fit: cover;
+    }
+
+    .post-body{
+      padding: 14px 14px 12px;
+      display:flex;
+      flex-direction:column;
+      gap: 10px;
+      flex:1;
+    }
+    .post-title{
+      font-size: 18px;
+      margin:0;
+      line-height:1.4;
+    }
+    .post-excerpt{
+      margin:0;
+      opacity:.85;
+      line-height:1.7;
+      font-size: 14px;
+    }
+
+    .post-meta{
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      opacity:.85;
+      font-size: 12px;
+      align-items: center;
+    }
+
+    .tags{
+      display:flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .tag{
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      cursor:pointer;
+      user-select:none;
+    }
+    .tag[aria-pressed="true"]{
+      border-color: rgba(255,255,255,.35);
+      background: rgba(255,255,255,.12);
+    }
+
+    .pagination{
+      display:flex;
+      gap: 8px;
+      justify-content: center;
+      margin-top: 18px;
+      flex-wrap: wrap;
+    }
+    .page-btn{
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      cursor:pointer;
+      color: inherit;
+    }
+    .page-btn[aria-current="page"]{
+      border-color: rgba(255,255,255,.35);
+      background: rgba(255,255,255,.12);
+      cursor: default;
+    }
+
+    .empty-state{
+      margin-top: 16px;
+      text-align:center;
+      opacity: .85;
+      padding: 20px;
+      border-radius: 18px;
+      border: 1px dashed rgba(255,255,255,.18);
+    }
+
+    .featured-row{
+      margin-top: 18px;
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 14px;
+    }
+    @media (max-width:900px){ .featured-row{ grid-template-columns: 1fr; } }
+
+    .featured-card{
+      border-radius: 18px;
+      overflow:hidden;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06);
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 220px;
+    }
+    @media (max-width:900px){ .featured-card{ grid-template-columns: 1fr; } }
+
+    .featured-content{
+      padding: 16px;
+      display:flex;
+      flex-direction:column;
+      gap: 10px;
+    }
+    .featured-content h2{
+      margin:0;
+      font-size: 20px;
+      line-height:1.4;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="siteHeader"></div>
+
+  <main class="container">
+    <section class="blog-hero">
+      <h1>Blog</h1>
+      <p>Psychology-backed articles on relationships, dating, attachment styles, and emotional clarity. Use search and filters to find the right read.</p>
+
+      <!-- Featured -->
+      <div id="featuredArea" class="featured-row"></div>
+
+      <!-- Toolbar -->
+      <div class="blog-toolbar" aria-label="Blog Filters">
+        <input id="qInput" class="control" type="search" placeholder="Search articles..." autocomplete="off" />
+        <select id="categorySelect" class="control">
+          <option value="">All categories</option>
+        </select>
+        <select id="sortSelect" class="control">
+          <option value="newest">Newest</option>
+          <option value="oldest">Oldest</option>
+          <option value="readTime">Reading time</option>
+          <option value="title">Title</option>
+        </select>
+        <button id="clearBtn" class="control" style="cursor:pointer;">Clear</button>
+      </div>
+
+      <!-- Tags -->
+      <div id="tagsRow" class="tags" style="margin-top:12px;"></div>
+    </section>
+
+    <section class="card">
+      <div id="statsLine" style="opacity:.85; font-size:13px;"></div>
+
+      <div id="postsGrid" class="posts-grid" aria-live="polite"></div>
+      <div id="emptyState" class="empty-state" hidden>No matching results. Try a different keyword or filter.</div>
+
+      <div id="pagination" class="pagination"></div>
+    </section>
+  </main>
+
+  <div id="siteFooter"></div>
+</body>
+</html>
