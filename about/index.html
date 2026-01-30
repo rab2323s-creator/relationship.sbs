@@ -1,45 +1,90 @@
-<!doctype html>
+ <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
   <title>About | relationship.sbs</title>
-  <meta name="description" content="relationship.sbs is an independent educational platform created by psychologist Laura Aram Smith, PhD. Practical, research-informed tools for communication, boundaries, attachment patterns, and conflict repair." />
+  <meta name="description" content="relationship.sbs is an independent educational platform led by psychologist Laura Aram Smith. Practical, research-informed tools for communication, boundaries, attachment patterns, and conflict repair." />
   <link rel="canonical" href="https://relationship.sbs/about/" />
 
+  <!-- Indexing / crawling -->
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+
+  <!-- Open Graph -->
   <meta property="og:title" content="About | relationship.sbs" />
-  <meta property="og:description" content="Created by psychologist Laura Aram Smith, PhD. Practical, research-informed tools for communication, boundaries, attachment patterns, and conflict repair." />
+  <meta property="og:description" content="An independent educational platform led by psychologist Laura Aram Smith. Practical, research-informed tools for communication, boundaries, attachment patterns, and conflict repair." />
   <meta property="og:url" content="https://relationship.sbs/about/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="relationship.sbs" />
+  <!-- Optional: set a real image URL on your domain -->
+  <!-- <meta property="og:image" content="https://relationship.sbs/assets/og/about.jpg" /> -->
 
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary" />
+  <!-- Optional -->
+  <!-- <meta name="twitter:image" content="https://relationship.sbs/assets/og/about.jpg" /> -->
 
   <link rel="stylesheet" href="/assets/styles.css" />
-  
+
+  <!-- Structured data -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
-    "@type":"AboutPage",
-    "name":"About",
-    "url":"https://relationship.sbs/about/",
-    "isPartOf":{"@type":"WebSite","name":"relationship.sbs","url":"https://relationship.sbs/"},
-    "publisher":{
-      "@type":"Organization",
-      "name":"relationship.sbs",
-      "url":"https://relationship.sbs/",
-      "founder":{
+    "@graph":[
+      {
+        "@type":"WebSite",
+        "@id":"https://relationship.sbs/#website",
+        "name":"relationship.sbs",
+        "url":"https://relationship.sbs/",
+        "publisher":{"@id":"https://relationship.sbs/#org"}
+      },
+      {
+        "@type":"Organization",
+        "@id":"https://relationship.sbs/#org",
+        "name":"relationship.sbs",
+        "url":"https://relationship.sbs/",
+        "founder":{"@id":"https://relationship.sbs/#founder"},
+        "contactPoint":[{
+          "@type":"ContactPoint",
+          "contactType":"editorial",
+          "email":"info@relationship.sbs",
+          "availableLanguage":["en","ar"]
+        }],
+        "sameAs":[
+          "https://www.facebook.com/lauraaramsmith"
+        ]
+      },
+      {
         "@type":"Person",
+        "@id":"https://relationship.sbs/#founder",
         "name":"Laura Aram Smith",
-        "honorificSuffix":"PhD",
         "jobTitle":"Psychologist",
         "sameAs":[
           "https://www.facebook.com/lauraaramsmith"
         ]
+      },
+      {
+        "@type":"AboutPage",
+        "@id":"https://relationship.sbs/about/#webpage",
+        "name":"About",
+        "url":"https://relationship.sbs/about/",
+        "isPartOf":{"@id":"https://relationship.sbs/#website"},
+        "about":{"@id":"https://relationship.sbs/#org"},
+        "primaryImageOfPage":{
+          "@type":"ImageObject",
+          "url":"https://relationship.sbs/assets/og/about.jpg"
+        }
+      },
+      {
+        "@type":"BreadcrumbList",
+        "@id":"https://relationship.sbs/about/#breadcrumbs",
+        "itemListElement":[
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://relationship.sbs/"},
+          {"@type":"ListItem","position":2,"name":"About","item":"https://relationship.sbs/about/"}
+        ]
       }
-    },
-    "contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"info@relationship.sbs"}
+    ]
   }
   </script>
 </head>
@@ -51,35 +96,44 @@
     <section class="hero" style="grid-template-columns: 1fr;">
       <div class="heroCard">
         <h1 style="margin:0 0 10px;">About</h1>
+
         <p style="margin:0;color:var(--muted);max-width:72ch;">
-          relationship.sbs is an independent educational platform created by <strong>Laura Aram Smith, PhD</strong>
-          (psychologist). We publish practical, research-informed tools for healthier communication, boundaries,
-          and understanding attachment patterns.
+          <strong>relationship.sbs</strong> is an independent educational platform created by a small team led by
+          psychologist <strong>Laura Aram Smith</strong>. We publish practical, research-informed tools for healthier
+          communication, boundaries, understanding attachment patterns, and conflict repair.
         </p>
+
         <div class="row" style="margin-top:12px;">
           <span class="badge">Contact: <a href="mailto:info@relationship.sbs">info@relationship.sbs</a></span>
-          <span class="badge">Facebook: <a href="https://www.facebook.com/lauraaramsmith" target="_blank" rel="noopener">lauraaramsmith</a></span>
+          <span class="badge">Facebook: <a href="https://www.facebook.com/lauraaramsmith" target="_blank" rel="noopener noreferrer">lauraaramsmith</a></span>
+        </div>
+
+        <!-- Strong internal CTAs (replace URLs with your real pages) -->
+        <div class="row" style="margin-top:12px;flex-wrap:wrap;">
+          <span class="badge"><a href="/tests/">Start with short tests</a></span>
+          <span class="badge"><a href="/scripts/">Explore actionable scripts</a></span>
+          <span class="badge"><a href="/guides/">Read focused guides</a></span>
         </div>
       </div>
     </section>
 
     <section class="card prose">
       <p>
-        <strong>relationship.sbs</strong> publishes practical tools and concise guides to help people improve communication,
-        build healthy boundaries, and understand attachment patterns in everyday relationships.
+        <strong>relationship.sbs</strong> publishes concise, practical tools to help people improve everyday relationships:
+        communicate clearly, set healthy boundaries, and repair conflict without escalation.
       </p>
 
       <div class="grid2" style="margin-top:14px;">
         <div class="mini">
-          <h3 style="margin:0 0 6px;">Short tests</h3>
+          <h2 style="margin:0 0 6px;font-size:1.05rem;">Short tests</h2>
           <p class="muted" style="margin:0;">Lightweight quizzes to explore attachment, communication needs, and conflict style.</p>
         </div>
         <div class="mini">
-          <h3 style="margin:0 0 6px;">Actionable scripts</h3>
+          <h2 style="margin:0 0 6px;font-size:1.05rem;">Actionable scripts</h2>
           <p class="muted" style="margin:0;">Practical wording for boundaries, repair attempts, apologies, and difficult conversations.</p>
         </div>
         <div class="mini">
-          <h3 style="margin:0 0 6px;">Focused guides</h3>
+          <h2 style="margin:0 0 6px;font-size:1.05rem;">Focused guides</h2>
           <p class="muted" style="margin:0;">Single-topic posts with clear examples and next-step takeaways.</p>
         </div>
       </div>
@@ -88,15 +142,26 @@
 
       <h2>Who we are</h2>
       <p>
-        relationship.sbs is created and maintained by <strong>Laura Aram Smith, PhD</strong>, a psychologist.
-        The site is designed for people who want clear relationship language and usable tools—not vague advice or hype.
+        We’re a small editorial team led by <strong>Laura Aram Smith</strong>, a psychologist. Our goal is to provide clear,
+        usable relationship language—not vague advice, hype, or “one-size-fits-all” rules.
       </p>
+
+      <h2>What you’ll find here</h2>
+      <ul>
+        <li><strong>Communication tools:</strong> how to ask, listen, and respond without defensiveness.</li>
+        <li><strong>Boundaries:</strong> scripts and structure for saying no, requesting change, and staying consistent.</li>
+        <li><strong>Attachment patterns:</strong> simple explanations + how patterns show up in daily interactions.</li>
+        <li><strong>Conflict repair:</strong> steps to de-escalate and reconnect after arguments.</li>
+      </ul>
 
       <h2>Research & sources</h2>
       <p>
-        Our content is informed by established relationship psychology concepts, including attachment theory,
-        emotional regulation, boundary-setting, and conflict repair frameworks. We focus on practical guidance that can
-        be used in real conversations.
+        Our content is informed by established relationship psychology concepts (attachment theory, emotional regulation,
+        boundary-setting, and conflict repair frameworks). We translate evidence-based ideas into practical guidance you can
+        use in real conversations.
+      </p>
+      <p class="muted" style="margin-top:-8px;">
+        Tip: If you publish references, add a dedicated <a href="/sources/">Sources & methodology</a> page and link it here.
       </p>
 
       <h2>Editorial approach</h2>
@@ -104,7 +169,7 @@
         <li><strong>Clarity over hype:</strong> practical guidance, no unrealistic promises.</li>
         <li><strong>Usefulness first:</strong> steps you can apply immediately.</li>
         <li><strong>Context matters:</strong> we avoid one-size-fits-all advice.</li>
-        <li><strong>Continuous improvement:</strong> we refine content based on feedback and performance.</li>
+        <li><strong>Continuous improvement:</strong> we update content based on feedback and new evidence.</li>
       </ul>
 
       <h2>Corrections & feedback</h2>
@@ -113,9 +178,12 @@
         <a href="mailto:info@relationship.sbs">info@relationship.sbs</a>. We review feedback and update content when needed.
       </p>
 
-      <p class="small" style="margin-top:12px;">
-        Note: Content is educational and not a substitute for professional medical, psychological, or legal advice.
-        If you are experiencing abuse, threats, or severe distress, please contact local emergency services or a licensed professional in your area.
+      <hr />
+
+      <h2>Important note</h2>
+      <p class="small" style="margin-top:8px;">
+        Content is educational and not a substitute for professional medical, psychological, or legal advice.
+        If you are experiencing abuse, threats, or severe distress, contact local emergency services or a licensed professional in your area.
       </p>
 
       <p class="small" style="margin-top:12px;">
