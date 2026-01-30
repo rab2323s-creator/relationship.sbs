@@ -47,7 +47,7 @@
           <nav class="nav" aria-label="Primary">
             <a href="/#tests">Tests</a>
             <a href="/tools/text-decoder/">Text Decoder</a>
-            <a href="/blog/">Guides</a>
+            <a href="/blog/">Blog</a>
             ${headerExtras}
           </nav>
         </div>
@@ -72,7 +72,7 @@
           <div class="row">
             <a href="/#tests">Tests</a>
             <a href="/tools/text-decoder/">Tools</a>
-            <a href="/blog/">Guides</a>
+            <a href="/blog/">Blog</a>
           </div>
         </div>
 
