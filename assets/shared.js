@@ -33,7 +33,8 @@
     if (!target) return;
 
     const trust = getTrustLinks();
-    // Keep header minimal (product nav). Add About + Contact for credibility.
+
+    // Add About + Contact to header
     const headerExtras = trust
       .filter(x => x.href === "/about/" || x.href === "/contact/")
       .map(x => `<a href="${x.href}">${x.label}</a>`)
@@ -63,6 +64,7 @@
       .map(x => `<a href="${x.href}">${x.label}</a>`)
       .join("");
 
+    // مهم: خلي "Guides" تروح لأرشيف /blog/ بدل مقالة واحدة
     target.innerHTML = `
       <div class="wrap footer">
         <div class="row" style="justify-content:space-between;">
@@ -70,7 +72,7 @@
           <div class="row">
             <a href="/#tests">Tests</a>
             <a href="/tools/text-decoder/">Tools</a>
-            <a href="/blog/red-flags-vs-boundaries/">Red flags guide</a>
+            <a href="/blog/">Guides</a>
           </div>
         </div>
 
@@ -98,6 +100,25 @@
     setOG("og:url", url);
     setOG("og:type", "website");
     setOG("og:site_name", "relationship.sbs");
+  }
+
+  // ✅ Auto-init (fixes “header/footer not showing” across the entire site)
+  function init(){
+    try{
+      renderHeader();
+      renderFooter();
+      applyOGDefaults();
+    }catch(e){
+      // Fail silently to avoid breaking pages if something is missing
+      // (No console spam for production.)
+    }
+  }
+
+  // Run after DOM is ready (works with `defer` scripts too)
+  if (document.readyState === "loading"){
+    document.addEventListener("DOMContentLoaded", init);
+  }else{
+    init();
   }
 
   window.Site = {
