@@ -7,6 +7,9 @@
   };
 
   function getTestBySlug(slug){
+    // New mode: single-test pages can define `window.TEST`.
+    if (window.TEST && window.TEST.slug === slug) return window.TEST;
+    // Backward compatible mode: old pages use `window.TESTS` array.
     return (window.TESTS||[]).find(t => t.slug === slug) || null;
   }
 
