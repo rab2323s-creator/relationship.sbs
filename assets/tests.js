@@ -3326,5 +3326,609 @@ window.TESTS = [
         "a": "Yes—if both can name their style and agree on repair rules."
       }
     ]
+  },
+  {
+      "id": "toxic_relationship",
+      "slug": "toxic-relationship",
+      "title": "Toxic Relationship Test",
+      "blurb": "12 high-impact questions that flag gaslighting, control, and emotional manipulation — with clear next steps.",
+      "time": "2–3 min",
+      "intent": "quiz",
+      "keywords": [
+          "toxic relationship test",
+          "am i in a toxic relationship",
+          "signs of a toxic relationship",
+          "toxic relationship quiz",
+          "relationship red flags quiz",
+          "gaslighting test",
+          "emotional manipulation signs",
+          "walking on eggshells relationship",
+          "is my partner controlling",
+          "emotional abuse signs"
+      ],
+      "questions": [
+          {
+              "text": "Before you speak up, you often scan for their mood because…",
+              "options": [
+                  {
+                      "label": "Most of the time it’s safe — I just prefer calm timing.",
+                      "score": {
+                          "healthy_strained": 2
+                      },
+                      "tags": [
+                          "self_regulation"
+                      ]
+                  },
+                  {
+                      "label": "If I say it wrong, it becomes my fault.",
+                      "score": {
+                          "toxic_patterns": 2
+                      },
+                      "tags": [
+                          "blameshift"
+                      ]
+                  },
+                  {
+                      "label": "Their reaction can be intense or scary.",
+                      "score": {
+                          "high_risk": 2
+                      },
+                      "tags": [
+                          "fear_response"
+                      ]
+                  },
+                  {
+                      "label": "They’ll dismiss it anyway, so I often don’t bother.",
+                      "score": {
+                          "unbalanced": 2
+                      },
+                      "tags": [
+                          "dismissed"
+                      ]
+                  }
+              ]
+          },
+          {
+              "text": "When you bring up a hurt, they usually…",
+              "options": [
+                  {
+                      "label": "Hear it and try to repair.",
+                      "score": {
+                          "healthy_strained": 2
+                      },
+                      "tags": [
+                          "repair"
+                      ]
+                  },
+                  {
+                      "label": "Argue your feelings: “That didn’t happen / you’re exaggerating.”",
+                      "score": {
+                          "toxic_patterns": 2
+                      },
+                      "tags": [
+                          "invalidation",
+                          "gaslighting"
+                      ]
+                  },
+                  {
+                      "label": "Turn it into punishment (rage, threats, intimidation).",
+                      "score": {
+                          "high_risk": 2
+                      },
+                      "tags": [
+                          "intimidation"
+                      ]
+                  },
+                  {
+                      "label": "Go quiet, disappear, or change the subject.",
+                      "score": {
+                          "unbalanced": 2
+                      },
+                      "tags": [
+                          "avoidance"
+                      ]
+                  }
+              ]
+          },
+          {
+              "text": "After conflict, you’re the one who…",
+              "options": [
+                  {
+                      "label": "Initiates a check-in sometimes, but it’s shared.",
+                      "score": {
+                          "healthy_strained": 2
+                      },
+                      "tags": [
+                          "mutual_effort"
+                      ]
+                  },
+                  {
+                      "label": "Apologizes just to end the tension, even when you weren’t wrong.",
+                      "score": {
+                          "toxic_patterns": 2
+                      },
+                      "tags": [
+                          "self_blame"
+                      ]
+                  },
+                  {
+                      "label": "Walks on eggshells to prevent the next explosion.",
+                      "score": {
+                          "high_risk": 2
+                      },
+                      "tags": [
+                          "hypervigilance"
+                      ]
+                  },
+                  {
+                      "label": "Does all the emotional labor while they ‘move on’.",
+                      "score": {
+                          "unbalanced": 2
+                      },
+                      "tags": [
+                          "one_sided"
+                      ]
+                  }
+              ]
+          },
+          {
+              "text": "How often do you feel like you’re ‘too much’ in this relationship?",
+              "options": [
+                  {
+                      "label": "Rarely. I feel basically accepted.",
+                      "score": {
+                          "healthy_strained": 2
+                      }
+                  },
+                  {
+                      "label": "Often — my needs get labeled as drama.",
+                      "score": {
+                          "toxic_patterns": 2
+                      },
+                      "tags": [
+                          "shame"
+                      ]
+                  },
+                  {
+                      "label": "Almost daily — I feel small or unsafe.",
+                      "score": {
+                          "high_risk": 2
+                      },
+                      "tags": [
+                          "fear_response"
+                      ]
+                  },
+                  {
+                      "label": "I feel more invisible than ‘too much’.",
+                      "score": {
+                          "unbalanced": 2
+                      },
+                      "tags": [
+                          "neglect"
+                      ]
+                  }
+              ]
+          },
+          {
+              "text": "Your boundaries (time, privacy, money, body) are…",
+              "options": [
+                  {
+                      "label": "Mostly respected, even if we negotiate.",
+                      "score": {
+                          "healthy_strained": 2
+                      },
+                      "tags": [
+                          "boundaries_respected"
+                      ]
+                  },
+                  {
+                      "label": "Regularly pushed with guilt or ‘jokes’.",
+                      "score": {
+                          "toxic_patterns": 2
+                      },
+                      "tags": [
+                          "boundary_push"
+                      ]
+                  },
+                  {
+                      "label": "Broken with control (monitoring, isolation, coercion).",
+                      "score": {
+                          "high_risk": 2
+                      },
+                      "tags": [
+                          "control"
+                      ]
+                  },
+                  {
+                      "label": "Ignored because they don’t engage or follow through.",
+                      "score": {
+                          "unbalanced": 2
+                      },
+                      "tags": [
+                          "low_investment"
+                      ]
+                  }
+              ]
+          },
+          {
+              "text": "When something good happens to you, they…",
+              "options": [
+                  {
+                      "label": "Celebrate it and feel proud.",
+                      "score": {
+                          "healthy_strained": 2
+                      }
+                  },
+                  {
+                      "label": "Compete, minimize, or make it about them.",
+                      "score": {
+                          "toxic_patterns": 2
+                      },
+                      "tags": [
+                          "devalue"
+                      ]
+                  },
+                  {
+                      "label": "Punish you for it (coldness, sabotage, accusations).",
+                      "score": {
+                          "high_risk": 2
+                      },
+                      "tags": [
+                          "sabotage"
+                      ]
+                  },
+                  {
+                      "label": "Act indifferent — like it doesn’t matter.",
+                      "score": {
+                          "unbalanced": 2
+                      }
+                  }
+              ]
+          },
+          {
+              "text": "If you spend time with friends/family, you feel…",
+              "options": [
+                  {
+                      "label": "Free to go. We coordinate like adults.",
+                      "score": {
+                          "healthy_strained": 2
+                      }
+                  },
+                  {
+                      "label": "Guilty, because they imply you’re selfish.",
+                      "score": {
+                          "toxic_patterns": 2
+                      },
+                      "tags": [
+                          "guilt"
+                      ]
+                  },
+                  {
+                      "label": "Nervous, because they may blow up or isolate you.",
+                      "score": {
+                          "high_risk": 2
+                      },
+                      "tags": [
+                          "isolation"
+                      ]
+                  },
+                  {
+                      "label": "Like they don’t care — unless it inconveniences them.",
+                      "score": {
+                          "unbalanced": 2
+                      }
+                  }
+              ]
+          },
+          {
+              "text": "In arguments, they tend to…",
+              "options": [
+                  {
+                      "label": "Stay on the issue and come back after breaks.",
+                      "score": {
+                          "healthy_strained": 2
+                      }
+                  },
+                  {
+                      "label": "Shift blame and rewrite the story.",
+                      "score": {
+                          "toxic_patterns": 2
+                      },
+                      "tags": [
+                          "blameshift",
+                          "gaslighting"
+                      ]
+                  },
+                  {
+                      "label": "Use fear: yelling, threats, blocking exits, breaking things.",
+                      "score": {
+                          "high_risk": 2
+                      },
+                      "tags": [
+                          "intimidation"
+                      ]
+                  },
+                  {
+                      "label": "Disappear, stonewall, or leave you hanging for days.",
+                      "score": {
+                          "unbalanced": 2
+                      },
+                      "tags": [
+                          "stonewalling"
+                      ]
+                  }
+              ]
+          },
+          {
+              "text": "How predictable is the ‘love’ you receive?",
+              "options": [
+                  {
+                      "label": "Steady, even when we’re stressed.",
+                      "score": {
+                          "healthy_strained": 2
+                      }
+                  },
+                  {
+                      "label": "It flips: warm when you please them, cold when you don’t.",
+                      "score": {
+                          "toxic_patterns": 2
+                      },
+                      "tags": [
+                          "intermittent_reinforcement"
+                      ]
+                  },
+                  {
+                      "label": "It’s intense then punishing — a cycle you can’t control.",
+                      "score": {
+                          "high_risk": 2
+                      },
+                      "tags": [
+                          "cycle"
+                      ]
+                  },
+                  {
+                      "label": "Low effort most of the time.",
+                      "score": {
+                          "unbalanced": 2
+                      }
+                  }
+              ]
+          },
+          {
+              "text": "When you say “no”, the usual outcome is…",
+              "options": [
+                  {
+                      "label": "They accept it, maybe disappointed but respectful.",
+                      "score": {
+                          "healthy_strained": 2
+                      }
+                  },
+                  {
+                      "label": "They pressure you until you cave.",
+                      "score": {
+                          "toxic_patterns": 2
+                      },
+                      "tags": [
+                          "coercion"
+                      ]
+                  },
+                  {
+                      "label": "They retaliate or scare you.",
+                      "score": {
+                          "high_risk": 2
+                      },
+                      "tags": [
+                          "retaliation"
+                      ]
+                  },
+                  {
+                      "label": "They withdraw and you’re left to fix it.",
+                      "score": {
+                          "unbalanced": 2
+                      }
+                  }
+              ]
+          },
+          {
+              "text": "You catch yourself thinking…",
+              "options": [
+                  {
+                      "label": "“We have issues, but we can work through them.”",
+                      "score": {
+                          "healthy_strained": 2
+                      }
+                  },
+                  {
+                      "label": "“Maybe I really am the problem.”",
+                      "score": {
+                          "toxic_patterns": 2
+                      },
+                      "tags": [
+                          "self_doubt"
+                      ]
+                  },
+                  {
+                      "label": "“If I leave, something bad might happen.”",
+                      "score": {
+                          "high_risk": 2
+                      },
+                      "tags": [
+                          "fear_response"
+                      ]
+                  },
+                  {
+                      "label": "“I’m in a relationship but feel alone.”",
+                      "score": {
+                          "unbalanced": 2
+                      }
+                  }
+              ]
+          },
+          {
+              "text": "If you imagine this continuing for a year, your body feels…",
+              "options": [
+                  {
+                      "label": "Tired, but hopeful with the right changes.",
+                      "score": {
+                          "healthy_strained": 2
+                      }
+                  },
+                  {
+                      "label": "Heavy — like you’re losing yourself.",
+                      "score": {
+                          "toxic_patterns": 2
+                      }
+                  },
+                  {
+                      "label": "Alarmed — like your nervous system is on edge.",
+                      "score": {
+                          "high_risk": 2
+                      }
+                  },
+                  {
+                      "label": "Numb — like you’re drifting.",
+                      "score": {
+                          "unbalanced": 2
+                      }
+                  }
+              ]
+          }
+      ],
+      "results": {
+          "healthy_strained": {
+              "title": "Healthy but Strained (repair is possible)",
+              "bullets": [
+                  "The foundation has respect, but stress patterns are getting loud.",
+                  "Miscommunication happens — not systematic control.",
+                  "With clear repair rules, this can improve quickly."
+              ],
+              "what_it_looks_like": [
+                  "Tension spikes during stress, then you reconnect.",
+                  "Both people can own their part (even if it takes time).",
+                  "Boundaries are mostly honored, but consistency needs work."
+              ],
+              "blindspots": [
+                  "You may normalize ‘almost okay’ and ignore small red flags.",
+                  "You might do too much fixing instead of asking for shared effort."
+              ],
+              "scripts": [
+                  "“I want us on the same team. Can we name the pattern, not blame the person?”",
+                  "“When I share a feeling, I need acknowledgment first — solutions second.”",
+                  "“If we take a break, let’s set a return time so it doesn’t become distance.”"
+              ],
+              "next_steps": [
+                  "Do a weekly 15‑minute check‑in: one appreciation + one request + one plan.",
+                  "Agree on a conflict rule: no insults, no threats, and time‑outs with return time.",
+                  "If the same issue repeats 3 times, bring in a neutral third party (therapy/coaching)."
+              ]
+          },
+          "unbalanced": {
+              "title": "Unbalanced / One‑Sided (you’re carrying the relationship)",
+              "bullets": [
+                  "The relationship runs on your effort — your partner coasts.",
+                  "Needs get delayed, minimized, or left unresolved.",
+                  "You can feel lonely even while ‘together’."
+              ],
+              "what_it_looks_like": [
+                  "You initiate talks, plans, repair, and emotional clarity.",
+                  "Promises happen, follow‑through doesn’t.",
+                  "Your needs feel like ‘extra work’ to them."
+              ],
+              "blindspots": [
+                  "You may confuse potential with partnership.",
+                  "You might accept crumbs because you’re exhausted from asking."
+              ],
+              "scripts": [
+                  "“I need this to be mutual. What will you do differently this week — specifically?”",
+                  "“I’m not available for a relationship where I’m the only one repairing.”",
+                  "“If it matters, it shows in actions — not intentions.”"
+              ],
+              "next_steps": [
+                  "Stop over-explaining. Make one clear request, then watch behavior.",
+                  "Set a timeline: if effort doesn’t change in 30 days, make a decision.",
+                  "Rebuild your support system (friends, routines, hobbies) so the relationship isn’t your only oxygen."
+              ]
+          },
+          "toxic_patterns": {
+              "title": "Toxic Patterns Present (your reality and needs are being eroded)",
+              "bullets": [
+                  "You’re dealing with repeated invalidation, blame-shifting, or guilt control.",
+                  "The ‘problem’ keeps getting reframed as you — not the behavior.",
+                  "Your self-trust is shrinking."
+              ],
+              "what_it_looks_like": [
+                  "You overthink texts, tone, and timing to avoid getting blamed.",
+                  "Apologies get demanded, but repair doesn’t happen.",
+                  "Affection feels conditional: warm when compliant, cold when not."
+              ],
+              "blindspots": [
+                  "You may keep trying to ‘find the right words’ to finally be understood.",
+                  "You might confuse intense emotion with intimacy."
+              ],
+              "scripts": [
+                  "“I’m open to feedback. I’m not open to being shamed or dismissed.”",
+                  "“We can disagree, but we don’t rewrite reality. Let’s stay with facts.”",
+                  "“If you can’t talk without blame, I’m ending this conversation and returning later.”"
+              ],
+              "next_steps": [
+                  "Name the pattern (gaslighting, guilt, blame shift) and stop debating your feelings.",
+                  "Keep a private reality-check note: what happened, what was said, how you felt.",
+                  "Talk to a trusted friend/therapist for external grounding and planning."
+              ]
+          },
+          "high_risk": {
+              "title": "High‑Risk Toxic Relationship (safety and support first)",
+              "bullets": [
+                  "Your nervous system is signaling danger: fear, intimidation, or coercion.",
+                  "Control tactics may be present (isolation, monitoring, threats).",
+                  "You deserve support that prioritizes safety, not ‘fixing’ the dynamic."
+              ],
+              "what_it_looks_like": [
+                  "You feel scared to set boundaries or say no.",
+                  "Conflict includes threats, screaming, intimidation, or punishment cycles.",
+                  "You’re isolated, monitored, or made to feel trapped."
+              ],
+              "blindspots": [
+                  "You may minimize because ‘it’s not always bad’. Cycles are common in abuse.",
+                  "You may hope love will calm what is actually a control pattern."
+              ],
+              "scripts": [
+                  "“I’m not discussing this while I’m being threatened. I’m leaving / ending the call.”",
+                  "“My safety comes first. I’m reaching out for support.”",
+                  "“No explanation is required for a boundary.”"
+              ],
+              "next_steps": [
+                  "If you feel unsafe, prioritize immediate support from local services or trusted people.",
+                  "Create a safety plan (documents, money, where you can go, who you can call).",
+                  "Consider professional support specialized in abuse dynamics."
+              ]
+          }
+      },
+      "faq": [
+          {
+              "q": "What is a toxic relationship?",
+              "a": "A toxic relationship is a repeating pattern that drains your emotional safety — like chronic disrespect, control, blame-shifting, or manipulation — rather than a one-off bad week."
+          },
+          {
+              "q": "Is this test a diagnosis?",
+              "a": "No. It’s a reflection tool based on behavior patterns. If you feel unsafe or controlled, that signal matters even without a label."
+          },
+          {
+              "q": "Can a relationship be toxic without yelling?",
+              "a": "Yes. Subtle toxicity often shows up as guilt, silent treatment, gaslighting, isolation, or making you doubt your reality."
+          },
+          {
+              "q": "What’s the difference between conflict and toxicity?",
+              "a": "Healthy conflict still has respect and repair. Toxicity is when conflict becomes punishment, control, or repeated erosion of your boundaries."
+          },
+          {
+              "q": "What if I got the High‑Risk result?",
+              "a": "Treat it as a cue to prioritize support and safety. Reach out to trusted people and local resources; you don’t have to navigate it alone."
+          },
+          {
+              "q": "How can I rebuild my self-trust?",
+              "a": "Start tracking facts (what happened), limit debates about your feelings, and get external perspective from a friend, therapist, or support group."
+          }
+      ]
   }
 ];
