@@ -195,6 +195,14 @@
   </url>
 
 
+
+  <url>
+    <loc>https://relationship.sbs/tests/toxic-relationship/</loc>
+    <lastmod>2026-02-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Result previews -->
   <url>
     <loc>https://relationship.sbs/tests/attachment-style/results/anxious/</loc>
@@ -291,6 +299,33 @@
     <lastmod>2026-01-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.4</priority>
+  </url>
+
+
+  <!-- Toxic relationship result previews -->
+  <url>
+    <loc>https://relationship.sbs/tests/toxic-relationship/results/healthy_strained/</loc>
+    <lastmod>2026-02-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/toxic-relationship/results/unbalanced/</loc>
+    <lastmod>2026-02-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/toxic-relationship/results/toxic_patterns/</loc>
+    <lastmod>2026-02-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/toxic-relationship/results/high_risk/</loc>
+    <lastmod>2026-02-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
 </urlset>
