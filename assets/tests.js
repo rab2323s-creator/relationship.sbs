@@ -1,4 +1,4 @@
-/*
+ /*
   tests.js — data-only test definitions.
 */
 window.TESTS = [
@@ -3930,5 +3930,607 @@ window.TESTS = [
               "a": "Start tracking facts (what happened), limit debates about your feelings, and get external perspective from a friend, therapist, or support group."
           }
       ]
+  }
+,
+  {
+    "id": "emotional_intimacy",
+    "slug": "emotional-intimacy",
+    "title": "Emotional Intimacy Test — How Close Are You Really?",
+    "blurb": "12 psychologically sharp questions that reveal your emotional connection, safety, and closeness — with scripts and next steps.",
+    "time": "2–3 min",
+    "intent": "quiz",
+    "keywords": [
+      "emotional intimacy test",
+      "lack of emotional intimacy",
+      "emotional distance in relationship",
+      "how to build emotional intimacy",
+      "feel disconnected from partner",
+      "emotional connection test"
+    ],
+    "questions": [
+      {
+        "text": "1) When you’re upset, what do you *expect* will happen if you speak honestly?",
+        "options": [
+          {
+            "label": "I expect care — even if we disagree.",
+            "score": {
+              "deeply_connected": 2
+            }
+          },
+          {
+            "label": "I expect it to be ‘handled’ quickly, not really felt.",
+            "score": {
+              "connected_unspoken": 2
+            }
+          },
+          {
+            "label": "I expect I’ll end up comforting them instead.",
+            "score": {
+              "one_sided": 2
+            }
+          },
+          {
+            "label": "I expect tension, distance, or shutdown — so I hold it in.",
+            "score": {
+              "disconnected": 2
+            }
+          },
+          {
+            "label": "I expect judgment or being misunderstood, so I stay guarded.",
+            "score": {
+              "guarded": 2
+            }
+          }
+        ]
+      },
+      {
+        "text": "2) The moment you need reassurance, your partner usually…",
+        "options": [
+          {
+            "label": "Shows up and tries to understand what you need.",
+            "score": {
+              "deeply_connected": 2
+            }
+          },
+          {
+            "label": "Offers practical help but avoids the emotional part.",
+            "score": {
+              "connected_unspoken": 2
+            }
+          },
+          {
+            "label": "Makes it about how hard it is for them.",
+            "score": {
+              "one_sided": 2
+            }
+          },
+          {
+            "label": "Goes quiet, distracts, or delays it indefinitely.",
+            "score": {
+              "disconnected": 2
+            }
+          },
+          {
+            "label": "Responds in a way that makes me regret asking.",
+            "score": {
+              "guarded": 2
+            }
+          }
+        ]
+      },
+      {
+        "text": "3) After conflict, what’s the ‘repair’ like in your relationship?",
+        "options": [
+          {
+            "label": "We come back together — we name what happened and reconnect.",
+            "score": {
+              "deeply_connected": 2
+            }
+          },
+          {
+            "label": "We move on fast, but the deeper feelings stay unspoken.",
+            "score": {
+              "connected_unspoken": 2
+            }
+          },
+          {
+            "label": "I usually apologize first to restore peace.",
+            "score": {
+              "one_sided": 2
+            }
+          },
+          {
+            "label": "Things stay cold for days; closeness feels risky.",
+            "score": {
+              "disconnected": 2
+            }
+          },
+          {
+            "label": "Repair doesn’t happen — I just learn to avoid topics.",
+            "score": {
+              "guarded": 2
+            }
+          }
+        ]
+      },
+      {
+        "text": "4) If you share a personal fear (rejection, failure, loneliness), your partner…",
+        "options": [
+          {
+            "label": "Treats it gently and stays emotionally present.",
+            "score": {
+              "deeply_connected": 2
+            }
+          },
+          {
+            "label": "Listens, but shifts into advice before I feel understood.",
+            "score": {
+              "connected_unspoken": 2
+            }
+          },
+          {
+            "label": "Eventually redirects to their own stress or needs.",
+            "score": {
+              "one_sided": 2
+            }
+          },
+          {
+            "label": "Seems uncomfortable and changes the subject.",
+            "score": {
+              "disconnected": 2
+            }
+          },
+          {
+            "label": "Uses it later in conflict, so I share less.",
+            "score": {
+              "guarded": 2
+            }
+          }
+        ]
+      },
+      {
+        "text": "5) In daily life, emotional closeness feels like…",
+        "options": [
+          {
+            "label": "A steady place: small check-ins, warmth, and ‘we’ energy.",
+            "score": {
+              "deeply_connected": 2
+            }
+          },
+          {
+            "label": "We’re close in routine, but the deeper layer is missing.",
+            "score": {
+              "connected_unspoken": 2
+            }
+          },
+          {
+            "label": "I’m the one who keeps connection alive.",
+            "score": {
+              "one_sided": 2
+            }
+          },
+          {
+            "label": "We coexist more than we connect.",
+            "score": {
+              "disconnected": 2
+            }
+          },
+          {
+            "label": "I’m present physically, but emotionally I keep distance.",
+            "score": {
+              "guarded": 2
+            }
+          }
+        ]
+      },
+      {
+        "text": "6) When you ask a direct question like “Are we okay?”, you usually get…",
+        "options": [
+          {
+            "label": "A real answer — even if it’s uncomfortable.",
+            "score": {
+              "deeply_connected": 2
+            }
+          },
+          {
+            "label": "A short answer that closes the topic quickly.",
+            "score": {
+              "connected_unspoken": 2
+            }
+          },
+          {
+            "label": "An answer that makes me feel like I asked too much.",
+            "score": {
+              "one_sided": 2
+            }
+          },
+          {
+            "label": "Avoidance: ‘Let’s not do this now.’",
+            "score": {
+              "disconnected": 2
+            }
+          },
+          {
+            "label": "Deflection or irritation, so I stop asking.",
+            "score": {
+              "guarded": 2
+            }
+          }
+        ]
+      },
+      {
+        "text": "7) How safe do you feel being your full self (needs, moods, imperfections)?",
+        "options": [
+          {
+            "label": "Very safe — I don’t have to perform.",
+            "score": {
+              "deeply_connected": 2
+            }
+          },
+          {
+            "label": "Mostly safe, but we avoid the deeper vulnerability.",
+            "score": {
+              "connected_unspoken": 2
+            }
+          },
+          {
+            "label": "Not very — my needs often become a problem.",
+            "score": {
+              "one_sided": 2
+            }
+          },
+          {
+            "label": "Low — I filter myself to keep the peace.",
+            "score": {
+              "disconnected": 2
+            }
+          },
+          {
+            "label": "I protect myself — showing too much feels risky.",
+            "score": {
+              "guarded": 2
+            }
+          }
+        ]
+      },
+      {
+        "text": "8) When something good happens to you, your partner’s response feels…",
+        "options": [
+          {
+            "label": "Genuinely proud and emotionally close to my joy.",
+            "score": {
+              "deeply_connected": 2
+            }
+          },
+          {
+            "label": "Supportive, but a bit distant or distracted.",
+            "score": {
+              "connected_unspoken": 2
+            }
+          },
+          {
+            "label": "Neutral — or I sense competition/resentment sometimes.",
+            "score": {
+              "one_sided": 2
+            }
+          },
+          {
+            "label": "Uninterested; I share less over time.",
+            "score": {
+              "disconnected": 2
+            }
+          },
+          {
+            "label": "Unpredictable — I hesitate to share wins.",
+            "score": {
+              "guarded": 2
+            }
+          }
+        ]
+      },
+      {
+        "text": "9) What happens when you say “I feel lonely even when we’re together”?",
+        "options": [
+          {
+            "label": "We take it seriously and explore what’s missing.",
+            "score": {
+              "deeply_connected": 2
+            }
+          },
+          {
+            "label": "We agree vaguely, but nothing changes long-term.",
+            "score": {
+              "connected_unspoken": 2
+            }
+          },
+          {
+            "label": "I’m told I’m asking for too much or being dramatic.",
+            "score": {
+              "one_sided": 2
+            }
+          },
+          {
+            "label": "It becomes awkward; we avoid the topic.",
+            "score": {
+              "disconnected": 2
+            }
+          },
+          {
+            "label": "I’d never say it — it feels unsafe to admit.",
+            "score": {
+              "guarded": 2
+            }
+          }
+        ]
+      },
+      {
+        "text": "10) Your nervous system in this relationship is usually…",
+        "options": [
+          {
+            "label": "Calmer — I feel grounded and seen.",
+            "score": {
+              "deeply_connected": 2
+            }
+          },
+          {
+            "label": "Fine day-to-day, but not deeply settled.",
+            "score": {
+              "connected_unspoken": 2
+            }
+          },
+          {
+            "label": "On alert — I track moods to prevent conflict.",
+            "score": {
+              "one_sided": 2
+            }
+          },
+          {
+            "label": "Numb or distant — I disconnect to cope.",
+            "score": {
+              "disconnected": 2
+            }
+          },
+          {
+            "label": "Guarded — I keep control by sharing less.",
+            "score": {
+              "guarded": 2
+            }
+          }
+        ]
+      },
+      {
+        "text": "11) If you stopped initiating emotional talks, what would happen?",
+        "options": [
+          {
+            "label": "We’d still connect; they also initiate and notice.",
+            "score": {
+              "deeply_connected": 2
+            }
+          },
+          {
+            "label": "We’d be okay, but intimacy would slowly thin out.",
+            "score": {
+              "connected_unspoken": 2
+            }
+          },
+          {
+            "label": "The emotional relationship would nearly disappear.",
+            "score": {
+              "one_sided": 2
+            }
+          },
+          {
+            "label": "We’d turn into roommates quickly.",
+            "score": {
+              "disconnected": 2
+            }
+          },
+          {
+            "label": "It would feel safer for me — less exposure.",
+            "score": {
+              "guarded": 2
+            }
+          }
+        ]
+      },
+      {
+        "text": "12) The sentence that hits too close to home is…",
+        "options": [
+          {
+            "label": "‘We can be honest and still stay connected.’",
+            "score": {
+              "deeply_connected": 2
+            }
+          },
+          {
+            "label": "‘We love each other, but we don’t *go deep*.’",
+            "score": {
+              "connected_unspoken": 2
+            }
+          },
+          {
+            "label": "‘I carry the emotional weight for both of us.’",
+            "score": {
+              "one_sided": 2
+            }
+          },
+          {
+            "label": "‘I feel alone inside this relationship.’",
+            "score": {
+              "disconnected": 2
+            }
+          },
+          {
+            "label": "‘If they saw the real me, it wouldn’t be safe.’",
+            "score": {
+              "guarded": 2
+            }
+          }
+        ]
+      }
+    ],
+    "results": {
+      "deeply_connected": {
+        "title": "Deeply Connected",
+        "bullets": [
+          "You feel emotionally safe: honesty doesn’t cost closeness.",
+          "Repair exists: conflict ends in reconnection, not punishment.",
+          "Your needs are allowed — not negotiated out of existence."
+        ],
+        "what_it_looks_like": [
+          "You can ask directly for reassurance without fear.",
+          "You feel ‘held’ emotionally, not managed or dismissed.",
+          "Both of you initiate connection — it’s not one-person labor."
+        ],
+        "blindspots": [
+          "Assuming closeness will maintain itself without upkeep.",
+          "Avoiding hard topics because ‘we’re fine’—until you’re not."
+        ],
+        "scripts": [
+          "“I love what we have. Let’s protect it by doing a weekly 15-minute check-in.”",
+          "“Can we name one thing that felt hard this week—and one thing that felt close?”",
+          "“When we disagree, I want repair before we sleep. Are you open to that?”"
+        ],
+        "next_steps": [
+          "Create a small intimacy ritual: daily 5-minute ‘real talk’.",
+          "Use conflict as a doorway to deeper understanding (not a win/lose).",
+          "Keep boundaries clear so closeness stays safe long-term."
+        ]
+      },
+      "connected_unspoken": {
+        "title": "Connected but Unspoken",
+        "bullets": [
+          "There’s love and stability — but depth gets postponed.",
+          "Emotions are often translated into advice or logistics.",
+          "You may feel close… but not fully *known*."
+        ],
+        "what_it_looks_like": [
+          "Good teamwork, weaker emotional language.",
+          "Difficult feelings get ‘fixed’ rather than felt.",
+          "You sense a ceiling: you don’t go all the way in."
+        ],
+        "blindspots": [
+          "Confusing comfort with intimacy.",
+          "Avoiding vulnerability to keep the relationship ‘smooth’."
+        ],
+        "scripts": [
+          "“I don’t need solutions yet. I need you to be with me for 2 minutes.”",
+          "“Can you reflect what you heard before you advise?”",
+          "“One thing I’m scared to say is… and I want to feel safe saying it.”"
+        ],
+        "next_steps": [
+          "Add ‘reflect first, solve later’ rule in emotional conversations.",
+          "Practice naming feelings (not stories) once per day.",
+          "Schedule a weekly ‘depth’ conversation: 20 minutes, no phones."
+        ]
+      },
+      "one_sided": {
+        "title": "One-Sided Intimacy",
+        "bullets": [
+          "You carry the emotional closeness for both of you.",
+          "You may over-function: initiate, repair, soothe, explain.",
+          "Your needs get delayed until they become exhaustion."
+        ],
+        "what_it_looks_like": [
+          "You’re the one who checks in, the one who apologizes, the one who makes it ‘okay’.",
+          "You hesitate to ask for support because it often backfires or disappears.",
+          "You feel unseen — even when you’re together."
+        ],
+        "blindspots": [
+          "Believing love means effort should hurt.",
+          "Lowering needs to ‘keep them’—and losing yourself."
+        ],
+        "scripts": [
+          "“I notice I initiate most emotional talks. I need this to be shared.”",
+          "“I’m not asking for perfection — I’m asking for participation.”",
+          "“If we can’t meet each other emotionally, we need a plan, not promises.”"
+        ],
+        "next_steps": [
+          "Stop over-explaining. Make a clear request, then observe actions.",
+          "Set one non-negotiable: a weekly check-in they must initiate every other week.",
+          "If patterns don’t change, consider couples support or a serious boundary reset."
+        ]
+      },
+      "disconnected": {
+        "title": "Emotionally Disconnected",
+        "bullets": [
+          "Closeness is present in routine, missing in emotional contact.",
+          "You may feel lonely *inside* the relationship.",
+          "Avoidance has become the default conflict strategy."
+        ],
+        "what_it_looks_like": [
+          "Conversations stay safe: schedules, tasks, surface updates.",
+          "Attempts at depth feel awkward or get shut down.",
+          "You’ve learned to need less — to hurt less."
+        ],
+        "blindspots": [
+          "Normalizing loneliness as ‘this is just adulthood.’",
+          "Waiting for intimacy to return without changing the system."
+        ],
+        "scripts": [
+          "“I miss feeling close to you. Can we do 10 minutes of real talk tonight?”",
+          "“When we avoid hard topics, I feel us drifting. I want us back.”",
+          "“Can we try a simple prompt: ‘One thing I felt today was…’”"
+        ],
+        "next_steps": [
+          "Introduce micro-intimacy: 1 question/day (no problem-solving).",
+          "Create ‘repair agreements’: how you reconnect after tension.",
+          "If disconnection persists, address avoidant patterns directly (or get guided support)."
+        ]
+      },
+      "guarded": {
+        "title": "Guarded / Afraid to Be Seen",
+        "bullets": [
+          "You protect yourself by staying in control emotionally.",
+          "Vulnerability feels risky — because you’ve learned it can cost you.",
+          "Your body might feel tense even when things look ‘fine’."
+        ],
+        "what_it_looks_like": [
+          "You share selectively, then regret it later.",
+          "You rehearse conversations in your head before speaking.",
+          "You hold back needs because being ‘too much’ feels dangerous."
+        ],
+        "blindspots": [
+          "Mistaking self-protection for independence.",
+          "Staying guarded so long you can’t feel what you need anymore."
+        ],
+        "scripts": [
+          "“I want to share something real. I need you to be gentle and stay present.”",
+          "“If you disagree, please don’t dismiss me. Ask me a question instead.”",
+          "“I’m practicing being honest before I shut down. Here’s what I feel.”"
+        ],
+        "next_steps": [
+          "Start small: share one feeling + one need per week.",
+          "Track safety: do you feel respected when you’re vulnerable? Look at patterns.",
+          "If you feel consistently unsafe emotionally, prioritize support and boundaries."
+        ]
+      }
+    },
+    "faq": [
+      {
+        "q": "What is emotional intimacy?",
+        "a": "Emotional intimacy is the feeling that you can be fully seen — needs, feelings, imperfections — and still be respected and connected."
+      },
+      {
+        "q": "What causes a lack of emotional intimacy?",
+        "a": "Common causes include stress, avoidance of vulnerability, unresolved resentment, unequal emotional labor, or fear of conflict."
+      },
+      {
+        "q": "Can emotional distance be fixed?",
+        "a": "Often yes—if both partners are willing to practice repair, honesty, and consistent emotional presence."
+      },
+      {
+        "q": "Is this test a diagnosis?",
+        "a": "No. It’s a reflection tool based on patterns of connection, safety, and responsiveness."
+      },
+      {
+        "q": "What if I got ‘Guarded’?",
+        "a": "It can be a protective response to past experiences. Start with small, safe disclosures and observe how your partner responds over time."
+      },
+      {
+        "q": "What if I got ‘One-Sided’?",
+        "a": "Treat it as a signal to set clearer requests and boundaries, and assess whether your partner participates consistently—not just promises."
+      }
+    ]
   }
 ];
