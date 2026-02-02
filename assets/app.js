@@ -7,9 +7,7 @@
   };
 
   function getTestBySlug(slug){
-    // New mode: single-test pages can define `window.TEST`.
     if (window.TEST && window.TEST.slug === slug) return window.TEST;
-    // Backward compatible mode: old pages use `window.TESTS` array.
     return (window.TESTS||[]).find(t => t.slug === slug) || null;
   }
 
@@ -652,7 +650,7 @@
     const grid = $("#testsGrid");
     if (!grid) return;
     grid.innerHTML = "";
-    (window.TESTS || []).forEach(t => {
+    (window.TEST_INDEX || window.TESTS || []).forEach(t => {
       const href = `/tests/${t.slug}/`;
       const div = document.createElement("article");
       div.className = "tile";
