@@ -47,5 +47,13 @@ window.TEST_INDEX = [
     "blurb": "12 powerful scenarios that reveal overthinking loops and how to regain self-trust.",
     "time": "2–3 min",
     "intent": "quiz"
+  },
+   {
+    "id": "relationship_anxiety",
+    "slug": "relationship-anxiety",
+    "title": "Relationship Anxiety Test — Anxiety or Intuition?",
+    "blurb": "12 high-impact scenarios to reveal your anxiety loop, reassurance needs, and self-trust patterns.",
+    "time": "2–3 min",
+    "intent": "quiz"
   }
 ];
