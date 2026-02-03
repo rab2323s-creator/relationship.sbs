@@ -1,9 +1,9 @@
- /* relationship-anxiety.js — single test (new mode) */
+/* relationship-anxiety.js — single test definition (new mode) */
 window.TEST = {
   "id": "relationship_anxiety",
   "slug": "relationship-anxiety",
   "title": "Relationship Anxiety Test — Anxiety or Intuition?",
-  "blurb": "12 psychologically sharp questions to reveal relationship anxiety patterns—plus scripts and next steps.",
+  "blurb": "12 psychologically sharp scenarios that reveal your relationship anxiety pattern—reassurance loops, hypervigilant overthinking, grounded clarity, or a real intuition signal—plus scripts and next steps.",
   "time": "2–3 min",
   "intent": "quiz",
   "keywords": [
@@ -12,38 +12,33 @@ window.TEST = {
     "anxious in relationship",
     "is it intuition or anxiety",
     "why am i anxious in my relationship",
-    "reassurance seeking"
+    "reassurance seeking",
+    "overthinking relationship"
   ],
   "questions": [
     {
-      "text": "Your partner replies later than usual. Your first internal reaction is…",
+      "text": "They reply shorter than usual. Your first internal reaction is…",
       "options": [
         {
-          "label": "I pause and assume there’s a normal reason.",
+          "label": "I assume there’s a normal reason and stay steady.",
           "score": {
-            "secure_grounded": 2
+            "grounded_clear": 2
           }
         },
         {
-          "label": "I feel a jolt and want quick reassurance.",
+          "label": "I feel a sting and want a quick “we’re good” message.",
           "score": {
             "reassurance_loop": 2
           }
         },
         {
-          "label": "My mind starts scanning for hidden signs.",
+          "label": "My mind scans for hidden meaning in tone and timing.",
           "score": {
-            "hypervigilant": 2
+            "hypervigilant_overthinking": 2
           }
         },
         {
-          "label": "I spiral into worst-case stories and can’t focus.",
-          "score": {
-            "rumination_loop": 2
-          }
-        },
-        {
-          "label": "Something feels *specifically* off—based on a clear pattern, not just fear.",
+          "label": "Something feels specifically off based on a clear pattern I’ve noticed.",
           "score": {
             "intuition_signal": 2
           }
@@ -51,34 +46,28 @@ window.TEST = {
       ]
     },
     {
-      "text": "When you ask for reassurance, the outcome is usually…",
+      "text": "You see “seen” but no reply. What happens next?",
       "options": [
         {
-          "label": "I feel calmer and we reconnect easily.",
+          "label": "I wait and continue my day without spiraling.",
           "score": {
-            "secure_grounded": 2
+            "grounded_clear": 2
           }
         },
         {
-          "label": "It helps briefly, then I need it again soon.",
+          "label": "I feel uneasy and want reassurance soon.",
           "score": {
             "reassurance_loop": 2
           }
         },
         {
-          "label": "I ask indirectly to avoid feeling ‘needy’.",
+          "label": "I check repeatedly and replay the chat in my head.",
           "score": {
-            "hypervigilant": 2
+            "hypervigilant_overthinking": 2
           }
         },
         {
-          "label": "I replay the conversation and doubt the answer.",
-          "score": {
-            "rumination_loop": 2
-          }
-        },
-        {
-          "label": "Even reassurance doesn’t settle me because the issue is concrete, not vague.",
+          "label": "I calmly note the behavior and address it later if it repeats.",
           "score": {
             "intuition_signal": 2
           }
@@ -86,34 +75,28 @@ window.TEST = {
       ]
     },
     {
-      "text": "After conflict, your body feels…",
+      "text": "After a small conflict, your nervous system usually…",
       "options": [
         {
-          "label": "Shaken but able to return to steady quickly.",
+          "label": "Shakes a bit, then returns to baseline with repair.",
           "score": {
-            "secure_grounded": 2
+            "grounded_clear": 2
           }
         },
         {
-          "label": "Restless until I know we’re ‘okay’.",
+          "label": "Won’t settle until I feel clearly reassured.",
           "score": {
             "reassurance_loop": 2
           }
         },
         {
-          "label": "On alert—watching their tone, distance, and micro-signals.",
+          "label": "Runs loops: what they meant, what I should’ve said.",
           "score": {
-            "hypervigilant": 2
+            "hypervigilant_overthinking": 2
           }
         },
         {
-          "label": "Stuck in loops: what I said, what they meant, what I should’ve done.",
-          "score": {
-            "rumination_loop": 2
-          }
-        },
-        {
-          "label": "Clear: my discomfort points to a repeated behavior that needs addressing.",
+          "label": "Feels firm: the issue is concrete and needs a boundary.",
           "score": {
             "intuition_signal": 2
           }
@@ -121,34 +104,28 @@ window.TEST = {
       ]
     },
     {
-      "text": "Which line describes your thoughts best?",
+      "text": "When you ask “Are we okay?”, the outcome is usually…",
       "options": [
         {
-          "label": "‘I can’t control everything, but I can communicate.’",
+          "label": "We clarify and reconnect without drama.",
           "score": {
-            "secure_grounded": 2
+            "grounded_clear": 2
           }
         },
         {
-          "label": "‘If they reassure me the right way, I’ll finally relax.’",
+          "label": "It helps briefly, then doubt returns later.",
           "score": {
             "reassurance_loop": 2
           }
         },
         {
-          "label": "‘I need to detect shifts early so I don’t get hurt.’",
+          "label": "I keep analyzing their answer for subtext.",
           "score": {
-            "hypervigilant": 2
+            "hypervigilant_overthinking": 2
           }
         },
         {
-          "label": "‘I keep analyzing until I feel certain… but certainty never comes.’",
-          "score": {
-            "rumination_loop": 2
-          }
-        },
-        {
-          "label": "‘I’m calm until a specific boundary is crossed—then I feel firm.’",
+          "label": "Even reassurance doesn’t fix it because the pattern is behavior-based.",
           "score": {
             "intuition_signal": 2
           }
@@ -156,34 +133,28 @@ window.TEST = {
       ]
     },
     {
-      "text": "How often do you check for signs (messages, tone, social cues) to feel safe?",
+      "text": "If your partner says “I need space,” your first thought is…",
       "options": [
         {
-          "label": "Rarely. I notice, but I don’t chase proof.",
+          "label": "Okay—space can be healthy. We’ll reconnect.",
           "score": {
-            "secure_grounded": 2
+            "grounded_clear": 2
           }
         },
         {
-          "label": "Sometimes, especially when I feel disconnected.",
+          "label": "I get anxious and want a clear timeline or plan.",
           "score": {
             "reassurance_loop": 2
           }
         },
         {
-          "label": "Often. My brain runs ‘threat detection’ automatically.",
+          "label": "I start tracking every sign to see if they’re pulling away.",
           "score": {
-            "hypervigilant": 2
+            "hypervigilant_overthinking": 2
           }
         },
         {
-          "label": "Almost constantly when I’m triggered.",
-          "score": {
-            "rumination_loop": 2
-          }
-        },
-        {
-          "label": "Only when something measurable changes (consistent drop in care, honesty, effort).",
+          "label": "I’m okay with space, but I’ll address it if it becomes a consistent distance pattern.",
           "score": {
             "intuition_signal": 2
           }
@@ -191,34 +162,28 @@ window.TEST = {
       ]
     },
     {
-      "text": "When you receive warmth/affection, your mind…",
+      "text": "When they post online but haven’t replied to you, you feel…",
       "options": [
         {
-          "label": "Accepts it. I can just enjoy it.",
+          "label": "Neutral. Posting isn’t the same as being available.",
           "score": {
-            "secure_grounded": 2
+            "grounded_clear": 2
           }
         },
         {
-          "label": "Feels relieved—like I can breathe again.",
+          "label": "A spike of worry and a need to feel prioritized.",
           "score": {
             "reassurance_loop": 2
           }
         },
         {
-          "label": "Wonders how long it will last.",
+          "label": "Triggered—I start building stories and checking more.",
           "score": {
-            "hypervigilant": 2
+            "hypervigilant_overthinking": 2
           }
         },
         {
-          "label": "Questions if it’s real or if I imagined earlier distance.",
-          "score": {
-            "rumination_loop": 2
-          }
-        },
-        {
-          "label": "Feels good, but I still need consistency in a specific area.",
+          "label": "Concerned only if it’s part of a repeated inconsistency.",
           "score": {
             "intuition_signal": 2
           }
@@ -226,34 +191,28 @@ window.TEST = {
       ]
     },
     {
-      "text": "If your partner says “Nothing’s wrong,” you usually…",
+      "text": "How do you handle ambiguity (late replies, vague tone)?",
       "options": [
         {
-          "label": "Take it at face value unless evidence shows otherwise.",
+          "label": "I tolerate it and ask once if needed.",
           "score": {
-            "secure_grounded": 2
+            "grounded_clear": 2
           }
         },
         {
-          "label": "Feel better for a moment—then doubt returns.",
+          "label": "I struggle until I get a clear reassurance cue.",
           "score": {
             "reassurance_loop": 2
           }
         },
         {
-          "label": "Start watching them more closely.",
+          "label": "I try to solve it by thinking harder and checking more.",
           "score": {
-            "hypervigilant": 2
+            "hypervigilant_overthinking": 2
           }
         },
         {
-          "label": "Mentally replay every detail to find the ‘real’ meaning.",
-          "score": {
-            "rumination_loop": 2
-          }
-        },
-        {
-          "label": "Stay calm but address the specific behavior you observed.",
+          "label": "I focus on facts: does their overall behavior match their words?",
           "score": {
             "intuition_signal": 2
           }
@@ -261,34 +220,28 @@ window.TEST = {
       ]
     },
     {
-      "text": "What triggers you most?",
+      "text": "Which sentence is closest to your inner voice?",
       "options": [
         {
-          "label": "Sudden disconnection that gets repaired quickly.",
+          "label": "“We can talk about this. We’ll be okay.”",
           "score": {
-            "secure_grounded": 2
+            "grounded_clear": 2
           }
         },
         {
-          "label": "Ambiguity: unanswered texts, unclear plans, vague tone.",
+          "label": "“If I’m reassured the right way, I’ll relax.”",
           "score": {
             "reassurance_loop": 2
           }
         },
         {
-          "label": "Inconsistency: hot/cold behavior, mixed signals.",
+          "label": "“I need to detect shifts early so I don’t get hurt.”",
           "score": {
-            "hypervigilant": 2
+            "hypervigilant_overthinking": 2
           }
         },
         {
-          "label": "Feeling responsible for keeping the relationship stable.",
-          "score": {
-            "rumination_loop": 2
-          }
-        },
-        {
-          "label": "Concrete red flags: repeated lying, broken agreements, disrespect.",
+          "label": "“This isn’t vague fear—this is one repeating issue.”",
           "score": {
             "intuition_signal": 2
           }
@@ -296,34 +249,28 @@ window.TEST = {
       ]
     },
     {
-      "text": "When anxiety rises, your behavior tends to be…",
+      "text": "When you receive affection, you usually…",
       "options": [
         {
-          "label": "I communicate directly and keep my self-respect.",
+          "label": "Accept it and enjoy it without over-checking.",
           "score": {
-            "secure_grounded": 2
+            "grounded_clear": 2
           }
         },
         {
-          "label": "I seek reassurance—texts, questions, closeness.",
+          "label": "Feel relief—like you can finally breathe.",
           "score": {
             "reassurance_loop": 2
           }
         },
         {
-          "label": "I scan and test: subtle questions, reading between lines.",
+          "label": "Wonder how long it will last and look for the ‘drop’.",
           "score": {
-            "hypervigilant": 2
+            "hypervigilant_overthinking": 2
           }
         },
         {
-          "label": "I overthink for hours and lose sleep.",
-          "score": {
-            "rumination_loop": 2
-          }
-        },
-        {
-          "label": "I focus on facts and boundaries, not feelings alone.",
+          "label": "Feel good, but still need consistency in a specific area.",
           "score": {
             "intuition_signal": 2
           }
@@ -331,34 +278,28 @@ window.TEST = {
       ]
     },
     {
-      "text": "How does your relationship impact your self-trust?",
+      "text": "Your relationship impacts your self-trust by…",
       "options": [
         {
-          "label": "It strengthens it. I feel more like myself.",
+          "label": "Strengthening it. I feel more like myself.",
           "score": {
-            "secure_grounded": 2
+            "grounded_clear": 2
           }
         },
         {
-          "label": "It fluctuates—depending on connection that day.",
+          "label": "Making it fluctuate with connection and reassurance.",
           "score": {
             "reassurance_loop": 2
           }
         },
         {
-          "label": "I trust myself less; I rely on ‘signs’ to decide what’s true.",
+          "label": "Eroding it—I doubt my judgment and replay everything.",
           "score": {
-            "hypervigilant": 2
+            "hypervigilant_overthinking": 2
           }
         },
         {
-          "label": "I feel mentally exhausted and unsure of my own judgment.",
-          "score": {
-            "rumination_loop": 2
-          }
-        },
-        {
-          "label": "My self-trust is intact; my concern is about specific repeated actions.",
+          "label": "Keeping it intact—my concern is about repeated behavior, not my worth.",
           "score": {
             "intuition_signal": 2
           }
@@ -366,69 +307,57 @@ window.TEST = {
       ]
     },
     {
-      "text": "If you imagined 30 days of this relationship staying exactly the same, you feel…",
+      "text": "When you feel insecure, you’re most likely to…",
+      "options": [
+        {
+          "label": "Make one clear request, then give it time.",
+          "score": {
+            "grounded_clear": 2
+          }
+        },
+        {
+          "label": "Seek reassurance quickly to calm the anxiety.",
+          "score": {
+            "reassurance_loop": 2
+          }
+        },
+        {
+          "label": "Overthink, check, and ask indirectly to avoid rejection.",
+          "score": {
+            "hypervigilant_overthinking": 2
+          }
+        },
+        {
+          "label": "Name the pattern and set a boundary or timeline.",
+          "score": {
+            "intuition_signal": 2
+          }
+        }
+      ]
+    },
+    {
+      "text": "Imagine 30 days with the relationship staying exactly the same. You feel…",
       "options": [
         {
           "label": "Mostly okay. We can handle normal ups and downs.",
           "score": {
-            "secure_grounded": 2
+            "grounded_clear": 2
           }
         },
         {
-          "label": "Tired. I’d need more consistency/reassurance.",
+          "label": "Tired. I’d need more predictable reassurance/connection.",
           "score": {
             "reassurance_loop": 2
           }
         },
         {
-          "label": "Uneasy. I’d keep monitoring to avoid surprises.",
+          "label": "Drained. My mind would keep looping and scanning.",
           "score": {
-            "hypervigilant": 2
+            "hypervigilant_overthinking": 2
           }
         },
         {
-          "label": "Drained. My mind would keep looping.",
-          "score": {
-            "rumination_loop": 2
-          }
-        },
-        {
-          "label": "Clear: I’d need one specific change to feel safe (honesty, effort, respect).",
-          "score": {
-            "intuition_signal": 2
-          }
-        }
-      ]
-    },
-    {
-      "text": "The sentence that hits hardest is…",
-      "options": [
-        {
-          "label": "‘I can be anxious sometimes and still stay grounded.’",
-          "score": {
-            "secure_grounded": 2
-          }
-        },
-        {
-          "label": "‘I’m okay only when I feel chosen right now.’",
-          "score": {
-            "reassurance_loop": 2
-          }
-        },
-        {
-          "label": "‘I look for danger before it happens.’",
-          "score": {
-            "hypervigilant": 2
-          }
-        },
-        {
-          "label": "‘My mind won’t stop until it feels certain.’",
-          "score": {
-            "rumination_loop": 2
-          }
-        },
-        {
-          "label": "‘I’m not anxious about everything—just about what keeps repeating.’",
+          "label": "Clear: I’d need one measurable change to feel safe (consistency, follow-through).",
           "score": {
             "intuition_signal": 2
           }
@@ -437,162 +366,131 @@ window.TEST = {
     }
   ],
   "results": {
-    "secure_grounded": {
-      "title": "Secure & Grounded",
+    "grounded_clear": {
+      "title": "Grounded & Clear",
       "bullets": [
-        "You can feel anxiety without letting it drive the relationship.",
-        "You communicate directly and recover after triggers.",
-        "You don’t need constant proof to feel okay."
+        "You can feel uncertainty without turning it into a crisis.",
+        "You ask for clarity directly, without pressure or testing.",
+        "Your self-worth isn’t negotiated through response time."
       ],
       "what_it_looks_like": [
-        "You ask for clarity without panic or control.",
-        "You can tolerate ambiguity for a reasonable time.",
-        "You repair quickly after conflict."
+        "You tolerate normal delays without spiraling.",
+        "You recover after conflict through repair, not chasing.",
+        "You track patterns over time, not moments."
       ],
       "blindspots": [
-        "Underestimating a partner’s inconsistency if you ‘self-soothe’ too hard.",
-        "Waiting too long to name a real pattern."
+        "You might dismiss a real issue by self-soothing too hard.",
+        "You may wait longer than needed to name a repeating pattern."
       ],
       "scripts": [
-        "“I’m feeling a little activated. Can we reconnect tonight for 10 minutes?”",
-        "“I’m okay, I just need clarity on the plan so my mind can rest.”",
+        "“I’m noticing a small worry. Can we reconnect later today?”",
+        "“I’m good—I just want clarity on the plan so my mind can rest.”",
         "“Let’s repair this now so we don’t carry it into tomorrow.”"
       ],
       "next_steps": [
-        "Keep a simple check-in ritual (weekly 15 minutes).",
+        "Keep a weekly 15-minute check-in ritual.",
         "Name needs early, before they become pressure.",
-        "Trust your baseline: calm + clear requests."
+        "Stay consistent with boundaries so calm stays real."
       ]
     },
     "reassurance_loop": {
       "title": "Reassurance Loop",
       "bullets": [
-        "Your nervous system calms through connection—then re-triggers fast.",
-        "You may confuse reassurance with long-term safety.",
-        "You feel better when you feel chosen *right now*."
+        "Your system calms through closeness—then re-triggers quickly.",
+        "You may feel okay only when you feel chosen right now.",
+        "Relief fades fast, so you seek another signal."
       ],
       "what_it_looks_like": [
-        "Frequent ‘Are we okay?’ moments.",
-        "Relief after reassurance—followed by doubt later.",
-        "Strong sensitivity to response time and tone."
+        "Frequent urges to ask “Are we okay?”",
+        "Strong sensitivity to tone and response time.",
+        "You feel guilty for needing reassurance—then need it more."
       ],
       "blindspots": [
-        "Making your partner the only regulator of your emotions.",
-        "Interpreting normal delays as rejection."
+        "Making your partner your only emotional regulator.",
+        "Interpreting normal ambiguity as rejection."
       ],
       "scripts": [
-        "“I don’t need a long talk—just a quick ‘we’re good’ and a plan to reconnect.”",
-        "“I’m getting anxious. Can you say one clear sentence of reassurance?”",
-        "“Can we set a predictable check-in so I don’t chase it in the moment?”"
+        "“I don’t need a long talk—just one clear reassurance sentence.”",
+        "“Can we set a predictable check‑in so I don’t chase it in the moment?”",
+        "“I’m feeling activated; I’m asking for connection, not control.”"
       ],
       "next_steps": [
-        "Replace ‘infinite checking’ with one clear request + one agreed ritual.",
-        "Build self-reassurance: facts list + breathing + delay texting 10 minutes.",
-        "Watch for consistency over words."
+        "Replace repeated checking with one clear request + one ritual.",
+        "Use a 10‑minute delay before texting when triggered.",
+        "Watch consistency over words."
       ]
     },
-    "hypervigilant": {
-      "title": "Hypervigilant Mind",
+    "hypervigilant_overthinking": {
+      "title": "Hypervigilant Overthinking",
       "bullets": [
-        "Your brain runs threat-detection: scanning for shifts and hidden meaning.",
-        "You may feel safe only when you’ve analyzed everything.",
-        "Inconsistency is your biggest trigger."
+        "Your brain runs threat-detection: scanning for shifts and subtext.",
+        "You try to reach certainty through analysis—then it keeps going.",
+        "Ambiguity feels unsafe, so you search for proof."
       ],
       "what_it_looks_like": [
-        "Reading between lines, tone analysis, ‘micro-sign’ monitoring.",
-        "Indirect questions to test where you stand.",
-        "Strong anxiety when things feel ambiguous."
+        "Replaying messages and conversations for meaning.",
+        "Monitoring micro-signals (tone, timing, wording).",
+        "Difficulty calming down even after reassurance."
       ],
       "blindspots": [
-        "Creating stories from small cues without confirming facts.",
-        "Replacing intimacy with investigation."
+        "Turning intimacy into investigation.",
+        "Building stories from small cues without confirming facts."
       ],
       "scripts": [
-        "“I notice I’m reading into tone. Can I ask directly: are we okay?”",
-        "“I need one concrete signal: can we confirm plans for tonight?”",
-        "“If something’s wrong, I prefer clarity over guessing.”"
+        "“I notice I’m reading into tone. Can I ask directly what you meant?”",
+        "“I’m getting stuck in my head. Can we do a 10‑minute clarity talk?”",
+        "“If something’s wrong, I prefer one clear sentence over guessing.”"
       ],
       "next_steps": [
-        "Use ‘Ask once, then wait’ rule to stop scanning loops.",
+        "Use an “ask once, then wait” rule to stop scanning loops.",
         "Track patterns weekly (facts), not hourly (feelings).",
-        "Build consistency agreements (response expectations, check-ins)."
-      ]
-    },
-    "rumination_loop": {
-      "title": "Rumination Loop",
-      "bullets": [
-        "Your mind replays conversations to reach certainty—then keeps going.",
-        "You feel mentally exhausted and stuck in ‘what if’.",
-        "You may lose sleep and focus after triggers."
-      ],
-      "what_it_looks_like": [
-        "Replaying texts, analyzing phrasing, imagining scenarios.",
-        "Difficulty calming down even after reassurance.",
-        "Self-blame: ‘I ruined it’ or ‘I’m too much’."
-      ],
-      "blindspots": [
-        "Trying to solve emotional uncertainty with more thinking.",
-        "Delaying action (a clear talk) while you loop internally."
-      ],
-      "scripts": [
-        "“I’m stuck in my head. Can we do a 10-minute clarity talk?”",
-        "“I’m not asking for perfection—just one clear answer.”",
-        "“If we can’t clarify this, I’ll take space and revisit tomorrow.”"
-      ],
-      "next_steps": [
-        "Set a ‘thinking limit’: write 5 facts, 3 needs, then stop.",
-        "Sleep-protect rule: no heavy texting after a set hour.",
-        "If rumination is frequent, build a repair plan with your partner."
+        "Protect sleep: no heavy texting late at night."
       ]
     },
     "intuition_signal": {
-      "title": "Intuition Signal (Not Just Anxiety)",
+      "title": "Intuition Signal",
       "bullets": [
-        "Your discomfort is linked to a specific repeated behavior, not vague fear.",
-        "Your self-trust is intact—you’re responding to patterns.",
-        "You need boundaries and clarity, not endless reassurance."
+        "Your discomfort is linked to a concrete repeating pattern.",
+        "You’re not anxious about everything—your concern is specific.",
+        "You need boundaries and follow-through, not endless reassurance."
       ],
       "what_it_looks_like": [
-        "Clear triggers: broken agreements, disrespect, secrecy, inconsistency.",
-        "Your anxiety rises around one repeating issue.",
-        "You feel calmer when you act (boundary, decision)."
+        "Clear triggers: broken agreements, inconsistency, lack of follow-through.",
+        "You feel calmer when you act (request + boundary).",
+        "You trust yourself, but you need evidence of consistency."
       ],
       "blindspots": [
-        "Second-guessing yourself because you fear being ‘dramatic’.",
-        "Staying too long hoping consistency will appear without action."
+        "Second‑guessing yourself because you fear being “too sensitive”.",
+        "Staying too long hoping behavior changes without action."
       ],
       "scripts": [
-        "“This isn’t a mood—this is a pattern. I need it to change.”",
-        "“I’m okay talking, but I need actions: consistency and follow-through.”",
+        "“This is a pattern, not a mood. I need it to change.”",
+        "“I’m open to talking, but I need actions: consistency and follow‑through.”",
         "“If this repeats, I will step back. I’m protecting my peace.”"
       ],
       "next_steps": [
         "Name the pattern in one sentence + request one measurable change.",
-        "Set a boundary with timeline (2–4 weeks) and observe behavior.",
-        "If the pattern is disrespectful or unsafe, prioritize support and distance."
+        "Set a timeline (2–4 weeks) and observe behavior.",
+        "If disrespect or intimidation is present, prioritize support and distance."
       ]
     }
   },
   "faq": [
     {
       "q": "What is relationship anxiety?",
-      "a": "Relationship anxiety is persistent worry about the relationship (being left, rejected, or not enough), often triggered by ambiguity or inconsistency."
+      "a": "Relationship anxiety is persistent worry about being rejected, left, or not enough—often triggered by ambiguity or inconsistency."
     },
     {
       "q": "Is it anxiety or intuition?",
-      "a": "Anxiety is usually vague and jumps to worst-case scenarios. Intuition is often tied to a specific repeated pattern or boundary violation."
+      "a": "Anxiety is usually vague and catastrophic. Intuition tends to be tied to a specific repeating pattern or boundary issue."
     },
     {
       "q": "Can reassurance make anxiety worse?",
-      "a": "Yes, if it becomes the only way you regulate emotions. Short-term relief can reinforce the loop long-term."
+      "a": "If reassurance becomes the only way you calm down, it can reinforce the loop: short relief followed by stronger doubt."
     },
     {
-      "q": "Is this test a diagnosis?",
-      "a": "No. It’s a reflection tool based on behavior and nervous-system patterns, designed to be ad-safe and non-clinical."
-    },
-    {
-      "q": "How do I calm relationship anxiety fast?",
-      "a": "Use a single clear request, then regulate your body (breathing, grounding), and avoid checking behaviors for a short window."
+      "q": "Is this a diagnosis?",
+      "a": "No. This is an ad-safe reflection tool based on patterns and nervous-system responses."
     }
   ]
 };
