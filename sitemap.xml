@@ -44,7 +44,15 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <!-- Tests -->
+<url>
+  <loc>https://relationship.sbs/tests/avoidant-texting/</loc>
+  <lastmod>2026-02-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
 
+  
   <url>
     <loc>https://relationship.sbs/tests/love-language/</loc>
     <lastmod>2026-01-29</lastmod>
@@ -327,5 +335,40 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <!-- Avoidant Texting Test — Result Pages -->
+<url>
+  <loc>https://relationship.sbs/tests/avoidant-texting/results/steady_communicator/</loc>
+  <lastmod>2026-02-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
 
-</urlset>
+<url>
+  <loc>https://relationship.sbs/tests/avoidant-texting/results/chasing_spiral/</loc>
+  <lastmod>2026-02-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://relationship.sbs/tests/avoidant-texting/results/avoidant_dynamic/</loc>
+  <lastmod>2026-02-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://relationship.sbs/tests/avoidant-texting/results/hot_cold_cycle/</loc>
+  <lastmod>2026-02-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://relationship.sbs/tests/avoidant-texting/results/low_investment/</loc>
+  <lastmod>2026-02-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+ </urlset>
