@@ -57,15 +57,15 @@
           { label: "I send a ‘test’ text to see if they’ll chase me back.", score: { [K.hotcold]: 3 }, tags: ["test"] }
         ]
       },
-      {
-        text: "4) When you need a plan (date/time), they stay vague. You usually…",
-        options: [
-          { label: "Offer two clear options and a calm deadline.", score: { [K.steady]: 0 }, tags: ["clear_plan"] },
-          { label: "Keep checking in because you hate uncertainty.", score: { [K.chase]: 1 }, tags: ["checking"] },
-          { label: "Stop trying. If they want you, they’ll figure it out.", score: { [K.avoid]: 2 }, tags: ["pullback"] },
-          { label: "Feel the pattern: vague = low effort. I consider stepping back.", score: { [K.low]: 3 }, tags: ["low_effort"] }
-        ]
-      },
+     {
+  text: "4) When you need a plan (date/time), they stay vague. You usually…",
+  options: [
+    { label: "Offer two clear options and a calm deadline.", score: { [K.steady]: 0 }, tags: ["clear_plan"] },
+    { label: "Keep checking in because you hate uncertainty.", score: { [K.chase]: 1 }, tags: ["checking"] },
+    { label: "Stop trying. If they want you, they’ll figure it out.", score: { [K.avoid]: 2 }, tags: ["pullback"] },
+    { label: "Feel the pattern: vague = low effort. I consider stepping back.", score: { [K.low]: 3 }, tags: ["low_effort"] }
+  ]
+},
       {
         text: "5) They read your message but don’t reply. What happens inside you?",
         options: [
@@ -75,15 +75,15 @@
           { label: "I decide they don’t care. I detach fast and cold.", score: { [K.low]: 3 }, tags: ["dismiss"] }
         ]
       },
-      {
-        text: "6) They only text when it’s convenient for them. You tell yourself…",
-        options: [
-          { label: "I’ll address it once, clearly, and see what changes.", score: { [K.steady]: 0 }, tags: ["boundary"] },
-          { label: "If I stay sweet enough, they’ll finally show up consistently.", score: { [K.chase]: 1 }, tags: ["earn"] },
-          { label: "This feels like fear of closeness: avoidant rules around contact.", score: { [K.avoid]: 2 }, tags: ["avoidant_space"] },
-          { label: "This looks like low investment. I’m not auditioning for basics.", score: { [K.low]: 3 }, tags: ["low_effort"] }
-        ]
-      },
+     {
+  text: "6) The contact is mostly on their terms. The clearest truth is…",
+  options: [
+    { label: "I can name my needs once and see if they meet me halfway.", score: { [K.steady]: 0 }, tags: ["boundary"] },
+    { label: "I keep adapting because I’m afraid asking will push them away.", score: { [K.chase]: 1 }, tags: ["fear"] },
+    { label: "They prefer low-demand closeness; structure helps them, pressure backfires.", score: { [K.avoid]: 2 }, tags: ["avoidant_space"] },
+    { label: "They benefit from convenience; consistency doesn’t improve even when asked.", score: { [K.low]: 3 }, tags: ["one_sided"] }
+  ]
+},
       {
         text: "7) You want to know how often to text an avoidant. Your real goal is…",
         options: [
