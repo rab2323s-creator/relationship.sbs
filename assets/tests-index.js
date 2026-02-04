@@ -48,6 +48,17 @@ window.TEST_INDEX = [
     "time": "2–3 min",
     "intent": "quiz"
   },
+
+  {
+  "id": "avoidant_texting",
+  "slug": "avoidant-texting",
+  "title": "Avoidant Texting Test: How to Text an Avoidant (Without Losing Yourself)",
+  "blurb": "15 modern texting scenarios to decode avoidant attachment style texting, hot-cold patterns, and what to text next—plus scripts and boundaries.",
+  "time": "2–3 min",
+  "intent": "quiz"
+},
+
+  
    {
     "id": "relationship_anxiety",
     "slug": "relationship-anxiety",
