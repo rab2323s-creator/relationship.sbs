@@ -284,34 +284,34 @@
         ]
       },
 
-      [K.low]: {
-        title: "Low Investment Pattern — The Effort May Not Match Your Needs",
-        bullets: [
-          "The contact is convenient, not committed.",
-          "Plans stay vague, follow-through stays weak.",
-          "Your anxiety is reacting to a real lack of consistency."
-        ],
-        what_it_looks_like: [
-          "They reply when bored, vanish when you ask for clarity.",
-          "You carry the relationship logistics (plans, repair, reconnection).",
-          "You keep lowering your needs to keep them around."
-        ],
-        blindspots: [
-          "You may keep explaining your needs to someone who benefits from ignoring them.",
-          "You might blame yourself instead of noticing the pattern.",
-          "You may confuse potential with investment."
-        ],
-        scripts: [
-          "“I’m looking for consistent effort. If you’re not, that’s okay—just be honest.”",
-          "“I need a real plan. If you can’t commit to one, I’ll step back.”",
-          "“I’m not available for on-and-off contact. Reach out if you want something steady.”"
-        ],
-        next_steps: [
-          "Ask for one measurable change (plan + follow-through) within a short timeline.",
-          "If it stays vague, choose distance instead of negotiating basics.",
-          "If you’re considering no contact after break up, use it for healing—not to force a response."
-        ]
-      }
+  [K.low]: {
+  title: "Low Investment Pattern — The Effort May Not Match Your Needs",
+  bullets: [
+    "The effort feels inconsistent or convenience-based.",
+    "Plans stay vague, follow-through stays weak.",
+    "Your anxiety is reacting to a real lack of consistency."
+  ],
+  what_it_looks_like: [
+    "They reply when bored, vanish when you ask for clarity.",
+    "You carry the relationship logistics (plans, repair, reconnection).",
+    "You keep lowering your needs to keep them around."
+  ],
+  blindspots: [
+    "You may keep explaining your needs to someone who benefits from ignoring them.",
+    "You might blame yourself instead of noticing the pattern.",
+    "You may confuse potential with investment."
+  ],
+  scripts: [
+    "“I’m looking for consistent effort. If that’s not what you want, I respect it—let’s be clear.”",
+    "“I need a real plan. If you can’t commit to one, I’ll step back.”",
+    "“I’m not available for on-and-off contact. Reach out if you want something steady.”"
+  ],
+  next_steps: [
+    "Ask for one measurable change (plan + follow-through) within a short timeline.",
+    "If it stays vague, choose distance instead of negotiating basics.",
+    "If you’re considering no contact after break up, use it for healing—not to force a response."
+  ]
+}
     },
 
     faq: [
