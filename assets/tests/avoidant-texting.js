@@ -285,7 +285,7 @@
       },
 
       [K.low]: {
-        title: "Low Investment — This Might Not Be ‘Avoidant,’ It Might Be Minimal Effort",
+        title: "Low Investment Pattern — The Effort May Not Match Your Needs",
         bullets: [
           "The contact is convenient, not committed.",
           "Plans stay vague, follow-through stays weak.",
