@@ -1,4 +1,4 @@
-<!doctype html>
+ <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -43,13 +43,50 @@
     {"@type":"Question","name":"Is this Emotional Availability Test a diagnosis?","acceptedAnswer":{"@type":"Answer","text":"No. This is an educational self-reflection quiz. It does not diagnose mental health conditions or guarantee outcomes. If distress feels severe or persistent, consider speaking with a licensed professional."}}
   ]}
   </script>
+
+  <!-- ✅ Added: Quiz schema (helps Google understand this page is an interactive test) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Quiz",
+    "name": "Emotional Availability Test — Is Your Partner Emotionally There?",
+    "description": "A 15-question emotional availability test to assess emotional presence, consistency, and repair patterns in relationships. Educational only; not diagnosis.",
+    "url": "https://relationship.sbs/tests/emotional-availability/",
+    "isAccessibleForFree": true,
+    "about": {
+      "@type": "Thing",
+      "name": "Emotional availability in relationships"
+    }
+  }
+  </script>
 </head>
 
 <body>
   <header id="siteHeader"></header>
 
   <main class="wrap">
-    <div id="quizRoot" data-slug="emotional-availability"></div>
+    <!-- ✅ Improved: add a lightweight placeholder for better UX + LCP -->
+    <div id="quizRoot" data-slug="emotional-availability">
+      <p class="muted">Loading emotional availability test…</p>
+    </div>
+
+    <!-- ✅ Added: static SEO block (kept out of visual flow via CSS; do NOT use display:none) -->
+    <section class="seo-only">
+      <h2>Emotional Availability in Relationships</h2>
+      <p>
+        Emotional availability means your partner can respond with empathy, repair after conflict,
+        and stay emotionally present during stress. Emotional unavailability often shows up as
+        avoidance, minimization, or inconsistency over time.
+      </p>
+
+      <h3>Signs of Emotional Unavailability</h3>
+      <ul>
+        <li>Dismisses or minimizes your feelings</li>
+        <li>Avoids repair conversations after conflict</li>
+        <li>Gives mixed signals about closeness</li>
+        <li>Is emotionally present only when things are easy</li>
+      </ul>
+    </section>
 
     <section class="card prose">
       <h1>Emotional Availability Test — Is Your Partner Emotionally There?</h1>
@@ -176,8 +213,9 @@
 
   <footer id="siteFooter"></footer>
 
-  <script defer src="/assets/tests/emotional-availability.js"></script>
+  <!-- ✅ Improved: load shared/app before the page-specific test script -->
   <script defer src="/assets/shared.js"></script>
   <script defer src="/assets/app.js"></script>
+  <script defer src="/assets/tests/emotional-availability.js"></script>
 </body>
 </html>
