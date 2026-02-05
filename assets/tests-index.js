@@ -58,6 +58,15 @@ window.TEST_INDEX = [
   "intent": "quiz"
 },
 
+  {
+  "id": "emotional_availability",
+  "slug": "emotional-availability",
+  "title": "Emotional Availability Test — Is Your Partner Emotionally There?",
+  "blurb": "15 painfully accurate scenarios to reveal emotional availability, inconsistency, and repair patterns—plus scripts and next steps (ad-safe).",
+  "time": "2–3 min",
+  "intent": "quiz"
+},
+
   
    {
     "id": "relationship_anxiety",
