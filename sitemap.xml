@@ -371,4 +371,49 @@
   <priority>0.6</priority>
 </url>
 
+  <!-- Emotional Availability Test -->
+<url>
+  <loc>https://relationship.sbs/tests/emotional-availability/</loc>
+  <lastmod>2026-02-05</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<!-- Emotional Availability Test — Result Pages -->
+<url>
+  <loc>https://relationship.sbs/tests/emotional-availability/results/present_partner/</loc>
+  <lastmod>2026-02-05</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://relationship.sbs/tests/emotional-availability/results/inconsistent_presence/</loc>
+  <lastmod>2026-02-05</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://relationship.sbs/tests/emotional-availability/results/guarded_unavailable/</loc>
+  <lastmod>2026-02-05</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://relationship.sbs/tests/emotional-availability/results/avoid_repair/</loc>
+  <lastmod>2026-02-05</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://relationship.sbs/tests/emotional-availability/results/emotionally_absent/</loc>
+  <lastmod>2026-02-05</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+  
  </urlset>
