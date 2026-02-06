@@ -415,5 +415,49 @@
   <priority>0.6</priority>
 </url>
 
+  <!-- Narcissistic Relationship Test -->
+<url>
+  <loc>https://relationship.sbs/tests/narcissistic-relationship/</loc>
+  <lastmod>2026-02-06</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<!-- Narcissistic Relationship Test — Result Pages -->
+<url>
+  <loc>https://relationship.sbs/tests/narcissistic-relationship/results/respectful_dynamic/</loc>
+  <lastmod>2026-02-06</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://relationship.sbs/tests/narcissistic-relationship/results/self_centered_friction/</loc>
+  <lastmod>2026-02-06</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://relationship.sbs/tests/narcissistic-relationship/results/manipulation_flags/</loc>
+  <lastmod>2026-02-06</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://relationship.sbs/tests/narcissistic-relationship/results/narcissistic_pattern_likely/</loc>
+  <lastmod>2026-02-06</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://relationship.sbs/tests/narcissistic-relationship/results/high_control_erosion/</loc>
+  <lastmod>2026-02-06</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
   
  </urlset>
