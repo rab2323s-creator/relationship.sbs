@@ -50,6 +50,16 @@ window.TEST_INDEX = [
   },
 
   {
+  "id": "narcissistic_relationship",
+  "slug": "narcissistic-relationship",
+  "title": "Narcissistic Relationship Test — Are You in a Narcissistic Relationship?",
+  "blurb": "15 high-impact scenarios to spot narcissistic relationship patterns (gaslighting, blame-shifting, control, love-bombing)—plus scripts and next steps (ad-safe).",
+  "time": "2–3 min",
+  "intent": "quiz"
+},
+
+  
+  {
   "id": "avoidant_texting",
   "slug": "avoidant-texting",
   "title": "Avoidant Texting Test: How to Text an Avoidant (Without Losing Yourself)",
