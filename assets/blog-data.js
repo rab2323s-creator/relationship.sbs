@@ -179,6 +179,17 @@ window.BLOG_POSTS = [
     featured: false
   },
   {
+  slug: "love-language-self-assessment",
+  title: "What Is My Love Language Test? A Psychological Self-Assessment for People Who Love Deeply",
+  excerpt: "A deeply human love language self-assessment for people who love deeply but still feel something is missing. Understand how your nervous system recognizes love—and why it doesn’t always feel felt.",
+  date: "2026-02-06",
+  readingMinutes: 6,
+  tags: ["Love Language", "Relationships", "Psychology"],
+  category: "Relationships",
+  cover: "/assets/images/love-language-self-assessment-og.jpg",
+  featured: true
+},
+  {
     slug: "what-does-k-mean",
     title: "What Does “K” Mean in Texting? (And What to Reply)",
     excerpt: "The “K” text can mean many things: cold, annoyed, busy, or uninterested. Here’s how to read the context.",
