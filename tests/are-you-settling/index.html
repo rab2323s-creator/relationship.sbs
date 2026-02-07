@@ -1,11 +1,11 @@
-<!doctype html>
+ <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-  <title>Are You Settling in Your Relationship? Take This Test — relationship.sbs</title>
-  <meta name="description" content="15 painfully accurate scenarios to reveal if you’re settling in love (needs, effort, respect, safety)—plus scripts & next steps (ad-safe)." />
+  <title>Are You Settling in Your Relationship? Take the 2–3 Minute Test — relationship.sbs</title>
+  <meta name="description" content="A 15-scenario ‘am I settling?’ relationship test to spot low effort, unclear commitment, unmet needs, and self-abandonment patterns—plus practical scripts and next steps (ad-safe)." />
   <link rel="canonical" href="https://relationship.sbs/tests/are-you-settling/" />
 
   <meta property="og:type" content="website" />
@@ -19,6 +19,7 @@
 
   <link rel="stylesheet" href="/assets/styles.css" />
 
+  <!-- Breadcrumbs -->
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
     {"@type":"ListItem","position":1,"name":"Home","item":"https://relationship.sbs/"},
@@ -27,14 +28,26 @@
   ]}
   </script>
 
+  <!-- FAQ (keep it; good for SERP features) -->
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
     {"@type":"Question","name":"What does it mean to settle in a relationship?","acceptedAnswer":{"@type":"Answer","text":"Settling usually means accepting a pattern that doesn’t meet your needs—often by shrinking your wants, ignoring recurring disappointments, or making peace with low effort to avoid losing the relationship."}},
     {"@type":"Question","name":"Am I settling or just going through a rough patch?","acceptedAnswer":{"@type":"Answer","text":"A rough patch improves with repair and follow-through. Settling feels like you keep adapting, but the core pattern stays the same—especially around effort, respect, communication, and emotional availability."}},
     {"@type":"Question","name":"Why do I stay even when I feel unfulfilled?","acceptedAnswer":{"@type":"Answer","text":"Many people stay because of attachment, hope, fear of starting over, or the belief that asking for more is ‘too much.’ This test helps you separate hope from repeated reality."}},
-    {"@type":"Question","name":"Is this test a diagnosis?","acceptedAnswer":{"@type":"Answer","text":"No. This is an educational self-reflection quiz. It does not diagnose attachment style or mental health conditions, and it does not replace professional support."}},
+    {"@type":"Question","name":"Is this test a diagnosis?","acceptedAnswer":{"@type":"Answer","text":"No. This is an educational self-reflection quiz. It does not diagnose mental health conditions and it does not replace professional support."}},
     {"@type":"Question","name":"How do I ask for more without sounding needy?","acceptedAnswer":{"@type":"Answer","text":"Use a short, specific request and a measurable agreement. The key is clarity plus follow-through—not long explanations. This test includes scripts you can use."}},
     {"@type":"Question","name":"What if they don’t change after I communicate?","acceptedAnswer":{"@type":"Answer","text":"Then the data is in the pattern. If requests are clear and respectful, and nothing shifts over time, it may be a compatibility or investment issue—not a communication issue."}}
+  ]}
+  </script>
+
+  <!-- Optional: Related links as an ItemList (helps internal discovery) -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"ItemList","name":"Related relationship tests and guides","itemListElement":[
+    {"@type":"ListItem","position":1,"url":"https://relationship.sbs/tests/emotional-availability/"},
+    {"@type":"ListItem","position":2,"url":"https://relationship.sbs/tests/avoidant-texting/"},
+    {"@type":"ListItem","position":3,"url":"https://relationship.sbs/tests/toxic-relationship/"},
+    {"@type":"ListItem","position":4,"url":"https://relationship.sbs/blog/emotional-unavailability/"},
+    {"@type":"ListItem","position":5,"url":"https://relationship.sbs/blog/situationship-signs/"}
   ]}
   </script>
 </head>
@@ -43,88 +56,180 @@
   <header id="siteHeader"></header>
 
   <main class="wrap">
+    <!-- Primary SEO section (HTML-first content) -->
+    <section class="card prose" id="intro">
+      <h1>Are You Settling in Your Relationship? Take the Test</h1>
+
+      <p>
+        If you keep Googling <strong>“am I settling in my relationship?”</strong>, <strong>“needs not met”</strong>,
+        <strong>“low effort partner”</strong>, <strong>“unclear commitment”</strong>, or <strong>“emotionally unavailable”</strong>—
+        this page is built for that exact moment: when you’re trying to tell the difference between a rough patch and a repeated pattern.
+      </p>
+       <p class="hero-line">
+  <strong>Are you in a relationship… or just trying not to lose one?</strong>
+</p>
+
+      <div class="row" style="flex-wrap:wrap; gap:10px; margin-top:12px;">
+        <a class="btn" href="#quiz">Start the 2–3 minute test</a>
+        <a class="btn secondary" href="#preview">See the scenario preview</a>
+        <a class="btn secondary" href="#next">What to do after</a>
+      </div>
+
+      <h2>What “settling” usually looks like (in real life)</h2>
+      <p class="lead-in">
+  Most people don’t notice they’re settling. They notice the silence first.
+</p>
+
+      <ul>
+        <li><strong>Effort drops</strong> and you start normalizing it (“they’re busy”).</li>
+        <li><strong>Plans stay vague</strong> and you become the organizer, the confirmer, and the repair person.</li>
+        <li><strong>Your needs get edited</strong> so you don’t sound “too much.”</li>
+        <li><strong>Boundaries trigger guilt</strong> instead of respect.</li>
+        <li>You feel <strong>quietly lonely</strong> even when you’re technically “together.”</li>
+      </ul>
+
+      <h2>What this test measures</h2>
+      <p>
+        This is an educational self-reflection quiz (ad-safe; no diagnosis). It focuses on practical relationship signals:
+        <strong>consistency</strong>, <strong>follow-through</strong>, <strong>emotional availability</strong>, <strong>respect</strong>,
+        and <strong>self-abandonment patterns</strong> (where you shrink yourself to keep the connection).
+      </p>
+    </section>
+
+    <!-- Quiz mount (JS renders the interactive quiz here) -->
+    <!-- IMPORTANT: app.js currently renders an H1 inside the quiz shell. To avoid having two H1s,
+         either (A) change app.js renderShell() to use an H2 instead of H1, OR
+         (B) keep this page H1 and change the quiz shell title to a div/h2. -->
+    <div id="quiz"></div>
     <div id="quizRoot" data-slug="are-you-settling"></div>
 
-    <section class="card prose">
-      <h1>Are You Settling in Your Relationship? Take This Test to Find Out</h1>
-
-      <h2>Read This First (It Might Hit Too Close)</h2>
-      <h3>If you’ve been saying “it’s fine” while feeling quietly lonely—this is for you.</h3>
+    <!-- Paraphrased scenario previews (NOT the same wording as JS questions) -->
+    <section class="card prose" id="preview">
+      <h2>Scenario preview (paraphrased to avoid duplicated text)</h2>
       <p>
-        Settling rarely looks like a dramatic breakup moment. It looks like you adjusting your needs down in tiny ways:
-        laughing off the missed plans, forgiving the same apology, calling basic effort “not their love language.”
-        You tell yourself you’re being mature—until you realize you’ve been <strong>carrying the emotional weight alone</strong>.
-      </p>
-      <p>
-        This <strong>Are You Settling? Test</strong> is built to reveal silent patterns: low effort that feels normal now,
-        emotional availability that shows up only when it’s convenient, and the slow habit of making yourself smaller to keep love.
-        It’s designed to be <strong>high-retention</strong>, deeply personal, and <strong>Google Ads / AdSense safe</strong> (no diagnosis, no medical claims).
+        The test uses 15 quick scenarios. Answer fast—your first reaction usually tells the truth.
+        Here are examples of what you’ll respond to (written differently than the quiz text):
       </p>
 
-      <h2>Why Settling Feels So Hard to Admit</h2>
-      <h3>Because your brain protects the hope.</h3>
-      <p>
-        Hope can be beautiful—until it becomes a strategy to tolerate the same disappointment.
-        When you’re attached, your mind will search for reasons to stay: stress, timing, trauma, “they mean well.”
-        This test separates compassion from self-abandonment.
-      </p>
+      <div class="grid2">
+        <div class="mini">
+          <h3>Consistency & effort</h3>
+          <ul>
+            <li>Plans change at the last minute—do you expect a real reschedule, or do you swallow it?</li>
+            <li>If you stop initiating, does the relationship go silent?</li>
+            <li>Do you feel chosen consistently—or only when it’s convenient?</li>
+          </ul>
+        </div>
+        <div class="mini">
+          <h3>Clarity & commitment</h3>
+          <ul>
+            <li>When you ask “where is this going?”, do you get a clear answer or a foggy one?</li>
+            <li>Do jokes/deflection replace real conversations about the future?</li>
+            <li>Does asking for clarity get turned into “you’re needy”?</li>
+          </ul>
+        </div>
+        <div class="mini">
+          <h3>Boundaries & respect</h3>
+          <ul>
+            <li>When you set a boundary, do they adapt—or punish you with guilt and withdrawal?</li>
+            <li>Do you feel safe bringing up an issue without managing their emotions first?</li>
+            <li>Is accountability part of the relationship, or something you’re not allowed to request?</li>
+          </ul>
+        </div>
+        <div class="mini">
+          <h3>Self-abandonment signals</h3>
+          <ul>
+            <li>Do you rewrite texts over and over to avoid rejection?</li>
+            <li>Do you minimize your needs to “keep the peace”?</li>
+            <li>Do you find yourself coaching, reminding, and carrying the emotional labor?</li>
+          </ul>
+        </div>
+      </div>
 
-      <h3>Because settling is often a “death by a thousand maybes.”</h3>
-      <p>
-        It’s not one big betrayal. It’s the repeated small moments where you ask, and nothing changes.
+      <p class="muted">
+        Note: These are previews, not the original prompts—your interactive questions load from the test file.
       </p>
+    </section>
 
-      <h3>Most people don’t realize this…</h3>
+    <!-- Results explanation (keywords + expectations) -->
+    <section class="card prose" id="results">
+      <h2>Your result profiles (what you’ll get at the end)</h2>
       <p>
-        The deepest sign of settling isn’t what they do. It’s what you stop doing: asking, expressing, expecting, planning,
-        and letting your needs take up space.
+        You’ll land in one of five outcome profiles designed for clarity (not labels):
+        <strong>Grounded & Met</strong>, <strong>Needs Noticed (Not Fully Met)</strong>, <strong>Quiet Settling</strong>,
+        <strong>Self-Abandonment Loop</strong>, or <strong>Under-Investment Reality</strong>.
       </p>
-
-      <h2>What This Test Measures (And What It Doesn’t)</h2>
-      <h3>What it measures</h3>
       <ul>
-        <li>Effort and follow-through (plans, consistency, reliability)</li>
-        <li>Emotional availability (presence, curiosity, repair)</li>
-        <li>Respect patterns (boundaries, tone, accountability)</li>
-        <li>Self-abandonment signals (shrinking needs, over-explaining, accepting crumbs)</li>
-        <li>Compatibility vs. wishful thinking</li>
-      </ul>
-      <h3>What it doesn’t</h3>
-      <ul>
-        <li>No diagnosis, no labeling people</li>
-        <li>No promises or “guaranteed outcomes”</li>
-        <li>No graphic content; educational and ad-safe</li>
-      </ul>
-
-      <h2>Are You Settling? Test Questions</h2>
-      <h3>15 scenarios. Answer fast—your first impulse is the truth.</h3>
-
-      <h2>Your Results</h2>
-      <h3>Five profiles (your engine calculates automatically)</h3>
-      <p>
-        You’ll land in one of five profiles: Grounded & Met, Needs Noticed (Not Fully Met), Quiet Settling,
-        Self-Abandonment Loop, or Under-Investment Reality.
-      </p>
-
-      <h2>What To Do Next</h2>
-      <h3>The goal isn’t to demand more. It’s to stop negotiating your worth.</h3>
-      <ul>
-        <li>Make one clear request. Watch behavior for 2–4 weeks.</li>
-        <li>Trade long explanations for measurable agreements.</li>
-        <li>If the pattern stays the same, take that data seriously.</li>
+        <li><strong>Bullets</strong> that describe the pattern in plain language</li>
+        <li><strong>3 message scripts</strong> you can actually send</li>
+        <li><strong>Next steps</strong> that focus on behavior, not wishful thinking</li>
       </ul>
 
+      <p>
+        Want to share your result? The page generates a share link and a share card image (no account required).
+      </p>
+
+      <p class="small muted">
+        Educational use only. Not therapy or diagnosis.
+      </p>
+    </section>
+
+    <!-- Next steps (actionable; good for engagement + intent matching) -->
+    <section class="card prose" id="next">
+      <h2>What to do if you suspect you’re settling</h2>
+      <ol>
+        <li><strong>Make one measurable request.</strong> Example: a specific plan + confirmation habit.</li>
+        <li><strong>Watch behavior for 2–4 weeks.</strong> Track follow-through, not promises.</li>
+        <li><strong>Replace long explanations with clear boundaries.</strong> One ask, one timeline, then data.</li>
+        <li><strong>Stop negotiating basics.</strong> Consistency, respect, and effort are not “too much.”</li>
+      </ol>
+
+      <div class="card" style="margin-top:14px;">
+        <h3 style="margin:0 0 8px;">If this is the pattern you’re in, these help next</h3>
+        <div class="grid2">
+          <div class="mini">
+            <h4 style="margin:0 0 6px;">Related tests</h4>
+            <ul style="margin:0; padding-left:18px;">
+              <li><a href="/tests/emotional-availability/">Emotional Availability Test</a></li>
+              <li><a href="/tests/avoidant-texting/">Avoidant Texting Test</a></li>
+              <li><a href="/tests/toxic-relationship/">Toxic Relationship Test</a></li>
+              <li><a href="/tests/attachment-style/">Attachment Style Test</a></li>
+              <li><a href="/tests/conflict-style/">Conflict Style Test</a></li>
+            </ul>
+          </div>
+          <div class="mini">
+            <h4 style="margin:0 0 6px;">Helpful guides</h4>
+            <ul style="margin:0; padding-left:18px;">
+              <li><a href="/blog/emotional-unavailability/">Emotional unavailability: signs & patterns</a></li>
+              <li><a href="/blog/situationship-signs/">Situationship signs (and what to do)</a></li>
+              <li><a href="/blog/communication-needs/">How to state needs without over-explaining</a></li>
+              <li><a href="/blog/healthy-boundaries-script/">Healthy boundary scripts</a></li>
+              <li><a href="/blog/red-flags-vs-boundaries/">Red flags vs boundaries</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row" style="flex-wrap:wrap; margin-top:10px;">
+          <a class="btn small" href="/tests/">Browse all tests</a>
+          <a class="btn small secondary" href="/blog/">Browse the blog</a>
+          <a class="btn small secondary" href="/tools/text-decoder/">Try Text Decoder</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Disclaimer -->
+    <section class="card prose" id="disclaimer">
       <h2>Disclaimer</h2>
-      <h3>Educational use only</h3>
       <p>
         This quiz is for self-reflection and educational purposes only. It is not medical advice, diagnosis, or therapy.
-        If distress feels severe or persistent, consider speaking with a licensed professional.
+        If you feel persistently distressed or unsafe, consider speaking with a licensed professional or local support services.
       </p>
     </section>
   </main>
 
   <footer id="siteFooter"></footer>
 
+  <!-- Test + site scripts -->
   <script defer src="/assets/tests/are-you-settling.js"></script>
   <script defer src="/assets/shared.js"></script>
   <script defer src="/assets/app.js"></script>
