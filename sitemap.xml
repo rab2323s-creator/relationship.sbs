@@ -458,6 +458,45 @@
   <changefreq>weekly</changefreq>
   <priority>0.6</priority>
 </url>
+<!-- Are You Settling? Test -->
+<url>
+  <loc>https://relationship.sbs/tests/are-you-settling/</loc>
+  <lastmod>2026-02-07</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<!-- Are You Settling? Test — Result Pages -->
+<url>
+  <loc>https://relationship.sbs/tests/are-you-settling/results/grounded_and_met/</loc>
+  <lastmod>2026-02-07</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>https://relationship.sbs/tests/are-you-settling/results/needs_noticed_not_met/</loc>
+  <lastmod>2026-02-07</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>https://relationship.sbs/tests/are-you-settling/results/quiet_settling/</loc>
+  <lastmod>2026-02-07</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>https://relationship.sbs/tests/are-you-settling/results/self_abandonment_loop/</loc>
+  <lastmod>2026-02-07</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>https://relationship.sbs/tests/are-you-settling/results/under_investment_reality/</loc>
+  <lastmod>2026-02-07</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
 
   
  </urlset>
