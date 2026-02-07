@@ -32,7 +32,7 @@ window.BLOG_POSTS = [
     readingMinutes: 6,
     tags: ["Attachment", "Anxious Attachment"],
     category: "Attachment",
-    cover: "/assets/img/blog/default.webp",
+    cover: "/assets/og/anxious-attachment-signs.webp",
     featured: false
   },
   {
