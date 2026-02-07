@@ -33,6 +33,15 @@ window.TEST_INDEX = [
     "intent": "quiz"
   },
   {
+  "id": "are_you_settling",
+  "slug": "are-you-settling",
+  "title": "Are You Settling? Test — Are You Accepting Less Than You Need in Love?",
+  "blurb": "15 painfully accurate scenarios to reveal if you’re settling in love—plus scripts and next steps (ad-safe).",
+  "time": "2–3 min",
+  "intent": "quiz"
+ },
+
+  {
     "id": "emotional_intimacy",
     "slug": "emotional-intimacy",
     "title": "Emotional Intimacy Test — How Close Are You Really?",
