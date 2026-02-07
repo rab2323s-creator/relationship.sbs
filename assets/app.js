@@ -413,7 +413,7 @@
       <h2 class="resultTitle">Your result: ${r.title}</h2>
       <div class="row" style="margin:10px 0 14px; flex-wrap:wrap;">
         <button id="shareCardBtn" class="btn small">Share card</button>
-        <a class="btn small secondary" href="${url}">Copy share link</a>
+        <a class="btn small secondary" href="${url}">See your detailed result</a>
         <button id="copyLinkBtn" class="btn small secondary">Copy link</button>
       </div>
 
