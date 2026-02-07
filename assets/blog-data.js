@@ -186,7 +186,7 @@ window.BLOG_POSTS = [
   readingMinutes: 6,
   tags: ["Love Language", "Relationships", "Psychology"],
   category: "Relationships",
-  cover: "/assets/images/love-language-self-assessment-og.jpg",
+  cover: "/assets/og/love-language-self-assessment-og.webp",
   featured: true
 },
   {
