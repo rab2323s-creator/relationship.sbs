@@ -43,7 +43,7 @@ window.BLOG_POSTS = [
     readingMinutes: 6,
     tags: ["Attachment", "Avoidant Attachment"],
     category: "Attachment",
-    cover: "/assets/img/blog/default.webp",
+    cover: "/assets/og/avoidant-attachment-texting.webp",
     featured: false
   },
   {
