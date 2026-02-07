@@ -1,1 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <url>
+    <loc>https://relationship.sbs/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Trust / policy pages -->
+  <url>
+    <loc>https://relationship.sbs/about/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://relationship.sbs/contact/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://relationship.sbs/privacy/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
+  <url>
+    <loc>https://relationship.sbs/terms/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
+  <!-- Tests -->
+  <url>
+    <loc>https://relationship.sbs/tests/attachment-style/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Tests -->
+<url>
+  <loc>https://relationship.sbs/tests/avoidant-texting/</loc>
+  <lastmod>2026-02-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+  
+  <url>
+    <loc>https://relationship.sbs/tests/love-language/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://relationship.sbs/tests/conflict-style/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Tools -->
+  <url>
+    <loc>https://relationship.sbs/tools/text-decoder/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog -->
+  <url>
+    <loc>https://relationship.sbs/blog/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://relationship.sbs/blog/what-is-attachment-style/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://relationship.sbs/blog/red-flags-vs-boundaries/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://relationship.sbs/blog/anxious-attachment-signs/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://relationship.sbs/blog/avoidant-attachment-texting/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://relationship.sbs/blog/healthy-boundaries-script/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://relationship.sbs/blog/stop-overthinking-texts/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://relationship.sbs/blog/love-language-explained/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://relationship.sbs/blog/fair-fighting-rules/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://relationship.sbs/blog/no-contact-after-breakup/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://relationship.sbs/blog/red-flags-dating-apps/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://relationship.sbs/blog/communication-needs/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://relationship.sbs/blog/secure-attachment-habits/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://relationship.sbs/blog/trust-building-actions/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://relationship.sbs/blog/boundaries-vs-control/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://relationship.sbs/blog/situationship-signs/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://relationship.sbs/blog/emotional-unavailability/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://relationship.sbs/blog/what-does-k-mean/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+
+
+  <url>
+    <loc>https://relationship.sbs/tests/toxic-relationship/</loc>
+    <lastmod>2026-02-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Result previews -->
+  <url>
+    <loc>https://relationship.sbs/tests/attachment-style/results/anxious/</loc>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/attachment-style/results/avoidant/</loc>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/attachment-style/results/fearful/</loc>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/attachment-style/results/secure/</loc>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/conflict-style/results/accommodate/</loc>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/conflict-style/results/avoid/</loc>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/conflict-style/results/collaborate/</loc>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/conflict-style/results/compete/</loc>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/conflict-style/results/compromise/</loc>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/conflict-style/results/mixed/</loc>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/love-language/results/gifts/</loc>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/love-language/results/mixed/</loc>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/love-language/results/service/</loc>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/love-language/results/time/</loc>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/love-language/results/touch/</loc>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/love-language/results/words/</loc>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+
+  <!-- Toxic relationship result previews -->
+  <url>
+    <loc>https://relationship.sbs/tests/toxic-relationship/results/healthy_strained/</loc>
+    <lastmod>2026-02-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/toxic-relationship/results/unbalanced/</loc>
+    <lastmod>2026-02-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/toxic-relationship/results/toxic_patterns/</loc>
+    <lastmod>2026-02-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/toxic-relationship/results/high_risk/</loc>
+    <lastmod>2026-02-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <!-- Avoidant Texting Test — Result Pages -->
+<url>
+  <loc>https://relationship.sbs/tests/avoidant-texting/results/steady_communicator/</loc>
+  <lastmod>2026-02-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://relationship.sbs/tests/avoidant-texting/results/chasing_spiral/</loc>
+  <lastmod>2026-02-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://relationship.sbs/tests/avoidant-texting/results/avoidant_dynamic/</loc>
+  <lastmod>2026-02-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://relationship.sbs/tests/avoidant-texting/results/hot_cold_cycle/</loc>
+  <lastmod>2026-02-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://relationship.sbs/tests/avoidant-texting/results/low_investment/</loc>
+  <lastmod>2026-02-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+  <!-- Emotional Availability Test -->
+<url>
+  <loc>https://relationship.sbs/tests/emotional-availability/</loc>
+  <lastmod>2026-02-05</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<!-- Emotional Availability Test — Result Pages -->
+<url>
+  <loc>https://relationship.sbs/tests/emotional-availability/results/present_partner/</loc>
+  <lastmod>2026-02-05</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://relationship.sbs/tests/emotional-availability/results/inconsistent_presence/</loc>
+  <lastmod>2026-02-05</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://relationship.sbs/tests/emotional-availability/results/guarded_unavailable/</loc>
+  <lastmod>2026-02-05</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://relationship.sbs/tests/emotional-availability/results/avoid_repair/</loc>
+  <lastmod>2026-02-05</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://relationship.sbs/tests/emotional-availability/results/emotionally_absent/</loc>
+  <lastmod>2026-02-05</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+  <!-- Narcissistic Relationship Test -->
+<url>
+  <loc>https://relationship.sbs/tests/narcissistic-relationship/</loc>
+  <lastmod>2026-02-06</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<!-- Narcissistic Relationship Test — Result Pages -->
+<url>
+  <loc>https://relationship.sbs/tests/narcissistic-relationship/results/respectful_dynamic/</loc>
+  <lastmod>2026-02-06</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://relationship.sbs/tests/narcissistic-relationship/results/self_centered_friction/</loc>
+  <lastmod>2026-02-06</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://relationship.sbs/tests/narcissistic-relationship/results/manipulation_flags/</loc>
+  <lastmod>2026-02-06</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://relationship.sbs/tests/narcissistic-relationship/results/narcissistic_pattern_likely/</loc>
+  <lastmod>2026-02-06</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://relationship.sbs/tests/narcissistic-relationship/results/high_control_erosion/</loc>
+  <lastmod>2026-02-06</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+<!-- Are You Settling? Test -->
+<url>
+  <loc>https://relationship.sbs/tests/are-you-settling/</loc>
+  <lastmod>2026-02-07</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<!-- Are You Settling? Test — Result Pages -->
+<url>
+  <loc>https://relationship.sbs/tests/are-you-settling/results/grounded_and_met/</loc>
+  <lastmod>2026-02-07</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+<!-- Are You Settling? Test — Results Hub -->
+<url>
+  <loc>https://relationship.sbs/tests/are-you-settling/results/</loc>
+  <lastmod>2026-02-07</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+  
+<url>
+  <loc>https://relationship.sbs/tests/are-you-settling/results/needs_noticed_not_met/</loc>
+  <lastmod>2026-02-07</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>https://relationship.sbs/tests/are-you-settling/results/quiet_settling/</loc>
+  <lastmod>2026-02-07</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>https://relationship.sbs/tests/are-you-settling/results/self_abandonment_loop/</loc>
+  <lastmod>2026-02-07</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>https://relationship.sbs/tests/are-you-settling/results/under_investment_reality/</loc>
+  <lastmod>2026-02-07</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+  
+ </urlset>
