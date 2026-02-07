@@ -65,9 +65,6 @@
         <strong>“low effort partner”</strong>, <strong>“unclear commitment”</strong>, or <strong>“emotionally unavailable”</strong>—
         this page is built for that exact moment: when you’re trying to tell the difference between a rough patch and a repeated pattern.
       </p>
-       <p class="hero-line">
-  <strong>Are you in a relationship… or just trying not to lose one?</strong>
-</p>
 
       <div class="row" style="flex-wrap:wrap; gap:10px; margin-top:12px;">
         <a class="btn" href="#quiz">Start the 2–3 minute test</a>
@@ -76,10 +73,6 @@
       </div>
 
       <h2>What “settling” usually looks like (in real life)</h2>
-      <p class="lead-in">
-  Most people don’t notice they’re settling. They notice the silence first.
-</p>
-
       <ul>
         <li><strong>Effort drops</strong> and you start normalizing it (“they’re busy”).</li>
         <li><strong>Plans stay vague</strong> and you become the organizer, the confirmer, and the repair person.</li>
@@ -88,18 +81,58 @@
         <li>You feel <strong>quietly lonely</strong> even when you’re technically “together.”</li>
       </ul>
 
+      <h2>Quick checklist: common “am I settling?” signals</h2>
+      <p>
+        These aren’t labels—they’re searchable relationship patterns people report when they feel stuck, unfulfilled, or
+        unsure whether to stay or leave:
+      </p>
+      <ul>
+        <li>You often feel <strong>unmet needs</strong> but hesitate to bring them up.</li>
+        <li>The relationship feels <strong>one-sided</strong>: you initiate, plan, and repair more.</li>
+        <li>Communication is <strong>inconsistent</strong> (hot-and-cold texts, unpredictable replies).</li>
+        <li>You’re dealing with <strong>unclear commitment</strong> (vague future, “we’ll see,” no shared plans).</li>
+        <li>You notice <strong>low effort</strong> showing up as canceled plans, minimal follow-through, or “crumbs.”</li>
+        <li>Your boundaries trigger <strong>guilt, defensiveness, or withdrawal</strong> instead of respect.</li>
+        <li>You second-guess yourself: <strong>“am I asking too much?”</strong> for basic consistency.</li>
+        <li>You feel <strong>emotionally lonely</strong> even when you’re technically together.</li>
+        <li>You rewrite messages to sound “easygoing” (fear of conflict or rejection).</li>
+        <li>You stay mainly because <strong>starting over feels scary</strong>—not because the pattern feels safe.</li>
+      </ul>
+
+      <h2>Settling vs. a rough patch (a simple rule that helps)</h2>
+      <p>
+        A rough patch is usually time-limited and <strong>repairable</strong>. You can name the issue, agree on a small change,
+        and see consistent follow-through. Settling feels different: you keep adapting, but the core pattern stays the same.
+      </p>
+      <p>
+        Use this three-step check:
+        <strong>(1) Ask</strong> for one specific change (clear, measurable, respectful).
+        <strong>(2) Agree</strong> on what “follow-through” looks like (a plan, a habit, a timeline).
+        <strong>(3) Watch</strong> behavior over 2–4 weeks. If the response is mostly excuses, vagueness, or short-lived effort,
+        that’s not a communication gap—it’s a pattern.
+      </p>
+      <p>
+        This matters because many people stay in relationships that don’t meet their needs by telling themselves they just
+        need to “explain better.” But clarity isn’t the issue if the relationship benefits from staying undefined.
+        The goal isn’t to win someone over—it’s to stop negotiating basics like <strong>consistency</strong>, <strong>respect</strong>,
+        and <strong>emotional availability</strong>.
+      </p>
+
       <h2>What this test measures</h2>
       <p>
         This is an educational self-reflection quiz (ad-safe; no diagnosis). It focuses on practical relationship signals:
         <strong>consistency</strong>, <strong>follow-through</strong>, <strong>emotional availability</strong>, <strong>respect</strong>,
         and <strong>self-abandonment patterns</strong> (where you shrink yourself to keep the connection).
       </p>
+
+      <p class="muted">
+        Helpful if you’re also reading: <a href="/blog/emotional-unavailability/">emotional unavailability</a>,
+        <a href="/blog/trust-building-actions/">trust-building actions</a>, and
+        <a href="/blog/red-flags-vs-boundaries/">red flags vs boundaries</a>.
+      </p>
     </section>
 
     <!-- Quiz mount (JS renders the interactive quiz here) -->
-    <!-- IMPORTANT: app.js currently renders an H1 inside the quiz shell. To avoid having two H1s,
-         either (A) change app.js renderShell() to use an H2 instead of H1, OR
-         (B) keep this page H1 and change the quiz shell title to a div/h2. -->
     <div id="quiz"></div>
     <div id="quizRoot" data-slug="are-you-settling"></div>
 
@@ -205,6 +238,8 @@
               <li><a href="/blog/communication-needs/">How to state needs without over-explaining</a></li>
               <li><a href="/blog/healthy-boundaries-script/">Healthy boundary scripts</a></li>
               <li><a href="/blog/red-flags-vs-boundaries/">Red flags vs boundaries</a></li>
+              <li><a href="/blog/trust-building-actions/">Trust-building actions that actually create safety</a></li>
+              <li><a href="/blog/fair-fighting-rules/">Fair fighting rules (repair without spiraling)</a></li>
             </ul>
           </div>
         </div>
@@ -233,5 +268,9 @@
   <script defer src="/assets/tests/are-you-settling.js"></script>
   <script defer src="/assets/shared.js"></script>
   <script defer src="/assets/app.js"></script>
+
+  <!-- H1 fix: change the quiz shell title (rendered by app.js) from H1 -> H2 -->
+  <!-- Apply this small patch by updating /assets/app.js renderShell(): -->
+  <!-- Replace: <h1 ...>${test.title}</h1>  with: <h2 ...>${test.title}</h2> -->
 </body>
 </html>
