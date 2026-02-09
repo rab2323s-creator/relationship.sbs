@@ -8,6 +8,8 @@
   <meta name="description" content="15 high-impact scenarios to spot emotional manipulation (gaslighting, guilt-tripping, control, DARVO)—plus scripts & next steps (ad-safe)." />
   <link rel="canonical" href="https://relationship.sbs/tests/emotional-manipulation/" />
 
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Are You Being Emotionally Manipulated in Your Relationship?" />
   <meta property="og:description" content="15 painfully accurate scenarios to spot subtle emotional control—plus scripts & next steps (ad-safe, no diagnosis)." />
@@ -18,6 +20,8 @@
   <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="stylesheet" href="/assets/styles.css" />
+  <link rel="preload" href="/assets/tests/emotional-manipulation.js" as="script" />
+  <link rel="preload" href="/assets/app.js" as="script" />
 
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
@@ -37,17 +41,208 @@
     {"@type":"Question","name":"What can I do if I feel emotionally controlled?","acceptedAnswer":{"@type":"Answer","text":"Name one concrete behavior, set one clear boundary, and watch follow-through. If distress feels severe or persistent, consider speaking with a licensed professional or trusted support."}}
   ]}
   </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Emotional Manipulation Test — Are You Being Emotionally Manipulated?",
+    "url": "https://relationship.sbs/tests/emotional-manipulation/",
+    "description": "15 high-impact scenarios to spot emotional manipulation patterns (gaslighting, guilt-tripping, DARVO, silent punishment) plus scripts & next steps (ad-safe, no diagnosis).",
+    "isPartOf": {"@type": "WebSite","name": "relationship.sbs","url": "https://relationship.sbs/"},
+    "about": [
+      {"@type":"Thing","name":"emotional manipulation"},
+      {"@type":"Thing","name":"gaslighting"},
+      {"@type":"Thing","name":"DARVO"},
+      {"@type":"Thing","name":"silent treatment"},
+      {"@type":"Thing","name":"guilt tripping"},
+      {"@type":"Thing","name":"blame shifting"},
+      {"@type":"Thing","name":"walking on eggshells"},
+      {"@type":"Thing","name":"boundaries in relationships"}
+    ],
+    "primaryImageOfPage": {"@type": "ImageObject","url": "https://relationship.sbs/assets/og/emotional-manipulation.webp","width": 1200,"height": 630}
+  }
+  </script>
+
+  <style>
+    .hero { margin: 14px 0 18px; }
+    .hero .kicker { opacity: 0.9; margin: 0 0 10px; }
+    .hero .ctaRow { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+    .hero .ctaRow a { text-decoration: none; }
+    .hero .chips { display:flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    .hero .chip { display:inline-block; padding: 6px 10px; border-radius: 999px; border: 1px solid rgba(0,0,0,0.12); font-size: 0.95rem; }
+    .toc { margin: 16px 0 10px; }
+    .toc ul { margin: 10px 0 0 18px; }
+    .note { font-size: 0.98rem; opacity: 0.95; }
+    .grid2 { display:grid; grid-template-columns: 1fr; gap: 12px; }
+    @media (min-width: 920px) { .grid2 { grid-template-columns: 1.1fr 0.9fr; gap: 16px; } }
+    .sideCard { position: sticky; top: 14px; align-self: start; }
+    .linksList { display:grid; grid-template-columns: 1fr; gap: 6px; }
+    @media (min-width: 720px) { .linksList { grid-template-columns: 1fr 1fr; gap: 8px; } }
+    .srOnly { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+    .pullquote { border-left: 4px solid rgba(0,0,0,.15); padding-left: 12px; margin: 14px 0; }
+    .miniGrid { display:grid; grid-template-columns: 1fr; gap: 10px; }
+    @media (min-width: 920px) { .miniGrid { grid-template-columns: 1fr 1fr; } }
+  </style>
 </head>
 
 <body>
   <header id="siteHeader"></header>
 
   <main class="wrap">
-    <div id="quizRoot" data-slug="emotional-manipulation"></div>
+    <section class="card prose hero">
+      <p class="kicker"><strong>Quick, ad-safe self-reflection quiz</strong> • ~2–3 minutes • 15 scenarios</p>
 
-    <section class="card prose">
       <h1>Are You Being Emotionally Manipulated in Your Relationship?</h1>
 
+      <p class="note">
+        If you keep apologizing just to restore peace, this may feel uncomfortably accurate.
+        This tool is educational (no diagnosis). It helps you spot patterns like <strong>gaslighting</strong>,
+        <strong>guilt-tripping</strong>, <strong>DARVO</strong>, and “silent punishment” dynamics—then gives you
+        simple scripts and next steps.
+      </p>
+
+      <div class="chips" aria-label="Key concepts">
+        <span class="chip">emotional manipulation test</span>
+        <span class="chip">gaslighting</span>
+        <span class="chip">guilt-tripping</span>
+        <span class="chip">DARVO</span>
+        <span class="chip">silent treatment</span>
+        <span class="chip">blame shifting</span>
+        <span class="chip">walking on eggshells</span>
+      </div>
+
+      <div class="ctaRow" role="group" aria-label="Primary actions">
+        <a class="btn" href="#start">Start the test</a>
+        <a class="btn secondary" href="https://relationship.sbs/tests/emotional-manipulation/results/">See result types</a>
+        <a class="btn secondary" href="#story">Read the story</a>
+      </div>
+
+      <nav class="toc" aria-label="On this page">
+        <details>
+          <summary><strong>On this page</strong></summary>
+          <ul>
+            <li><a href="#start">Start the quiz</a></li>
+            <li><a href="#story">A short story that mirrors the questions</a></li>
+            <li><a href="#what-questions-feel-like">What the questions are really testing</a></li>
+            <li><a href="#read-first">Read this first</a></li>
+            <li><a href="#faq">Emotional manipulation FAQ</a></li>
+          </ul>
+        </details>
+      </nav>
+    </section>
+
+    <section class="grid2" id="start" aria-label="Quiz section">
+      <div class="card">
+        <div id="quizRoot" data-slug="emotional-manipulation" aria-live="polite"></div>
+        <p class="srOnly" id="quizHelp">
+          Answer based on your first honest impulse. Your results will show scripts and next steps.
+        </p>
+      </div>
+
+      <aside class="card prose sideCard" aria-label="Supportive sidebar">
+        <h2>Before you answer</h2>
+        <p>
+          Don’t score them on their best day. Score the <strong>pattern</strong>.
+          Ask: “When I name a need, do I get repair—or do I get consequences?”
+        </p>
+
+        <h3>Two quick reality-checks</h3>
+        <ul>
+          <li>If you leave talks feeling <strong>confused</strong>, that’s data.</li>
+          <li>If peace requires your <strong>compliance</strong>, that’s data.</li>
+        </ul>
+
+        <h3>Related tools</h3>
+        <div class="linksList">
+          <a href="https://relationship.sbs/tools/text-decoder/">Text Decoder Tool</a>
+          <a href="https://relationship.sbs/tests/toxic-relationship/">Toxic Relationship Test</a>
+          <a href="https://relationship.sbs/tests/emotional-availability/">Emotional Availability Test</a>
+          <a href="https://relationship.sbs/tests/narcissistic-relationship/">Narcissistic Relationship Test</a>
+        </div>
+
+        <p class="note">
+          Educational tool only. If distress feels severe or persistent, consider licensed support.
+        </p>
+      </aside>
+    </section>
+
+    <!-- NEW: Story section (original content for SEO + human tone) -->
+    <section class="card prose" id="story">
+      <h2>A short story that mirrors the questions</h2>
+      <h3>Not dramatic. Just quietly exhausting.</h3>
+
+      <p>
+        You bring up something small—maybe a joke that stung, or a plan that changed without telling you.
+        You’re calm. You’re not accusing. You’re simply trying to name an impact.
+      </p>
+
+      <p>
+        But within minutes, the conversation shifts. The topic becomes your tone. Or your timing.
+        Or a debate about details until the original point disappears. You start explaining your feelings like you’re
+        presenting evidence in court. You keep adding clarity, hoping this time they’ll “get it.”
+      </p>
+
+      <div class="pullquote">
+        <p>
+          Then you notice the pattern: when you ask for basic respect or boundaries, you don’t get repair—you get tension.
+          Coldness. Distance. A mood you have to fix. And the fastest way back to peace is usually you shrinking the request.
+        </p>
+      </div>
+
+      <p>
+        This is why an <strong>emotional manipulation test</strong> can be helpful: not to label a person,
+        but to name the dynamic—<strong>gaslighting-style reality confusion</strong>, <strong>guilt-tripping</strong>,
+        <strong>blame shifting</strong>, <strong>silent treatment</strong>, and the feeling of
+        <strong>walking on eggshells</strong>.
+      </p>
+    </section>
+
+    <!-- NEW: “Explain the questions” without listing them -->
+    <section class="card prose" id="what-questions-feel-like">
+      <h2>What the questions are really testing</h2>
+      <h3>These scenarios are designed to reveal patterns, not isolated moments.</h3>
+
+      <div class="miniGrid">
+        <div>
+          <h3>1) Repair vs. reversal</h3>
+          <p>
+            When you share hurt, do you get accountability and a concrete change—or do you get defensiveness,
+            topic-switching, and a loop where you end up apologizing?
+          </p>
+        </div>
+        <div>
+          <h3>2) Boundaries vs. consequences</h3>
+          <p>
+            Healthy partners can dislike a boundary and still respect it. Control dynamics often answer boundaries with
+            guilt, withdrawal, or punishment until you “learn” to stop asking.
+          </p>
+        </div>
+        <div>
+          <h3>3) Reality clarity vs. confusion</h3>
+          <p>
+            Some disagreements are normal. What’s different is when your memory, feelings, or interpretation keeps getting rewritten
+            until you doubt yourself—especially after you raise a valid concern.
+          </p>
+        </div>
+        <div>
+          <h3>4) Consistency vs. conditional warmth</h3>
+          <p>
+            The test looks for selective kindness—warmth when you comply, coldness when you speak up.
+            That’s how “peace” becomes transactional.
+          </p>
+        </div>
+      </div>
+
+      <p class="note">
+        If you want a practical script that helps you hold boundaries without escalating the fight, read:
+        <a href="https://relationship.sbs/blog/healthy-boundaries-script/">Healthy Boundaries Script</a> and
+        <a href="https://relationship.sbs/blog/fair-fighting-rules/">Fair Fighting Rules</a>.
+      </p>
+    </section>
+
+    <!-- Existing content continues -->
+    <section class="card prose" id="read-first">
       <h2>Read This First (It Might Hit Too Close)</h2>
       <h3>If you keep apologizing just to restore peace, this test will feel uncomfortably accurate.</h3>
       <p>
@@ -63,63 +258,14 @@
         and subtle emotional control. It is <strong>Google AdSense safe</strong>: educational, non-clinical, no diagnosis.
       </p>
 
-      <h2>Subtle Emotional Control Signs in a Toxic Relationship</h2>
-      <h3>Gaslighting, Guilt-Tripping, and Emotional Control Explained</h3>
-      <p>
-        A toxic relationship isn’t defined by one bad day. It’s defined by a repeatable pattern where your needs create consequences:
-        distance, punishment, guilt, or confusion. Manipulation often hides behind “logic,” “jokes,” or “concern,” but the result is the same:
-        you become easier to control because you doubt yourself.
+      <p class="note">
+        More clarity reads:
+        <a href="https://relationship.sbs/blog/boundaries-vs-control/">Boundaries vs Control</a> •
+        <a href="https://relationship.sbs/blog/red-flags-vs-boundaries/">Red Flags vs Boundaries</a> •
+        <a href="https://relationship.sbs/blog/trust-building-actions/">Trust Building Actions</a>
       </p>
 
-      <h3>Why it’s so hard to name</h3>
-      <ul>
-        <li>Because it’s subtle: it’s a thousand small reversals, not one dramatic event.</li>
-        <li>Because it’s intermittent: kindness returns just when you’re about to pull away.</li>
-        <li>Because you’re empathetic: you keep explaining your needs until you forget you had them.</li>
-      </ul>
-
-      <h3>Most people don’t realize this…</h3>
-      <p>
-        The strongest sign of emotional control is not what they say. It’s what you stop doing:
-        asking clearly, setting boundaries, and trusting your own interpretation of events.
-      </p>
-
-      <h2>What This Test Measures (And What It Doesn’t)</h2>
-      <h3>What it measures</h3>
-      <ul>
-        <li>Reality confusion (gaslighting-style patterns)</li>
-        <li>Guilt and obligation pressure (guilt-tripping)</li>
-        <li>Repair vs. reversal (accountability vs. blame-shifting)</li>
-        <li>Silent punishment (withdrawal, coldness, selective affection)</li>
-        <li>Boundary respect vs. consequences</li>
-      </ul>
-
-      <h3>What it doesn’t</h3>
-      <ul>
-        <li>No diagnosis, no labeling a person’s personality or mental health</li>
-        <li>No promises of outcomes or “fixes”</li>
-        <li>No explicit content; written to be AdSense-safe</li>
-      </ul>
-
-      <h2>Emotional Manipulation Test Questions</h2>
-      <h3>15 scenarios. Answer fast—your first impulse is the data.</h3>
-
-      <h2>Your Results</h2>
-      <h3>Five profiles (your engine calculates automatically)</h3>
-      <p>
-        You’ll land in one of five profiles: Healthy Influence, Boundary Pressure, Reality Confusion Signals,
-        Manipulation Pattern Likely, or High Emotional Control Dynamic.
-      </p>
-
-      <h2>What To Do Next</h2>
-      <h3>Don’t “win” the debate. Protect your reality and your boundaries.</h3>
-      <ul>
-        <li>Name one concrete behavior (not a label), and make one clear request.</li>
-        <li>Measure follow-through over time—not apologies in the moment.</li>
-        <li>If distress feels severe or persistent, consider speaking with a licensed professional.</li>
-      </ul>
-
-      <h2>Emotional Manipulation FAQ</h2>
+      <h2 id="faq">Emotional Manipulation FAQ</h2>
       <h3>What is emotional manipulation in a relationship?</h3>
       <p>
         Emotional manipulation is a pattern where someone uses guilt, confusion, fear, or obligation to steer your choices.
@@ -144,12 +290,6 @@
         and position themselves as the one harmed—until you’re apologizing for bringing it up.
       </p>
 
-      <h3>Can subtle emotional control signs appear without obvious conflict?</h3>
-      <p>
-        Yes. Sometimes it’s calm on the surface but heavy underneath: you avoid topics, edit needs, and pre-manage their mood.
-        The absence of fights doesn’t always mean safety—sometimes it means you’ve stopped asking.
-      </p>
-
       <h3>Is this Emotional Manipulation Test a diagnosis?</h3>
       <p>
         No. This is a self-reflection quiz about patterns. It does not diagnose any person or condition.
@@ -161,6 +301,16 @@
       <p>
         This quiz is for self-reflection and educational purposes only. It is not medical advice, diagnosis, or therapy.
         If distress feels severe or persistent, consider speaking with a licensed professional.
+      </p>
+
+      <hr />
+      <p class="note">
+        Important pages:
+        <a href="https://relationship.sbs/about/">About</a> •
+        <a href="https://relationship.sbs/contact/">Contact</a> •
+        <a href="https://relationship.sbs/privacy/">Privacy</a> •
+        <a href="https://relationship.sbs/terms/">Terms</a> •
+        <a href="https://relationship.sbs/blog/">Blog</a>
       </p>
     </section>
   </main>
