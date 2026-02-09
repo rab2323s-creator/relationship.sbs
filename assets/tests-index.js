@@ -93,8 +93,8 @@ window.TEST_INDEX = [
   "blurb": "15 high-impact scenarios to spot emotional manipulation patterns (gaslighting, guilt-tripping, DARVO, silent punishment)—plus scripts & next steps (ad-safe).",
   "time": "2–3 min",
   "intent": "quiz"
-}, 
-
+  
+  },
    {
     "id": "relationship_anxiety",
     "slug": "relationship-anxiety",
