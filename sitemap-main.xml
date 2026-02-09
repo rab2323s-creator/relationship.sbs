@@ -506,5 +506,57 @@
   <priority>0.6</priority>
 </url>
 
+  <!-- Emotional Manipulation Test -->
+<url>
+  <loc>https://relationship.sbs/tests/emotional-manipulation/</loc>
+  <lastmod>2026-02-07</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<!-- Emotional Manipulation Test — Results Hub -->
+<url>
+  <loc>https://relationship.sbs/tests/emotional-manipulation/results/</loc>
+  <lastmod>2026-02-07</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<!-- Emotional Manipulation Test — Individual Result Pages -->
+<url>
+  <loc>https://relationship.sbs/tests/emotional-manipulation/results/healthy-influence/</loc>
+  <lastmod>2026-02-07</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://relationship.sbs/tests/emotional-manipulation/results/boundary-pressure/</loc>
+  <lastmod>2026-02-07</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://relationship.sbs/tests/emotional-manipulation/results/reality-confusion/</loc>
+  <lastmod>2026-02-07</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://relationship.sbs/tests/emotional-manipulation/results/manipulation-pattern/</loc>
+  <lastmod>2026-02-07</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://relationship.sbs/tests/emotional-manipulation/results/high-emotional-control/</loc>
+  <lastmod>2026-02-07</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
   
  </urlset>
