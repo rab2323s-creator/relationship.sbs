@@ -14,6 +14,18 @@ window.BLOG_POSTS = [
     featured: true
   },
   {
+  slug: "intimacy-changes-long-term-relationships",
+  title: "Why Intimacy Changes in Long-Term Relationships (And What It Really Means)",
+  excerpt: "A psychology-based guide to why intimacy shifts in long-term relationships, how stress, attachment patterns, and emotional safety affect connection, and what helps restore closeness—without explicit content.",
+  date: "2026-02-13",
+  readingMinutes: 8,
+  tags: ["Relationships", "Intimacy", "Attachment"],
+  category: "Relationships",
+  cover: "/assets/og/intimacy-changes-long-term-relationships.webp",
+  featured: true
+ },
+
+  {
     slug: "red-flags-vs-boundaries",
     title: "Red Flags vs Boundaries: What’s the Difference?",
     excerpt: "Not everything you dislike is a red flag. Learn the difference between boundaries, preferences, and genuine red flags.",
