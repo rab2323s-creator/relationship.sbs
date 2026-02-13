@@ -30,16 +30,13 @@ body{
 }
 
 a{ color:inherit; text-decoration:none; }
-/* ===== Make links visible inside article & test content ===== */
 
-:root{
-  --link: var(--accent2);
-  --linkHover: var(--accent);
-}
+/* ===== Make links visible inside article & test content ===== */
 
 .prose a:not(.btn),
 .faq a:not(.btn),
-.seo a:not(.btn){
+.seo a:not(.btn),
+main .card a:not(.btn){
   color: var(--link);
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -48,9 +45,11 @@ a{ color:inherit; text-decoration:none; }
 
 .prose a:not(.btn):hover,
 .faq a:not(.btn):hover,
-.seo a:not(.btn):hover{
+.seo a:not(.btn):hover,
+main .card a:not(.btn):hover{
   color: var(--linkHover);
 }
+
 
 img{ max-width:100%; display:block; }
 .wrap{ max-width:var(--max); margin:0 auto; padding:22px; }
