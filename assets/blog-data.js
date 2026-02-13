@@ -24,7 +24,6 @@ window.BLOG_POSTS = [
   cover: "/assets/og/intimacy-changes-long-term-relationships.webp",
   featured: true
  },
-
   {
     slug: "red-flags-vs-boundaries",
     title: "Red Flags vs Boundaries: What’s the Difference?",
