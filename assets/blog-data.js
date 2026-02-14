@@ -142,10 +142,9 @@ window.BLOG_POSTS = [
   readingMinutes: 7,
   tags: ["Emotional Safety", "Psychology", "Relationships"],
   category: "Emotional Safety",
-  cover: "/assets/og/emotional-safety-in-relationships.webp",
+  cover: "/assets/og/emotional-safety-in-relationships-quiet-distance.webp",
   featured: true
-},
-
+  },
   {
     slug: "secure-attachment-habits",
     title: "Secure Attachment Habits: What Secure Love Looks Like",
