@@ -135,6 +135,18 @@ window.BLOG_POSTS = [
     featured: false
   },
   {
+  slug: "emotional-safety-in-relationships",
+  title: "Why Emotional Safety Matters More Than Communication in Relationships",
+  excerpt: "Why communication often fails without emotional safety—and how the nervous system, attachment patterns, and unspoken fear shape how safe we feel being honest in relationships.",
+  date: "2026-02-14",
+  readingMinutes: 7,
+  tags: ["Emotional Safety", "Psychology", "Relationships"],
+  category: "Emotional Safety",
+  cover: "/assets/og/emotional-safety-in-relationships.webp",
+  featured: true
+},
+
+  {
     slug: "secure-attachment-habits",
     title: "Secure Attachment Habits: What Secure Love Looks Like",
     excerpt: "Secure attachment is not perfection—it’s consistency. These habits help you build stable love and trust.",
