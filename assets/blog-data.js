@@ -58,6 +58,17 @@ window.BLOG_POSTS = [
     featured: false
   },
   {
+  slug: "emotionally-exhausted-in-a-relationship",
+  title: "Emotionally Exhausted in a Relationship? Causes, Signs, and What Helps",
+  excerpt: "Do you feel emotionally drained even when nothing seems wrong? This psychology-based article explores why relationships can become exhausting—and what actually helps restore balance.",
+  date: "2026-02-16",
+  readingMinutes: 8,
+  tags: ["Relationships", "Emotional Burnout", "Psychology"],
+  category: "Relationships",
+  cover: "/assets/og/emotionally-exhausted-in-a-relationship-quiet-burnout.webp",
+  featured: true
+},
+  {
     slug: "healthy-boundaries-script",
     title: "Healthy Boundaries Script: What to Say (Without Guilt)",
     excerpt: "Setting boundaries shouldn’t feel aggressive. Use these ready-to-send scripts for relationships, dating, and texting.",
