@@ -59,6 +59,15 @@ window.TEST_INDEX = [
   },
 
   {
+  "id": "trauma_bond",
+  "slug": "trauma-bond",
+  "title": "Trauma Bond Test — Are You Trauma Bonded in a Toxic Relationship?",
+  "blurb": "15 painfully accurate scenarios to spot trauma bonding, intermittent reinforcement, and emotional addiction—plus scripts and next steps (ad-safe).",
+  "time": "2–3 min",
+  "intent": "quiz"
+},
+  
+  {
   "id": "narcissistic_relationship",
   "slug": "narcissistic-relationship",
   "title": "Narcissistic Relationship Test — Are You in a Narcissistic Relationship?",
