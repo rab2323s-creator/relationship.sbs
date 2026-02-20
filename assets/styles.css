@@ -1,4 +1,4 @@
- :root{
+  :root{
   --bg:#070A12;
   --panel:#0E1424;
   --panel2:#0B1020;
@@ -27,6 +27,8 @@ body{
               radial-gradient(900px 700px at 85% 15%, rgba(142,160,255,.10), transparent 60%),
               var(--bg);
   color:var(--text);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 a{ color:inherit; text-decoration:none; }
@@ -44,6 +46,12 @@ hr{ border:0; border-top:1px solid var(--line); margin:18px 0; }
 .brand{
   display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.2px;
 }
+.brand .logo{
+  width:28px; height:28px;
+  border-radius:10px;
+  box-shadow: 0 10px 22px rgba(0,0,0,.25);
+}
+.brandText{ line-height:1; }
 .dot{
   width:12px; height:12px; border-radius:999px;
   background: linear-gradient(135deg, var(--accent), var(--accent2));
@@ -52,6 +60,13 @@ hr{ border:0; border-top:1px solid var(--line); margin:18px 0; }
 .nav{ display:flex; gap:14px; align-items:center; }
 .nav a{ color:var(--muted); font-size:14px; padding:8px 10px; border-radius:12px; }
 .nav a:hover{ background:rgba(255,255,255,.06); color:var(--text); }
+
+/* Mobile nav: reduce crowding without changing markup */
+@media (max-width: 640px){
+  .top .wrap{ flex-wrap:wrap; }
+  .nav{ width:100%; justify-content:space-between; gap:8px; }
+  .nav a{ flex:1; text-align:center; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.08); }
+}
 
 .hero{
   padding:26px 0 12px;
@@ -102,6 +117,8 @@ hr{ border:0; border-top:1px solid var(--line); margin:18px 0; }
   box-shadow: 0 12px 26px rgba(93,124,255,.22);
 }
 .btn:hover{ filter:brightness(1.05); }
+.btn:active{ transform: translateY(1px); }
+.btn{ transition: filter .14s ease, transform .14s ease; }
 .btn.secondary{
   background: rgba(255,255,255,.06);
   color:var(--text);
@@ -126,6 +143,26 @@ hr{ border:0; border-top:1px solid var(--line); margin:18px 0; }
   border-radius: var(--r2);
   padding:16px;
   box-shadow: var(--shadow);
+}
+
+/* Subtle premium interactions */
+.card, .tile, .heroCard{
+  transition: transform .18s ease, border-color .18s ease, background .18s ease;
+}
+.card:hover, .tile:hover, .heroCard:hover{
+  transform: translateY(-2px);
+  border-color: rgba(255,255,255,.16);
+}
+
+/* Accessible focus */
+:focus-visible{
+  outline: 2px solid rgba(93,124,255,.80);
+  outline-offset: 3px;
+  border-radius: 14px;
+}
+
+@media (prefers-reduced-motion: reduce){
+  *{ transition:none !important; scroll-behavior:auto !important; }
 }
 .card h2{ margin:0 0 8px; font-size:22px; }
 .card h3{ margin:0 0 8px; font-size:18px; }
