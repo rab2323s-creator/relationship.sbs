@@ -2,14 +2,14 @@
 (function () {
   const SLUG = "trauma-bond";
 
-  // Result keys
-  const K = {
-    steady: "steady_attachment",
-    intense: "intense_attachment",
-    pushpull: "push_pull_cycle",
-    addicted: "emotional_addiction_loop",
-    trauma: "trauma_bond_pattern"
-  };
+  // Result keys 
+const K = {
+  steady: "secure-attachment-dynamic",
+  intense: "intense-attachment-pattern",
+  pushpull: "push-pull-relationship-cycle",
+  addicted: "emotional-addiction-loop",
+  trauma: "trauma-bond-pattern"
+};
 
   window.TEST = {
     id: "trauma_bond",
