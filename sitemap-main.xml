@@ -575,5 +575,56 @@
   <priority>0.6</priority>
 </url>
 
+  <!-- Trauma Bond Test -->
+<url>
+  <loc>https://relationship.sbs/tests/trauma-bond/</loc>
+  <lastmod>2026-02-20</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trauma Bond Test — Results Hub -->
+<url>
+  <loc>https://relationship.sbs/tests/trauma-bond/results/</loc>
+  <lastmod>2026-02-20</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<!-- Trauma Bond Test — Individual Result Pages -->
+<url>
+  <loc>https://relationship.sbs/tests/trauma-bond/results/secure-attachment-dynamic/</loc>
+  <lastmod>2026-02-20</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://relationship.sbs/tests/trauma-bond/results/intense-attachment-pattern/</loc>
+  <lastmod>2026-02-20</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://relationship.sbs/tests/trauma-bond/results/push-pull-relationship-cycle/</loc>
+  <lastmod>2026-02-20</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://relationship.sbs/tests/trauma-bond/results/emotional-addiction-loop/</loc>
+  <lastmod>2026-02-20</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://relationship.sbs/tests/trauma-bond/results/trauma-bond-pattern/</loc>
+  <lastmod>2026-02-20</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
   
  </urlset>
