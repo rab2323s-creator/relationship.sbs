@@ -1,6 +1,47 @@
- /* shared.js — tiny helpers for clean URLs + consistent layout */
+  /* shared.js — tiny helpers for clean URLs + consistent layout */
 (function(){
   const $ = (s, r=document) => r.querySelector(s);
+
+  function ensureIcons(){
+    // Add lightweight SVG favicon + apple touch icon if missing.
+    const head = document.head;
+    if (!head) return;
+    const hasIcon = !!document.querySelector('link[rel="icon"], link[rel="shortcut icon"]');
+    if (!hasIcon){
+      const icon = document.createElement('link');
+      icon.setAttribute('rel', 'icon');
+      icon.setAttribute('type', 'image/svg+xml');
+      icon.setAttribute('href', '/assets/favicon.svg');
+      head.appendChild(icon);
+    }
+    const hasTouch = !!document.querySelector('link[rel="apple-touch-icon"]');
+    if (!hasTouch){
+      const touch = document.createElement('link');
+      touch.setAttribute('rel', 'apple-touch-icon');
+      touch.setAttribute('href', '/assets/apple-touch-icon.svg');
+      head.appendChild(touch);
+    }
+  }
+
+  function ensureOrganizationSchema(){
+    // Adds Organization schema (does not change page content).
+    const head = document.head;
+    if (!head) return;
+    if (document.querySelector('script[data-org-schema="1"]')) return;
+
+    const s = document.createElement('script');
+    s.type = 'application/ld+json';
+    s.setAttribute('data-org-schema', '1');
+    const origin = window.location.origin;
+    s.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "relationship.sbs",
+      "url": origin + "/",
+      "logo": origin + "/assets/logo.svg"
+    });
+    head.appendChild(s);
+  }
 
   function setMeta(name, content){
     const el = document.querySelector(`meta[name="${name}"]`);
@@ -43,7 +84,10 @@
     target.innerHTML = `
       <div class="top">
         <div class="wrap">
-          <a class="brand" href="/"><span class="dot"></span><span>relationship.sbs</span></a>
+          <a class="brand" href="/" aria-label="relationship.sbs home">
+            <img class="logo" src="/assets/logo.svg" width="28" height="28" alt="" loading="eager" decoding="async" />
+            <span class="brandText">relationship.sbs</span>
+          </a>
           <nav class="nav" aria-label="Primary">
             <a href="/#tests">Tests</a>
             <a href="/tools/text-decoder/">Text Decoder</a>
@@ -105,9 +149,11 @@
   // ✅ Auto-init (fixes “header/footer not showing” across the entire site)
   function init(){
     try{
+      ensureIcons();
       renderHeader();
       renderFooter();
       applyOGDefaults();
+      ensureOrganizationSchema();
     }catch(e){
       // Fail silently to avoid breaking pages if something is missing
       // (No console spam for production.)
