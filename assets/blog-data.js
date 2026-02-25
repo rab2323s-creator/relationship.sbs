@@ -223,6 +223,17 @@ window.BLOG_POSTS = [
   featured: true
 },
   {
+  slug: "limerence-explained",
+  title: "Limerence Explained: The Psychology, Brain Science, and How to Stop Obsessing Over Someone",
+  excerpt: "Can’t stop thinking about them? Learn the psychology and brain science behind limerence, why it feels addictive, how long it lasts, and what actually breaks the obsession.",
+  date: "2026-02-25",
+  readingMinutes: 9,
+  tags: ["Relationships", "Attachment", "Psychology"],
+  category: "Relationships",
+  cover: "/assets/og/limerence-explained-quiet-obsession.webp",
+  featured: true
+},
+  {
     slug: "what-does-k-mean",
     title: "What Does “K” Mean in Texting? (And What to Reply)",
     excerpt: "The “K” text can mean many things: cold, annoyed, busy, or uninterested. Here’s how to read the context.",
