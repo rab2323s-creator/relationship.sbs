@@ -232,7 +232,7 @@ window.BLOG_POSTS = [
   category: "Relationships",
   cover: "/assets/og/limerence-explained-quiet-obsession.webp",
   featured: true
-},
+  },
   {
     slug: "what-does-k-mean",
     title: "What Does “K” Mean in Texting? (And What to Reply)",
