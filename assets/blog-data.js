@@ -58,6 +58,18 @@ window.BLOG_POSTS = [
     featured: false
   },
   {
+  slug: "gaslighting-in-relationships",
+  title: "Gaslighting in Relationships: Signs, Examples, and How to Stop Doubting Yourself",
+  excerpt: "Learn how gaslighting works in relationships, the common manipulation phrases people use, and the psychological signs that make someone doubt their own memory and perception.",
+  date: "2026-03-11",
+  readingMinutes: 7,
+  tags: ["Psychology", "Relationships"],
+  category: "Relationships",
+  cover: "/assets/images/gaslighting-signs.jpg",
+  featured: true
+},
+  
+  {
   slug: "emotionally-exhausted-in-a-relationship",
   title: "Emotionally Exhausted in a Relationship? Causes, Signs, and What Helps",
   excerpt: "Do you feel emotionally drained even when nothing seems wrong? This psychology-based article explores why relationships can become exhausting—and what actually helps restore balance.",
