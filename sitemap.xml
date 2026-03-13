@@ -639,5 +639,55 @@
   <changefreq>weekly</changefreq>
   <priority>0.6</priority>
 </url>
-  
+  <!-- What Kind of Lover Are You? Test -->
+<url>
+  <loc>https://relationship.sbs/tests/what-kind-of-lover-are-you-test/</loc>
+  <lastmod>2026-02-20</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<!-- Results Hub -->
+<url>
+  <loc>https://relationship.sbs/tests/what-kind-of-lover-are-you-test/results/</loc>
+  <lastmod>2026-02-20</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<!-- Result Pages -->
+<url>
+  <loc>https://relationship.sbs/tests/what-kind-of-lover-are-you-test/results/steady-lover/</loc>
+  <lastmod>2026-02-20</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://relationship.sbs/tests/what-kind-of-lover-are-you-test/results/magnetic-lover/</loc>
+  <lastmod>2026-02-20</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://relationship.sbs/tests/what-kind-of-lover-are-you-test/results/devoted-lover/</loc>
+  <lastmod>2026-02-20</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://relationship.sbs/tests/what-kind-of-lover-are-you-test/results/guarded-lover/</loc>
+  <lastmod>2026-02-20</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://relationship.sbs/tests/what-kind-of-lover-are-you-test/results/all-in-lover/</loc>
+  <lastmod>2026-02-20</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
  </urlset>
