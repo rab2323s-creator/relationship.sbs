@@ -94,7 +94,14 @@ window.TEST_INDEX = [
   "time": "2–3 min",
   "intent": "quiz"
 },
-
+ {
+  "id": "what_kind_of_lover_are_you_test",
+  "slug": "what-kind-of-lover-are-you-test",
+  "title": "What Kind of Lover Are You? Love Personality Test",
+  "blurb": "15 emotionally sharp questions to reveal your true lover type, love style, and relationship patterns—plus scripts and next steps.",
+  "time": "60–90 sec",
+  "intent": "quiz"
+},
   {
   "id": "emotional_manipulation",
   "slug": "emotional-manipulation",
