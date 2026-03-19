@@ -14,6 +14,17 @@ window.BLOG_POSTS = [
     featured: true
   },
   {
+  slug: "why-you-miss-someone-who-was-bad-for-you",
+  title: "Why You Miss Someone Who Was Bad For You (And Why It Feels So Hard to Let Go)",
+  excerpt: "A psychology-based explanation of why you miss someone who hurt you, how trauma bonding, emotional patterns, and attachment keep you connected, and what actually helps you break free.",
+  date: "2026-03-18",
+  readingMinutes: 10,
+  tags: ["Relationships", "Attachment", "Breakup"],
+  category: "Relationships",
+  cover: "/assets/images/blog/why-you-miss-someone-who-was-bad-for-you/miss-toxic-ex-late-night-emotional-attachment.webp",
+  featured: true
+  },
+  {
   slug: "intimacy-changes-long-term-relationships",
   title: "Why Intimacy Changes in Long-Term Relationships (And What It Really Means)",
   excerpt: "A psychology-based guide to why intimacy shifts in long-term relationships, how stress, attachment patterns, and emotional safety affect connection, and what helps restore closeness—without explicit content.",
