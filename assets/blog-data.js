@@ -165,7 +165,7 @@ window.BLOG_POSTS = [
     readingMinutes: 6,
     tags: ["Communication", "Relationships"],
     category: "Communication",
-    cover: "/assets/img/blog/default.webp",
+    cover: "/assets/images/communicate-needs-without-sounding-needy.webp",
     featured: false
   },
   {
