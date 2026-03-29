@@ -136,6 +136,17 @@ window.BLOG_POSTS = [
     featured: false
   },
   {
+  slug: "retroactive-jealousy",
+  title: "Retroactive Jealousy: Why You're Jealous of Your Partner’s Ex (+ How to Stop Overthinking the Past)",
+  excerpt: "Retroactive jealousy can make you obsess over your partner’s past and feel threatened by an ex who isn’t present. Learn why partner past anxiety happens, the imagined rival effect, and how to stop overthinking your partner’s history.",
+  date: "2026-03-29",
+  readingMinutes: 12,
+  tags: ["Jealousy", "Attachment", "Overthinking"],
+  category: "Psychology",
+  cover: "/assets/img/blog/retroactive-jealousy.webp",
+  featured: true
+},
+  {
     slug: "no-contact-after-breakup",
     title: "No Contact After a Breakup: Does It Work?",
     excerpt: "No contact isn’t a game—it’s a recovery strategy. Here’s when it works, when it doesn’t, and how to do it properly.",
