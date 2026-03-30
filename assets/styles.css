@@ -255,15 +255,7 @@ hr{ border:0; border-top:1px solid var(--line); margin:18px 0; }
   border-radius:14px;
   background: rgba(255,255,255,.04);
 }
-.prose a {
-  color: #4da3ff;
-  text-decoration: underline;
-  font-weight: 500;
-}
-
-.prose a:hover {
-  color: #7bb8ff;
-}
+ 
 
 /* SEO longform blocks */
 .seo h2{ margin:0 0 10px; }
@@ -315,3 +307,13 @@ textarea.control{
 .stack{display:flex; flex-direction:column; gap:10px;}
 input{background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); color:inherit; padding:10px 12px; border-radius:12px; outline:none;}
 input:focus{border-color:rgba(255,255,255,0.35);}
+
+.card.seo a{
+  color: var(--accent2);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.card.seo a:hover{
+  color: var(--accent);
+}
