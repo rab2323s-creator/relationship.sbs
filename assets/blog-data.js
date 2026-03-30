@@ -103,6 +103,17 @@ window.BLOG_POSTS = [
     featured: false
   },
   {
+  slug: "orbiting-in-dating",
+  title: "Orbiting in Dating: Meaning, Signs & Why They Watch Your Stories But Don’t Text",
+  excerpt: "Orbiting in dating explained. Learn the signs, psychology, and how to respond when someone watches your stories but doesn’t text.",
+  date: "2026-03-31",
+  readingMinutes: 8,
+  tags: ["Dating Psychology", "Modern Dating", "Orbiting", "Relationships"],
+  category: "Dating Psychology",
+  cover: "/assets/images/blog/orbiting-in-dating/orbiting-in-dating-watching-stories-no-text.jpg",
+  featured: false
+},
+  {
     slug: "stop-overthinking-texts",
     title: "How to Stop Overthinking Text Messages",
     excerpt: "If you reread messages and spiral into anxiety, you’re not alone. Here are practical steps to stop overthinking texts.",
