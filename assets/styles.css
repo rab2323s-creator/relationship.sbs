@@ -308,12 +308,15 @@ textarea.control{
 input{background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); color:inherit; padding:10px 12px; border-radius:12px; outline:none;}
 input:focus{border-color:rgba(255,255,255,0.35);}
 
-.card.seo a{
-  color: var(--accent2);
-  text-decoration: underline;
-  font-weight: 500;
+article .card.prose.seo p a,
+article .card.prose.seo li a {
+  color: #8EA0FF !important;
+  text-decoration: underline !important;
+  font-weight: 600 !important;
+  display: inline !important;
 }
 
-.card.seo a:hover{
-  color: var(--accent);
+article .card.prose.seo p a:hover,
+article .card.prose.seo li a:hover {
+  color: #5D7CFF !important;
 }
