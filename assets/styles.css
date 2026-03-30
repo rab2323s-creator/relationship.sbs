@@ -255,7 +255,15 @@ hr{ border:0; border-top:1px solid var(--line); margin:18px 0; }
   border-radius:14px;
   background: rgba(255,255,255,.04);
 }
+.prose a {
+  color: #4da3ff;
+  text-decoration: underline;
+  font-weight: 500;
+}
 
+.prose a:hover {
+  color: #7bb8ff;
+}
 
 /* SEO longform blocks */
 .seo h2{ margin:0 0 10px; }
