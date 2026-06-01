@@ -92,6 +92,17 @@ window.BLOG_POSTS = [
   featured: true
 },
   {
+  slug: "why-does-my-ex-watch-my-stories-but-never-text-me",
+  title: "Why Does My Ex Watch My Stories But Never Text Me?",
+  excerpt: "Your ex watches every story but never reaches out. Learn what it may mean, what it does not mean, and how to stop overthinking their online behavior.",
+  date: "2026-06-01",
+  readingMinutes: 12,
+  tags: ["Breakup", "Social Media", "Psychology"],
+  category: "Breakup",
+  cover: "/assets/og/ex-watches-my-stories.webp",
+  featured: true
+},
+  {
     slug: "healthy-boundaries-script",
     title: "Healthy Boundaries Script: What to Say (Without Guilt)",
     excerpt: "Setting boundaries shouldn’t feel aggressive. Use these ready-to-send scripts for relationships, dating, and texting.",
