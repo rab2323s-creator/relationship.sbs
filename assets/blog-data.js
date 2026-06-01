@@ -169,6 +169,17 @@ window.BLOG_POSTS = [
     featured: false
   },
   {
+slug: "breadcrumbing-in-dating",
+title: "Breadcrumbing in Dating: Signs, Psychology, and What to Do",
+excerpt: "They text just enough to keep you interested but never enough to build something real. Learn the signs of breadcrumbing, why it happens, and how to respond.",
+date: "2026-06-01",
+readingMinutes: 11,
+tags: ["Dating", "Texting", "Psychology"],
+category: "Dating",
+cover: "/assets/og/breadcrumbing-in-dating.webp",
+featured: true
+},
+  {
     slug: "red-flags-dating-apps",
     title: "Red Flags on Dating Apps You Should Watch For",
     excerpt: "Dating apps can be fun—but also full of manipulation. These red flags help you protect your emotional health.",
