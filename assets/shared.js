@@ -93,13 +93,14 @@
 
     if (parts[0] === "tests" && parts[1]){
       const slug = parts[1];
-      items.push({ "@type":"ListItem", "position":2, "name":SCHEMA_TEST_LABELS[slug] || "Relationship Test", "item":origin + "/tests/" + slug + "/" });
+      items.push({ "@type":"ListItem", "position":2, "name":"Tests", "item":origin + "/tests/" });
+      items.push({ "@type":"ListItem", "position":3, "name":SCHEMA_TEST_LABELS[slug] || "Relationship Test", "item":origin + "/tests/" + slug + "/" });
       if (parts[2] === "results"){
         if (parts[3]){
-          items.push({ "@type":"ListItem", "position":3, "name":"Results", "item":origin + "/tests/" + slug + "/results/" });
-          items.push({ "@type":"ListItem", "position":4, "name":pageName, "item":schemaCanonical() });
+          items.push({ "@type":"ListItem", "position":4, "name":"Results", "item":origin + "/tests/" + slug + "/results/" });
+          items.push({ "@type":"ListItem", "position":5, "name":pageName, "item":schemaCanonical() });
         }else{
-          items.push({ "@type":"ListItem", "position":3, "name":"Results", "item":schemaCanonical() });
+          items.push({ "@type":"ListItem", "position":4, "name":"Results", "item":schemaCanonical() });
         }
       }
       return items;
@@ -179,7 +180,7 @@
     if (path === "/about/") pageType = "AboutPage";
     else if (path === "/about/laura-aram-smith/") pageType = "ProfilePage";
     else if (path === "/contact/") pageType = "ContactPage";
-    else if (path === "/blog/" || /\/tests\/[^/]+\/results\/$/.test(path)) pageType = "CollectionPage";
+    else if (path === "/blog/" || path === "/tests/" || /\/tests\/[^/]+\/results\/$/.test(path)) pageType = "CollectionPage";
 
     const hasExistingBreadcrumbSchema = Array.from(
       document.querySelectorAll('script[type="application/ld+json"]')
@@ -293,10 +294,11 @@
   // Centralized “trust” links for consistency across header/footer.
   function getTrustLinks(){
     return [
-      { href: "/about/",   label: "About" },
-      { href: "/contact/", label: "Contact" },
-      { href: "/privacy/", label: "Privacy" },
-      { href: "/terms/",   label: "Terms" }
+      { href: "/about/",       label: "About" },
+      { href: "/methodology/", label: "Methodology" },
+      { href: "/contact/",     label: "Contact" },
+      { href: "/privacy/",     label: "Privacy" },
+      { href: "/terms/",       label: "Terms" }
     ];
   }
 
@@ -320,7 +322,7 @@
             <span class="brandText">relationship.sbs</span>
           </a>
           <nav class="nav" aria-label="Primary">
-            <a href="/#tests">Tests</a>
+            <a href="/tests/">Tests</a>
             <a href="/tools/text-decoder/">Text Decoder</a>
             <a href="/blog/">Blog</a>
             ${headerExtras}
@@ -345,7 +347,7 @@
         <div class="row" style="justify-content:space-between;">
           <div>© ${year} relationship.sbs</div>
           <div class="row">
-            <a href="/#tests">Tests</a>
+            <a href="/tests/">Tests</a>
             <a href="/tools/text-decoder/">Tools</a>
             <a href="/blog/">Blog</a>
           </div>
