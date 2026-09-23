@@ -672,8 +672,14 @@
     });
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
+  function initApp(){
     renderHome();
     renderQuizPage();
-  });
+  }
+
+  if (document.readyState === "loading"){
+    document.addEventListener("DOMContentLoaded", initApp, { once:true });
+  }else{
+    initApp();
+  }
 })();
