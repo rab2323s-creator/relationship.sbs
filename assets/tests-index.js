@@ -6,6 +6,7 @@ window.TEST_INDEX = [
     "title": "Attachment Style Test: Anxious, Avoidant, Secure or Fearful?",
     "blurb": "18 scenarios exploring anxious, avoidant, secure, and fearful patterns in closeness, texting, conflict, and repair.",
     "time": "3–4 min",
+    "guide": "/blog/what-is-attachment-style/",
     "intent": "quiz"
   },
   {
@@ -14,6 +15,7 @@ window.TEST_INDEX = [
     "title": "Love Language Test: What Makes You Feel Most Loved?",
     "blurb": "18 scenarios exploring how words, time, service, touch, gifts, and mixed preferences tend to land for you.",
     "time": "3–4 min",
+    "guide": "/blog/love-language-explained/",
     "intent": "quiz"
   },
   {
@@ -22,6 +24,7 @@ window.TEST_INDEX = [
     "title": "Conflict Style Test: How Do You Handle Arguments?",
     "blurb": "18 scenarios exploring how you respond to conflict, stress, shutdown, compromise, and repair.",
     "time": "3–4 min",
+    "guide": "/blog/fair-fighting-rules/",
     "intent": "quiz"
   },
   {
@@ -30,6 +33,7 @@ window.TEST_INDEX = [
     "title": "Toxic Relationship Test: Are These Patterns Unhealthy?",
     "blurb": "12 scenarios exploring control, blame-shifting, emotional safety, coercion, and repair.",
     "time": "2–3 min",
+    "guide": "/blog/gaslighting-in-relationships/",
     "intent": "quiz"
   },
   {
@@ -38,7 +42,8 @@ window.TEST_INDEX = [
   "title": "Are You Settling in Your Relationship? 15-Question Test",
   "blurb": "15 scenarios exploring unmet needs, low effort, unclear commitment, and self-abandonment patterns.",
   "time": "2–3 min",
-  "intent": "quiz"
+  "guide": "/blog/communication-needs/",
+    "intent": "quiz"
  },
 
   {
@@ -47,6 +52,7 @@ window.TEST_INDEX = [
     "title": "Emotional Intimacy Test: How Close Are You Really?",
     "blurb": "12 scenarios exploring closeness, vulnerability, emotional safety, guardedness, and disconnection.",
     "time": "2–3 min",
+    "guide": "/blog/intimacy-changes-long-term-relationships/",
     "intent": "quiz"
   },
   {
@@ -55,6 +61,7 @@ window.TEST_INDEX = [
     "title": "Relationship Overthinking Test: Are You Stuck in a Thought Loop?",
     "blurb": "12 scenarios exploring reassurance-seeking, rumination, hypervigilance, texting spirals, and self-trust.",
     "time": "2–3 min",
+    "guide": "/blog/stop-overthinking-texts/",
     "intent": "quiz"
   },
 
@@ -64,7 +71,8 @@ window.TEST_INDEX = [
   "title": "Trauma Bond Test: Are You Stuck in a Push-Pull Cycle?",
   "blurb": "15 scenarios exploring push-pull cycles, fear, repeated harm followed by relief, and difficulty stepping away.",
   "time": "2–3 min",
-  "intent": "quiz"
+  "guide": "/blog/why-you-miss-someone-who-was-bad-for-you/",
+    "intent": "quiz"
 },
   
   {
@@ -73,7 +81,8 @@ window.TEST_INDEX = [
   "title": "Narcissistic Relationship Test: Control, Gaslighting & Self-Centered Patterns",
   "blurb": "15 scenarios exploring control, gaslighting-style confusion, blame-shifting, entitlement, and repair without diagnosing NPD.",
   "time": "2–3 min",
-  "intent": "quiz"
+  "guide": "/blog/gaslighting-in-relationships/",
+    "intent": "quiz"
 },
 
   
@@ -83,7 +92,8 @@ window.TEST_INDEX = [
   "title": "Avoidant Texting Test: Patterns, Pulling Away & What to Do",
   "blurb": "15 scenarios separating steady communication, chasing, distancing, hot-cold contact, and low investment.",
   "time": "2–3 min",
-  "intent": "quiz"
+  "guide": "/blog/avoidant-attachment-texting/",
+    "intent": "quiz"
 },
 
   {
@@ -92,7 +102,8 @@ window.TEST_INDEX = [
   "title": "Emotional Availability Test: Is Your Partner Emotionally Available?",
   "blurb": "15 scenarios exploring emotional presence, inconsistency, repair, guardedness, and whether closeness is mutual.",
   "time": "2–3 min",
-  "intent": "quiz"
+  "guide": "/blog/emotional-unavailability/",
+    "intent": "quiz"
 },
  {
   "id": "what_kind_of_lover_are_you_test",
@@ -100,7 +111,8 @@ window.TEST_INDEX = [
   "title": "What Kind of Lover Are You? Love Personality Test",
   "blurb": "15 scenarios exploring romantic style, strengths, blind spots, closeness, uncertainty, and relationship patterns.",
   "time": "60–90 sec",
-  "intent": "quiz"
+  "guide": "/blog/love-language-explained/",
+    "intent": "quiz"
 },
   {
   "id": "emotional_manipulation",
@@ -108,7 +120,8 @@ window.TEST_INDEX = [
   "title": "Emotional Manipulation Test: Gaslighting, Guilt & Control Patterns",
   "blurb": "15 scenarios exploring gaslighting-style confusion, guilt-tripping, DARVO, boundary pressure, and control.",
   "time": "2–3 min",
-  "intent": "quiz"
+  "guide": "/blog/gaslighting-in-relationships/",
+    "intent": "quiz"
   
   },
    {
@@ -117,6 +130,7 @@ window.TEST_INDEX = [
     "title": "Relationship Anxiety Test: Anxiety or Intuition?",
     "blurb": "12 scenarios exploring reassurance-seeking, overthinking, hypervigilance, fear of abandonment, and concrete concern signals.",
     "time": "2–3 min",
+    "guide": "/blog/anxious-attachment-signs/",
     "intent": "quiz"
   }
 ];
