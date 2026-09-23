@@ -5,7 +5,7 @@ window.TESTS = [
   {
     "id": "attachment",
     "slug": "attachment-style",
-    "title": "Attachment Style Deep Profile",
+    "title": "Attachment Style Test: Anxious, Avoidant, Secure or Fearful?",
     "blurb": "18 scenario questions. Get your attachment type + texting & conflict triggers.",
     "time": "3–4 min",
     "intent": "quiz",
@@ -1042,7 +1042,7 @@ window.TESTS = [
   {
     "id": "love_language",
     "slug": "love-language",
-    "title": "Love Language Deep Profile",
+    "title": "Love Language Test: What Makes You Feel Most Loved?",
     "blurb": "Not just your top love language—how you give, receive, and what you crave under stress.",
     "time": "3–4 min",
     "intent": "quiz",
@@ -2187,7 +2187,7 @@ window.TESTS = [
   {
     "id": "conflict",
     "slug": "conflict-style",
-    "title": "Conflict Style Deep Profile",
+    "title": "Conflict Style Test: How Do You Handle Arguments?",
     "blurb": "How you fight, repair, and what you do when your nervous system is activated.",
     "time": "3–4 min",
     "intent": "quiz",
@@ -3330,7 +3330,7 @@ window.TESTS = [
   {
       "id": "toxic_relationship",
       "slug": "toxic-relationship",
-      "title": "Toxic Relationship Test",
+      "title": "Toxic Relationship Test: Are These Patterns Unhealthy?",
       "blurb": "12 high-impact questions that flag gaslighting, control, and emotional manipulation — with clear next steps.",
       "time": "2–3 min",
       "intent": "quiz",
@@ -3935,7 +3935,7 @@ window.TESTS = [
   {
     "id": "emotional_intimacy",
     "slug": "emotional-intimacy",
-    "title": "Emotional Intimacy Test — How Close Are You Really?",
+    "title": "Emotional Intimacy Test: How Close Are You Really?",
     "blurb": "12 psychologically sharp questions that reveal your emotional connection, safety, and closeness — with scripts and next steps.",
     "time": "2–3 min",
     "intent": "quiz",
