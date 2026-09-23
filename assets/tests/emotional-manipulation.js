@@ -13,7 +13,7 @@
   window.TEST = {
     id: "emotional_manipulation",
     slug: SLUG,
-    title: "Emotional Manipulation Test: Gaslighting, Guilt & Control Patterns",
+    title: "Emotional Manipulation Test: Am I Being Manipulated?",
     blurb:
       "15 high-impact scenarios to spot emotional manipulation patterns (gaslighting, guilt-tripping, DARVO, silent punishment)—plus scripts & next steps (, no diagnosis).",
     time: "2–3 min",
