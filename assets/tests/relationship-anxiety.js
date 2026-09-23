@@ -2,7 +2,7 @@
 window.TEST = {
   "id": "relationship_anxiety",
   "slug": "relationship-anxiety",
-  "title": "Relationship Anxiety Test — Anxiety or Intuition?",
+  "title": "Relationship Anxiety Test: Anxiety or Intuition?",
   "blurb": "12 psychologically sharp scenarios that reveal your relationship anxiety pattern—reassurance loops, hypervigilant overthinking, grounded clarity, or a real intuition signal—plus scripts and next steps.",
   "time": "2–3 min",
   "intent": "quiz",
