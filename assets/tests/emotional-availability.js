@@ -14,9 +14,9 @@
   window.TEST = {
     id: "emotional_availability",
     slug: SLUG,
-    title: "Emotional Availability Test — Is Your Partner Emotionally There?",
+    title: "Emotional Availability Test: Is Your Partner Emotionally Available?",
     blurb:
-      "15 painfully accurate scenarios to reveal emotional availability, inconsistency, and repair patterns—plus scripts and next steps (ad-safe).",
+      "15 scenario-based scenarios to reveal emotional availability, inconsistency, and repair patterns—plus scripts and next steps.",
     time: "2–3 min",
     intent: "quiz",
     keywords: [
