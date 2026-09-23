@@ -13,9 +13,9 @@
   window.TEST = {
     id: "are_you_settling",
     slug: SLUG,
-    title: "Are You Settling? Test — Are You Accepting Less Than You Need in Love?",
+    title: "Are You Settling in Your Relationship? 15-Question Test",
     blurb:
-      "15 painfully accurate scenarios to reveal if you’re settling in love—plus scripts and next steps (ad-safe, no diagnosis).",
+      "15 scenario-based scenarios to reveal if you’re settling in love—plus scripts and next steps (, no diagnosis).",
     time: "2–3 min",
     intent: "quiz",
     keywords: [
