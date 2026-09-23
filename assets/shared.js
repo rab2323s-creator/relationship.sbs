@@ -93,14 +93,13 @@
 
     if (parts[0] === "tests" && parts[1]){
       const slug = parts[1];
-      items.push({ "@type":"ListItem", "position":2, "name":"Tests", "item":origin + "/#tests" });
-      items.push({ "@type":"ListItem", "position":3, "name":SCHEMA_TEST_LABELS[slug] || "Relationship Test", "item":origin + "/tests/" + slug + "/" });
+      items.push({ "@type":"ListItem", "position":2, "name":SCHEMA_TEST_LABELS[slug] || "Relationship Test", "item":origin + "/tests/" + slug + "/" });
       if (parts[2] === "results"){
         if (parts[3]){
-          items.push({ "@type":"ListItem", "position":4, "name":"Results", "item":origin + "/tests/" + slug + "/results/" });
-          items.push({ "@type":"ListItem", "position":5, "name":pageName, "item":schemaCanonical() });
+          items.push({ "@type":"ListItem", "position":3, "name":"Results", "item":origin + "/tests/" + slug + "/results/" });
+          items.push({ "@type":"ListItem", "position":4, "name":pageName, "item":schemaCanonical() });
         }else{
-          items.push({ "@type":"ListItem", "position":4, "name":"Results", "item":schemaCanonical() });
+          items.push({ "@type":"ListItem", "position":3, "name":"Results", "item":schemaCanonical() });
         }
       }
       return items;
@@ -161,7 +160,9 @@
         "@type":"ImageObject",
         "@id":logoId,
         "url":origin + "/assets/logo.svg",
-        "contentUrl":origin + "/assets/logo.svg"
+        "contentUrl":origin + "/assets/logo.svg",
+        "width":128,
+        "height":128
       },
       {
         "@type":"Person",
@@ -175,10 +176,14 @@
     ];
 
     let pageType = "WebPage";
-    if (path === "/") pageType = "HomePage";
-    else if (path === "/about/") pageType = "AboutPage";
+    if (path === "/about/") pageType = "AboutPage";
     else if (path === "/about/laura-aram-smith/") pageType = "ProfilePage";
+    else if (path === "/contact/") pageType = "ContactPage";
     else if (path === "/blog/" || /\/tests\/[^/]+\/results\/$/.test(path)) pageType = "CollectionPage";
+
+    const hasExistingBreadcrumbSchema = Array.from(
+      document.querySelectorAll('script[type="application/ld+json"]')
+    ).some(el => /"@type"\s*:\s*"BreadcrumbList"/.test(el.textContent || ""));
 
     const page = {
       "@type":pageType,
@@ -188,9 +193,11 @@
       "inLanguage":lang,
       "isAccessibleForFree":true,
       "isPartOf":{"@id":siteId},
-      "publisher":{"@id":orgId},
-      "breadcrumb":{"@id":breadcrumbId}
+      "publisher":{"@id":orgId}
     };
+    if (path !== "/" && !hasExistingBreadcrumbSchema){
+      page.breadcrumb = {"@id":breadcrumbId};
+    }
     if (description) page.description = description;
 
     const ogImage = document.querySelector('meta[property="og:image"]');
@@ -249,11 +256,13 @@
     }
 
     graph.push(page);
-    graph.push({
-      "@type":"BreadcrumbList",
-      "@id":breadcrumbId,
-      "itemListElement":schemaBreadcrumbs(path, pageName, origin)
-    });
+    if (path !== "/" && !hasExistingBreadcrumbSchema){
+      graph.push({
+        "@type":"BreadcrumbList",
+        "@id":breadcrumbId,
+        "itemListElement":schemaBreadcrumbs(path, pageName, origin)
+      });
+    }
 
     const s = document.createElement("script");
     s.type = "application/ld+json";
