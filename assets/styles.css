@@ -36,8 +36,15 @@ img{ max-width:100%; display:block; }
 .wrap{ max-width:var(--max); margin:0 auto; padding:22px; }
 hr{ border:0; border-top:1px solid var(--line); margin:18px 0; }
 
+#siteHeader{ display:block; }
+
 @media (min-width: 641px){
-  #siteHeader{ min-height:73px; display:block; }
+  #siteHeader{ min-height:73px; }
+}
+
+@media (max-width: 640px){
+  /* Reserve the two-row mobile header before shared.js injects it, preventing layout shift. */
+  #siteHeader{ min-height:137px; }
 }
 
 .top{
