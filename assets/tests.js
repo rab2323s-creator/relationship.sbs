@@ -1042,7 +1042,7 @@ window.TESTS = [
   {
     "id": "love_language",
     "slug": "love-language",
-    "title": "Love Language Test: What Makes You Feel Most Loved?",
+    "title": "Free Love Language Test: What’s My Love Language?",
     "blurb": "Not just your top love language—how you give, receive, and what you crave under stress.",
     "time": "3–4 min",
     "intent": "quiz",
@@ -3330,7 +3330,7 @@ window.TESTS = [
   {
       "id": "toxic_relationship",
       "slug": "toxic-relationship",
-      "title": "Toxic Relationship Test: Are These Patterns Unhealthy?",
+      "title": "Toxic Relationship Test: Am I in a Toxic Relationship?",
       "blurb": "12 high-impact questions that flag gaslighting, control, and emotional manipulation — with clear next steps.",
       "time": "2–3 min",
       "intent": "quiz",
