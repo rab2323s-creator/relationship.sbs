@@ -651,6 +651,7 @@
   function renderHome(){
     const grid = $("#testsGrid");
     if (!grid) return;
+    if (grid.dataset.prerendered === "true" && grid.children.length) return;
     grid.innerHTML = "";
     (window.TEST_INDEX || window.TESTS || []).forEach(t => {
       const href = `/tests/${t.slug}/`;
