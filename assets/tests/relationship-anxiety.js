@@ -490,7 +490,7 @@ window.TEST = {
     },
     {
       "q": "Is this a diagnosis?",
-      "a": "No. This is an ad-safe reflection tool based on patterns and nervous-system responses."
+      "a": "No. This is an reflection tool based on patterns and nervous-system responses."
     }
   ]
 };
