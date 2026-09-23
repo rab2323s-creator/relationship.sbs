@@ -73,7 +73,7 @@
 
 <url>
 <loc>https://relationship.sbs/tests/emotional-availability/</loc>
-<lastmod>2026-02-05</lastmod>
+<lastmod>2026-09-23</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -154,7 +154,7 @@
 </url>
 <url>
 <loc>https://relationship.sbs/blog/why-you-miss-someone-who-was-bad-for-you/</loc>
-<lastmod>2026-03-18</lastmod>
+<lastmod>2026-09-23</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
@@ -167,7 +167,7 @@
 
 <url>
 <loc>https://relationship.sbs/blog/avoidant-attachment-texting/</loc>
-<lastmod>2026-01-29</lastmod>
+<lastmod>2026-09-23</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -179,7 +179,7 @@
 </url>
 <url>
 <loc>https://relationship.sbs/blog/healthy-boundaries-script/</loc>
-<lastmod>2026-01-29</lastmod>
+<lastmod>2026-09-23</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -239,7 +239,7 @@
 </url>
 <url>
 <loc>https://relationship.sbs/blog/communication-needs/</loc>
-<lastmod>2026-01-29</lastmod>
+<lastmod>2026-09-23</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -305,6 +305,13 @@
 <lastmod>2026-01-29</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://relationship.sbs/tests/relationship-anxiety/</loc>
+<lastmod>2026-09-23</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
 </url>
 
 </urlset>
