@@ -678,7 +678,7 @@
         <p>${t.blurb}</p>
         <div class="row">
           <a class="btn small" href="${href}">Take test</a>
-          <a class="btn small secondary" href="/blog/what-is-attachment-style/">Read a guide</a>
+          <a class="btn small secondary" href="${t.guide || "/blog/"}">Read a related guide</a>
         </div>
       `;
       grid.appendChild(div);
