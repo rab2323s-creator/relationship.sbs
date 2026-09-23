@@ -14,9 +14,9 @@ const K = {
   window.TEST = {
     id: "trauma_bond",
     slug: SLUG,
-    title: "Trauma Bond Test — Are You Trauma Bonded in a Toxic Relationship?",
+    title: "Trauma Bond Test: Are You Stuck in a Push-Pull Cycle?",
     blurb:
-      "15 painfully accurate scenarios to spot trauma bonding, intermittent reinforcement, emotional addiction, and toxic attachment patterns (educational, ad-safe).",
+      "15 scenario-based scenarios to spot trauma bonding, intermittent reinforcement, emotional addiction, and toxic attachment patterns (educational).",
     time: "2–3 min",
     intent: "quiz",
     keywords: [

@@ -373,7 +373,7 @@
 
     const modsHtml = (profile.mods||[]).length ? `
       <div style="margin:14px 0 0;">
-        <div style="font-weight:900;margin:0 0 8px;">Modifiers (the “why it feels so accurate” part)</div>
+        <div style="font-weight:900;margin:0 0 8px;">What may be shaping this result</div>
         <div class="grid2">
           ${profile.mods.map(m=>`
             <div class="mini">
@@ -397,13 +397,13 @@
               <div class="mini"><h4 style="margin:0 0 6px;">Receiving (top 2)</h4><p class="muted" style="margin:0;">${(ex.receivingTop2||[]).map(nice).join(" + ")}</p></div>
               <div class="mini"><h4 style="margin:0 0 6px;">Giving (top 2)</h4><p class="muted" style="margin:0;">${(ex.givingTop2||[]).map(nice).join(" + ")}</p></div>
               <div class="mini"><h4 style="margin:0 0 6px;">Under stress you crave</h4><p class="muted" style="margin:0;">${nice(ex.stressTop)}</p></div>
-              <div class="mini"><h4 style="margin:0 0 6px;">Confidence</h4><p class="muted" style="margin:0;">${profile.conf.label} — ${profile.conf.note}</p></div>
+              <div class="mini"><h4 style="margin:0 0 6px;">Pattern clarity</h4><p class="muted" style="margin:0;">${profile.conf.label} — ${profile.conf.note}</p></div>
             </div>
           </div>`;
       }
       return `
         <div style="margin:14px 0 0;">
-          <div style="font-weight:900;margin:0 0 8px;">Confidence</div>
+          <div style="font-weight:900;margin:0 0 8px;">Pattern clarity</div>
           <p class="muted" style="margin:0;">${profile.conf.label} — ${profile.conf.note}</p>
         </div>`;
     })();
@@ -439,14 +439,14 @@
       ${modsHtml}
 
       <div style="margin:14px 0 0;">
-        <div style="font-weight:900;margin:0 0 8px;">3 messages you can actually send</div>
+        <div style="font-weight:900;margin:0 0 8px;">3 scripts you can use</div>
         <ul style="margin:0; padding-left:18px;">
           ${(r.scripts||[]).map(x=>`<li>${x}</li>`).join("")}
         </ul>
       </div>
 
       <div style="margin:14px 0 0;">
-        <div style="font-weight:900;margin:0 0 8px;">Next steps (no fluff)</div>
+        <div style="font-weight:900;margin:0 0 8px;">Practical next steps</div>
         <ul style="margin:0; padding-left:18px;">
           ${(r.next_steps||[]).map(x=>`<li>${x}</li>`).join("")}
         </ul>
@@ -464,8 +464,17 @@
         <div id="compareBox" class="hidden" style="margin-top:12px;"></div>
       </div>
 
-      <div class="muted small" style="margin-top:12px; line-height:1.55;">
-        Note: This is a self-reflection tool based on established relationship psychology frameworks (not a diagnosis).
+      <div class="card" style="margin-top:14px;">
+        <h3 style="margin:0 0 8px;">What this result does — and does not — mean</h3>
+        <p class="muted" style="margin:0; line-height:1.6;">
+          This result summarizes patterns in your answers. It can help you notice themes and choose a next step,
+          but it does not diagnose you or another person, prove someone’s motives, or replace professional support.
+          If you feel unsafe in a relationship, prioritize real-world support and safety over any quiz result.
+        </p>
+      </div>
+      <div class="row" style="margin-top:14px; flex-wrap:wrap;">
+        <a class="btn small secondary" href="/tests/${test.slug}/">Retake test</a>
+        <a class="btn small secondary" href="/#tests">Explore other tests</a>
       </div>
     `;
 
@@ -556,6 +565,7 @@
     const state = {i:0, answers: new Array(test.questions.length).fill(null)};
     const qWrap = $("#qWrap");
     const progress = $("#progress");
+    const progressBar = $("#quizProgress");
     const qText = $("#qText");
     const opts = $("#opts");
     const back = $("#backBtn");
@@ -564,6 +574,7 @@
       const i = state.i;
       const q = test.questions[i];
       progress.textContent = `${i+1} / ${test.questions.length}`;
+      if (progressBar) progressBar.value = i + 1;
       qText.textContent = q.text;
       opts.innerHTML = "";
       q.options.forEach((o, idx) => {
@@ -632,9 +643,10 @@
 
       <section class="card">
         <div class="row" style="justify-content:space-between; align-items:center;">
-          <div class="muted" id="progress">1 / ${test.questions.length}</div>
+          <div class="muted" id="progress" aria-live="polite">1 / ${test.questions.length}</div>
           <button class="btn small secondary" id="backBtn">Back</button>
         </div>
+        <progress id="quizProgress" value="1" max="${test.questions.length}" style="width:100%;height:10px;margin:10px 0 4px;" aria-label="Quiz progress"></progress>
         <h2 id="qText" style="margin:10px 0 12px;"></h2>
         <div id="opts" class="stack"></div>
       </section>
@@ -666,7 +678,7 @@
         <p>${t.blurb}</p>
         <div class="row">
           <a class="btn small" href="${href}">Take test</a>
-          <a class="btn small secondary" href="/blog/what-is-attachment-style/">Read a guide</a>
+          <a class="btn small secondary" href="${t.guide || "/blog/"}">Read a related guide</a>
         </div>
       `;
       grid.appendChild(div);

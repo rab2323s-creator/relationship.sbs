@@ -2,7 +2,7 @@
 window.TEST = {
   "id": "overthinking_relationship",
   "slug": "overthinking-relationship",
-  "title": "Overthinking Relationship Test — Are You Overthinking Your Relationship?",
+  "title": "Relationship Overthinking Test: Are You Stuck in a Thought Loop?",
   "blurb": "12 high-impact questions to reveal your overthinking pattern — relationship anxiety, reassurance loops, and how to rebuild self-trust.",
   "time": "2–3 min",
   "intent": "quiz",

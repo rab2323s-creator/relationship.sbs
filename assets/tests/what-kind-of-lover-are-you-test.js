@@ -15,7 +15,7 @@
     slug: SLUG,
     title: "What Kind of Lover Are You? Love Personality Test",
     blurb:
-      "15 emotionally sharp questions to reveal your true lover type, love style, and relationship patterns—plus scripts and next steps (ad-safe).",
+      "15 emotionally sharp questions to reveal your true lover type, love style, and relationship patterns—plus scripts and next steps.",
     time: "60–90 sec",
     intent: "quiz",
     keywords: [

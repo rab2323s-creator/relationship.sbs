@@ -3,120 +3,134 @@ window.TEST_INDEX = [
   {
     "id": "attachment",
     "slug": "attachment-style",
-    "title": "Attachment Style Deep Profile",
-    "blurb": "18 scenario questions. Get your attachment type + texting & conflict triggers.",
+    "title": "Attachment Style Test: Anxious, Avoidant, Secure or Fearful?",
+    "blurb": "18 scenarios exploring anxious, avoidant, secure, and fearful patterns in closeness, texting, conflict, and repair.",
     "time": "3–4 min",
+    "guide": "/blog/what-is-attachment-style/",
     "intent": "quiz"
   },
   {
     "id": "love_language",
     "slug": "love-language",
-    "title": "Love Language Deep Profile",
-    "blurb": "18 scenario questions. Discover what makes you feel most loved—without guessing.",
+    "title": "Free Love Language Test: What’s My Love Language?",
+    "blurb": "18 scenarios exploring how words, time, service, touch, gifts, and mixed preferences tend to land for you.",
     "time": "3–4 min",
+    "guide": "/blog/love-language-explained/",
     "intent": "quiz"
   },
   {
     "id": "conflict_style",
     "slug": "conflict-style",
-    "title": "Conflict Style Deep Profile",
-    "blurb": "18 scenario questions. Learn your conflict pattern + repair scripts that actually work.",
+    "title": "Conflict Style Test: How Do You Handle Arguments?",
+    "blurb": "18 scenarios exploring how you respond to conflict, stress, shutdown, compromise, and repair.",
     "time": "3–4 min",
+    "guide": "/blog/fair-fighting-rules/",
     "intent": "quiz"
   },
   {
     "id": "toxic_relationship",
     "slug": "toxic-relationship",
-    "title": "Toxic Relationship Test — Are You In a Toxic Relationship?",
-    "blurb": "12 high-impact questions to spot manipulation, control, and blame-shifting—plus next steps.",
+    "title": "Toxic Relationship Test: Am I in a Toxic Relationship?",
+    "blurb": "12 scenarios exploring control, blame-shifting, emotional safety, coercion, and repair.",
     "time": "2–3 min",
+    "guide": "/blog/gaslighting-in-relationships/",
     "intent": "quiz"
   },
   {
   "id": "are_you_settling",
   "slug": "are-you-settling",
-  "title": "Are You Settling? Test — Are You Accepting Less Than You Need in Love?",
-  "blurb": "15 painfully accurate scenarios to reveal if you’re settling in love—plus scripts and next steps (ad-safe).",
+  "title": "Are You Settling in Your Relationship? 15-Question Test",
+  "blurb": "15 scenarios exploring unmet needs, low effort, unclear commitment, and self-abandonment patterns.",
   "time": "2–3 min",
-  "intent": "quiz"
+  "guide": "/blog/communication-needs/",
+    "intent": "quiz"
  },
 
   {
     "id": "emotional_intimacy",
     "slug": "emotional-intimacy",
-    "title": "Emotional Intimacy Test — How Close Are You Really?",
-    "blurb": "12 sharp questions that reveal emotional connection, safety, and distance—plus scripts.",
+    "title": "Emotional Intimacy Test: How Close Are You Really?",
+    "blurb": "12 scenarios exploring closeness, vulnerability, emotional safety, guardedness, and disconnection.",
     "time": "2–3 min",
+    "guide": "/blog/intimacy-changes-long-term-relationships/",
     "intent": "quiz"
   },
   {
     "id": "overthinking_relationship",
     "slug": "overthinking-relationship",
-    "title": "Overthinking Test — Are You Overthinking Your Relationship?",
-    "blurb": "12 powerful scenarios that reveal overthinking loops and how to regain self-trust.",
+    "title": "Relationship Overthinking Test: Are You Stuck in a Thought Loop?",
+    "blurb": "12 scenarios exploring reassurance-seeking, rumination, hypervigilance, texting spirals, and self-trust.",
     "time": "2–3 min",
+    "guide": "/blog/stop-overthinking-texts/",
     "intent": "quiz"
   },
 
   {
   "id": "trauma_bond",
   "slug": "trauma-bond",
-  "title": "Trauma Bond Test — Are You Trauma Bonded in a Toxic Relationship?",
-  "blurb": "15 painfully accurate scenarios to spot trauma bonding, intermittent reinforcement, and emotional addiction—plus scripts and next steps (ad-safe).",
+  "title": "Trauma Bond Test: Are You Stuck in a Push-Pull Cycle?",
+  "blurb": "15 scenarios exploring push-pull cycles, fear, repeated harm followed by relief, and difficulty stepping away.",
   "time": "2–3 min",
-  "intent": "quiz"
+  "guide": "/blog/why-you-miss-someone-who-was-bad-for-you/",
+    "intent": "quiz"
 },
   
   {
   "id": "narcissistic_relationship",
   "slug": "narcissistic-relationship",
-  "title": "Narcissistic Relationship Test — Are You in a Narcissistic Relationship?",
-  "blurb": "15 high-impact scenarios to spot narcissistic relationship patterns (gaslighting, blame-shifting, control, love-bombing)—plus scripts and next steps (ad-safe).",
+  "title": "Narcissistic Relationship Test: Control, Gaslighting & Self-Centered Patterns",
+  "blurb": "15 scenarios exploring control, gaslighting-style confusion, blame-shifting, entitlement, and repair without diagnosing NPD.",
   "time": "2–3 min",
-  "intent": "quiz"
+  "guide": "/blog/gaslighting-in-relationships/",
+    "intent": "quiz"
 },
 
   
   {
   "id": "avoidant_texting",
   "slug": "avoidant-texting",
-  "title": "Avoidant Texting Test: How to Text an Avoidant (Without Losing Yourself)",
-  "blurb": "15 modern texting scenarios to decode avoidant attachment style texting, hot-cold patterns, and what to text next—plus scripts and boundaries.",
+  "title": "Avoidant Texting Test: Patterns, Pulling Away & What to Do",
+  "blurb": "15 scenarios separating steady communication, chasing, distancing, hot-cold contact, and low investment.",
   "time": "2–3 min",
-  "intent": "quiz"
+  "guide": "/blog/avoidant-attachment-texting/",
+    "intent": "quiz"
 },
 
   {
   "id": "emotional_availability",
   "slug": "emotional-availability",
-  "title": "Emotional Availability Test — Is Your Partner Emotionally There?",
-  "blurb": "15 painfully accurate scenarios to reveal emotional availability, inconsistency, and repair patterns—plus scripts and next steps (ad-safe).",
+  "title": "Emotional Availability Test: Is Your Partner Emotionally Available?",
+  "blurb": "15 scenarios exploring emotional presence, inconsistency, repair, guardedness, and whether closeness is mutual.",
   "time": "2–3 min",
-  "intent": "quiz"
+  "guide": "/blog/emotional-unavailability/",
+    "intent": "quiz"
 },
  {
   "id": "what_kind_of_lover_are_you_test",
   "slug": "what-kind-of-lover-are-you-test",
   "title": "What Kind of Lover Are You? Love Personality Test",
-  "blurb": "15 emotionally sharp questions to reveal your true lover type, love style, and relationship patterns—plus scripts and next steps.",
+  "blurb": "15 scenarios exploring romantic style, strengths, blind spots, closeness, uncertainty, and relationship patterns.",
   "time": "60–90 sec",
-  "intent": "quiz"
+  "guide": "/blog/love-language-explained/",
+    "intent": "quiz"
 },
   {
   "id": "emotional_manipulation",
   "slug": "emotional-manipulation",
-  "title": "Emotional Manipulation Test — Are You Being Emotionally Manipulated?",
-  "blurb": "15 high-impact scenarios to spot emotional manipulation patterns (gaslighting, guilt-tripping, DARVO, silent punishment)—plus scripts & next steps (ad-safe).",
+  "title": "Emotional Manipulation Test: Am I Being Manipulated?",
+  "blurb": "15 scenarios exploring gaslighting-style confusion, guilt-tripping, DARVO, boundary pressure, and control.",
   "time": "2–3 min",
-  "intent": "quiz"
+  "guide": "/blog/gaslighting-in-relationships/",
+    "intent": "quiz"
   
   },
    {
     "id": "relationship_anxiety",
     "slug": "relationship-anxiety",
-    "title": "Relationship Anxiety Test — Anxiety or Intuition?",
-    "blurb": "12 high-impact scenarios to reveal your anxiety loop, reassurance needs, and self-trust patterns.",
+    "title": "Relationship Anxiety Test: Anxiety or Intuition?",
+    "blurb": "12 scenarios exploring reassurance-seeking, overthinking, hypervigilance, fear of abandonment, and concrete concern signals.",
     "time": "2–3 min",
+    "guide": "/blog/anxious-attachment-signs/",
     "intent": "quiz"
   }
 ];

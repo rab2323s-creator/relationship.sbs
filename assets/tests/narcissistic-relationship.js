@@ -14,9 +14,9 @@
   window.TEST = {
     id: "narcissistic_relationship",
     slug: SLUG,
-    title: "Narcissistic Relationship Test — Are You in a Narcissistic Relationship?",
+    title: "Narcissistic Relationship Test: Control, Gaslighting & Self-Centered Patterns",
     blurb:
-      "15 high-impact scenarios to spot narcissistic relationship patterns (gaslighting, blame-shifting, control, love-bombing)—plus scripts and next steps (ad-safe, no diagnosis).",
+      "15 high-impact scenarios to spot narcissistic relationship patterns (gaslighting, blame-shifting, control, love-bombing)—plus scripts and next steps (, no diagnosis).",
     time: "2–3 min",
     intent: "quiz",
     keywords: [

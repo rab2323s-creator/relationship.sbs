@@ -13,9 +13,9 @@
   window.TEST = {
     id: "avoidant_texting",
     slug: SLUG,
-    title: "Avoidant Texting Test: How to Text an Avoidant (Without Losing Yourself)",
+    title: "Avoidant Texting Test: Patterns, Pulling Away & What to Do",
     blurb:
-      "15 modern texting scenarios to decode avoidant attachment style texting, hot-cold patterns, and what to text next—plus scripts and boundaries (ad-safe).",
+      "15 modern texting scenarios to decode avoidant attachment style texting, hot-cold patterns, and what to text next—plus scripts and boundaries.",
     time: "2–3 min",
     intent: "quiz",
     keywords: [
