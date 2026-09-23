@@ -609,6 +609,8 @@
 
   function renderShell(test){
     const root = $("#quizRoot");
+    const hasPageH1 = Array.from(document.querySelectorAll("h1")).some(el => !root.contains(el));
+    const headingTag = hasPageH1 ? "h2" : "h1";
     root.innerHTML = `
       <section class="card" id="quizCard">
         <div class="kicker">
@@ -621,7 +623,7 @@
           </div>
         </div>
 
-        <h1 style="margin:0 0 8px;font-size:34px;line-height:1.1;">${test.title}</h1>
+        <${headingTag} style="margin:0 0 8px;font-size:34px;line-height:1.1;">${test.title}</${headingTag}>
         <p class="muted" style="margin:0 0 8px;">${test.blurb}</p>
         <p class="small" style="margin:0;">
           Tip: finish, then share your result link or share card to compare with a friend/partner.
