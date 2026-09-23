@@ -12,7 +12,7 @@ window.TEST_INDEX = [
   {
     "id": "love_language",
     "slug": "love-language",
-    "title": "Love Language Test: What Makes You Feel Most Loved?",
+    "title": "Free Love Language Test: What’s My Love Language?",
     "blurb": "18 scenarios exploring how words, time, service, touch, gifts, and mixed preferences tend to land for you.",
     "time": "3–4 min",
     "guide": "/blog/love-language-explained/",
@@ -30,7 +30,7 @@ window.TEST_INDEX = [
   {
     "id": "toxic_relationship",
     "slug": "toxic-relationship",
-    "title": "Toxic Relationship Test: Are These Patterns Unhealthy?",
+    "title": "Toxic Relationship Test: Am I in a Toxic Relationship?",
     "blurb": "12 scenarios exploring control, blame-shifting, emotional safety, coercion, and repair.",
     "time": "2–3 min",
     "guide": "/blog/gaslighting-in-relationships/",
@@ -117,7 +117,7 @@ window.TEST_INDEX = [
   {
   "id": "emotional_manipulation",
   "slug": "emotional-manipulation",
-  "title": "Emotional Manipulation Test: Gaslighting, Guilt & Control Patterns",
+  "title": "Emotional Manipulation Test: Am I Being Manipulated?",
   "blurb": "15 scenarios exploring gaslighting-style confusion, guilt-tripping, DARVO, boundary pressure, and control.",
   "time": "2–3 min",
   "guide": "/blog/gaslighting-in-relationships/",
