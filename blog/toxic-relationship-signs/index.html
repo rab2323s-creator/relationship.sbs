@@ -121,20 +121,135 @@
     ]
   }
   </script>
+
+<style>
+  /* Page-specific article polish: scoped so no other page is affected */
+  .toxic-article{overflow:hidden}
+  .toxic-article .article-layout{align-items:start}
+  .toxic-article .article-main{min-width:0}
+  .toxic-article .article-content{max-width:720px}
+  .toxic-article .article-hero{padding-top:2px}
+  .toxic-article .article-hero h1{max-width:850px;text-wrap:balance}
+  .toxic-article .article-excerpt{max-width:760px}
+  .toxic-article .article-featured-image{margin-top:24px}
+  .toxic-article .article-featured-image img{object-position:center 42%}
+  .toxic-article .section-anchor{scroll-margin-top:92px}
+  .toxic-article .article-box strong:first-child{font-size:17px}
+  .toxic-article .signs-overview{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:10px;
+    margin:24px 0 34px;
+    padding:0;
+    list-style:none;
+  }
+  .toxic-article .signs-overview li{margin:0;padding:0}
+  .toxic-article .signs-overview a{
+    display:flex;
+    height:100%;
+    align-items:flex-start;
+    gap:9px;
+    padding:12px 13px;
+    border:1px solid #e6e6e6;
+    border-radius:12px;
+    background:#fafafa;
+    color:#303030;
+    font-size:13.5px;
+    line-height:1.45;
+    font-weight:800;
+    text-decoration:none;
+    transition:transform .18s ease,border-color .18s ease,background .18s ease;
+  }
+  .toxic-article .signs-overview a:hover{
+    transform:translateY(-2px);
+    border-color:rgba(185,151,79,.55);
+    background:#fffaf0;
+    color:#806735;
+  }
+  .toxic-article .signs-overview .n{
+    flex:0 0 auto;
+    display:grid;
+    place-items:center;
+    width:24px;
+    height:24px;
+    border-radius:999px;
+    background:#111827;
+    color:#fff;
+    font-size:11px;
+    line-height:1;
+  }
+  .toxic-article .sidebar-card--sticky{
+    border-top:3px solid var(--article-gold);
+    border-radius:14px;
+  }
+  .toxic-article .toc-label{
+    margin:0 0 6px;
+    color:var(--article-gold-dark);
+    font-size:12px;
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+  }
+  .toxic-article .toc-title{margin:0 0 10px}
+  .toxic-article .toc-test{
+    margin-top:14px;
+    padding:12px 14px!important;
+    border-radius:10px;
+    background:#111827;
+    color:#fff!important;
+    text-align:center;
+  }
+  .toxic-article .toc-test:hover{background:#000;color:#fff!important}
+  .toxic-article .article-table-wrap{scrollbar-width:thin}
+  .toxic-article .faq-section details{border-radius:12px;overflow:hidden}
+  .toxic-article .related-card{border-radius:14px;overflow:hidden}
+  .toxic-article .related-card a{padding:2px 0}
+  .toxic-article .related-card h3{padding-top:18px}
+  .toxic-article .source-note{
+    margin-top:-8px;
+    color:#6b7280;
+    font-size:14px;
+    line-height:1.7;
+  }
+  @media (max-width:900px){
+    .toxic-article .article-sidebar{margin-top:30px}
+    .toxic-article .sidebar-card{max-width:720px;margin-inline:auto}
+  }
+  @media (max-width:768px){
+    .toxic-article .signs-overview{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+    .toxic-article .signs-overview a{font-size:13px;padding:11px}
+    .toxic-article .article-featured-image{margin-inline:-2px}
+  }
+  @media (max-width:480px){
+    .toxic-article .signs-overview{grid-template-columns:1fr}
+    .toxic-article .signs-overview a{align-items:center}
+  }
+</style>
 </head>
 
 <body>
 <header id="siteHeader"></header>
 
 <main class="wrap">
-  <article class="article-shell">
-    <section class="card prose article-main">
+  <article class="article-shell toxic-article" id="top">
+    <div class="article-layout">
+    <main class="article-main">
+      <div class="article-content">
+      <nav class="article-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a><span>›</span><a href="/blog/">Blog</a><span>›</span><span>Toxic Relationship Signs</span>
+      </nav>
+
       <header class="article-hero">
         <p class="article-kicker">Relationship Psychology</p>
         <h1>Toxic Relationship: 15 Signs, Patterns, Red Flags &amp; What to Do</h1>
-        <p class="article-deck">A relationship can be painful without being “toxic,” and the word gets used far too casually. This guide focuses on the patterns that matter: fear, control, erosion of self-trust, repeated boundary violations, and whether conflict ever leads to real repair.</p>
-        <p class="article-meta">Published September 25, 2026 · Educational content, not a diagnosis or substitute for professional care.</p>
+        <p class="article-excerpt">A relationship can be painful without being “toxic,” and the word gets used far too casually. This guide focuses on the patterns that matter: fear, control, erosion of self-trust, repeated boundary violations, and whether conflict ever leads to real repair.</p>
+        <p class="article-meta"><span>Published Sep 25, 2026</span><span>17 min read</span><span>Research-informed guide</span></p>
       </header>
+
+      <figure class="article-featured-image">
+        <img src="/assets/og/emotional-manipulation.webp" alt="Illustration representing emotional pressure, control, and confusion in an unhealthy relationship" width="1200" height="630" loading="eager" fetchpriority="high" />
+        <figcaption>Toxic relationship patterns are defined less by one bad moment than by what repeatedly happens to safety, autonomy, boundaries, and repair.</figcaption>
+      </figure>
 
       <div class="article-box article-box--gold">
         <strong>Quick answer:</strong>
@@ -155,7 +270,7 @@
 
       <p>This article uses the term carefully. The goal is not to diagnose a person or turn normal imperfection into pathology. The goal is to help you identify <strong>observable patterns</strong>: what happens to your safety, dignity, autonomy, boundaries, and self-trust over time.</p>
 
-      <h2>What Is a Toxic Relationship?</h2>
+      <h2 id="what-is-a-toxic-relationship" class="section-anchor">What Is a Toxic Relationship?</h2>
 
       <p><strong>Toxic relationship</strong> is not a formal mental-health diagnosis. It is a broad, everyday term for a relationship pattern that repeatedly harms one or both people emotionally, psychologically, socially, financially, sexually, or physically.</p>
 
@@ -167,67 +282,85 @@
 
       <p>If you want a structured reflection tool after reading, take the <a href="/tests/toxic-relationship/">Toxic Relationship Test</a>. It is educational, not diagnostic, and is designed to help you notice patterns such as control, blame-shifting, emotional safety, and repair.</p>
 
-      <h2>15 Signs of a Toxic Relationship</h2>
+      <h2 id="15-signs" class="section-anchor">15 Signs of a Toxic Relationship</h2>
 
       <p>No checklist can tell you what to do with your relationship. Context matters. But when several of these patterns are frequent, escalating, or tied to fear and control, it is worth taking them seriously.</p>
 
-      <h3>1. You walk on eggshells around normal conversations</h3>
+      <ul class="signs-overview" aria-label="15 toxic relationship signs at a glance">
+        <li><a href="#sign-1"><span class="n">1</span><span>You walk on eggshells around normal conversations</span></a></li>
+        <li><a href="#sign-2"><span class="n">2</span><span>Their “concern” keeps turning into control</span></a></li>
+        <li><a href="#sign-3"><span class="n">3</span><span>Your boundaries are argued with, mocked, or punished</span></a></li>
+        <li><a href="#sign-4"><span class="n">4</span><span>Every problem somehow becomes your fault</span></a></li>
+        <li><a href="#sign-5"><span class="n">5</span><span>You are repeatedly made to doubt your own memory or perception</span></a></li>
+        <li><a href="#sign-6"><span class="n">6</span><span>They isolate you from people who help you think clearly</span></a></li>
+        <li><a href="#sign-7"><span class="n">7</span><span>Monitoring becomes a condition of peace</span></a></li>
+        <li><a href="#sign-8"><span class="n">8</span><span>Criticism attacks your identity instead of addressing behavior</span></a></li>
+        <li><a href="#sign-9"><span class="n">9</span><span>Affection and rejection create a push-pull cycle</span></a></li>
+        <li><a href="#sign-10"><span class="n">10</span><span>Apologies keep happening without behavioral change</span></a></li>
+        <li><a href="#sign-11"><span class="n">11</span><span>You carry most of the emotional labor</span></a></li>
+        <li><a href="#sign-12"><span class="n">12</span><span>Jealousy becomes restriction, accusation, or ownership</span></a></li>
+        <li><a href="#sign-13"><span class="n">13</span><span>Conflict becomes punishment</span></a></li>
+        <li><a href="#sign-14"><span class="n">14</span><span>Money, sex, housing, children, or practical dependence are used as leverage</span></a></li>
+        <li><a href="#sign-15"><span class="n">15</span><span>You are becoming less yourself</span></a></li>
+      </ul>
+
+      <h3 id="sign-1" class="section-anchor">1. You walk on eggshells around normal conversations</h3>
       <p>You are not simply trying to be considerate. You are constantly managing their reaction: when to speak, how much truth is safe, whether asking a reasonable question will trigger rage, punishment, withdrawal, ridicule, or a breakup threat.</p>
       <p>Healthy relationships still require tact. The difference is that honesty is not treated like disobedience.</p>
 
-      <h3>2. Their “concern” keeps turning into control</h3>
+      <h3 id="sign-2" class="section-anchor">2. Their “concern” keeps turning into control</h3>
       <p>Control can arrive dressed as love: “I just worry about you,” “I do not trust your friends,” “Send me your location so I know you are safe,” or “If you respected me, you would not wear that.”</p>
       <p>The key question is not whether the concern sounds caring. It is whether you are still allowed to make your own decisions without retaliation. For a clearer distinction, read <a href="/blog/boundaries-vs-control/">boundaries vs control</a>.</p>
 
-      <h3>3. Your boundaries are argued with, mocked, or punished</h3>
+      <h3 id="sign-3" class="section-anchor">3. Your boundaries are argued with, mocked, or punished</h3>
       <p>A boundary does not guarantee the other person will like your decision. It should, however, be possible to say no without being threatened, shamed, interrogated, sexually pressured, financially punished, or emotionally frozen out.</p>
       <p>If you need language for a reasonable limit, use these <a href="/blog/healthy-boundaries-script/">healthy boundary scripts</a>. Then pay attention to the response. The response is data.</p>
 
-      <h3>4. Every problem somehow becomes your fault</h3>
+      <h3 id="sign-4" class="section-anchor">4. Every problem somehow becomes your fault</h3>
       <p>You raise a broken promise; the conversation becomes your tone. You ask about dishonesty; the problem becomes your “trust issues.” You name something hurtful; you end up apologizing for making them feel accused.</p>
       <p>This is more than ordinary defensiveness when it becomes a system: accountability repeatedly moves away from the behavior and onto the person who noticed it.</p>
 
-      <h3>5. You are repeatedly made to doubt your own memory or perception</h3>
+      <h3 id="sign-5" class="section-anchor">5. You are repeatedly made to doubt your own memory or perception</h3>
       <p>Two people can honestly remember an event differently. That is normal. The warning sign is a repeated pattern in which your perception is dismissed, rewritten, or used as proof that you are irrational, unstable, dramatic, or impossible to trust.</p>
       <p>If that sounds familiar, compare it with the narrower pattern described in <a href="/blog/gaslighting-in-relationships/">gaslighting in relationships</a>.</p>
 
-      <h3>6. They isolate you from people who help you think clearly</h3>
+      <h3 id="sign-6" class="section-anchor">6. They isolate you from people who help you think clearly</h3>
       <p>Isolation can be direct: “Do not see them.” It can also be gradual: constant jealousy, starting fights before you go out, making visits so unpleasant that you stop trying, criticizing everyone close to you, or demanding so much access that friendships quietly disappear.</p>
       <p>Isolation matters because outside relationships are not distractions from intimacy. They are part of a healthy life and can protect perspective.</p>
 
-      <h3>7. Monitoring becomes a condition of peace</h3>
+      <h3 id="sign-7" class="section-anchor">7. Monitoring becomes a condition of peace</h3>
       <p>Location sharing, passwords, checking your phone, reading messages, demanding immediate replies, tracking online activity, or requiring proof of where you are can become controlling when they are expected rather than freely chosen.</p>
       <p>Trust is not created by turning one partner into a surveillance project.</p>
 
-      <h3>8. Criticism attacks your identity instead of addressing behavior</h3>
+      <h3 id="sign-8" class="section-anchor">8. Criticism attacks your identity instead of addressing behavior</h3>
       <p>Healthy conflict can include frustration: “I felt ignored when you did that.” Toxic criticism goes after the person: “You are selfish,” “You are pathetic,” “No one else would put up with you,” or jokes that repeatedly humiliate you.</p>
       <p>When contempt becomes normal, the relationship stops being a place where mistakes can be repaired and becomes a place where one person is made smaller.</p>
 
-      <h3>9. Affection and rejection create a push-pull cycle</h3>
+      <h3 id="sign-9" class="section-anchor">9. Affection and rejection create a push-pull cycle</h3>
       <p>One week feels intensely close. The next is cold, punishing, or distant. Then, just as you begin to detach, warmth returns: affection, promises, sex, apologies, future plans, or a sudden reminder of the relationship you hoped this could be.</p>
       <p>This <strong>push-pull relationship cycle</strong> can make the good moments feel unusually powerful because they arrive after distress. The relief is real. But relief is not the same thing as repair.</p>
 
-      <h3>10. Apologies keep happening without behavioral change</h3>
+      <h3 id="sign-10" class="section-anchor">10. Apologies keep happening without behavioral change</h3>
       <p>An apology can be sincere and still be incomplete. Real repair includes naming the behavior, understanding its impact, changing the conditions that produced it, and showing different behavior over time.</p>
       <p>If every rupture ends with “I am sorry” and then the same rupture returns, you are not looking at a communication problem alone. You are looking at a pattern.</p>
 
-      <h3>11. You carry most of the emotional labor</h3>
+      <h3 id="sign-11" class="section-anchor">11. You carry most of the emotional labor</h3>
       <p>You start every hard conversation. You remember what matters. You translate their moods. You restore connection after conflict. You lower your needs when they are stressed. You explain their behavior to other people. You keep the relationship functioning.</p>
       <p>If this is leaving you chronically depleted, read <a href="/blog/emotionally-exhausted-in-a-relationship/">emotionally exhausted in a relationship</a>. Exhaustion does not prove toxicity, but persistent one-sided repair deserves attention.</p>
 
-      <h3>12. Jealousy becomes restriction, accusation, or ownership</h3>
+      <h3 id="sign-12" class="section-anchor">12. Jealousy becomes restriction, accusation, or ownership</h3>
       <p>Jealousy is a feeling. Control is a behavior. A partner can feel insecure without limiting your friendships, clothing, work, movement, privacy, or social media.</p>
       <p>The red flag is not that they ever feel jealous. It is that your freedom becomes the treatment plan for their jealousy.</p>
 
-      <h3>13. Conflict becomes punishment</h3>
+      <h3 id="sign-13" class="section-anchor">13. Conflict becomes punishment</h3>
       <p>There is a difference between taking time to cool down and using withdrawal to make someone panic, comply, or beg for connection. The same is true for shouting, threats, public humiliation, destructive behavior, or repeated breakup threats used to win an argument.</p>
       <p>Healthy conflict can be messy. It should still leave room for dignity and eventual repair. See <a href="/blog/fair-fighting-rules/">fair fighting rules</a> for what constructive conflict looks like.</p>
 
-      <h3>14. Money, sex, housing, children, or practical dependence are used as leverage</h3>
+      <h3 id="sign-14" class="section-anchor">14. Money, sex, housing, children, or practical dependence are used as leverage</h3>
       <p>Pressure becomes especially serious when a partner uses access to money, transport, housing, work, medical care, sex, children, pets, immigration status, or other necessities to control what you do.</p>
       <p>These behaviors can move beyond “toxic” into coercive control or abuse. WHO and the CDC both recognize controlling and psychologically aggressive behaviors as important forms of intimate partner harm.</p>
 
-      <h3>15. You are becoming less yourself</h3>
+      <h3 id="sign-15" class="section-anchor">15. You are becoming less yourself</h3>
       <p>This sign is harder to measure but often easier to feel. You speak less. You second-guess more. You stop wearing things you like. You see friends less often. You have less energy. Your world gets smaller. You spend more time managing the relationship and less time living your life.</p>
       <p>A relationship does not need to make you confident every day. But it should not repeatedly require self-erasure to keep the peace.</p>
 
@@ -236,7 +369,7 @@
         <p>When you bring a reasonable need, boundary, disagreement, or piece of evidence into the relationship, do you get more clarity and respect afterward—or more fear, confusion, punishment, and control?</p>
       </div>
 
-      <h2>Toxic Relationship vs a Rough Patch: What Is the Difference?</h2>
+      <h2 id="toxic-vs-rough-patch" class="section-anchor">Toxic Relationship vs a Rough Patch: What Is the Difference?</h2>
 
       <p>Every relationship has difficult seasons. Stress, grief, illness, money problems, parenting, burnout, or major life changes can make two otherwise caring people communicate badly for a while.</p>
 
@@ -279,7 +412,7 @@
         </table>
       </div>
 
-      <h2>Toxic vs Abusive Relationship: They Are Not the Same</h2>
+      <h2 id="toxic-vs-abusive" class="section-anchor">Toxic vs Abusive Relationship: They Are Not the Same</h2>
 
       <p>The word <strong>toxic</strong> is broad. Abuse is more specific.</p>
 
@@ -301,7 +434,7 @@
 
       <p>If those patterns are present, the question is no longer simply “How can we communicate better?” Safety and outside support become more important than finding the perfect words.</p>
 
-      <h2>The Toxic Relationship Push-Pull Cycle</h2>
+      <h2 id="push-pull-cycle" class="section-anchor">The Toxic Relationship Push-Pull Cycle</h2>
 
       <p>People often search for a <strong>toxic relationship cycle</strong> because the relationship does not feel bad all the time. That inconsistency is part of what makes it confusing.</p>
 
@@ -320,7 +453,7 @@
 
       <p>If you find yourself attached to the relief after hurt, the <a href="/tests/trauma-bond/">Trauma Bond Test</a> can be used as a reflection tool. It should not be used to diagnose your relationship from a score.</p>
 
-      <h2>Why Toxic Relationships Can Be So Hard to Leave</h2>
+      <h2 id="why-hard-to-leave" class="section-anchor">Why Toxic Relationships Can Be So Hard to Leave</h2>
 
       <p>“If it is so bad, why stay?” is the wrong question.</p>
 
@@ -330,7 +463,7 @@
 
       <p>If that contradiction describes you, read <a href="/blog/why-you-miss-someone-who-was-bad-for-you/">why you miss someone who was bad for you</a>.</p>
 
-      <h2>Am I in a Toxic Relationship? Ask These 8 Questions</h2>
+      <h2 id="am-i-in-a-toxic-relationship" class="section-anchor">Am I in a Toxic Relationship? Ask These 8 Questions</h2>
 
       <p>Instead of asking whether your partner is a “toxic person,” ask what happens repeatedly:</p>
 
@@ -347,7 +480,7 @@
 
       <p>If you want a more structured version of those questions, use the <a href="/tests/toxic-relationship/">free Toxic Relationship Test</a>.</p>
 
-      <h2>What If I Am the Toxic One in the Relationship?</h2>
+      <h2 id="am-i-the-toxic-one" class="section-anchor">What If I Am the Toxic One in the Relationship?</h2>
 
       <p>This is an uncomfortable question, but it can be productive if you keep it behavioral.</p>
 
@@ -367,7 +500,7 @@
 
       <p>If you are unsure whether your behavior crosses into manipulation, the <a href="/tests/emotional-manipulation/">Emotional Manipulation Test</a> can help you reflect on specific patterns rather than adopting a global label.</p>
 
-      <h2>Can a Toxic Relationship Be Fixed?</h2>
+      <h2 id="can-it-be-fixed" class="section-anchor">Can a Toxic Relationship Be Fixed?</h2>
 
       <p>Some unhealthy dynamics can improve. The strongest signs of possible repair are not dramatic apologies or a particularly good week. They are boring, measurable behaviors:</p>
 
@@ -385,7 +518,7 @@
 
       <p>If there is coercive control, intimidation, stalking, sexual coercion, threats, or abuse, do not assume couples communication techniques will solve the underlying power imbalance. The National Domestic Violence Hotline specifically cautions against couples counseling in abusive relationships because information disclosed in therapy can be used against the abused partner and the unequal power structure may remain intact.</p>
 
-      <h2>What to Do If You Think Your Relationship Is Toxic</h2>
+      <h2 id="what-to-do" class="section-anchor">What to Do If You Think Your Relationship Is Toxic</h2>
 
       <h3>1. Describe the behavior before you label the person</h3>
       <p>Write down what is actually happening: “They read my messages without permission,” “They call me names during conflict,” “They threaten to leave whenever I say no,” or “We apologize, but the same behavior returns.”</p>
@@ -408,7 +541,18 @@
       <h3>6. If you feel unsafe, prioritize safety planning over confrontation</h3>
       <p>You do not need to prove that the relationship is toxic before seeking help. If you fear violence, stalking, retaliation, or escalation, consider speaking privately with a local domestic-violence service or trusted professional. In immediate danger, contact local emergency services.</p>
 
-      <h2>What Research Actually Supports</h2>
+      
+      <div class="article-cta">
+        <span>Need a structured reflection?</span>
+        <h2>Turn the pattern into specific questions</h2>
+        <p>The Toxic Relationship Test looks at control, blame-shifting, emotional safety, coercion, boundaries, and repair. Use it as a reflection tool—not a diagnosis.</p>
+        <div class="article-cta__actions">
+          <a class="article-btn article-btn--primary" href="/tests/toxic-relationship/">Take the Toxic Relationship Test</a>
+          <a class="article-btn article-btn--secondary" href="/blog/boundaries-vs-control/">Compare boundaries vs control</a>
+        </div>
+      </div>
+
+      <h2 id="research" class="section-anchor">What Research Actually Supports</h2>
 
       <p>The research literature does not use “toxic relationship” as one precise clinical category. Stronger evidence exists for specific patterns such as psychological aggression, emotional abuse, coercive control, and intimate partner violence.</p>
 
@@ -423,7 +567,7 @@
         <p>Do not obsess over whether your relationship meets a perfect internet definition of “toxic.” Look closely at fear, coercion, control, humiliation, isolation, loss of autonomy, and whether accountability produces sustained change.</p>
       </div>
 
-      <h2>Research Notes &amp; Sources</h2>
+      <h2 id="sources" class="section-anchor">Research Notes &amp; Sources</h2>
       <ul>
         <li><a href="https://www.cdc.gov/intimate-partner-violence/about/" target="_blank" rel="noopener">CDC: About Intimate Partner Violence</a> — definitions of psychological aggression, physical violence, sexual violence, and stalking.</li>
         <li><a href="https://www.who.int/health-topics/violence-against-women/" target="_blank" rel="noopener">World Health Organization: Violence against women</a> — overview of intimate partner violence, psychological harm, and controlling behaviors.</li>
@@ -434,51 +578,51 @@
         <li><a href="https://www.thehotline.org/resources/should-i-go-to-couples-therapy-with-my-abusive-partner/" target="_blank" rel="noopener">National Domestic Violence Hotline: Couples counseling and abusive relationships</a>.</li>
       </ul>
 
-      <h2>FAQ</h2>
+      <h2 id="faq" class="section-anchor">FAQ</h2>
 
-      <div class="faq">
-        <details>
+      <div class="faq-section">
+        <details class="faq-item">
           <summary>What are the biggest signs of a toxic relationship?</summary>
           <p>The strongest warning signs are repeated fear, control, humiliation, boundary violations, blame-shifting, isolation, reality distortion, coercion, and conflict that never produces meaningful repair.</p>
         </details>
 
-        <details>
+        <details class="faq-item">
           <summary>How do I know if my relationship is toxic or just going through a rough patch?</summary>
           <p>A rough patch can include stress, poor communication, and even painful conflict, but both people can usually take responsibility and repair. A toxic pattern repeatedly makes honesty, independence, or reasonable needs costly.</p>
         </details>
 
-        <details>
+        <details class="faq-item">
           <summary>Is a toxic relationship the same as an abusive relationship?</summary>
           <p>No. “Toxic” is a broad non-clinical label. Abuse is more specific and can involve intimidation, coercion, psychological aggression, stalking, sexual violence, physical violence, or a pattern of power and control.</p>
         </details>
 
-        <details>
+        <details class="faq-item">
           <summary>Can a toxic relationship become healthy?</summary>
           <p>Some unhealthy patterns can improve when both people acknowledge the behavior, accept responsibility, respect boundaries, and sustain change. If there is fear, coercion, threats, stalking, or abuse, prioritize individual support and safety.</p>
         </details>
 
-        <details>
+        <details class="faq-item">
           <summary>Why is it so hard to leave a toxic relationship?</summary>
           <p>Attachment is only one factor. People may also face fear, hope, isolation, financial dependence, housing, children, disability, social pressure, shared history, or concern about what will happen if they leave.</p>
         </details>
 
-        <details>
+        <details class="faq-item">
           <summary>What is the toxic relationship push-pull cycle?</summary>
           <p>Push-pull describes repeating closeness, tension or withdrawal, rupture, and renewed affection or relief. If the relief is not followed by sustained change, the cycle can keep repeating even though each reunion feels meaningful.</p>
         </details>
 
-        <details>
+        <details class="faq-item">
           <summary>How can I tell if I am the toxic one?</summary>
           <p>Look at behavior rather than identity. Do you punish boundaries, monitor or isolate your partner, humiliate them, pressure them, deny clear events, threaten consequences, or repeatedly avoid accountability? Those behaviors deserve direct attention and change.</p>
         </details>
 
-        <details>
+        <details class="faq-item">
           <summary>Should I take a toxic relationship quiz?</summary>
           <p>A quiz can help you organize what you are noticing, but it cannot diagnose a relationship or tell you whether to stay or leave. Use it to identify specific behaviors and questions to explore.</p>
         </details>
       </div>
 
-      <h2>The Question That Matters More Than the Label</h2>
+      <h2 id="final-question" class="section-anchor">The Question That Matters More Than the Label</h2>
 
       <p>You may never get a perfect answer to “Is this relationship toxic?”</p>
 
@@ -489,30 +633,55 @@
       <p>Those questions do not require you to diagnose anyone.</p>
 
       <p>They require you to pay attention.</p>
-    </section>
 
-    <aside class="article-sidebar">
-      <div class="article-toc">
-        <h2>In this guide</h2>
-        <a href="#top" style="display:none;">Top</a>
-        <a href="/tests/toxic-relationship/">Take the Toxic Relationship Test</a>
-        <a href="/blog/gaslighting-in-relationships/">Gaslighting signs</a>
-        <a href="/blog/boundaries-vs-control/">Boundaries vs control</a>
-        <a href="/tests/emotional-manipulation/">Emotional manipulation test</a>
-        <a href="/blog/emotional-safety-in-relationships/">Emotional safety</a>
+      <section class="related-articles" aria-labelledby="related-title">
+        <h2 id="related-title">Related guides</h2>
+        <div class="related-grid">
+          <article class="related-card">
+            <a href="/blog/gaslighting-in-relationships/">
+              <h3>Gaslighting in Relationships</h3>
+              <p>How reality-denial differs from normal disagreement—and what repeated gaslighting can do to self-trust.</p>
+            </a>
+          </article>
+          <article class="related-card">
+            <a href="/blog/boundaries-vs-control/">
+              <h3>Boundaries vs Control</h3>
+              <p>A practical way to separate self-protection from attempts to control another person.</p>
+            </a>
+          </article>
+          <article class="related-card">
+            <a href="/blog/why-you-miss-someone-who-was-bad-for-you/">
+              <h3>Why You Miss Someone Who Hurt You</h3>
+              <p>Why attachment can continue after a painful relationship—and why missing someone is not proof you should return.</p>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      </div>
+    </main>
+
+    <aside class="article-sidebar" aria-label="Article navigation">
+      <div class="sidebar-card sidebar-card--sticky">
+        <p class="toc-label">On this page</p>
+        <h3 class="toc-title">In this guide</h3>
+        <ul>
+          <li><a href="#what-is-a-toxic-relationship">What “toxic relationship” means</a></li>
+          <li><a href="#15-signs">15 signs to look for</a></li>
+          <li><a href="#toxic-vs-rough-patch">Toxic vs rough patch</a></li>
+          <li><a href="#toxic-vs-abusive">Toxic vs abusive</a></li>
+          <li><a href="#push-pull-cycle">The push-pull cycle</a></li>
+          <li><a href="#am-i-in-a-toxic-relationship">8 questions to ask yourself</a></li>
+          <li><a href="#can-it-be-fixed">Can it be fixed?</a></li>
+          <li><a href="#what-to-do">What to do next</a></li>
+          <li><a href="#research">What research supports</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+        <a class="toc-test" href="/tests/toxic-relationship/">Take the Toxic Relationship Test</a>
       </div>
     </aside>
+  </div>
   </article>
-
-  <section class="card">
-    <h2>Recommended next steps</h2>
-    <div class="row">
-      <a class="btn secondary" href="/tests/toxic-relationship/">Toxic Relationship Test</a>
-      <a class="btn secondary" href="/tests/emotional-manipulation/">Emotional Manipulation Test</a>
-      <a class="btn secondary" href="/tests/trauma-bond/">Trauma Bond Test</a>
-      <a class="btn secondary" href="/blog/healthy-boundaries-script/">Boundary Scripts</a>
-    </div>
-  </section>
 </main>
 
 <footer id="siteFooter"></footer>
