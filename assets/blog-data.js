@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "toxic-relationship-signs",
+    title: "Toxic Relationship: 15 Signs, Patterns, Red Flags & What to Do",
+    excerpt: "A research-informed guide to toxic relationship signs, unhealthy patterns, the push-pull cycle, the difference between toxicity and abuse, and what to do next.",
+    date: "2026-09-25",
+    readingMinutes: 17,
+    tags: ["Relationships", "Psychology", "Boundaries", "Emotional Safety"],
+    category: "Relationships",
+    cover: "/assets/og/emotional-manipulation.webp",
+    featured: true
+  },
+  {
     slug: "what-is-attachment-style",
     title: "What Is Attachment Style? (A Simple Guide)",
     excerpt: "Attachment styles shape how we connect, react, and bond in relationships. Here’s the simplest explanation and why it matters.",
