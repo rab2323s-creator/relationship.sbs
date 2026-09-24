@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "relationship-anxiety-or-gut-feeling",
+    title: "Relationship Anxiety or Gut Feeling? 9 Ways to Tell the Difference",
+    excerpt: "A research-informed guide to separating relationship anxiety, attachment triggers, bodily signals, and real relationship red flags using evidence instead of guesswork.",
+    date: "2026-09-25",
+    readingMinutes: 16,
+    tags: ["Anxiety", "Relationships", "Attachment", "Psychology"],
+    category: "Psychology",
+    cover: "/assets/og/anxious-attachment-signs.webp",
+    featured: true
+  },
+  {
     slug: "toxic-relationship-signs",
     title: "Toxic Relationship: 15 Signs, Patterns, Red Flags & What to Do",
     excerpt: "A research-informed guide to toxic relationship signs, unhealthy patterns, the push-pull cycle, the difference between toxicity and abuse, and what to do next.",
