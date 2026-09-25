@@ -1,6 +1,15 @@
 /* tests-index.js — lightweight home index */
 window.TEST_INDEX = [
   {
+    "id": "emotional_compatibility",
+    "slug": "emotional-compatibility",
+    "title": "Emotional Compatibility Test: Do Your Emotional Needs Fit?",
+    "blurb": "15 scenarios exploring responsiveness, reassurance vs space, communication, repair, vulnerability pace, and support under stress.",
+    "time": "3–4 min",
+    "guide": "/blog/emotional-safety-in-relationships/",
+    "intent": "quiz"
+  },
+  {
     "id": "attachment",
     "slug": "attachment-style",
     "title": "Attachment Style Test: Anxious, Avoidant, Secure or Fearful?",
