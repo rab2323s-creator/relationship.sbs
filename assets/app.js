@@ -341,6 +341,24 @@
         friction.push("Pursue–withdraw: one wants it now, one floods and retreats. Use timed time-outs + return time.");
       }
     }
+    if (test.id === "emotional_compatibility"){
+      const pair = new Set([p1.core, p2.core]);
+      if (pair.has("reassurance_space_mismatch")){
+        friction.push("Closeness–space timing is likely the biggest friction point. Agree on a return time whenever someone needs space.");
+      }
+      if (pair.has("emotionally_out_of_sync")){
+        friction.push("Care may be present but support is not landing consistently. Use explicit support choices: comfort, advice, action, reassurance, or space.");
+      }
+      if (pair.has("chronic_emotional_mismatch")){
+        friction.push("One profile points to repeated unmet needs. Compare concrete behaviors and whether mutual adaptation is actually happening over time.");
+      }
+      if (pair.has("different_but_adaptable") && !pair.has("chronic_emotional_mismatch")){
+        friction.push("Different emotional defaults can work when both people translate needs and make reciprocal adjustments.");
+      }
+      if (p1.core === "emotionally_aligned" && p2.core === "emotionally_aligned"){
+        friction.push("Both profiles suggest a strong fit. Protect the pattern with clear check-ins, autonomy, and reliable repair.");
+      }
+    }
 
     el.innerHTML = `
       <h3 style="margin:0 0 8px;">Compare</h3>
