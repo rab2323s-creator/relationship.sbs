@@ -184,6 +184,16 @@
       else out = {label:"Low", note:"You’re flexible—stress may decide what you need most."};
       return downgradeConfidence(out, incons);
     }
+    if (test.id === "fear_intimacy"){
+      const fear = totals.fear || 0;
+      const dims = [totals.disclosure||0, totals.dependence||0, totals.distance||0, totals.autonomy||0, totals.physical||0].sort((a,b)=>b-a);
+      const gap = (dims[0]||0) - (dims[1]||0);
+      let out = null;
+      if (fear <= 8 || fear >= 46 || gap >= 5) out = {label:"High", note:"Your answers form a relatively clear pattern."};
+      else if (fear <= 18 || fear >= 35 || gap >= 3) out = {label:"Medium", note:"A pattern is visible, with some context-dependent variation."};
+      else out = {label:"Low", note:"Your answers are mixed across situations, so context matters more than one label."};
+      return downgradeConfidence(out, incons);
+    }
     return downgradeConfidence({label:"Medium", note:""}, incons);
   }
 
@@ -232,6 +242,32 @@
     }else if (test.id === "conflict"){
       const x = conflictCore(totals); core = x.core; top2 = x.top2;
       extras = {top2};
+    }else if (test.id === "fear_intimacy"){
+      const fear = totals.fear || 0;
+      if (fear <= 10) core = "open_to_closeness";
+      else if (fear <= 21) core = "guarded_but_connected";
+      else if (fear <= 32) core = "closeness_distance_conflict";
+      else if (fear <= 43) core = "protective_distance";
+      else core = "strong_intimacy_fear";
+
+      const dims = {
+        disclosure: totals.disclosure || 0,
+        dependence: totals.dependence || 0,
+        distance: totals.distance || 0,
+        autonomy: totals.autonomy || 0,
+        physical: totals.physical || 0
+      };
+      const rankedDims = Object.entries(dims)
+        .sort((a,b)=> b[1]-a[1] || a[0].localeCompare(b[0]))
+        .map(([k])=>k);
+      top2 = rankedDims.slice(0,2);
+      extras = {
+        fearScore: fear,
+        maxFear: 54,
+        fearPercent: Math.round((fear / 54) * 100),
+        dominantDimensions: top2,
+        dimensions: dims
+      };
     }else{
       // fallback to old behavior
       const entries = Object.entries(totals);
@@ -417,6 +453,27 @@
               <div class="mini"><h4 style="margin:0 0 6px;">Under stress you crave</h4><p class="muted" style="margin:0;">${nice(ex.stressTop)}</p></div>
               <div class="mini"><h4 style="margin:0 0 6px;">Pattern clarity</h4><p class="muted" style="margin:0;">${profile.conf.label} — ${profile.conf.note}</p></div>
             </div>
+          </div>`;
+      }
+      if (test.id === "fear_intimacy"){
+        const ex = profile.extras || {};
+        const niceDim = (k)=>({
+          disclosure:"Emotional disclosure",
+          dependence:"Receiving support & dependence",
+          distance:"Distance after closeness",
+          autonomy:"Autonomy / feeling crowded",
+          physical:"Physically affectionate closeness"
+        }[k]||k);
+        return `
+          <div style="margin:14px 0 0;">
+            <div style="font-weight:900;margin:0 0 8px;">Your intimacy pattern</div>
+            <div class="grid2">
+              <div class="mini"><h4 style="margin:0 0 6px;">Overall signal</h4><p class="muted" style="margin:0;">${ex.fearScore ?? 0} / ${ex.maxFear ?? 54} reflection points — not a clinical score.</p></div>
+              <div class="mini"><h4 style="margin:0 0 6px;">Strongest trigger</h4><p class="muted" style="margin:0;">${niceDim((ex.dominantDimensions||[])[0])}</p></div>
+              <div class="mini"><h4 style="margin:0 0 6px;">Second trigger</h4><p class="muted" style="margin:0;">${niceDim((ex.dominantDimensions||[])[1])}</p></div>
+              <div class="mini"><h4 style="margin:0 0 6px;">Pattern clarity</h4><p class="muted" style="margin:0;">${profile.conf.label} — ${profile.conf.note}</p></div>
+            </div>
+            <p class="small muted" style="margin:10px 0 0;">This scoring system is original to relationship.sbs. It is not the 35-item Fear-of-Intimacy Scale and should not be interpreted as a diagnosis.</p>
           </div>`;
       }
       return `
