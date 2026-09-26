@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "trauma-bonding",
+    title: "Trauma Bonding: 12 Signs, Why It’s So Hard to Leave & How to Break the Cycle",
+    excerpt: "A research-informed guide to trauma bonding, intermittent abuse, coercive control, why leaving can feel impossible, and safer ways to break the cycle.",
+    date: "2026-09-26",
+    readingMinutes: 20,
+    tags: ["Trauma Bonding", "Relationships", "Psychology", "Safety"],
+    category: "Psychology",
+    cover: "/assets/og/emotional-manipulation.webp",
+    featured: true
+  },
+  {
     slug: "fear-of-intimacy",
     title: "Fear of Intimacy: 12 Signs, Causes & How to Overcome It",
     excerpt: "A research-informed guide to fear of emotional and physical intimacy, attachment avoidance, self-disclosure, the Fear-of-Intimacy Scale, and practical ways to build safer closeness.",
