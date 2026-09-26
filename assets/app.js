@@ -311,8 +311,8 @@
       top2 = rankedDims.slice(0,2);
       extras = {
         detachmentScore: detachment,
-        maxDetachment: 48,
-        detachmentPercent: Math.round((detachment / 48) * 100),
+        maxDetachment: 47,
+        detachmentPercent: Math.round((detachment / 47) * 100),
         globalNumbnessScore: global,
         maxGlobalNumbness: 9,
         reachScore: reach,
