@@ -38,7 +38,8 @@
     "what-kind-of-lover-are-you-test": ["Love personality","Romantic style","Affection","Closeness","Relationship patterns"],
     "emotional-manipulation": ["Emotional manipulation","Gaslighting-style confusion","Guilt-tripping","Boundary pressure","Control"],
     "relationship-anxiety": ["Relationship anxiety","Reassurance-seeking","Overthinking","Hypervigilance","Relationship intuition"],
-    "fear-of-intimacy": ["Fear of intimacy","Emotional intimacy","Vulnerability","Attachment avoidance","Relationship closeness","Self-disclosure"]
+    "fear-of-intimacy": ["Fear of intimacy","Emotional intimacy","Vulnerability","Attachment avoidance","Relationship closeness","Self-disclosure"],
+    "emotional-detachment": ["Emotional detachment","Romantic disengagement","Emotional disconnection","Relationship withdrawal","Emotional numbness"]
   };
 
   const SCHEMA_TEST_LABELS = {
@@ -56,7 +57,8 @@
     "what-kind-of-lover-are-you-test": "Love Personality Test",
     "emotional-manipulation": "Emotional Manipulation Test",
     "relationship-anxiety": "Relationship Anxiety Test",
-    "fear-of-intimacy": "Fear of Intimacy Test"
+    "fear-of-intimacy": "Fear of Intimacy Test",
+    "emotional-detachment": "Emotional Detachment Test"
   };
 
   function schemaCanonical(){
