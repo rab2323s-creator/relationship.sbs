@@ -194,6 +194,16 @@
       else out = {label:"Low", note:"Your answers are mixed across situations, so context matters more than one label."};
       return downgradeConfidence(out, incons);
     }
+    if (test.id === "emotional_detachment"){
+      const d = totals.detachment || 0;
+      const g = totals.global || 0;
+      const reach = totals.reach || 0;
+      let out = null;
+      if (g >= 7 || d <= 8 || d >= 40 || reach >= 26) out = {label:"High", note:"Your answers form a relatively consistent pattern."};
+      else if (g >= 5 || d <= 18 || d >= 30) out = {label:"Medium", note:"A pattern is visible, with some context-dependent variation."};
+      else out = {label:"Low", note:"Your answers are mixed, so stress and context may be especially important."};
+      return downgradeConfidence(out, incons);
+    }
     return downgradeConfidence({label:"Medium", note:""}, incons);
   }
 
@@ -265,6 +275,48 @@
         fearScore: fear,
         maxFear: 54,
         fearPercent: Math.round((fear / 54) * 100),
+        dominantDimensions: top2,
+        dimensions: dims
+      };
+    }else if (test.id === "emotional_detachment"){
+      const detachment = totals.detachment || 0;
+      const global = totals.global || 0;
+      const reach = totals.reach || 0;
+      const relationshipSpecific = totals.relationship_specific || 0;
+
+      if (global >= 7 && detachment >= 10){
+        core = "broader_emotional_numbness_signal";
+      }else if (detachment <= 10 && reach >= 22){
+        core = "still_emotionally_engaged";
+      }else if (detachment <= 22 && reach >= 14){
+        core = "strained_but_reachable";
+      }else if (detachment <= 34 && reach >= 6){
+        core = "protective_withdrawal";
+      }else{
+        core = "relationship_specific_detachment";
+      }
+
+      const dims = {
+        presence: totals.presence || 0,
+        disclosure: totals.disclosure || 0,
+        withdrawal: totals.withdrawal || 0,
+        curiosity: totals.curiosity || 0,
+        relief: totals.relief || 0,
+        global_numbness: totals.global_numbness || 0
+      };
+      const rankedDims = Object.entries(dims)
+        .filter(([k])=>k !== "global_numbness")
+        .sort((a,b)=> b[1]-a[1] || a[0].localeCompare(b[0]))
+        .map(([k])=>k);
+      top2 = rankedDims.slice(0,2);
+      extras = {
+        detachmentScore: detachment,
+        maxDetachment: 47,
+        detachmentPercent: Math.round((detachment / 47) * 100),
+        globalNumbnessScore: global,
+        maxGlobalNumbness: 9,
+        reachScore: reach,
+        relationshipSpecific,
         dominantDimensions: top2,
         dimensions: dims
       };
@@ -474,6 +526,35 @@
               <div class="mini"><h4 style="margin:0 0 6px;">Pattern clarity</h4><p class="muted" style="margin:0;">${profile.conf.label} — ${profile.conf.note}</p></div>
             </div>
             <p class="small muted" style="margin:10px 0 0;">This scoring system is original to relationship.sbs. It is not the 35-item Fear-of-Intimacy Scale and should not be interpreted as a diagnosis.</p>
+          </div>`;
+      }
+      if (test.id === "emotional_detachment"){
+        const ex = profile.extras || {};
+        if (ex.detachmentScore == null){
+          return `
+            <div style="margin:14px 0 0;">
+              <div style="font-weight:900;margin:0 0 8px;">Personalized pattern</div>
+              <p class="muted" style="margin:0;">Take the full 18-question test to see your relationship-detachment signal, strongest dimension, broader-numbness check, and pattern clarity.</p>
+            </div>`;
+        }
+        const niceDim = (k)=>({
+          presence:"Emotional presence",
+          disclosure:"Sharing your inner world",
+          withdrawal:"Withdrawal / futility",
+          curiosity:"Curiosity & emotional interest",
+          relief:"Relief through distance"
+        }[k]||k);
+        const globalLabel = (ex.globalNumbnessScore||0) >= 7 ? "High" : (ex.globalNumbnessScore||0) >= 4 ? "Moderate" : "Low";
+        return `
+          <div style="margin:14px 0 0;">
+            <div style="font-weight:900;margin:0 0 8px;">Your detachment pattern</div>
+            <div class="grid2">
+              <div class="mini"><h4 style="margin:0 0 6px;">Relationship detachment</h4><p class="muted" style="margin:0;">${ex.detachmentScore ?? 0} / ${ex.maxDetachment ?? 48} reflection points — not a clinical score.</p></div>
+              <div class="mini"><h4 style="margin:0 0 6px;">Strongest relationship signal</h4><p class="muted" style="margin:0;">${niceDim((ex.dominantDimensions||[])[0])}</p></div>
+              <div class="mini"><h4 style="margin:0 0 6px;">Broader numbness signal</h4><p class="muted" style="margin:0;">${globalLabel} — based on the final three context questions.</p></div>
+              <div class="mini"><h4 style="margin:0 0 6px;">Pattern clarity</h4><p class="muted" style="margin:0;">${profile.conf.label} — ${profile.conf.note}</p></div>
+            </div>
+            <p class="small muted" style="margin:10px 0 0;">This scoring system is original to relationship.sbs. It is not a validated clinical instrument and does not diagnose depression, attachment style, or relationship viability.</p>
           </div>`;
       }
       return `
