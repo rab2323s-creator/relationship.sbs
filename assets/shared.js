@@ -37,7 +37,8 @@
     "emotional-availability": ["Emotional availability","Emotional presence","Relationship repair","Consistency","Mutual closeness"],
     "what-kind-of-lover-are-you-test": ["Love personality","Romantic style","Affection","Closeness","Relationship patterns"],
     "emotional-manipulation": ["Emotional manipulation","Gaslighting-style confusion","Guilt-tripping","Boundary pressure","Control"],
-    "relationship-anxiety": ["Relationship anxiety","Reassurance-seeking","Overthinking","Hypervigilance","Relationship intuition"]
+    "relationship-anxiety": ["Relationship anxiety","Reassurance-seeking","Overthinking","Hypervigilance","Relationship intuition"],
+    "fear-of-intimacy": ["Fear of intimacy","Emotional intimacy","Vulnerability","Attachment avoidance","Relationship closeness","Self-disclosure"]
   };
 
   const SCHEMA_TEST_LABELS = {
@@ -54,7 +55,8 @@
     "emotional-availability": "Emotional Availability Test",
     "what-kind-of-lover-are-you-test": "Love Personality Test",
     "emotional-manipulation": "Emotional Manipulation Test",
-    "relationship-anxiety": "Relationship Anxiety Test"
+    "relationship-anxiety": "Relationship Anxiety Test",
+    "fear-of-intimacy": "Fear of Intimacy Test"
   };
 
   function schemaCanonical(){
