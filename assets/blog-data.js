@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "fear-of-intimacy",
+    title: "Fear of Intimacy: 12 Signs, Causes & How to Overcome It",
+    excerpt: "A research-informed guide to fear of emotional and physical intimacy, attachment avoidance, self-disclosure, the Fear-of-Intimacy Scale, and practical ways to build safer closeness.",
+    date: "2026-09-26",
+    readingMinutes: 18,
+    tags: ["Intimacy", "Attachment", "Relationships", "Psychology"],
+    category: "Psychology",
+    cover: "/assets/og/intimacy-changes-long-term-relationships.webp",
+    featured: true
+  },
+  {
     slug: "relationship-anxiety-or-gut-feeling",
     title: "Relationship Anxiety or Gut Feeling? 9 Ways to Tell the Difference",
     excerpt: "A research-informed guide to separating relationship anxiety, attachment triggers, bodily signals, and real relationship red flags using evidence instead of guesswork.",
