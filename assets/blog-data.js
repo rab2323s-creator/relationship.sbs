@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "emotional-detachment-in-relationships",
+    title: "Emotional Detachment in Relationships: 11 Signs You’ve Emotionally Checked Out, Why It Happens & What Helps",
+    excerpt: "A research-informed guide to emotional detachment, romantic disengagement, withdrawal, emotional numbness, why connection fades, and what may help.",
+    date: "2026-09-26",
+    readingMinutes: 19,
+    tags: ["Emotional Detachment", "Relationships", "Psychology", "Intimacy"],
+    category: "Psychology",
+    cover: "/assets/og/emotionally-exhausted-in-a-relationship-quiet-burnout.webp",
+    featured: true
+  },
+  {
     slug: "trauma-bonding",
     title: "Trauma Bonding: 12 Signs, Why It’s So Hard to Leave & How to Break the Cycle",
     excerpt: "A research-informed guide to trauma bonding, intermittent abuse, coercive control, why leaving can feel impossible, and safer ways to break the cycle.",
