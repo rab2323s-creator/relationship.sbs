@@ -530,6 +530,13 @@
       }
       if (test.id === "emotional_detachment"){
         const ex = profile.extras || {};
+        if (ex.detachmentScore == null){
+          return `
+            <div style="margin:14px 0 0;">
+              <div style="font-weight:900;margin:0 0 8px;">Personalized pattern</div>
+              <p class="muted" style="margin:0;">Take the full 18-question test to see your relationship-detachment signal, strongest dimension, broader-numbness check, and pattern clarity.</p>
+            </div>`;
+        }
         const niceDim = (k)=>({
           presence:"Emotional presence",
           disclosure:"Sharing your inner world",
