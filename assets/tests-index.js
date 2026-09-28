@@ -1,6 +1,15 @@
 /* tests-index.js — lightweight home index */
 window.TEST_INDEX = [
   {
+    "id": "does_he_like_me",
+    "slug": "does-he-like-me",
+    "title": "Does He Like Me? 15-Question Quiz: Is He Interested or Just Being Nice?",
+    "blurb": "15 weighted scenarios exploring initiation, attention, consistency, effort, progression, and whether his interest is specific or simply friendly.",
+    "time": "3–4 min",
+    "guide": "/blog/situationship-signs/",
+    "intent": "quiz"
+  },
+  {
     "id": "relationship_trauma",
     "slug": "relationship-trauma",
     "title": "Relationship Trauma Test: Is Your Past Relationship Still Affecting You?",
