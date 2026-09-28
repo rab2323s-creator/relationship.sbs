@@ -1,6 +1,15 @@
 /* tests-index.js — lightweight home index */
 window.TEST_INDEX = [
   {
+    "id": "relationship_trauma",
+    "slug": "relationship-trauma",
+    "title": "Relationship Trauma Test: Is Your Past Relationship Still Affecting You?",
+    "blurb": "15 scenarios exploring hypervigilance, self-trust, conflict and boundaries, intimacy, and past-to-present carryover.",
+    "time": "3–4 min",
+    "guide": "/blog/relationship-trauma/",
+    "intent": "quiz"
+  },
+  {
     "id": "emotional_compatibility",
     "slug": "emotional-compatibility",
     "title": "Emotional Compatibility Test: Do Your Emotional Needs Fit?",
