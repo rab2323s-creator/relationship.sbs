@@ -884,12 +884,25 @@
             paint();
           }else{
             const profile = buildProfile(test, state.answers);
-            if (test.id === "relationship_trauma" || test.id === "does_he_like_me"){
-              window.location.href = shareUrlFor(test, profile);
-              return;
-            }
+
+            // Always render the personalized result immediately on the quiz page.
+            // Dedicated result URLs remain available from the result card for sharing/SEO,
+            // but the user's answer should never depend on a redirect succeeding.
             renderResult(test, profile);
-            // smooth scroll to result
+
+            const questionCard = $("#questionCard");
+            if (questionCard) questionCard.classList.add("hidden");
+
+            try{
+              sessionStorage.setItem("lastQuizProfile:" + test.slug, JSON.stringify({
+                core: profile.core,
+                extras: profile.extras,
+                totals: profile.totals,
+                mods: (profile.mods||[]).map(m=>m.id),
+                savedAt: Date.now()
+              }));
+            }catch(e){}
+
             $("#resultCard")?.scrollIntoView({behavior:"smooth", block:"start"});
           }
         };
@@ -940,7 +953,7 @@
         </p>
       </section>
 
-      <section class="card">
+      <section class="card" id="questionCard">
         <div class="row" style="justify-content:space-between; align-items:center;">
           <div class="muted" id="progress" aria-live="polite">1 / ${test.questions.length}</div>
           <button class="btn small secondary" id="backBtn">Back</button>
