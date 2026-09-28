@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "relationship-trauma",
+    title: "Relationship Trauma: 12 Signs Your Past Relationship Still Affects You",
+    excerpt: "A research-informed guide to relationship trauma, post-traumatic stress symptoms, trust after toxic or abusive relationships, effects on new love, and healing.",
+    date: "2026-09-28",
+    readingMinutes: 21,
+    tags: ["Relationship Trauma", "Trauma", "Relationships", "Psychology"],
+    category: "Psychology",
+    cover: "/assets/og/emotional-manipulation.webp",
+    featured: true
+  },
+  {
     slug: "emotional-permanence-in-relationships",
     title: "Emotional Permanence in Relationships: Why Love Feels Gone When They're Away",
     excerpt: "A research-informed guide to emotional permanence, constant reassurance, anxious attachment, object constancy, why love can feel absent during distance, and how to build steadier security.",
