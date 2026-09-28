@@ -194,6 +194,16 @@
       else out = {label:"Low", note:"Your answers are mixed across situations, so context matters more than one label."};
       return downgradeConfidence(out, incons);
     }
+    if (test.id === "does_he_like_me"){
+      const signal = totals.interest_signal || 0;
+      const dims = [totals.initiation||0, totals.attention_responsiveness||0, totals.consistency_followthrough||0, totals.investment_progression||0, totals.clarity_differentiation||0].sort((a,b)=>b-a);
+      const gap = (dims[0]||0) - (dims[1]||0);
+      let out = null;
+      if (signal <= 22 || signal >= 84 || gap >= 9) out = {label:"High", note:"Your answers form a relatively clear behavioral pattern."};
+      else if (signal <= 42 || signal >= 66 || gap >= 5) out = {label:"Medium", note:"A pattern is visible, with some mixed evidence."};
+      else out = {label:"Low", note:"The evidence is mixed enough that one label should be held lightly."};
+      return downgradeConfidence(out, incons);
+    }
     if (test.id === "relationship_trauma"){
       const impact = totals.impact || 0;
       const dims = [totals.hypervigilance||0, totals.self_trust||0, totals.conflict_boundary||0, totals.intimacy||0, totals.carryover||0].sort((a,b)=>b-a);
@@ -287,6 +297,42 @@
         fearPercent: Math.round((fear / 54) * 100),
         dominantDimensions: top2,
         dimensions: dims
+      };
+    }else if (test.id === "does_he_like_me"){
+      const signal = Math.round(totals.interest_signal || 0);
+      if (signal <= 24) core = "low_observable_investment";
+      else if (signal <= 44) core = "friendly_or_passive";
+      else if (signal <= 64) core = "mixed_signals";
+      else if (signal <= 82) core = "consistent_interest_cautious";
+      else core = "strong_observable_interest";
+
+      const dims = {
+        initiation: totals.initiation || 0,
+        attention_responsiveness: totals.attention_responsiveness || 0,
+        consistency_followthrough: totals.consistency_followthrough || 0,
+        investment_progression: totals.investment_progression || 0,
+        clarity_differentiation: totals.clarity_differentiation || 0
+      };
+      const maxDims = {
+        initiation: 20,
+        attention_responsiveness: 16,
+        consistency_followthrough: 24,
+        investment_progression: 25,
+        clarity_differentiation: 15
+      };
+      const normalizedDims = Object.fromEntries(
+        Object.entries(dims).map(([k,v])=>[k, Math.round((v / maxDims[k]) * 100)])
+      );
+      const rankedDims = Object.entries(normalizedDims)
+        .sort((a,b)=> b[1]-a[1] || a[0].localeCompare(b[0]))
+        .map(([k])=>k);
+      top2 = rankedDims.slice(0,2);
+      extras = {
+        interestScore: signal,
+        maxInterest: 100,
+        dominantDimensions: top2,
+        dimensions: dims,
+        normalizedDimensions: normalizedDims
       };
     }else if (test.id === "relationship_trauma"){
       const impact = totals.impact || 0;
@@ -564,6 +610,35 @@
             <p class="small muted" style="margin:10px 0 0;">This scoring system is original to relationship.sbs. It is not the 35-item Fear-of-Intimacy Scale and should not be interpreted as a diagnosis.</p>
           </div>`;
       }
+      if (test.id === "does_he_like_me"){
+        const ex = profile.extras || {};
+        if (ex.interestScore == null){
+          return `
+            <div style="margin:14px 0 0;">
+              <div style="font-weight:900;margin:0 0 8px;">Personalized interest pattern</div>
+              <p class="muted" style="margin:0;">Take the full 15-question test to see your weighted interest signal, strongest two dimensions, and pattern clarity.</p>
+            </div>`;
+        }
+        const niceDim = (k)=>({
+          initiation:"Initiation",
+          attention_responsiveness:"Attention & responsiveness",
+          consistency_followthrough:"Consistency & follow-through",
+          investment_progression:"Investment & progression",
+          clarity_differentiation:"Clarity vs general friendliness"
+        }[k]||k);
+        const pct = ex.normalizedDimensions || {};
+        return `
+          <div style="margin:14px 0 0;">
+            <div style="font-weight:900;margin:0 0 8px;">Your observable-interest pattern</div>
+            <div class="grid2">
+              <div class="mini"><h4 style="margin:0 0 6px;">Weighted signal</h4><p class="muted" style="margin:0;"><strong>${ex.interestScore ?? 0} / 100</strong> — a behavior-based reflection score, not mind-reading.</p></div>
+              <div class="mini"><h4 style="margin:0 0 6px;">Strongest signal</h4><p class="muted" style="margin:0;">${niceDim((ex.dominantDimensions||[])[0])} (${pct[(ex.dominantDimensions||[])[0]] ?? 0}%)</p></div>
+              <div class="mini"><h4 style="margin:0 0 6px;">Second signal</h4><p class="muted" style="margin:0;">${niceDim((ex.dominantDimensions||[])[1])} (${pct[(ex.dominantDimensions||[])[1]] ?? 0}%)</p></div>
+              <div class="mini"><h4 style="margin:0 0 6px;">Pattern clarity</h4><p class="muted" style="margin:0;">${profile.conf.label} — ${profile.conf.note}</p></div>
+            </div>
+            <p class="small muted" style="margin:10px 0 0;">The score weights repeated initiative, follow-through, effort, and progression more heavily than low-cost cues such as eye contact, emojis, or one fast reply.</p>
+          </div>`;
+      }
       if (test.id === "relationship_trauma"){
         const ex = profile.extras || {};
         if (ex.impactScore == null){
@@ -809,7 +884,7 @@
             paint();
           }else{
             const profile = buildProfile(test, state.answers);
-            if (test.id === "relationship_trauma"){
+            if (test.id === "relationship_trauma" || test.id === "does_he_like_me"){
               window.location.href = shareUrlFor(test, profile);
               return;
             }
