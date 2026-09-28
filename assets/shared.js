@@ -327,6 +327,7 @@
           </a>
           <nav class="nav" aria-label="Primary">
             <a href="/tests/">Tests</a>
+            <a href="/tools/love-calculator/">Love Calculator</a>
             <a href="/tools/text-decoder/">Text Decoder</a>
             <a href="/blog/">Blog</a>
             ${headerExtras}
@@ -352,6 +353,7 @@
           <div>© ${year} relationship.sbs</div>
           <div class="row">
             <a href="/tests/">Tests</a>
+            <a href="/tools/love-calculator/">Love Calculator</a>
             <a href="/tools/text-decoder/">Tools</a>
             <a href="/blog/">Blog</a>
           </div>
