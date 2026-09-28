@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Love Calculator by Name: Check Your Love Compatibility %</title>
+  <meta name="description" content="Use our free Love Calculator by Name. Enter two names to calculate a love compatibility percentage using Chaldean name numbers, planets, and a fixed compatibility matrix." />
+  <meta name="keywords" content="love calculator, love calculator by name, love compatibility calculator, love percentage calculator, name compatibility calculator, love test by name, crush calculator" />
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+  <link rel="canonical" href="https://relationship.sbs/tools/love-calculator/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="relationship.sbs" />
+  <meta property="og:title" content="Love Calculator by Name — Check Your Love Compatibility %" />
+  <meta property="og:description" content="Enter two names. Get a repeatable love score with each name’s compound number, root number, planet, and compatibility result." />
+  <meta property="og:url" content="https://relationship.sbs/tools/love-calculator/" />
+  <meta property="og:image" content="https://relationship.sbs/assets/og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Love Calculator by Name — Check Your Love Compatibility %" />
+  <meta name="twitter:description" content="Two names → two numbers → two planets → one love compatibility score." />
+  <meta name="twitter:image" content="https://relationship.sbs/assets/og.jpg" />
+
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <link rel="stylesheet" href="/assets/love-calculator.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"WebPage",
+        "@id":"https://relationship.sbs/tools/love-calculator/#webpage",
+        "url":"https://relationship.sbs/tools/love-calculator/",
+        "name":"Love Calculator by Name",
+        "description":"A free love compatibility calculator that converts two English names into Chaldean compound and root numbers, maps each root number to a planet, and returns a fixed compatibility score.",
+        "isPartOf":{"@id":"https://relationship.sbs/#website"},
+        "publisher":{"@id":"https://relationship.sbs/#org"},
+        "mainEntity":{"@id":"https://relationship.sbs/tools/love-calculator/#app"},
+        "breadcrumb":{"@id":"https://relationship.sbs/tools/love-calculator/#breadcrumbs"},
+        "inLanguage":"en",
+        "isAccessibleForFree":true,
+        "dateModified":"2026-09-28",
+        "keywords":["love calculator","love calculator by name","love compatibility calculator","love percentage calculator","name compatibility calculator","love test by name"]
+      },
+      {
+        "@type":"WebApplication",
+        "@id":"https://relationship.sbs/tools/love-calculator/#app",
+        "name":"Love Calculator by Name",
+        "url":"https://relationship.sbs/tools/love-calculator/",
+        "applicationCategory":"LifestyleApplication",
+        "applicationSubCategory":"Love Compatibility Calculator",
+        "operatingSystem":"Any",
+        "browserRequirements":"Requires JavaScript and a modern web browser",
+        "isAccessibleForFree":true,
+        "offers":{
+          "@type":"Offer",
+          "price":"0",
+          "priceCurrency":"USD",
+          "availability":"https://schema.org/InStock"
+        },
+        "featureList":[
+          "Love compatibility percentage by name",
+          "Chaldean name number calculation",
+          "Compound number and root number",
+          "Planet mapping for numbers 1 through 9",
+          "Fixed symmetric compatibility matrix",
+          "Shareable pair link"
+        ],
+        "description":"Enter two English names to calculate compound numbers, root numbers, ruling planets, and a repeatable love compatibility percentage."
+      },
+      {
+        "@type":"BreadcrumbList",
+        "@id":"https://relationship.sbs/tools/love-calculator/#breadcrumbs",
+        "itemListElement":[
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://relationship.sbs/"},
+          {"@type":"ListItem","position":2,"name":"Tools","item":"https://relationship.sbs/tools/"},
+          {"@type":"ListItem","position":3,"name":"Love Calculator","item":"https://relationship.sbs/tools/love-calculator/"}
+        ]
+      },
+      {
+        "@type":"FAQPage",
+        "@id":"https://relationship.sbs/tools/love-calculator/#faq",
+        "mainEntity":[
+          {
+            "@type":"Question",
+            "name":"How does the Love Calculator by Name work?",
+            "acceptedAnswer":{"@type":"Answer","text":"Each A–Z letter is converted using the Chaldean number table. The name’s letter values are added to create a compound number, reduced to a root number from 1 to 9, mapped to a planet, and matched against the second name through a fixed symmetric compatibility matrix."}
+          },
+          {
+            "@type":"Question",
+            "name":"Will the same two names always get the same score?",
+            "acceptedAnswer":{"@type":"Answer","text":"Yes. The calculation is fixed, so the same cleaned names always produce the same compound numbers, root numbers, planets, and compatibility score."}
+          },
+          {
+            "@type":"Question",
+            "name":"Does the order of the two names change the result?",
+            "acceptedAnswer":{"@type":"Answer","text":"No. The compatibility matrix is symmetric, so John + Lina produces the same compatibility score as Lina + John."}
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="love-page">
+  <header id="siteHeader"></header>
+
+  <main class="wrap love-wrap">
+    <section class="love-hero">
+      <div class="love-eyebrow">♥ Free Name Compatibility</div>
+      <h1>Love Calculator by Name</h1>
+      <p class="lead">Enter two names to reveal their <strong>love compatibility percentage</strong>, Chaldean name numbers, ruling planets, and complete name-to-name match.</p>
+    </section>
+
+    <section class="love-calculator-card" aria-labelledby="calculatorTitle">
+      <div class="love-calculator-inner">
+        <h2 id="calculatorTitle" style="text-align:center;margin:0 0 18px;font-size:24px;">Check Your Love Compatibility</h2>
+        <form id="loveForm" novalidate>
+          <div class="love-form-grid">
+            <div class="love-field">
+              <label for="nameA">Your name</label>
+              <input class="love-input" id="nameA" name="nameA" type="text" inputmode="text" autocomplete="off" maxlength="60" placeholder="e.g. JOHN" aria-describedby="errorA" />
+              <p class="love-error" id="errorA" aria-live="polite"></p>
+            </div>
+
+            <div class="love-heart-between" aria-hidden="true">♥</div>
+
+            <div class="love-field">
+              <label for="nameB">Their name</label>
+              <input class="love-input" id="nameB" name="nameB" type="text" inputmode="text" autocomplete="off" maxlength="60" placeholder="e.g. LINA" aria-describedby="errorB" />
+              <p class="love-error" id="errorB" aria-live="polite"></p>
+            </div>
+          </div>
+
+          <div class="love-actions">
+            <button class="btn love-primary" type="submit">Calculate Love ♥</button>
+            <button class="btn love-secondary" id="swapNames" type="button">Swap names</button>
+            <button class="btn love-secondary" id="resetLove" type="button">Reset</button>
+          </div>
+        </form>
+        <p class="love-hint">English letters A–Z · Same names always return the same result · <button id="samplePair" type="button">Try JOHN + LINA</button></p>
+      </div>
+    </section>
+
+    <div id="loveLive" class="small" aria-live="polite" aria-atomic="true" style="position:absolute;left:-9999px;"></div>
+
+    <section id="loveResult" class="love-result hidden" aria-labelledby="scoreVerdict">
+      <div class="love-result-top">
+        <div class="score-ring" id="scoreRing" aria-hidden="true">
+          <div class="score-ring-inner">
+            <div class="score-number" id="scoreNumber">0%</div>
+            <div class="score-caption">Compatibility</div>
+          </div>
+        </div>
+
+        <div class="result-copy">
+          <p class="small" style="margin:0 0 4px;text-transform:uppercase;letter-spacing:.08em;">Your love match</p>
+          <h2 id="scoreVerdict">Compatibility</h2>
+          <div class="planet-pair" id="planetPair"></div>
+          <div id="planetAnalysis"></div>
+        </div>
+      </div>
+
+      <div class="name-cards" id="nameCards"></div>
+
+      <div class="share-panel">
+        <input id="shareLink" aria-label="Shareable result link" readonly />
+        <button class="btn love-secondary" id="copyLoveLink" type="button">Copy link</button>
+        <button class="btn love-primary" id="shareLove" type="button">Share result</button>
+      </div>
+    </section>
+
+    <div class="love-content">
+      <section class="card prose">
+        <h2>How the Love Calculator by Name Works</h2>
+        <p>This calculator follows one fixed path from each name to the final score. Every English letter is assigned a Chaldean number. The letters are added to create the <strong>compound number</strong>, then reduced to a <strong>root number from 1 to 9</strong>. Each root number has a ruling planet. The two root numbers are then matched in the same compatibility matrix every time.</p>
+        <p>The complete path is:</p>
+        <p><strong>Name → Letter Values → Compound Number → Root Number → Planet → Compatibility Score</strong></p>
+        <p>Because the rules and matrix are fixed, repeating the same pair gives the same result. Reversing the names also keeps the same compatibility percentage.</p>
+      </section>
+
+      <section class="card prose">
+        <h2>Chaldean Letter Values Used in This Calculator</h2>
+        <div class="letter-map-grid" aria-label="Chaldean letter values">
+          <div class="letter-map-item"><strong>1</strong><span>A I J Q Y</span></div>
+          <div class="letter-map-item"><strong>2</strong><span>B K R</span></div>
+          <div class="letter-map-item"><strong>3</strong><span>C G L S</span></div>
+          <div class="letter-map-item"><strong>4</strong><span>D M T</span></div>
+          <div class="letter-map-item"><strong>5</strong><span>E H N X</span></div>
+          <div class="letter-map-item"><strong>6</strong><span>U V W</span></div>
+          <div class="letter-map-item"><strong>7</strong><span>O Z</span></div>
+          <div class="letter-map-item"><strong>8</strong><span>F P</span></div>
+          <div class="letter-map-item"><strong>9</strong><span>Root result only</span></div>
+        </div>
+        <p>Before calculation, the tool converts names to uppercase and keeps only letters A–Z. Spaces, hyphens, apostrophes, numbers, and other symbols are removed from the number calculation.</p>
+      </section>
+
+      <section class="card prose">
+        <h2>Name Number to Planet</h2>
+        <div style="overflow-x:auto;">
+          <table class="love-table">
+            <thead><tr><th>Root Number</th><th>Planet</th><th>Theme</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td>☀ Sun</td><td>Leadership, vitality, individuality</td></tr>
+              <tr><td>2</td><td>☾ Moon</td><td>Sensitivity, intuition, receptivity</td></tr>
+              <tr><td>3</td><td>♃ Jupiter</td><td>Growth, wisdom, expansion</td></tr>
+              <tr><td>4</td><td>☊ Rahu</td><td>Ambition, intensity, unconventional drive</td></tr>
+              <tr><td>5</td><td>☿ Mercury</td><td>Communication, adaptability, wit</td></tr>
+              <tr><td>6</td><td>♀ Venus</td><td>Affection, harmony, attraction</td></tr>
+              <tr><td>7</td><td>☋ Ketu</td><td>Introspection, independence, inner focus</td></tr>
+              <tr><td>8</td><td>♄ Saturn</td><td>Patience, structure, endurance</td></tr>
+              <tr><td>9</td><td>♂ Mars</td><td>Passion, courage, action</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="card prose">
+        <h2>How the Love Percentage Is Calculated</h2>
+        <p>For a name with total letter value <strong>S</strong>, the root number is calculated as:</p>
+        <p class="callout"><strong>Root = 1 + ((S − 1) mod 9)</strong></p>
+        <p>Example: <strong>JOHN</strong> = J(1) + O(7) + H(5) + N(5) = <strong>18</strong>. Its compound number is 18, its root number is <strong>9</strong>, and number 9 maps to <strong>Mars</strong>.</p>
+        <p><strong>LINA</strong> = L(3) + I(1) + N(5) + A(1) = <strong>10</strong>. Its root number is <strong>1</strong>, which maps to the <strong>Sun</strong>.</p>
+        <p>In the compatibility matrix, root number 9 with root number 1 scores <strong>100</strong>. So JOHN + LINA returns <strong>100% — Strong Compatibility</strong>.</p>
+      </section>
+
+      <section class="card prose">
+        <h2>What Your Love Compatibility Score Means</h2>
+        <div class="score-band-grid">
+          <div class="score-band"><strong>80–100</strong><span>Strong Compatibility</span></div>
+          <div class="score-band"><strong>60–79</strong><span>Good Compatibility</span></div>
+          <div class="score-band"><strong>40–59</strong><span>Moderate Compatibility</span></div>
+          <div class="score-band"><strong>20–39</strong><span>Weak Compatibility</span></div>
+          <div class="score-band"><strong>0–19</strong><span>Tense Compatibility</span></div>
+        </div>
+      </section>
+
+      <section class="card prose">
+        <h2>Love Calculator by Name vs. Random Love Percentage</h2>
+        <p>A random percentage can change every time you click. This calculator does not do that. The output comes from each name’s fixed letter values, compound number, root number, ruling planet, and the same 1–9 compatibility matrix. That makes the result repeatable and easy to inspect.</p>
+        <p>You can open the letter calculation under each name in your result to see exactly how its compound and root numbers were reached.</p>
+      </section>
+
+      <section class="card prose love-faq">
+        <h2>Love Calculator FAQ</h2>
+        <details>
+          <summary>Will the same two names always get the same love percentage?</summary>
+          <p>Yes. The same cleaned names always create the same compound numbers, root numbers, planets, and compatibility score.</p>
+        </details>
+        <details>
+          <summary>Does John + Lina give the same result as Lina + John?</summary>
+          <p>Yes. The compatibility matrix is symmetric, so reversing the names does not change the final percentage.</p>
+        </details>
+        <details>
+          <summary>Can I enter a full name?</summary>
+          <p>Yes. You can enter a first name, nickname, or full name. Spaces and symbols are removed before the A–Z letter values are calculated.</p>
+        </details>
+        <details>
+          <summary>Why does the Chaldean table have no letters assigned directly to 9?</summary>
+          <p>The letter table assigns direct letter values from 1 through 8. A root number of 9 can still appear after the full name total is reduced.</p>
+        </details>
+        <details>
+          <summary>What is the compound number?</summary>
+          <p>The compound number is the full sum of all letter values before reducing the total to a root number from 1 to 9.</p>
+        </details>
+        <details>
+          <summary>Which planets are used?</summary>
+          <p>The tool maps 1 to Sun, 2 to Moon, 3 to Jupiter, 4 to Rahu, 5 to Mercury, 6 to Venus, 7 to Ketu, 8 to Saturn, and 9 to Mars.</p>
+        </details>
+      </section>
+
+      <section class="card prose">
+        <h2>More Relationship Tools</h2>
+        <div class="row" style="flex-wrap:wrap;">
+          <a class="btn secondary" href="/tools/text-decoder/">Text Decoder</a>
+          <a class="btn secondary" href="/tests/does-he-like-me/">Does He Like Me? Quiz</a>
+          <a class="btn secondary" href="/tests/emotional-compatibility/">Emotional Compatibility Test</a>
+          <a class="btn secondary" href="/tests/love-language/">Love Language Test</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer id="siteFooter"></footer>
+  <script defer src="/assets/shared.js"></script>
+  <script defer src="/assets/love-calculator.js"></script>
+</body>
+</html>
