@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "emotional-permanence-in-relationships",
+    title: "Emotional Permanence in Relationships: Why Love Feels Gone When They're Away",
+    excerpt: "A research-informed guide to emotional permanence, constant reassurance, anxious attachment, object constancy, why love can feel absent during distance, and how to build steadier security.",
+    date: "2026-09-28",
+    readingMinutes: 17,
+    tags: ["Emotional Permanence", "Attachment", "Relationships", "Psychology"],
+    category: "Psychology",
+    cover: "/assets/og/emotional-safety-in-relationships-quiet-distance.webp",
+    featured: true
+  },
+  {
     slug: "emotional-detachment-in-relationships",
     title: "Emotional Detachment in Relationships: 11 Signs You’ve Emotionally Checked Out, Why It Happens & What Helps",
     excerpt: "A research-informed guide to emotional detachment, romantic disengagement, withdrawal, emotional numbness, why connection fades, and what may help.",
