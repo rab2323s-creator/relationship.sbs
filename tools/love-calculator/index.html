@@ -26,78 +26,147 @@
   <link rel="stylesheet" href="/assets/styles.css" />
   <link rel="stylesheet" href="/assets/love-calculator.css" />
 
-  <script type="application/ld+json">
+  <script type="application/ld+json" data-site-entity-schema="1">
   {
     "@context":"https://schema.org",
     "@graph":[
+      {
+        "@type":"WebSite",
+        "@id":"https://relationship.sbs/#website",
+        "url":"https://relationship.sbs/",
+        "name":"relationship.sbs",
+        "publisher":{"@id":"https://relationship.sbs/#org"},
+        "inLanguage":"en"
+      },
+      {
+        "@type":"Organization",
+        "@id":"https://relationship.sbs/#org",
+        "name":"relationship.sbs",
+        "url":"https://relationship.sbs/",
+        "logo":{"@id":"https://relationship.sbs/#logo"}
+      },
+      {
+        "@type":"ImageObject",
+        "@id":"https://relationship.sbs/#logo",
+        "url":"https://relationship.sbs/assets/logo.svg",
+        "contentUrl":"https://relationship.sbs/assets/logo.svg",
+        "width":128,
+        "height":128
+      },
       {
         "@type":"WebPage",
         "@id":"https://relationship.sbs/tools/love-calculator/#webpage",
         "url":"https://relationship.sbs/tools/love-calculator/",
         "name":"Love Calculator by Name",
-        "description":"A free love compatibility calculator that converts two English names into Chaldean compound and root numbers, maps each root number to a planet, and returns a fixed compatibility score.",
+        "headline":"Love Calculator by Name",
+        "description":"Enter two names to calculate a love compatibility percentage, then explore love compatibility, chemistry, romantic fit, and relationship compatibility.",
         "isPartOf":{"@id":"https://relationship.sbs/#website"},
         "publisher":{"@id":"https://relationship.sbs/#org"},
         "mainEntity":{"@id":"https://relationship.sbs/tools/love-calculator/#app"},
         "breadcrumb":{"@id":"https://relationship.sbs/tools/love-calculator/#breadcrumbs"},
         "inLanguage":"en",
         "isAccessibleForFree":true,
+        "datePublished":"2026-09-28",
         "dateModified":"2026-09-28",
-        "keywords":["love calculator","love calculator by name","love compatibility calculator","love percentage calculator","name compatibility calculator","love test by name"]
+        "about":[
+          {"@type":"Thing","name":"Love compatibility"},
+          {"@type":"Thing","name":"Relationship compatibility"},
+          {"@type":"Thing","name":"Romantic compatibility"},
+          {"@type":"Thing","name":"Name compatibility"},
+          {"@type":"Thing","name":"Love match"},
+          {"@type":"Thing","name":"Chaldean numerology"}
+        ],
+        "keywords":[
+          "love calculator",
+          "love calculator by name",
+          "love compatibility calculator",
+          "love percentage calculator",
+          "name compatibility calculator",
+          "relationship compatibility",
+          "romantic compatibility",
+          "love match",
+          "are we compatible"
+        ]
       },
       {
         "@type":"WebApplication",
         "@id":"https://relationship.sbs/tools/love-calculator/#app",
-        "name":"Love Calculator by Name",
         "url":"https://relationship.sbs/tools/love-calculator/",
+        "name":"Love Calculator by Name",
+        "alternateName":[
+          "Love Compatibility Calculator",
+          "Love Percentage Calculator",
+          "Name Compatibility Calculator"
+        ],
+        "description":"A free browser-based love compatibility calculator that matches two English names using Chaldean name numbers, ruling planets, and a fixed symmetric compatibility matrix.",
+        "mainEntityOfPage":{"@id":"https://relationship.sbs/tools/love-calculator/#webpage"},
+        "isPartOf":{"@id":"https://relationship.sbs/#website"},
+        "creator":{"@id":"https://relationship.sbs/#org"},
+        "publisher":{"@id":"https://relationship.sbs/#org"},
         "applicationCategory":"LifestyleApplication",
         "applicationSubCategory":"Love Compatibility Calculator",
         "operatingSystem":"Any",
-        "browserRequirements":"Requires JavaScript and a modern web browser",
+        "browserRequirements":"A modern web browser with JavaScript enabled",
+        "softwareRequirements":"JavaScript-enabled web browser",
         "isAccessibleForFree":true,
+        "inLanguage":"en",
         "offers":{
           "@type":"Offer",
           "price":"0",
           "priceCurrency":"USD",
-          "availability":"https://schema.org/InStock"
+          "availability":"https://schema.org/InStock",
+          "url":"https://relationship.sbs/tools/love-calculator/"
         },
-        "featureList":[
-          "Love compatibility percentage by name",
-          "Chaldean name number calculation",
-          "Compound number and root number",
-          "Planet mapping for numbers 1 through 9",
-          "Fixed symmetric compatibility matrix",
-          "Shareable pair link"
+        "audience":{
+          "@type":"PeopleAudience",
+          "audienceType":"People checking romantic compatibility between two names"
+        },
+        "about":[
+          {"@type":"Thing","name":"Love compatibility"},
+          {"@type":"Thing","name":"Name compatibility"},
+          {"@type":"Thing","name":"Relationship compatibility"},
+          {"@type":"Thing","name":"Chaldean numerology"}
         ],
-        "description":"Enter two English names to calculate compound numbers, root numbers, ruling planets, and a repeatable love compatibility percentage."
+        "featureList":[
+          "Calculate a love compatibility percentage from two English names",
+          "Show a compound number and root number for each name",
+          "Map each root number to its ruling planet",
+          "Use a fixed symmetric planet compatibility matrix",
+          "Return the same score when the same two names are entered",
+          "Keep the same score when the order of the two names is reversed",
+          "Create a shareable result link"
+        ],
+        "keywords":[
+          "love calculator",
+          "love calculator by name",
+          "love compatibility calculator",
+          "love percentage calculator",
+          "name compatibility calculator"
+        ],
+        "potentialAction":{
+          "@type":"UseAction",
+          "name":"Calculate love compatibility by name",
+          "target":{
+            "@type":"EntryPoint",
+            "urlTemplate":"https://relationship.sbs/tools/love-calculator/"
+          }
+        }
       },
       {
         "@type":"BreadcrumbList",
         "@id":"https://relationship.sbs/tools/love-calculator/#breadcrumbs",
         "itemListElement":[
-          {"@type":"ListItem","position":1,"name":"Home","item":"https://relationship.sbs/"},
-          {"@type":"ListItem","position":2,"name":"Tools","item":"https://relationship.sbs/tools/"},
-          {"@type":"ListItem","position":3,"name":"Love Calculator","item":"https://relationship.sbs/tools/love-calculator/"}
-        ]
-      },
-      {
-        "@type":"FAQPage",
-        "@id":"https://relationship.sbs/tools/love-calculator/#faq",
-        "mainEntity":[
           {
-            "@type":"Question",
-            "name":"How does the Love Calculator by Name work?",
-            "acceptedAnswer":{"@type":"Answer","text":"Each A–Z letter is converted using the Chaldean number table. The name’s letter values are added to create a compound number, reduced to a root number from 1 to 9, mapped to a planet, and matched against the second name through a fixed symmetric compatibility matrix."}
+            "@type":"ListItem",
+            "position":1,
+            "name":"Home",
+            "item":"https://relationship.sbs/"
           },
           {
-            "@type":"Question",
-            "name":"Will the same two names always get the same score?",
-            "acceptedAnswer":{"@type":"Answer","text":"Yes. The calculation is fixed, so the same cleaned names always produce the same compound numbers, root numbers, planets, and compatibility score."}
-          },
-          {
-            "@type":"Question",
-            "name":"Does the order of the two names change the result?",
-            "acceptedAnswer":{"@type":"Answer","text":"No. The compatibility matrix is symmetric, so John + Lina produces the same compatibility score as Lina + John."}
+            "@type":"ListItem",
+            "position":2,
+            "name":"Love Calculator by Name",
+            "item":"https://relationship.sbs/tools/love-calculator/"
           }
         ]
       }
