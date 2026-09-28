@@ -809,6 +809,10 @@
             paint();
           }else{
             const profile = buildProfile(test, state.answers);
+            if (test.id === "relationship_trauma"){
+              window.location.href = shareUrlFor(test, profile);
+              return;
+            }
             renderResult(test, profile);
             // smooth scroll to result
             $("#resultCard")?.scrollIntoView({behavior:"smooth", block:"start"});
