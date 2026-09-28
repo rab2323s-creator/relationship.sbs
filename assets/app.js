@@ -194,6 +194,16 @@
       else out = {label:"Low", note:"Your answers are mixed across situations, so context matters more than one label."};
       return downgradeConfidence(out, incons);
     }
+    if (test.id === "relationship_trauma"){
+      const impact = totals.impact || 0;
+      const dims = [totals.hypervigilance||0, totals.self_trust||0, totals.conflict_boundary||0, totals.intimacy||0, totals.carryover||0].sort((a,b)=>b-a);
+      const gap = (dims[0]||0) - (dims[1]||0);
+      let out = null;
+      if (impact <= 8 || impact >= 34 || gap >= 4) out = {label:"High", note:"Your answers form a relatively clear pattern."};
+      else if (impact <= 17 || impact >= 25 || gap >= 2) out = {label:"Medium", note:"A pattern is visible, with some context-dependent variation."};
+      else out = {label:"Low", note:"Your answers are mixed across situations, so context matters more than one label."};
+      return downgradeConfidence(out, incons);
+    }
     if (test.id === "emotional_detachment"){
       const d = totals.detachment || 0;
       const g = totals.global || 0;
@@ -275,6 +285,32 @@
         fearScore: fear,
         maxFear: 54,
         fearPercent: Math.round((fear / 54) * 100),
+        dominantDimensions: top2,
+        dimensions: dims
+      };
+    }else if (test.id === "relationship_trauma"){
+      const impact = totals.impact || 0;
+      if (impact <= 7) core = "steady_recovery";
+      else if (impact <= 15) core = "lingering_triggers";
+      else if (impact <= 24) core = "protective_patterns_active";
+      else if (impact <= 33) core = "past_shaping_present";
+      else core = "high_trauma_related_impact";
+
+      const dims = {
+        hypervigilance: totals.hypervigilance || 0,
+        self_trust: totals.self_trust || 0,
+        conflict_boundary: totals.conflict_boundary || 0,
+        intimacy: totals.intimacy || 0,
+        carryover: totals.carryover || 0
+      };
+      const rankedDims = Object.entries(dims)
+        .sort((a,b)=> b[1]-a[1] || a[0].localeCompare(b[0]))
+        .map(([k])=>k);
+      top2 = rankedDims.slice(0,2);
+      extras = {
+        impactScore: impact,
+        maxImpact: 45,
+        impactPercent: Math.round((impact / 45) * 100),
         dominantDimensions: top2,
         dimensions: dims
       };
@@ -526,6 +562,34 @@
               <div class="mini"><h4 style="margin:0 0 6px;">Pattern clarity</h4><p class="muted" style="margin:0;">${profile.conf.label} — ${profile.conf.note}</p></div>
             </div>
             <p class="small muted" style="margin:10px 0 0;">This scoring system is original to relationship.sbs. It is not the 35-item Fear-of-Intimacy Scale and should not be interpreted as a diagnosis.</p>
+          </div>`;
+      }
+      if (test.id === "relationship_trauma"){
+        const ex = profile.extras || {};
+        if (ex.impactScore == null){
+          return `
+            <div style="margin:14px 0 0;">
+              <div style="font-weight:900;margin:0 0 8px;">Personalized impact pattern</div>
+              <p class="muted" style="margin:0;">Take the full 15-question test to see your relationship-impact signal, strongest two dimensions, and pattern clarity.</p>
+            </div>`;
+        }
+        const niceDim = (k)=>({
+          hypervigilance:"Hypervigilance & threat sensitivity",
+          self_trust:"Self-trust & reality confidence",
+          conflict_boundary:"Conflict & boundary fear",
+          intimacy:"Intimacy & protective distance",
+          carryover:"Past-to-present carryover"
+        }[k]||k);
+        return `
+          <div style="margin:14px 0 0;">
+            <div style="font-weight:900;margin:0 0 8px;">Your relationship-trauma pattern</div>
+            <div class="grid2">
+              <div class="mini"><h4 style="margin:0 0 6px;">Overall impact signal</h4><p class="muted" style="margin:0;">${ex.impactScore ?? 0} / ${ex.maxImpact ?? 45} reflection points — not a clinical score.</p></div>
+              <div class="mini"><h4 style="margin:0 0 6px;">Strongest dimension</h4><p class="muted" style="margin:0;">${niceDim((ex.dominantDimensions||[])[0])}</p></div>
+              <div class="mini"><h4 style="margin:0 0 6px;">Second dimension</h4><p class="muted" style="margin:0;">${niceDim((ex.dominantDimensions||[])[1])}</p></div>
+              <div class="mini"><h4 style="margin:0 0 6px;">Pattern clarity</h4><p class="muted" style="margin:0;">${profile.conf.label} — ${profile.conf.note}</p></div>
+            </div>
+            <p class="small muted" style="margin:10px 0 0;">This scoring system is original to relationship.sbs. It is not the PCL-5, PC-PTSD-5, or another validated PTSD instrument and does not diagnose trauma-related disorders.</p>
           </div>`;
       }
       if (test.id === "emotional_detachment"){
