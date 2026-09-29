@@ -16,6 +16,7 @@
     blurb: "Answer from the repeated pattern of the past 2–3 months, not the best day or the worst fight.",
     time: "4–5 min",
     intent: "quiz",
+    compactShell: true,
     keywords: [
       "should we break up quiz",
       "should i break up quiz",
