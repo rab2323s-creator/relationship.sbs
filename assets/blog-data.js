@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "left-on-read-meaning",
+    title: "Left on Read: Meaning, 12 Reasons & What to Text Next",
+    excerpt: "What being left on read actually means, 12 possible reasons, how long to wait, when to double text, and what to send next without chasing.",
+    date: "2026-09-29",
+    readingMinutes: 19,
+    tags: ["Texting", "Dating", "Communication", "Relationships"],
+    category: "Dating",
+    cover: "/assets/og/relationship-tests-tools-guides.webp",
+    featured: true
+  },
+  {
     slug: "dry-texting-meaning",
     title: "Dry Texting: Meaning, 20 Examples & How to Respond",
     excerpt: "What dry texting means, 20 examples, why people send dry replies, how to tell low effort from low interest, and what to reply without chasing.",
