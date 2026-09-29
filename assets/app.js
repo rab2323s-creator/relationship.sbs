@@ -224,6 +224,22 @@
       else out = {label:"Low", note:"Your answers are mixed, so stress and context may be especially important."};
       return downgradeConfidence(out, incons);
     }
+    if (test.id === "breakup_clarity"){
+      const vals = [
+        totals.respect_safety||0,
+        totals.repair_trust||0,
+        totals.reciprocity||0,
+        totals.emotional_cost||0,
+        totals.future_fit||0
+      ].sort((a,b)=>b-a);
+      const spread = (vals[0]||0) - (vals[4]||0);
+      const total = vals.reduce((s,v)=>s+v,0);
+      let out = null;
+      if (total <= 14 || total >= 58 || spread >= 9) out = {label:"High", note:"Your answers form a relatively distinct relationship pattern."};
+      else if (total <= 25 || total >= 44 || spread >= 5) out = {label:"Medium", note:"A meaningful pattern is visible, with some mixed areas."};
+      else out = {label:"Medium", note:"Your answers are mixed across dimensions, so the strongest two areas matter more than one overall label."};
+      return downgradeConfidence(out, incons);
+    }
     return downgradeConfidence({label:"Medium", note:""}, incons);
   }
 
@@ -401,6 +417,58 @@
         relationshipSpecific,
         dominantDimensions: top2,
         dimensions: dims
+      };
+    }else if (test.id === "breakup_clarity"){
+      const raw = {
+        respect_safety: totals.respect_safety || 0,
+        repair_trust: totals.repair_trust || 0,
+        reciprocity: totals.reciprocity || 0,
+        emotional_cost: totals.emotional_cost || 0,
+        future_fit: totals.future_fit || 0
+      };
+      const max = 16;
+      const normalized = Object.fromEntries(
+        Object.entries(raw).map(([k,v]) => [k, Math.round((v / max) * 100)])
+      );
+      // Safety and repair are weighted slightly more heavily because repeated disrespect,
+      // failed repair, and coercive dynamics should not be diluted by strengths elsewhere.
+      const weights = {
+        respect_safety: 0.25,
+        repair_trust: 0.22,
+        reciprocity: 0.20,
+        emotional_cost: 0.18,
+        future_fit: 0.15
+      };
+      const strainScore = Math.round(
+        Object.entries(normalized).reduce((sum,[k,v]) => sum + v * weights[k], 0)
+      );
+
+      if (strainScore <= 20) core = "stable-but-strained";
+      else if (strainScore <= 40) core = "repair-needs-proof";
+      else if (strainScore <= 60) core = "ambivalent-and-depleted";
+      else if (strainScore <= 78) core = "persistent-mismatch";
+      else core = "high-relationship-strain";
+
+      const rankedDims = Object.entries(normalized)
+        .sort((a,b)=> b[1]-a[1] || a[0].localeCompare(b[0]))
+        .map(([k])=>k);
+      top2 = rankedDims.slice(0,2);
+
+      const safetySignalCount = (tags.safety_signal||0) + (tags.safety_high||0) + (tags.immediate_safety||0);
+      const safetyLevel = (tags.immediate_safety||0) > 0 ? "urgent"
+        : (tags.safety_high||0) > 0 ? "high"
+        : (tags.safety_signal||0) > 0 ? "elevated"
+        : "none";
+
+      extras = {
+        strainScore,
+        maxScore: 100,
+        dominantDimensions: top2,
+        dimensions: raw,
+        normalizedDimensions: normalized,
+        weights,
+        safetyLevel,
+        safetySignalCount
       };
     }else{
       // fallback to old behavior
@@ -696,6 +764,47 @@
             <p class="small muted" style="margin:10px 0 0;">This scoring system is original to relationship.sbs. It is not a validated clinical instrument and does not diagnose depression, attachment style, or relationship viability.</p>
           </div>`;
       }
+      if (test.id === "breakup_clarity"){
+        const ex = profile.extras || {};
+        if (ex.strainScore == null){
+          return `
+            <div style="margin:14px 0 0;">
+              <div style="font-weight:900;margin:0 0 8px;">Personalized decision pattern</div>
+              <p class="muted" style="margin:0;">Take the full 20-question quiz to see your Relationship Strain Score, strongest two dimensions, and any independent safety flag.</p>
+            </div>`;
+        }
+        const niceDim = (k)=>({
+          respect_safety:"Respect & safety",
+          repair_trust:"Repair & trust",
+          reciprocity:"Reciprocity & effort",
+          emotional_cost:"Emotional cost",
+          future_fit:"Future fit"
+        }[k]||k);
+        const pct = ex.normalizedDimensions || {};
+        const safetyHtml = ex.safetyLevel && ex.safetyLevel !== "none" ? `
+          <div class="callout" style="margin:14px 0 0;">
+            <strong>Safety signal detected.</strong>
+            ${ex.safetyLevel === "urgent"
+              ? " One or more answers involved serious fear, force, stalking, sexual coercion, threats, or concern about leaving safely. The overall score does not override that. Prioritize private, real-world safety support rather than a joint confrontation."
+              : " One or more answers involved fear, control, intimidation, or boundary pressure. Treat that separately from ordinary compatibility or communication problems."}
+          </div>` : "";
+        const bars = (ex.dominantDimensions||[]).slice(0,2).map(k=>`
+          <div class="mini">
+            <h4 style="margin:0 0 6px;">${niceDim(k)}</h4>
+            <p class="muted" style="margin:0;"><strong>${pct[k] ?? 0}%</strong> concern signal in this quiz</p>
+          </div>`).join("");
+        return `
+          <div style="margin:14px 0 0;">
+            <div style="font-weight:900;margin:0 0 8px;">Your relationship-decision pattern</div>
+            <div class="grid2">
+              <div class="mini"><h4 style="margin:0 0 6px;">Relationship Strain Score</h4><p class="muted" style="margin:0;"><strong>${ex.strainScore ?? 0} / 100</strong> — a weighted reflection score, not a breakup probability.</p></div>
+              <div class="mini"><h4 style="margin:0 0 6px;">Pattern clarity</h4><p class="muted" style="margin:0;">${profile.conf.label} — ${profile.conf.note}</p></div>
+              ${bars}
+            </div>
+            ${safetyHtml}
+            <p class="small muted" style="margin:10px 0 0;">Scoring weights respect/safety and repair slightly more than the other dimensions. This questionnaire is original to relationship.sbs and has not been psychometrically validated as a clinical instrument or outcome predictor.</p>
+          </div>`;
+      }
       return `
         <div style="margin:14px 0 0;">
           <div style="font-weight:900;margin:0 0 8px;">Pattern clarity</div>
@@ -935,6 +1044,7 @@
     const hasPageH1 = Array.from(document.querySelectorAll("h1")).some(el => !root.contains(el));
     const headingTag = hasPageH1 ? "h2" : "h1";
     root.innerHTML = `
+      ${test.compactShell ? "" : `
       <section class="card" id="quizCard">
         <div class="kicker">
           <div class="crumbs">
@@ -951,7 +1061,7 @@
         <p class="small" style="margin:0;">
           Tip: finish, then share your result link or share card to compare with a friend/partner.
         </p>
-      </section>
+      </section>`}
 
       <section class="card" id="questionCard">
         <div class="row" style="justify-content:space-between; align-items:center;">
