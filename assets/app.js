@@ -516,10 +516,10 @@
       const dominant = rankedDims[0] || null;
 
       if (patternScore <= 20) core = "balanced-care-and-boundaries";
-      else if (patternScore <= 40) core = "overgiving-under-stress";
       else if (patternScore >= 78) core = "high-codependency-like-pattern";
       else if (dominant === "rescuing_control" && normalized.rescuing_control >= 63) core = "rescuer-overfunctioning-pattern";
-      else if (dominant === "approval_selfworth" && normalized.approval_selfworth >= 50) core = "approval-linked-caretaking";
+      else if (dominant === "approval_selfworth" && normalized.approval_selfworth >= 63) core = "approval-linked-caretaking";
+      else if (patternScore <= 40) core = "overgiving-under-stress";
       else if (patternScore >= 59) core = "rescuer-overfunctioning-pattern";
       else core = "approval-linked-caretaking";
 
