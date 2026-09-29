@@ -302,7 +302,7 @@
       [K.approval]: {
         title: "Approval-Linked Caretaking",
         subtitle: "Caring may sometimes be doing double duty: helping someone and reassuring you that you are good, needed, or safe in the relationship.",
-        summary: "Your answers suggest that approval and usefulness may be strongly connected to self-worth. You may overgive not only because someone needs help, but because disappointing them can trigger self-doubt or fear about the relationship. That can make ordinary boundaries feel emotionally much bigger than they are.",
+        summary: "Your answers suggest a meaningful codependency-like pattern, but the mechanism may differ from person to person. For some, approval and usefulness are central; for others, self-neglect, external focus, rescuing, or loss of voice leads. Use your two strongest dimensions to interpret the score instead of treating one label as the whole story.",
         bullets: [
           "Disapproval may quickly become self-doubt.",
           "Being needed can feel closely tied to being valuable.",
@@ -331,7 +331,7 @@
       [K.rescuer]: {
         title: "Rescuer / Overfunctioning Pattern",
         subtitle: "You may be carrying responsibilities that belong partly—or entirely—to other adults.",
-        summary: "Your answers suggest a recurring pattern of stepping in, preventing consequences, managing moods, or keeping relationships stable through extra labor. This can feel loving and competent while also making you chronically responsible for outcomes you cannot truly control.",
+        summary: "Your answers suggest a strong codependency-like pattern. If rescuing and overfunctioning are among your highest dimensions, you may be carrying responsibilities that belong partly—or entirely—to other adults. If another dimension is higher, use that strongest signal as the primary interpretation rather than assuming rescuing is the whole pattern.",
         bullets: [
           "You may notice problems and move to solve them before being asked.",
           "Other people's distress can create urgency in your nervous system.",
