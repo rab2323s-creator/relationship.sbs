@@ -947,6 +947,8 @@
       renderResult(test, profile);
       const quizCard = $("#quizCard");
       if (quizCard) quizCard.classList.add("hidden");
+      const questionCard = $("#questionCard");
+      if (questionCard) questionCard.classList.add("hidden");
       return;
     }
     if (pCode){
@@ -960,6 +962,10 @@
         profile.mods = ids.map(id=>byId[id]).filter(Boolean).map(mm=>({id:mm.id, title:mm.title, copy:mm.copy}));
         renderShell(test);
         renderResult(test, profile);
+        const questionCard = $("#questionCard");
+        if (questionCard) questionCard.classList.add("hidden");
+        const quizCard = $("#quizCard");
+        if (quizCard && test.compactShell) quizCard.classList.add("hidden");
         return;
       }
     }
