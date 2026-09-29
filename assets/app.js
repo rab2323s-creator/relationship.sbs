@@ -509,16 +509,19 @@
         Object.entries(normalized).reduce((sum,[k,v]) => sum + v * weights[k], 0)
       );
 
-      if (patternScore <= 20) core = "balanced-care-and-boundaries";
-      else if (patternScore <= 40) core = "overgiving-under-stress";
-      else if (patternScore <= 58) core = "approval-linked-caretaking";
-      else if (patternScore <= 77) core = "rescuer-overfunctioning-pattern";
-      else core = "high-codependency-like-pattern";
-
       const rankedDims = Object.entries(normalized)
         .sort((a,b)=> b[1]-a[1] || a[0].localeCompare(b[0]))
         .map(([k])=>k);
       top2 = rankedDims.slice(0,2);
+      const dominant = rankedDims[0] || null;
+
+      if (patternScore <= 20) core = "balanced-care-and-boundaries";
+      else if (patternScore <= 40) core = "overgiving-under-stress";
+      else if (patternScore >= 78) core = "high-codependency-like-pattern";
+      else if (dominant === "rescuing_control" && normalized.rescuing_control >= 63) core = "rescuer-overfunctioning-pattern";
+      else if (dominant === "approval_selfworth" && normalized.approval_selfworth >= 50) core = "approval-linked-caretaking";
+      else if (patternScore >= 59) core = "rescuer-overfunctioning-pattern";
+      else core = "approval-linked-caretaking";
 
       extras = {
         patternScore,
@@ -880,11 +883,24 @@
           voice_identity:"Voice, boundaries & identity"
         }[k]||k);
         const pct = ex.normalizedDimensions || {};
-        const bars = (ex.dominantDimensions||[]).slice(0,2).map(k=>`
+        const ranked = (ex.dominantDimensions||[]).slice(0,2);
+        const topValue = ranked.length ? (pct[ranked[0]] ?? 0) : 0;
+        const secondValue = ranked.length > 1 ? (pct[ranked[1]] ?? 0) : 0;
+        const bars = topValue === 0 ? `
+          <div class="mini">
+            <h4 style="margin:0 0 6px;">Strongest dimensions</h4>
+            <p class="muted" style="margin:0;">No dimension was elevated in your answers.</p>
+          </div>`
+          : (topValue === secondValue ? `
+          <div class="mini">
+            <h4 style="margin:0 0 6px;">Pattern shape</h4>
+            <p class="muted" style="margin:0;">Your top dimensions are tied, so no single area dominates the result.</p>
+          </div>`
+          : ranked.map(k=>`
           <div class="mini">
             <h4 style="margin:0 0 6px;">${niceDim(k)}</h4>
             <p class="muted" style="margin:0;"><strong>${pct[k] ?? 0}%</strong> signal in this quiz</p>
-          </div>`).join("");
+          </div>`).join(""));
         return `
           <div style="margin:14px 0 0;">
             <div style="font-weight:900;margin:0 0 8px;">Your codependency-like pattern</div>
@@ -903,9 +919,15 @@
         </div>`;
     })();
 
+    const resultLeadHtml = (test.id === "codependency_reflection") ? `
+      ${r.subtitle ? `<p style="font-weight:800;margin:0 0 8px;">${r.subtitle}</p>` : ""}
+      ${r.summary ? `<p class="muted" style="margin:0 0 14px;line-height:1.65;">${r.summary}</p>` : ""}
+    ` : "";
+
     card.classList.remove("hidden");
     card.innerHTML = `
       <h2 class="resultTitle">Your result: ${r.title}</h2>
+      ${resultLeadHtml}
       <div class="row" style="margin:10px 0 14px; flex-wrap:wrap;">
         <button id="shareCardBtn" class="btn small">Share card</button>
         <a class="btn small secondary" href="${url}">See your detailed result</a>
