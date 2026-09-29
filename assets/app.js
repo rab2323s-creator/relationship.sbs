@@ -240,6 +240,22 @@
       else out = {label:"Medium", note:"Your answers are mixed across dimensions, so the strongest two areas matter more than one overall label."};
       return downgradeConfidence(out, incons);
     }
+    if (test.id === "codependency_reflection"){
+      const vals = [
+        totals.self_neglect||0,
+        totals.external_focus||0,
+        totals.approval_selfworth||0,
+        totals.rescuing_control||0,
+        totals.voice_identity||0
+      ].sort((a,b)=>b-a);
+      const total = vals.reduce((s,v)=>s+v,0);
+      const spread = (vals[0]||0) - (vals[4]||0);
+      let out = null;
+      if (total <= 13 || total >= 59 || spread >= 9) out = {label:"High", note:"Your answers form a relatively distinct pattern."};
+      else if (total <= 25 || total >= 43 || spread >= 5) out = {label:"Medium", note:"A meaningful pattern is visible, with some mixed areas."};
+      else out = {label:"Medium", note:"Your answers are mixed across dimensions, so the strongest two areas matter more than one label."};
+      return downgradeConfidence(out, incons);
+    }
     return downgradeConfidence({label:"Medium", note:""}, incons);
   }
 
@@ -469,6 +485,48 @@
         weights,
         safetyLevel,
         safetySignalCount
+      };
+    }else if (test.id === "codependency_reflection"){
+      const raw = {
+        self_neglect: totals.self_neglect || 0,
+        external_focus: totals.external_focus || 0,
+        approval_selfworth: totals.approval_selfworth || 0,
+        rescuing_control: totals.rescuing_control || 0,
+        voice_identity: totals.voice_identity || 0
+      };
+      const max = 16;
+      const normalized = Object.fromEntries(
+        Object.entries(raw).map(([k,v]) => [k, Math.round((v / max) * 100)])
+      );
+      const weights = {
+        self_neglect: 0.22,
+        external_focus: 0.20,
+        approval_selfworth: 0.19,
+        rescuing_control: 0.21,
+        voice_identity: 0.18
+      };
+      const patternScore = Math.round(
+        Object.entries(normalized).reduce((sum,[k,v]) => sum + v * weights[k], 0)
+      );
+
+      if (patternScore <= 20) core = "balanced-care-and-boundaries";
+      else if (patternScore <= 40) core = "overgiving-under-stress";
+      else if (patternScore <= 58) core = "approval-linked-caretaking";
+      else if (patternScore <= 77) core = "rescuer-overfunctioning-pattern";
+      else core = "high-codependency-like-pattern";
+
+      const rankedDims = Object.entries(normalized)
+        .sort((a,b)=> b[1]-a[1] || a[0].localeCompare(b[0]))
+        .map(([k])=>k);
+      top2 = rankedDims.slice(0,2);
+
+      extras = {
+        patternScore,
+        maxScore: 100,
+        dominantDimensions: top2,
+        dimensions: raw,
+        normalizedDimensions: normalized,
+        weights
       };
     }else{
       // fallback to old behavior
@@ -803,6 +861,39 @@
             </div>
             ${safetyHtml}
             <p class="small muted" style="margin:10px 0 0;">Scoring weights respect/safety and repair slightly more than the other dimensions. This questionnaire is original to relationship.sbs and has not been psychometrically validated as a clinical instrument or outcome predictor.</p>
+          </div>`;
+      }
+      if (test.id === "codependency_reflection"){
+        const ex = profile.extras || {};
+        if (ex.patternScore == null){
+          return `
+            <div style="margin:14px 0 0;">
+              <div style="font-weight:900;margin:0 0 8px;">Personalized codependency pattern</div>
+              <p class="muted" style="margin:0;">Take the full 20-question test to see your Codependency Pattern Score and strongest two dimensions.</p>
+            </div>`;
+        }
+        const niceDim = (k)=>({
+          self_neglect:"Self-neglect & needs suppression",
+          external_focus:"External focus & emotional reactivity",
+          approval_selfworth:"Approval-linked self-worth",
+          rescuing_control:"Rescuing & overfunctioning",
+          voice_identity:"Voice, boundaries & identity"
+        }[k]||k);
+        const pct = ex.normalizedDimensions || {};
+        const bars = (ex.dominantDimensions||[]).slice(0,2).map(k=>`
+          <div class="mini">
+            <h4 style="margin:0 0 6px;">${niceDim(k)}</h4>
+            <p class="muted" style="margin:0;"><strong>${pct[k] ?? 0}%</strong> signal in this quiz</p>
+          </div>`).join("");
+        return `
+          <div style="margin:14px 0 0;">
+            <div style="font-weight:900;margin:0 0 8px;">Your codependency-like pattern</div>
+            <div class="grid2">
+              <div class="mini"><h4 style="margin:0 0 6px;">Codependency Pattern Score</h4><p class="muted" style="margin:0;"><strong>${ex.patternScore ?? 0} / 100</strong> — a reflection score, not a diagnosis.</p></div>
+              <div class="mini"><h4 style="margin:0 0 6px;">Pattern clarity</h4><p class="muted" style="margin:0;">${profile.conf.label} — ${profile.conf.note}</p></div>
+              ${bars}
+            </div>
+            <p class="small muted" style="margin:10px 0 0;">This scoring system is original to relationship.sbs. Codependency is not a formal mental-health diagnosis, and this quiz has not been psychometrically validated as a clinical instrument.</p>
           </div>`;
       }
       return `
