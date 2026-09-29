@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "why-do-avoidants-pull-away",
+    title: "Why Do Avoidants Pull Away? 9 Reasons + What to Do",
+    excerpt: "Why avoidant-leaning partners may create distance after closeness, intimacy, or when things are going well—and how to tell attachment deactivation from lost interest.",
+    date: "2026-09-29",
+    readingMinutes: 18,
+    tags: ["Attachment", "Avoidant Attachment", "Relationships", "Psychology"],
+    category: "Attachment",
+    cover: "/assets/og/avoidant-attachment-texting.webp",
+    featured: true
+  },
+  {
     slug: "relationship-trauma",
     title: "Relationship Trauma: 12 Signs Your Past Relationship Still Affects You",
     excerpt: "A research-informed guide to relationship trauma, post-traumatic stress symptoms, trust after toxic or abusive relationships, effects on new love, and healing.",
