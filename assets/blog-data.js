@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "stonewalling-in-a-relationship",
+    title: "Stonewalling in a Relationship: 10 Signs, Examples & What to Say",
+    excerpt: "What stonewalling looks like, why a partner may shut down during arguments, how it differs from silent treatment, and what to say without chasing.",
+    date: "2026-09-30",
+    readingMinutes: 18,
+    tags: ["Communication", "Conflict", "Relationships", "Psychology"],
+    category: "Communication",
+    cover: "/assets/og/relationship-tests-tools-guides.webp",
+    featured: true
+  },
+  {
     slug: "left-on-read-meaning",
     title: "Left on Read: Meaning, 12 Reasons & What to Text Next",
     excerpt: "What being left on read actually means, 12 possible reasons, how long to wait, when to double text, and what to send next without chasing.",
