@@ -1,1134 +1,671 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-<url>
-<loc>https://relationship.sbs/</loc>
-<lastmod>2026-09-30</lastmod>
-<changefreq>daily</changefreq>
-<priority>1.0</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/about/</loc>
-<lastmod>2026-01-29</lastmod>
-<changefreq>yearly</changefreq>
-<priority>0.3</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/contact/</loc>
-<lastmod>2026-01-29</lastmod>
-<changefreq>yearly</changefreq>
-<priority>0.3</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/privacy/</loc>
-<lastmod>2026-01-29</lastmod>
-<changefreq>yearly</changefreq>
-<priority>0.2</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/terms/</loc>
-<lastmod>2026-01-29</lastmod>
-<changefreq>yearly</changefreq>
-<priority>0.2</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/</loc>
-<lastmod>2026-09-30</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/methodology/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/attachment-style/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/avoidant-texting/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/love-language/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/conflict-style/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/toxic-relationship/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/emotional-availability/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/narcissistic-relationship/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://relationship.sbs/blog/breadcrumbing-in-dating/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-<url>
-<loc>https://relationship.sbs/tests/are-you-settling/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/emotional-manipulation/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/trauma-bond/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/what-kind-of-lover-are-you-test/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tools/text-decoder/</loc>
-<lastmod>2026-01-29</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.7</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/blog/</loc>
-<lastmod>2026-09-28</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.7</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/blog/what-is-attachment-style/</loc>
-<lastmod>2026-01-29</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/blog/red-flags-vs-boundaries/</loc>
-<lastmod>2026-01-29</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/blog/anxious-attachment-signs/</loc>
-<lastmod>2026-01-29</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://relationship.sbs/blog/why-you-miss-someone-who-was-bad-for-you/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-<url>
-<loc>https://relationship.sbs/blog/limerence-explained/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/blog/avoidant-attachment-texting/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://relationship.sbs/blog/retroactive-jealousy/</loc>
-<lastmod>2026-03-29</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://relationship.sbs/blog/healthy-boundaries-script/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://relationship.sbs/blog/why-does-my-ex-watch-my-stories-but-never-text-me/</loc>
-<lastmod>2026-06-01</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/blog/stop-overthinking-texts/</loc>
-<lastmod>2026-01-29</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/blog/love-language-explained/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/blog/intimacy-changes-long-term-relationships/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/blog/fair-fighting-rules/</loc>
-<lastmod>2026-01-29</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/blog/no-contact-after-breakup/</loc>
-<lastmod>2026-01-29</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/blog/red-flags-dating-apps/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://relationship.sbs/blog/orbiting-in-dating/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-<url>
-<loc>https://relationship.sbs/blog/communication-needs/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/blog/secure-attachment-habits/</loc>
-<lastmod>2026-01-29</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/blog/trust-building-actions/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/blog/boundaries-vs-control/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/blog/situationship-signs/</loc>
-<lastmod>2026-01-29</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/blog/emotional-safety-in-relationships/</loc>
-<lastmod>2026-02-14</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/blog/emotional-unavailability/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/blog/emotionally-exhausted-in-a-relationship/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/blog/gaslighting-in-relationships/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/blog/what-does-k-mean/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/relationship-anxiety/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/narcissistic-relationship/results/self_centered_friction/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/emotional-manipulation/results/boundary-pressure/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/emotional-manipulation/results/reality-confusion/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/trauma-bond/results/trauma-bond-pattern/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/emotional-availability/results/inconsistent_presence/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/love-language/results/touch/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/trauma-bond/results/push-pull-relationship-cycle/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/conflict-style/results/mixed/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/trauma-bond/results/emotional-addiction-loop/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/love-language/results/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/conflict-style/results/compromise/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/avoidant-texting/results/hot_cold_cycle/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/toxic-relationship/results/healthy_strained/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/emotional-manipulation/results/healthy-influence/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/narcissistic-relationship/results/high_control_erosion/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/emotional-availability/results/avoid_repair/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/attachment-style/results/anxious/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/trauma-bond/results/secure-attachment-dynamic/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/avoidant-texting/results/chasing_spiral/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/conflict-style/results/accommodate/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/narcissistic-relationship/results/narcissistic_pattern_likely/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/narcissistic-relationship/results/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/are-you-settling/results/needs_noticed_not_met/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/emotional-manipulation/results/high-emotional-control/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/narcissistic-relationship/results/manipulation_flags/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/are-you-settling/results/quiet_settling/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/trauma-bond/results/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/avoidant-texting/results/steady_communicator/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/emotional-manipulation/results/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/avoidant-texting/results/avoidant_dynamic/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/toxic-relationship/results/high_risk/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/love-language/results/words/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/emotional-manipulation/results/manipulation-pattern/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/love-language/results/gifts/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-
-<url>
-<loc>https://relationship.sbs/about/laura-aram-smith/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-
-<url>
-<loc>https://relationship.sbs/tests/emotional-intimacy/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-</url>
-
-
-<url>
-<loc>https://relationship.sbs/tests/overthinking-relationship/</loc>
-<lastmod>2026-09-23</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/blog/toxic-relationship-signs/</loc>
-<lastmod>2026-09-25</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://relationship.sbs/blog/relationship-anxiety-or-gut-feeling/</loc>
-<lastmod>2026-09-25</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://relationship.sbs/tests/emotional-compatibility/</loc>
-<lastmod>2026-09-25</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-</url>
-<url>
-<loc>https://relationship.sbs/tests/emotional-compatibility/results/</loc>
-<lastmod>2026-09-25</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://relationship.sbs/tests/emotional-compatibility/results/emotionally_aligned/</loc>
-<lastmod>2026-09-25</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://relationship.sbs/tests/emotional-compatibility/results/different_but_adaptable/</loc>
-<lastmod>2026-09-25</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://relationship.sbs/tests/emotional-compatibility/results/reassurance_space_mismatch/</loc>
-<lastmod>2026-09-25</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://relationship.sbs/tests/emotional-compatibility/results/emotionally_out_of_sync/</loc>
-<lastmod>2026-09-25</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://relationship.sbs/tests/emotional-compatibility/results/chronic_emotional_mismatch/</loc>
-<lastmod>2026-09-25</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://relationship.sbs/blog/fear-of-intimacy/</loc>
-<lastmod>2026-09-26</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://relationship.sbs/tests/fear-of-intimacy/</loc>
-<lastmod>2026-09-26</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-</url>
-<url>
-<loc>https://relationship.sbs/tests/fear-of-intimacy/results/</loc>
-<lastmod>2026-09-26</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://relationship.sbs/tests/fear-of-intimacy/results/open_to_closeness/</loc>
-<lastmod>2026-09-26</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://relationship.sbs/tests/fear-of-intimacy/results/guarded_but_connected/</loc>
-<lastmod>2026-09-26</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://relationship.sbs/tests/fear-of-intimacy/results/closeness_distance_conflict/</loc>
-<lastmod>2026-09-26</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://relationship.sbs/tests/fear-of-intimacy/results/protective_distance/</loc>
-<lastmod>2026-09-26</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://relationship.sbs/tests/fear-of-intimacy/results/strong_intimacy_fear/</loc>
-<lastmod>2026-09-26</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://relationship.sbs/blog/trauma-bonding/</loc>
-<lastmod>2026-09-26</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://relationship.sbs/blog/emotional-detachment-in-relationships/</loc>
-<lastmod>2026-09-26</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://relationship.sbs/tests/emotional-detachment/</loc>
-<lastmod>2026-09-26</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-</url>
-<url>
-<loc>https://relationship.sbs/tests/emotional-detachment/results/</loc>
-<lastmod>2026-09-26</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://relationship.sbs/tests/emotional-detachment/results/still_emotionally_engaged/</loc>
-<lastmod>2026-09-26</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://relationship.sbs/tests/emotional-detachment/results/strained_but_reachable/</loc>
-<lastmod>2026-09-26</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://relationship.sbs/tests/emotional-detachment/results/protective_withdrawal/</loc>
-<lastmod>2026-09-26</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://relationship.sbs/tests/emotional-detachment/results/relationship_specific_detachment/</loc>
-<lastmod>2026-09-26</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://relationship.sbs/tests/emotional-detachment/results/broader_emotional_numbness_signal/</loc>
-<lastmod>2026-09-26</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/blog/emotional-permanence-in-relationships/</loc>
-<lastmod>2026-09-28</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-</url>
-
-
-<url>
-<loc>https://relationship.sbs/blog/relationship-trauma/</loc>
-<lastmod>2026-09-28</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-</url>
-
-
-<url>
-<loc>https://relationship.sbs/tests/relationship-trauma/</loc>
-<lastmod>2026-09-28</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-</url>
-
-
-<url>
-<loc>https://relationship.sbs/tests/relationship-trauma/results/</loc>
-<lastmod>2026-09-28</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-
-
-<url>
-<loc>https://relationship.sbs/tests/relationship-trauma/results/steady_recovery/</loc>
-<lastmod>2026-09-28</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-
-
-<url>
-<loc>https://relationship.sbs/tests/relationship-trauma/results/lingering_triggers/</loc>
-<lastmod>2026-09-28</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-
-
-<url>
-<loc>https://relationship.sbs/tests/relationship-trauma/results/protective_patterns_active/</loc>
-<lastmod>2026-09-28</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-
-
-<url>
-<loc>https://relationship.sbs/tests/relationship-trauma/results/past_shaping_present/</loc>
-<lastmod>2026-09-28</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-
-
-<url>
-<loc>https://relationship.sbs/tests/relationship-trauma/results/high_trauma_related_impact/</loc>
-<lastmod>2026-09-28</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-
-
-<url>
-<loc>https://relationship.sbs/tests/does-he-like-me/</loc>
-<lastmod>2026-09-28</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-</url>
-
-
-<url>
-<loc>https://relationship.sbs/tests/does-he-like-me/results/</loc>
-<lastmod>2026-09-28</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-
-
-<url>
-<loc>https://relationship.sbs/tests/does-he-like-me/results/low_observable_investment/</loc>
-<lastmod>2026-09-28</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-
-
-<url>
-<loc>https://relationship.sbs/tests/does-he-like-me/results/friendly_or_passive/</loc>
-<lastmod>2026-09-28</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-
-
-<url>
-<loc>https://relationship.sbs/tests/does-he-like-me/results/mixed_signals/</loc>
-<lastmod>2026-09-28</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-
-
-<url>
-<loc>https://relationship.sbs/tests/does-he-like-me/results/consistent_interest_cautious/</loc>
-<lastmod>2026-09-28</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-
-
-<url>
-<loc>https://relationship.sbs/tests/does-he-like-me/results/strong_observable_interest/</loc>
-<lastmod>2026-09-28</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-
-
-<url>
-<loc>https://relationship.sbs/tools/love-calculator/</loc>
-<lastmod>2026-09-28</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/blog/love-language-self-assessment/</loc>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/are-you-settling/results/grounded_and_met/</loc>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/are-you-settling/results/</loc>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/are-you-settling/results/self_abandonment_loop/</loc>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/are-you-settling/results/under_investment_reality/</loc>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/attachment-style/results/avoidant/</loc>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/attachment-style/results/fearful/</loc>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/attachment-style/results/</loc>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/attachment-style/results/secure/</loc>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/emotional-availability/results/emotionally_absent/</loc>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/emotional-availability/results/guarded_unavailable/</loc>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/emotional-availability/results/</loc>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/emotional-availability/results/present_partner/</loc>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/love-language/results/mixed/</loc>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/love-language/results/service/</loc>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/love-language/results/time/</loc>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/narcissistic-relationship/results/respectful_dynamic/</loc>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/trauma-bond/results/intense-attachment-pattern/</loc>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/what-kind-of-lover-are-you-test/results/all-in-lover/</loc>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/what-kind-of-lover-are-you-test/results/devoted-lover/</loc>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/what-kind-of-lover-are-you-test/results/guarded-lover/</loc>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/what-kind-of-lover-are-you-test/results/</loc>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/what-kind-of-lover-are-you-test/results/magnetic-lover/</loc>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/what-kind-of-lover-are-you-test/results/steady-lover/</loc>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/blog/why-do-avoidants-pull-away/</loc>
-<lastmod>2026-09-29</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/blog/dry-texting-meaning/</loc>
-<lastmod>2026-09-29</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/blog/left-on-read-meaning/</loc>
-<lastmod>2026-09-29</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/should-we-break-up/</loc>
-<lastmod>2026-09-29</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.9</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/should-we-break-up/results/stable-but-strained/</loc>
-<lastmod>2026-09-29</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/should-we-break-up/results/repair-needs-proof/</loc>
-<lastmod>2026-09-29</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/should-we-break-up/results/ambivalent-and-depleted/</loc>
-<lastmod>2026-09-29</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/should-we-break-up/results/persistent-mismatch/</loc>
-<lastmod>2026-09-29</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/should-we-break-up/results/high-relationship-strain/</loc>
-<lastmod>2026-09-29</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/codependency-test/</loc>
-<lastmod>2026-09-30</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.9</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/codependency-test/results/balanced-care-and-boundaries/</loc>
-<lastmod>2026-09-30</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/codependency-test/results/overgiving-under-stress/</loc>
-<lastmod>2026-09-30</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/codependency-test/results/approval-linked-caretaking/</loc>
-<lastmod>2026-09-30</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/codependency-test/results/rescuer-overfunctioning-pattern/</loc>
-<lastmod>2026-09-30</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://relationship.sbs/tests/codependency-test/results/high-codependency-like-pattern/</loc>
-<lastmod>2026-09-30</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
+  <url>
+    <loc>https://relationship.sbs/</loc>
+    <lastmod>2026-09-30</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/about/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/about/laura-aram-smith/</loc>
+    <lastmod>2026-09-23</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/blog/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/blog/anxious-attachment-signs/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/blog/avoidant-attachment-texting/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/blog/boundaries-vs-control/</loc>
+    <lastmod>2026-09-25</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/blog/breadcrumbing-in-dating/</loc>
+    <lastmod>2026-09-23</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/blog/communication-needs/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/blog/dry-texting-meaning/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/blog/emotional-detachment-in-relationships/</loc>
+    <lastmod>2026-09-26</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/blog/emotional-permanence-in-relationships/</loc>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/blog/emotional-safety-in-relationships/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/blog/emotional-unavailability/</loc>
+    <lastmod>2026-09-23</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/blog/emotionally-exhausted-in-a-relationship/</loc>
+    <lastmod>2026-09-30</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/blog/fair-fighting-rules/</loc>
+    <lastmod>2026-01-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/blog/fear-of-intimacy/</loc>
+    <lastmod>2026-09-26</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/blog/gaslighting-in-relationships/</loc>
+    <lastmod>2026-09-25</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/blog/healthy-boundaries-script/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/blog/intimacy-changes-long-term-relationships/</loc>
+    <lastmod>2026-09-23</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/blog/left-on-read-meaning/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/blog/limerence-explained/</loc>
+    <lastmod>2026-09-23</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/blog/love-language-explained/</loc>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/blog/love-language-self-assessment/</loc>
+    <lastmod>2026-02-07</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/blog/no-contact-after-breakup/</loc>
+    <lastmod>2026-01-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/blog/orbiting-in-dating/</loc>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/blog/red-flags-dating-apps/</loc>
+    <lastmod>2026-09-23</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/blog/red-flags-vs-boundaries/</loc>
+    <lastmod>2026-09-25</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/blog/relationship-anxiety-or-gut-feeling/</loc>
+    <lastmod>2026-09-25</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/blog/relationship-trauma/</loc>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/blog/retroactive-jealousy/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/blog/secure-attachment-habits/</loc>
+    <lastmod>2026-01-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/blog/situationship-signs/</loc>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/blog/stop-overthinking-texts/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/blog/toxic-relationship-signs/</loc>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/blog/trauma-bonding/</loc>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/blog/trust-building-actions/</loc>
+    <lastmod>2026-09-23</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/blog/what-does-k-mean/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/blog/what-is-attachment-style/</loc>
+    <lastmod>2026-09-26</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/blog/why-do-avoidants-pull-away/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/blog/why-does-my-ex-watch-my-stories-but-never-text-me/</loc>
+    <lastmod>2026-06-01</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/blog/why-you-miss-someone-who-was-bad-for-you/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/contact/</loc>
+    <lastmod>2026-01-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/methodology/</loc>
+    <lastmod>2026-09-25</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/privacy/</loc>
+    <lastmod>2026-01-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/terms/</loc>
+    <lastmod>2026-01-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/</loc>
+    <lastmod>2026-09-30</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/are-you-settling/</loc>
+    <lastmod>2026-09-30</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/are-you-settling/results/</loc>
+    <lastmod>2026-02-07</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/are-you-settling/results/grounded_and_met/</loc>
+    <lastmod>2026-02-07</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/are-you-settling/results/needs_noticed_not_met/</loc>
+    <lastmod>2026-02-07</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/are-you-settling/results/quiet_settling/</loc>
+    <lastmod>2026-02-07</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/are-you-settling/results/self_abandonment_loop/</loc>
+    <lastmod>2026-02-07</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/are-you-settling/results/under_investment_reality/</loc>
+    <lastmod>2026-02-07</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/attachment-style/</loc>
+    <lastmod>2026-09-23</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/attachment-style/results/</loc>
+    <lastmod>2026-02-06</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/attachment-style/results/anxious/</loc>
+    <lastmod>2026-02-05</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/attachment-style/results/avoidant/</loc>
+    <lastmod>2026-02-05</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/attachment-style/results/fearful/</loc>
+    <lastmod>2026-02-05</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/attachment-style/results/secure/</loc>
+    <lastmod>2026-02-05</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/avoidant-texting/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/avoidant-texting/results/avoidant_dynamic/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/avoidant-texting/results/chasing_spiral/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/avoidant-texting/results/hot_cold_cycle/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/avoidant-texting/results/steady_communicator/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/codependency-test/</loc>
+    <lastmod>2026-09-30</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/codependency-test/results/approval-linked-caretaking/</loc>
+    <lastmod>2026-09-30</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/codependency-test/results/balanced-care-and-boundaries/</loc>
+    <lastmod>2026-09-30</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/codependency-test/results/high-codependency-like-pattern/</loc>
+    <lastmod>2026-09-30</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/codependency-test/results/overgiving-under-stress/</loc>
+    <lastmod>2026-09-30</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/codependency-test/results/rescuer-overfunctioning-pattern/</loc>
+    <lastmod>2026-09-30</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/conflict-style/</loc>
+    <lastmod>2026-09-25</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/conflict-style/results/accommodate/</loc>
+    <lastmod>2026-09-23</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/conflict-style/results/compromise/</loc>
+    <lastmod>2026-09-23</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/conflict-style/results/mixed/</loc>
+    <lastmod>2026-09-23</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/does-he-like-me/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/does-he-like-me/results/</loc>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/does-he-like-me/results/consistent_interest_cautious/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/does-he-like-me/results/friendly_or_passive/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/does-he-like-me/results/low_observable_investment/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/does-he-like-me/results/mixed_signals/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/does-he-like-me/results/strong_observable_interest/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/emotional-availability/</loc>
+    <lastmod>2026-09-25</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/emotional-availability/results/</loc>
+    <lastmod>2026-02-05</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/emotional-availability/results/avoid_repair/</loc>
+    <lastmod>2026-02-05</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/emotional-availability/results/emotionally_absent/</loc>
+    <lastmod>2026-02-05</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/emotional-availability/results/guarded_unavailable/</loc>
+    <lastmod>2026-02-05</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/emotional-availability/results/inconsistent_presence/</loc>
+    <lastmod>2026-02-05</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/emotional-availability/results/present_partner/</loc>
+    <lastmod>2026-02-05</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/emotional-compatibility/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/emotional-compatibility/results/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/emotional-compatibility/results/chronic_emotional_mismatch/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/emotional-compatibility/results/different_but_adaptable/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/emotional-compatibility/results/emotionally_aligned/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/emotional-compatibility/results/emotionally_out_of_sync/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/emotional-compatibility/results/reassurance_space_mismatch/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/emotional-detachment/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/emotional-detachment/results/</loc>
+    <lastmod>2026-09-26</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/emotional-detachment/results/broader_emotional_numbness_signal/</loc>
+    <lastmod>2026-09-26</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/emotional-detachment/results/protective_withdrawal/</loc>
+    <lastmod>2026-09-26</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/emotional-detachment/results/relationship_specific_detachment/</loc>
+    <lastmod>2026-09-26</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/emotional-detachment/results/still_emotionally_engaged/</loc>
+    <lastmod>2026-09-26</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/emotional-detachment/results/strained_but_reachable/</loc>
+    <lastmod>2026-09-26</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/emotional-intimacy/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/emotional-manipulation/</loc>
+    <lastmod>2026-09-30</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/emotional-manipulation/results/</loc>
+    <lastmod>2026-02-09</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/emotional-manipulation/results/boundary-pressure/</loc>
+    <lastmod>2026-02-09</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/emotional-manipulation/results/healthy-influence/</loc>
+    <lastmod>2026-02-09</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/emotional-manipulation/results/high-emotional-control/</loc>
+    <lastmod>2026-02-09</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/emotional-manipulation/results/manipulation-pattern/</loc>
+    <lastmod>2026-02-09</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/emotional-manipulation/results/reality-confusion/</loc>
+    <lastmod>2026-02-09</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/fear-of-intimacy/</loc>
+    <lastmod>2026-09-26</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/fear-of-intimacy/results/</loc>
+    <lastmod>2026-09-26</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/fear-of-intimacy/results/closeness_distance_conflict/</loc>
+    <lastmod>2026-09-26</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/fear-of-intimacy/results/guarded_but_connected/</loc>
+    <lastmod>2026-09-26</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/fear-of-intimacy/results/open_to_closeness/</loc>
+    <lastmod>2026-09-26</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/fear-of-intimacy/results/protective_distance/</loc>
+    <lastmod>2026-09-26</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/fear-of-intimacy/results/strong_intimacy_fear/</loc>
+    <lastmod>2026-09-26</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/love-language/</loc>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/love-language/results/</loc>
+    <lastmod>2026-02-06</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/love-language/results/gifts/</loc>
+    <lastmod>2026-02-06</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/love-language/results/mixed/</loc>
+    <lastmod>2026-02-06</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/love-language/results/service/</loc>
+    <lastmod>2026-02-06</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/love-language/results/time/</loc>
+    <lastmod>2026-02-06</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/love-language/results/touch/</loc>
+    <lastmod>2026-02-06</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/love-language/results/words/</loc>
+    <lastmod>2026-02-06</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/narcissistic-relationship/</loc>
+    <lastmod>2026-09-23</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/narcissistic-relationship/results/</loc>
+    <lastmod>2026-02-06</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/narcissistic-relationship/results/high_control_erosion/</loc>
+    <lastmod>2026-02-06</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/narcissistic-relationship/results/manipulation_flags/</loc>
+    <lastmod>2026-02-06</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/narcissistic-relationship/results/narcissistic_pattern_likely/</loc>
+    <lastmod>2026-02-06</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/narcissistic-relationship/results/respectful_dynamic/</loc>
+    <lastmod>2026-02-06</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/narcissistic-relationship/results/self_centered_friction/</loc>
+    <lastmod>2026-02-06</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/overthinking-relationship/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/relationship-anxiety/</loc>
+    <lastmod>2026-09-30</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/relationship-trauma/</loc>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/relationship-trauma/results/</loc>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/relationship-trauma/results/high_trauma_related_impact/</loc>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/relationship-trauma/results/lingering_triggers/</loc>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/relationship-trauma/results/past_shaping_present/</loc>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/relationship-trauma/results/protective_patterns_active/</loc>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/relationship-trauma/results/steady_recovery/</loc>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/should-we-break-up/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/should-we-break-up/results/ambivalent-and-depleted/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/should-we-break-up/results/high-relationship-strain/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/should-we-break-up/results/persistent-mismatch/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/should-we-break-up/results/repair-needs-proof/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/should-we-break-up/results/stable-but-strained/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/toxic-relationship/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/toxic-relationship/results/healthy_strained/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/toxic-relationship/results/high_risk/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/trauma-bond/</loc>
+    <lastmod>2026-09-30</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/trauma-bond/results/</loc>
+    <lastmod>2026-02-20</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/trauma-bond/results/emotional-addiction-loop/</loc>
+    <lastmod>2026-02-20</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/trauma-bond/results/intense-attachment-pattern/</loc>
+    <lastmod>2026-02-20</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/trauma-bond/results/push-pull-relationship-cycle/</loc>
+    <lastmod>2026-02-20</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/trauma-bond/results/secure-attachment-dynamic/</loc>
+    <lastmod>2026-02-20</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/trauma-bond/results/trauma-bond-pattern/</loc>
+    <lastmod>2026-02-20</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/what-kind-of-lover-are-you-test/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/what-kind-of-lover-are-you-test/results/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/what-kind-of-lover-are-you-test/results/all-in-lover/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/what-kind-of-lover-are-you-test/results/devoted-lover/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/what-kind-of-lover-are-you-test/results/guarded-lover/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/what-kind-of-lover-are-you-test/results/magnetic-lover/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/what-kind-of-lover-are-you-test/results/steady-lover/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tools/love-calculator/</loc>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tools/text-decoder/</loc>
+    <lastmod>2026-09-28</lastmod>
+  </url>
 </urlset>
