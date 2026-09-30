@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>Love Bombing Test: Am I Being Love Bombed? (12 Questions)</title>
+  <meta name="description" content="Take this 12-question Love Bombing Test to assess fast intensity, boundary pressure, dependency, control, and whether affection still feels safe when you slow down." />
+  <meta name="keywords" content="love bombing test, am i being love bombed, love bombing quiz, love bombing signs test, am i being love bombed quiz, love bombing relationship test, love bombing vs genuine affection" />
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+  <link rel="canonical" href="https://relationship.sbs/tests/love-bombing/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Love Bombing Test: Am I Being Love Bombed? (12 Questions)" />
+  <meta property="og:description" content="A 12-question love bombing quiz with a weighted 0–100 score, strongest two dimensions, safety signals, and immediate next steps." />
+  <meta property="og:url" content="https://relationship.sbs/tests/love-bombing/" />
+  <meta property="og:site_name" content="relationship.sbs" />
+  <meta property="og:image" content="https://relationship.sbs/assets/og/relationship-tests-tools-guides.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Love Bombing Test: Am I Being Love Bombed?" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Love Bombing Test: Am I Being Love Bombed?" />
+  <meta name="twitter:description" content="12 questions. Instant weighted score, strongest two dimensions, explanation, and next steps." />
+  <meta name="twitter:image" content="https://relationship.sbs/assets/og/relationship-tests-tools-guides.webp" />
+
+  <link rel="stylesheet" href="/assets/styles.css" />
+
+  <style>
+    .lb-hero{max-width:900px;margin:0 auto 14px}
+    .lb-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .lb-meta span{display:inline-block;padding:6px 9px;border:1px solid rgba(255,255,255,.12);border-radius:999px;font-size:12px}
+    #loveBombingQuiz{max-width:900px;margin:0 auto 18px}
+    .lb-test-card,.lb-result{padding:20px;border:1px solid rgba(255,255,255,.12);border-radius:18px;background:rgba(255,255,255,.03)}
+    .lb-test-top,.lb-result-head,.lb-dim-head,.lb-result-actions{display:flex;gap:12px;align-items:center;justify-content:space-between}
+    .lb-back{border:1px solid rgba(255,255,255,.14);background:transparent;color:inherit;border-radius:10px;padding:7px 11px;cursor:pointer}
+    .lb-back:disabled{opacity:.45;cursor:not-allowed}
+    #lbProgress{width:100%;height:10px;margin:12px 0 8px}
+    #lbQuestion{font-size:24px;line-height:1.3;margin:12px 0 14px}
+    .lb-options{display:grid;gap:10px}
+    .lb-option{width:100%;text-align:left;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.035);color:inherit;border-radius:14px;padding:14px 15px;line-height:1.5;cursor:pointer;font:inherit}
+    .lb-option:hover,.lb-option:focus-visible{transform:translateY(-1px);border-color:rgba(255,255,255,.32);outline:none}
+    .lb-result{margin-top:0}
+    .lb-result-head{align-items:flex-start}
+    .lb-eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.08em;opacity:.72;font-weight:800}
+    .lb-result h2{margin:5px 0 0}
+    .lb-score{display:flex;align-items:baseline;gap:3px;white-space:nowrap}
+    .lb-score strong{font-size:46px;line-height:1}
+    .lb-score span{opacity:.7}
+    .lb-result-summary{font-size:18px;line-height:1.65}
+    .lb-note{font-size:13px;opacity:.76;line-height:1.55}
+    .lb-safety{padding:13px 14px;border:1px solid rgba(255,190,100,.45);border-radius:12px;margin:14px 0;line-height:1.55}
+    .lb-dim-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .lb-dim-card{padding:14px;border:1px solid rgba(255,255,255,.12);border-radius:14px}
+    .lb-dim-head span{font-weight:800}
+    .lb-meter{height:7px;background:rgba(255,255,255,.10);border-radius:999px;overflow:hidden;margin:10px 0}
+    .lb-meter span{display:block;height:100%;background:currentColor;opacity:.72}
+    .lb-dim-card p{margin:7px 0;line-height:1.5}
+    .lb-dim-level{font-size:12px;opacity:.72}
+    .lb-insight{padding:13px 14px;margin:14px 0;border-radius:12px;background:rgba(255,255,255,.04);line-height:1.6}
+    .lb-next{line-height:1.65}
+    .lb-result-actions{justify-content:flex-start;flex-wrap:wrap;margin-top:14px}
+    .lb-story{font-size:17px;line-height:1.75}
+    .lb-weight-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+    .lb-weight-grid .mini{min-height:160px}
+    .lb-table{width:100%;border-collapse:collapse}
+    .lb-table th,.lb-table td{text-align:left;vertical-align:top;padding:10px;border-bottom:1px solid rgba(255,255,255,.10)}
+    @media(max-width:800px){.lb-dim-grid,.lb-weight-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:580px){.lb-dim-grid,.lb-weight-grid{grid-template-columns:1fr}.lb-result-head{display:block}.lb-score{margin-top:12px}}
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"WebPage",
+        "@id":"https://relationship.sbs/tests/love-bombing/#webpage",
+        "url":"https://relationship.sbs/tests/love-bombing/",
+        "name":"Love Bombing Test: Am I Being Love Bombed? (12 Questions)",
+        "description":"A free 12-question love bombing self-reflection test with a weighted score, strongest two dimensions, safety signals, and immediate next steps.",
+        "inLanguage":"en",
+        "isPartOf":{"@type":"WebSite","name":"relationship.sbs","url":"https://relationship.sbs/"},
+        "mainEntity":{"@id":"https://relationship.sbs/tests/love-bombing/#quiz"},
+        "datePublished":"2026-09-30",
+        "dateModified":"2026-09-30"
+      },
+      {
+        "@type":"Quiz",
+        "@id":"https://relationship.sbs/tests/love-bombing/#quiz",
+        "name":"Love Bombing Test: Am I Being Love Bombed?",
+        "description":"A 12-question educational self-reflection quiz exploring accelerated attachment, boundary pressure, dependency and isolation pressure, and control or reactivity when the relationship meets friction.",
+        "url":"https://relationship.sbs/tests/love-bombing/",
+        "isAccessibleForFree":true,
+        "inLanguage":"en",
+        "learningResourceType":"Relationship self-reflection test",
+        "interactivityType":"active",
+        "timeRequired":"PT3M",
+        "educationalUse":"Self-reflection",
+        "audience":{"@type":"PeopleAudience","suggestedMinAge":18},
+        "about":[
+          {"@type":"Thing","name":"Love bombing"},
+          {"@type":"Thing","name":"Relationship boundaries"},
+          {"@type":"Thing","name":"Coercive control"},
+          {"@type":"Thing","name":"Dating behavior"},
+          {"@type":"Thing","name":"Emotional manipulation"}
+        ],
+        "keywords":["love bombing test","am I being love bombed","love bombing quiz","love bombing vs genuine affection","love bombing signs"],
+        "isBasedOn":[
+          "https://health.clevelandclinic.org/love-bombing",
+          "https://doi.org/10.54119/discovery.zxgc9960",
+          "https://www.esafety.gov.au/young-people/when-is-love-bombing-coercive-control",
+          "https://doi.org/10.1037/dev0000630"
+        ],
+        "author":{"@type":"Organization","name":"relationship.sbs","url":"https://relationship.sbs/about/"},
+        "publisher":{"@type":"Organization","name":"relationship.sbs","url":"https://relationship.sbs/"}
+      },
+      {
+        "@type":"BreadcrumbList",
+        "@id":"https://relationship.sbs/tests/love-bombing/#breadcrumbs",
+        "itemListElement":[
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://relationship.sbs/"},
+          {"@type":"ListItem","position":2,"name":"Tests","item":"https://relationship.sbs/tests/"},
+          {"@type":"ListItem","position":3,"name":"Love Bombing Test","item":"https://relationship.sbs/tests/love-bombing/"}
+        ]
+      },
+      {
+        "@type":"FAQPage",
+        "@id":"https://relationship.sbs/tests/love-bombing/#faq",
+        "mainEntity":[
+          {"@type":"Question","name":"What is a love bombing test?","acceptedAnswer":{"@type":"Answer","text":"A love bombing test is a self-reflection tool that looks for patterns such as unusually fast attachment, pressure around boundaries, demands for access or dependency, and negative reactions when the relationship slows down. It cannot prove intent or diagnose abuse."}},
+          {"@type":"Question","name":"How can I tell love bombing from genuine affection?","acceptedAnswer":{"@type":"Answer","text":"The clearest difference is often what happens when you introduce friction. Genuine affection can tolerate your pace, privacy, friendships and boundaries. A more concerning pattern becomes pressuring, punitive, controlling or unstable when you say no or slow down."}},
+          {"@type":"Question","name":"Is a high Love Bombing Pattern Score a diagnosis?","acceptedAnswer":{"@type":"Answer","text":"No. The 0–100 score is an original weighted reflection score for this questionnaire. It is not a clinical cutoff, probability, diagnosis or proof of another person's intent."}},
+          {"@type":"Question","name":"Can someone move fast without love bombing me?","acceptedAnswer":{"@type":"Answer","text":"Yes. Strong mutual attraction can be intense. This test intentionally weights boundary pressure and controlling reactions more heavily than fast romance alone."}},
+          {"@type":"Question","name":"Is love bombing always narcissistic?","acceptedAnswer":{"@type":"Answer","text":"No. Love-bombing-like behavior does not diagnose narcissistic personality disorder. Research has found associations with narcissistic tendencies and insecure attachment in one limited young-adult sample, but the evidence base remains small and cannot diagnose an individual."}},
+          {"@type":"Question","name":"What should I do if the test flags monitoring, coercion or isolation?","acceptedAnswer":{"@type":"Answer","text":"Treat those behaviors separately from the overall score. Protect access to trusted people, privacy, money and safe communication. If you fear retaliation or escalation, seek private real-world support rather than relying on a quiz or confronting someone because of a score."}}
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header id="siteHeader"></header>
+
+  <main class="wrap">
+    <section class="card prose lb-hero">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/tests/">Tests</a> / Love Bombing Test</nav>
+      <h1>Love Bombing Test: Am I Being Love Bombed?</h1>
+      <p class="intro">Answer from the repeated pattern—not the most romantic day or the worst argument. This 12-question test looks at what happens when early intensity meets your pace, privacy, boundaries, and independence.</p>
+      <div class="lb-meta"><span>12 questions</span><span>2–3 minutes</span><span>Instant result</span><span>No sign-up</span></div>
+    </section>
+
+    <div id="loveBombingQuiz"></div>
+
+    <section class="card prose">
+      <h2>What this Love Bombing Test actually measures</h2>
+      <p>
+        Most love bombing quizzes can become misleading if they treat romance itself as the problem. Frequent texts, flowers,
+        long dates, strong chemistry, or early excitement can happen in healthy relationships. This test gives more weight to
+        what happens when <strong>you stop matching the intensity</strong>.
+      </p>
+      <p>
+        Your result is built from four dimensions. Each dimension contains three scenario-based questions, and each answer is
+        scored from 0 to 4. The overall Love Bombing Pattern Score is then normalized to 0–100. The two strongest dimensions
+        are shown separately so two people with the same total can receive different explanations.
+      </p>
+
+      <div class="lb-weight-grid">
+        <div class="mini"><h3>Accelerated attachment · 20%</h3><p>How quickly certainty, idealization, gifts, and future plans outrun how well you actually know each other.</p></div>
+        <div class="mini"><h3>Boundary pressure · 30%</h3><p>What happens when you slow down, say no, protect privacy, or choose a pace they do not prefer.</p></div>
+        <div class="mini"><h3>Access &amp; dependency · 22%</h3><p>Whether closeness becomes constant availability, emotional responsibility, or pressure to shrink your outside life.</p></div>
+        <div class="mini"><h3>Control &amp; reactivity · 28%</h3><p>Whether warmth turns into monitoring, withdrawal, punishment, or a hot-cold cycle after disagreement or limits.</p></div>
+      </div>
+
+      <p>
+        That weighting is deliberate. <strong>Fast attachment alone cannot produce one of the highest results.</strong> A person
+        can be intensely interested and still respect your autonomy. Pressure and control are more decision-useful than the
+        number of compliments you receive.
+      </p>
+    </section>
+
+    <section class="card prose lb-story">
+      <h2>The night the romance changed because she asked for one quiet weekend</h2>
+      <p class="small muted"><strong>Composite story:</strong> This is fictionalized from common relationship patterns, not a real client or identifiable person.</p>
+      <p>
+        For three weeks, Elise had never wondered where she stood. Noah texted before she woke up. He remembered tiny details.
+        He sent lunch to her office after she mentioned skipping breakfast. On their fourth date, he said he had never felt so
+        understood by anyone.
+      </p>
+      <p>
+        Her last relationship had been vague and inconsistent, so the certainty felt almost medicinal. No guessing. No “what
+        are we?” conversation. Noah talked about a concert six months away, a winter trip, the neighborhood he wanted to live
+        in one day. Elise knew it was fast, but fast did not feel dangerous. It felt clear.
+      </p>
+      <p>
+        Then her sister came to town.
+      </p>
+      <p>
+        Elise texted Noah: “I’m going to keep this weekend for her. I’ll call you Sunday night.”
+      </p>
+      <p>
+        He replied with a heart. Then another message: “Both days?” Then: “I thought we were past the stage where we needed
+        space from each other.” By dinner, he had stopped responding. At midnight he sent, “I guess I misread how serious this is.”
+      </p>
+      <p>
+        Nothing dramatic had happened. He had not threatened her. He had not called her names. But the relationship suddenly
+        had a price for moving at her speed.
+      </p>
+      <p>
+        That is the distinction this test is built around. The first three weeks tell you how someone behaves when closeness
+        is easy. A small boundary tells you how they behave when your autonomy interrupts the fantasy.
+      </p>
+    </section>
+
+    <section class="card prose">
+      <h2>Love bombing vs genuine affection: the friction test</h2>
+      <p>
+        Cleveland Clinic describes love bombing as excessive attention or affection that can become manipulative, while also
+        noting that the behavior may be intentional or unintentional. The most useful signal is not one romantic act; it is
+        whether the person respects limits and your separate life.
+      </p>
+
+      <table class="lb-table">
+        <thead><tr><th>When reality creates friction</th><th>More consistent with genuine affection</th><th>More concerning pattern</th></tr></thead>
+        <tbody>
+          <tr><td>You want to slow down</td><td>Disappointment is possible, but your pace is respected.</td><td>Your hesitation becomes guilt, persuasion, coldness, or anger.</td></tr>
+          <tr><td>You keep plans with friends</td><td>Your outside relationships remain part of a healthy life.</td><td>Friends and family become competitors for access to you.</td></tr>
+          <tr><td>You do not reply immediately</td><td>They assume you are busy and reconnect later.</td><td>Your availability becomes a loyalty test.</td></tr>
+          <tr><td>You protect phone or location privacy</td><td>Transparency is voluntary and negotiated.</td><td>Access is framed as proof of love, honesty, or commitment.</td></tr>
+          <tr><td>You disagree</td><td>Warmth survives conflict and repair is possible.</td><td>Affection becomes conditional on compliance.</td></tr>
+        </tbody>
+      </table>
+
+      <p>
+        For a deeper explanation of signs, texting examples, stages, and what happens after the early intensity, read
+        <a href="/blog/love-bombing/">Love Bombing vs Genuine Affection</a> after you finish the test.
+      </p>
+    </section>
+
+    <section class="card prose">
+      <h2>Why the questions focus on behavior instead of labels</h2>
+      <p>
+        “Is this person a narcissist?” is a tempting question because a label seems to promise certainty. It is also a weak
+        basis for a self-test. Love-bombing-like behavior does not diagnose narcissistic personality disorder, and the research
+        base on love bombing itself is still limited.
+      </p>
+      <p>
+        A 2017 study of 484 college students reported associations between love-bombing behaviors, narcissistic tendencies,
+        insecure attachment, lower self-esteem, and heavier text/media use in romantic relationships. It was an early,
+        correlational study in a narrow population, so this test does not convert those findings into a diagnostic checklist.
+      </p>
+      <p>
+        Instead, the questions ask what a person actually does with your pace, “no,” privacy, time, support system, and
+        disagreement. Those behaviors are easier to observe and more useful for decision-making than trying to infer a
+        personality disorder from romantic intensity.
+      </p>
+    </section>
+
+    <section class="card prose">
+      <h2>Why a safety signal is separate from the total score</h2>
+      <p>
+        One serious behavior can matter even if most of the relationship feels loving. That is why the result separately
+        flags answers involving coercion, monitoring, isolation, fear, or punitive reactions instead of averaging them away.
+      </p>
+      <p>
+        Research and public-safety guidance on coercive control emphasize patterns that restrict autonomy and create fear or
+        dependence. Australia’s eSafety Commissioner, for example, warns that constant checking, pressure for digital access,
+        and love-bombing behavior can become part of technology-facilitated coercive control.
+      </p>
+      <p>
+        A safety flag does not mean this quiz has diagnosed abuse. It means the specific behavior deserves attention independent
+        of whether the overall Love Bombing Pattern Score is 35 or 85.
+      </p>
+    </section>
+
+    <section class="card prose">
+      <h2>How to interpret your Love Bombing Pattern Score</h2>
+      <p>
+        The score is an original educational model created for this test. It is not a validated clinical instrument, and the
+        score is not a probability that someone is manipulating you.
+      </p>
+      <ul>
+        <li><strong>0–19:</strong> intensity looks mostly calibrated in the behaviors asked here.</li>
+        <li><strong>20–39:</strong> fast intensity; slow down and watch what happens when you set pace.</li>
+        <li><strong>40–54:</strong> mixed pattern; pressure or dependency is becoming more visible.</li>
+        <li><strong>55–79:</strong> strong love-bombing-like pattern across meaningful dimensions.</li>
+        <li><strong>80–100:</strong> high-pressure/control pattern; autonomy and safety deserve priority.</li>
+      </ul>
+      <p>
+        Two people can both score 58 and need different interpretations. One may score high because of boundary pressure and
+        control after disagreement. Another may show accelerated attachment plus dependency pressure. That is why your result
+        displays the <strong>two strongest dimensions</strong> instead of relying on the total alone.
+      </p>
+    </section>
+
+    <section class="card prose">
+      <h2>Love Bombing Test FAQ</h2>
+      <div class="faq">
+        <details><summary>What is a love bombing test?</summary><p>A love bombing test is a self-reflection tool that looks for patterns such as unusually fast attachment, pressure around boundaries, demands for access or dependency, and negative reactions when the relationship slows down. It cannot prove intent or diagnose abuse.</p></details>
+        <details><summary>How can I tell love bombing from genuine affection?</summary><p>The clearest difference is often what happens when you introduce friction. Genuine affection can tolerate your pace, privacy, friendships, and boundaries. A more concerning pattern becomes pressuring, punitive, controlling, or unstable when you say no or slow down.</p></details>
+        <details><summary>Is a high Love Bombing Pattern Score a diagnosis?</summary><p>No. The 0–100 score is an original weighted reflection score for this questionnaire. It is not a clinical cutoff, probability, diagnosis, or proof of another person’s intent.</p></details>
+        <details><summary>Can someone move fast without love bombing me?</summary><p>Yes. Strong mutual attraction can be intense. This test intentionally weights boundary pressure and controlling reactions more heavily than fast romance alone.</p></details>
+        <details><summary>Is love bombing always narcissistic?</summary><p>No. Love-bombing-like behavior does not diagnose narcissistic personality disorder. One limited study found associations with narcissistic tendencies and insecure attachment, but that evidence cannot diagnose an individual.</p></details>
+        <details><summary>What if my result is high but I do not feel afraid?</summary><p>A high score still deserves a slower pace and a closer look at your two strongest dimensions. Fear is not required for a relationship pattern to be unhealthy. At the same time, the test cannot tell you what decision to make.</p></details>
+        <details><summary>What if my score is low but one answer involved monitoring or coercion?</summary><p>Take the specific behavior seriously. The test intentionally shows a separate safety signal because a serious boundary violation should not disappear inside an average.</p></details>
+        <details><summary>What should I do after the test?</summary><p>Use the result as a structured reality check. Keep or restore your normal support system, slow major commitments if the pattern is unclear, state one concrete boundary, and watch what happens next. If you fear retaliation or escalation, seek private real-world support rather than confronting someone because of a score.</p></details>
+      </div>
+    </section>
+
+    <section class="card prose">
+      <h2>Research notes &amp; sources</h2>
+      <p>
+        Love bombing is a popular relationship term, not a formal mental-health diagnosis, and the research base is much
+        smaller than the internet conversation around it. This test therefore uses original scenario questions and an original
+        scoring model. It is informed by research and safety literature on early relationship intensity, attachment, coercion,
+        boundaries, and control, but it is not presented as a validated psychological instrument.
+      </p>
+      <ul>
+        <li><a href="https://health.clevelandclinic.org/love-bombing" target="_blank" rel="noopener noreferrer">Cleveland Clinic — love bombing signs, boundaries, and relationship patterns</a></li>
+        <li><a href="https://doi.org/10.54119/discovery.zxgc9960" target="_blank" rel="noopener noreferrer">Strutzenberg et al. (2017) — Love-bombing: A Narcissistic Approach to Relationship Formation</a></li>
+        <li><a href="https://www.esafety.gov.au/young-people/when-is-love-bombing-coercive-control" target="_blank" rel="noopener noreferrer">eSafety Commissioner — love bombing and technology-facilitated coercive control</a></li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/30372095/" target="_blank" rel="noopener noreferrer">Ha et al. (2019) — coercive strategies in adult romantic relationships</a></li>
+      </ul>
+    </section>
+
+    <section class="card prose">
+      <h2>Related tests and guides</h2>
+      <div class="grid2">
+        <div class="mini"><h3>Tests</h3><ul>
+          <li><a href="/tests/emotional-manipulation/">Emotional Manipulation Test</a></li>
+          <li><a href="/tests/toxic-relationship/">Toxic Relationship Test</a></li>
+          <li><a href="/tests/relationship-anxiety/">Relationship Anxiety Test</a></li>
+          <li><a href="/tests/trauma-bond/">Trauma Bond Test</a></li>
+        </ul></div>
+        <div class="mini"><h3>Guides</h3><ul>
+          <li><a href="/blog/love-bombing/">Love Bombing vs Genuine Affection</a></li>
+          <li><a href="/blog/healthy-boundaries-script/">40 Boundary Scripts</a></li>
+          <li><a href="/blog/red-flags-dating-apps/">Dating App Red Flags</a></li>
+          <li><a href="/blog/gaslighting-in-relationships/">Gaslighting in Relationships</a></li>
+        </ul></div>
+      </div>
+      <h2>Important note</h2>
+      <p>
+        This test is for educational self-reflection only. It does not diagnose a personality disorder, prove manipulation,
+        determine whether a relationship is abusive, or tell you whether to stay or leave. If you are being threatened,
+        stalked, coerced, physically harmed, sexually pressured, isolated, or monitored, prioritize private real-world safety
+        support rather than relying on an online score.
+      </p>
+    </section>
+  </main>
+
+  <footer id="siteFooter"></footer>
+  <script defer src="/assets/tests/love-bombing.js"></script>
+  <script defer src="/assets/shared.js"></script>
+</body>
+</html>
