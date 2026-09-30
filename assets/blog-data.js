@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "emotional-cheating",
+    title: "Emotional Cheating: 17 Signs, Texting Examples & Friendship vs Affair",
+    excerpt: "Where friendship crosses a line: 17 signs, texting examples, coworker boundaries, secrecy, displaced intimacy, confrontation scripts, and recovery.",
+    date: "2026-09-30",
+    readingMinutes: 27,
+    tags: ["Trust", "Infidelity", "Texting", "Boundaries", "Relationships"],
+    category: "Relationships",
+    cover: "/assets/og/relationship-tests-tools-guides.webp",
+    featured: true
+  },
+  {
     slug: "love-bombing",
     title: "Love Bombing vs Genuine Affection: 15 Signs, Texting Examples & What Happens Next",
     excerpt: "How to tell love bombing from genuine affection using 15 signs, texting examples, boundaries, stages, what happens next, and what to say without overreacting.",
