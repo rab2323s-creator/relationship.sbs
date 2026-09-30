@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>Limerence Test: Is It Love or Limerence? (12 Questions)</title>
+  <meta name="description" content="Take this 12-question Limerence Test to explore intrusive thoughts, craving for reciprocation, idealization, and self-neglect. Get an instant weighted result." />
+  <meta name="keywords" content="limerence test, limerence quiz, am i limerent, am i in limerence, love or limerence test, limerence vs love quiz, obsessive infatuation test, limerence signs test" />
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+  <link rel="canonical" href="https://relationship.sbs/tests/limerence-test/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Limerence Test: Is It Love or Limerence? (12 Questions)" />
+  <meta property="og:description" content="12 questions. Instant weighted score, strongest two dimensions, interpretation, impact signals, and next steps." />
+  <meta property="og:url" content="https://relationship.sbs/tests/limerence-test/" />
+  <meta property="og:site_name" content="relationship.sbs" />
+  <meta property="og:image" content="https://relationship.sbs/assets/og/limerence-explained-quiet-obsession.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Limerence Test: Is It Love or Limerence?" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Limerence Test: Is It Love or Limerence?" />
+  <meta name="twitter:description" content="12 scenario-based questions with an instant score, strongest two dimensions, interpretation, and next steps." />
+  <meta name="twitter:image" content="https://relationship.sbs/assets/og/limerence-explained-quiet-obsession.webp" />
+
+  <link rel="stylesheet" href="/assets/styles.css" />
+
+  <style>
+    .lim-hero{max-width:900px;margin:0 auto 14px}
+    .lim-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .lim-meta span{display:inline-block;padding:6px 9px;border:1px solid rgba(255,255,255,.12);border-radius:999px;font-size:12px}
+    #limerenceQuiz{max-width:900px;margin:0 auto 18px}
+    .lim-test-card,.lim-result{padding:20px;border:1px solid rgba(255,255,255,.12);border-radius:18px;background:rgba(255,255,255,.03)}
+    .lim-test-top,.lim-result-head,.lim-dim-head,.lim-result-actions{display:flex;gap:12px;align-items:center;justify-content:space-between}
+    .lim-back{border:1px solid rgba(255,255,255,.14);background:transparent;color:inherit;border-radius:10px;padding:7px 11px;cursor:pointer}
+    .lim-back:disabled{opacity:.45;cursor:not-allowed}
+    #limProgress{width:100%;height:10px;margin:12px 0 8px}
+    #limQuestion{font-size:24px;line-height:1.3;margin:12px 0 14px}
+    .lim-options{display:grid;gap:10px}
+    .lim-option{width:100%;text-align:left;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.035);color:inherit;border-radius:14px;padding:14px 15px;line-height:1.5;cursor:pointer;font:inherit}
+    .lim-option:hover,.lim-option:focus-visible{transform:translateY(-1px);border-color:rgba(255,255,255,.32);outline:none}
+    .lim-result-head{align-items:flex-start}
+    .lim-eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.08em;opacity:.72;font-weight:800}
+    .lim-result h2{margin:5px 0 0}
+    .lim-score{display:flex;align-items:baseline;gap:3px;white-space:nowrap}
+    .lim-score strong{font-size:46px;line-height:1}
+    .lim-score span{opacity:.7}
+    .lim-result-summary{font-size:18px;line-height:1.65}
+    .lim-note{font-size:13px;opacity:.76;line-height:1.55}
+    .lim-alert,.lim-impact{padding:13px 14px;border-radius:12px;margin:14px 0;line-height:1.55}
+    .lim-alert{border:1px solid rgba(255,170,90,.45)}
+    .lim-impact{border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.03)}
+    .lim-dim-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .lim-dim-card{padding:14px;border:1px solid rgba(255,255,255,.12);border-radius:14px}
+    .lim-dim-head span{font-weight:800}
+    .lim-meter{height:7px;background:rgba(255,255,255,.10);border-radius:999px;overflow:hidden;margin:10px 0}
+    .lim-meter span{display:block;height:100%;background:currentColor;opacity:.72}
+    .lim-dim-card p{margin:7px 0;line-height:1.5}
+    .lim-dim-level{font-size:12px;opacity:.72}
+    .lim-insight{padding:13px 14px;margin:14px 0;border-radius:12px;background:rgba(255,255,255,.04);line-height:1.6}
+    .lim-next{line-height:1.65}
+    .lim-result-actions{justify-content:flex-start;flex-wrap:wrap;margin-top:14px}
+    .lim-story{font-size:17px;line-height:1.75}
+    .lim-grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+    .lim-grid4 .mini{min-height:165px}
+    .lim-table{width:100%;border-collapse:collapse}
+    .lim-table th,.lim-table td{text-align:left;vertical-align:top;padding:10px;border-bottom:1px solid rgba(255,255,255,.10)}
+    @media(max-width:800px){.lim-dim-grid,.lim-grid4{grid-template-columns:1fr 1fr}}
+    @media(max-width:580px){.lim-dim-grid,.lim-grid4{grid-template-columns:1fr}.lim-result-head{display:block}.lim-score{margin-top:12px}}
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"WebPage",
+        "@id":"https://relationship.sbs/tests/limerence-test/#webpage",
+        "url":"https://relationship.sbs/tests/limerence-test/",
+        "name":"Limerence Test: Is It Love or Limerence? (12 Questions)",
+        "description":"A free 12-question limerence self-reflection test with a weighted score, strongest two dimensions, interpretation, impact signals, and immediate next steps.",
+        "inLanguage":"en",
+        "isPartOf":{"@type":"WebSite","name":"relationship.sbs","url":"https://relationship.sbs/"},
+        "mainEntity":{"@id":"https://relationship.sbs/tests/limerence-test/#quiz"},
+        "datePublished":"2026-10-01",
+        "dateModified":"2026-10-01"
+      },
+      {
+        "@type":"Quiz",
+        "@id":"https://relationship.sbs/tests/limerence-test/#quiz",
+        "name":"Limerence Test: Is It Love or Limerence?",
+        "description":"A 12-question educational self-reflection quiz exploring intrusive romantic preoccupation, dependence on reciprocation, idealization and reality gaps, and displacement of daily life.",
+        "url":"https://relationship.sbs/tests/limerence-test/",
+        "isAccessibleForFree":true,
+        "inLanguage":"en",
+        "learningResourceType":"Relationship self-reflection test",
+        "interactivityType":"active",
+        "timeRequired":"PT3M",
+        "educationalUse":"Self-reflection",
+        "audience":{"@type":"PeopleAudience","suggestedMinAge":18},
+        "about":[
+          {"@type":"Thing","name":"Limerence"},
+          {"@type":"Thing","name":"Romantic preoccupation"},
+          {"@type":"Thing","name":"Reciprocation uncertainty"},
+          {"@type":"Thing","name":"Idealization"},
+          {"@type":"Thing","name":"Relationship rumination"}
+        ],
+        "keywords":["limerence test","limerence quiz","am I limerent","love or limerence test","limerence vs love"],
+        "isBasedOn":[
+          "https://pubmed.ncbi.nlm.nih.gov/41178753/",
+          "https://health.clevelandclinic.org/limerence",
+          "https://doi.org/10.1007/s11896-024-09674-x",
+          "https://pubmed.ncbi.nlm.nih.gov/34869848/",
+          "https://pubmed.ncbi.nlm.nih.gov/21169522/"
+        ],
+        "author":{"@type":"Organization","name":"relationship.sbs","url":"https://relationship.sbs/about/"},
+        "publisher":{"@type":"Organization","name":"relationship.sbs","url":"https://relationship.sbs/"}
+      },
+      {
+        "@type":"BreadcrumbList",
+        "@id":"https://relationship.sbs/tests/limerence-test/#breadcrumbs",
+        "itemListElement":[
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://relationship.sbs/"},
+          {"@type":"ListItem","position":2,"name":"Tests","item":"https://relationship.sbs/tests/"},
+          {"@type":"ListItem","position":3,"name":"Limerence Test","item":"https://relationship.sbs/tests/limerence-test/"}
+        ]
+      },
+      {
+        "@type":"FAQPage",
+        "@id":"https://relationship.sbs/tests/limerence-test/#faq",
+        "mainEntity":[
+          {"@type":"Question","name":"What is a limerence test?","acceptedAnswer":{"@type":"Answer","text":"A limerence test is a self-reflection tool for patterns such as intrusive romantic preoccupation, intense need for reciprocation, idealization, repeated checking, and neglect of parts of daily life. This quiz is educational and is not a diagnosis."}},
+          {"@type":"Question","name":"How is limerence different from love?","acceptedAnswer":{"@type":"Answer","text":"Limerence tends to center on intrusive preoccupation, uncertainty, idealization, and a strong need to know the feelings are returned. Love can also be intense, but a reciprocal relationship provides more reality, mutual knowledge, commitment, and room for both people to remain full individuals."}},
+          {"@type":"Question","name":"Is this the validated LQ-11 limerence questionnaire?","acceptedAnswer":{"@type":"Answer","text":"No. The LQ-11 is a separate research questionnaire published and validated in 2025. This 12-question test uses original scenarios and an original scoring model informed by limerence research; it does not reproduce or claim the validation of the LQ-11."}},
+          {"@type":"Question","name":"Does a high score mean I have limerence?","acceptedAnswer":{"@type":"Answer","text":"No. The score describes how strongly your answers fit the patterns measured by this quiz. It is not a clinical cutoff, probability, or diagnosis."}},
+          {"@type":"Question","name":"Can limerence happen even if the person likes me back?","acceptedAnswer":{"@type":"Answer","text":"Yes. Uncertainty about reciprocation can intensify limerent patterns, but a person may experience intrusive preoccupation and idealization even when some interest is mutual. The key question is how much the attachment is controlling attention, mood, and daily life."}},
+          {"@type":"Question","name":"What should I do if I cannot stop thinking about one person?","acceptedAnswer":{"@type":"Answer","text":"Start by reducing behaviors that repeatedly reactivate the loop, restore routines and relationships that have narrowed, and distinguish facts from imagined possibilities. If the preoccupation is significantly disrupting sleep, work, relationships, boundaries, or wellbeing, consider support from a licensed mental-health professional."}}
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header id="siteHeader"></header>
+
+  <main class="wrap">
+    <section class="card prose lim-hero">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/tests/">Tests</a> / Limerence Test</nav>
+      <h1>Limerence Test: Is It Love or Limerence?</h1>
+      <p class="intro">Think about one specific person. Answer from the repeated pattern of the past month—not one intense night. This 12-question test looks at whether attraction is staying grounded or turning into a loop of intrusive thought, reciprocation-seeking, idealization, and self-displacement.</p>
+      <div class="lim-meta"><span>12 questions</span><span>2–3 minutes</span><span>Instant result</span><span>No sign-up</span></div>
+    </section>
+
+    <div id="limerenceQuiz"></div>
+
+    <section class="card prose">
+      <h2>What this Limerence Test measures</h2>
+      <p>
+        A useful limerence test should not score every crush as a problem. Early romantic attraction naturally includes
+        excitement, fantasy, and wanting to be liked. The more distinctive pattern is when attention becomes difficult to
+        redirect, uncertainty keeps the mind engaged, the person is idealized beyond the available evidence, and other parts
+        of life begin to move around the attachment.
+      </p>
+      <p>
+        Your result uses four dimensions. Some answers contribute to more than one dimension because real psychological
+        patterns overlap. For example, repeatedly rereading a message can reflect both intrusive preoccupation and a need for
+        reassurance that the feeling is reciprocated.
+      </p>
+
+      <div class="lim-grid4">
+        <div class="mini"><h3>Intrusive preoccupation · 30%</h3><p>How strongly attention gets captured by thoughts, fantasies, checking, and mental replay.</p></div>
+        <div class="mini"><h3>Reciprocation dependence · 28%</h3><p>How strongly your mood and relief depend on signs that this person wants you back.</p></div>
+        <div class="mini"><h3>Idealization &amp; reality gap · 18%</h3><p>Whether the mental version of the person outruns what real shared experience supports.</p></div>
+        <div class="mini"><h3>Self-displacement · 24%</h3><p>Whether sleep, focus, routines, relationships, boundaries, or self-directed choices are being pushed aside.</p></div>
+      </div>
+
+      <p>
+        The weighting is deliberate. Intrusive preoccupation and reciprocation dependence are central to classic descriptions
+        of limerence, while recent measurement research also emphasizes intense attachment needs and neglect of self and others.
+        This test does <strong>not</strong> copy that research instrument; it uses an original scenario-based model.
+      </p>
+    </section>
+
+    <section class="card prose lim-story">
+      <h2>The message was only “maybe Friday” — but it took over three days</h2>
+      <p class="small muted"><strong>Composite story:</strong> This story is fictionalized from common patterns. It is not a real client or identifiable person.</p>
+      <p>
+        Lena had known Sam for four months. They were not exactly dating, but they were not exactly nothing. Some weeks they
+        talked every day. Other weeks Sam went quiet and returned with the same warmth, as if the silence had not happened.
+      </p>
+      <p>
+        On Tuesday, Lena asked if Sam wanted to meet that weekend.
+      </p>
+      <p>
+        “Maybe Friday,” Sam replied.
+      </p>
+      <p>
+        The message contained two words and no rejection. By lunch, Lena had read it eleven times.
+      </p>
+      <p>
+        She noticed the “maybe” first. Then the fact that Sam had answered in six minutes. Then the missing emoji. Then she
+        checked whether Sam had viewed her story. At work, she opened a spreadsheet and realized she had been staring through
+        the same row for nearly ten minutes.
+      </p>
+      <p>
+        By Wednesday, the question was no longer “Are we meeting Friday?” It was “What am I to this person?”
+      </p>
+      <p>
+        Lena could list reasons they were probably wrong for each other. Sam avoided difficult conversations. Their schedules
+        barely overlapped. They wanted different things long-term. None of those facts felt as emotionally powerful as the
+        possibility that Sam might finally choose her.
+      </p>
+      <p>
+        Thursday evening, Sam sent: “Friday could work :)”
+      </p>
+      <p>
+        The relief was immediate. Lena felt light, focused, almost embarrassed by how bad the previous two days had felt.
+      </p>
+      <p>
+        That relief is an important clue. The attachment was not being powered only by how much she liked Sam. It was being
+        powered by <strong>uncertainty, mental replay, and the temporary emotional reward of a hopeful signal</strong>.
+      </p>
+      <p>
+        That is what this test is trying to separate from ordinary attraction.
+      </p>
+    </section>
+
+    <section class="card prose">
+      <h2>Limerence vs love vs a crush</h2>
+      <p>
+        Limerence is not an official psychiatric diagnosis. The term was introduced by psychologist Dorothy Tennov to describe
+        an intense state of romantic preoccupation and longing for reciprocation. Cleveland Clinic describes it as an
+        involuntary fixation in which thoughts, fear of rejection, idealization, mood swings, and repeated checking can become
+        difficult to control.
+      </p>
+
+      <table class="lim-table">
+        <thead><tr><th>Pattern</th><th>What often drives it</th><th>What reality does</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Crush / infatuation</strong></td><td>Attraction, novelty, fantasy, curiosity.</td><td>Usually remains compatible with a broad life and can update as you learn more.</td></tr>
+          <tr><td><strong>Limerence-like pattern</strong></td><td>Intrusive preoccupation, uncertainty, longing for reciprocation, idealization.</td><td>Ambiguous evidence can fuel more thinking rather than settle it.</td></tr>
+          <tr><td><strong>Reciprocal love</strong></td><td>Attraction plus mutual knowledge, care, commitment, and shared reality.</td><td>Closeness includes ordinary life, incompatibilities, boundaries, repair, and knowing the real person.</td></tr>
+        </tbody>
+      </table>
+
+      <p>
+        These categories are not perfect boxes. A relationship can begin with intense infatuation and grow into mutual love.
+        Limerence-like feelings can also exist inside a real relationship. The practical question is whether your experience is
+        becoming more grounded as reality increases—or more dependent on possibility and uncertainty.
+      </p>
+    </section>
+
+    <section class="card prose">
+      <h2>Why uncertainty can make one person harder to stop thinking about</h2>
+      <p>
+        Limerence is often described as especially sensitive to uncertainty about reciprocation. A 2011 experiment found that
+        uncertainty about whether another person liked the participant could increase attraction and the amount of time the
+        participant thought about that person. That study was not a limerence test and used a narrow experimental sample, but
+        it helps explain why ambiguous signals can keep attention engaged.
+      </p>
+      <p>
+        A broader 2021 review of theories of romantic passion also describes uncertainty about reciprocation as a central part
+        of Tennov’s limerence theory, while noting that empirical support for uncertainty as a general cause of passion is mixed.
+      </p>
+      <p>
+        That is why this quiz does not ask only “How much do you like them?” It asks what ambiguity does to your attention,
+        checking, mood, and ability to keep living your own life.
+      </p>
+    </section>
+
+    <section class="card prose">
+      <h2>What the new LQ-11 research adds—and what it does not mean for this quiz</h2>
+      <p>
+        In 2025, researchers published the <strong>Limerence Questionnaire-11 (LQ-11)</strong>, a short research measure
+        developed across two samples of people who had experienced or were experiencing limerence. The authors reported a
+        two-factor structure: <strong>Intense Need for Attachment</strong> and <strong>Neglect to Self and Others</strong>,
+        with evidence of reliability and validity for that instrument.
+      </p>
+      <p>
+        That is important because older online limerence quizzes often had no validated research measure to point to. But the
+        validation of the LQ-11 belongs to the LQ-11 itself. It does not automatically validate every limerence quiz on the
+        internet.
+      </p>
+      <p>
+        This page therefore uses <strong>original questions, original result bands, and original scoring</strong>. It is
+        informed by the published dimensions and the wider literature, but it is not an adaptation or substitute for the
+        LQ-11 and does not claim clinical accuracy.
+      </p>
+    </section>
+
+    <section class="card prose">
+      <h2>Why the score shows your two strongest dimensions</h2>
+      <p>
+        Two people can both score 62/100 and have very different experiences.
+      </p>
+      <p>
+        One person may be dominated by <strong>intrusive preoccupation + reciprocation dependence</strong>: they can function,
+        but every message determines their emotional weather. Another may show <strong>idealization + self-displacement</strong>:
+        the imagined relationship has become more compelling than the real one while work, sleep, and friendships are shrinking.
+      </p>
+      <p>
+        A flat total would hide that difference. Your result therefore shows both the overall
+        <strong>Limerence Pattern Score</strong> and the two dimensions that contributed most strongly to your pattern.
+      </p>
+    </section>
+
+    <section class="card prose">
+      <h2>How to interpret your Limerence Pattern Score</h2>
+      <p>
+        This score is an original educational model. It is not a diagnosis, clinical cutoff, probability that you “have
+        limerence,” or prediction of what this person feels about you.
+      </p>
+      <ul>
+        <li><strong>0–19:</strong> strong feelings, mostly grounded.</li>
+        <li><strong>20–39:</strong> infatuation with some limerent pull.</li>
+        <li><strong>40–59:</strong> a limerence-like loop is active.</li>
+        <li><strong>60–79:</strong> strong limerence-like pattern.</li>
+        <li><strong>80–100:</strong> high-impact limerence-like pattern.</li>
+      </ul>
+      <p>
+        The result also separates <strong>functional impact</strong> and a <strong>boundary reality-check</strong> from the
+        total. If your feelings are intense but your life remains broad and you respect clear boundaries, that is meaningfully
+        different from an attachment that is disrupting sleep, work, other relationships, or consent.
+      </p>
+    </section>
+
+    <section class="card prose">
+      <h2>When “I can’t stop thinking about them” deserves more than another quiz</h2>
+      <p>
+        Limerence is under-researched compared with established diagnoses. A 2021 published case study described significant
+        productivity loss and distress in one person with limerence and reported improvement after a cognitive-behavioral
+        approach. A 2024 scoping review also examined limerence, rumination, fixation, and possible escalation into harmful
+        behavior. Neither paper means that intrusive romantic thoughts automatically become dangerous.
+      </p>
+      <p>
+        The more useful threshold is impact. Consider qualified support if the attachment is repeatedly disrupting sleep,
+        work, study, eating, existing relationships, or your ability to respect another person’s clear boundary—or if you feel
+        unable to redirect behavior even when you understand the situation intellectually.
+      </p>
+      <p>
+        If the problem is broader relationship uncertainty rather than one-person fixation, the
+        <a href="/tests/relationship-anxiety/">Relationship Anxiety Test</a> is a better fit. If the loop is mainly about
+        decoding texts, use <a href="/blog/stop-overthinking-texts/">How to Stop Overthinking Text Messages</a>.
+      </p>
+    </section>
+
+    <section class="card prose">
+      <h2>Limerence Test FAQ</h2>
+      <div class="faq">
+        <details><summary>What is a limerence test?</summary><p>A limerence test is a self-reflection tool for patterns such as intrusive romantic preoccupation, intense need for reciprocation, idealization, repeated checking, and neglect of parts of daily life. This quiz is educational and is not a diagnosis.</p></details>
+        <details><summary>How is limerence different from love?</summary><p>Limerence tends to center on intrusive preoccupation, uncertainty, idealization, and a strong need to know the feelings are returned. Love can also be intense, but a reciprocal relationship gives you more reality: mutual knowledge, boundaries, repair, commitment, and ordinary life together.</p></details>
+        <details><summary>Is this the validated LQ-11 limerence questionnaire?</summary><p>No. The LQ-11 is a separate research questionnaire published and validated in 2025. This test uses original scenarios and an original scoring model informed by limerence research; it does not reproduce or claim the validation of the LQ-11.</p></details>
+        <details><summary>Does a high score mean I have limerence?</summary><p>No. The score describes how strongly your answers fit the patterns measured by this quiz. It is not a clinical cutoff, probability, or diagnosis.</p></details>
+        <details><summary>Can limerence happen if the person likes me back?</summary><p>Yes. Uncertainty often intensifies limerent patterns, but intrusive preoccupation and idealization can exist even when some interest is mutual. Watch whether increasing reality makes the attachment more grounded or whether your mind remains captured by signs and possibility.</p></details>
+        <details><summary>Is limerence the same as relationship OCD?</summary><p>No. They can overlap in intrusive thoughts or checking, but relationship OCD is an OCD presentation and requires clinical assessment. Limerence is a descriptive relationship concept, not a recognized mental-health diagnosis.</p></details>
+        <details><summary>How long does limerence last?</summary><p>There is no reliable duration a quiz can predict. The course varies with the person, the relationship, uncertainty, contact, and other factors. If the experience is significantly impairing your life, you do not need to wait for a particular timeline before seeking support.</p></details>
+        <details><summary>What should I do if I cannot stop thinking about one person?</summary><p>Start by reducing behaviors that repeatedly reactivate the loop, restore routines and relationships that have narrowed, and separate facts from imagined possibilities. If the preoccupation is significantly disrupting daily life or boundaries, consider support from a licensed mental-health professional.</p></details>
+      </div>
+    </section>
+
+    <section class="card prose">
+      <h2>Research notes &amp; sources</h2>
+      <p>
+        Limerence is a descriptive psychological concept rather than a formal diagnosis. This test is an original educational
+        self-reflection tool. It does not reproduce a validated questionnaire and should not be used to diagnose limerence,
+        OCD, attachment disorders, or any other mental-health condition.
+      </p>
+      <ul>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/41178753/" target="_blank" rel="noopener noreferrer">Marshall et al. (2025) — Development and Validation of the Limerence Questionnaire (LQ-11)</a></li>
+        <li><a href="https://health.clevelandclinic.org/limerence" target="_blank" rel="noopener noreferrer">Cleveland Clinic — Limerence: The Science of Obsessive Attraction</a></li>
+        <li><a href="https://doi.org/10.1007/s11896-024-09674-x" target="_blank" rel="noopener noreferrer">Bradbury et al. — Limerence, Hidden Obsession, Fixation, and Rumination: A Scoping Review</a></li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/34869848/" target="_blank" rel="noopener noreferrer">Wyant (2021) — Treatment of Limerence Using a Cognitive Behavioral Approach: A Case Study</a></li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/21169522/" target="_blank" rel="noopener noreferrer">Whitchurch et al. (2011) — Uncertainty Can Increase Romantic Attraction</a></li>
+      </ul>
+    </section>
+
+    <section class="card prose">
+      <h2>Related tests and guides</h2>
+      <div class="grid2">
+        <div class="mini"><h3>Tests</h3><ul>
+          <li><a href="/tests/relationship-anxiety/">Relationship Anxiety Test</a></li>
+          <li><a href="/tests/attachment-style/">Attachment Style Test</a></li>
+          <li><a href="/tests/overthinking-relationship/">Overthinking in a Relationship Test</a></li>
+          <li><a href="/tests/emotional-availability/">Emotional Availability Test</a></li>
+        </ul></div>
+        <div class="mini"><h3>Guides</h3><ul>
+          <li><a href="/blog/limerence-explained/">What Is Limerence?</a></li>
+          <li><a href="/blog/stop-overthinking-texts/">How to Stop Overthinking Texts</a></li>
+          <li><a href="/blog/anxious-attachment-signs/">Anxious Attachment Signs</a></li>
+          <li><a href="/blog/relationship-anxiety-or-gut-feeling/">Relationship Anxiety or Gut Feeling?</a></li>
+        </ul></div>
+      </div>
+
+      <h2>Important note</h2>
+      <p>
+        This test is for educational self-reflection only. It does not diagnose limerence, obsessive-compulsive disorder,
+        attachment disorders, or any mental-health condition, and it cannot tell you what another person feels. If the
+        preoccupation is causing severe distress, self-harm thoughts, stalking behavior, inability to respect boundaries, or
+        major disruption to daily life, seek qualified real-world support rather than relying on an online result.
+      </p>
+    </section>
+  </main>
+
+  <footer id="siteFooter"></footer>
+  <script defer src="/assets/tests/limerence-test.js"></script>
+  <script defer src="/assets/shared.js"></script>
+</body>
+</html>
