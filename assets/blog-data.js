@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "love-bombing",
+    title: "Love Bombing vs Genuine Affection: 15 Signs, Texting Examples & What Happens Next",
+    excerpt: "How to tell love bombing from genuine affection using 15 signs, texting examples, boundaries, stages, what happens next, and what to say without overreacting.",
+    date: "2026-09-30",
+    readingMinutes: 25,
+    tags: ["Dating", "Emotional Manipulation", "Boundaries", "Relationships"],
+    category: "Dating",
+    cover: "/assets/og/relationship-tests-tools-guides.webp",
+    featured: true
+  },
+  {
     slug: "stonewalling-in-a-relationship",
     title: "Stonewalling in a Relationship: 10 Signs, Examples & What to Say",
     excerpt: "What stonewalling looks like, why a partner may shut down during arguments, how it differs from silent treatment, and what to say without chasing.",
