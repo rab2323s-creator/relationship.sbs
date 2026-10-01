@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "dismissive-avoidant-attachment",
+    title: "Dismissive Avoidant Attachment: 17 Signs, Triggers & What Actually Helps",
+    excerpt: "A research-informed guide to dismissive-avoidant attachment: deactivating strategies, triggers, intimacy, conflict, anxious-avoidant cycles, and realistic change.",
+    date: "2026-10-01",
+    readingMinutes: 24,
+    tags: ["Attachment", "Avoidant Attachment", "Intimacy", "Relationships", "Psychology"],
+    category: "Attachment",
+    cover: "/assets/og/relationship-tests-tools-guides.webp",
+    featured: true
+  },
+  {
     slug: "emotional-cheating",
     title: "Emotional Cheating: 17 Signs, Texting Examples & Friendship vs Affair",
     excerpt: "Where friendship crosses a line: 17 signs, texting examples, coworker boundaries, secrecy, displaced intimacy, confrontation scripts, and recovery.",
