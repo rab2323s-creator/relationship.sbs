@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "future-faking",
+    title: "Future Faking in Relationships: 7 Signs & the Calendar Test",
+    excerpt: "Big promises, no movement? Learn 7 signs of future faking, real examples, and the Calendar Test for separating hopeful talk from actual commitment.",
+    date: "2026-10-01",
+    readingMinutes: 8,
+    tags: ["Dating", "Commitment", "Red Flags", "Relationships"],
+    category: "Dating",
+    cover: "/assets/og/relationship-tests-tools-guides.webp",
+    featured: true
+  },
+  {
     slug: "dismissive-avoidant-attachment",
     title: "Dismissive Avoidant Attachment: 17 Signs, Triggers & What Actually Helps",
     excerpt: "A research-informed guide to dismissive-avoidant attachment: deactivating strategies, triggers, intimacy, conflict, anxious-avoidant cycles, and realistic change.",
