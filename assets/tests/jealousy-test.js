@@ -110,7 +110,7 @@
     {
       text:'A real boundary violation has happened before. How does that history affect your jealousy now?',
       options:[
-        {label:'I use the past as context, but I still judge the present by current evidence.',score:{cognitive_suspicion:0,emotional_reactivity:1}},
+        {label:'I use the past as context, but I still judge the present by current evidence.',score:{cognitive_suspicion:0,emotional_reactivity:0}},
         {label:'I am more sensitive now, but I can distinguish triggers from new facts.',score:{cognitive_suspicion:1,emotional_reactivity:2}},
         {label:'My nervous system often reacts as if the past is happening again, even before I know what is true now.',score:{emotional_reactivity:3,cognitive_suspicion:3},tags:['history_trigger']},
         {label:'I assume trust must be proven continuously through access, checking, or restrictions.',score:{monitoring_control:4,cognitive_suspicion:3,reassurance_comparison:2},tags:['history_trigger','control_flag']}
