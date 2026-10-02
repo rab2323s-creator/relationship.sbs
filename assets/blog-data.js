@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "ai-cheating-in-relationships",
+    title: "Is Talking to an AI Chatbot Cheating? 9 Signs It Crosses the Line",
+    excerpt: "AI girlfriend, AI boyfriend, sexting, emotional attachment, hidden chats: use a 5-part AI intimacy boundary test to decide when chatbot use crosses a relationship line.",
+    date: "2026-10-02",
+    readingMinutes: 17,
+    tags: ["AI", "Emotional Cheating", "Trust", "Boundaries", "Relationships"],
+    category: "Relationships & AI",
+    cover: "/assets/og/relationship-tests-tools-guides.webp",
+    featured: true
+  },
+  {
     slug: "how-to-get-over-a-breakup",
     title: "How to Get Over a Breakup: What to Do in the First 30 Days",
     excerpt: "A practical 30-day breakup recovery map: stabilize, reduce repeated triggers, rebuild structure, restore identity, and decide whether contact helps or reopens the wound.",
