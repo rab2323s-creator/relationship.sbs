@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "how-to-get-over-a-breakup",
+    title: "How to Get Over a Breakup: What to Do in the First 30 Days",
+    excerpt: "A practical 30-day breakup recovery map: stabilize, reduce repeated triggers, rebuild structure, restore identity, and decide whether contact helps or reopens the wound.",
+    date: "2026-10-02",
+    readingMinutes: 15,
+    tags: ["Breakup", "Healing", "Psychology", "Relationships"],
+    category: "Breakup",
+    cover: "/assets/og/relationship-tests-tools-guides.webp",
+    featured: true
+  },
+  {
     slug: "future-faking",
     title: "Future Faking in Relationships: 7 Signs & the Calendar Test",
     excerpt: "Big promises, no movement? Learn 7 signs of future faking, real examples, and the Calendar Test for separating hopeful talk from actual commitment.",
