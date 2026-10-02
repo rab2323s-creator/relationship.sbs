@@ -159,5 +159,68 @@ window.TEST_INDEX = [
     "time": "2–3 min",
     "guide": "/blog/anxious-attachment-signs/",
     "intent": "quiz"
+  },
+  {
+    "id": "codependency_test",
+    "slug": "codependency-test",
+    "title": "Codependency Test: Am I Codependent? 20-Question Quiz",
+    "blurb": "20 questions exploring self-neglect, rescuing, approval-linked self-worth, emotional over-focus, boundaries, and loss of identity.",
+    "time": "3–4 min",
+    "guide": "/blog/healthy-boundaries-script/",
+    "intent": "quiz"
+  },
+  {
+    "id": "emotional_detachment",
+    "slug": "emotional-detachment",
+    "title": "Emotional Detachment Test: Have You Emotionally Checked Out?",
+    "blurb": "18 questions exploring whether you feel strained, protectively withdrawn, emotionally checked out, or numb beyond the relationship.",
+    "time": "3–4 min",
+    "guide": "/blog/emotional-detachment-in-relationships/",
+    "intent": "quiz"
+  },
+  {
+    "id": "fear_of_intimacy",
+    "slug": "fear-of-intimacy",
+    "title": "Fear of Intimacy Test: Are You Afraid of Emotional Closeness?",
+    "blurb": "18 questions exploring emotional closeness, vulnerability, dependence, distancing, autonomy, and physical intimacy patterns.",
+    "time": "3–4 min",
+    "guide": "/blog/fear-of-intimacy/",
+    "intent": "quiz"
+  },
+  {
+    "id": "jealousy_test",
+    "slug": "jealousy-test",
+    "title": "Jealousy Test: Am I Too Jealous in My Relationship? (12 Questions)",
+    "blurb": "12 questions exploring suspicion, emotional reactivity, reassurance loops, comparison, monitoring, and control.",
+    "time": "2–3 min",
+    "guide": "/blog/retroactive-jealousy/",
+    "intent": "quiz"
+  },
+  {
+    "id": "limerence_test",
+    "slug": "limerence-test",
+    "title": "Limerence Test: Is It Love or Limerence? (12 Questions)",
+    "blurb": "12 questions exploring intrusive thoughts, craving for reciprocation, idealization, and self-neglect.",
+    "time": "2–3 min",
+    "guide": "/blog/limerence-explained/",
+    "intent": "quiz"
+  },
+  {
+    "id": "love_bombing",
+    "slug": "love-bombing",
+    "title": "Love Bombing Test: Am I Being Love Bombed? (12 Questions)",
+    "blurb": "12 questions assessing fast intensity, boundary pressure, dependency, control, and whether affection still feels safe when you slow down.",
+    "time": "2–3 min",
+    "guide": "/blog/love-bombing/",
+    "intent": "quiz"
+  },
+  {
+    "id": "should_we_break_up",
+    "slug": "should-we-break-up",
+    "title": "Should We Break Up Quiz? 20 Questions for Relationship Clarity",
+    "blurb": "20 questions exploring respect, repair, reciprocity, emotional cost, future fit, and whether your relationship needs change.",
+    "time": "3–4 min",
+    "guide": "/blog/toxic-relationship-signs/",
+    "intent": "quiz"
   }
 ];
