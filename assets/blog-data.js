@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "mental-load-in-relationships",
+    title: "Mental Load in Relationships: Why “Just Tell Me What to Do” Isn’t Helping",
+    excerpt: "Why chores can look 50/50 while one person still carries the invisible work. Use the Ownership Test, mental-load audit, and scripts to share responsibility.",
+    date: "2026-10-02",
+    readingMinutes: 16,
+    tags: ["Mental Load", "Communication", "Relationships", "Household Labor"],
+    category: "Communication",
+    cover: "/assets/og/relationship-tests-tools-guides.webp",
+    featured: true
+  },
+  {
     slug: "ai-cheating-in-relationships",
     title: "Is Talking to an AI Chatbot Cheating? 9 Signs It Crosses the Line",
     excerpt: "AI girlfriend, AI boyfriend, sexting, emotional attachment, hidden chats: use a 5-part AI intimacy boundary test to decide when chatbot use crosses a relationship line.",
