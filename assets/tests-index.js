@@ -222,5 +222,14 @@ window.TEST_INDEX = [
     "time": "3–4 min",
     "guide": "/blog/toxic-relationship-signs/",
     "intent": "quiz"
+  },
+  {
+    "id": "mental_load",
+    "slug": "mental-load",
+    "title": "Mental Load Test: Are You the Default Manager? (12 Questions)",
+    "blurb": "12 questions exploring invisible planning, remembering, follow-through, emotional labor, and whether shared life depends on you as the default manager.",
+    "time": "2–3 min",
+    "guide": "/blog/mental-load-in-relationships/",
+    "intent": "quiz"
   }
 ];
