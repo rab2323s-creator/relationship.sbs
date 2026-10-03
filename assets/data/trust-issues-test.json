@@ -1,0 +1,125 @@
+{
+  "id": "trust-issues-test",
+  "version": "1.0.0",
+  "published": "2026-10-04",
+  "canonical": "https://relationship.sbs/tests/trust-issues-test/",
+  "title": "Trust Issues Test: Do I Have Trust Issues?",
+  "searchIntent": [
+    "trust issues test",
+    "do i have trust issues quiz",
+    "trust issues quiz",
+    "relationship trust test"
+  ],
+  "questionCount": 12,
+  "estimatedTime": "2-3 minutes",
+  "scoring": {
+    "range": [
+      0,
+      100
+    ],
+    "answerValues": [
+      0,
+      1,
+      3,
+      4
+    ],
+    "note": "One evidence-context answer intentionally carries a low trust-difficulty value despite high evidence concern so justified caution is not inflated into an internal trust-issues score.",
+    "dimensions": {
+      "threat": {
+        "label": "Threat sensitivity",
+        "weight": 0.3,
+        "items": [
+          1,
+          3,
+          12
+        ]
+      },
+      "guarded": {
+        "label": "Guarded vulnerability",
+        "weight": 0.25,
+        "items": [
+          4,
+          5,
+          11
+        ]
+      },
+      "checking": {
+        "label": "Reassurance & checking",
+        "weight": 0.25,
+        "items": [
+          7,
+          8,
+          9
+        ]
+      },
+      "updating": {
+        "label": "Evidence updating",
+        "weight": 0.2,
+        "items": [
+          2,
+          6,
+          10
+        ]
+      }
+    },
+    "bands": [
+      {
+        "min": 0,
+        "max": 19,
+        "key": "flexible",
+        "label": "Flexible Trust"
+      },
+      {
+        "min": 20,
+        "max": 39,
+        "key": "cautious",
+        "label": "Cautious but Adaptable"
+      },
+      {
+        "min": 40,
+        "max": 59,
+        "key": "guarded",
+        "label": "Guarded Trust"
+      },
+      {
+        "min": 60,
+        "max": 79,
+        "key": "high_alert",
+        "label": "High-Alert Trust"
+      },
+      {
+        "min": 80,
+        "max": 100,
+        "key": "entrenched",
+        "label": "Entrenched Distrust Pattern"
+      }
+    ],
+    "contextRules": {
+      "evidenceConcern": "Concrete breach answers are reported separately so a high trust-difficulty score does not automatically reframe justified caution as irrational distrust.",
+      "personalization": "Results use overall score, two strongest dimensions, evidence count, and response tags such as reassurance loops, checking behavior, past-to-present expectations, and difficulty updating."
+    }
+  },
+  "methodology": {
+    "type": "original educational self-reflection questionnaire",
+    "validatedInstrument": false,
+    "diagnostic": false,
+    "design": "scenario-based items written around ambiguity, reliance, closeness, reassurance, checking, repair, and evidence updating",
+    "researchBackground": [
+      "Rempel, Holmes & Zanna (1985) - Trust in Close Relationships",
+      "Rotter (1967) - interpersonal trust research",
+      "Mikulincer (1998) - attachment working models and sense of trust",
+      "relationship research on attachment insecurity and reassurance-seeking"
+    ]
+  },
+  "internalLinks": [
+    "/tests/relationship-anxiety/",
+    "/tests/attachment-style/",
+    "/tests/jealousy-test/",
+    "/tests/relationship-trauma/",
+    "/blog/trust-building-actions/",
+    "/blog/relationship-anxiety-or-gut-feeling/",
+    "/blog/emotional-safety-in-relationships/",
+    "/blog/retroactive-jealousy/",
+    "/methodology/"
+  ]
+}
