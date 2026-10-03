@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "chatgpt-relationship-advice",
+    title: "ChatGPT Relationship Advice: When AI Helps—and When It Misleads",
+    excerpt: "What current research says about asking ChatGPT for relationship advice: empathy, one-sided stories, sycophancy, privacy, safer prompts, and when human support matters.",
+    date: "2026-10-04",
+    readingMinutes: 22,
+    tags: ["AI", "Relationship Advice", "Communication", "Psychology", "Relationships"],
+    category: "Relationships & AI",
+    cover: "/assets/og/relationship-tests-tools-guides.webp",
+    featured: true
+  },
+  {
     slug: "why-dont-i-trust-my-partner",
     title: "Why Don’t I Trust My Partner? 9 Reasons Your Mind Keeps Looking for Proof",
     excerpt: "Why distrust persists even in love: past betrayal, anxious attachment, reassurance and checking loops, real red flags, and how to tell fear from evidence.",
