@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "why-dont-i-trust-my-partner",
+    title: "Why Don’t I Trust My Partner? 9 Reasons Your Mind Keeps Looking for Proof",
+    excerpt: "Why distrust persists even in love: past betrayal, anxious attachment, reassurance and checking loops, real red flags, and how to tell fear from evidence.",
+    date: "2026-10-04",
+    readingMinutes: 18,
+    tags: ["Trust", "Relationship Anxiety", "Attachment", "Relationships", "Psychology"],
+    category: "Psychology",
+    cover: "/assets/og/emotional-safety-in-relationships-quiet-distance.webp",
+    featured: true
+  },
+  {
     slug: "mental-load-in-relationships",
     title: "Mental Load in Relationships: Why “Just Tell Me What to Do” Isn’t Helping",
     excerpt: "Why chores can look 50/50 while one person still carries the invisible work. Use the Ownership Test, mental-load audit, and scripts to share responsibility.",
