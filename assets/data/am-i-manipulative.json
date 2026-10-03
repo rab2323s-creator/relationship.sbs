@@ -1,0 +1,130 @@
+{
+  "id": "am-i-manipulative",
+  "version": "1.0.0",
+  "published": "2026-10-04",
+  "canonical": "https://relationship.sbs/tests/am-i-manipulative/",
+  "title": "Am I Manipulative? Test: Free 12-Question Manipulation Quiz",
+  "h1": "Am I Manipulative? 12 Questions About Control, Guilt & Emotional Pressure",
+  "searchIntent": [
+    "am i manipulative quiz",
+    "am i manipulative test",
+    "manipulator test",
+    "manipulation test",
+    "manipulative test",
+    "manipulative quiz",
+    "are you manipulative quiz",
+    "how manipulative am i quiz"
+  ],
+  "questionCount": 12,
+  "estimatedTime": "2-3 minutes",
+  "scoring": {
+    "range": [
+      0,
+      100
+    ],
+    "answerValues": [
+      0,
+      1,
+      3,
+      4
+    ],
+    "dimensions": {
+      "indirect": {
+        "label": "Indirect pressure & guilt",
+        "weight": 0.3,
+        "items": [
+          1,
+          4,
+          7
+        ]
+      },
+      "control": {
+        "label": "Control & autonomy",
+        "weight": 0.25,
+        "items": [
+          2,
+          5,
+          10
+        ]
+      },
+      "responsibility": {
+        "label": "Reality & responsibility",
+        "weight": 0.25,
+        "items": [
+          3,
+          6,
+          9
+        ]
+      },
+      "leverage": {
+        "label": "Punishment & leverage",
+        "weight": 0.2,
+        "items": [
+          8,
+          11,
+          12
+        ]
+      }
+    },
+    "bands": [
+      {
+        "min": 0,
+        "max": 19,
+        "key": "direct",
+        "label": "Mostly Direct Influence"
+      },
+      {
+        "min": 20,
+        "max": 39,
+        "key": "stress",
+        "label": "Pressure Shows Up Under Stress"
+      },
+      {
+        "min": 40,
+        "max": 59,
+        "key": "habits",
+        "label": "Manipulative Habits Are Showing"
+      },
+      {
+        "min": 60,
+        "max": 79,
+        "key": "strong",
+        "label": "Strong Manipulation Pattern"
+      },
+      {
+        "min": 80,
+        "max": 100,
+        "key": "high_control",
+        "label": "High-Control Manipulation Pattern"
+      }
+    ],
+    "personalization": {
+      "strongestDimensions": 2,
+      "repairSignal": "Each response also carries a repair/accountability indicator, reported separately from the manipulation-pattern score.",
+      "tags": "Selected answers contribute behavioral tags such as guilt leverage, monitoring, boundary pressure, breakup threats, blame-shifting, reality pressure, and clean repair."
+    }
+  },
+  "methodology": {
+    "type": "original educational self-reflection questionnaire",
+    "validatedInstrument": false,
+    "diagnostic": false,
+    "design": "scenario-based questions focused on how influence changes under rejection, jealousy, criticism, boundaries, conflict, and fear of loss",
+    "researchBackground": [
+      "Overall et al. (2014) - attachment anxiety and guilt induction in romantic partners",
+      "Kanat-Maymon et al. (2015) - conditional positive regard, autonomy, and relationship quality",
+      "Evraire et al. (2022) - attachment, excessive reassurance seeking, and trust in romantic couples",
+      "research on guilt as a social and relationship-repair emotion"
+    ]
+  },
+  "internalLinks": [
+    "/tests/emotional-manipulation/",
+    "/tests/conflict-style/",
+    "/tests/relationship-anxiety/",
+    "/tests/jealousy-test/",
+    "/blog/boundaries-vs-control/",
+    "/blog/fair-fighting-rules/",
+    "/blog/communication-needs/",
+    "/blog/emotional-safety-in-relationships/",
+    "/methodology/"
+  ]
+}
