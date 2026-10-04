@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "emotionally-unavailable-husband",
+    title: "Emotionally Unavailable Husband: 11 Signs, Why He Shuts Down & What to Do",
+    excerpt: "How to tell emotional unavailability from shutdown, burnout, resentment, or a marriage that has gone emotionally quiet—and what real change looks like.",
+    date: "2026-10-04",
+    readingMinutes: 22,
+    tags: ["Marriage", "Emotional Availability", "Communication", "Relationship Psychology"],
+    category: "Marriage",
+    cover: "/assets/og/emotional-safety-in-relationships-quiet-distance.webp",
+    featured: true
+  },
+  {
     slug: "push-pull-relationship-pattern",
     title: "Push-Pull Relationship Pattern: Why You Get Close, Pull Away & Repeat",
     excerpt: "Why one person chases while the other withdraws, why the roles can reverse, and how anxious-avoidant and demand-withdraw dynamics keep hot-and-cold relationships alive.",
