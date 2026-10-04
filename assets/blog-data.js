@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "emotionally-attached-to-ai",
+    title: "Why Am I Emotionally Attached to AI? 7 Reasons It Feels So Real",
+    excerpt: "Why chatbot attachment can feel real: emotional support, predictability, self-disclosure, separation distress, and the line between comfort and dependence.",
+    date: "2026-10-04",
+    readingMinutes: 20,
+    tags: ["AI", "Attachment", "Psychology", "Emotional Dependence", "Relationships"],
+    category: "Relationships & AI",
+    cover: "/assets/og/relationship-tests-tools-guides.webp",
+    featured: true
+  },
+  {
     slug: "chatgpt-relationship-advice",
     title: "ChatGPT Relationship Advice: When AI Helps—and When It Misleads",
     excerpt: "What current research says about asking ChatGPT for relationship advice: empathy, one-sided stories, sycophancy, privacy, safer prompts, and when human support matters.",
