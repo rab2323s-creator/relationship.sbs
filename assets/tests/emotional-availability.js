@@ -19,6 +19,7 @@
       "15 scenario-based scenarios to reveal emotional availability, inconsistency, and repair patterns—plus scripts and next steps.",
     time: "2–3 min",
     intent: "quiz",
+    compactShell: true,
     keywords: [
       "emotional availability test",
       "emotionally unavailable partner",
