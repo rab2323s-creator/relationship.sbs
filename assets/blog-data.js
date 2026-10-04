@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "silent-divorce",
+    title: "Silent Divorce: 12 Signs You’re Emotionally Separated but Still Married",
+    excerpt: "How to recognize a silent divorce, tell emotional separation from a rough patch or roommate phase, and decide whether repair is still happening.",
+    date: "2026-10-04",
+    readingMinutes: 23,
+    tags: ["Marriage", "Silent Divorce", "Emotional Disconnection", "Relationship Psychology"],
+    category: "Marriage",
+    cover: "/assets/og/emotional-safety-in-relationships-quiet-distance.webp",
+    featured: true
+  },
+  {
     slug: "emotionally-unavailable-husband",
     title: "Emotionally Unavailable Husband: 11 Signs, Why He Shuts Down & What to Do",
     excerpt: "How to tell emotional unavailability from shutdown, burnout, resentment, or a marriage that has gone emotionally quiet—and what real change looks like.",
