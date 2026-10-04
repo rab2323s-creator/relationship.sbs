@@ -1,0 +1,136 @@
+{
+  "id": "avoidant-attachment-test",
+  "version": "1.0.0",
+  "published": "2026-10-04",
+  "canonical": "https://relationship.sbs/tests/avoidant-attachment-test/",
+  "title": "Avoidant Attachment Test: Fearful or Dismissive? (12 Questions)",
+  "h1": "Avoidant Attachment Test: Fearful or Dismissive?",
+  "searchIntent": [
+    "avoidant attachment test",
+    "fearful avoidant attachment test",
+    "fearful avoidant test",
+    "dismissive avoidant attachment test",
+    "avoidant test",
+    "avoidant attachment quiz",
+    "am i avoidant",
+    "anxious avoidant test"
+  ],
+  "questionCount": 12,
+  "estimatedTime": "2-3 minutes",
+  "scoring": {
+    "range": [
+      0,
+      100
+    ],
+    "answerValues": [
+      0,
+      1,
+      3,
+      4
+    ],
+    "dimensions": {
+      "closeness": {
+        "label": "Closeness pressure",
+        "weight": 0.3,
+        "items": [
+          1,
+          4,
+          10
+        ]
+      },
+      "reliance": {
+        "label": "Hyper-independence",
+        "weight": 0.25,
+        "items": [
+          2,
+          6,
+          12
+        ]
+      },
+      "deactivation": {
+        "label": "Deactivation & distance",
+        "weight": 0.25,
+        "items": [
+          3,
+          7,
+          9
+        ]
+      },
+      "ambivalence": {
+        "label": "Push-pull fear",
+        "weight": 0.2,
+        "items": [
+          5,
+          8,
+          11
+        ]
+      }
+    },
+    "bands": [
+      {
+        "min": 0,
+        "max": 19,
+        "key": "flexible",
+        "label": "Flexible Closeness"
+      },
+      {
+        "min": 20,
+        "max": 39,
+        "key": "independent",
+        "label": "Independent but Available"
+      },
+      {
+        "min": 40,
+        "max": 59,
+        "key": "contextual",
+        "label": "Contextual Avoidance"
+      },
+      {
+        "min": 60,
+        "max": 79,
+        "key": "strong",
+        "label": "Strong Avoidant Pattern"
+      },
+      {
+        "min": 80,
+        "max": 100,
+        "key": "high",
+        "label": "High Avoidance Pattern"
+      }
+    ],
+    "subtypeRules": {
+      "notDominant": "Avoidance score below 40 does not force an avoidant subtype.",
+      "fearful": "Avoidance score >=40 plus anxiety modifier >=60.",
+      "dismissive": "Avoidance score >=40 plus anxiety modifier <=35 and elevated hyper-independence or deactivation.",
+      "mixed": "Meaningful avoidance without a clean fearful/dismissive split."
+    },
+    "personalization": {
+      "strongestDimensions": 2,
+      "anxietyModifier": "Calculated independently from the avoidance score to distinguish fearful push-pull from lower-anxiety distance.",
+      "repairCapacity": "Calculated independently from answers that preserve a clear path back after space or conflict.",
+      "tags": "Behavior tags include deactivation, flaw focus, hyper-independence, repair avoidance, clean return, closeness pressure, and push-pull."
+    }
+  },
+  "methodology": {
+    "type": "original educational self-reflection questionnaire",
+    "validatedInstrument": false,
+    "diagnostic": false,
+    "design": "scenario-based questions focused on closeness, dependence, support, emotional deactivation, conflict withdrawal, and return to repair",
+    "researchBackground": [
+      "adult attachment research conceptualizing insecurity along anxiety and avoidance dimensions",
+      "Brennan, Clark & Shaver (1998) Experiences in Close Relationships framework",
+      "Mikulincer & Shaver adult attachment research"
+    ]
+  },
+  "internalLinks": [
+    "/tests/attachment-style/",
+    "/tests/avoidant-texting/",
+    "/tests/fear-of-intimacy/",
+    "/tests/emotional-availability/",
+    "/blog/avoidant-attachment-texting/",
+    "/blog/what-is-attachment-style/",
+    "/blog/fear-of-intimacy/",
+    "/blog/emotional-safety-in-relationships/",
+    "/methodology/"
+  ]
+}
