@@ -176,7 +176,7 @@
     if(anxietyPct>=60){
       return {key:'fearful',title:'Fearful-avoidant leaning',text:'Your avoidance is paired with a strong fear signal. You may crave closeness, then retreat once it feels risky, and feel renewed anxiety when distance becomes real.'};
     }
-    if(anxietyPct<=35 && (byKey.reliance.pct>=55 || byKey.deactivation.pct>=55)){
+    if(anxietyPct<=35 && byKey.ambivalence.pct<50 && (byKey.reliance.pct>=55 || byKey.deactivation.pct>=55)){
       return {key:'dismissive',title:'Dismissive-avoidant leaning',text:'Your pattern leans more toward self-reliance and emotional deactivation than fear of abandonment. Distance may feel regulating, practical, or safer than depending on another person.'};
     }
     return {key:'mixed',title:'Mixed avoidant pattern',text:'Your answers show meaningful avoidance without a clean fearful- or dismissive-avoidant split. You may use different distancing strategies depending on the relationship and trigger.'};
