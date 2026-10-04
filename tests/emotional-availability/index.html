@@ -27,245 +27,183 @@
   <link rel="stylesheet" href="/assets/styles.css" />
 
   
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Emotional Availability Test: Is Your Partner Emotionally Available?","description":"A 15-question educational self-reflection tool about emotional presence, responsiveness, inconsistency, repair, guardedness, and mutual closeness.","url":"https://relationship.sbs/tests/emotional-availability/","dateModified":"2026-09-23","isAccessibleForFree":true,"about":[{"@type":"Thing","name":"Emotional availability in relationships"}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://relationship.sbs/"},{"@type":"ListItem","position":2,"name":"Tests","item":"https://relationship.sbs/tests/"},{"@type":"ListItem","position":3,"name":"Emotional Availability Test","item":"https://relationship.sbs/tests/emotional-availability/"}]}</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"WebPage",
+      "@id":"https://relationship.sbs/tests/emotional-availability/#webpage",
+      "url":"https://relationship.sbs/tests/emotional-availability/",
+      "name":"Emotional Availability Test: Is Your Partner Emotionally Available?",
+      "description":"A 15-question emotional availability test about emotional presence, responsiveness, inconsistency, repair, guardedness, and mutual closeness.",
+      "inLanguage":"en",
+      "isAccessibleForFree":true,
+      "mainEntity":{"@id":"https://relationship.sbs/tests/emotional-availability/#quiz"},
+      "about":[
+        {"@type":"Thing","name":"Emotional availability"},
+        {"@type":"Thing","name":"Emotionally unavailable partner"},
+        {"@type":"Thing","name":"Emotional responsiveness"},
+        {"@type":"Thing","name":"Relationship repair"},
+        {"@type":"Thing","name":"Emotional support"}
+      ],
+      "dateModified":"2026-10-04"
+    },
+    {
+      "@type":"Quiz",
+      "@id":"https://relationship.sbs/tests/emotional-availability/#quiz",
+      "name":"Emotional Availability Test",
+      "alternateName":["Is My Partner Emotionally Unavailable Quiz","Emotionally Unavailable Partner Test"],
+      "description":"A free 15-question scenario-based quiz about emotional availability in a relationship, including presence, support, consistency, vulnerability, and repair.",
+      "url":"https://relationship.sbs/tests/emotional-availability/",
+      "isAccessibleForFree":true,
+      "inLanguage":"en",
+      "timeRequired":"PT3M",
+      "educationalUse":"Relationship self-reflection",
+      "interactivityType":"active",
+      "hasPart":{"@type":"ItemList","numberOfItems":15,"itemListElement":[
+        {"@type":"ListItem","position":1,"item":{"@type":"Question","name":"You share a hard day. Their first response is…"}},
+        {"@type":"ListItem","position":2,"item":{"@type":"Question","name":"When you ask “Are we okay?”, the vibe you get is…"}},
+        {"@type":"ListItem","position":3,"item":{"@type":"Question","name":"After conflict, repair usually looks like…"}},
+        {"@type":"ListItem","position":4,"item":{"@type":"Question","name":"You express a need for time, attention, or support. Their reaction is…"}},
+        {"@type":"ListItem","position":5,"item":{"@type":"Question","name":"When you’re vulnerable, you feel…"}},
+        {"@type":"ListItem","position":6,"item":{"@type":"Question","name":"Their emotional support is most available when…"}},
+        {"@type":"ListItem","position":7,"item":{"@type":"Question","name":"When they hurt you, accountability feels like…"}},
+        {"@type":"ListItem","position":8,"item":{"@type":"Question","name":"You notice a tone shift over text. You can…"}},
+        {"@type":"ListItem","position":9,"item":{"@type":"Question","name":"If you stop initiating connection for a few days…"}},
+        {"@type":"ListItem","position":10,"item":{"@type":"Question","name":"When you need reassurance, you usually get…"}},
+        {"@type":"ListItem","position":11,"item":{"@type":"Question","name":"Your emotional needs feel like they’re treated as…"}},
+        {"@type":"ListItem","position":12,"item":{"@type":"Question","name":"If you ask for a simple check-in, they…"}},
+        {"@type":"ListItem","position":13,"item":{"@type":"Question","name":"The most accurate sentence about your relationship is…"}},
+        {"@type":"ListItem","position":14,"item":{"@type":"Question","name":"When you bring up something important, the pattern is…"}},
+        {"@type":"ListItem","position":15,"item":{"@type":"Question","name":"If the next 30 days stayed exactly the same, you’d feel…"}}
+      ]}
+    },
+    {
+      "@type":"BreadcrumbList",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Home","item":"https://relationship.sbs/"},
+        {"@type":"ListItem","position":2,"name":"Tests","item":"https://relationship.sbs/tests/"},
+        {"@type":"ListItem","position":3,"name":"Emotional Availability Test","item":"https://relationship.sbs/tests/emotional-availability/"}
+      ]
+    }
+  ]
+}
+</script>
 </head>
 
 <body>
   <header id="siteHeader"></header>
 
   <main class="wrap">
-    <!-- ✅ Improved: add a lightweight placeholder for better UX + LCP -->
-<section class="card prose test-intro-upgrade">
-  <h2>What this test is designed to help you notice</h2>
-  <p>Emotional availability is about whether someone can stay present, responsive, honest, and willing to repair—not whether they are expressive every minute. These 15 scenarios help you examine the pattern.</p>
-  <p class="small muted">Educational self-reflection only. Results describe patterns in your answers and are not a diagnosis.</p>
-  <div class="row" style="flex-wrap:wrap;">
-    <a class="btn small secondary" href="/blog/emotional-unavailability/">Emotionally unavailable signs</a>
-    <a class="btn small secondary" href="/blog/communication-needs/">How to ask for what you need</a>
-    <a class="btn small secondary" href="/tests/emotional-intimacy/">Emotional Intimacy Test</a>
-  </div>
-</section>
-<div id="quizRoot" data-slug="emotional-availability" aria-live="polite">
+    <section class="card prose" style="margin-bottom:12px;">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/tests/">Tests</a> / Emotional Availability Test</nav>
+      <h1>Emotional Availability Test: Is Your Partner Emotionally Available?</h1>
+      <p class="intro">Take this 15-question emotional availability test to examine how your partner responds to vulnerability, reassurance, conflict, emotional needs, and repair. Answer for the relationship as it usually feels—not only on its best days.</p>
+      <p class="small muted">2–3 minutes · Scenario-based · No sign-up · Educational self-reflection</p>
+    </section>
+
+    <div id="quizRoot" data-slug="emotional-availability" aria-live="polite">
       <p class="muted">Loading emotional availability test…</p>
     </div>
 
     <section class="card prose">
-      <h1>Emotional Availability Test: Is Your Partner Emotionally Available?</h1>
+      <h2>Is My Partner Emotionally Unavailable?</h2>
+      <p>If you searched for an <strong>emotional availability test</strong> or an <strong>is my partner emotionally unavailable quiz</strong>, the question underneath is usually not whether your partner is expressive. It is whether emotional closeness is available when you actually need it.</p>
+      <p>A partner can be quiet, independent, busy, or not especially verbal and still be emotionally available. The more useful signals are whether they can stay present when you are vulnerable, respond without minimizing you, communicate clearly under stress, and return to repair after conflict.</p>
 
-      <h2>Read This First (It Might Hit Too Close)</h2>
-      <h3>You can be “in a relationship” and still feel emotionally alone.</h3>
-      <p>
-        Emotional availability is not romance. It’s not constant texting. It’s the quiet feeling that your emotions are welcome here.
-        The moment you start editing yourself—making your feelings smaller, softer, “easier”—something important is happening.
-      </p>
-      <p>
-        This test is built for modern love: tone shifts, delayed replies, vague plans, repair that never arrives, and the strange feeling
-        of being close to someone who still feels far. It’s designed to be <strong>scenario-based</strong> while staying focused on observable relationship patterns: no diagnosis, no medical claims, and no promises about another person.
-      </p>
-
-      <h2>Why Emotional Availability Matters More Than “Chemistry”</h2>
-      <h3>Because your nervous system can’t relax around uncertainty forever.</h3>
-      <p>
-        When someone is emotionally available, you don’t have to chase reassurance. You can name feelings and expect a human response:
-        presence, curiosity, repair. When they’re not, you end up negotiating for basics—attention, clarity, kindness.
-      </p>
-
-      <h3>Because the real damage is silent: you stop asking.</h3>
-      <p>
-        Many people don’t leave because of one big event. They drift because emotional support becomes inconsistent, then rare, then “too much to ask.”
-      </p>
-
-      <h3>Most people don’t realize this…</h3>
-      <p>
-        Couples often argue about the surface—texts, tone, plans—when the deeper issue is simple:
-        <em>“When I’m vulnerable, I don’t feel met.”</em> This test helps you name which pattern fits.
-      </p>
-
-      <h2>What This Test Measures (And What It Doesn’t)</h2>
-      <h3>What it measures</h3>
+      <h2>Signs of an Emotionally Unavailable Partner</h2>
+      <p>No single behavior proves emotional unavailability. Look for patterns that repeat across stress, intimacy, conflict, and ordinary connection:</p>
       <ul>
-        <li>Emotional presence (listening, empathy, consistency)</li>
-        <li>Repair behavior after tension (do you reconnect or avoid?)</li>
-        <li>Follow-through (do words turn into actions?)</li>
-        <li>Your dynamic under stress (support, deflection, shutdown)</li>
+        <li>You feel heard when things are easy, but alone when emotions become intense.</li>
+        <li>Your partner changes the subject, minimizes, jokes, or goes quiet when you become vulnerable.</li>
+        <li>You ask for reassurance or clarity and leave the conversation more confused than before.</li>
+        <li>Conflict ends because the conversation stops, not because repair happened.</li>
+        <li>Promises to communicate better are not followed by consistent behavior.</li>
+        <li>You increasingly edit your feelings because asking for support feels costly.</li>
+        <li>The relationship stays connected mainly because you keep initiating emotional contact.</li>
+      </ul>
+      <p>If the pattern is specifically about marriage, see <a href="/blog/emotionally-unavailable-husband/">Emotionally Unavailable Husband: Signs, Shutdown &amp; What to Do</a>. For a broader explanation of the pattern, read <a href="/blog/emotional-unavailability/">Emotional Unavailability in Relationships</a>.</p>
+
+      <h2>What This Emotional Availability Test Measures</h2>
+      <p>The 15 scenarios focus on five recurring relationship patterns:</p>
+      <ul>
+        <li><strong>Emotional presence:</strong> Does your partner stay with your feelings instead of escaping them?</li>
+        <li><strong>Consistency:</strong> Is support reliable, or does it disappear under stress?</li>
+        <li><strong>Guardedness:</strong> Does closeness become harder when emotions get real?</li>
+        <li><strong>Repair:</strong> Do you return to difficult conversations after conflict?</li>
+        <li><strong>Emotional absence:</strong> Are you repeatedly left to carry distress and connection alone?</li>
+      </ul>
+      <p>The result is based on your pattern across all 15 answers rather than a single response. It is not a diagnosis and does not determine another person’s attachment style or mental health.</p>
+
+      <h2>Emotional Availability vs Emotional Unavailability</h2>
+      <table>
+        <thead><tr><th>More emotionally available</th><th>More emotionally unavailable</th></tr></thead>
+        <tbody>
+          <tr><td>Listens and stays engaged when emotions are uncomfortable.</td><td>Deflects, minimizes, shuts down, or treats emotion as a problem to remove.</td></tr>
+          <tr><td>Can give reassurance without shaming the need for it.</td><td>Makes normal needs feel excessive, dramatic, or inconvenient.</td></tr>
+          <tr><td>Returns after conflict and participates in repair.</td><td>Lets distance replace resolution.</td></tr>
+          <tr><td>Words and emotional follow-through are reasonably consistent.</td><td>Warmth and support depend heavily on mood, timing, or pressure.</td></tr>
+          <tr><td>Closeness is mutual rather than carried by one person.</td><td>The relationship goes quiet when one partner stops doing the emotional work.</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Why Emotional Availability Matters in a Relationship</h2>
+      <p>Emotional availability is not constant attention. It is the sense that your inner experience can enter the relationship without being punished, dismissed, or abandoned. Over time, repeated responsiveness helps closeness feel safer; repeated non-response can make one partner over-explain, chase reassurance, or eventually stop asking at all.</p>
+      <p>That is why the most useful question is not “Does my partner love me?” but “What consistently happens when I need emotional contact?”</p>
+
+      <h2>Your Emotional Availability Test Result</h2>
+      <p>After the last question, you will be matched with one of five patterns:</p>
+      <ul>
+        <li><a href="/tests/emotional-availability/results/present_partner/"><strong>Present Partner</strong></a> — emotional support and repair are generally available.</li>
+        <li><a href="/tests/emotional-availability/results/inconsistent_presence/"><strong>Inconsistent Presence</strong></a> — care exists, but reliability changes with stress or mood.</li>
+        <li><a href="/tests/emotional-availability/results/guarded_unavailable/"><strong>Guarded / Unavailable</strong></a> — vulnerability often meets discomfort, deflection, or defensiveness.</li>
+        <li><a href="/tests/emotional-availability/results/avoid_repair/"><strong>Avoids Repair</strong></a> — conflict may end without emotional reconnection.</li>
+        <li><a href="/tests/emotional-availability/results/emotionally_absent/"><strong>Emotionally Absent</strong></a> — emotional support and mutual closeness feel largely unavailable.</li>
       </ul>
 
-      <h3>What it doesn’t</h3>
-      <ul>
-        <li>No diagnosis, labels, or mental health claims</li>
-        <li>No “guarantees” or promises of fixing someone</li>
-        <li>No explicit content (this is emotional/relational)</li>
-      </ul>
+      <h2>What to Do If Your Partner Seems Emotionally Unavailable</h2>
+      <ol>
+        <li><strong>Make one specific request.</strong> Ask for a concrete behavior such as a 10-minute repair conversation or a clear check-in.</li>
+        <li><strong>Watch consistency, not intensity.</strong> One heartfelt conversation matters less than what happens repeatedly afterward.</li>
+        <li><strong>Separate space from disappearance.</strong> Healthy space includes a return; indefinite withdrawal does not.</li>
+        <li><strong>Stop shrinking the need to avoid conflict.</strong> A relationship cannot become more emotionally responsive if one person has to hide normal needs.</li>
+        <li><strong>Evaluate reciprocity.</strong> Emotional closeness should not depend on one person doing all the initiating, soothing, and repairing.</li>
+      </ol>
+      <p>For help putting needs into words, use <a href="/blog/communication-needs/">How to Communicate Your Needs Without Sounding Needy</a>. If conflict repeatedly becomes pursuit and withdrawal, read <a href="/blog/push-pull-relationship-pattern/">Push-Pull Relationship Pattern</a>.</p>
 
-      <h2>Emotional Availability Test Questions</h2>
-      <h3>15 scenarios. Answer fast—your first instinct is the data.</h3>
-    </section>
-
-    <section class="card prose">
-      <h2>Preview Questions (So You Know This Isn’t Generic)</h2>
-      <h3>These are the moments this test is built for</h3>
-      <ul>
-        <li>You share a tough day and they reply with “that’s life.” What happens in you?</li>
-        <li>You bring up a hurt and they say “why are you making this a big deal?” How often is that the vibe?</li>
-        <li>After conflict, do you repair—or do you both pretend nothing happened?</li>
-        <li>When you ask for clarity, do you get it—or do you get vagueness?</li>
-      </ul>
-      <p class="muted">Full questions load inside the test above (shown in the interactive quiz above).</p>
-    </section>
-    <section class="card prose">
-  <h2>Sample Questions from the Emotional Availability Test</h2>
-  <p class="muted">
-    These sample questions reflect common emotional availability patterns in relationships.
-    The full interactive test explores these dynamics in more depth.
-  </p>
-<p class="small">
-  Looking for signs of an emotionally unavailable partner, emotional neglect in relationships, or how to ask for emotional support?
-  These questions help you spot patterns like inconsistency, avoidance, and lack of repair.
-</p>
-
-  <ol>
-    <li>
-      When you express emotional stress to your partner, what response feels most familiar?
-      <ul>
-        <li>Your feelings are acknowledged and met with empathy</li>
-        <li>You receive concern, but attention fades quickly</li>
-        <li>The conversation is redirected or minimized</li>
-        <li>Your emotions are dismissed or treated as inconvenient</li>
-      </ul>
-    </li>
-
-    <li>
-      After relationship conflict, how does emotional reconnection usually unfold?
-      <ul>
-        <li>You discuss what happened and restore emotional closeness</li>
-        <li>You move forward, but unresolved tension remains</li>
-        <li>The issue is avoided and never fully addressed</li>
-        <li>Emotional distance increases over time</li>
-      </ul>
-    </li>
-
-    <li>
-      When you ask for reassurance or emotional support, what is the typical outcome?
-      <ul>
-        <li>You feel emotionally safe and understood</li>
-        <li>Support is inconsistent and depends on timing or mood</li>
-        <li>You are told you are overreacting or too sensitive</li>
-        <li>You are left to manage your emotions alone</li>
-      </ul>
-    </li>
-
-    <li>
-      How does your partner respond when emotional conversations become uncomfortable?
-      <ul>
-        <li>They stay engaged and try to understand your feelings</li>
-        <li>They participate briefly but withdraw emotionally</li>
-        <li>They avoid the topic or deflect with humor or logic</li>
-        <li>They shut down or create emotional distance</li>
-      </ul>
-    </li>
-
-    <li>
-      Over time, how consistent does your partner’s emotional availability feel?
-      <ul>
-        <li>Emotionally present across stress, conflict, and calm moments</li>
-        <li>Supportive in good times but distant under pressure</li>
-        <li>Available only when emotions are kept light</li>
-        <li>Rarely emotionally supportive regardless of circumstances</li>
-      </ul>
-    </li>
-  </ol>
-</section>
-<section class="card prose">
-  <h2>Result Profiles (Read them)</h2>
-  <p class="muted">
-    Each profile explains a different emotional availability pattern.
-    You’ll be matched to one automatically after finishing the test.
-  </p>
-
-  <ul>
-    <li><a href="/tests/emotional-availability/results/present_partner/">Present Partner</a></li>
-    <li><a href="/tests/emotional-availability/results/inconsistent_presence/">Inconsistent Presence</a></li>
-    <li><a href="/tests/emotional-availability/results/guarded_unavailable/">Guarded / Unavailable</a></li>
-    <li><a href="/tests/emotional-availability/results/avoid_repair/">Avoids Repair</a></li>
-    <li><a href="/tests/emotional-availability/results/emotionally_absent/">Emotionally Absent</a></li>
-  </ul>
-
-  <p class="muted">
-    Tip: Your result is based on patterns, not a single answer.
-  </p>
-</section>
-
-
-   
-    <section class="card prose">
-      <h2>Your Results</h2>
-      <h3>Five profiles (your engine calculates automatically)</h3>
-      <p>
-        You’ll land in one of five profiles: Present Partner, Inconsistent Presence, Guarded / Unavailable,
-        Avoids Repair, or Emotionally Absent.
-      </p>
-      <p><strong>Share tip:</strong> If your result hits hard, share it with a friend—or use it as a calm starting point for a real conversation.</p>
-
-      <h2>What To Do Next</h2>
-      <h3>Don’t chase emotional safety. Ask clearly. Then watch consistency.</h3>
-      <ul>
-        <li>Make one clear request (presence, check-in, repair talk).</li>
-        <li>Stop “testing” and start observing follow-through.</li>
-        <li>If your needs are repeatedly dismissed, take that pattern seriously.</li>
-      </ul>
-
-      <h2>Emotional Availability FAQ</h2>
+      <h2>Emotional Availability Test FAQ</h2>
 
       <h3>What is emotional availability in a relationship?</h3>
-      <p>
-        Emotional availability is the ability to be present with feelings—listening, empathizing, and repairing after tension.
-        It’s not perfection. It’s consistency: you can be vulnerable and still feel safe and respected.
-      </p>
+      <p>Emotional availability is the capacity to stay present, responsive, honest, and engaged with another person’s emotional experience. It includes vulnerability, support, consistency, and repair after tension.</p>
 
       <h3>How can I tell if my partner is emotionally unavailable?</h3>
-      <p>
-        Look for repeatable patterns: deflection, minimizing, avoiding repair, vagueness when you ask for clarity, and emotional support
-        only when things are easy. One bad week isn’t the story—repetition over time is.
-      </p>
+      <p>Look for repeated patterns rather than one bad day: minimizing feelings, shutting down, avoiding repair, inconsistent reassurance, low curiosity about your inner world, or leaving you to carry most of the emotional connection.</p>
+
+      <h3>Is an emotionally unavailable partner the same as an avoidant partner?</h3>
+      <p>No. Avoidant attachment can contribute to emotional distance, but emotional unavailability can also come from stress, burnout, depression, resentment, low relationship investment, or limited emotional skills.</p>
+
+      <h3>Can an emotionally unavailable partner change?</h3>
+      <p>Sometimes. The important evidence is sustained behavior: more responsiveness, clearer communication, reliable repair, greater tolerance for vulnerability, and follow-through over time.</p>
 
       <h3>Is emotional unavailability the same as being busy?</h3>
-      <p>
-        Not necessarily. Busy people can still be emotionally present in small ways and can repair after tension. Emotional unavailability
-        is when emotional connection and repair rarely happen—even when you ask directly.
-      </p>
+      <p>No. A busy partner can still communicate clearly, show care in small ways, and return to important conversations. Emotional unavailability describes a repeated difficulty with emotional contact itself.</p>
 
-      <h3>Can emotional availability improve?</h3>
-      <p>
-        Sometimes, when both people agree to specific habits: listening-first, weekly check-ins, and repair rules after conflict.
-        Improvement looks like consistent follow-through—not a single heartfelt apology.
-      </p>
-
-      <h3>Is this Emotional Availability Test a diagnosis?</h3>
-      <p>
-        No. This is an educational self-reflection quiz. It does not diagnose mental health conditions or guarantee outcomes.
-        If distress feels severe or persistent, consider speaking with a licensed professional.
-      </p>
-
-      <h2>Disclaimer</h2>
-      <h3>Educational use only</h3>
-      <p>
-        This quiz is for self-reflection and educational purposes only. It is not medical advice, diagnosis, or therapy.
-        If distress feels severe or persistent, consider speaking with a licensed professional.
-      </p>
+      <h3>Is this emotional availability test a diagnosis?</h3>
+      <p>No. It is an educational relationship self-reflection quiz. It cannot diagnose a person, determine an attachment disorder, or replace professional assessment.</p>
     </section>
-    <section class="card prose">
-    <h2>Related guides and tests</h2>
-    <p>Emotional availability asks whether a partner can show up. If you want to know how well two people's emotional needs and response styles fit together, take the <a href="/tests/emotional-compatibility/">Emotional Compatibility Test</a>.</p>
-    <ul>
-      <li><a href="/blog/emotionally-unavailable-husband/">Emotionally unavailable husband: signs, shutdown, and what to do</a></li>
-      <li><a href="/blog/emotional-unavailability/">Emotional unavailability: signs and patterns</a></li>
-      <li><a href="/blog/communication-needs/">How to communicate your needs without sounding needy</a></li>
-      <li><a href="/blog/avoidant-attachment-texting/">Avoidant attachment and texting</a></li>
-      <li><a href="/tests/relationship-anxiety/">Relationship Anxiety Test</a></li>
-      <li><a href="/tests/attachment-style/">Attachment Style Test</a></li>
-    </ul>
-  </section>
+
+    <section class="card prose test-intro-upgrade">
+      <h2>Important Note About This Test</h2>
+      <p>Emotional availability is about whether someone can stay present, responsive, honest, and willing to repair—not whether they are expressive every minute. These 15 scenarios are designed to help you notice a pattern, not assign a clinical label.</p>
+      <p class="small muted">Educational self-reflection only. Results describe patterns in your answers and are not a diagnosis.</p>
+      <div class="row" style="flex-wrap:wrap;">
+        <a class="btn small secondary" href="/blog/emotional-unavailability/">Emotionally unavailable signs</a>
+        <a class="btn small secondary" href="/blog/communication-needs/">How to ask for what you need</a>
+        <a class="btn small secondary" href="/tests/emotional-intimacy/">Emotional Intimacy Test</a>
+        <a class="btn small secondary" href="/tests/relationship-anxiety/">Relationship Anxiety Test</a>
+      </div>
+    </section>
 </main>
 
   <footer id="siteFooter"></footer>
