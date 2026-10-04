@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "push-pull-relationship-pattern",
+    title: "Push-Pull Relationship Pattern: Why You Get Close, Pull Away & Repeat",
+    excerpt: "Why one person chases while the other withdraws, why the roles can reverse, and how anxious-avoidant and demand-withdraw dynamics keep hot-and-cold relationships alive.",
+    date: "2026-10-04",
+    readingMinutes: 21,
+    tags: ["Push-Pull", "Attachment", "Relationship Anxiety", "Conflict", "Relationships"],
+    category: "Relationship Psychology",
+    cover: "/assets/og/relationship-tests-tools-guides.webp",
+    featured: true
+  },
+  {
     slug: "emotionally-attached-to-ai",
     title: "Why Am I Emotionally Attached to AI? 7 Reasons It Feels So Real",
     excerpt: "Why chatbot attachment can feel real: emotional support, predictability, self-disclosure, separation distress, and the line between comfort and dependence.",
