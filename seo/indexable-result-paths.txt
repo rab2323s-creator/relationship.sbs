@@ -32,12 +32,6 @@
 /tests/does-he-like-me/results/low_observable_investment/
 /tests/does-he-like-me/results/mixed_signals/
 /tests/does-he-like-me/results/strong_observable_interest/
-/tests/emotional-availability/results/
-/tests/emotional-availability/results/avoid_repair/
-/tests/emotional-availability/results/emotionally_absent/
-/tests/emotional-availability/results/guarded_unavailable/
-/tests/emotional-availability/results/inconsistent_presence/
-/tests/emotional-availability/results/present_partner/
 /tests/emotional-compatibility/results/
 /tests/emotional-compatibility/results/chronic_emotional_mismatch/
 /tests/emotional-compatibility/results/different_but_adaptable/
