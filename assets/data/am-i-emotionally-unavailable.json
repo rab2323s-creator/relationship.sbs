@@ -1,0 +1,130 @@
+{
+  "id": "am-i-emotionally-unavailable",
+  "version": "1.0.0",
+  "published": "2026-10-05",
+  "canonical": "https://relationship.sbs/tests/am-i-emotionally-unavailable/",
+  "title": "Am I Emotionally Unavailable? Test (12 Questions)",
+  "h1": "Am I Emotionally Unavailable? 12 Questions About Closeness, Feelings & Repair",
+  "searchIntent": [
+    "am i emotionally unavailable quiz",
+    "am i emotionally unavailable test",
+    "am i emotionally unavailable",
+    "emotionally unavailable quiz",
+    "emotional unavailability test",
+    "signs i am emotionally unavailable",
+    "why am i emotionally unavailable"
+  ],
+  "questionCount": 12,
+  "estimatedTime": "2-3 minutes",
+  "scoring": {
+    "primaryScore": "Emotional Availability Score",
+    "range": [0, 100],
+    "direction": "higher scores indicate greater emotional availability in these answers",
+    "answerRiskValues": [0, 1, 3, 4],
+    "dimensions": {
+      "access": {
+        "label": "Emotional access",
+        "weight": 0.25,
+        "items": [1, 2, 11],
+        "description": "Ability to notice, name, and remain connected to one's own emotional state."
+      },
+      "disclosure": {
+        "label": "Vulnerability & receiving support",
+        "weight": 0.25,
+        "items": [3, 5, 6],
+        "description": "Ability to disclose needs, tolerate being known, and receive support without excessive self-protective distance."
+      },
+      "receptivity": {
+        "label": "Responsive presence",
+        "weight": 0.25,
+        "items": [4, 7, 10],
+        "description": "Ability to stay curious and emotionally present with another person's feelings and needs."
+      },
+      "repair": {
+        "label": "Repair & return",
+        "weight": 0.25,
+        "items": [8, 9, 12],
+        "description": "Ability to use space without disappearance and return to unfinished emotional conversations."
+      }
+    },
+    "bands": [
+      {"min": 80, "max": 100, "key": "flexible", "label": "Emotionally Available & Flexible"},
+      {"min": 65, "max": 79, "key": "edges", "label": "Available With Protective Edges"},
+      {"min": 45, "max": 64, "key": "guarded", "label": "Guarded Under Pressure"},
+      {"min": 25, "max": 44, "key": "distance", "label": "Strong Emotional Distance Pattern"},
+      {"min": 0, "max": 24, "key": "high", "label": "High Emotional Unavailability Pattern"}
+    ],
+    "personalization": {
+      "strongestDimensions": 2,
+      "growthEdge": "Lowest emotional-availability dimension is surfaced separately.",
+      "pressureGap": "Compares availability in six higher-pressure scenarios with six lower-pressure scenarios to detect state-dependent shutdown.",
+      "repairSignal": "Independent signal based on whether selected responses preserve accountability, directness, and a path back after distance.",
+      "behaviorTags": [
+        "shutdown",
+        "intellectualize",
+        "emotional_suppression",
+        "support_rejection",
+        "closeness_pressure",
+        "repair_avoidance",
+        "self_reliance",
+        "validation",
+        "direct_need",
+        "clean_space",
+        "repair_return"
+      ],
+      "combinedInsight": "The two lowest dimensions are combined with repeated behavior tags to generate a pattern-specific interpretation."
+    }
+  },
+  "questionDesign": {
+    "sequence": [
+      "Immediate reaction to being experienced as distant",
+      "Private emotional access",
+      "Receiving support",
+      "Staying present with another person's emotion",
+      "Distance after closeness",
+      "Naming needs",
+      "Receiving relational feedback",
+      "Taking space during conflict",
+      "Returning after conflict",
+      "Responding to repeated reassurance needs",
+      "Handling unspoken hurt",
+      "Repairing after one's distance causes harm"
+    ],
+    "principles": [
+      "Scenario-based rather than trait-label questions",
+      "Options are psychologically plausible rather than obviously good/bad",
+      "Calm and high-pressure contexts are intentionally mixed",
+      "Questions progress from recognition to vulnerability, reciprocity, conflict, and repair"
+    ]
+  },
+  "methodology": {
+    "type": "original educational self-reflection questionnaire",
+    "validatedInstrument": false,
+    "diagnostic": false,
+    "researchThemes": [
+      "adult attachment and emotional avoidance",
+      "emotion suppression and expression in couples",
+      "interpersonal versus intrapersonal emotion regulation",
+      "self-disclosure and receiving support",
+      "partner responsiveness",
+      "protective buffering",
+      "relationship conflict and repair"
+    ],
+    "researchSources": [
+      "https://pubmed.ncbi.nlm.nih.gov/23127352/",
+      "https://pubmed.ncbi.nlm.nih.gov/31674659/",
+      "https://pubmed.ncbi.nlm.nih.gov/39335973/",
+      "https://pubmed.ncbi.nlm.nih.gov/28277711/",
+      "https://pubmed.ncbi.nlm.nih.gov/28737417/"
+    ]
+  },
+  "internalLinks": [
+    "/tests/emotional-availability/",
+    "/tests/avoidant-attachment-test/",
+    "/tests/fear-of-intimacy/",
+    "/tests/emotional-detachment/",
+    "/blog/emotional-unavailability/",
+    "/blog/emotional-safety-in-relationships/",
+    "/methodology/"
+  ]
+}
