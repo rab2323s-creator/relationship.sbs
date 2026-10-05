@@ -1,0 +1,133 @@
+{
+  "id": "ghosting-test",
+  "version": "1.0.0",
+  "published": "2026-10-05",
+  "canonical": "https://relationship.sbs/tests/ghosting-test/",
+  "title": "Ghosting Test: Are You Likely to Ghost? (15 Questions)",
+  "h1": "Ghosting Test: Are You Likely to Ghost Someone?",
+  "searchIntent": [
+    "ghosting self assessment test",
+    "ghosting test",
+    "ghosting quiz",
+    "am i a ghoster",
+    "am i likely to ghost someone",
+    "why do i ghost people",
+    "do i ghost people",
+    "ghosting people psychology"
+  ],
+  "questionCount": 15,
+  "estimatedTime": "3-4 minutes",
+  "scoring": {
+    "range": [
+      0,
+      100
+    ],
+    "answerValues": [
+      0,
+      1,
+      3,
+      4
+    ],
+    "dimensions": {
+      "closure": {
+        "label": "Direct closure tolerance",
+        "weight": 0.28,
+        "items": [
+          2,
+          4,
+          7,
+          12
+        ]
+      },
+      "overload": {
+        "label": "Communication overload",
+        "weight": 0.24,
+        "items": [
+          1,
+          3,
+          8,
+          14
+        ]
+      },
+      "closeness": {
+        "label": "Retreat after closeness",
+        "weight": 0.24,
+        "items": [
+          5,
+          10,
+          13
+        ]
+      },
+      "accountability": {
+        "label": "Relational accountability",
+        "weight": 0.24,
+        "items": [
+          6,
+          9,
+          11,
+          15
+        ]
+      }
+    },
+    "bands": [
+      {
+        "min": 0,
+        "max": 19,
+        "key": "direct",
+        "label": "Direct Communicator"
+      },
+      {
+        "min": 20,
+        "max": 39,
+        "key": "occasional",
+        "label": "Occasional Avoidance"
+      },
+      {
+        "min": 40,
+        "max": 59,
+        "key": "slow_fade",
+        "label": "Slow-Fade Risk"
+      },
+      {
+        "min": 60,
+        "max": 79,
+        "key": "strong",
+        "label": "Strong Ghosting Pattern"
+      },
+      {
+        "min": 80,
+        "max": 100,
+        "key": "automatic",
+        "label": "Automatic Disappearance Pattern"
+      }
+    ],
+    "personalization": {
+      "strongestDrivers": 2,
+      "recoveryAfterSilence": "Independent signal based on whether selected answers preserve a path back after delay, silence, or discomfort.",
+      "strongDisappearanceResponses": "Counts highest-distance responses across scenarios.",
+      "behaviorTags": "Includes delay spiral, closure avoidance, slow fade, closeness retreat, overload, repair after silence, empathy, safety exit, and direct closure."
+    },
+    "safetyRule": "Safety-based blocking or ending contact is not scored like ordinary ghosting when contact is threatening, coercive, or repeatedly violates boundaries."
+  },
+  "methodology": {
+    "type": "original educational self-reflection questionnaire",
+    "validatedInstrument": false,
+    "diagnostic": false,
+    "design": "15 scenario-based items distinguishing direct closure difficulty, communication overload, retreat after closeness, relational accountability, and recovery after silence.",
+    "limitations": "The test cannot infer motive from silence alone and does not diagnose attachment style, personality disorder, or mental health conditions.",
+    "researchBackground": [
+      "Ghosting research distinguishing unilateral unexplained communication cessation from mutual fading or explicit endings.",
+      "Research on communication overload as a contributor to ghosting and digital avoidance.",
+      "Research on attachment, conflict avoidance, and interpersonal disengagement as possible—not exclusive—contributors to ghosting behavior."
+    ]
+  },
+  "internalLinks": [
+    "/blog/communication-needs/",
+    "/blog/healthy-boundaries-script/",
+    "/blog/push-pull-relationship-pattern/",
+    "/tests/avoidant-attachment-test/",
+    "/tests/am-i-emotionally-unavailable/",
+    "/tests/conflict-style/",
+    "/methodology/"
+  ]
+}
