@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "micro-cheating",
+    title: "Micro-Cheating: 17 Signs, Examples & Where the Line Really Is",
+    excerpt: "Hidden DMs, exes, dating apps, deleted messages, flirting, likes, and the difference between privacy and secrecy in modern relationships.",
+    date: "2026-10-05",
+    readingMinutes: 24,
+    tags: ["Micro-Cheating", "Trust", "Digital Relationships", "Boundaries", "Infidelity"],
+    category: "Trust & Relationship Psychology",
+    cover: "/assets/og/relationship-tests-tools-guides.webp",
+    featured: true
+  },
+  {
     slug: "silent-divorce",
     title: "Silent Divorce: 12 Signs You’re Emotionally Separated but Still Married",
     excerpt: "How to recognize a silent divorce, tell emotional separation from a rough patch or roommate phase, and decide whether repair is still happening.",
