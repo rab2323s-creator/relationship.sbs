@@ -94,3 +94,9 @@
 /tests/what-kind-of-lover-are-you-test/results/guarded-lover/
 /tests/what-kind-of-lover-are-you-test/results/magnetic-lover/
 /tests/what-kind-of-lover-are-you-test/results/steady-lover/
+/tests/am-i-in-love-or-just-attached/results/
+/tests/am-i-in-love-or-just-attached/results/grounded-love/
+/tests/am-i-in-love-or-just-attached/results/growing-love/
+/tests/am-i-in-love-or-just-attached/results/love-with-attachment-anxiety/
+/tests/am-i-in-love-or-just-attached/results/idealized-infatuation/
+/tests/am-i-in-love-or-just-attached/results/attachment-led-bond/
