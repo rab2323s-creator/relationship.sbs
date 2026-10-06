@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "cuffing-season",
+    title: "Cuffing Season: Meaning, Dates & 9 Signs You’re Being Cuffed",
+    excerpt: "What cuffing season means, when it starts and ends, the October-to-spring timeline, 9 signs you’re being cuffed, and how to tell seasonal comfort from a real relationship.",
+    date: "2026-10-06",
+    readingMinutes: 20,
+    tags: ["Dating", "Cuffing Season", "Modern Dating", "Relationships", "Dating Slang"],
+    category: "Dating",
+    cover: "/assets/og/relationship-tests-tools-guides.webp",
+    featured: true
+  },
+  {
     slug: "signs-he-is-losing-interest",
     title: "Signs He Is Losing Interest: 15 Changes That Actually Matter",
     excerpt: "Is he losing interest or just busy? Compare initiation, curiosity, plans, repair, texting, warmth, and follow-through against his own earlier behavior.",
