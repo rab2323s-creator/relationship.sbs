@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "the-ick-dating",
+    title: "The Ick: Meaning, 15 Examples & Why You Suddenly Lose Attraction",
+    excerpt: "What the ick means, 15 examples, why attraction can vanish suddenly, the difference between an ick and a red flag, and whether the feeling can go away.",
+    date: "2026-10-06",
+    readingMinutes: 23,
+    tags: ["Dating", "The Ick", "Attraction", "Dating Slang", "Relationships"],
+    category: "Dating",
+    cover: "/assets/og/relationship-tests-tools-guides.webp",
+    featured: true
+  },
+  {
     slug: "cuffing-season",
     title: "Cuffing Season: Meaning, Dates & 9 Signs You’re Being Cuffed",
     excerpt: "What cuffing season means, when it starts and ends, the October-to-spring timeline, 9 signs you’re being cuffed, and how to tell seasonal comfort from a real relationship.",
