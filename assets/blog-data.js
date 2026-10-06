@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "how-to-know-if-someone-likes-you",
+    title: "How to Know If Someone Likes You: 15 Signs That Actually Matter",
+    excerpt: "How to read real interest through initiative, curiosity, time, follow-through, texting, body language, and the difference between flirting and friendliness.",
+    date: "2026-10-06",
+    readingMinutes: 20,
+    tags: ["Dating", "Attraction", "Crush", "Flirting", "Texting", "Body Language"],
+    category: "Dating",
+    cover: "/assets/og/relationship-tests-tools-guides.webp",
+    featured: true
+  },
+  {
     slug: "micro-cheating",
     title: "Micro-Cheating: 17 Signs, Examples & Where the Line Really Is",
     excerpt: "Hidden DMs, exes, dating apps, deleted messages, flirting, likes, and the difference between privacy and secrecy in modern relationships.",
