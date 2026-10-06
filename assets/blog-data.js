@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "signs-he-is-losing-interest",
+    title: "Signs He Is Losing Interest: 15 Changes That Actually Matter",
+    excerpt: "Is he losing interest or just busy? Compare initiation, curiosity, plans, repair, texting, warmth, and follow-through against his own earlier behavior.",
+    date: "2026-10-06",
+    readingMinutes: 21,
+    tags: ["Dating", "Losing Interest", "Mixed Signals", "Texting", "Relationships"],
+    category: "Dating",
+    cover: "/assets/og/relationship-tests-tools-guides.webp",
+    featured: true
+  },
+  {
     slug: "how-to-know-if-someone-likes-you",
     title: "How to Know If Someone Likes You: 15 Signs That Actually Matter",
     excerpt: "How to read real interest through initiative, curiosity, time, follow-through, texting, body language, and the difference between flirting and friendliness.",
