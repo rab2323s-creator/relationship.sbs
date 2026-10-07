@@ -621,13 +621,13 @@ featured: true
   },
   {
     slug: "what-does-k-mean",
-    title: "What Does K Mean in Texting? Is It Rude + How to Reply",
-    excerpt: "What K means in texting and chat, why one letter can feel cold, K vs k vs kk vs K., what it means after conflict, and how to reply without overthinking.",
-    date: "2026-10-08",
-    readingMinutes: 20,
-    tags: ["Texting", "Chat Slang", "Dating", "Communication", "Relationships"],
+    title: "What Does “K” Mean in Texting? 5 Meanings + How to Reply",
+    excerpt: "What a K text can mean by context, how K differs from k or kk, and calm ways to reply without overthinking.",
+    date: "2026-01-29",
+    readingMinutes: 5,
+    tags: ["Texting", "Dating"],
     category: "Texting",
-    cover: "/assets/og/relationship-tests-tools-guides.webp",
-    featured: true
+    cover: "/assets/img/blog/default.webp",
+    featured: false
   }
 ];
