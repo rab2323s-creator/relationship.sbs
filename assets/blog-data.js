@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "falling-in-love-with-potential",
+    title: "Falling in Love With Potential: Why We Love Who Someone Could Become",
+    excerpt: "Why early dating makes us fall for possibility, how idealization and uncertainty shape attraction, and how to separate someone's potential from present reality.",
+    date: "2026-10-08",
+    readingMinutes: 18,
+    tags: ["Dating", "Idealization", "Attraction", "Relationship Psychology", "Hope"],
+    category: "Relationship Psychology",
+    cover: "/assets/og/relationship-tests-tools-guides.webp",
+    featured: true
+  },
+  {
     slug: "why-love-calculators-feel-so-accurate",
     title: "Why Love Calculators Feel So Accurate: The Psychology of Hope & Early Attraction",
     excerpt: "Why one compatibility percentage can feel like hope, proof, or heartbreak in the uncertain first stages of attraction—and what it actually tells you.",
