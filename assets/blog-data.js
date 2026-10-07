@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "why-love-calculators-feel-so-accurate",
+    title: "Why Love Calculators Feel So Accurate: The Psychology of Hope & Early Attraction",
+    excerpt: "Why one compatibility percentage can feel like hope, proof, or heartbreak in the uncertain first stages of attraction—and what it actually tells you.",
+    date: "2026-10-08",
+    readingMinutes: 20,
+    tags: ["Love Calculator", "Compatibility", "Attraction", "Psychology", "Dating"],
+    category: "Relationship Psychology",
+    cover: "/assets/og/love-calculator-by-name.jpg",
+    featured: true
+  },
+  {
     slug: "the-ick-dating",
     title: "The Ick: Meaning, 15 Examples & Why You Suddenly Lose Attraction",
     excerpt: "What the ick means, 15 examples, why attraction can vanish suddenly, the difference between an ick and a red flag, and whether the feeling can go away.",
