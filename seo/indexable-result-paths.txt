@@ -100,3 +100,9 @@
 /tests/am-i-in-love-or-just-attached/results/love-with-attachment-anxiety/
 /tests/am-i-in-love-or-just-attached/results/idealized-infatuation/
 /tests/am-i-in-love-or-just-attached/results/attachment-led-bond/
+/tests/relationship-compatibility-test/results/
+/tests/relationship-compatibility-test/results/strong-fit/
+/tests/relationship-compatibility-test/results/compatible-pressure-points/
+/tests/relationship-compatibility-test/results/mixed-compatibility/
+/tests/relationship-compatibility-test/results/chemistry-structure-gap/
+/tests/relationship-compatibility-test/results/serious-gaps/

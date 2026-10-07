@@ -788,4 +788,32 @@
     <loc>https://relationship.sbs/tools/text-decoder/</loc>
     <lastmod>2026-09-28</lastmod>
   </url>
+  <url>
+    <loc>https://relationship.sbs/tests/relationship-compatibility-test/</loc>
+    <lastmod>2026-10-07</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/relationship-compatibility-test/results/</loc>
+    <lastmod>2026-10-07</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/relationship-compatibility-test/results/strong-fit/</loc>
+    <lastmod>2026-10-07</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/relationship-compatibility-test/results/compatible-pressure-points/</loc>
+    <lastmod>2026-10-07</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/relationship-compatibility-test/results/mixed-compatibility/</loc>
+    <lastmod>2026-10-07</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/relationship-compatibility-test/results/chemistry-structure-gap/</loc>
+    <lastmod>2026-10-07</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/relationship-compatibility-test/results/serious-gaps/</loc>
+    <lastmod>2026-10-07</lastmod>
+  </url>
 </urlset>
