@@ -106,3 +106,9 @@
 /tests/relationship-compatibility-test/results/mixed-compatibility/
 /tests/relationship-compatibility-test/results/chemistry-structure-gap/
 /tests/relationship-compatibility-test/results/serious-gaps/
+/tests/orbiting-dating-quiz/results/
+/tests/orbiting-dating-quiz/results/no-orbiting/
+/tests/orbiting-dating-quiz/results/passive-presence/
+/tests/orbiting-dating-quiz/results/breadcrumb-crossover/
+/tests/orbiting-dating-quiz/results/classic-orbiting/
+/tests/orbiting-dating-quiz/results/genuine-reconnection/
