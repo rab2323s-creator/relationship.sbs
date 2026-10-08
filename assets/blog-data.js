@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "chatgpt-third-voice-in-relationships",
+    title: "Using ChatGPT for Relationship Problems: When AI Becomes the Third Voice",
+    excerpt: "What happens when one partner asks ChatGPT to interpret a fight and brings the answer back into the relationship? The psychology, benefits, risks, and safer ways to use AI after conflict.",
+    date: "2026-10-08",
+    readingMinutes: 22,
+    tags: ["ChatGPT", "AI", "Relationship Conflict", "Communication", "Psychology"],
+    category: "Relationships & AI",
+    cover: "/assets/og/relationship-tests-tools-guides.webp",
+    featured: true
+  },
+  {
     slug: "falling-in-love-with-potential",
     title: "Falling in Love With Potential: Why We Love Who Someone Could Become",
     excerpt: "Why early dating makes us fall for possibility, how idealization and uncertainty shape attraction, and how to separate someone's potential from present reality.",
