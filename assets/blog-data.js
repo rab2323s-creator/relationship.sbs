@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "partner-uses-chatgpt-to-text-me",
+    title: "My Partner Uses ChatGPT to Text Me: Are the Feelings Still Real?",
+    excerpt: "What if the love poem is beautiful, the apology is perfect, and ChatGPT wrote most of it? A research-informed look at AI-written intimacy, authenticity, effort, and emotional ownership.",
+    date: "2026-10-08",
+    readingMinutes: 22,
+    tags: ["ChatGPT", "AI", "Love Messages", "Authenticity", "Communication"],
+    category: "Relationships & AI",
+    cover: "/assets/og/relationship-tests-tools-guides.webp",
+    featured: true
+  },
+  {
     slug: "chatgpt-third-voice-in-relationships",
     title: "Using ChatGPT for Relationship Problems: When AI Becomes the Third Voice",
     excerpt: "What happens when one partner asks ChatGPT to interpret a fight and brings the answer back into the relationship? The psychology, benefits, risks, and safer ways to use AI after conflict.",
