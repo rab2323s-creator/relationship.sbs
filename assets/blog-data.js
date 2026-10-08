@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "partner-shares-private-messages-with-chatgpt",
+    title: "My Partner Shares Our Private Messages With ChatGPT: Is That a Privacy Violation?",
+    excerpt: "What happens when one partner uploads private texts, screenshots, sexual details, or confidential disclosures to AI? A research-informed guide to consent, co-owned information, trust, and digital boundaries.",
+    date: "2026-10-08",
+    readingMinutes: 24,
+    tags: ["ChatGPT", "AI", "Privacy", "Boundaries", "Trust"],
+    category: "Relationships & AI",
+    cover: "/assets/og/relationship-tests-tools-guides.webp",
+    featured: true
+  },
+  {
     slug: "asking-chatgpt-instead-of-my-partner",
     title: "Why Do I Ask ChatGPT About My Relationship Instead of My Partner?",
     excerpt: "Why AI feels safer than asking the person you love: reassurance, vulnerability, self-silencing, avoidance, and when ChatGPT can actually help you start the real conversation.",
