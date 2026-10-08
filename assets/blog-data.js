@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "asking-chatgpt-instead-of-my-partner",
+    title: "Why Do I Ask ChatGPT About My Relationship Instead of My Partner?",
+    excerpt: "Why AI feels safer than asking the person you love: reassurance, vulnerability, self-silencing, avoidance, and when ChatGPT can actually help you start the real conversation.",
+    date: "2026-10-08",
+    readingMinutes: 22,
+    tags: ["ChatGPT", "AI", "Relationship Anxiety", "Communication", "Psychology"],
+    category: "Relationships & AI",
+    cover: "/assets/og/relationship-tests-tools-guides.webp",
+    featured: true
+  },
+  {
     slug: "partner-uses-chatgpt-to-text-me",
     title: "My Partner Uses ChatGPT to Text Me: Are the Feelings Still Real?",
     excerpt: "What if the love poem is beautiful, the apology is perfect, and ChatGPT wrote most of it? A research-informed look at AI-written intimacy, authenticity, effort, and emotional ownership.",
