@@ -13,9 +13,10 @@
   window.TEST = {
     id: "emotional_manipulation",
     slug: SLUG,
+    compactShell: true,
     title: "Emotional Manipulation Test: Am I Being Manipulated?",
     blurb:
-      "15 high-impact scenarios to spot emotional manipulation patterns (gaslighting, guilt-tripping, DARVO, silent punishment)—plus scripts & next steps (, no diagnosis).",
+      "15 high-impact scenarios to spot emotional manipulation patterns (gaslighting, guilt-tripping, DARVO, silent punishment)—plus scripts and next steps. Educational, not diagnostic.",
     time: "2–3 min",
     intent: "quiz",
     keywords: [
