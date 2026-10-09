@@ -17,18 +17,78 @@
 
   <link rel="stylesheet" href="/assets/styles.css" />
 
-  <!-- BlogPosting Schema -->
+  <!-- Article / WebPage / Breadcrumb Schema -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
-    "@type":"BlogPosting",
-    "headline":"Situationship Signs: 15 Signs of a Situationship & Red Flags",
-    "description":"Situationship signs: 15 signs of a situationship, red flags, signs it is turning into a relationship, signs it is ending, and how to ask for clarity.",
-    "url":"https://relationship.sbs/blog/situationship-signs/",
-    "datePublished":"2026-01-29",
-    "dateModified":"2026-10-09",
-    "publisher":{"@type":"Organization","name":"relationship.sbs"},
-    "mainEntityOfPage":{"@type":"WebPage","@id":"https://relationship.sbs/blog/situationship-signs/"}
+    "@graph":[
+      {
+        "@type":"BlogPosting",
+        "@id":"https://relationship.sbs/blog/situationship-signs/#article",
+        "headline":"Situationship Signs: 15 Signs of a Situationship & Red Flags",
+        "description":"Situationship signs: 15 signs of a situationship, red flags, signs it is turning into a relationship, signs it is ending, and how to ask for clarity.",
+        "url":"https://relationship.sbs/blog/situationship-signs/",
+        "datePublished":"2026-01-29",
+        "dateModified":"2026-10-09",
+        "inLanguage":"en",
+        "isAccessibleForFree":true,
+        "articleSection":"Dating & Relationships",
+        "keywords":[
+          "situationship signs",
+          "signs of a situationship",
+          "situationship red flags",
+          "signs your situationship is turning into a relationship",
+          "signs a situationship is ending",
+          "how to ask for clarity in a situationship"
+        ],
+        "author":{
+          "@type":"Person",
+          "name":"Laura Aram Smith",
+          "url":"https://relationship.sbs/about/laura-aram-smith/"
+        },
+        "publisher":{
+          "@type":"Organization",
+          "name":"relationship.sbs",
+          "url":"https://relationship.sbs/"
+        },
+        "mainEntityOfPage":{"@id":"https://relationship.sbs/blog/situationship-signs/#webpage"}
+      },
+      {
+        "@type":"WebPage",
+        "@id":"https://relationship.sbs/blog/situationship-signs/#webpage",
+        "url":"https://relationship.sbs/blog/situationship-signs/",
+        "name":"Situationship Signs: 15 Signs of a Situationship & Red Flags",
+        "description":"Situationship signs: 15 signs of a situationship, red flags, signs it is turning into a relationship, signs it is ending, and how to ask for clarity.",
+        "inLanguage":"en",
+        "isPartOf":{"@id":"https://relationship.sbs/#website"},
+        "breadcrumb":{"@id":"https://relationship.sbs/blog/situationship-signs/#breadcrumbs"},
+        "mainEntity":{"@id":"https://relationship.sbs/blog/situationship-signs/#article"}
+      },
+      {
+        "@type":"BreadcrumbList",
+        "@id":"https://relationship.sbs/blog/situationship-signs/#breadcrumbs",
+        "itemListElement":[
+          {
+            "@type":"ListItem",
+            "position":1,
+            "name":"Home",
+            "item":"https://relationship.sbs/"
+          },
+          {
+            "@type":"ListItem",
+            "position":2,
+            "name":"Blog",
+            "item":"https://relationship.sbs/blog/"
+          },
+          {
+            "@type":"ListItem",
+            "position":3,
+            "name":"Situationship Signs",
+            "item":"https://relationship.sbs/blog/situationship-signs/"
+          }
+        ]
+      }
+    ]
   }
   </script>
 
