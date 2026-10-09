@@ -29,6 +29,120 @@
 .ai-faq details{border:1px solid var(--edge);padding:14px 17px;margin:11px 0;border-radius:12px}.ai-faq summary{font-weight:750;cursor:pointer}.ai-faq details p{color:var(--muted);margin-bottom:0}.ai-guide section[id]{scroll-margin-top:70px}
 @media(max-width:650px){.ai-quiz{padding:14px}.ai-choice{font-size:.95rem;padding:12px}.ai-grid,.ai-strengths,.ai-answer-evidence{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.ai-track span{transition:none}}
+
+/* Page-scoped accessible color system; the shared site is dark themed. */
+.ai-page {
+  --edge:#465675;
+  --accent:#bac9ff;
+  --soft:#1b2942;
+  --muted:#bfcee5;
+  --ai-surface:#111c2f;
+  --ai-choice:#19263d;
+  --ai-text:#f3f6ff;
+  --ai-secondary:#c9d6eb;
+  color:var(--ai-text);
+}
+.ai-head h1,
+.ai-question,
+.ai-result h2,
+.ai-result h3,
+.ai-guide h2,
+.ai-guide h3 { color:var(--ai-text); }
+.ai-quiz {
+  background:var(--ai-surface);
+  color:var(--ai-text);
+  border-color:var(--edge);
+  box-shadow:0 14px 36px rgba(0,0,0,.27);
+}
+.ai-choice {
+  background:var(--ai-choice);
+  color:var(--ai-text);
+  border-color:#536480;
+}
+.ai-choice:hover,
+.ai-choice:focus-visible,
+.ai-picked {
+  color:var(--ai-text);
+  background:#263858;
+  border-color:var(--accent);
+}
+.ai-letter {
+  color:var(--ai-text);
+  border-color:#647696;
+  background:#22324c;
+}
+.ai-controls button { color:var(--ai-text); }
+.ai-controls button:disabled { opacity:.55; }
+.ai-track { background:#33435d; }
+.ai-track span { background:var(--accent); }
+.ai-overline { color:#c4d2ff; }
+.ai-score-header,
+.ai-safety,
+.ai-literary {
+  background:var(--soft);
+  color:var(--ai-text);
+  border-color:var(--edge);
+}
+.ai-score-header p,
+.ai-strengths small,
+.ai-dimension p,
+.ai-answer-card small,
+.ai-answer-card p,
+.ai-controls span { color:var(--ai-secondary); }
+.ai-bigscore,
+.ai-profile-lead,
+.ai-strengths strong,
+.ai-dimension strong,
+.ai-answer-card blockquote { color:var(--ai-text); }
+.ai-strengths>div,
+.ai-answer-card,
+.ai-grid>div,
+.ai-faq details {
+  background:var(--ai-choice);
+  border-color:var(--edge);
+  color:var(--ai-text);
+}
+.ai-faq summary,
+.ai-faq details p { color:var(--ai-text); }
+.ai-guide>.card {
+  background:linear-gradient(160deg,#152138,#101a2b);
+  border-color:var(--edge);
+  color:var(--ai-text);
+  box-shadow:0 10px 27px rgba(0,0,0,.15);
+}
+.ai-guide .card:hover { border-color:#687998; }
+.ai-guide p,
+.ai-guide li { color:var(--ai-text); }
+.ai-guide a {
+  color:#c5d1ff;
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+.ai-guide a:hover { color:#e0e8ff; }
+.ai-facts span,
+.ai-nav a {
+  background:#202f49;
+  border-color:#51627e;
+  color:#e2eaff;
+}
+.ai-result-actions button {
+  background:var(--accent);
+  border-color:var(--accent);
+  color:#121c31;
+}
+.ai-result-actions .ai-outline {
+  background:#233450;
+  border-color:#617395;
+  color:var(--ai-text);
+}
+.ai-result-actions button:hover { filter:brightness(1.08); }
+.ai-result-actions button:focus-visible,
+.ai-controls button:focus-visible,
+.ai-choice:focus-visible {
+  outline:3px solid #d5e0ff;
+  outline-offset:2px;
+}
+
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://relationship.sbs/tests/anxiety-or-intuition-quiz/#webpage","url":"https://relationship.sbs/tests/anxiety-or-intuition-quiz/","name":"Anxiety or Intuition Quiz: Relationship Gut Feeling Test (12 Questions)","mainEntity":{"@id":"https://relationship.sbs/tests/anxiety-or-intuition-quiz/#quiz"},"breadcrumb":{"@id":"https://relationship.sbs/tests/anxiety-or-intuition-quiz/#breadcrumbs"},"inLanguage":"en","datePublished":"2026-10-10","dateModified":"2026-10-10"},{"@type":"Quiz","@id":"https://relationship.sbs/tests/anxiety-or-intuition-quiz/#quiz","name":"Anxiety or Intuition Quiz: Is It Relationship Anxiety or a Gut Feeling?","url":"https://relationship.sbs/tests/anxiety-or-intuition-quiz/","description":"12 original weighted scenarios about evidence, reassurance, uncertainty, direct communication and relationship boundaries.","isAccessibleForFree":true,"inLanguage":"en","educationalUse":"Self-reflection; non-diagnostic","provider":{"@type":"Organization","name":"relationship.sbs","url":"https://relationship.sbs/"}},{"@type":"BreadcrumbList","@id":"https://relationship.sbs/tests/anxiety-or-intuition-quiz/#breadcrumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://relationship.sbs/"},{"@type":"ListItem","position":2,"name":"Tests","item":"https://relationship.sbs/tests/"},{"@type":"ListItem","position":3,"name":"Anxiety or Intuition Quiz","item":"https://relationship.sbs/tests/anxiety-or-intuition-quiz/"}]},{"@type":"FAQPage","@id":"https://relationship.sbs/tests/anxiety-or-intuition-quiz/#faq","mainEntity":[{"@type":"Question","name":"Is this a relationship anxiety or intuition quiz?","acceptedAnswer":{"@type":"Answer","text":"Yes. Twelve original relationship scenarios explore evidence, repeated reassurance, uncertainty, communication, and boundaries. It cannot tell whether a gut feeling is correct."}},{"@type":"Question","name":"How do I tell anxiety from intuition?","acceptedAnswer":{"@type":"Answer","text":"Consider observable events, whether they recur, how your worry responds to reassurance, and whether a boundary was violated. Feelings deserve attention but are not proof alone."}},{"@type":"Question","name":"Can anxiety and real red flags coexist?","acceptedAnswer":{"@type":"Answer","text":"Yes. Someone can be anxious and accurately notice broken promises or coercion. A quiz cannot establish the intentions of another person."}},{"@type":"Question","name":"Is a calm gut feeling always accurate?","acceptedAnswer":{"@type":"Answer","text":"No. Calmness does not guarantee accuracy, and fear does not invalidate an observable concern."}},{"@type":"Question","name":"What does the Response Clarity Score mean?","acceptedAnswer":{"@type":"Answer","text":"The original 0–100 educational score describes your response patterns across five skills. It is not a diagnosis, percentile or prediction."}},{"@type":"Question","name":"How does this differ from a relationship anxiety test?","acceptedAnswer":{"@type":"Answer","text":"The general relationship anxiety test examines patterns of anxiety. This quiz distinguishes evidence from fearful interpretation and emphasizes consent and safety."}}]}]}</script>
 </head><body><header id="siteHeader"></header>
