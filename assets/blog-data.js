@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "dating-app-addiction",
+    title: "Dating App Addiction: 9 Signs You Can't Stop Swiping",
+    excerpt: "Why do we keep swiping when dating apps stop feeling good? A literary, research-informed exploration of compulsive swiping, dating app fatigue, hookup culture, and how to regain choice.",
+    date: "2026-10-09",
+    readingMinutes: 18,
+    tags: ["Dating Apps", "Compulsive Swiping", "Dating Fatigue", "Psychology", "Casual Dating"],
+    category: "Dating & Relationships",
+    cover: "/assets/og/relationship-tests-tools-guides.webp",
+    featured: true
+  },
+  {
     slug: "partner-shares-private-messages-with-chatgpt",
     title: "My Partner Shares Our Private Messages With ChatGPT: Is That a Privacy Violation?",
     excerpt: "What happens when one partner uploads private texts, screenshots, sexual details, or confidential disclosures to AI? A research-informed guide to consent, co-owned information, trust, and digital boundaries.",
