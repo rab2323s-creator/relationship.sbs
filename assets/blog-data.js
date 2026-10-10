@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "sex-on-first-date",
+    title: "Sex on the First Date: Does It Change a Relationship?",
+    excerpt: "Can first-date intimacy lead to lasting love? A moving human story and research-informed answers about Tinder dates, emotional attachment, expectations, consent and the morning after.",
+    date: "2026-10-10",
+    readingMinutes: 16,
+    tags: ["First Date", "Dating Psychology", "Emotional Intimacy", "Dating Apps", "Relationship Expectations"],
+    category: "Dating & Relationships",
+    cover: "/assets/og/relationship-tests-tools-guides.webp",
+    featured: true
+  },
+  {
     slug: "dating-app-addiction",
     title: "Dating App Addiction: 9 Signs You Can't Stop Swiping",
     excerpt: "Why do we keep swiping when dating apps stop feeling good? A literary, research-informed exploration of compulsive swiping, dating app fatigue, hookup culture, and how to regain choice.",
