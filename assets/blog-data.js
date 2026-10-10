@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "he-texts-every-day-but-never-makes-plans",
+    title: "He Texts Me Every Day but Never Makes Plans: What Does It Really Mean?",
+    excerpt: "Why does he text daily but never ask to meet? A deeply human, research-informed guide to mixed signals, seven possible reasons, follow-through, and five honest texts you can send.",
+    date: "2026-10-10",
+    readingMinutes: 17,
+    tags: ["Texting", "Dating Psychology", "Mixed Signals", "Dating Advice", "Relationship Clarity"],
+    category: "Dating & Relationships",
+    cover: "/assets/images/blog/he-texts-every-day-but-never-makes-plans/he-texts-every-day-never-makes-plans-woman-phone.webp",
+    featured: true
+  },
+  {
     slug: "sex-on-first-date",
     title: "Sex on the First Date: Does It Change a Relationship?",
     excerpt: "Can first-date intimacy lead to lasting love? A moving human story and research-informed answers about Tinder dates, emotional attachment, expectations, consent and the morning after.",
