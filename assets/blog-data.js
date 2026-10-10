@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "sleep-divorce",
+    title: "Sleep Divorce: Is Sleeping in Separate Beds Bad for Your Marriage?",
+    excerpt: "Can sleeping in separate beds improve a marriage—or quietly create distance? A moving, research-informed guide to sleep divorce, its meaning, benefits, risks and how to stay close.",
+    date: "2026-10-10",
+    readingMinutes: 11,
+    tags: ["Sleep Divorce", "Sleeping Separately", "Marriage", "Couples", "Relationship Psychology"],
+    category: "Marriage & Relationships",
+    cover: "/assets/og/relationship-tests-tools-guides.webp",
+    featured: true
+  },
+  {
     slug: "he-texts-every-day-but-never-makes-plans",
     title: "He Texts Me Every Day but Never Makes Plans: What Does It Really Mean?",
     excerpt: "Why does he text daily but never ask to meet? A deeply human, research-informed guide to mixed signals, seven possible reasons, follow-through, and five honest texts you can send.",
