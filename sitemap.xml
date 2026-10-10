@@ -693,6 +693,10 @@
     <lastmod>2026-02-06</lastmod>
   </url>
   <url>
+    <loc>https://relationship.sbs/tests/one-sided-relationship-test/</loc>
+    <lastmod>2026-10-10</lastmod>
+  </url>
+  <url>
     <loc>https://relationship.sbs/tests/orbiting-dating-quiz/</loc>
     <lastmod>2026-10-08</lastmod>
   </url>
@@ -887,9 +891,5 @@
   <url>
     <loc>https://relationship.sbs/tools/text-decoder/</loc>
     <lastmod>2026-09-28</lastmod>
-  </url>
-  <url>
-    <loc>https://relationship.sbs/tests/one-sided-relationship-test/</loc>
-    <lastmod>2026-10-10</lastmod>
   </url>
 </urlset>
