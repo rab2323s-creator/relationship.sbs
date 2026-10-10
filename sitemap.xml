@@ -138,7 +138,7 @@
   </url>
   <url>
     <loc>https://relationship.sbs/blog/intimacy-changes-long-term-relationships/</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-10</lastmod>
   </url>
   <url>
     <loc>https://relationship.sbs/blog/is-having-an-ai-girlfriend-cheating/</loc>
@@ -734,7 +734,7 @@
   </url>
   <url>
     <loc>https://relationship.sbs/tests/relationship-compatibility-test/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-10</lastmod>
   </url>
   <url>
     <loc>https://relationship.sbs/tests/relationship-compatibility-test/results/</loc>
@@ -787,6 +787,10 @@
   <url>
     <loc>https://relationship.sbs/tests/relationship-trauma/results/steady_recovery/</loc>
     <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/sexual-compatibility-test/</loc>
+    <lastmod>2026-10-10</lastmod>
   </url>
   <url>
     <loc>https://relationship.sbs/tests/should-we-break-up/</loc>
@@ -891,9 +895,5 @@
   <url>
     <loc>https://relationship.sbs/tools/text-decoder/</loc>
     <lastmod>2026-09-28</lastmod>
-  </url>
-  <url>
-    <loc>https://relationship.sbs/tests/sexual-compatibility-test/</loc>
-    <lastmod>2026-10-10</lastmod>
   </url>
 </urlset>
