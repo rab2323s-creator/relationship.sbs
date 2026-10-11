@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "ai-companion-chat-privacy-delete-data",
+    title: "خصوصية محادثات الرفيق الافتراضي: حذف بيانات Replika وCharacter.AI وNomi",
+    excerpt: "دليل عربي موثق لخصوصية محادثات رفيق الذكاء الاصطناعي: التصدير والحذف، استخدام المحتوى للتدريب، واستثناءات الاحتفاظ لدى ثلاث منصات.",
+    date: "2026-10-11",
+    readingMinutes: 12,
+    tags: ["AI Companion Privacy", "Replika", "Character.AI", "Nomi", "Data Deletion"],
+    category: "AI & Relationships",
+    cover: "/assets/og/relationship-tests-tools-guides.webp",
+    featured: false
+  },
+  {
     slug: "my-ai-girlfriend-is-cheating-on-me",
     title: "My AI Girlfriend Is Cheating on Me: Game, Story & AI Jealousy",
     excerpt: "The real AI girlfriend game by Dynamics Lab, why simulated jealousy feels so personal, and what autonomous AI companions reveal about human attachment.",
