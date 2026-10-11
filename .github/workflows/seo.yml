@@ -36,6 +36,9 @@ jobs:
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: python scripts/generate_sitemap.py --write
 
+      - name: Test retroactive jealousy scoring
+        run: node --test scripts/test_retroactive_jealousy.mjs
+
       - name: Run static SEO audit
         run: python scripts/seo_audit.py
 
