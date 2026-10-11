@@ -4,8 +4,8 @@
 window.BLOG_POSTS = [
   {
     slug: "ai-companion-chat-privacy-delete-data",
-    title: "خصوصية محادثات الرفيق الافتراضي: حذف بيانات Replika وCharacter.AI وNomi",
-    excerpt: "دليل عربي موثق لخصوصية محادثات رفيق الذكاء الاصطناعي: التصدير والحذف، استخدام المحتوى للتدريب، واستثناءات الاحتفاظ لدى ثلاث منصات.",
+    title: "Are AI Companion Chats Private? Replika, Character AI & Nomi",
+    excerpt: "A practical, source-checked comparison of Replika, Character.AI and Nomi chat privacy, data exports, model-training choices, retention and account deletion.",
     date: "2026-10-11",
     readingMinutes: 12,
     tags: ["AI Companion Privacy", "Replika", "Character.AI", "Nomi", "Data Deletion"],
