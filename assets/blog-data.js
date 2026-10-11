@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "can-chatgpt-read-whatsapp-messages",
+    title: "Can ChatGPT Read Your WhatsApp Messages? What It Can Access",
+    excerpt: "Can ChatGPT see WhatsApp chats automatically? A clear, up-to-date explanation of message sharing, authorized access, privacy settings and what AI can actually read.",
+    date: "2026-10-11",
+    readingMinutes: 4,
+    tags: ["ChatGPT Privacy", "WhatsApp", "AI and Relationships", "Private Messages"],
+    category: "AI & Relationships",
+    cover: "/assets/og/relationship-tests-tools-guides.webp",
+    featured: false
+  },
+  {
     slug: "sleep-divorce",
     title: "Sleep Divorce: Is Sleeping in Separate Beds Bad for Your Marriage?",
     excerpt: "Can sleeping in separate beds improve a marriage—or quietly create distance? A moving, research-informed guide to sleep divorce, its meaning, benefits, risks and how to stay close.",
