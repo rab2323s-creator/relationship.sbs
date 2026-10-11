@@ -3,12 +3,12 @@
 
 window.BLOG_POSTS = [
   {
-    slug: "ai-companion-chat-privacy-delete-data",
-    title: "Are AI Companion Chats Private? Replika, Character AI & Nomi",
-    excerpt: "A practical, source-checked comparison of Replika, Character.AI and Nomi chat privacy, data exports, model-training choices, retention and account deletion.",
-    date: "2026-10-11",
+    slug: "ai-girlfriend-chat-privacy",
+    title: "Are AI Girlfriend Chats Private? Who Can See Your Messages?",
+    excerpt: "Who can read AI girlfriend chats? A source-checked guide to Replika, Character.AI and Nomi privacy, intimate conversations, training and deletion.",
+    date: "2026-10-12",
     readingMinutes: 12,
-    tags: ["AI Companion Privacy", "Replika", "Character.AI", "Nomi", "Data Deletion"],
+    tags: ["AI Girlfriend Privacy", "AI Companion Chats", "Replika", "Character.AI", "Nomi"],
     category: "AI & Relationships",
     cover: "/assets/og/relationship-tests-tools-guides.webp",
     featured: false
