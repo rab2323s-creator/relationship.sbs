@@ -13,7 +13,6 @@ from urllib.parse import urlparse
 ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = "https://relationship.sbs"
 SITEMAP = ROOT / "sitemap.xml"
-ALLOWLIST = ROOT / "seo" / "indexable-result-paths.txt"
 
 TITLE_RE = re.compile(r"<title\b[^>]*>(.*?)</title>", re.I | re.S)
 H1_RE = re.compile(r"<h1\b[^>]*>(.*?)</h1>", re.I | re.S)
@@ -57,15 +56,6 @@ def is_noindex(content: str) -> bool:
     return "noindex" in {token.strip().lower() for token in value.split(",")}
 
 
-def allowlist() -> set[str]:
-    values: set[str] = set()
-    for raw in ALLOWLIST.read_text(encoding="utf-8").splitlines():
-        value = raw.strip()
-        if value and not value.startswith("#"):
-            values.add(value)
-    return values
-
-
 def main() -> int:
     errors: list[str] = []
     warnings: list[str] = []
@@ -87,6 +77,8 @@ def main() -> int:
         h1s = [clean_text(x) for x in H1_RE.findall(content)]
         canonical = get_one(CANONICAL_RE, content)
         noindex = is_noindex(content)
+        if "/results/" in route and not noindex:
+            errors.append(f"{rel}: all quiz result pages must be noindex")
 
         if not title:
             errors.append(f"{rel}: missing <title>")
@@ -154,18 +146,13 @@ def main() -> int:
         if html.unescape(loc).startswith(BASE_URL)
     }
 
-    result_allowlist = allowlist()
     for route in sorted(sitemap_urls):
         if route not in existing_routes:
             errors.append(f"sitemap: route has no index.html: {route}")
         if route not in indexable_routes:
             errors.append(f"sitemap: route is not indexable: {route}")
-        if "/results/" in route and route not in result_allowlist:
-            errors.append(f"sitemap: result route is not allowlisted: {route}")
-
-    for route in sorted(result_allowlist):
-        if route not in existing_routes:
-            errors.append(f"result allowlist: missing route {route}")
+        if "/results/" in route:
+            errors.append(f"sitemap: result page must be excluded: {route}")
 
     # Non-result indexable pages should be discoverable through the sitemap.
     for route in sorted(indexable_routes):

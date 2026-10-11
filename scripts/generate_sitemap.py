@@ -3,8 +3,7 @@
 
 Rules:
 - Indexable non-result index.html pages are discovered automatically.
-- Quiz result pages are included only when explicitly allowlisted in
-  seo/indexable-result-paths.txt.
+- All quiz result pages are always excluded from the sitemap.
 - <lastmod> comes from the latest Git commit touching the page file.
 - changefreq/priority are intentionally omitted because Google ignores them.
 """
@@ -21,7 +20,6 @@ from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = "https://relationship.sbs"
-ALLOWLIST = ROOT / "seo" / "indexable-result-paths.txt"
 SITEMAP = ROOT / "sitemap.xml"
 
 ROBOTS_RE = re.compile(
@@ -41,18 +39,6 @@ def route_for(path: Path) -> str | None:
     if not rel.endswith("/index.html"):
         return None
     return "/" + rel[: -len("index.html")]
-
-
-def read_allowlist() -> set[str]:
-    routes: set[str] = set()
-    for raw in ALLOWLIST.read_text(encoding="utf-8").splitlines():
-        value = raw.strip()
-        if not value or value.startswith("#"):
-            continue
-        if not value.startswith("/") or not value.endswith("/"):
-            raise SystemExit(f"Invalid result allowlist route: {value}")
-        routes.add(value)
-    return routes
 
 
 def meta_robots(content: str) -> str:
@@ -83,13 +69,14 @@ def git_lastmod(path: Path) -> str:
 
 
 def discover() -> list[tuple[str, Path]]:
-    allowlisted_results = read_allowlist()
-    found_results: set[str] = set()
     pages: list[tuple[str, Path]] = []
 
     for path in sorted(ROOT.rglob("index.html")):
         route = route_for(path)
         if route is None:
+            continue
+
+        if "/results/" in route:
             continue
 
         content = path.read_text(encoding="utf-8")
@@ -105,21 +92,7 @@ def discover() -> list[tuple[str, Path]]:
                 f"expected {expected!r}, found {canon!r}"
             )
 
-        is_result = "/results/" in route
-        if is_result:
-            if route not in allowlisted_results:
-                continue
-            found_results.add(route)
-
         pages.append((route, path))
-
-    missing = allowlisted_results - found_results
-    if missing:
-        formatted = "\n".join(f"  - {route}" for route in sorted(missing))
-        raise SystemExit(
-            "Allowlisted result routes are missing, noindex, or non-canonical:\n"
-            + formatted
-        )
 
     pages.sort(key=lambda item: (item[0] != "/", item[0]))
     return pages

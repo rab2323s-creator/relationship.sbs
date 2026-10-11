@@ -1,19 +1,16 @@
 # SEO maintenance
 
-This directory keeps search-indexing decisions explicit and reviewable.
+## Quiz result indexing
 
-## Result-page policy
+Every page under `/tests/*/results/`, including result profiles and results hubs, must be `noindex,follow`. Results remain publicly accessible and usable, but must never be included in `sitemap.xml`.
 
-`indexable-result-paths.txt` is the allowlist for quiz result pages that may appear in `sitemap.xml`.
+The GitHub Actions SEO workflow automatically runs `scripts/noindex_result_pages.py --write` on every push to main, regenerates the sitemap, validates the policy, and commits the generated changes. A pull request checks that result pages have noindex. Never block result pages in robots.txt because crawlers need access to see the noindex directive.
 
-A result page belongs on the allowlist only when it has standalone search value: a distinct search intent, substantial explanatory content, a self-contained canonical URL, and useful internal links. Thin share/result variants should not be added just because they exist.
-
-The sitemap generator never expands result-page indexing automatically.
+The old `seo/indexable-result-paths.txt` allowlist has been retired.
 
 ## Commands
 
-- `python scripts/seo_audit.py` — validates indexable HTML, canonicals, JSON-LD, sitemap/indexability alignment, and reports link/title issues.
-- `python scripts/generate_sitemap.py --write` — rebuilds `sitemap.xml` from indexable non-result pages plus the explicit result-page allowlist, using each file's latest Git commit date for `lastmod`.
-- `python scripts/generate_sitemap.py --check` — exits non-zero when the committed sitemap differs from the generated version.
-
-The GitHub workflow runs the audit on pull requests. After HTML changes reach `main`, the sitemap regeneration workflow updates `sitemap.xml` automatically when repository permissions allow it.
+- `python scripts/noindex_result_pages.py --write` — apply noindex to every quiz result page.
+- `python scripts/noindex_result_pages.py --check` — fail if any result page could be indexed.
+- `python scripts/generate_sitemap.py --write` — include only indexable non-result routes.
+- `python scripts/seo_audit.py` — check titles, canonicals, JSON-LD, links, noindex, and sitemap.
