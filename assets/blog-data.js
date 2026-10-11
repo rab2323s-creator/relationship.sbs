@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "my-ai-girlfriend-is-cheating-on-me",
+    title: "My AI Girlfriend Is Cheating on Me: Game, Story & AI Jealousy",
+    excerpt: "The real AI girlfriend game by Dynamics Lab, why simulated jealousy feels so personal, and what autonomous AI companions reveal about human attachment.",
+    date: "2026-10-11",
+    readingMinutes: 10,
+    tags: ["AI Girlfriend", "AI Games", "AI Companions", "Jealousy", "Human Psychology"],
+    category: "AI & Relationships",
+    cover: "/assets/og/relationship-tests-tools-guides.webp",
+    featured: true
+  },
+  {
     slug: "can-chatgpt-read-whatsapp-messages",
     title: "Can ChatGPT Read Your WhatsApp Messages? What It Can Access",
     excerpt: "Can ChatGPT see WhatsApp chats automatically? A clear, up-to-date explanation of message sharing, authorized access, privacy settings and what AI can actually read.",
