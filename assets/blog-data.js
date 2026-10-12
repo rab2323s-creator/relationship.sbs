@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "is-love-at-first-sight-real",
+    title: "Is Love at First Sight Real? What Psychology Says",
+    excerpt: "Is love at first sight real? A research-led guide to instant attraction, eye contact, chemistry, first impressions and the difference between a spark and lasting love.",
+    date: "2026-10-12",
+    readingMinutes: 15,
+    tags: ["Love at First Sight", "Instant Attraction", "Romantic Chemistry", "First Impressions", "Love Psychology"],
+    category: "Love & Relationships",
+    cover: "/assets/images/blog/is-love-at-first-sight-real/first-glance-bookstore.svg",
+    featured: true
+  },
+
+  {
     slug: "in-love-with-same-sex-best-friend",
     title: "Am I in Love With My Same-Sex Best Friend? 11 Signs",
     excerpt: "A thoughtful guide to same-sex best-friend crushes, romantic vs platonic feelings, questioning identity, safety, and how to talk honestly without pressure.",
