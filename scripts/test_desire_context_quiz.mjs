@@ -46,7 +46,7 @@ test("progress, back, change, finish and retake",()=>{
  assert.ok(buttons(mount).some(b=>b.textContent==="← Back"));
  click(buttons(mount).find(b=>b.textContent==="← Back"));
  click(buttons(mount).find(b=>b.textContent.includes("I miss feeling")));
- for(let i=1;i<12;i++){assert.ok(!buttons(mount).some(b=>b.textContent.includes("Retake the 12 questions")));click(buttons(mount).find(b=>b.tag==="button"&&b.textContent!=="← Back"&&b.className?.includes("dq-choice"));}
+ for(let i=1;i<12;i++){assert.ok(!buttons(mount).some(b=>b.textContent.includes("Retake the 12 questions")));click(buttons(mount).find(b=>b.tag==="button"&&b.textContent!=="← Back"&&b.className?.includes("dq-choice")));}
  assert.ok(buttons(mount).some(b=>b.textContent==="Retake the 12 questions"));
  click(buttons(mount).find(b=>b.textContent==="Retake the 12 questions"));
  assert.ok(buttons(mount).some(b=>b.textContent.includes("I'm depleted")));
