@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "set-boundaries-with-parents",
+    title: "How to Set Boundaries With Parents: 15 Scripts for Adults",
+    excerpt: "15 real-life scripts for setting boundaries with parents as an adult—calls, visits, criticism, guilt, money and what to do when limits are ignored.",
+    date: "2026-10-12",
+    readingMinutes: 11,
+    tags: ["Boundaries With Parents", "Family Boundaries", "Boundary Scripts", "Adult Children", "Setting Boundaries"],
+    category: "Family & Relationships",
+    cover: "/assets/og/relationship-tests-tools-guides.webp",
+    featured: true
+  },
+
+  {
     slug: "ai-girlfriend-chat-privacy",
     title: "Are AI Girlfriend Chats Private? Who Can See Your Messages?",
     excerpt: "Who can read AI girlfriend chats? A source-checked guide to Replika, Character.AI and Nomi privacy, intimate conversations, training and deletion.",
