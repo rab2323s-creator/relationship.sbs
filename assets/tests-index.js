@@ -1,6 +1,15 @@
 /* tests-index.js — lightweight home index */
 window.TEST_INDEX = [
   {
+    "id": "why_dont_i_want_sex_with_my_partner",
+    "slug": "why-dont-i-want-sex-with-my-partner",
+    "title": "Why Don't I Want Sex With My Partner? Quiz (12 Questions)",
+    "blurb": "12 thoughtful scenarios on stress, emotional distance, pressure and wellbeing, with four personalized interpretation paths.",
+    "time": "3 min",
+    "guide": "/blog/intimacy-changes-long-term-relationships/",
+    "intent": "quiz"
+  },
+  {
     "id": "does_he_like_me",
     "slug": "does-he-like-me",
     "title": "Does He Like Me? 15-Question Quiz: Is He Interested or Just Being Nice?",
