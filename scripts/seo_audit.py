@@ -161,12 +161,12 @@ def main() -> int:
 
     # Keep the public content registries aligned with their existing routes.
     blog_registry = re.findall(
-        r'^\\s*slug:\\s*"([^"]+)"',
+        r'^\s*slug:\s*"([^"]+)"',
         (ROOT / "assets/blog-data.js").read_text(encoding="utf-8"),
         re.M,
     )
     test_registry = re.findall(
-        r'^\\s*"slug":\\s*"([^"]+)"',
+        r'^\s*"slug":\s*"([^"]+)"',
         (ROOT / "assets/tests-index.js").read_text(encoding="utf-8"),
         re.M,
     )
@@ -185,7 +185,7 @@ def main() -> int:
             errors.append(f"{label} registry: no page exists for {slug}")
 
     listed_tests = set(re.findall(
-        r'href=["\\\']?/tests/([a-z0-9-]+)/',
+        r'href=["\x27]/tests/([a-z0-9-]+)/',
         (ROOT / "tests/index.html").read_text(encoding="utf-8"),
     ))
     for slug in sorted(test_routes - listed_tests):
