@@ -1,6 +1,15 @@
 /* tests-index.js — lightweight home index */
 window.TEST_INDEX = [
   {
+    "id": "am_i_still_attracted_to_my_partner",
+    "slug": "am-i-still-attracted-to-my-partner",
+    "title": "Am I Still Attracted to My Partner? Quiz (12 Questions)",
+    "blurb": "12 realistic scenarios about evolving attraction, stress, emotional distance and enduring connection, with four personal reflection profiles.",
+    "time": "3 min",
+    "guide": "/blog/intimacy-changes-long-term-relationships/",
+    "intent": "quiz"
+  },
+  {
     "id": "why_dont_i_want_sex_with_my_partner",
     "slug": "why-dont-i-want-sex-with-my-partner",
     "title": "Why Don't I Want Sex With My Partner? Quiz (12 Questions)",
