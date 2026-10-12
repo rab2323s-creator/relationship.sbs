@@ -39,6 +39,9 @@ jobs:
       - name: Test retroactive jealousy scoring
         run: node --test scripts/test_retroactive_jealousy.mjs
 
+      - name: Test desire-context quiz model and navigation
+        run: node --test scripts/test_desire_context_quiz.mjs
+
       - name: Run static SEO audit
         run: python scripts/seo_audit.py
 
