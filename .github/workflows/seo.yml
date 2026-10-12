@@ -42,6 +42,9 @@ jobs:
       - name: Test desire-context quiz model and navigation
         run: node --test scripts/test_desire_context_quiz.mjs
 
+      - name: Test attraction reflection and navigation
+        run: node --test scripts/test_attraction_reflection.mjs
+
       - name: Run static SEO audit
         run: python scripts/seo_audit.py
 
