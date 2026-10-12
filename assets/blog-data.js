@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "why-do-people-cheat",
+    title: "Why Do People Cheat? 8 Psychological Reasons Backed by Research",
+    excerpt: "Why people cheat, even in happy relationships: an in-depth evidence-led guide to eight psychological motives, attachment studies and what research can and cannot prove.",
+    date: "2026-10-12",
+    readingMinutes: 16,
+    tags: ["Psychology of Cheating", "Why People Cheat", "Infidelity Research", "Relationships", "Attachment and Trust"],
+    category: "Relationship Psychology",
+    cover: "/assets/og/relationship-tests-tools-guides.webp",
+    featured: true
+  },
+
+  {
     slug: "set-boundaries-with-parents",
     title: "How to Set Boundaries With Parents: 15 Scripts for Adults",
     excerpt: "15 real-life scripts for setting boundaries with parents as an adult—calls, visits, criticism, guilt, money and what to do when limits are ignored.",
