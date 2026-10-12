@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "in-love-with-same-sex-best-friend",
+    title: "Am I in Love With My Same-Sex Best Friend? 11 Signs",
+    excerpt: "A thoughtful guide to same-sex best-friend crushes, romantic vs platonic feelings, questioning identity, safety, and how to talk honestly without pressure.",
+    date: "2026-10-12",
+    readingMinutes: 13,
+    tags: ["Same-Sex Crush", "Romantic Feelings", "Friendship", "Questioning Sexuality", "LGBTQ Relationships"],
+    category: "Love & Relationships",
+    cover: "/assets/images/blog/in-love-with-same-sex-best-friend/same-sex-best-friends-cafe-dusk.svg",
+    featured: true
+  },
+
+  {
     slug: "why-do-people-cheat",
     title: "Why Do People Cheat? 8 Psychological Reasons Backed by Research",
     excerpt: "Why people cheat, even in happy relationships: an in-depth evidence-led guide to eight psychological motives, attachment studies and what research can and cannot prove.",
