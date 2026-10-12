@@ -201,6 +201,17 @@ window.BLOG_POSTS = [
     featured: true
   },
   {
+    slug: "is-having-an-ai-girlfriend-cheating",
+    title: "Is Having an AI Girlfriend Cheating? What It Means for Your Relationship",
+    excerpt: "Is having an AI girlfriend cheating? Learn what actually changes in a relationship when a partner has an AI girlfriend, 7 signs it is becoming a replacement, and what to do next.",
+    date: "2026-10-05",
+    readingMinutes: 20,
+    tags: ["AI Girlfriend", "AI Cheating", "Relationship Boundaries", "Trust", "AI Companions"],
+    category: "Relationships & AI",
+    cover: "/assets/og/relationship-tests-tools-guides.webp",
+    featured: false
+  },
+  {
     slug: "silent-divorce",
     title: "Silent Divorce: 12 Signs You’re Emotionally Separated but Still Married",
     excerpt: "How to recognize a silent divorce, tell emotional separation from a rough patch or roommate phase, and decide whether repair is still happening.",

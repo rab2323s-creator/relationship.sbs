@@ -231,5 +231,140 @@ window.TEST_INDEX = [
     "time": "2–3 min",
     "guide": "/blog/mental-load-in-relationships/",
     "intent": "quiz"
+  },
+  {
+    "id": "retroactive_jealousy_quiz",
+    "slug": "retroactive-jealousy-quiz",
+    "title": "Retroactive Jealousy Quiz: Are You Stuck on Your Partner’s Past?",
+    "blurb": "12 questions about intrusive thoughts, comparison with exes, reassurance-seeking and checking, with four weighted dimensions and answer-based next steps.",
+    "time": "2–3 min",
+    "guide": "/blog/retroactive-jealousy/",
+    "intent": "quiz"
+  },
+  {
+    "id": "am_i_over_my_ex_quiz",
+    "slug": "am-i-over-my-ex-quiz",
+    "title": "Am I Over My Ex? Free Quiz",
+    "blurb": "Reflect on lingering feelings, checking habits, self-identity and your future. Get a transparent moving-on score across four dimensions, with evidence from your own answers.",
+    "time": "3–4 min",
+    "guide": "/blog/how-to-get-over-a-breakup/",
+    "intent": "quiz"
+  },
+  {
+    "id": "sexless_marriage_quiz",
+    "slug": "sexless-marriage-quiz",
+    "title": "Sexless Marriage Quiz: Is It a Phase or a Deeper Disconnection?",
+    "blurb": "Take 15 thoughtful questions about changes in intimacy, mutual satisfaction, affection, communication and shared repair. Get a personalized Connection Strain Score, five dimensions and specific next steps.",
+    "time": "4–5 min",
+    "guide": "/blog/intimacy-changes-long-term-relationships/",
+    "intent": "quiz"
+  },
+  {
+    "id": "sexual_compatibility_test",
+    "slug": "sexual-compatibility-test",
+    "title": "Sexual Compatibility Test: Are You and Your Partner in Sync?",
+    "blurb": "Explore desire, communication, consent, emotional connection and how you handle differences. Get a five-dimension score and answer-based recommendations.",
+    "time": "4–5 min",
+    "guide": "/blog/intimacy-changes-long-term-relationships/",
+    "intent": "quiz"
+  },
+  {
+    "id": "one_sided_relationship_test",
+    "slug": "one-sided-relationship-test",
+    "title": "One-Sided Relationship Test: Am I the Only One Trying?",
+    "blurb": "Take 12 scenario-based questions about shared effort, emotional care, repair and space for needs. Get four scores, a 0–100 result and answer-based next steps.",
+    "time": "3–4 min",
+    "guide": "/blog/he-texts-every-day-but-never-makes-plans/",
+    "intent": "quiz"
+  },
+  {
+    "id": "anxiety_or_intuition_quiz",
+    "slug": "anxiety-or-intuition-quiz",
+    "title": "Anxiety or Intuition Quiz: Relationship Gut Feeling Test",
+    "blurb": "Is it relationship anxiety or a real concern? Twelve evidence-aware scenarios, five personalized clarity dimensions and safety-focused guidance.",
+    "time": "3–4 min",
+    "guide": "/blog/relationship-anxiety-or-gut-feeling/",
+    "intent": "quiz"
+  },
+  {
+    "id": "boundaries_test",
+    "slug": "boundaries-test",
+    "title": "Boundaries Test: Do I Have Healthy Boundaries?",
+    "blurb": "Free relationship boundaries quiz measuring saying no, guilt resilience, privacy, follow-through and flexible closeness—with five personalized scores and answer-based next steps.",
+    "time": "3–4 min",
+    "guide": "/blog/healthy-boundaries-script/",
+    "intent": "quiz"
+  },
+  {
+    "id": "orbiting_dating_quiz",
+    "slug": "orbiting-dating-quiz",
+    "title": "Orbiting in Dating Quiz",
+    "blurb": "15 scenario-based questions separating passive Story views, breadcrumb crossover, classic orbiting, and genuine reconnection—with a weighted Orbiting Pattern Score.",
+    "time": "3–4 min",
+    "guide": "/blog/orbiting-in-dating/",
+    "intent": "quiz"
+  },
+  {
+    "id": "relationship_compatibility_test",
+    "slug": "relationship-compatibility-test",
+    "title": "Relationship Compatibility Test",
+    "blurb": "12 realistic scenarios covering values, future fit, communication, repair, trust, lifestyle, and intimacy—with a Compatibility Score and personalized pressure points.",
+    "time": "2–3 min",
+    "guide": "/blog/emotional-safety-in-relationships/",
+    "intent": "quiz"
+  },
+  {
+    "id": "am_i_in_love_or_just_attached",
+    "slug": "am-i-in-love-or-just-attached",
+    "title": "Am I in Love or Just Attached?",
+    "blurb": "12 scenario-based questions separating grounded love, real-person knowing, secure choice, attachment urgency, and idealization—with a personalized score and profile.",
+    "time": "2–3 min",
+    "guide": "/blog/limerence-explained/",
+    "intent": "quiz"
+  },
+  {
+    "id": "trust_issues_test",
+    "slug": "trust-issues-test",
+    "title": "Trust Issues Test",
+    "blurb": "Separate evidence-based caution from suspicion, guardedness, reassurance loops, checking, and difficulty updating trust after consistent behavior.",
+    "time": "2–3 min",
+    "guide": "/blog/trust-building-actions/",
+    "intent": "quiz"
+  },
+  {
+    "id": "avoidant_attachment_test",
+    "slug": "avoidant-attachment-test",
+    "title": "Avoidant Attachment Test",
+    "blurb": "Measure closeness pressure, hyper-independence, deactivation, push-pull fear, and whether your pattern leans fearful or dismissive.",
+    "time": "2–3 min",
+    "guide": "/blog/avoidant-attachment-texting/",
+    "intent": "quiz"
+  },
+  {
+    "id": "ghosting_test",
+    "slug": "ghosting-test",
+    "title": "Ghosting Test",
+    "blurb": "15 psychologically nuanced scenarios about disappearing, delayed replies, direct closure, communication overload, retreat after closeness, and accountability.",
+    "time": "3–4 min",
+    "guide": "/blog/communication-needs/",
+    "intent": "quiz"
+  },
+  {
+    "id": "am_i_emotionally_unavailable",
+    "slug": "am-i-emotionally-unavailable",
+    "title": "Am I Emotionally Unavailable?",
+    "blurb": "12 scenario-based questions about emotional access, vulnerability, responsiveness, shutdown under pressure, and repair—with a personalized availability score.",
+    "time": "2–3 min",
+    "guide": "/blog/emotional-unavailability/",
+    "intent": "quiz"
+  },
+  {
+    "id": "am_i_manipulative",
+    "slug": "am-i-manipulative",
+    "title": "Am I Manipulative?",
+    "blurb": "Explore guilt, control, blame-shifting, emotional leverage, autonomy, and how you respond when someone says no.",
+    "time": "2–3 min",
+    "guide": "/blog/boundaries-vs-control/",
+    "intent": "quiz"
   }
 ];

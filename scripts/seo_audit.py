@@ -159,6 +159,38 @@ def main() -> int:
         if "/results/" not in route and route not in sitemap_urls:
             warnings.append(f"indexable non-result route missing from sitemap: {route}")
 
+    # Keep the public content registries aligned with their existing routes.
+    blog_registry = re.findall(
+        r'^\\s*slug:\\s*"([^"]+)"',
+        (ROOT / "assets/blog-data.js").read_text(encoding="utf-8"),
+        re.M,
+    )
+    test_registry = re.findall(
+        r'^\\s*"slug":\\s*"([^"]+)"',
+        (ROOT / "assets/tests-index.js").read_text(encoding="utf-8"),
+        re.M,
+    )
+    blog_routes = {p.parent.name for p in (ROOT / "blog").glob("*/index.html")}
+    test_routes = {p.parent.name for p in (ROOT / "tests").glob("*/index.html")}
+    for label, registered, actual in (
+        ("blog", blog_registry, blog_routes),
+        ("tests", test_registry, test_routes),
+    ):
+        duplicates = sorted({slug for slug in registered if registered.count(slug) > 1})
+        for slug in duplicates:
+            errors.append(f"{label} registry: duplicate slug {slug}")
+        for slug in sorted(actual - set(registered)):
+            errors.append(f"{label} registry: missing existing page {slug}")
+        for slug in sorted(set(registered) - actual):
+            errors.append(f"{label} registry: no page exists for {slug}")
+
+    listed_tests = set(re.findall(
+        r'href=["\\\']?/tests/([a-z0-9-]+)/',
+        (ROOT / "tests/index.html").read_text(encoding="utf-8"),
+    ))
+    for slug in sorted(test_routes - listed_tests):
+        errors.append(f"tests landing page: missing test link {slug}")
+
     print(
         f"SEO audit: {len(html_files)} index pages, "
         f"{len(sitemap_urls)} sitemap URLs, "
