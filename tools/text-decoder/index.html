@@ -1,93 +1,83 @@
-  <!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Text Decoder — relationship.sbs</title>
-  <meta name="description" content="Paste a message. Get 3 likely meanings and calm reply options. Free, instant, no sign-up." />
-
-  <link rel="canonical" href="https://relationship.sbs/tools/text-decoder/" />
-
-  <meta property="og:title" content="Text Decoder — relationship.sbs" />
-  <meta property="og:description" content="Paste a message. Get likely meanings + calm reply options." />
-  <meta property="og:url" content="https://relationship.sbs/tools/text-decoder/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="relationship.sbs" />
-
-  <meta name="twitter:card" content="summary" />
-  <link rel="stylesheet" href="/assets/styles.css" />
-
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"WebApplication",
-    "name":"Text Decoder",
-    "applicationCategory":"LifestyleApplication",
-    "operatingSystem":"Any",
-    "url":"https://relationship.sbs/tools/text-decoder/",
-    "description":"Paste a message and get likely meanings and reply suggestions."
-  }
-  </script>
+<meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Text Message Decoder: What Does Their Text Mean? | Free Tool</title>
+<meta name="description" content="What does their text mean? Decode K, dry replies, mixed signals, I need space, and ex messages. Explore possible meanings and copy thoughtful replies. Free, private tool." />
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+<link rel="canonical" href="https://relationship.sbs/tools/text-decoder/" />
+<meta property="og:type" content="website" /><meta property="og:site_name" content="relationship.sbs" />
+<meta property="og:title" content="Text Message Decoder: What Does Their Text Mean?" />
+<meta property="og:description" content="Understand possible text meanings, add relationship context, and choose calm replies. Free and private in your browser." />
+<meta property="og:url" content="https://relationship.sbs/tools/text-decoder/" />
+<meta property="og:image" content="https://relationship.sbs/assets/og/relationship-tests-tools-guides.webp" />
+<meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="Text Message Decoder: What Does Their Text Mean?" />
+<meta name="twitter:description" content="Decode confusing texts with context, possible meanings and practical replies." />
+<meta name="twitter:image" content="https://relationship.sbs/assets/og/relationship-tests-tools-guides.webp" />
+<link rel="stylesheet" href="/assets/styles.css" /><link rel="stylesheet" href="/assets/text-decoder.css" />
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://relationship.sbs/tools/text-decoder/#webpage","url":"https://relationship.sbs/tools/text-decoder/","name":"Text Message Decoder: What Does Their Text Mean?","description":"A free, privacy-conscious tool for exploring plausible interpretations of relationship text messages and drafting replies.","inLanguage":"en","mainEntity":{"@id":"https://relationship.sbs/tools/text-decoder/#app"}},{"@type":"WebApplication","@id":"https://relationship.sbs/tools/text-decoder/#app","name":"Text Message Decoder","url":"https://relationship.sbs/tools/text-decoder/","description":"Rule-based relationship text decoder with context controls, possible meanings and reply templates. Messages are processed in the browser.","applicationCategory":"LifestyleApplication","operatingSystem":"Any","browserRequirements":"JavaScript enabled","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"relationship.sbs","url":"https://relationship.sbs/"}},{"@type":"BreadcrumbList","@id":"https://relationship.sbs/tools/text-decoder/#breadcrumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://relationship.sbs/"},{"@type":"ListItem","position":2,"name":"Text Message Decoder","item":"https://relationship.sbs/tools/text-decoder/"}]}]}</script>
 </head>
 <body>
-  <header id="siteHeader"></header>
-
-  <main class="wrap">
-    <section class="card">
-      <div class="kicker">
-        <div class="crumbs">
-          <a href="/">Home</a> / <span>Text Decoder</span>
-        </div>
-        <div class="row">
-          <a class="btn small secondary" href="/#tests">Take a test</a>
-        </div>
-      </div>
-
-      <h1 style="margin:0 0 8px;font-size:34px;line-height:1.1;">Text Decoder</h1>
-      <p class="muted" style="margin:10px 0 0;">Trying to judge the whole pattern, not just one message? Take the <a href="/tests/does-he-like-me/"><strong>Does He Like Me? Quiz</strong></a> for a weighted look at initiation, consistency, effort, and progression.</p>
-      <p class="muted">If what you’re really wondering is whether you and this person feel like a match, try the <a href="/tools/love-calculator/"><strong>Love Calculator by Name</strong></a> for a quick name-based compatibility score.</p>
-
-      <p class="muted" style="margin:0 0 14px;">
-        Paste a message. Choose context. Get likely meanings and calm reply options.
-      </p>
-
-      <div class="card" style="margin:0; box-shadow:none; background:rgba(0,0,0,.12);">
-        <label class="small" for="msg">Message</label>
-        <textarea id="msg" rows="4" style="width:100%; margin-top:8px; padding:12px; border-radius:16px; border:1px solid rgba(255,255,255,.14); background:rgba(0,0,0,.20); color:var(--text);"></textarea>
-
-        <div class="row" style="margin-top:12px;">
-          <label class="small" style="display:flex; align-items:center; gap:8px;">
-            <input id="seen" type="checkbox" /> Seen but no reply
-          </label>
-
-          <label class="small" style="display:flex; align-items:center; gap:8px;">
-            Hours since message:
-            <input id="hours" type="number" min="0" value="0" style="width:90px; padding:8px; border-radius:12px; border:1px solid rgba(255,255,255,.14); background:rgba(0,0,0,.20); color:var(--text);" />
-          </label>
-
-          <button class="btn" id="analyzeBtn" type="button">Decode</button>
-          <span class="small">Tip: Ctrl/⌘ + Enter</span>
-        </div>
-      </div>
-    </section>
-
-    <section id="out" class="card">
-      <h2 style="margin:0 0 10px;">Start by pasting a message</h2>
-      <p class="muted" style="margin:0;">We’ll generate a few grounded interpretations and reply options.</p>
-    </section>
-
-    <section class="card">
-      <h2>Try these next</h2>
-      <div class="row">
-        <a class="btn secondary" href="/tests/attachment-style/">Attachment Style Snapshot</a>
-        <a class="btn secondary" href="/tests/conflict-style/">Conflict Style Quick Scan</a>
-      </div>
-    </section>
-  </main>
-
-  <footer id="siteFooter"></footer>
-
-  <script src="/assets/shared.js"></script>
-  <script src="/assets/decoder.js"></script>
-</body>
-</html>
+<header id="siteHeader"></header>
+<main class="wrap decoder-page">
+<nav class="decoder-crumbs" aria-label="Breadcrumb"><a href="/">Home</a> <span aria-hidden="true">/</span> Text Message Decoder</nav>
+<header class="decoder-hero">
+<div class="decoder-eyebrow">FREE RELATIONSHIP TOOL · PRIVATE IN YOUR BROWSER</div>
+<h1>Text Message Decoder: What Does Their Text Mean?</h1>
+<p class="decoder-direct"><strong>Quick answer:</strong> A text can signal interest, distance, stress, uncertainty, or simply a different communication style. Its meaning depends on the actual words, your relationship, and the pattern over time. Paste a message below to explore plausible readings and thoughtful replies—without claiming to read someone else's mind.</p>
+<p class="decoder-sub">No login. No AI upload. Message text is analyzed locally by transparent rules, and is not saved by this tool.</p>
+</header>
+<section class="decoder-workspace" aria-label="Interactive text decoder">
+<div class="decoder-panel">
+<div class="decoder-step"><span>01</span> The message</div>
+<label for="msg" class="decoder-label">Paste the message you received (or sent)</label>
+<textarea id="msg" rows="5" maxlength="1600" placeholder="Example: I'm not sure, maybe later..." aria-describedby="privacyNote charCount"></textarea>
+<div class="decoder-field-bottom"><span id="privacyNote">Remove names, phone numbers, and private information before pasting.</span><span id="charCount">0 / 1600</span></div>
+<div class="decoder-step"><span>02</span> Add context <small>(optional, improves relevance)</small></div>
+<div class="decoder-fields">
+<div><label for="relationship" class="decoder-label">Who is this person?</label><select id="relationship"><option value="dating">Someone I'm dating</option><option value="crush">Crush / new connection</option><option value="partner">Partner / spouse</option><option value="ex">Ex-partner</option><option value="friend">Friend / other</option></select></div>
+<div><label for="situation" class="decoder-label">What's happening?</label><select id="situation"><option value="general">General conversation</option><option value="plans">Making or cancelling plans</option><option value="after-conflict">After an argument</option><option value="after-breakup">After a breakup</option><option value="flirting">Flirting / attraction</option></select></div>
+<div><label for="pattern" class="decoder-label">Usual communication pattern</label><select id="pattern"><option value="unknown">Not sure / too early to tell</option><option value="consistent">Usually consistent</option><option value="mixed">Hot and cold / mixed signals</option><option value="distant">Recently distant</option></select></div>
+<div><label for="direction" class="decoder-label">Which message is this?</label><select id="direction"><option value="received">They sent it to me</option><option value="sent">I sent it; I'm waiting for a reply</option></select></div>
+</div>
+<div class="decoder-delay"><label><input id="seen" type="checkbox" /> My last message was seen but not answered</label><label for="hours">Hours without a reply <input id="hours" type="number" min="0" max="720" value="0" inputmode="numeric" /></label></div>
+<div id="formError" role="alert" hidden></div>
+<div class="decoder-actions"><button type="button" id="analyzeBtn" class="btn decoder-primary">Decode this message <span aria-hidden="true">→</span></button><button type="button" id="clearBtn" class="btn secondary">Clear</button></div>
+<p class="decoder-hint">Press Ctrl/⌘ + Enter to decode. No account or signup required.</p>
+</div>
+<div class="decoder-panel decoder-result-panel" id="out" aria-live="polite" aria-atomic="false">
+<div class="decoder-empty"><span class="decoder-empty-symbol" aria-hidden="true">“ ”</span><h2>Your interpretation appears here</h2><p>See possible meanings, clues from the wording, questions worth asking, and three replies that match your style.</p></div>
+</div>
+</section>
+<section class="decoder-examples" aria-labelledby="examplesTitle"><h2 id="examplesTitle">Try a common text</h2><p>Tap a realistic example to fill the decoder. Each result includes more than one possible explanation.</p>
+<div class="decoder-example-list">
+<button type="button" data-example="K" data-kind="dating">“K”</button>
+<button type="button" data-example="Maybe later" data-kind="crush">“Maybe later”</button>
+<button type="button" data-example="I need space" data-kind="partner">“I need space”</button>
+<button type="button" data-example="I'm sorry for how I acted" data-kind="partner">“I'm sorry”</button>
+<button type="button" data-example="I miss you" data-kind="ex">“I miss you” from an ex</button>
+<button type="button" data-example="I'm busy right now" data-kind="crush">“I'm busy”</button>
+<button type="button" data-example="We need to talk" data-kind="partner">“We need to talk”</button>
+<button type="button" data-example="I can't make it tonight" data-kind="dating">Cancelled plans</button>
+</div></section>
+<section class="decoder-explainer" aria-labelledby="howTitle">
+<h2 id="howTitle">How to Decode a Text Without Overthinking It</h2>
+<p>Reading a message is not the same as reading a mind. Short replies, delayed responses, emojis and punctuation acquire meaning through <strong>context</strong>: the words themselves, what happened before, whether a plan was made, and whether the person follows through. A text decoder can offer interpretations, not proof of hidden emotions.</p>
+<div class="decoder-insights"><div><h3>Look at the literal words first</h3><p>“I need space” is a request for space, not secret evidence that someone wants you to chase them. “Let's meet Friday” conveys more about planning than a heart emoji does.</p></div><div><h3>Compare it with their usual style</h3><p>Someone who always writes “K” may simply be concise. A sudden shift after weeks of steady communication is worth discussing, but still does not identify a motive.</p></div><div><h3>Choose clarity over mind-reading</h3><p>When stakes are high, the best next move is often an honest, low-pressure question—not five follow-up messages or a psychological label.</p></div></div>
+<h2>What Does “K” Mean in a Text?</h2><p>“K” can be a quick acknowledgment, a neutral habit, or a sign the person does not want to elaborate. It <em>does not automatically mean</em> anger or lost interest. Consider how they normally reply and what came before. See our full guide to <a href="/blog/what-does-k-mean/">what K means in texting</a>.</p>
+<h2>How to Interpret Dry Texting, Mixed Signals and Delayed Replies</h2><p>Dry texting can happen because someone is tired, distracted, uncomfortable, or simply brief by nature. Repeated one-word replies with little initiative can feel discouraging, but a single text is weak evidence. For more context, read <a href="/blog/dry-texting-meaning/">dry texting meaning</a>, <a href="/blog/stop-overthinking-texts/">how to stop overthinking texts</a>, or <a href="/blog/avoidant-attachment-texting/">avoidant texting patterns</a>. Avoid labeling someone as avoidantly attached from a single message.</p>
+<h2>What If Your Ex Texts “I Miss You”?</h2><p>Missing someone is not the same as being prepared for a healthy reunion. If your ex reaches out, ask what they want now and what has changed. Our guide on <a href="/blog/why-do-exes-come-back-after-a-breakup/">why exes come back after a breakup</a> examines possible motives without pretending a text can confirm them. If you are practicing <a href="/blog/no-contact-after-breakup/">no contact</a>, you do not have to reply.</p>
+<h2>How This Decoder Works and Protects Your Privacy</h2><p>The tool uses on-device pattern matching—not a language model, therapy service, or access to someone's private accounts. It matches recognizable phrases, accounts for the context you select, and provides multiple cautious explanations. Unrecognized messages receive a general interpretation rather than a made-up psychological certainty. <strong>Your pasted text is not submitted to our server by this decoder, and the tool does not store it.</strong> As with any website, avoid entering identifying or highly sensitive information.</p>
+<p>This is educational guidance, not a diagnosis or evidence of love, cheating, manipulation, attachment style, or future behavior. If a message contains threats or coercion, personal safety and real-world support matter more than crafting the perfect response.</p>
+<h2>Frequently Asked Questions</h2>
+<details><summary>Can a text decoder tell if someone likes me?</summary><p>No tool can reliably determine feelings from one message. Look for repeated initiative, respect and follow-through, and communicate directly. You can also explore our <a href="/tests/does-he-like-me/">Does He Like Me? quiz</a> as a self-reflection aid.</p></details>
+<details><summary>Why did they leave me on read?</summary><p>They might be occupied, unsure what to say, distracted, or choosing not to continue. A read receipt does not prove why they haven't answered. Read more about <a href="/blog/left-on-read-meaning/">being left on read</a>.</p></details>
+<details><summary>Does “I need space” mean a breakup?</summary><p>Not necessarily. Respect the request and, if the person is open to it, ask when you can reconnect. If they explicitly end the relationship, take their words seriously.</p></details>
+<details><summary>Does this tool use AI or upload my texts?</summary><p>No. It uses local rule-based analysis inside your browser. It does not send message content to an AI service or store pasted texts.</p></details>
+<details><summary>Can this tool diagnose avoidant or anxious attachment?</summary><p>No. Attachment patterns cannot be established from a single text. The tool intentionally avoids psychological diagnoses.</p></details>
+<details><summary>Can I use it for messages in other languages?</summary><p>It recognizes a limited set of common Arabic phrases, but English has broader coverage. Interpretation and reply templates are currently in English.</p></details>
+</section>
+<section class="decoder-next"><h2>Explore the bigger pattern</h2><p>One message is just a moment. Relationship patterns are shaped by consistency, boundaries and communication over time.</p><div class="row"><a class="btn secondary" href="/tests/does-he-like-me/">Does He Like Me? Quiz</a><a class="btn secondary" href="/tests/avoidant-texting/">Avoidant Texting Test</a><a class="btn secondary" href="/blog/how-to-know-if-someone-likes-you/">Signs Someone Likes You</a><a class="btn secondary" href="/blog/communication-needs/">Communicating Needs</a></div></section>
+</main><footer id="siteFooter"></footer>
+<script defer src="/assets/shared.js"></script><script defer src="/assets/decoder-engine.js"></script><script defer src="/assets/decoder.js"></script>
+</body></html>
