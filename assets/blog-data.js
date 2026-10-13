@@ -2,6 +2,7 @@
 // Blog posts index (Static JSON-like data)
 
 window.BLOG_POSTS = [
+  {slug:"help-im-in-a-secret-relationship",title:"Help! I'm in a Secret Relationship!",excerpt:"Feeling hidden by your partner? Explore why relationships are kept secret, private vs secret love, real-life conflicts, seven conversation scripts, and how to decide what comes next.",date:"2026-10-14",readingMinutes:18,tags:["Secret Relationship","Partner Hiding Relationship","Private vs Secret","Relationship Boundaries","Relationship Advice"],category:"Love & Relationships",cover:"/assets/og/relationship-tests-tools-guides.webp",featured:true},
   {
     slug: "why-do-exes-come-back-after-a-breakup",
     title: "Why Do Exes Come Back After a Breakup? 10 Real Reasons",
