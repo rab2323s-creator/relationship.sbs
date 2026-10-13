@@ -1,6 +1,15 @@
 /* tests-index.js — lightweight home index */
 window.TEST_INDEX = [
   {
+    "id": "why_cant_i_stay_in_a_relationship",
+    "slug": "why-cant-i-stay-in-a-relationship",
+    "title": "Why Can't I Stay in a Relationship? Quiz (12 Questions)",
+    "blurb": "Explore four distinct reasons relationships may keep ending: fading novelty, closeness pressure, rushing to reconnect, or genuine incompatibility.",
+    "time": "3 min",
+    "guide": "/blog/is-love-at-first-sight-real/",
+    "intent": "quiz"
+  },
+  {
     "id": "am_i_still_attracted_to_my_partner",
     "slug": "am-i-still-attracted-to-my-partner",
     "title": "Am I Still Attracted to My Partner? Quiz (12 Questions)",
