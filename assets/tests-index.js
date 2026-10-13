@@ -1,6 +1,16 @@
 /* tests-index.js — lightweight home index */
 window.TEST_INDEX = [
   {
+    "id": "romance_in_marriage_quiz",
+    "slug": "romance-in-marriage-quiz",
+    "title": "Are You Still Romantic After Years of Marriage? Take the Quiz",
+    "blurb": "15 thoughtful scenarios exploring romantic initiative, everyday tenderness, noticing needs, shared time and reconnection after years of marriage.",
+    "time": "3–4 min",
+    "guide": "/blog/intimacy-changes-long-term-relationships/",
+    "intent": "quiz"
+  },
+
+  {
     "id": "why_cant_i_stay_in_a_relationship",
     "slug": "why-cant-i-stay-in-a-relationship",
     "title": "Why Can't I Stay in a Relationship? Quiz (12 Questions)",
