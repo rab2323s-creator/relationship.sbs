@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "how-to-know-if-someone-really-loves-you",
+    title: "How to Know If Someone Really Loves You: 7 Clear Signs",
+    excerpt: "Seven real signs someone loves you: consistent care, respect, support, active listening, shared effort, repair after conflict, and emotional safety.",
+    date: "2026-10-13",
+    readingMinutes: 15,
+    tags: ["Real Love", "Signs of Love", "Healthy Relationships", "Emotional Availability", "Commitment"],
+    category: "Love & Relationships",
+    cover: "/assets/images/blog/how-to-know-if-someone-really-loves-you/real-love-everyday-care-couple.webp",
+    featured: true
+  },
+
+  {
     slug: "is-love-at-first-sight-real",
     title: "Is Love at First Sight Real? What Psychology Says",
     excerpt: "Is love at first sight real? A research-led guide to instant attraction, eye contact, chemistry, first impressions and the difference between a spark and lasting love.",
