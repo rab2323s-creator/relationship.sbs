@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "why-do-exes-come-back-after-a-breakup",
+    title: "Why Do Exes Come Back After a Breakup? 10 Real Reasons",
+    excerpt: "Why exes come back: 10 psychologically informed reasons, the truth about no contact, signs of meaningful change, and what to ask before reconciling.",
+    date: "2026-10-13",
+    readingMinutes: 18,
+    tags: ["Exes Coming Back", "Breakup Psychology", "No Contact", "Reconciliation", "Relationship Advice"],
+    category: "Breakups & Healing",
+    cover: "/assets/images/blog/why-do-exes-come-back-after-a-breakup/ex-reaches-out-after-breakup-lonely-night.svg",
+    featured: true
+  },
+
+  {
     slug: "how-to-know-if-someone-really-loves-you",
     title: "How to Know If Someone Really Loves You: 7 Clear Signs",
     excerpt: "Seven real signs someone loves you: consistent care, respect, support, active listening, shared effort, repair after conflict, and emotional safety.",
