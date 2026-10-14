@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://relationship.sbs/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-14</lastmod>
   </url>
   <url>
     <loc>https://relationship.sbs/about/</loc>
@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://relationship.sbs/blog/</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-14</lastmod>
   </url>
   <url>
     <loc>https://relationship.sbs/blog/ai-cheating-in-relationships/</loc>
@@ -34,7 +34,7 @@
   </url>
   <url>
     <loc>https://relationship.sbs/blog/avoidant-attachment-texting/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-14</lastmod>
   </url>
   <url>
     <loc>https://relationship.sbs/blog/boundaries-vs-control/</loc>
@@ -78,7 +78,7 @@
   </url>
   <url>
     <loc>https://relationship.sbs/blog/emotional-cheating/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-14</lastmod>
   </url>
   <url>
     <loc>https://relationship.sbs/blog/emotional-detachment-in-relationships/</loc>
@@ -126,7 +126,7 @@
   </url>
   <url>
     <loc>https://relationship.sbs/blog/gaslighting-in-relationships/</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-14</lastmod>
   </url>
   <url>
     <loc>https://relationship.sbs/blog/he-texts-every-day-but-never-makes-plans/</loc>
@@ -135,6 +135,10 @@
   <url>
     <loc>https://relationship.sbs/blog/healthy-boundaries-script/</loc>
     <lastmod>2026-10-12</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/blog/help-im-in-a-secret-relationship/</loc>
+    <lastmod>2026-10-14</lastmod>
   </url>
   <url>
     <loc>https://relationship.sbs/blog/how-to-get-over-a-breakup/</loc>
@@ -146,7 +150,7 @@
   </url>
   <url>
     <loc>https://relationship.sbs/blog/how-to-know-if-someone-really-loves-you/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-14</lastmod>
   </url>
   <url>
     <loc>https://relationship.sbs/blog/in-love-with-same-sex-best-friend/</loc>
@@ -175,6 +179,10 @@
   <url>
     <loc>https://relationship.sbs/blog/love-bombing/</loc>
     <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/blog/love-has-won-cult-of-mother-god/</loc>
+    <lastmod>2026-10-14</lastmod>
   </url>
   <url>
     <loc>https://relationship.sbs/blog/love-language-explained/</loc>
@@ -258,7 +266,7 @@
   </url>
   <url>
     <loc>https://relationship.sbs/blog/situationship-signs/</loc>
-    <lastmod>2026-10-10</lastmod>
+    <lastmod>2026-10-14</lastmod>
   </url>
   <url>
     <loc>https://relationship.sbs/blog/sleep-divorce/</loc>
@@ -282,7 +290,7 @@
   </url>
   <url>
     <loc>https://relationship.sbs/blog/trauma-bonding/</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-14</lastmod>
   </url>
   <url>
     <loc>https://relationship.sbs/blog/trust-building-actions/</loc>
@@ -494,7 +502,7 @@
   </url>
   <url>
     <loc>https://relationship.sbs/tests/should-we-break-up/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-14</lastmod>
   </url>
   <url>
     <loc>https://relationship.sbs/tests/toxic-relationship/</loc>
@@ -528,6 +536,4 @@
     <loc>https://relationship.sbs/tools/text-decoder/</loc>
     <lastmod>2026-10-13</lastmod>
   </url>
-  <url><loc>https://relationship.sbs/blog/help-im-in-a-secret-relationship/</loc><lastmod>2026-10-14</lastmod></url>
-  <url><loc>https://relationship.sbs/blog/love-has-won-cult-of-mother-god/</loc><lastmod>2026-10-14</lastmod></url>
 </urlset>
