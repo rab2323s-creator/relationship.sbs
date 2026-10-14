@@ -309,7 +309,7 @@ window.BLOG_POSTS = [
   },
   {
     slug: "push-pull-relationship-pattern",
-    title: "Push-Pull Relationship Pattern: Why You Get Close, Pull Away & Repeat",
+    title: "Push-Pull Relationship: 9 Signs, Meaning & How to Break It",
     excerpt: "Why one person chases while the other withdraws, why the roles can reverse, and how anxious-avoidant and demand-withdraw dynamics keep hot-and-cold relationships alive.",
     date: "2026-10-04",
     readingMinutes: 21,
