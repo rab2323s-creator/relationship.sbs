@@ -2,8 +2,10 @@
 // Blog posts index (Static JSON-like data)
 
 window.BLOG_POSTS = [
-  {slug:"love-has-won-cult-of-mother-god",title:"Love Has Won: The Cult of Mother God — The True Story of Amy Carlson",excerpt:"The documented story behind HBO's three-part Love Has Won series: who Amy Carlson was, what the group believed, what the autopsy established, and why belonging matters.",date:"2026-10-14",readingMinutes:17,tags:["Love Has Won","Mother God","Amy Carlson","HBO Documentary","High-Control Groups","Relationship Psychology"],category:"Psychology & True Stories",cover:"/assets/og/relationship-tests-tools-guides.webp",featured:true},
-  {slug:"help-im-in-a-secret-relationship",title:"Help! I'm in a Secret Relationship!",excerpt:"Feeling hidden by your partner? Explore why relationships are kept secret, private vs secret love, real-life conflicts, seven conversation scripts, and how to decide what comes next.",date:"2026-10-14",readingMinutes:18,tags:["Secret Relationship","Partner Hiding Relationship","Private vs Secret","Relationship Boundaries","Relationship Advice"],category:"Love & Relationships",cover:"/assets/og/relationship-tests-tools-guides.webp",featured:true},
+  {
+    slug:"love-has-won-cult-of-mother-god",title:"Love Has Won: The Cult of Mother God — The True Story of Amy Carlson",excerpt:"The documented story behind HBO's three-part Love Has Won series: who Amy Carlson was, what the group believed, what the autopsy established, and why belonging matters.",date:"2026-10-14",readingMinutes:17,tags:["Love Has Won","Mother God","Amy Carlson","HBO Documentary","High-Control Groups","Relationship Psychology"],category:"Psychology & True Stories",cover:"/assets/og/relationship-tests-tools-guides.webp",featured:true},
+  {
+    slug:"help-im-in-a-secret-relationship",title:"Help! I'm in a Secret Relationship!",excerpt:"Feeling hidden by your partner? Explore why relationships are kept secret, private vs secret love, real-life conflicts, seven conversation scripts, and how to decide what comes next.",date:"2026-10-14",readingMinutes:18,tags:["Secret Relationship","Partner Hiding Relationship","Private vs Secret","Relationship Boundaries","Relationship Advice"],category:"Love & Relationships",cover:"/assets/og/relationship-tests-tools-guides.webp",featured:true},
   {
     slug: "why-do-exes-come-back-after-a-breakup",
     title: "Why Do Exes Come Back After a Breakup? 10 Real Reasons",
