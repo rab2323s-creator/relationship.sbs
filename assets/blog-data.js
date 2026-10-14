@@ -3,7 +3,7 @@
 
 window.BLOG_POSTS = [
   {
-    slug: "is-watching-porn-cheating",
+    slug: "is-watching-intimate-content-cheating",
     title: "Is Watching Porn Cheating? OnlyFans, Nudes & Boundaries",
     excerpt: "Is watching porn cheating? Compare OnlyFans subscriptions, private messages, nude photos, paid content and fair relationship boundaries.",
     date: "2026-10-14",
