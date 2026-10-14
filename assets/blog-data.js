@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "is-watching-porn-cheating",
+    title: "Is Watching Porn Cheating? OnlyFans, Nudes & Boundaries",
+    excerpt: "Is watching porn cheating? Compare OnlyFans subscriptions, private messages, nude photos, paid content and fair relationship boundaries.",
+    date: "2026-10-14",
+    readingMinutes: 16,
+    tags: ["Porn and Relationships", "OnlyFans", "Digital Infidelity", "Nudes", "Boundaries", "Cheating"],
+    category: "Love & Relationships",
+    cover: "/assets/og/emotional-safety-in-relationships-quiet-distance.webp",
+    featured: true
+  },
+  {
     slug: "can-a-relationship-survive-cheating",
     title: "Can a Relationship Survive Cheating? 7 Signs It Can Heal",
     excerpt: "Can a marriage survive infidelity? Seven signs repair may be possible, what rebuilding trust requires, and when leaving may be healthier.",
