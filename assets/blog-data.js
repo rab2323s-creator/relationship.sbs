@@ -662,7 +662,7 @@ window.BLOG_POSTS = [
   },
   {
   slug: "orbiting-in-dating",
-  title: "Orbiting in Dating: Meaning, Signs & Why They Watch but Don’t Text",
+  title: "Orbiting Meaning in Relationships: Why They Watch But Don’t Text",
   excerpt: "Why passive story views and likes are weak relationship evidence, how orbiting differs from ghosting and breadcrumbing, and what to do.",
   date: "2026-03-31",
   readingMinutes: 8,
@@ -849,7 +849,7 @@ featured: true
   },
   {
     slug: "what-does-k-mean",
-    title: "What Does “K” Mean in Texting? 5 Meanings + How to Reply",
+    title: "K Meaning in Chat: What Does K Mean in Texting?",
     excerpt: "What a K text can mean by context, how K differs from k or kk, and calm ways to reply without overthinking.",
     date: "2026-01-29",
     readingMinutes: 5,
