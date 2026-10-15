@@ -25,8 +25,7 @@
           <span class="sq-option-text">${escapeHtml(o.label)}</span></label>`).join("")}</div>
       </fieldset>
       <p class="sq-help" id="sq-help">Choose the answer that best matches the usual pattern. You can go back and change it.</p>
-      <div class="sq-actions"><button type="button" class="sq-secondary" data-action="back" ${current===0?"disabled":""}>Previous</button>
-        <button type="button" class="sq-primary" data-action="next" ${answers[current]===null?"disabled":""}>${current===14?"See my results":"Next question"} <span aria-hidden="true">→</span></button></div>
+      <div class="sq-actions"><button type="button" class="sq-secondary" data-action="back" ${current===0?"disabled":""}>Previous</button></div>
     </section>`;
     if (focus) focusHeading();
   }
@@ -65,8 +64,6 @@
     if(!Number.isInteger(value)||value<0||value>3)return;
     answers[current]=value;
     root.querySelectorAll(".sq-option").forEach((el,i)=>el.classList.toggle("sq-checked",i===value));
-    const next=root.querySelector('[data-action="next"]');
-    if(next)next.disabled=false;
     const bar=root.querySelector('[role="progressbar"]'),done=completed();
     if(bar){bar.setAttribute("aria-valuenow",String(done));bar.querySelector(".sq-fill").style.width=(100*done/15)+"%";}
     const count=root.querySelector(".sq-count");
@@ -74,11 +71,14 @@
     advance();
   });
   root.addEventListener("click",e=>{
+    // On revisited questions, clicking the already-checked answer should also continue.
+    // Newly selected answers advance through the radio "change" handler instead.
+    const selected=e.target.closest('input[name="sq-answer"]');
+    if(selected && answers[current]===Number(selected.value)) { advance(); return; }
     const btn=e.target.closest("[data-action]");
     if(!btn||btn.disabled)return;
     const action=btn.dataset.action;
     if(action==="back" && current>0){current--;drawQuestion(true);}
-    if(action==="next") advance();
     if(action==="retake"){
       answers.fill(null);current=0;drawQuestion(true);
       root.scrollIntoView({behavior:"instant",block:"start"});
