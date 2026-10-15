@@ -1,6 +1,15 @@
 /* tests-index.js — lightweight home index */
 window.TEST_INDEX = [
   {
+    "id": "emotional_needs_quiz",
+    "slug": "emotional-needs-quiz",
+    "title": "What Are My Emotional Needs? Quiz",
+    "blurb": "15 questions to identify and rank your three most important emotional needs, with six personalized profiles and real-life conversation phrases.",
+    "time": "3–4 min",
+    "guide": "/blog/communication-needs/",
+    "intent": "quiz"
+  },
+  {
     "id": "situationship_quiz",
     "slug": "situationship-quiz",
     "title": "Am I in a Situationship? Quiz — Find Out Where You Stand",
