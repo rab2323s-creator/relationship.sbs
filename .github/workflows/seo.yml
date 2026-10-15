@@ -48,6 +48,9 @@ jobs:
       - name: Test staying-in-relationships quiz
         run: node --test scripts/test_relationship_staying_quiz.mjs
 
+      - name: Test wrong-people quiz scoring and navigation
+        run: node --test scripts/test_wrong_people_quiz.mjs
+
       - name: Run static SEO audit
         run: python scripts/seo_audit.py
 
