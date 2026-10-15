@@ -48,6 +48,17 @@
     focusHeading();
     root.scrollIntoView({behavior:"instant",block:"start"});
   }
+  function advance() {
+    if (answers[current]===null) return;
+    if (current<model.questions.length-1) {
+      current++;
+      drawQuestion(true);
+    } else {
+      const missing=answers.findIndex(a=>a===null);
+      if (missing!==-1) {current=missing;drawQuestion(true);}
+      else drawResult();
+    }
+  }
   root.addEventListener("change",e=>{
     if(!e.target.matches('input[name="sq-answer"]'))return;
     const value=Number(e.target.value);
@@ -60,20 +71,14 @@
     if(bar){bar.setAttribute("aria-valuenow",String(done));bar.querySelector(".sq-fill").style.width=(100*done/15)+"%";}
     const count=root.querySelector(".sq-count");
     if(count)count.textContent=done+" answered";
+    advance();
   });
   root.addEventListener("click",e=>{
     const btn=e.target.closest("[data-action]");
     if(!btn||btn.disabled)return;
     const action=btn.dataset.action;
     if(action==="back" && current>0){current--;drawQuestion(true);}
-    if(action==="next"){
-      if(answers[current]===null)return;
-      if(current<14){current++;drawQuestion(true);}
-      else {
-        const missing=answers.findIndex(a=>a===null);
-        if(missing!==-1){current=missing;drawQuestion(true);}else drawResult();
-      }
-    }
+    if(action==="next") advance();
     if(action==="retake"){
       answers.fill(null);current=0;drawQuestion(true);
       root.scrollIntoView({behavior:"instant",block:"start"});
