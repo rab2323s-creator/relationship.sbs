@@ -1,6 +1,15 @@
 /* tests-index.js — lightweight home index */
 window.TEST_INDEX = [
   {
+    "id": "emotional_cheating_quiz",
+    "slug": "emotional-cheating-quiz",
+    "title": "Emotional Cheating Quiz: Has a Friendship Crossed the Line?",
+    "blurb": "15 questions exploring secrecy, emotional intimacy, agreed boundaries, romantic tension and trust—with five nuanced results.",
+    "time": "3–4 min",
+    "guide": "/blog/emotional-cheating/",
+    "intent": "quiz"
+  },
+  {
     "id": "emotional_needs_quiz",
     "slug": "emotional-needs-quiz",
     "title": "What Are My Emotional Needs? Quiz",
