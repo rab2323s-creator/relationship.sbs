@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "ghosted-after-first-date",
+    title: "Ghosted After a Great First Date? Why It Happens and What to Text",
+    excerpt: "Why someone goes quiet after a promising first date, when to send one follow-up, five text examples, and how to move on without guessing their intentions.",
+    date: "2026-10-16",
+    readingMinutes: 10,
+    tags: ["Ghosted After First Date", "Ghosting", "First Date", "Dating Texts", "Dating Advice"],
+    category: "Dating & Relationships",
+    cover: "/assets/images/blog/ghosted-after-first-date/ghosted-after-great-first-date-waiting-for-text.svg",
+    featured: true
+  },
+  {
     slug: "can-a-relationship-survive-cheating",
     title: "Can a Relationship Survive Cheating? 7 Signs It Can Heal",
     excerpt: "Can a marriage survive infidelity? Seven signs repair may be possible, what rebuilding trust requires, and when leaving may be healthier.",
