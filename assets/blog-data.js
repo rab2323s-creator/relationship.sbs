@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "feeling-lonely-in-a-relationship",
+    title: "Why Do I Feel Lonely in My Relationship Even When We're Together?",
+    excerpt: "Why you can feel emotionally lonely beside a loving partner, eight common reasons, realistic conversation starters, and practical ways to reconnect.",
+    date: "2026-10-16",
+    readingMinutes: 12,
+    tags: ["Lonely in Relationship", "Emotional Loneliness", "Relationship Connection", "Feeling Unheard", "Emotional Needs"],
+    category: "Love & Relationships",
+    cover: "/assets/images/blog/feeling-lonely-in-a-relationship/lonely-together-on-the-couch-evening.svg",
+    featured: true
+  },
+  {
     slug: "ghosted-after-first-date",
     title: "Ghosted After a Great First Date? Why It Happens and What to Text",
     excerpt: "Why someone goes quiet after a promising first date, when to send one follow-up, five text examples, and how to move on without guessing their intentions.",
