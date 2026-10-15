@@ -1,6 +1,15 @@
 /* tests-index.js — lightweight home index */
 window.TEST_INDEX = [
   {
+    "id": "situationship_quiz",
+    "slug": "situationship-quiz",
+    "title": "Am I in a Situationship? Quiz — Find Out Where You Stand",
+    "blurb": "15 original questions about relationship definition, exclusivity, consistency, commitment, progress and mutual expectations. Personalized results.",
+    "time": "3–4 min",
+    "guide": "/blog/situationship-signs/",
+    "intent": "quiz"
+  },
+  {
     "id": "why_do_i_attract_the_wrong_people",
     "slug": "why-do-i-attract-the-wrong-people",
     "title": "Why Do I Attract the Wrong People? Relationship Quiz",
