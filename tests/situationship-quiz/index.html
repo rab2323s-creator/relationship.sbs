@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Am I in a Situationship? Quiz — Find Out Where You Stand</title>
+  <meta name="description" content="Am I in a situationship? Take this free 15-question quiz to explore relationship clarity, consistency, exclusivity, commitment and real progress. Instant personal results.">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+  <link rel="canonical" href="https://relationship.sbs/tests/situationship-quiz/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="relationship.sbs">
+  <meta property="og:title" content="Am I in a Situationship? Quiz — Find Out Where You Stand">
+  <meta property="og:description" content="15 questions about relationship definition, exclusivity, consistency and progress. Explore your pattern with private, personalized results.">
+  <meta property="og:url" content="https://relationship.sbs/tests/situationship-quiz/">
+  <meta property="og:image" content="https://relationship.sbs/assets/og/relationship-tests-tools-guides.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Am I in a Situationship? Quiz — Find Out Where You Stand">
+  <meta name="twitter:description" content="A free 15-question reflection quiz about where your relationship stands.">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <style>
+  .sq-page{max-width:920px;margin:0 auto;padding:18px 16px 64px;color:var(--text,#eaf0ff);line-height:1.72}
+  .sq-page *{box-sizing:border-box}.sq-page a:not(.sq-link){color:#b8c7ff;text-underline-offset:3px;text-decoration:underline}
+  .sq-breadcrumb{display:flex;gap:10px;flex-wrap:wrap;align-items:center;font-size:13px;color:var(--muted,#b8c2e0);margin:4px 0 27px}
+  .sq-intro{margin-bottom:22px}.sq-intro h1{font-size:clamp(30px,5vw,48px);line-height:1.16;letter-spacing:-.035em;margin:0 0 14px}
+  .sq-intro p{font-size:clamp(16px,2vw,18px);color:var(--muted,#b8c2e0);max-width:750px;margin:0 0 8px}
+  .sq-meta{font-size:13px;color:#c0c9e5;margin:12px 0 0}
+  #situationshipQuiz{scroll-margin-top:85px}
+  .sq-panel{background:linear-gradient(145deg,#171f38,#0d1528 70%);border:1px solid rgba(170,185,245,.23);border-radius:21px;padding:clamp(20px,4vw,38px);box-shadow:0 18px 36px rgba(0,0,0,.22)}
+  .sq-status,.sq-dim-top{display:flex;justify-content:space-between;gap:15px;align-items:center;font-size:13px;font-weight:700;color:#c7d2f4}
+  .sq-track,.sq-meter{height:9px;background:#333d5c;overflow:hidden;border-radius:999px;margin:11px 0 26px}
+  .sq-fill,.sq-meter>span{display:block;height:100%;background:linear-gradient(90deg,#7690ff,#acc1ff);border-radius:999px;transition:width .18s ease}
+  .sq-fieldset{border:0;padding:0;margin:0;min-width:0}.sq-question-title{display:block;width:100%;font-size:clamp(21px,3vw,29px);font-weight:750;line-height:1.35;letter-spacing:-.02em;padding:0;margin:0 0 20px}
+  .sq-options{display:grid;gap:11px}.sq-option{display:flex;align-items:flex-start;gap:13px;min-height:64px;padding:15px 17px;background:#151e34;color:#f1f4ff;border:1px solid #3d4a69;border-radius:14px;cursor:pointer;font-size:16px;line-height:1.45}
+  .sq-option:hover,.sq-option:focus-within{border-color:#acbcff;background:#1d2949}.sq-option.sq-checked{border-color:#a5b6ff;background:#25345b}
+  .sq-option input{accent-color:#a4b7ff;flex-shrink:0;width:20px;height:20px;margin:2px 0 0;cursor:pointer}
+  .sq-help,.sq-disclaimer{font-size:13px;color:#abb9d6;line-height:1.65;margin:15px 0 0}
+  .sq-actions{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:26px}
+  .sq-actions button,.sq-link{font:inherit;font-size:15px;font-weight:750;border-radius:11px;padding:12px 20px;min-height:46px;cursor:pointer;text-align:center}
+  .sq-primary{background:#93a9ff;border:1px solid #93a9ff;color:#10172a}.sq-primary:hover:not(:disabled){background:#b3c1ff}
+  .sq-secondary{background:transparent;border:1px solid #66779b;color:#e6edff}.sq-secondary:hover:not(:disabled){background:#23304e}
+  .sq-actions button:disabled{opacity:.43;cursor:not-allowed}.sq-link{display:inline-flex;text-decoration:none;align-items:center}
+  .sq-page :is(button,a,input,summary,[tabindex]):focus-visible{outline:3px solid #ffcd87;outline-offset:3px}
+  .sq-result-title{font-size:clamp(26px,4vw,35px);line-height:1.24;margin:0 0 15px}
+  .sq-eyebrow{letter-spacing:.08em;text-transform:uppercase;color:#bac8ff;font-size:12px;font-weight:750;margin:0 0 10px}
+  .sq-score-row{display:flex;gap:25px;align-items:center;border-block:1px solid #37415e;padding:19px 0}
+  .sq-total{flex-shrink:0}.sq-total strong{font-size:clamp(48px,7vw,70px);line-height:1}.sq-total span{color:#c3cce2}
+  .sq-score-row p{color:#c5d0e9;font-size:14px;line-height:1.55;margin:0}.sq-summary{font-size:17px;margin:24px 0;color:#eff3ff}
+  .sq-result h3{font-size:20px;margin:25px 0 12px}.sq-dims{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .sq-dim{border:1px solid #3b4765;border-radius:12px;padding:13px;background:#151f38}.sq-dim-top{font-size:13px}.sq-dim-top strong{white-space:nowrap}.sq-meter{height:7px;margin:12px 0 2px}
+  .sq-two{display:grid;grid-template-columns:1fr 1fr;gap:24px}.sq-result li{padding-left:3px;margin:0 0 9px}.sq-result ul,.sq-result ol{padding-left:23px;margin:0}
+  .sq-script{margin:10px 0 0;padding:16px 20px;background:#222d4e;border-left:4px solid #92a9ff;border-radius:0 12px 12px 0;color:#f7f9ff}
+  .sq-guide{padding-top:39px}.sq-guide section{margin-bottom:32px}.sq-guide h2{font-size:clamp(23px,3vw,30px);line-height:1.3;margin:0 0 14px}.sq-guide h3{font-size:19px;margin:20px 0 8px}
+  .sq-guide p,.sq-guide li{color:#c7d0e8;font-size:16px;line-height:1.8;margin:0 0 15px}
+  .sq-guide ul,.sq-guide ol{padding-left:24px}
+  .sq-example{background:#141e35;border-left:3px solid #8095e8;border-radius:0 14px 14px 0;padding:18px 20px;margin:20px 0}
+  .sq-tablewrap{overflow-x:auto;border:1px solid #38445f;border-radius:12px}.sq-table{border-collapse:collapse;width:100%;min-width:480px}
+  .sq-table th,.sq-table td{text-align:left;vertical-align:top;border-bottom:1px solid #37415b;padding:13px 15px;font-size:15px;line-height:1.65}
+  .sq-table th{color:#eff3ff;background:#202b48}.sq-table tr:last-child td{border-bottom:0}
+  .sq-faq details{border:1px solid #36425f;border-radius:12px;margin-bottom:10px;padding:0 17px;background:#111b31}
+  .sq-faq summary{cursor:pointer;color:#f2f5ff;font-weight:750;padding:15px 0;line-height:1.5}
+  .sq-faq details p{padding-top:12px;border-top:1px solid #35405e;margin:0 0 15px}
+  .sq-related{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.sq-related a{border:1px solid #425174;border-radius:13px;padding:16px;background:#152039;line-height:1.45}
+  .sq-related a strong{display:block;color:#e5ecff}.sq-related a span{display:block;color:#bec9e1;font-size:13px;margin-top:8px}
+  @media(max-width:650px){.sq-page{padding:16px 13px 42px}.sq-status{flex-wrap:wrap}.sq-dims,.sq-two,.sq-related{grid-template-columns:1fr}.sq-score-row{gap:14px}.sq-actions{gap:10px}.sq-actions>*{flex:1 1 135px}.sq-option{font-size:15px;min-height:64px}}
+  @media(prefers-reduced-motion:reduce){.sq-page *{transition:none!important;scroll-behavior:auto!important}}
+  </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"WebPage","@id":"https://relationship.sbs/tests/situationship-quiz/#webpage",
+     "url":"https://relationship.sbs/tests/situationship-quiz/","name":"Am I in a Situationship? Quiz — Find Out Where You Stand",
+     "description":"A free 15-question educational self-reflection quiz about relationship clarity, consistency, exclusivity, and progress.",
+     "inLanguage":"en-US","isAccessibleForFree":true,"isPartOf":{"@id":"https://relationship.sbs/#website"}},
+    {"@type":"BreadcrumbList","@id":"https://relationship.sbs/tests/situationship-quiz/#breadcrumb","itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://relationship.sbs/"},
+      {"@type":"ListItem","position":2,"name":"Tests","item":"https://relationship.sbs/tests/"},
+      {"@type":"ListItem","position":3,"name":"Situationship Quiz","item":"https://relationship.sbs/tests/situationship-quiz/"}]}
+  ]}
+  </script>
+</head>
+<body>
+  <header id="siteHeader"></header>
+  <main class="wrap sq-page">
+    <nav class="sq-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">›</span><a href="/tests/">Tests</a><span aria-hidden="true">›</span><span aria-current="page">Situationship Quiz</span></nav>
+    <header class="sq-intro">
+      <h1>Am I in a Situationship? Take the Quiz</h1>
+      <p>It's possible to feel close to someone and still wonder where you stand. This 15-question situationship quiz helps you look at whether your connection has a shared definition, dependable actions and a clear direction—or remains undefined. Answer based on what actually happens, not what you hope it means.</p>
+      <p class="sq-meta">15 questions · About 3–4 minutes · Instant personalized results · No sign-up</p>
+    </header>
+    <div id="situationshipQuiz" aria-label="Interactive situationship quiz">
+      <section class="sq-panel"><p>Loading your first question…</p></section>
+    </div>
+    <noscript><p class="sq-panel">Please enable JavaScript to take the interactive quiz. The guide below is available without JavaScript.</p></noscript>
+    <article class="sq-guide" aria-label="Understanding situationships">
+      <section>
+        <h2>What is a situationship?</h2>
+        <p>A situationship is a romantic or dating connection that has some features of a relationship but lacks a shared, clearly discussed definition or direction. You may spend weekends together, exchange affectionate messages or share personal feelings without knowing whether either of you expects commitment. An undefined relationship is not automatically harmful; the important distinction is whether the uncertainty is mutually understood or consistently leaves one person guessing.</p>
+        <p>Some people consciously choose casual dating and feel good about it. If both people openly agree on what casual means, including boundaries and seeing other people, that is different from a connection where no one can get a straight answer about expectations. For a broader list of patterns, see our <a href="/blog/situationship-signs/">guide to situationship signs and stages</a>.</p>
+      </section>
+      <section>
+        <h2>How to tell if you're in a situationship</h2>
+        <p>Instead of counting texts or trying to decode chemistry, look for agreements and behavior over time. The main clues are whether you know what each person wants, whether time together is reasonably dependable and whether difficult conversations lead to honest answers.</p>
+        <ul>
+          <li><strong>Definition:</strong> Have you both said what you think this is?</li>
+          <li><strong>Reliability:</strong> Do plans and promises happen without constant chasing?</li>
+          <li><strong>Direction:</strong> Has the connection changed in meaningful ways as time passes?</li>
+          <li><strong>Exclusivity:</strong> Have you explicitly discussed whether you're dating others?</li>
+          <li><strong>Needs:</strong> Would this arrangement still work for you if it stayed the same?</li>
+        </ul>
+        <p>One uncertain answer is not a verdict. New connections often take time. Repeatedly avoided conversations matter more than an arbitrary number of dates.</p>
+      </section>
+      <section>
+        <h2>Situationship vs. committed relationship</h2>
+        <div class="sq-tablewrap"><table class="sq-table"><thead><tr><th>Question</th><th>Situationship or undefined connection</th><th>Committed relationship</th></tr></thead><tbody>
+          <tr><td>What are we?</td><td>The label or expectations may be unclear.</td><td>Both people have discussed and agreed on what the relationship means.</td></tr>
+          <tr><td>What happens next?</td><td>Direction can remain open-ended.</td><td>There is an agreed direction, even if the pace is gradual.</td></tr>
+          <tr><td>Can we date others?</td><td>Often not discussed, but it should be.</td><td>Exclusivity or nonexclusivity is explicitly agreed, not presumed.</td></tr>
+          <tr><td>What matters most?</td><td>Chemistry can exist without shared plans.</td><td>Communication and observable actions support the agreement.</td></tr>
+        </tbody></table></div>
+        <p>Commitment does not require a particular dating timeline or a public social media label. It requires mutual understanding about the expectations that actually matter to the people involved.</p>
+      </section>
+      <section>
+        <h2>Why can a relationship stay undefined?</h2>
+        <p>People may have different preferences about commitment, need time after a breakup, be unsure whether they're compatible, or simply never start an awkward conversation. Schedules, distance and life changes can also slow development. None of these explanations can be confirmed by analyzing someone's texts alone.</p>
+        <p>Sometimes both people genuinely prefer something casual. Other times one wants a defined commitment and the other isn't ready or interested. The relevant question is not which reason sounds most comforting; it's what each person can honestly agree to now.</p>
+        <div class="sq-example">
+          <p><strong>A fictional example:</strong> Maya and Jordan talk almost every evening and have spent most Saturdays together for three months. Maya assumes they're exclusive because they feel emotionally close. Jordan thinks they're still casually dating and has never discussed exclusivity. Neither person is necessarily trying to deceive the other, but their assumptions are different. A respectful conversation about what they each want would tell them more than another month of guessing.</p>
+        </div>
+      </section>
+      <section>
+        <h2>Why exclusivity should never be assumed</h2>
+        <p>Daily contact, intimacy, meeting friends or spending holidays together can feel meaningful without settling whether either person can date others. People define exclusivity differently. A direct question is clearer than treating closeness as an unspoken contract: “Are we seeing other people, or would we like to be exclusive?” Both people deserve an honest answer and room to decide whether the agreement works for them.</p>
+      </section>
+      <section>
+        <h2>How to ask “What are we?” without an ultimatum</h2>
+        <p>Pick an unhurried moment rather than raising it in the middle of a disagreement. Describe your experience, ask a genuine question and listen to the answer. For example: “I've enjoyed spending time with you, and I'd like to know how you're thinking about us. Are you interested in building a relationship, or keeping things casual?”</p>
+        <p>An honest “I'm not sure” can be a useful answer if it's accompanied by a respectful discussion of what happens next. If you need a firm timeline or boundary for yourself, you can state it without trying to control the other person's decision. You can also use our <a href="/blog/communication-needs/">guide to communicating your needs</a> for clear, non-accusatory language.</p>
+      </section>
+      <section>
+        <h2>What if you want commitment and they don't?</h2>
+        <p>Take a clear difference in goals seriously. You do not need to persuade someone to want the same relationship as you, and they do not have to accept a level of commitment they don't want. Decide whether the arrangement offered to you is genuinely acceptable, not merely something you hope will change later.</p>
+        <p>If you keep changing your own expectations to maintain the connection, the <a href="/tests/are-you-settling/">Are You Settling? relationship test</a> explores unmet needs and self-compromise. If most planning and emotional work rests on you, the <a href="/tests/one-sided-relationship-test/">One-Sided Relationship Test</a> examines reciprocity. Those are separate questions from whether a relationship has been defined.</p>
+      </section>
+      <section>
+        <h2>What this quiz can and cannot tell you</h2>
+        <p>The quiz summarizes the relationship patterns <em>you report</em>, across five areas: definition and agreements, consistency and follow-through, commitment and progress, emotional communication, and whether your needs fit the arrangement. Each of the 15 answers contributes a value from 0 to 3. Questions about explicit agreements and observable progress carry slightly more weight; the weighted total is normalized to a 0–100 score. Higher scores reflect greater reported clarity, consistency and evidence of commitment.</p>
+        <p>Results also consider combinations of answers, such as steady communication without a definition, or a mutually agreed casual arrangement. Score cutoffs and profile names were developed for this educational tool and are <strong>not scientifically validated</strong>. The quiz cannot read someone else's feelings, diagnose a person, predict your future or decide whether you should stay. Your answers are calculated on this device and are not collected or stored by the quiz.</p>
+      </section>
+      <section class="sq-faq">
+        <h2>Situationship quiz: frequently asked questions</h2>
+        <details><summary>What is the difference between a situationship and a relationship?</summary><p>A situationship usually lacks a shared definition or agreed direction. In a committed relationship, both people have discussed what they expect and are acting consistently with those agreements. Neither label alone guarantees happiness or respect.</p></details>
+        <details><summary>How long is too long to be in a situationship?</summary><p>There is no universal deadline. The useful question is whether the arrangement meets both people's needs and whether conversations about changing it can happen honestly. A few weeks of uncertainty may be normal; ongoing mismatched expectations deserve attention.</p></details>
+        <details><summary>Can a situationship turn into a relationship?</summary><p>Yes, if both people want that change and agree on what commitment means to them. Time and affection alone do not create a mutual agreement; clear discussion and follow-through do.</p></details>
+        <details><summary>Does spending every day together mean you're in a relationship?</summary><p>No. Frequent contact can show closeness or habit, but it doesn't establish exclusivity, expectations or future plans. Talk directly about what you both believe you're building.</p></details>
+        <details><summary>Should I ask the other person to define the relationship?</summary><p>If the answer matters to your decisions, asking respectfully is reasonable. Explain what you want, invite an honest response and consider whether the available arrangement works for you.</p></details>
+        <details><summary>Can a situationship be healthy?</summary><p>Yes. A consensual, clearly understood casual arrangement can suit both people. Trouble is more likely when expectations are assumed, agreements are avoided or someone feels unable to say what they need.</p></details>
+      </section>
+      <section>
+        <h2>Related tests and guides</h2>
+        <div class="sq-related">
+          <a href="/blog/situationship-signs/"><strong>Situationship signs</strong><span>Read about unclear labels, patterns and stages.</span></a>
+          <a href="/tests/are-you-settling/"><strong>Are You Settling?</strong><span>Consider whether your own needs are being compromised.</span></a>
+          <a href="/tests/one-sided-relationship-test/"><strong>One-Sided Relationship Test</strong><span>Explore mutual initiative and effort.</span></a>
+        </div>
+        <p class="sq-disclaimer">Educational self-reflection only. If you feel threatened, coerced or unsafe, prioritize support and safety rather than relying on an online quiz.</p>
+      </section>
+    </article>
+  </main>
+  <footer id="siteFooter"></footer>
+  <script defer src="/assets/tests/situationship-quiz-model.js"></script>
+  <script defer src="/assets/tests/situationship-quiz-app.js"></script>
+  <script defer src="/assets/shared.js"></script>
+</body>
+</html>
