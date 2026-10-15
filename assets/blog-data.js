@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "people-pleasing-in-relationships",
+    title: "People Pleasing in Relationships: 12 Signs You're Losing Yourself",
+    excerpt: "Twelve signs of people pleasing your partner, why fear of disappointment silences your needs, and practical exercises for saying no without losing connection.",
+    date: "2026-10-16",
+    readingMinutes: 12,
+    tags: ["People Pleasing", "Relationship Boundaries", "Self Abandonment", "Fear of Disappointing Others", "Healthy Compromise"],
+    category: "Relationship Psychology",
+    cover: "/assets/images/blog/people-pleasing-in-relationships/people-pleasing-in-relationships-overgiving-couple-sofa.svg",
+    featured: true
+  },
+  {
     slug: "feeling-lonely-in-a-relationship",
     title: "Why Do I Feel Lonely in My Relationship Even When We're Together?",
     excerpt: "Why you can feel emotionally lonely beside a loving partner, eight common reasons, realistic conversation starters, and practical ways to reconnect.",
