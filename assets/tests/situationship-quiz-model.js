@@ -120,7 +120,7 @@
     const a=answers;
     let profile="gray";
     // Mutually agreed, comfortable casual dating is distinct from unspoken ambiguity.
-    if (a[0]===1 && a[3]===1 && a[10]===1 && a[14]<=1) profile="casual";
+    if (a[0]===1 && a[3]===1 && a[10]===1 && a[14]<=1 && a[5]<=1 && a[7]<=1 && a[12]<=1) profile="casual";
     else if ((a[10]===3 && a[14]>=2) || (a[14]===3 && (a[10]>=2 || scores.fit<40))) profile="mismatch";
     else if (scores.direction<=38 && a[5]>=2 && (a[7]>=2 || a[12]>=2)) profile="stuck";
     else if (score>=76 && scores.clarity>=66 && scores.direction>=67 && scores.reliability>=60) profile="developing";
