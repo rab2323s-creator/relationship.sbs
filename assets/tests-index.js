@@ -1,6 +1,15 @@
 /* tests-index.js — lightweight home index */
 window.TEST_INDEX = [
   {
+    "id": "why_do_i_attract_the_wrong_people",
+    "slug": "why-do-i-attract-the-wrong-people",
+    "title": "Why Do I Attract the Wrong People? Relationship Quiz",
+    "blurb": "15 realistic dating scenarios with five evidence-based self-reflection themes, a 0–100 pattern index and personalized next steps.",
+    "time": "4 min",
+    "guide": "/blog/falling-in-love-with-potential/",
+    "intent": "quiz"
+  },
+  {
     "id": "romance_in_marriage_quiz",
     "slug": "romance-in-marriage-quiz",
     "title": "Are You Still Romantic After Years of Marriage? Take the Quiz",
