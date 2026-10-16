@@ -51,6 +51,9 @@ jobs:
       - name: Test wrong-people quiz scoring and navigation
         run: node --test scripts/test_wrong_people_quiz.mjs
 
+      - name: Test financial compatibility model
+        run: node --test scripts/test_financial_compatibility.mjs
+
       - name: Run static SEO audit
         run: python scripts/seo_audit.py
 
