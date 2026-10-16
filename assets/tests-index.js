@@ -1,6 +1,16 @@
 /* tests-index.js — lightweight home index */
 window.TEST_INDEX = [
   {
+    "id": "financial_compatibility",
+    "slug": "financial-compatibility",
+    "title": "Financial Compatibility Test for Couples: Are Your Money Habits Compatible?",
+    "blurb": "18 questions in six financial dimensions. Explore your money style or compare two partners' choices without an arbitrary percentage.",
+    "time": "4–6 min",
+    "guide": "/blog/mental-load-in-relationships/",
+    "intent": "quiz"
+  },
+
+  {
     "id": "emotional_cheating_quiz",
     "slug": "emotional-cheating-quiz",
     "title": "Emotional Cheating Quiz: Has a Friendship Crossed the Line?",
