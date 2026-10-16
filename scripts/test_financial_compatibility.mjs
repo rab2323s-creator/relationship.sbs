@@ -1,3 +1,5 @@
+import { createRequire } from "node:module";
+const require=createRequire(import.meta.url);
 const test=require("node:test"),assert=require("node:assert/strict");
 const m=require("../assets/tests/financial-compatibility-model.js");
 const zero=()=>Array(18).fill(0),compare=(a,b)=>m.analyzeCouple(a,b);
