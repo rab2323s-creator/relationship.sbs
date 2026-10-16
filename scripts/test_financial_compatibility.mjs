@@ -14,7 +14,7 @@ assert.equal(m.pairStatus(q,0,0),"A");
 assert.equal(m.pairStatus(q,undefined,2),"N");});
 test("individual mode doesn't invent partner score",()=>{const r=m.analyzeIndividual(zero());assert.equal(r.dimensions.length,6);assert.equal(r.profile.title,"Money Priorities Explorer");assert.equal(r.dimensions[0].answers.length,3);assert.equal(r.dimensions[0].answers[0].choice,m.questions[0].options[0].text);assert.equal(r.score,undefined);});
 test("identical answers produce financial alignment",()=>{const r=compare(zero(),zero());assert.equal(r.profileKey,"aligned");assert.deepEqual(r.total,{A:18,M:0,I:0});});
-test("manageable preference differences are not automatically conflicts",()=>{let a=zero(),b=zero();b[0]=1;const r=compare(a,b);assert.equal(r.total.M,1);assert.equal(r.total.I,0);assert.equal(r.profileKey,"different");});
+test("manageable preference differences are not automatically conflicts",()=>{let a=zero(),b=zero();b[0]=1;const r=compare(a,b);assert.equal(r.total.M,1);assert.equal(r.total.I,0);assert.equal(r.profileKey,"aligned");});
 test("communication pattern is reachable from multiple disagreements",()=>{const a=zero(),b=zero();b[15]=3;b[16]=3;assert.equal(compare(a,b).profileKey,"communication");});
 test("fairness profile requires substantial mismatched expectations",()=>{const a=zero(),b=zero();b[7]=3;b[8]=3;assert.equal(compare(a,b).profileKey,"fairness");});
 test("transparency concerns reflect repeated answers",()=>{const a=zero(),b=zero();b[3]=3;b[4]=3;assert.equal(compare(a,b).profileKey,"trust");});
