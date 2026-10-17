@@ -1,6 +1,15 @@
 /* tests-index.js — lightweight home index */
 window.TEST_INDEX = [
   {
+    "id": "stonewalling_quiz",
+    "slug": "stonewalling-quiz",
+    "title": "Is My Partner Stonewalling Me? 14-Question Stonewalling Quiz",
+    "blurb": "14 scenarios on shutdown, healthy timeouts, agreed return times, repair and safety—with four personalized dimensions.",
+    "time": "3–4 min",
+    "guide": "/blog/stonewalling-in-a-relationship/",
+    "intent": "quiz"
+  },
+  {
     "id": "breadcrumbing_quiz",
     "slug": "breadcrumbing-quiz",
     "title": "Am I Being Breadcrumbed? 15-Question Breadcrumbing Quiz",
