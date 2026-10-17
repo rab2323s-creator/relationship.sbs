@@ -57,6 +57,9 @@ jobs:
       - name: Test move-in readiness scoring and profiles
         run: node --test scripts/test_move_in_readiness.mjs
 
+      - name: Test breadcrumbing quiz scenarios and score model
+        run: node --test scripts/test_breadcrumbing_quiz.mjs
+
       - name: Run static SEO audit
         run: python scripts/seo_audit.py
 
