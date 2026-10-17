@@ -60,6 +60,9 @@ jobs:
       - name: Test breadcrumbing quiz scenarios and score model
         run: node --test scripts/test_breadcrumbing_quiz.mjs
 
+      - name: Test stonewalling quiz scoring and safety override
+        run: node --test scripts/test_stonewalling_quiz.mjs
+
       - name: Run static SEO audit
         run: python scripts/seo_audit.py
 
