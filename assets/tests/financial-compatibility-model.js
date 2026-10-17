@@ -37,6 +37,28 @@ fairness:{title:"Unequal Financial Expectations",summary:"There are important di
 trust:{title:"Financial Trust Concerns",summary:"Expectations about disclosure or holding back material information need careful discussion before shared commitments."}
 };
 const valid=a=>Array.isArray(a)&&a.length===18&&a.every(x=>Number.isInteger(x)&&x>=0&&x<=3);
+/* Readiness is about decision processes, never whether saving, spending,
+   separate accounts, existing debt or earning power is intrinsically 'better'.
+   Each option has an openly defined educational coordination value 0-100. */
+const readinessValues=[
+[100,100,100,100], [100,100,90,45], [100,100,100,15],
+[100,100,70,10], [100,100,75,10], [100,100,75,10],
+[100,100,100,100], [100,100,100,10], [85,100,100,10],
+[100,100,100,100], [100,90,15,100], [100,100,100,10],
+[100,100,100,100], [100,100,90,20], [100,100,100,15],
+[100,100,100,15], [100,100,100,15], [100,100,100,10]
+];
+const round=x=>Math.round(x);
+const statusValue={A:100,M:50,I:0};
+function individualReadiness(a){
+if(!valid(a))throw Error("Complete all 18 questions.");
+const dimensionsScores=dimensions.map(d=>{
+const indices=questions.map((q,i)=>q.dimension===d.id?i:null).filter(i=>i!==null);
+return{id:d.id,name:d.name,score:round(indices.reduce((sum,i)=>sum+readinessValues[i][a[i]],0)/indices.length)};
+});
+return {score:round(dimensionsScores.reduce((sum,d)=>sum+d.score,0)/dimensionsScores.length),dimensionsScores};
+}
+
 function pairStatus(q,a,b){if(!Number.isInteger(a)||!Number.isInteger(b)||a<0||b<0||a>3||b>3)return"N";if(a===b)return"A";return q.pairs[["01","02","03","12","13","23"].indexOf(String(Math.min(a,b))+String(Math.max(a,b)))];}
 function analyzeIndividual(a){if(!valid(a))throw Error("Complete all 18 questions.");
 const dims=dimensions.map(d=>({...d,answers:questions.flatMap((q,i)=>q.dimension===d.id?[{question:q.prompt,choice:q.options[a[i]].text,index:i}]:[])}));
@@ -46,11 +68,14 @@ fairness>=2?{title:"Clarify Fairness Expectations",summary:"Reflect on shared sp
 avoidance>=2?{title:"Money Conversation Practice",summary:"Try planning a calm way to reopen hard money topics, rather than leaving them unresolved."}:
 [0,1,2,12,13,14].filter(i=>a[i]===1||a[i]===2).length>=4?{title:"Flexible Money Planner",summary:"You favor adaptability. Identify which shared responsibilities still need predictable agreements."}:
 {title:"Money Priorities Explorer",summary:"Your financial preferences offer useful starting points for a conversation, not a verdict on a partner."};
-return{profile,dimensions:dims};}
+return{profile,dimensions:dims,...individualReadiness(a)};}
 function analyzeCouple(a,b){if(!valid(a)||!valid(b))throw Error("Both people must complete all 18 questions.");
 const comparisons=questions.map((q,i)=>({id:q.id,dimension:q.dimension,prompt:q.prompt,a:q.options[a[i]].text,b:q.options[b[i]].text,aIndex:a[i],bIndex:b[i],status:pairStatus(q,a[i],b[i]),tip:q.tip}));
 const dims=dimensions.map(d=>{const items=comparisons.filter(c=>c.dimension===d.id),counts={A:0,M:0,I:0,N:0};items.forEach(c=>counts[c.status]++);return{...d,items,counts,status:counts.N?"N":counts.I?"I":counts.M?"M":"A"};});
 const total={A:0,M:0,I:0};comparisons.forEach(c=>total[c.status]++);
+const dimensionScores=dims.map(d=>({id:d.id,name:d.name,score:round(d.items.reduce((sum,item)=>sum+statusValue[item.status],0)/d.items.length)}));
+dimensionScores.forEach(entry=>{const d=dims.find(x=>x.id===entry.id);d.score=entry.score;});
+const score=round(dimensionScores.reduce((sum,d)=>sum+d.score,0)/dimensionScores.length);
 const area=id=>dims.find(d=>d.id===id);
 const secrecy=[3,4,5].filter(i=>a[i]===3||b[i]===3).length;
 let profileKey;
@@ -63,7 +88,7 @@ const strengths=dims.filter(d=>d.status==="A"),attention=dims.filter(d=>d.status
 const discussion=attention.flatMap(d=>d.items.filter(c=>c.status!=="A")).sort((x,y)=>(y.status==="I")-(x.status==="I")).slice(0,3).map(c=>({question:c.prompt,tip:c.tip,a:c.a,b:c.b}));
 const fallbacks=["Which money agreement should we protect?","When should we revisit our financial plan?","What will we do if one person's circumstances change?"];
 while(discussion.length<3)discussion.push({question:fallbacks[discussion.length],tip:"Write down a mutual answer and a date to revisit it."});
-return{profileKey,profile:profiles[profileKey],comparisons,dimensions:dims,total,strengths,attention,discussion};}
+return{profileKey,profile:profiles[profileKey],comparisons,dimensions:dims,total,strengths,attention,discussion,score};}
 if(questions.length!==18||questions.some(q=>q.options.length!==4||q.pairs.length!==6||/[^AMI]/.test(q.pairs))||dimensions.some(d=>questions.filter(q=>q.dimension===d.id).length!==3))throw Error("Invalid financial quiz data");
-return{questions,dimensions,profiles,valid,pairStatus,analyzeIndividual,analyzeCouple};
+return{questions,dimensions,profiles,valid,pairStatus,analyzeIndividual,analyzeCouple,individualReadiness,readinessValues,statusValue};
 });
