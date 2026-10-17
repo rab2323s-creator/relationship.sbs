@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "benching-in-dating",
+    title: "Benching in Dating: 10 Signs You're Being Kept as an Option",
+    excerpt: "Benching means keeping someone as a future option without real plans. Explore 10 signs, real texting examples, differences from breadcrumbing, and how to ask for clarity.",
+    date: "2026-10-17",
+    readingMinutes: 11,
+    tags: ["Benching in Dating", "Benching Meaning", "Signs of Benching", "Benching vs Breadcrumbing", "Dating Ambiguity"],
+    category: "Dating & Relationships",
+    cover: "/assets/images/blog/benching-in-dating/benched-dating-empty-chair-cafe.svg",
+    featured: true
+  },
+  {
     slug: "slow-fade-dating",
     title: "Slow Fade in Dating: 9 Signs Someone Is Gradually Pulling Away",
     excerpt: "What slow fading looks like over three weeks, how it differs from ghosting and avoidant withdrawal, and one clear message to send before stepping back.",
