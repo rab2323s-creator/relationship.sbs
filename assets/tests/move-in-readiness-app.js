@@ -1,0 +1,33 @@
+(function(){"use strict";
+const data=window.MoveInReadinessModel,root=document.getElementById("moveInQuiz");if(!data||!root)return;
+const N=data.questions.length;let answers=Array(N).fill(null),index=0,busy=false;
+const make=(tag,cls,txt)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(txt!==undefined)e.textContent=txt;return e;};
+const append=(p,tag,cls,txt)=>{const e=make(tag,cls,txt);p.append(e);return e;};
+const button=(p,txt,fn,cls)=>{const b=append(p,"button",cls,txt);b.type="button";b.addEventListener("click",fn);return b;};
+function focus(){const h=root.querySelector('[tabindex="-1"]');if(h)h.focus({preventScroll:true});const reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;root.scrollIntoView({block:"start",behavior:reduce?"auto":"smooth"});}
+function choose(i){if(busy)return;busy=true;answers[index]=i;if(index===N-1){renderResults();return;}index++;renderQuestion(true);}
+function renderQuestion(shouldFocus){busy=false;root.replaceChildren();const q=data.questions[index],section=append(root,"section","sc-quiz-card");section.setAttribute("aria-label","Question "+(index+1)+" of "+N);
+const top=append(section,"div","sc-quiz-top");append(top,"span","sc-counter","Question "+(index+1)+" of "+N);if(index>0)button(top,"← Back",()=>{index--;renderQuestion(true)},"sc-back");
+const bar=append(section,"div","sc-progress");bar.setAttribute("role","progressbar");bar.setAttribute("aria-label","Question progress");bar.setAttribute("aria-valuemin","0");bar.setAttribute("aria-valuemax",String(N));bar.setAttribute("aria-valuenow",String(index+1));const fill=append(bar,"span","sc-progress-fill");fill.style.width=((index+1)/N*100)+"%";
+append(section,"p","mi-dimension-label",data.dimensions.find(d=>d.id===q.dimension).name);const h=append(section,"h2","sc-question",q.prompt);h.tabIndex=-1;
+const opts=append(section,"div","sc-options");opts.setAttribute("role","group");opts.setAttribute("aria-label","Select your answer");q.options.forEach((o,i)=>{const b=button(opts,o[0],()=>choose(i),"sc-choice");if(answers[index]===i)b.classList.add("sc-choice-selected")});
+if(shouldFocus)focus();}
+function scoreMeter(parent,d){const wrap=append(parent,"div","sc-dimension"),top=append(wrap,"div","sc-dimension-top");append(top,"strong","",d.name);append(top,"span","",d.score+"/100");const bar=append(wrap,"div","sc-meter");bar.setAttribute("role","meter");bar.setAttribute("aria-label",d.name);bar.setAttribute("aria-valuemin","0");bar.setAttribute("aria-valuemax","100");bar.setAttribute("aria-valuenow",String(d.score));append(bar,"span").style.width=d.score+"%";append(wrap,"p","sc-dimension-description",d.summary);}
+function section(parent,title){const el=append(parent,"section","sc-section");append(el,"h3","",title);return el;}
+function addList(parent,values){const ul=append(parent,"ul","sc-evidence");values.forEach(v=>append(ul,"li","",v));return ul;}
+function renderResults(){busy=false;const r=data.calculate(answers);root.replaceChildren();const card=append(root,"section","sc-results");card.setAttribute("aria-label","Move-in readiness quiz results");append(card,"p","sc-result-kicker","Your personalized readiness result");const h=append(card,"h2","sc-result-title",r.profile.title);h.tabIndex=-1;
+const score=append(card,"div","sc-score-area");append(score,"p","sc-score-label","Move-in planning readiness");const big=append(score,"div","sc-score");append(big,"span","sc-score-number",String(r.score));append(big,"span","sc-score-out","/100");append(score,"p","sc-score-note","Educational planning indicator, not a validated prediction of your relationship or your partner's opinion.");
+append(card,"p","sc-result-intro",r.profile.sub+" "+r.profile.intro);
+if(r.safety.length){const warning=append(card,"div","sc-safety-note");append(warning,"h3","","Safety and housing independence come first");append(warning,"p","","An answer describes intimidation, blocked exits or housing leverage. A high number in other areas cannot cancel that out. Consider independent housing and trusted support before signing a shared lease.");}
+const strong=section(card,"Your strongest readiness areas");append(strong,"p","",r.stronger.slice(0,2).map(d=>d.short+" ("+d.score+"/100)").join(" and ")+". These are strengths in your answers, not evidence your partner has agreed to the same plan.");
+const dims=section(card,"Your six readiness dimensions");append(dims,"p","","Each bar reflects three specific planning and real-life scenarios.");r.dims.forEach(d=>scoreMeter(dims,d));
+const why=section(card,"Why you received this result");if(!r.low.length)append(why,"p","","You selected plans and agreements throughout. Confirm that both partners actually share these expectations and that the details are workable.");
+else{const list=append(why,"ul","sc-evidence");r.low.slice().sort((a,b)=>a.choice[1]-b.choice[1]).slice(0,5).forEach(e=>{const li=append(list,"li");append(li,"strong","",e.choice[2]);append(li,"span","","You chose: “"+e.choice[0]+"”");});}
+const plan=section(card,"Your personalized move-in checklist");const ol=append(plan,"ol","sc-next");const seen=new Set();r.actions.forEach(a=>{if(seen.size>=6||seen.has(a.dimension))return;seen.add(a.dimension);append(ol,"li","",a.action||data.dimensions.find(d=>d.id===a.dimension).action);});
+const questions=section(card,"Three conversations to have before signing a lease");const list=append(questions,"ol","sc-next");r.discussion.forEach(item=>append(list,"li","",item.question+" "+item.action));
+const method=section(card,"How your score is calculated");append(method,"p","","Each answer contributes 0, 1, 3 or 4 planning points based on how clear, mutual and practical the described agreement is; 4 is the most prepared scenario. Three questions form each dimension, converted to 0–100. The six dimensions are combined with weights: reasons 18%, money 20%, home responsibilities 17%, personal space 13%, conflict 18%, practical planning 14%. Profile overrides flag serious safety or unresolved housing issues independently of the overall number. This original quiz is not scientifically validated.");
+const actions=append(card,"div","sc-result-actions");button(actions,"Retake the 18 questions",()=>{answers=Array(N).fill(null);index=0;renderQuestion(true)},"sc-restart");
+append(card,"p","sc-fineprint","This assessment is educational, not legal, financial or clinical advice. It reflects only the answers you supplied; it cannot measure your partner's readiness. Answers stay in this browser tab's temporary memory, are not sent to our server and are cleared on reload.");
+focus();}
+renderQuestion(false);
+})();
