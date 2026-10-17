@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "signs-you-are-a-rebound",
+    title: "11 Signs You're a Rebound: How to Tell If Someone Is Using You to Get Over an Ex",
+    excerpt: "Eleven practical signs you may be a rebound, how to distinguish grief from emotional unavailability, and what to ask someone recently out of a relationship.",
+    date: "2026-10-17",
+    readingMinutes: 11,
+    tags: ["Signs You're a Rebound", "Rebound Relationship", "Dating After a Breakup", "Am I a Rebound", "Emotional Availability"],
+    category: "Dating & Relationships",
+    cover: "/assets/images/blog/signs-you-are-a-rebound/new-couple-honest-conversation-after-breakup.svg",
+    featured: true
+  },
+
+  {
     slug: "moving-in-together-checklist",
     title: "Moving in Together Checklist: 30 Questions to Ask Before You Share a Home",
     excerpt: "Print 30 questions covering rent, leases, chores, personal space, guests, pets, conflict and an exit plan before moving in together.",
