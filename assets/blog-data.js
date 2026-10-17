@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "weekly-relationship-check-in",
+    title: "Weekly Relationship Check-In: 20 Questions & a 15-Minute Template",
+    excerpt: "A free four-stage, 15-minute couples check-in with 20 thoughtful questions and an interactive printable worksheet for appreciation, connection, repair and next-week plans.",
+    date: "2026-10-18",
+    readingMinutes: 11,
+    tags: ["Weekly Relationship Check In Questions", "Relationship Check In Template", "Couples Weekly Check In", "Relationship Check In Worksheet", "Couples Communication"],
+    category: "Love & Relationships",
+    cover: "/assets/images/blog/weekly-relationship-check-in/couple-weekly-check-in-at-table.svg",
+    featured: true
+  },
+  {
     slug: "benching-in-dating",
     title: "Benching in Dating: 10 Signs You're Being Kept as an Option",
     excerpt: "Benching means keeping someone as a future option without real plans. Explore 10 signs, real texting examples, differences from breadcrumbing, and how to ask for clarity.",
