@@ -1,6 +1,15 @@
 /* tests-index.js — lightweight home index */
 window.TEST_INDEX = [
   {
+    "id": "breadcrumbing_quiz",
+    "slug": "breadcrumbing-quiz",
+    "title": "Am I Being Breadcrumbed? 15-Question Breadcrumbing Quiz",
+    "blurb": "15 real-world scenarios covering intermittent texting, plans that never happen, intentions and responses to boundaries—with a personalized result.",
+    "time": "3–4 min",
+    "guide": "/blog/breadcrumbing-in-dating/",
+    "intent": "quiz"
+  },
+  {
     "id": "ready_to_move_in_together",
     "slug": "ready-to-move-in-together",
     "title": "Should We Move In Together? 18-Question Readiness Quiz",
