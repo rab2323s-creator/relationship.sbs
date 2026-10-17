@@ -1,6 +1,16 @@
 /* tests-index.js — lightweight home index */
 window.TEST_INDEX = [
   {
+    "id": "ready_to_move_in_together",
+    "slug": "ready-to-move-in-together",
+    "title": "Should We Move In Together? 18-Question Readiness Quiz",
+    "blurb": "An 18-question cohabitation readiness quiz about reasons, rent, chores, personal space, conflict and practical exit planning.",
+    "time": "4–5 min",
+    "guide": "/blog/mental-load-in-relationships/",
+    "intent": "quiz"
+  },
+
+  {
     "id": "financial_compatibility",
     "slug": "financial-compatibility",
     "title": "Financial Compatibility Test for Couples: Are Your Money Habits Compatible?",
