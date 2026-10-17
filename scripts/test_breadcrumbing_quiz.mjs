@@ -17,9 +17,12 @@ test("bounded scales and intended result profiles",()=>{
  assert.equal(high.signals.length,15);
 });
 test("all four profiles are reachable",()=>{
- for(const [n,name] of [[0,"grounded"],[1,"mixed"],[2,"stalled"],[3,"repeating"]]){
+ for(const [n,name] of [[0,"grounded"],[1,"mixed"],[3,"repeating"]]){
   const r=m.calculate(pattern(n));assert.equal(r.profileKey,name);assert.equal(r.breakdown.length,4);
  }
+ const halfway=pattern(1);
+ for(let i=0;i<4;i++)halfway[i]=m.questions[i].options.findIndex(o=>o[1]===3);
+ assert.equal(m.calculate(halfway).profileKey,"stalled");
 });
 test("reported signal descriptions reflect actual choices",()=>{
  for(let seed=0;seed<12;seed++){
