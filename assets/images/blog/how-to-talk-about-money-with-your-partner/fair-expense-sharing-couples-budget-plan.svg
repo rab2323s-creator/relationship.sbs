@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc"><title id="title">Fair expense sharing and couples budget plan</title><desc id="desc">Warm editorial illustration of a shared household budget, with separate personal savings, rent and groceries categories, a calculator and coffee cups arranged on a wooden table.</desc>
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#f5eee6"/><stop offset="1" stop-color="#e0e7e5"/></linearGradient><linearGradient id="paper" x2="1" y2="1"><stop stop-color="#ffffff"/><stop offset="1" stop-color="#f7f7f3"/></linearGradient><filter id="sh"><feGaussianBlur stdDeviation="16"/></filter></defs>
+<rect width="1200" height="675" fill="url(#bg)"/><rect x="0" y="0" width="1200" height="675" fill="#f6e7da" opacity=".3"/>
+<path d="M60 110q290-75 535 11T1140 97v524q-481-86-1066-1z" fill="#d1aa8f" opacity=".3"/>
+<path d="M0 172l1200-36v539H0z" fill="#c8a58b"/><path d="M0 300l1200-37M0 540l1200-33" stroke="#c39980" stroke-width="4" opacity=".5"/>
+<ellipse cx="590" cy="380" rx="401" ry="282" fill="#87654f" opacity=".17" filter="url(#sh)"/>
+<g transform="translate(315 82) rotate(-5 290 248)">
+<rect x="13" y="17" width="555" height="515" rx="17" fill="#997d6e" opacity=".26"/><rect width="555" height="515" rx="15" fill="url(#paper)" stroke="#d8d4ce" stroke-width="4"/>
+<rect x="42" y="39" width="470" height="60" rx="8" fill="#edf1ee"/><circle cx="75" cy="69" r="12" fill="#b8ccbe"/><path d="M106 63h199M106 82h119" stroke="#71817d" stroke-width="9" stroke-linecap="round"/>
+<path d="M44 133h471M44 212h471M44 291h471M44 370h471M44 450h471" stroke="#e1e5e1" stroke-width="3"/>
+<path d="M41 131v323M514 131v323" stroke="#e1e5e1" stroke-width="3"/>
+<g fill="#7f9f9a"><rect x="63" y="153" width="145" height="18" rx="6"/><rect x="63" y="232" width="112" height="18" rx="6"/><rect x="63" y="311" width="133" height="18" rx="6"/><rect x="63" y="390" width="98" height="18" rx="6"/></g>
+<g fill="#e0c6b2"><rect x="270" y="152" width="207" height="20" rx="8"/><rect x="270" y="231" width="155" height="20" rx="8"/><rect x="270" y="310" width="184" height="20" rx="8"/><rect x="270" y="389" width="128" height="20" rx="8"/></g>
+<circle cx="481" cy="452" r="19" fill="#a5b6a1"/><path d="M470 451l8 8 15-19" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</g>
+<g transform="translate(82 239) rotate(7 101 115)">
+<rect x="0" y="0" width="205" height="266" rx="13" fill="#e9e3d9" stroke="#aaa197" stroke-width="5"/><rect x="22" y="23" width="160" height="55" rx="8" fill="#c5d0c4"/>
+<rect x="20" y="104" width="36" height="34" rx="6" fill="#fff"/><rect x="70" y="104" width="36" height="34" rx="6" fill="#fff"/><rect x="120" y="104" width="61" height="34" rx="6" fill="#fff"/>
+<rect x="20" y="153" width="36" height="34" rx="6" fill="#fff"/><rect x="70" y="153" width="36" height="34" rx="6" fill="#fff"/><rect x="120" y="153" width="61" height="34" rx="6" fill="#fff"/>
+<rect x="20" y="202" width="86" height="33" rx="6" fill="#fff"/><rect x="120" y="202" width="61" height="33" rx="6" fill="#b1c4ba"/>
+</g>
+<g transform="translate(915 101)"><ellipse cx="96" cy="112" rx="98" ry="21" fill="#96755b" opacity=".25"/><ellipse cx="93" cy="74" rx="65" ry="70" fill="#fdfaf1" stroke="#e8dfce" stroke-width="7"/><circle cx="93" cy="74" r="47" fill="#bd9b7e"/><path d="M156 57q57 5 22 48h-25" stroke="#fdfaf1" stroke-width="22" fill="none" stroke-linecap="round"/><path d="M50 72q43-29 85-2" stroke="#ab8268" stroke-width="6" fill="none" opacity=".55"/></g>
+<g transform="translate(915 437)"><ellipse cx="92" cy="112" rx="98" ry="22" fill="#96755b" opacity=".2"/><ellipse cx="83" cy="70" rx="67" ry="68" fill="#fcfaf4" stroke="#e9dfd0" stroke-width="7"/><circle cx="83" cy="70" r="48" fill="#ba9675"/><path d="M148 49q60 8 15 48h-25" stroke="#fcfaf4" stroke-width="23" fill="none"/></g>
+<path d="M227 98q39 33 42 77m672 363q-37 37-13 70" stroke="#9f806a" stroke-width="14" stroke-linecap="round" fill="none" opacity=".38"/>
+<rect x="675" y="552" width="155" height="22" rx="11" fill="#789a92" transform="rotate(-14 675 552)"/><path d="M827 516l44-26-19 45-21-5z" fill="#d6b295"/><path d="M856 499l15-9-8 15z" fill="#535453"/>
+</svg>

@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "how-to-talk-about-money-with-your-partner",
+    title: "How to Talk About Money With Your Partner Without Fighting",
+    excerpt: "Practical money conversation scripts, debt disclosure, shared expenses, financial privacy and a six-step plan to discuss finances without blame.",
+    date: "2026-10-17",
+    readingMinutes: 12,
+    tags: ["Talking About Money With Your Partner", "Money Conversations", "Couples Finances", "Relationship Communication", "Debt Communication"],
+    category: "Relationship Psychology",
+    cover: "/assets/images/blog/how-to-talk-about-money-with-your-partner/couple-talking-about-money-at-kitchen-table.svg",
+    featured: true
+  },
+
+  {
     slug: "people-pleasing-in-relationships",
     title: "People Pleasing in Relationships: 12 Signs You're Losing Yourself",
     excerpt: "Twelve signs of people pleasing your partner, why fear of disappointment silences your needs, and practical exercises for saying no without losing connection.",
