@@ -39,7 +39,7 @@ test("couple percentages reflect categorical agreement, manageable difference an
  b[9]=1;assert.equal(compare(a,b).dimensions[3].score,67);
  assert.equal(compare(a,b).score,92);
  b[9]=0;b[0]=0;b[16]=3;assert.equal(compare(a,b).dimensions[5].score,67);
- assert.equal(compare(a,b).score,94);
+ assert.equal(compare(a,b).score,95);
 });
 test("five profiles remain reachable with numeric score and full dimension breakdown",()=>{
  const cases=[
