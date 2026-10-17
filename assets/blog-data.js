@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "slow-fade-dating",
+    title: "Slow Fade in Dating: 9 Signs Someone Is Gradually Pulling Away",
+    excerpt: "What slow fading looks like over three weeks, how it differs from ghosting and avoidant withdrawal, and one clear message to send before stepping back.",
+    date: "2026-10-17",
+    readingMinutes: 11,
+    tags: ["Slow Fade Dating", "Slow Fading Dating", "Slow Fade vs Ghosting", "Slow Fade Texting", "Dating Communication"],
+    category: "Dating & Relationships",
+    cover: "/assets/images/blog/slow-fade-dating/person-watching-conversation-fade-at-window.svg",
+    featured: true
+  },
+  {
     slug: "signs-you-are-a-rebound",
     title: "11 Signs You're a Rebound: How to Tell If Someone Is Using You to Get Over an Ex",
     excerpt: "Eleven practical signs you may be a rebound, how to distinguish grief from emotional unavailability, and what to ask someone recently out of a relationship.",
