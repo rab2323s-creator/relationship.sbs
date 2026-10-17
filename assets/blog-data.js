@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "moving-in-together-checklist",
+    title: "Moving in Together Checklist: 30 Questions to Ask Before You Share a Home",
+    excerpt: "Print 30 questions covering rent, leases, chores, personal space, guests, pets, conflict and an exit plan before moving in together.",
+    date: "2026-10-17",
+    readingMinutes: 13,
+    tags: ["Moving in Together Checklist", "Questions Before Moving in Together", "Living Together", "Cohabitation", "Printable Checklist"],
+    category: "Love & Relationships",
+    cover: "/assets/images/blog/moving-in-together-checklist/couple-planning-first-home-with-moving-boxes.svg",
+    featured: true
+  },
+
+  {
     slug: "how-to-talk-about-money-with-your-partner",
     title: "How to Talk About Money With Your Partner Without Fighting",
     excerpt: "Practical money conversation scripts, debt disclosure, shared expenses, financial privacy and a six-step plan to discuss finances without blame.",
