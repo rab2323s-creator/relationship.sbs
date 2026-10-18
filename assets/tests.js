@@ -3935,8 +3935,8 @@ window.TESTS = [
   {
     "id": "emotional_intimacy",
     "slug": "emotional-intimacy",
-    "title": "Emotional Intimacy Test: How Close Are You Really?",
-    "blurb": "12 psychologically sharp questions that reveal your emotional connection, safety, and closeness — with scripts and next steps.",
+    "title": "Emotional Intimacy Test: How Close Are We?",
+    "blurb": "A free 12-question emotional intimacy quiz exploring emotional connection, trust, vulnerability, and relationship closeness—with personalized next steps.",
     "time": "2–3 min",
     "intent": "quiz",
     "keywords": [

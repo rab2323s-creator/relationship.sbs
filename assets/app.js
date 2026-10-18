@@ -1162,8 +1162,9 @@
     const root = $("#quizRoot");
     const hasPageH1 = Array.from(document.querySelectorAll("h1")).some(el => !root.contains(el));
     const headingTag = hasPageH1 ? "h2" : "h1";
+    const editorialLanding = test.slug === "emotional-intimacy" && !root.dataset.core;
     root.innerHTML = `
-      ${test.compactShell ? "" : `
+      ${(test.compactShell || editorialLanding) ? "" : `
       <section class="card" id="quizCard">
         <div class="kicker">
           <div class="crumbs">
@@ -1194,10 +1195,11 @@
 
       <section id="resultCard" class="card hidden"></section>
 
+      ${editorialLanding ? "" : `
       <section class="card prose">
         <h2>FAQ</h2>
         <div id="faqList"></div>
-      </section>
+      </section>`}
     `;
   }
 
