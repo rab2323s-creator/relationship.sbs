@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+<title id="title">Words before the first date</title><desc id="desc">Editorial illustration of a woman writing in a notebook near a glowing phone and rainy window, choosing her own words for a dating profile</desc>
+<defs><linearGradient id="room" x1="0" x2="1" y2="1"><stop stop-color="#62402f"/><stop offset=".45" stop-color="#93704e"/><stop offset="1" stop-color="#272e40"/></linearGradient>
+<linearGradient id="sky" x2=".3" y2="1"><stop stop-color="#425474"/><stop offset="1" stop-color="#182c40"/></linearGradient>
+<linearGradient id="desk" x2="0" y2="1"><stop stop-color="#785038"/><stop offset="1" stop-color="#4e332a"/></linearGradient>
+<linearGradient id="paper" x2="1" y2="1"><stop stop-color="#f7ebd4"/><stop offset="1" stop-color="#d1b79d"/></linearGradient>
+<radialGradient id="warm"><stop stop-color="#ffcc87" stop-opacity=".95"/><stop offset="1" stop-color="#ffd198" stop-opacity="0"/></radialGradient>
+<filter id="soft"><feGaussianBlur stdDeviation="16"/></filter><filter id="shadow"><feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#1d1720" flood-opacity=".25"/></filter>
+<pattern id="rain" width="67" height="90" patternUnits="userSpaceOnUse"><path d="M13 5l-3 28 M43 48l-4 28 M61 11l-2 18" fill="none" stroke="#bdd0d5" stroke-opacity=".37" stroke-width="2" stroke-linecap="round"/></pattern></defs>
+<rect width="1200" height="675" fill="url(#room)"/><circle cx="215" cy="205" r="300" fill="url(#warm)" opacity=".65"/>
+<rect x="644" y="36" width="515" height="405" rx="13" fill="#201f2e" stroke="#ae9278" stroke-width="16"/>
+<rect x="660" y="50" width="483" height="376" fill="url(#sky)"/>
+<path d="M660 285q62-120 138-42q65-103 128-45q87-80 217 19v209H660Z" fill="#43536a" opacity=".37"/>
+<g fill="#d5a76a" opacity=".8" filter="url(#soft)"><circle cx="731" cy="239" r="18"/><circle cx="835" cy="310" r="19"/><circle cx="949" cy="173" r="15"/><circle cx="1069" cy="282" r="27"/></g>
+<rect x="660" y="50" width="483" height="376" fill="url(#rain)"/><path d="M914 48V433" stroke="#242b3a" stroke-width="12"/><path d="M658 302h489" stroke="#283042" stroke-width="12"/>
+<path d="M70 450q72-125 177-93q116 19 178 143l47 175H0v-70Z" fill="#38333d"/>
+<path d="M150 275q-10-66 49-98q68-27 102 51q13 56-21 107l-36 48q-50-14-76-53Z" fill="#946855"/>
+<path d="M117 290q1-125 97-140q101 5 108 134l-48-30q-35-77-85-55q-22 59-72 91Z" fill="#241e27"/>
+<path d="M209 382q41-3 66 49l-45 43l-65-32Z" fill="#b98d77"/>
+<path d="M29 487q88-73 192-43q112 15 182 231H0Z" fill="#786668"/>
+<path d="M274 490q60-28 103 8l96 82q7 16-11 26q-22 10-38-4l-88-43l-39 5Z" fill="#b08673"/>
+<rect x="0" y="492" width="1200" height="183" fill="url(#desk)"/><path d="M0 502h1200" stroke="#cc9d76" stroke-width="7" opacity=".72"/>
+<g filter="url(#shadow)"><path d="M395 480q114-41 210 3q105-46 218-3l-4 139q-102-27-214 3q-101-33-210-6Z" fill="url(#paper)" stroke="#b4a089" stroke-width="5"/>
+<path d="M608 483v139" stroke="#b79b83" stroke-width="5"/>
+<g stroke="#ab9c94" opacity=".65" stroke-width="3"><path d="M425 525q65-20 138-3M425 547q67-17 142-2M426 568q56-13 122-2M646 523q69-15 131-2M644 544q77-14 139-2M645 568q72-11 119-2"/></g></g>
+<path d="M373 517q41-12 67 12l74 42-14 27-88-31-34 11Z" fill="#b98b76"/><path d="M494 574l91 30" stroke="#252a35" stroke-width="8" stroke-linecap="round"/><path d="M585 605l16 6" stroke="#c8af83" stroke-width="3"/>
+<rect x="842" y="473" width="138" height="180" rx="22" transform="rotate(-10 911 563)" fill="#141c2a" stroke="#a48d82" stroke-width="6"/>
+<rect x="858" y="490" width="106" height="145" rx="9" transform="rotate(-10 911 563)" fill="#f1e9ec"/>
+<g transform="rotate(-10 911 563)"><rect x="873" y="509" width="61" height="10" rx="5" fill="#b6acc9"/><rect x="893" y="537" width="56" height="19" rx="10" fill="#9fa7c9"/><rect x="869" y="570" width="67" height="16" rx="8" fill="#b6acc9"/><rect x="893" y="603" width="53" height="15" rx="7" fill="#a5b9b7"/></g>
+<ellipse cx="1050" cy="555" rx="60" ry="19" fill="#362823" opacity=".38"/><path d="M991 506h101v49q-2 45-52 45q-43-4-49-43Z" fill="#d4baa0" stroke="#89715e" stroke-width="7"/>
+<path d="M1090 518q45-7 47 20q1 26-46 19" stroke="#d4baa0" stroke-width="12" fill="none"/>
+<ellipse cx="1040" cy="510" rx="47" ry="12" fill="#48312e"/>
+<path d="M1078 343q-20-67 32-93 M1096 331q26-84 76-59" stroke="#6f8764" stroke-width="12" fill="none" stroke-linecap="round"/>
+<ellipse cx="1107" cy="264" rx="26" ry="49" fill="#688f71" transform="rotate(-32 1107 264)"/><ellipse cx="1145" cy="285" rx="25" ry="45" fill="#829a75" transform="rotate(39 1145 285)"/>
+</svg>

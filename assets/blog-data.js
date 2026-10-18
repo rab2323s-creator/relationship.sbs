@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "chatgpt-dating-profile-prompts",
+    title: "ChatGPT Dating Profile Prompts: 30 Hinge, Tinder & Bumble Ideas",
+    excerpt: "30 original ChatGPT dating profile prompts, Hinge answers, Tinder bios, and Bumble examples with copyable instructions, platform research and privacy guidance.",
+    date: "2026-10-19",
+    readingMinutes: 18,
+    tags: ["ChatGPT Dating Profile Prompts", "ChatGPT Hinge Prompts", "ChatGPT Tinder Bio", "Bumble Bio Examples", "AI Dating Profile"],
+    category: "Dating & Relationships",
+    cover: "/assets/images/blog/chatgpt-dating-profile-prompts/notes-before-the-first-date.svg",
+    featured: true
+  },
+
+  {
     slug: "ai-dating-profile-photos",
     title: "Are AI Dating Photos Allowed on Tinder, Hinge & Bumble? (2026)",
     excerpt: "Can you use AI-generated or enhanced profile photos on Tinder, Hinge or Bumble? Official 2026 rules, 8 real editing scenarios, trust research and safer photo choices.",
