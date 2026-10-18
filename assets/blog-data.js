@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "ai-dating-bots",
+    title: "Am I Talking to a Bot? 12 Dating App Signs & Safe Checks",
+    excerpt: "Am I talking to a bot on Tinder, Bumble or Hinge? Explore 12 warning signs, real safety checks, and practical steps when a match requests money, codes or suspicious links.",
+    date: "2026-10-19",
+    readingMinutes: 13,
+    tags: ["AI Dating Bots", "Dating App Fake Profiles", "Tinder Bots", "Bumble Bots", "Romance Scam Warning Signs"],
+    category: "Dating & Relationships",
+    cover: "/assets/images/blog/ai-dating-bots/ai-dating-bots-night.svg",
+    featured: true
+  },
+
+  {
     slug: "weekly-relationship-check-in",
     title: "Weekly Relationship Check-In: 20 Questions & a 15-Minute Template",
     excerpt: "A free four-stage, 15-minute couples check-in with 20 thoughtful questions and an interactive printable worksheet for appreciation, connection, repair and next-week plans.",

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+<title id="title">A question at the window</title><desc id="desc">Editorial illustration of a person with a phone at night, a rain-covered window, city lights and a transparent human silhouette beyond the glass</desc>
+<defs>
+<linearGradient id="wall" x2="1" y2="1"><stop stop-color="#211e28"/><stop offset=".47" stop-color="#352a36"/><stop offset="1" stop-color="#111b2b"/></linearGradient>
+<linearGradient id="window" x2="0" y2="1"><stop stop-color="#243751"/><stop offset=".55" stop-color="#1a2b40"/><stop offset="1" stop-color="#29334a"/></linearGradient>
+<radialGradient id="light"><stop stop-color="#c58e6c" stop-opacity=".75"/><stop offset="1" stop-color="#c58e6c" stop-opacity="0"/></radialGradient>
+<linearGradient id="sweater" x2="1" y2="1"><stop stop-color="#ad8976"/><stop offset="1" stop-color="#655467"/></linearGradient>
+<filter id="blur"><feGaussianBlur stdDeviation="13"/></filter>
+<filter id="soft"><feGaussianBlur stdDeviation="4"/></filter>
+<pattern id="rain" width="83" height="94" patternUnits="userSpaceOnUse"><path d="M13 4 l-3 20 M44 18 l-4 37 M68 51 l-2 26" stroke="#adc3d1" stroke-opacity=".3" stroke-width="2" stroke-linecap="round"/></pattern>
+</defs>
+<rect width="1200" height="675" fill="url(#wall)"/>
+<ellipse cx="255" cy="325" rx="330" ry="380" fill="url(#light)"/>
+<rect x="545" y="48" width="618" height="555" rx="10" fill="#101722" stroke="#6d5e64" stroke-width="22"/>
+<rect x="567" y="67" width="571" height="507" fill="url(#window)"/>
+<g fill="#edbd82" opacity=".59" filter="url(#blur)"><circle cx="620" cy="393" r="19"/><circle cx="702" cy="210" r="18"/><circle cx="825" cy="352" r="27"/><circle cx="1002" cy="250" r="23"/><circle cx="1060" cy="415" r="22"/><circle cx="779" cy="469" r="17"/></g>
+<g fill="#7185a0" opacity=".3"><rect x="585" y="325" width="115" height="246"/><rect x="735" y="205" width="95" height="365"/><rect x="878" y="291" width="120" height="280"/><rect x="1032" y="265" width="90" height="305"/></g>
+<rect x="567" y="67" width="571" height="507" fill="url(#rain)"/>
+<path d="M835 258 q45 -34 87 0 q31 26 23 76 q-3 43 12 73 q21 18 37 71 q-111 69 -223 -5 q14 -50 49 -72 q12 -28 7 -62 q-15 -40 8 -81" fill="#c5d1e4" opacity=".21" filter="url(#soft)"/>
+<path d="M562 71 V580 M855 71 V580" stroke="#111826" stroke-width="17" opacity=".78"/><path d="M566 375 H1133" stroke="#141925" stroke-width="13"/>
+<ellipse cx="185" cy="255" rx="135" ry="180" fill="#120f16" opacity=".67"/>
+<path d="M52 490 Q106 343 250 380 Q375 405 484 575 L514 675 H0 V600Z" fill="url(#sweater)"/>
+<path d="M177 300 q-11 -62 17 -92 q30 -29 64 -5 q42 40 18 94 l-4 62 q-52 32 -87 -3Z" fill="#805c59"/>
+<path d="M164 183 q30 -88 102 -51 q72 31 42 133 l-38 -23 q-22 -74 -78 -43Z" fill="#17131b"/>
+<path d="M302 474 l76 -34 q22 -6 36 9 l34 39 -30 28 -61 -12 -15 29Z" fill="#9a746c"/>
+<rect x="390" y="335" width="117" height="229" rx="22" transform="rotate(-14 448 449)" fill="#080d19" stroke="#9a8a88" stroke-width="6"/>
+<rect x="409" y="359" width="83" height="173" rx="10" transform="rotate(-14 448 449)" fill="#e0dde7"/>
+<g opacity=".8" transform="rotate(-14 448 449)"><rect x="419" y="397" width="62" height="9" rx="4" fill="#8591b6"/><rect x="435" y="424" width="49" height="18" rx="9" fill="#b5a1d1"/><rect x="415" y="454" width="56" height="17" rx="8" fill="#a5b2c8"/><rect x="431" y="484" width="53" height="17" rx="8" fill="#b5a1d1"/></g>
+<path d="M510 597 Q795 572 1200 579 V675 H510Z" fill="#2a1e29"/><path d="M522 601 H1200" stroke="#b99681" stroke-opacity=".38" stroke-width="6"/>
+<ellipse cx="1089" cy="556" rx="56" ry="19" fill="#a47357" opacity=".7" filter="url(#blur)"/>
+</svg>
