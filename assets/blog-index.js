@@ -72,7 +72,7 @@
     const arr = [...list];
 
     if (sortKey === "newest") {
-      arr.sort((a, b) => new Date(b.date) - new Date(a.date));
+      arr.sort((a, b) => new Date(b.updatedDate || b.date) - new Date(a.updatedDate || a.date));
     } else if (sortKey === "oldest") {
       arr.sort((a, b) => new Date(a.date) - new Date(b.date));
     } else if (sortKey === "readTime") {
@@ -127,7 +127,7 @@
       content.className = "prose";
       content.innerHTML = `
         <div class="small" style="margin-bottom:8px;">
-          ${fmtDate(p.date)} • ${p.readingMinutes || 5} min read • ${escapeHtml(p.category || "General")}
+          ${p.updatedDate ? "Updated " + fmtDate(p.updatedDate) : fmtDate(p.date)} • ${p.readingMinutes || 5} min read • ${escapeHtml(p.category || "General")}
         </div>
         <h2 style="margin:0 0 8px;">${escapeHtml(p.title)}</h2>
         <p class="muted" style="margin:0 0 10px;">${escapeHtml(p.excerpt || "")}</p>
@@ -209,7 +209,7 @@
         </a>
 
         <div class="meta small" style="margin-bottom:10px;">
-          <span>${fmtDate(p.date)}</span>
+          <span>${p.updatedDate ? "Updated " + fmtDate(p.updatedDate) : fmtDate(p.date)}</span>
           <span>•</span>
           <span>${p.readingMinutes || 5} min</span>
           <span>•</span>
