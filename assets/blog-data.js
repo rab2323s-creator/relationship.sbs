@@ -922,14 +922,15 @@ featured: true
   },
   {
     slug: "situationship-signs",
-    title: "Situationship Signs: Are You in One?",
-    excerpt: "Mixed signals, no labels, inconsistent effort—these are common situationship signs and what to do next.",
+    title: "Is He Serious About You or Just Wasting Your Time? 7 Signs",
+    excerpt: "How to know if he wants a relationship: seven signs that his intentions match his actions, what is just talk, and what to ask him.",
     date: "2026-01-29",
-    readingMinutes: 6,
-    tags: ["Dating", "Situationship"],
+    updatedDate: "2026-10-18",
+    readingMinutes: 13,
+    tags: ["Signs He Wants a Relationship", "Is He Serious About Me", "Situationship Signs", "Dating"],
     category: "Dating",
-    cover: "/assets/img/blog/default.webp",
-    featured: false
+    cover: "/assets/og/relationship-tests-tools-guides.webp",
+    featured: true
   },
   {
     slug: "emotional-unavailability",
