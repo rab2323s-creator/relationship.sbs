@@ -844,11 +844,12 @@ window.BLOG_POSTS = [
   },
   {
 slug: "breadcrumbing-in-dating",
-title: "Breadcrumbing in Dating: Signs, Examples, Psychology & What to Do",
-excerpt: "Breadcrumbing explained: signs, psychology, why people breadcrumb, how it differs from ghosting, orbiting and benching, and how to respond clearly.",
-date: "2026-09-23",
-readingMinutes: 15,
-tags: ["Dating", "Texting", "Psychology", "Mixed Signals"],
+title: "Breadcrumbing in Dating: 7 Signs, the Texting Cycle & How to Respond",
+excerpt: "Learn the 4-stage cycle behind intermittent romantic texts, 7 clear signs, realistic replies, and how to tell repeated breadcrumbing from genuine busyness.",
+date: "2026-06-01",
+updatedDate: "2026-10-18",
+readingMinutes: 14,
+tags: ["Breadcrumbing in Dating", "Texting Patterns", "Mixed Signals", "Dating Boundaries"],
 category: "Dating",
 cover: "/assets/og/breadcrumbing-in-dating.webp",
 featured: true
