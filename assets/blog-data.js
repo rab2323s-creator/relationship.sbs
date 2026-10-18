@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "ai-dating-profile-photos",
+    title: "Are AI Dating Photos Allowed on Tinder, Hinge & Bumble? (2026)",
+    excerpt: "Can you use AI-generated or enhanced profile photos on Tinder, Hinge or Bumble? Official 2026 rules, 8 real editing scenarios, trust research and safer photo choices.",
+    date: "2026-10-19",
+    readingMinutes: 14,
+    tags: ["AI Dating Profile Photos", "AI Photos on Tinder", "AI Photos on Hinge", "Bumble AI Photos", "Dating Profile Authenticity"],
+    category: "Dating & Relationships",
+    cover: "/assets/images/blog/ai-dating-profile-photos/real-vs-ai-dating-photo.svg",
+    featured: true
+  },
+
+  {
     slug: "ai-dating-bots",
     title: "Am I Talking to a Bot? 12 Dating App Signs & Safe Checks",
     excerpt: "Am I talking to a bot on Tinder, Bumble or Hinge? Explore 12 warning signs, real safety checks, and practical steps when a match requests money, codes or suspicious links.",
