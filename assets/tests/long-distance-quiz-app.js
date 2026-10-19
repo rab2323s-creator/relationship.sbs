@@ -4,7 +4,7 @@ const model=window.LONG_DISTANCE_QUIZ_MODEL,root=document.getElementById('longDi
 const Q=model.questions,D=model.dimensions,keys=Object.keys(D);
 const empty=()=>Array(Q.length).fill(null);
 let state={mode:null,stage:'choose',person:0,index:0,answers:[empty(),empty()]};
-const esc=x=>String(x).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','&#39;':'&#39;'}[c]));
+const esc=x=>String(x).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'" + ':' + "'&#39;'"}[c]));
 const measure=(p,label)=>'<div class="ldq-meter" role="img" aria-label="'+esc(label)+' '+p+' out of 100"><span style="width:'+p+'%"></span></div>';
 const focus=()=>{const h=root.querySelector('[data-focus]');if(h)h.focus({preventScroll:true});root.scrollIntoView({behavior:window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});};
 const safety=(count)=>count?'<div class="ldq-alert" role="note"><strong>Boundaries before numbers:</strong> One or more selected scenarios involved surveillance, threats, financial pressure or punitive control. A high practical score elsewhere does not make those behaviors acceptable. If you feel unsafe or coerced, seek confidential support and do not use this quiz to negotiate safety.</div>':'';
