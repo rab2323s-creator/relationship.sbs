@@ -3,7 +3,7 @@
 const model=window.LONG_DISTANCE_QUIZ_MODEL,root=document.getElementById('longDistanceQuiz');if(!model||!root)return;
 const Q=model.questions,D=model.dimensions,keys=Object.keys(D);
 const empty=()=>Array(Q.length).fill(null);
-let state={mode:null,stage:'choose',person:0,index:0,answers:[empty(),empty()]};
+let state={mode:'single',stage:'question',person:0,index:0,answers:[empty(),empty()]};
 const esc=x=>String(x).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const measure=(p,label)=>'<div class="ldq-meter" role="img" aria-label="'+esc(label)+' '+p+' out of 100"><span style="width:'+p+'%"></span></div>';
 const focus=()=>{const h=root.querySelector('[data-focus]');if(h)h.focus({preventScroll:true});root.scrollIntoView({behavior:window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});};
@@ -32,15 +32,13 @@ function renderPair(r){
  '<div class="ldq-actions"><a class="btn" href="/blog/long-distance-relationship-no-end-date/">Build a shared distance plan</a><button type="button" class="btn secondary" data-action="reset">Start again</button></div>';
 }
 function render(){
- if(state.stage==='choose'){
-  root.innerHTML='<section class="ldq-card"><span class="ldq-eyebrow">Choose your format</span><h2 data-focus tabindex="-1">Start the Long-Distance Relationship Quiz</h2><p>Think about what usually happens in your actual relationship, not the answer you wish were true. Answer alone or let each partner take the 18-question test independently.</p><div class="ldq-modes"><button type="button" class="ldq-mode" data-action="single"><strong>Take it myself</strong><span>18 questions · five detailed practical scores</span></button><button type="button" class="ldq-mode" data-action="double"><strong>Compare two partners</strong><span>Same device · separate rounds · side-by-side results</span></button></div><p class="ldq-small">No sign-up. This quiz stores answers only in the current page while it is open; reloading clears them. No account or external comparison link is needed.</p></section>';return;
- }
  if(state.stage==='handoff'){
   root.innerHTML='<section class="ldq-card ldq-handoff"><span class="ldq-eyebrow">Partner A complete · 18/18</span><h2 data-focus tabindex="-1">Hand the device to Partner B</h2><p>Partner A\'s answers and result are hidden. Ask Partner B to answer independently. The comparison appears only after both finish.</p><div class="ldq-actions"><button type="button" class="btn" data-action="handoff">I am Partner B — start</button><button type="button" class="btn secondary" data-action="reset">Start again</button></div></section>';return;
  }
  if(state.stage==='question'){
   const q=Q[state.index],selected=state.answers[state.person][state.index],who=state.mode==='double'?'Partner '+(state.person?'B':'A'):'Your own answers';
-  root.innerHTML='<section class="ldq-card ldq-test"><div class="ldq-question-top"><div><span class="ldq-eyebrow">'+who+'</span><p id="ldqStep" class="ldq-counter">Question '+(state.index+1)+' of '+Q.length+'</p></div><button type="button" class="ldq-back" data-action="back" '+(state.index===0?'disabled':'')+'>Back</button></div><progress value="'+(state.index+1)+'" max="'+Q.length+'" aria-labelledby="ldqStep" class="ldq-progress"></progress><p class="ldq-dimension-label">'+esc(D[q.dimension].label)+'</p><h2 id="ldqQuestion" data-focus tabindex="-1">'+esc(q.text)+'</h2><div class="ldq-options" role="group" aria-labelledby="ldqQuestion">'+q.options.map((o,i)=>'<button type="button" class="ldq-option'+(selected===i?' is-selected':'')+'" aria-pressed="'+(selected===i)+'" data-choice="'+i+'"><span class="ldq-choice-letter" aria-hidden="true">'+String.fromCharCode(65+i)+'</span><span>'+esc(o.label)+'</span></button>').join('')+'</div><p class="ldq-small">Choose the closest real response. You can go back and change earlier answers.</p></section>';return;
+  const modeSwitch=state.index===0&&state.person===0?'<div class="ldq-inline-mode"><span>'+(state.mode==='double'?'Two-partner mode · Partner A answers first':'Solo mode · Your first question is ready')+'</span><button type="button" class="ldq-back" data-action="'+(state.mode==='double'?'switch-single':'switch-double')+'">'+(state.mode==='double'?'Switch to solo':'Answer with both partners')+'</button></div>':'';
+  root.innerHTML='<section class="ldq-card ldq-test">'+modeSwitch+'<div class="ldq-question-top"><div><span class="ldq-eyebrow">'+who+'</span><p id="ldqStep" class="ldq-counter">Question '+(state.index+1)+' of '+Q.length+'</p></div><button type="button" class="ldq-back" data-action="back" '+(state.index===0?'disabled':'')+'>Back</button></div><progress value="'+(state.index+1)+'" max="'+Q.length+'" aria-labelledby="ldqStep" class="ldq-progress"></progress><p class="ldq-dimension-label">'+esc(D[q.dimension].label)+'</p><h2 id="ldqQuestion" data-focus tabindex="-1">'+esc(q.text)+'</h2><div class="ldq-options" role="group" aria-labelledby="ldqQuestion">'+q.options.map((o,i)=>'<button type="button" class="ldq-option'+(selected===i?' is-selected':'')+'" aria-pressed="'+(selected===i)+'" data-choice="'+i+'"><span class="ldq-choice-letter" aria-hidden="true">'+String.fromCharCode(65+i)+'</span><span>'+esc(o.label)+'</span></button>').join('')+'</div><p class="ldq-small">Choose the closest real response. You can go back and change earlier answers.</p></section>';return;
  }
  if(state.stage==='result'){
   const result=state.mode==='double'?model.compare(state.answers[0],state.answers[1]):model.calculate(state.answers[0]);
@@ -51,9 +49,10 @@ function start(mode){state={stage:'question',mode,person:0,index:0,answers:[empt
 root.addEventListener('click',event=>{
  const btn=event.target.closest('button');if(!btn||!root.contains(btn))return;
  const action=btn.getAttribute('data-action'),choice=btn.getAttribute('data-choice');
- if(action==='single'||action==='double'){start(action);return;}
+ if(action==='switch-single'){start('single');return;}
+ if(action==='switch-double'){start('double');return;}
  if(action==='compare'){start('double');return;}
- if(action==='reset'){state={mode:null,stage:'choose',person:0,index:0,answers:[empty(),empty()]};render();focus();return;}
+ if(action==='reset'){start(state.mode||'single');return;}
  if(action==='handoff'&&state.stage==='handoff'){state.person=1;state.index=0;state.stage='question';render();focus();return;}
  if(action==='back'&&state.stage==='question'&&state.index>0){state.index--;render();focus();return;}
  if(choice!==null&&state.stage==='question'){
