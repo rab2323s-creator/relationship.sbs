@@ -1,6 +1,15 @@
 /* tests-index.js — lightweight home index */
 window.TEST_INDEX = [
   {
+    "id": "long_distance_relationship_quiz",
+    "slug": "long-distance-relationship-quiz",
+    "title": "Long-Distance Relationship Quiz: Can We Handle the Distance?",
+    "blurb": "18 realistic scenarios in five practical dimensions. Compare both partners' independent responses, fairness, communication and moving plans.",
+    "time": "5–7 min per partner",
+    "guide": "/blog/long-distance-relationship-no-end-date/",
+    "intent": "quiz"
+  },
+  {
     "id": "stonewalling_quiz",
     "slug": "stonewalling-quiz",
     "title": "Is My Partner Stonewalling Me? 14-Question Stonewalling Quiz",
