@@ -1,0 +1,10 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {createRequire} from 'node:module';
+const require=createRequire(import.meta.url);
+const m=require('../assets/tests/dating-after-widowhood-data.js');
+const best=Array(15).fill(0),focused=Array(15).fill(3);
+test('15 four-option scenarios and five dimensions with three each',()=>{assert.equal(m.questions.length,15);assert.equal(Object.keys(m.dimensions).length,5);for(const k of Object.keys(m.dimensions))assert.equal(m.questions.filter(q=>q.dimension===k).length,3);for(const q of m.questions){assert.equal(q.options.length,4);assert.deepEqual(q.options.map(o=>o.focus),[0,1,2,3]);}});
+test('support focus is not a dating readiness verdict',()=>{const a=m.score(best),b=m.score(focused);assert.equal(a.total,0);assert.equal(b.total,100);assert.equal(a.noStrongFocus,true);assert.equal(b.areas.length,5);assert.ok(!/not ready|ready to date/i.test(a.lead.title+' '+b.lead.title));});
+test('different dimensions generate distinct supportive pathways',()=>{for(const key of Object.keys(m.dimensions)){const a=m.questions.map(q=>q.dimension===key?3:0),r=m.score(a);assert.equal(r.ordered[0].key,key);assert.equal(r.areas.find(d=>d.key===key).percentage,100);assert.equal(r.top2.length,2);}});
+test('incomplete and invalid responses rejected',()=>{assert.equal(m.valid(Array(14).fill(0)),false);assert.equal(m.valid(Array(15).fill(null)),false);assert.equal(m.valid(Array(15).fill(4)),false);assert.throws(()=>m.score(Array(14).fill(0)));});
