@@ -63,6 +63,9 @@ jobs:
       - name: Test stonewalling quiz scoring and safety override
         run: node --test scripts/test_stonewalling_quiz.mjs
 
+      - name: Test long-distance two-partner quiz scoring
+        run: node --test scripts/test_long_distance_quiz.mjs
+
       - name: Run static SEO audit
         run: python scripts/seo_audit.py
 
