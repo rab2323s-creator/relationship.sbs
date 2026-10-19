@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "long-distance-relationship-no-end-date",
+    title: "Long-Distance Relationship With No End Date: Can It Work?",
+    excerpt: "Can a long-distance relationship work without a moving date? A research-informed guide to time zones, visits, fair relocation choices and a six-step plan to close the distance.",
+    date: "2026-10-19",
+    readingMinutes: 16,
+    tags: ["Long Distance Relationship With No End Date", "How to Close the Distance", "Long Distance Relationship Future Plans", "Long Distance Relocation", "Long Distance Relationship Advice"],
+    category: "Love & Relationships",
+    cover: "/assets/images/blog/long-distance-relationship-no-end-date/two-windows-one-future.svg",
+    featured: true
+  },
+
+  {
     slug: "chatgpt-dating-profile-prompts",
     title: "ChatGPT Dating Profile Prompts: 30 Hinge, Tinder & Bumble Ideas",
     excerpt: "30 original ChatGPT dating profile prompts, Hinge answers, Tinder bios, and Bumble examples with copyable instructions, platform research and privacy guidance.",
