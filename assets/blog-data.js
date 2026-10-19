@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "partner-doesnt-want-kids-but-i-do",
+    title: "My Partner Doesn't Want Kids but I Do: Can Our Relationship Survive?",
+    excerpt: "Never, not now, or unsure? Talk about parenthood without pressure, understand fertility and timing, and decide when love alone cannot bridge different family plans.",
+    date: "2026-10-19",
+    readingMinutes: 15,
+    tags: ["Partner Doesn't Want Kids", "Husband Doesn't Want a Baby", "Different Views on Having Children", "Relationship Compatibility", "Parenthood Decision"],
+    category: "Love & Relationships",
+    cover: "/assets/images/blog/partner-doesnt-want-kids-but-i-do/two-futures.svg",
+    featured: true
+  },
+
+  {
     slug: "long-distance-relationship-no-end-date",
     title: "Long-Distance Relationship With No End Date: Can It Work?",
     excerpt: "Can a long-distance relationship work without a moving date? A research-informed guide to time zones, visits, fair relocation choices and a six-step plan to close the distance.",
