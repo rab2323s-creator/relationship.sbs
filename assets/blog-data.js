@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "my-partner-is-a-hoarder",
+    title: "My Partner Is a Hoarder: How to Set Boundaries Without Destroying Our Relationship",
+    excerpt: "Living with a hoarding spouse? Learn the difference between clutter and hoarding disorder, protect essential spaces, avoid secret cleanouts and create compassionate boundaries.",
+    date: "2026-10-20",
+    readingMinutes: 19,
+    tags: ["My Partner Is a Hoarder", "Living With a Hoarder Spouse", "Hoarding Disorder and Marriage", "How to Help a Spouse Who Hoards", "Healthy Boundaries"],
+    category: "Love & Relationships",
+    cover: "/assets/images/blog/my-partner-is-a-hoarder/one-table-two-needs.svg",
+    featured: true
+  },
+
+  {
     slug: "relationship-problems-after-miscarriage",
     title: "Relationship Problems After Miscarriage: Why Couples Grieve Differently and How to Reconnect",
     excerpt: "Why partners grieve differently after pregnancy loss, what to do when your spouse seems unsupportive, and gentle steps toward support, intimacy and reconnection.",
