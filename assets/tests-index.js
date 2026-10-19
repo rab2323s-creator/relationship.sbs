@@ -1,6 +1,15 @@
 /* tests-index.js — lightweight home index */
 window.TEST_INDEX = [
   {
+    "id": "dating_after_widowhood_quiz",
+    "slug": "dating-after-widowhood-quiz",
+    "title": "Dating After Widowhood Quiz: What Do I Need Before Dating Again?",
+    "blurb": "15 gentle scenarios exploring personal choice, guilt, family boundaries, a new partner and grief support. No readiness verdict or deadline.",
+    "time": "4–5 min",
+    "guide": "/blog/dating-after-losing-a-spouse/",
+    "intent": "quiz"
+  },
+  {
     "id": "long_distance_relationship_quiz",
     "slug": "long-distance-relationship-quiz",
     "title": "Long-Distance Relationship Quiz: Can We Handle the Distance?",
