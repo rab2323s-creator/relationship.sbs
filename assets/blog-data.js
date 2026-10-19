@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "relationship-problems-after-miscarriage",
+    title: "Relationship Problems After Miscarriage: Why Couples Grieve Differently and How to Reconnect",
+    excerpt: "Why partners grieve differently after pregnancy loss, what to do when your spouse seems unsupportive, and gentle steps toward support, intimacy and reconnection.",
+    date: "2026-10-20",
+    readingMinutes: 18,
+    tags: ["Relationship Problems After Miscarriage", "Husband Not Supportive After Miscarriage", "Marriage After Miscarriage", "Partner Grieving Differently", "Pregnancy Loss Support"],
+    category: "Love & Relationships",
+    cover: "/assets/images/blog/relationship-problems-after-miscarriage/two-cups-one-table.svg",
+    featured: true
+  },
+
+  {
     slug: "dating-after-losing-a-spouse",
     title: "Dating After Losing a Spouse: Guilt, Timing, and Finding Love Again",
     excerpt: "Dating after widowhood has no fixed timeline. Explore guilt, new love, family, anniversaries and safe first steps after the death of a spouse.",
