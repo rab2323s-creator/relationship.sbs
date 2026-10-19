@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "dating-after-losing-a-spouse",
+    title: "Dating After Losing a Spouse: Guilt, Timing, and Finding Love Again",
+    excerpt: "Dating after widowhood has no fixed timeline. Explore guilt, new love, family, anniversaries and safe first steps after the death of a spouse.",
+    date: "2026-10-19",
+    readingMinutes: 16,
+    tags: ["Dating After Losing a Spouse", "Dating After Widowhood", "Feeling Guilty Dating After Spouse Dies", "Love After Loss", "Dating Again After Bereavement"],
+    category: "Love & Relationships",
+    cover: "/assets/images/blog/dating-after-losing-a-spouse/two-cups-new-morning.svg",
+    featured: true
+  },
+
+  {
     slug: "partner-doesnt-want-kids-but-i-do",
     title: "My Partner Doesn't Want Kids but I Do: Can Our Relationship Survive?",
     excerpt: "Never, not now, or unsure? Talk about parenthood without pressure, understand fertility and timing, and decide when love alone cannot bridge different family plans.",
