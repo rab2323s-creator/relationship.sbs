@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "dating-someone-in-recovery",
+    title: "Dating Someone in Recovery? 12 Boundaries for Trust, Sobriety & Love",
+    excerpt: "Dating someone in recovery? Build trust without surveillance. Practical guidance on 12 boundaries, sober social plans, recovery support and what to do if substance use returns.",
+    date: "2026-10-20",
+    readingMinutes: 20,
+    tags: ["Dating Someone in Recovery", "Dating a Recovering Alcoholic", "Relationship After Addiction", "Supporting a Sober Partner", "Healthy Boundaries"],
+    category: "Love & Relationships",
+    cover: "/assets/images/blog/dating-someone-in-recovery/two-keys-one-door.svg",
+    featured: true
+  },
+
+  {
     slug: "chronic-illness-and-relationships",
     title: "Chronic Illness and Relationships: When Your Partner Is Sick, How Do You Stay Partners?",
     excerpt: "When your partner has a chronic illness, how do you protect love, autonomy, intimacy and caregiving needs without burning out? Research, scripts and realistic plans.",
