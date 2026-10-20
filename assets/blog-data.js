@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "interfaith-relationships-before-marriage",
+    title: "Interfaith Relationships: 12 Questions to Ask Before Marriage",
+    excerpt: "Can love bridge different faiths? An evidence-informed guide to 12 conversations before marriage, from children and holidays to rituals, family boundaries and belief.",
+    date: "2026-10-20",
+    readingMinutes: 21,
+    tags: ["Interfaith Relationship", "Interfaith Marriage", "Different Religions in a Relationship", "Raising Kids in an Interfaith Marriage", "Religious Compatibility"],
+    category: "Love & Relationships",
+    cover: "/assets/images/blog/interfaith-relationships-before-marriage/two-lights-one-table.svg",
+    featured: true
+  },
+
+  {
     slug: "dating-someone-with-kids", title: "Dating Someone With Kids? 12 Boundaries, When to Meet Their Children & Co-Parenting Advice", excerpt: "A child-centered guide to meeting your partner's children, canceled dates, co-parenting boundaries, stepfamily roles and building an honest relationship.", date: "2026-10-20", readingMinutes: 18, tags: ["Dating Someone With Kids", "Dating a Single Parent", "When to Meet Partner's Kids", "Co-Parenting Boundaries", "Blended Family"], category: "Dating & Relationships", cover: "/assets/images/blog/dating-someone-with-kids/two-homes-one-child.svg", featured: true},
   {
     slug: "my-partner-is-a-hoarder",
