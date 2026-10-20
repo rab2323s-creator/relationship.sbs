@@ -2,6 +2,7 @@
 // Blog posts index (Static JSON-like data)
 
 window.BLOG_POSTS = [
+  {slug: "dating-someone-with-kids", title: "Dating Someone With Kids? 12 Boundaries, When to Meet Their Children & Co-Parenting Advice", excerpt: "A child-centered guide to meeting your partner's children, canceled dates, co-parenting boundaries, stepfamily roles and building an honest relationship.", date: "2026-10-20", readingMinutes: 18, tags: ["Dating Someone With Kids", "Dating a Single Parent", "When to Meet Partner's Kids", "Co-Parenting Boundaries", "Blended Family"], category: "Dating & Relationships", cover: "/assets/images/blog/dating-someone-with-kids/two-homes-one-child.svg", featured: true},
   {
     slug: "my-partner-is-a-hoarder",
     title: "My Partner Is a Hoarder: How to Set Boundaries Without Destroying Our Relationship",
