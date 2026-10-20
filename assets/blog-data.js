@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "chronic-illness-and-relationships",
+    title: "Chronic Illness and Relationships: When Your Partner Is Sick, How Do You Stay Partners?",
+    excerpt: "When your partner has a chronic illness, how do you protect love, autonomy, intimacy and caregiving needs without burning out? Research, scripts and realistic plans.",
+    date: "2026-10-20",
+    readingMinutes: 20,
+    tags: ["Chronic Illness and Relationships", "Partner Has Chronic Illness", "Caregiver Burnout Spouse", "Living With a Chronically Ill Partner", "Relationship Intimacy"],
+    category: "Love & Relationships",
+    cover: "/assets/images/blog/chronic-illness-and-relationships/two-cups-one-window.svg",
+    featured: true
+  },
+
+  {
     slug: "interfaith-relationships-before-marriage",
     title: "Interfaith Relationships: 12 Questions to Ask Before Marriage",
     excerpt: "Can love bridge different faiths? An evidence-informed guide to 12 conversations before marriage, from children and holidays to rituals, family boundaries and belief.",
