@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "partner-lost-job-relationship",
+    title: "My Partner Lost Their Job: How to Handle Money, Resentment & Changing Roles",
+    excerpt: "Partner lost their job? A practical and compassionate guide to bills, unemployment stress, household roles, resentment and supporting a job search without controlling each other.",
+    date: "2026-10-20",
+    readingMinutes: 20,
+    tags: ["Partner Lost Job Relationship", "Unemployment and Relationship Stress", "Unemployed Husband Relationship Problems", "Supporting Partner After Job Loss", "Money and Changing Roles"],
+    category: "Love & Relationships",
+    cover: "/assets/images/blog/partner-lost-job-relationship/two-chairs-one-envelope.svg",
+    featured: true
+  },
+
+  {
     slug: "dating-someone-in-recovery",
     title: "Dating Someone in Recovery? 12 Boundaries for Trust, Sobriety & Love",
     excerpt: "Dating someone in recovery? Build trust without surveillance. Practical guidance on 12 boundaries, sober social plans, recovery support and what to do if substance use returns.",
