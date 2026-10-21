@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "talking-stage-meaning",
+    title: "Talking Stage Meaning: How Long It Lasts & 9 Signs It's Going Somewhere",
+    excerpt: "Talking stage meaning, how long it can last, the difference between dating and a situationship, nine signs of real progress, and natural texts for clarity.",
+    date: "2026-10-21",
+    readingMinutes: 16,
+    tags: ["Talking Stage Meaning", "What Is the Talking Stage", "Talking Stage vs Dating", "How Long Should the Talking Stage Last", "Modern Dating"],
+    category: "Dating & Relationships",
+    cover: "/assets/images/blog/talking-stage-meaning/the-two-cups-at-dusk.svg",
+    featured: true
+  },
+  {
     slug: "partner-lost-job-relationship",
     title: "My Partner Lost Their Job: How to Handle Money, Resentment & Changing Roles",
     excerpt: "Partner lost their job? A practical and compassionate guide to bills, unemployment stress, household roles, resentment and supporting a job search without controlling each other.",
