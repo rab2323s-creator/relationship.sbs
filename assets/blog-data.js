@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "dating-after-divorce",
+    title: "Dating After Divorce: When to Start, First Dates & Dating After 40",
+    excerpt: "Dating after divorce? Understand when to start, first dates, dating after 40, dating apps, co-parenting and navigating a new relationship.",
+    date: "2026-10-22",
+    readingMinutes: 19,
+    tags: ["Dating After Divorce", "How Soon to Date After Divorce", "Dating After Divorce at 40", "First Relationship After Divorce", "Dating After Divorce with Kids"],
+    category: "Dating & Relationships",
+    cover: "/assets/images/blog/dating-after-divorce/the-keys-on-the-table.svg",
+    featured: true
+  },
+  {
     slug: "dreaming-about-your-ex",
     title: "Why Do I Keep Dreaming About My Ex? What Psychology Says (Even Years Later)",
     excerpt: "Why do dreams about your ex keep returning? What research says about ex-partner dreams, years-later memories, new relationships, and recurring nightmares.",
