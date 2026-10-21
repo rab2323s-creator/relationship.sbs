@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "dreaming-about-your-ex",
+    title: "Why Do I Keep Dreaming About My Ex? What Psychology Says (Even Years Later)",
+    excerpt: "Why do dreams about your ex keep returning? What research says about ex-partner dreams, years-later memories, new relationships, and recurring nightmares.",
+    date: "2026-10-21",
+    readingMinutes: 17,
+    tags: ["Why Do I Keep Dreaming About My Ex", "Dreaming About Your Ex", "Dreaming About an Ex Years Later", "Ex Dreams Psychology", "Breakup Recovery"],
+    category: "Love & Relationships",
+    cover: "/assets/images/blog/dreaming-about-your-ex/the-unopened-door.svg",
+    featured: true
+  },
+  {
     slug: "talking-stage-meaning",
     title: "Talking Stage Meaning: How Long It Lasts & 9 Signs It's Going Somewhere",
     excerpt: "Talking stage meaning, how long it can last, the difference between dating and a situationship, nine signs of real progress, and natural texts for clarity.",
