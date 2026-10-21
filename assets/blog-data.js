@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
   {
+    slug: "taking-a-break-in-a-relationship",
+    title: "Taking a Break in a Relationship: 7 Rules, How Long & Does It Work?",
+    excerpt: "Taking a break in a relationship? Seven rules for contact, exclusivity and timing, what research says, and practical scripts to decide what comes next.",
+    date: "2026-10-22",
+    readingMinutes: 20,
+    tags: ["Taking a Break in a Relationship", "Relationship Break Rules", "How Long Should a Relationship Break Last", "Do Breaks in Relationships Work", "Are You Single on a Break"],
+    category: "Love & Relationships",
+    cover: "/assets/images/blog/taking-a-break-in-a-relationship/two-doors-one-calendar.svg",
+    featured: true
+  },
+  {
     slug: "dating-after-divorce",
     title: "Dating After Divorce: When to Start, First Dates & Dating After 40",
     excerpt: "Dating after divorce? Understand when to start, first dates, dating after 40, dating apps, co-parenting and navigating a new relationship.",
