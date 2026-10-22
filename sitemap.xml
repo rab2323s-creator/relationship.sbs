@@ -470,11 +470,19 @@
   </url>
   <url>
     <loc>https://relationship.sbs/tests/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/am-i-a-good-partner-quiz/</loc>
+    <lastmod>2026-10-23</lastmod>
   </url>
   <url>
     <loc>https://relationship.sbs/tests/am-i-emotionally-unavailable/</loc>
     <lastmod>2026-10-05</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/am-i-good-listener-quiz/</loc>
+    <lastmod>2026-10-23</lastmod>
   </url>
   <url>
     <loc>https://relationship.sbs/tests/am-i-in-love-or-just-attached/</loc>
@@ -495,6 +503,10 @@
   <url>
     <loc>https://relationship.sbs/tests/anxiety-or-intuition-quiz/</loc>
     <lastmod>2026-10-10</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tests/apology-preferences-quiz/</loc>
+    <lastmod>2026-10-23</lastmod>
   </url>
   <url>
     <loc>https://relationship.sbs/tests/are-you-settling/</loc>
@@ -695,17 +707,5 @@
   <url>
     <loc>https://relationship.sbs/tools/text-decoder/</loc>
     <lastmod>2026-10-13</lastmod>
-  </url>
-  <url>
-    <loc>https://relationship.sbs/tests/am-i-good-listener-quiz/</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://relationship.sbs/tests/apology-preferences-quiz/</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://relationship.sbs/tests/am-i-a-good-partner-quiz/</loc>
-    <lastmod>2026-10-23</lastmod>
   </url>
 </urlset>
