@@ -1,6 +1,33 @@
 /* tests-index.js — lightweight home index */
 window.TEST_INDEX = [
   {
+    "id": "am_i_a_good_partner_quiz",
+    "slug": "am-i-a-good-partner-quiz",
+    "title": "Am I a Good Partner? Free Relationship Quiz",
+    "blurb": "18 realistic scenarios about care, accountability, boundaries, shared effort and communication during conflict, with five dimensions and personalized results.",
+    "time": "4–5 min",
+    "guide": "/blog/emotional-safety-in-relationships/",
+    "intent": "quiz"
+  },
+  {
+    "id": "am_i_good_listener_quiz",
+    "slug": "am-i-good-listener-quiz",
+    "title": "Am I a Good Listener? Relationship Listening Skills Quiz",
+    "blurb": "18 real-life situations assessing presence, understanding, validation, curiosity and non-defensive listening with personalized reflection steps.",
+    "time": "4–5 min",
+    "guide": "/blog/communication-needs/",
+    "intent": "quiz"
+  },
+  {
+    "id": "apology_preferences_quiz",
+    "slug": "apology-preferences-quiz",
+    "title": "Apology Preferences Quiz: What Makes an Apology Feel Sincere?",
+    "blurb": "15 scenarios exploring what you value when receiving an apology: acknowledgment, accountability, amends and consistent change.",
+    "time": "3–4 min",
+    "guide": "/blog/communication-needs/",
+    "intent": "quiz"
+  },
+  {
     "id": "dating_after_widowhood_quiz",
     "slug": "dating-after-widowhood-quiz",
     "title": "Dating After Widowhood Quiz: What Do I Need Before Dating Again?",
