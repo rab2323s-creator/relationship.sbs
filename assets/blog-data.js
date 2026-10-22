@@ -3,6 +3,22 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "how-to-end-a-friendship",
+  title: "How to End a Friendship Respectfully: What to Say and What Happens Next",
+  excerpt: "How to end a friendship respectfully, with clear message examples and practical advice for mutual friends, group chats, guilt and contact afterward.",
+  date: "2026-10-22",
+  readingMinutes: 16,
+  tags: [
+    "Ending a Friendship",
+    "Friendship Breakup",
+    "What to Say",
+    "Mutual Friends"
+  ],
+  category: "Friendship & Boundaries",
+  cover: "/assets/images/blog/how-to-end-a-friendship/the-second-cup.png",
+  featured: true
+},
+{
   slug: "partner-always-on-phone-phubbing",
   title: "My Partner Is Always on Their Phone: Phubbing and What to Do",
   excerpt: "Partner always on their phone? Understand phubbing, start a calmer conversation, and try a practical phone agreement with room for work, care and real life.",
