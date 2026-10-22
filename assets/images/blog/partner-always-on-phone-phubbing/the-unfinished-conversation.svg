@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+<title id="title">The unfinished conversation</title><desc id="desc">Two empty chairs at a warmly lit dinner table. A phone glows on a shelf away from the table, and a sheet of paper rests between two plates.</desc>
+<defs><linearGradient id="wall" x2="1" y2="1"><stop stop-color="#172c3c"/><stop offset="1" stop-color="#506477"/></linearGradient><radialGradient id="lamp"><stop stop-color="#edcd91" stop-opacity=".5"/><stop offset="1" stop-color="#edcd91" stop-opacity="0"/></radialGradient><linearGradient id="wood" x2="0" y2="1"><stop stop-color="#bb9775"/><stop offset="1" stop-color="#6b4c42"/></linearGradient><linearGradient id="screen" x2="1" y2="1"><stop stop-color="#96c4cc"/><stop offset="1" stop-color="#406d8a"/></linearGradient></defs>
+<rect width="1200" height="630" fill="url(#wall)"/><ellipse cx="600" cy="290" rx="410" ry="330" fill="url(#lamp)"/>
+<rect x="83" y="74" width="225" height="279" rx="3" fill="#102331" stroke="#88979a" stroke-width="9"/><path d="M195 78V350M88 212H305" stroke="#88979a" stroke-width="6"/><path d="M100 310 150 274 181 287 230 238 291 262V343H100Z" fill="#304756"/><circle cx="256" cy="126" r="23" fill="#d4c7a5"/>
+<path d="M600 0V99" stroke="#182b36" stroke-width="8"/><path d="M525 145Q600 58 675 145Z" fill="#c8ae87"/><ellipse cx="600" cy="146" rx="75" ry="13" fill="#f1d9a7"/>
+<path d="M0 513H1200V630H0Z" fill="#1b2930"/><path d="M0 565H1200M240 513 190 630M970 513 1035 630" stroke="#52616a" stroke-width="2" opacity=".5"/>
+<g fill="#8d7770" stroke="#c2a58d" stroke-width="9"><path d="M305 335Q299 273 364 274H409Q463 274 459 335L451 469H315Z"/><path d="M742 335Q738 274 793 274H838Q901 273 895 335L885 469H750Z"/></g>
+<path d="M321 466 307 603M444 466 451 603M759 466 751 603M880 466 893 603" stroke="#80675b" stroke-width="13"/>
+<ellipse cx="600" cy="424" rx="298" ry="98" fill="#413c39"/><path d="M302 405V424Q600 585 898 424V405Z" fill="#795846"/><ellipse cx="600" cy="405" rx="298" ry="97" fill="url(#wood)"/>
+<path d="M423 469 399 630M775 469 800 630" stroke="#644b41" stroke-width="24"/>
+<g fill="#e1d7bc" stroke="#f6e8ca" stroke-width="3"><ellipse cx="418" cy="398" rx="63" ry="25"/><ellipse cx="782" cy="398" rx="63" ry="25"/></g><g fill="none" stroke="#b1a083" stroke-width="2"><ellipse cx="418" cy="398" rx="47" ry="17"/><ellipse cx="782" cy="398" rx="47" ry="17"/></g>
+<path d="m553 384 81-9 20 48-86 9Z" fill="#ece0c4"/><path d="m567 396 54-6m-48 17 43-5" stroke="#b39b7b" stroke-width="2"/>
+<path d="M966 342H1142V356H966Z" fill="#b69574"/><rect x="1017" y="217" width="66" height="116" rx="10" fill="#182531" stroke="#718795" stroke-width="3" transform="rotate(7 1050 275)"/><rect x="1023" y="229" width="54" height="88" rx="4" fill="url(#screen)" transform="rotate(7 1050 275)"/><circle cx="1045" cy="324" r="3" fill="#bac5c5"/>
+<path d="m495 551 26-8 14 20-27 8Z" fill="#e9dcc3" opacity=".8"/>
+</svg>

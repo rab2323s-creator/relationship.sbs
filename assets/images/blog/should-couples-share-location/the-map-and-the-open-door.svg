@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+<title id="title">The map and the open door</title><desc id="desc">A folded paper map with a blue location marker on a wooden table. A key rests beside it and an open doorway looks onto the sea.</desc>
+<defs><linearGradient id="wall" x2="1" y2="1"><stop stop-color="#1c3447"/><stop offset="1" stop-color="#6a777c"/></linearGradient><linearGradient id="sea" x2="0" y2="1"><stop stop-color="#a7c3c2"/><stop offset=".54" stop-color="#7ea3ad"/><stop offset=".55" stop-color="#416d7c"/><stop offset="1" stop-color="#1e4c61"/></linearGradient><linearGradient id="table" x2="1" y2="1"><stop stop-color="#b59a7b"/><stop offset="1" stop-color="#765748"/></linearGradient><radialGradient id="glow"><stop stop-color="#d4cfb6" stop-opacity=".38"/><stop offset="1" stop-color="#d4cfb6" stop-opacity="0"/></radialGradient></defs>
+<rect width="1200" height="630" fill="url(#wall)"/><ellipse cx="870" cy="260" rx="420" ry="365" fill="url(#glow)"/>
+<path d="M0 520H1200V630H0Z" fill="#22343e"/>
+<rect x="746" y="71" width="315" height="475" rx="3" fill="#b9b3a1"/><rect x="764" y="88" width="278" height="439" fill="url(#sea)"/>
+<path d="M765 345Q840 334 911 347T1042 342M767 381Q854 366 930 383T1040 377M774 431Q861 415 957 432" stroke="#b2ccca" stroke-width="3" fill="none" opacity=".55"/>
+<path d="M764 88 914 130V566L764 527Z" fill="#687a80" stroke="#a4aaa0" stroke-width="5"/><path d="m789 130 99 29v321l-99-14Z" fill="none" stroke="#899c9d" stroke-width="7"/><circle cx="886" cy="350" r="7" fill="#d8bc82"/>
+<path d="m1042 527 158 103H815l-51-103Z" fill="#a7b4aa" opacity=".15"/>
+<path d="M57 394 597 344 719 493 119 551Z" fill="url(#table)"/><path d="M119 551V571L719 512V493Z" fill="#694d42"/><path d="M147 565 132 630M664 517 684 630" stroke="#6b5044" stroke-width="23"/>
+<path d="m193 389 116-27 103 17 120-26 65 124-130 23-105-14-121 27Z" fill="#dfd6b9"/>
+<path d="m309 362 53 124 105 14-55-121Z" fill="#c8c5ac"/>
+<path d="m220 414 108-11 120 13 97-31m-305 71 107-21 108 18 117-24m-297-48 63 113m101-119 51 111m27-128 55 113" stroke="#9ba998" stroke-width="6" fill="none"/>
+<path d="m278 378 36 34-7 26 55 20 37-17 52 32 64-18 27 9" stroke="#7599a0" stroke-width="14" fill="none"/>
+<ellipse cx="438" cy="418" rx="44" ry="25" fill="#6b9bb2" opacity=".2"/><path d="M438 362c-26 0-40 19-40 37 0 24 40 54 40 54s40-30 40-54c0-18-14-37-40-37Z" fill="#426f91" stroke="#d2e0dd" stroke-width="3"/><circle cx="438" cy="397" r="13" fill="#c8dfdc"/>
+<g stroke="#d9b982" stroke-width="9" fill="none" transform="rotate(-17 632 444)"><ellipse cx="615" cy="444" rx="19" ry="13"/><path d="M634 444H687m-15 0v14m-14-14v11"/></g>
+<path d="M131 214H302" stroke="#b1a68c" stroke-width="5"/><path d="M159 212V155m111 57v-48" stroke="#b1a68c" stroke-width="3"/><path d="M135 156h50l-9 23h-32Zm109 7h50l-9 23h-32Z" fill="#8c9d99"/>
+</svg>

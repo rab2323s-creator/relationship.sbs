@@ -2,6 +2,38 @@
 // Blog posts index (Static JSON-like data)
 
 window.BLOG_POSTS = [
+{
+  slug: "partner-always-on-phone-phubbing",
+  title: "My Partner Is Always on Their Phone: Phubbing and What to Do",
+  excerpt: "Partner always on their phone? Understand phubbing, start a calmer conversation, and try a practical phone agreement with room for work, care and real life.",
+  date: "2026-10-22",
+  readingMinutes: 13,
+  tags: [
+    "Partner Always on Phone",
+    "Phubbing in Relationships",
+    "Phone Boundaries",
+    "Communication"
+  ],
+  category: "Love & Relationships",
+  cover: "/assets/images/blog/partner-always-on-phone-phubbing/the-unfinished-conversation.png",
+  featured: true
+},
+{
+  slug: "should-couples-share-location",
+  title: "Should Couples Share Their Location? Privacy, Consent and Boundaries",
+  excerpt: "Should couples share their location? Decide what works for you with clear consent, practical boundaries, alternatives to tracking and an agreement you can adapt.",
+  date: "2026-10-22",
+  readingMinutes: 14,
+  tags: [
+    "Should Couples Share Location",
+    "Location Sharing in Relationships",
+    "Digital Privacy",
+    "Relationship Boundaries"
+  ],
+  category: "Love & Relationships",
+  cover: "/assets/images/blog/should-couples-share-location/the-map-and-the-open-door.png",
+  featured: true
+},
   {
     slug: "taking-a-break-in-a-relationship",
     title: "Taking a Break in a Relationship: 7 Rules, How Long & Does It Work?",
