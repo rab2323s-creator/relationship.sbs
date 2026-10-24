@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "financial-infidelity",
+  title: "Financial Infidelity: 9 Signs of Secret Spending, Hidden Debt & Broken Trust",
+  excerpt: "Financial infidelity means hidden spending, debt or accounts. Learn 9 signs, when secrecy crosses the line, how to protect yourself and rebuild trust.",
+  date: "2026-10-24",
+  readingMinutes: 21,
+  tags: ["Financial Infidelity","Hidden Debt","Secret Spending","Financial Secrecy","Broken Trust"],
+  category: "Love & Relationships",
+  cover: "/assets/images/blog/financial-infidelity/the-yellow-envelope.svg",
+  featured: true
+},
+{
   slug: "adhd-and-relationships",
   title: "ADHD and Relationships: Why Forgetfulness Feels Like Rejection—and What Helps",
   excerpt: "ADHD and relationships can become a cycle of forgotten promises, rejection and resentment. Learn what research says and practical ways couples can reconnect.",
