@@ -54,6 +54,9 @@ jobs:
       - name: Test financial compatibility model
         run: node --test scripts/test_financial_compatibility.mjs
 
+      - name: Test friendship reciprocity profiles and critical boundaries
+        run: node --test scripts/test_friendship_reciprocity.mjs
+
       - name: Test marriage readiness scoring and critical overrides
         run: node --test scripts/test_marriage_readiness.mjs
 
