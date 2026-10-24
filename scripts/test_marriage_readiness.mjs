@@ -1,0 +1,9 @@
+import test from "node:test";import assert from "node:assert/strict";import{createRequire}from"node:module";const require=createRequire(import.meta.url);const m=require("../assets/tests/marriage-readiness-model.js"),pick=n=>m.questions.map(q=>q.options.findIndex(o=>o.score===n));
+test("20 unique prompts in six weighted dimensions",()=>{assert.equal(m.questions.length,20);assert.equal(new Set(m.questions.map(q=>q.prompt)).size,20);assert.equal(m.dimensions.length,6);assert.ok(Math.abs(m.dimensions.reduce((a,x)=>a+x.weight,0)-1)<1e-9);assert.deepEqual(m.dimensions.map(d=>m.questions.filter(q=>q.dimension===d.id).length),[4,4,3,3,3,3]);});
+test("all prepared responses give 100",()=>{const r=m.calculate(pick(4));assert.equal(r.score,100);assert.equal(r.profileKey,"plan");});
+test("all unprepared give zero",()=>{const r=m.calculate(pick(0));assert.equal(r.score,0);assert.equal(r.profileKey,"safety");});
+test("safety overrides high score",()=>{const a=pick(4);a[3]=3;const r=m.calculate(a);assert.ok(r.score>80);assert.equal(r.profileKey,"safety");});
+test("fundamental disagreement on children overrides high score",()=>{const a=pick(4);a[14]=3;const r=m.calculate(a);assert.equal(r.profileKey,"future");});
+test("intermediate and weak patterns return distinct results",()=>{assert.equal(m.calculate(pick(3)).profileKey,"prepare");assert.equal(m.calculate(pick(1)).profileKey,"pause");});
+test("answers and recommendations are traceable",()=>{const a=pick(4);a[8]=2;const r=m.calculate(a);assert.equal(r.concerns[0].index,8);assert.equal(r.sections.length,6);});
+test("missing invalid answers rejected",()=>{assert.equal(m.valid(Array(20).fill(null)),false);assert.throws(()=>m.calculate(Array(19).fill(0)));assert.throws(()=>m.calculate(Array(20).fill(4)));});
