@@ -1,5 +1,5 @@
 /* tests-index.js — lightweight home index */
-
+window.TEST_INDEX = [
   {
     "id": "one_sided_friendship_quiz",
     "slug": "one-sided-friendship-quiz",
@@ -9,7 +9,7 @@
     "guide": "/blog/how-to-end-a-friendship/",
     "intent": "quiz"
   },
-window.TEST_INDEX = [
+
   {
     "id": "are_we_ready_for_marriage",
     "slug": "are-we-ready-for-marriage",
