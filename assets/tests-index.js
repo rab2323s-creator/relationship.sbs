@@ -1,6 +1,16 @@
 /* tests-index.js — lightweight home index */
 window.TEST_INDEX = [
   {
+    "id": "are_we_ready_for_marriage",
+    "slug": "are-we-ready-for-marriage",
+    "title": "Are We Ready for Marriage? 20-Question Marriage Readiness Quiz",
+    "blurb": "20 marriage decision scenarios across six dimensions: mutual choice, conflict, money, family boundaries, children and daily partnership, with private personalized results.",
+    "time": "5–7 min",
+    "guide": "/blog/interfaith-relationships-before-marriage/",
+    "intent": "quiz"
+  },
+
+  {
     "id": "am_i_a_good_partner_quiz",
     "slug": "am-i-a-good-partner-quiz",
     "title": "Am I a Good Partner? Free Relationship Quiz",

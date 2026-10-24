@@ -54,6 +54,9 @@ jobs:
       - name: Test financial compatibility model
         run: node --test scripts/test_financial_compatibility.mjs
 
+      - name: Test marriage readiness scoring and critical overrides
+        run: node --test scripts/test_marriage_readiness.mjs
+
       - name: Test move-in readiness scoring and profiles
         run: node --test scripts/test_move_in_readiness.mjs
 
