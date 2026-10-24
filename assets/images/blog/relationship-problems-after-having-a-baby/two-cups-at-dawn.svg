@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+<title id="title">Two cups at dawn</title><desc id="desc">Quiet illustration of two coffee cups and a tiny yellow baby sock on a kitchen table, in a room lit by soft dawn through a window.</desc>
+<defs><linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#d8dcd9"/><stop offset="1" stop-color="#efe9df"/></linearGradient>
+<linearGradient id="dawn" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#9aabb4"/><stop offset=".53" stop-color="#e6d3b2"/><stop offset="1" stop-color="#f3e7d2"/></linearGradient>
+<linearGradient id="table" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#98725a"/><stop offset="1" stop-color="#6c4a3f"/></linearGradient>
+<filter id="shadow"><feGaussianBlur stdDeviation="14"/></filter></defs>
+<rect width="1200" height="630" fill="url(#wall)"/><path d="M0 0H1200V265H0Z" fill="#9aa4a0" opacity=".16"/>
+<rect x="390" y="50" width="465" height="335" rx="5" fill="#f8f1e5"/><rect x="405" y="64" width="435" height="302" fill="url(#dawn)"/>
+<path d="M405 255Q535 210 642 242T840 214V366H405Z" fill="#d7c6af" opacity=".58"/>
+<path d="M622 64V366M405 215H840" stroke="#f7f0e5" stroke-width="17"/>
+<path d="M52 103Q180 75 332 109" fill="none" stroke="#c7d2ca" stroke-width="8" opacity=".4"/>
+<rect x="0" y="438" width="1200" height="192" fill="url(#table)"/><rect x="0" y="438" width="1200" height="12" fill="#bc9782"/>
+<ellipse cx="365" cy="516" rx="170" ry="30" fill="#372b29" opacity=".12" filter="url(#shadow)"/><ellipse cx="806" cy="512" rx="172" ry="30" fill="#372b29" opacity=".12" filter="url(#shadow)"/>
+<path d="M225 357H437L420 513Q412 547 339 547Q266 547 258 513Z" fill="#f2e5d9" stroke="#c9b1a1" stroke-width="7"/>
+<path d="M432 388Q505 366 505 421Q505 471 426 457" fill="none" stroke="#d3baaa" stroke-width="21" stroke-linecap="round"/>
+<ellipse cx="331" cy="358" rx="106" ry="19" fill="#faf6ee" stroke="#c9b1a1" stroke-width="7"/><ellipse cx="331" cy="358" rx="89" ry="10" fill="#865747"/>
+<path d="M694 362H898L876 506Q872 539 793 539Q714 539 710 506Z" fill="#c4d4d1" stroke="#819a9a" stroke-width="7"/>
+<path d="M894 395Q960 377 964 429Q964 473 879 457" fill="none" stroke="#8baba8" stroke-width="21" stroke-linecap="round"/>
+<ellipse cx="795" cy="362" rx="102" ry="18" fill="#e7f0e9" stroke="#819a9a" stroke-width="7"/><ellipse cx="795" cy="362" rx="87" ry="9" fill="#815e50"/>
+<path d="M553 475Q574 453 592 464Q609 476 607 497L629 516Q653 537 630 555Q611 569 577 565L545 559Q527 553 529 532Q527 514 540 501Z" fill="#e9c979" stroke="#bb9b53" stroke-width="5"/>
+<path d="M556 470Q571 462 583 472M536 522Q552 534 573 533" fill="none" stroke="#f8e9ac" stroke-width="8" stroke-linecap="round"/>
+<path d="M144 0L294 0Q233 154 153 246" fill="#b1bab4" opacity=".15"/><path d="M995 0H1200V390Q1136 183 995 0Z" fill="#a6afac" opacity=".13"/>
+<path d="M0 599Q300 580 566 601T1200 588" fill="none" stroke="#c8a48a" stroke-width="5" opacity=".34"/>
+</svg>

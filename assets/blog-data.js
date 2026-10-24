@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "relationship-problems-after-having-a-baby",
+  title: "Relationship Problems After Having a Baby: Why You Feel Like Roommates—and How to Reconnect",
+  excerpt: "Relationship problems after having a baby? Understand resentment, less intimacy and constant fights after childbirth, with research-backed ways to reconnect.",
+  date: "2026-10-24",
+  readingMinutes: 19,
+  tags: ["Relationship Problems After Baby", "Marriage After Having a Baby", "Postpartum Relationship", "New Parent Resentment"],
+  category: "Love & Relationships",
+  cover: "/assets/images/blog/relationship-problems-after-having-a-baby/two-cups-at-dawn.svg",
+  featured: true
+},
+
+{
   slug: "how-to-end-a-friendship",
   title: "How to End a Friendship Respectfully: What to Say and What Happens Next",
   excerpt: "How to end a friendship respectfully, with clear message examples and practical advice for mutual friends, group chats, guilt and contact afterward.",
