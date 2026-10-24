@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "adhd-and-relationships",
+  title: "ADHD and Relationships: Why Forgetfulness Feels Like Rejection—and What Helps",
+  excerpt: "ADHD and relationships can become a cycle of forgotten promises, rejection and resentment. Learn what research says and practical ways couples can reconnect.",
+  date: "2026-10-24",
+  readingMinutes: 20,
+  tags: ["ADHD and Relationships", "ADHD Partner", "ADHD Forgetfulness", "Rejection Sensitivity", "Couples Communication"],
+  category: "Love & Relationships",
+  cover: "/assets/images/blog/adhd-and-relationships/the-calendar-and-the-blue-thread.svg",
+  featured: true
+},
+{
   slug: "relationship-problems-after-having-a-baby",
   title: "Relationship Problems After Having a Baby: Why You Feel Like Roommates—and How to Reconnect",
   excerpt: "Relationship problems after having a baby? Understand resentment, less intimacy and constant fights after childbirth, with research-backed ways to reconnect.",
