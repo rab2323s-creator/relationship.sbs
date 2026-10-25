@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "ai-romance-scams",
+  title: "AI Romance Scams: Fake Video Calls, Voice Clones & How to Stay Safe",
+  excerpt: "Can a romance scammer fake a video call or voice? Learn deepfake dating scam signs, safer verification, and what to do if you've sent money or private photos.",
+  date: "2026-10-26",
+  readingMinutes: 18,
+  tags: ["AI Romance Scams", "Deepfake Romance Scam", "Fake Video Call", "Voice Cloning", "Online Dating Safety"],
+  category: "Digital Relationships & Online Safety",
+  cover: "/assets/images/blog/ai-romance-scams/the-call-that-looked-real.svg",
+  featured: true
+},
+{
   slug: "financial-infidelity",
   title: "Financial Infidelity: 9 Signs of Secret Spending, Hidden Debt & Broken Trust",
   excerpt: "Financial infidelity means hidden spending, debt or accounts. Learn 9 signs, when secrecy crosses the line, how to protect yourself and rebuild trust.",
