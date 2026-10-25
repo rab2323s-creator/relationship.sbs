@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "dating-an-autistic-partner",
+  title: "Dating an Autistic Partner: Communication, Sensory Needs & Love",
+  excerpt: "Dating an autistic partner? Explore communication, sensory needs, intimacy and healthy boundaries with evidence-based explanations and real conversation scripts.",
+  date: "2026-10-26",
+  readingMinutes: 19,
+  tags: ["Dating an Autistic Partner", "Autism and Relationships", "Autistic Partner Communication", "Sensory Needs", "Autism and Intimacy"],
+  category: "Love & Relationships",
+  cover: "/assets/images/blog/dating-an-autistic-partner/two-cups-by-the-quiet-window.svg",
+  featured: true
+},
+{
   slug: "ai-romance-scams",
   title: "AI Romance Scams: Fake Video Calls, Voice Clones & How to Stay Safe",
   excerpt: "Can a romance scammer fake a video call or voice? Learn deepfake dating scam signs, safer verification, and what to do if you've sent money or private photos.",
