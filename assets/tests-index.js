@@ -1,6 +1,15 @@
 /* tests-index.js — lightweight home index */
 window.TEST_INDEX = [
   {
+    "id": "do_i_want_kids_quiz",
+    "slug": "do-i-want-kids-quiz",
+    "title": "Do I Want Kids? 18-Question Parenthood Decision Quiz",
+    "blurb": "18 personal scenarios exploring the wish to parent, child-free futures, family pressure, practical concerns and clear or undecided preferences.",
+    "time": "4–6 min",
+    "guide": "/blog/partner-doesnt-want-kids-but-i-do/",
+    "intent": "quiz"
+  },
+  {
     "id": "one_sided_friendship_quiz",
     "slug": "one-sided-friendship-quiz",
     "title": "Is My Friendship One-Sided? 15-Question Friendship Quiz",
