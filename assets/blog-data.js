@@ -3,6 +3,17 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "perimenopause-and-relationships",
+  title: "Perimenopause and Relationships: Why Marriage Feels Different & What Helps",
+  excerpt: "Can perimenopause cause marriage problems? Explore sleep, mood, intimacy and research-informed ways to reconnect, with trusted medical guidance.",
+  date: "2026-10-26",
+  readingMinutes: 19,
+  tags: ["Perimenopause and Relationships", "Perimenopause Marriage Problems", "Menopause and Intimacy", "Sleep and Mood", "Partner Support"],
+  category: "Love & Relationships",
+  cover: "/assets/images/blog/perimenopause-and-relationships/the-hour-between-two-lamps.svg",
+  featured: true
+},
+{
   slug: "dating-an-autistic-partner",
   title: "Dating an Autistic Partner: Communication, Sensory Needs & Love",
   excerpt: "Dating an autistic partner? Explore communication, sensory needs, intimacy and healthy boundaries with evidence-based explanations and real conversation scripts.",
