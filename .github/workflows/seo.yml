@@ -78,6 +78,9 @@ jobs:
       - name: Test parenthood decision quiz profiles and safety
         run: node --test scripts/test_parenthood_choice_quiz.mjs
 
+      - name: Test catfish safety quiz scoring and critical warning overrides
+        run: node --test scripts/test_catfish_safety_quiz.mjs
+
       - name: Run static SEO audit
         run: python scripts/seo_audit.py
 
