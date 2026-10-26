@@ -81,6 +81,9 @@ jobs:
       - name: Test catfish safety quiz scoring and critical warning overrides
         run: node --test scripts/test_catfish_safety_quiz.mjs
 
+      - name: Smoke-test quiz question rendering and result UI
+        run: node --test scripts/test_quiz_browser_runtime.mjs
+
       - name: Run static SEO audit
         run: python scripts/seo_audit.py
 
