@@ -75,7 +75,7 @@ jobs:
       - name: Test widowhood support quiz scoring
         run: node --test scripts/test_dating_after_widowhood_quiz.mjs
 
-      - name: Run static SEO audit
+      - name: Test parenthood decision quiz profiles and safety\n        run: node --test scripts/test_parenthood_choice_quiz.mjs\n\n      - name: Run static SEO audit
         run: python scripts/seo_audit.py
 
       - name: Commit result-page and sitemap changes
