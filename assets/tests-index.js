@@ -1,6 +1,15 @@
 /* tests-index.js — lightweight home index */
 window.TEST_INDEX = [
   {
+    "id": "am_i_being_catfished_quiz",
+    "slug": "am-i-being-catfished-quiz",
+    "title": "Am I Being Catfished? 15-Question Online Dating Safety Quiz",
+    "blurb": "15 realistic scenarios about fake dating profiles, identity contradictions, money requests, verification links and pressure, with safety-first results.",
+    "time": "3–5 min",
+    "guide": "/blog/ai-romance-scams/",
+    "intent": "quiz"
+  },
+  {
     "id": "do_i_want_kids_quiz",
     "slug": "do-i-want-kids-quiz",
     "title": "Do I Want Kids? 18-Question Parenthood Decision Quiz",
