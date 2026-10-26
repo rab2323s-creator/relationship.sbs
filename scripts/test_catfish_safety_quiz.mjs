@@ -1,0 +1,13 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {createRequire} from 'node:module';const require=createRequire(import.meta.url);const m=require('../assets/tests/catfish-safety-model.js');const make=(n)=>Array(15).fill(n);
+test('15 unique scenarios, five dimensions, five options',()=>{assert.equal(m.questions.length,15);assert.equal(new Set(m.questions.map(q=>q.id)).size,15);assert.equal(m.dimensions.length,5);assert.ok(m.questions.every(q=>q.options.length===5&&q.options[4].value===null));});
+test('all unknown answers are not treated as safe',()=>{let r=m.calculate(make(4));assert.equal(r.key,'limited');assert.equal(r.observed,0);assert.equal(r.riskIndex,null);});
+test('few warning signs only when sufficient observations exist',()=>{let r=m.calculate(make(0));assert.equal(r.key,'few');assert.equal(r.observed,15);assert.equal(r.riskIndex,0);});
+test('one urgent money request overrides other answers',()=>{let a=make(0);a[6]=3;let r=m.calculate(a);assert.equal(r.key,'protect');assert.ok(r.flags.some(f=>f.flag==='money'));});
+test('credential demands override ordinary checks',()=>{let a=make(0);a[9]=3;assert.equal(m.calculate(a).key,'protect');});
+test('extortion or intimidation overrides reassuring answers',()=>{for(const i of [11,14]){let a=make(0);a[i]=3;assert.equal(m.calculate(a).key,'protect');}});
+test('a declined call or moving apps alone never proves fraud',()=>{let a=make(0);a[4]=1;a[5]=1;const r=m.calculate(a);assert.notEqual(r.key,'protect');assert.notEqual(r.key,'high');});
+test('two observed high-risk patterns yield caution without certainty',()=>{let a=make(0);a[0]=2;a[1]=2;assert.equal(m.calculate(a).key,'caution');});
+test('multi-domain intense contradictions can produce high caution',()=>{let a=make(0);[0,1,3,4,5].forEach(i=>a[i]=2);assert.equal(m.calculate(a).key,'high');});
+test('unknown scenarios cannot inflate safety by zero weighting',()=>{let a=make(4);a[0]=2;const r=m.calculate(a);assert.equal(r.key,'limited');assert.equal(r.observed,1);assert.ok(r.riskIndex>0);});
+test('reject malformed and incomplete submissions',()=>{assert.throws(()=>m.calculate([]));assert.throws(()=>m.calculate(make(5)));assert.throws(()=>m.calculate(Array(15).fill(null)));});
+test('profile output always has safe bounded dimensions',()=>{for(const a of [make(0),make(1),make(2),make(3),make(4)]){const r=m.calculate(a);assert.equal(r.sections.length,5);assert.ok(r.sections.every(s=>s.score===null||(s.score>=0&&s.score<=100)));assert.ok(r.riskIndex===null||(r.riskIndex>=0&&r.riskIndex<=100));}});
