@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "cheap-first-date-ideas",
+  title: "35 Cheap First Date Ideas Under $20 That Aren't Awkward",
+  excerpt: "35 cheap first date ideas under $20 for two: free, indoor and low-pressure date plans with estimated costs, conversation starters and easy invite texts.",
+  date: "2026-10-27",
+  readingMinutes: 18,
+  tags: ["Cheap First Date Ideas", "First Date Ideas Under $20", "Free First Date Ideas", "Fun First Date Ideas", "Dating"],
+  category: "Dating",
+  cover: "/assets/images/blog/cheap-first-date-ideas/two-cups-one-small-bill.svg",
+  featured: true
+},
+
+{
   slug: "perimenopause-and-relationships",
   title: "Perimenopause and Relationships: Why Marriage Feels Different & What Helps",
   excerpt: "Can perimenopause cause marriage problems? Explore sleep, mood, intimacy and research-informed ways to reconnect, with trusted medical guidance.",
