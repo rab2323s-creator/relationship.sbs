@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "questions-to-ask-your-crush-over-text",
+  title: "60 Questions to Ask Your Crush Over Text That Actually Flow",
+  excerpt: "60 questions to ask your crush over text: first messages, funny, flirty and deep ideas, with a natural follow-up for every question and five sample conversations.",
+  date: "2026-10-27",
+  readingMinutes: 19,
+  tags: ["Questions to Ask Your Crush", "Crush Texting", "Flirty Questions", "Funny Questions", "Deep Questions", "Talking Stage"],
+  category: "Dating",
+  cover: "/assets/images/blog/questions-to-ask-your-crush-over-text/two-messages-one-rainy-window.svg",
+  featured: true
+},
+
+{
   slug: "how-to-make-friends-as-an-adult",
   title: "How to Make Friends as an Adult With No Social Circle (30-Day Plan)",
   excerpt: "How to make friends as an adult when you know nobody: 12 places to meet people, 12 real conversation scripts, follow-ups and a practical 30-day plan.",
