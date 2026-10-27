@@ -84,6 +84,9 @@ jobs:
       - name: Smoke-test quiz question rendering and result UI
         run: node --test scripts/test_quiz_browser_runtime.mjs
 
+      - name: Test two-player Would You Rather game and sharing
+        run: node --test scripts/test_couples_rather_game.mjs
+
       - name: Run static SEO audit
         run: python scripts/seo_audit.py
 
