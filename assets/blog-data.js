@@ -1308,13 +1308,13 @@ featured: true
   },
   {
     slug: "what-does-k-mean",
-    title: "K Meaning in Chat: What Does K Mean in Texting?",
-    excerpt: "What a K text can mean by context, how K differs from k or kk, and calm ways to reply without overthinking.",
+    title: "K Meaning in Chat: What Does K Mean in Texts and Love?",
+    excerpt: "K usually means okay in chat. Learn what K, k, K. and kk mean in texts and love, and how to respond without guessing.",
     date: "2026-01-29",
-    readingMinutes: 5,
+    readingMinutes: 9,
     tags: ["Texting", "Dating"],
     category: "Texting",
-    cover: "/assets/img/blog/default.webp",
+    cover: "/assets/og/relationship-tests-tools-guides.webp",
     featured: false
   }
 ];

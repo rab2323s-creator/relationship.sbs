@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+<title id="title">A short K text reply in a chat conversation</title>
+<desc id="desc">Two conversation bubbles show a meeting plan and a K reply, on a softly colored background.</desc>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f5f3ff"/><stop offset="1" stop-color="#deeeff"/></linearGradient>
+<filter id="drop" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#23345e" flood-opacity=".14"/></filter></defs>
+<rect width="1200" height="675" rx="30" fill="url(#bg)"/><circle cx="1043" cy="94" r="125" fill="#a5b4fc" opacity=".24"/><circle cx="148" cy="584" r="155" fill="#99f6e4" opacity=".29"/>
+<rect x="282" y="76" width="635" height="524" rx="46" fill="white" filter="url(#drop)"/><rect x="308" y="102" width="583" height="472" rx="32" fill="#fafaff"/>
+<rect x="489" y="125" width="221" height="9" rx="4.5" fill="#d6def0"/><circle cx="743" cy="129" r="6" fill="#c8d1e3"/>
+<rect x="349" y="213" width="427" height="111" rx="28" fill="#e7eaf7"/><path d="M395 324 L376 342 L389 314" fill="#e7eaf7"/>
+<text x="379" y="263" font-size="29" fill="#1e2b47" font-family="Arial,Helvetica,sans-serif">Meet at seven?</text>
+<text x="379" y="301" font-size="20" fill="#5c6986" font-family="Arial,Helvetica,sans-serif">Just confirming our plans.</text>
+<rect x="689" y="364" width="154" height="100" rx="30" fill="#4338ca"/><path d="M795 463 L813 482 L798 451" fill="#4338ca"/>
+<text x="765" y="431" text-anchor="middle" font-size="54" font-weight="700" fill="white" font-family="Arial,Helvetica,sans-serif">K</text>
+<g fill="#cdd7eb"><circle cx="406" cy="524" r="7"/><circle cx="438" cy="524" r="7"/><circle cx="470" cy="524" r="7"/></g></svg>
