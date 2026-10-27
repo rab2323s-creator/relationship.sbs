@@ -24,7 +24,7 @@ function encodeInvite(pack,answers){
 }
 function decodeInvite(code){
  if(typeof code!=="string"||code.length>110)throw new Error("Invalid invite");
- const m=/^v1\.(quick|all|romantic|funny|deep)\.([01]+)$/.exec(code);
+ const m=/^v1\.(quick|all|romantic|funny|deep|longdistance|hard)\.([01]+)$/.exec(code);
  if(!m)throw new Error("Invalid invite");
  const pack=m[1],length=getPack(pack).length;
  if(m[2].length!==length)throw new Error("Invite length mismatch");
