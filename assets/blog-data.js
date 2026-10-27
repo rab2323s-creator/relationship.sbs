@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "how-to-make-friends-as-an-adult",
+  title: "How to Make Friends as an Adult With No Social Circle (30-Day Plan)",
+  excerpt: "How to make friends as an adult when you know nobody: 12 places to meet people, 12 real conversation scripts, follow-ups and a practical 30-day plan.",
+  date: "2026-10-27",
+  readingMinutes: 20,
+  tags: ["How to Make Friends as an Adult", "Make Friends in a New City", "Adult Friendship", "Where to Meet New Friends", "Social Connection"],
+  category: "Friendship & Boundaries",
+  cover: "/assets/images/blog/how-to-make-friends-as-an-adult/the-second-chair-at-the-window.svg",
+  featured: true
+},
+
+{
   slug: "cheap-first-date-ideas",
   title: "35 Cheap First Date Ideas Under $20 That Aren't Awkward",
   excerpt: "35 cheap first date ideas under $20 for two: free, indoor and low-pressure date plans with estimated costs, conversation starters and easy invite texts.",
