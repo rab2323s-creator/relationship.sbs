@@ -20,10 +20,10 @@ function setup(url='https://relationship.sbs/tests/would-you-rather-for-couples/
  vm.runInNewContext(APP,context,{timeout:2000});
  return {root,btns,click:(doName,value='')=>{const b=btns.find(x=>x.dataset.do===doName&&(!value||x.dataset.value===value));assert.ok(b,'button '+doName+' '+value+' not found');assert.equal(b.disabled,false,'button disabled '+doName);b.handler()},html:()=>root.innerHTML};
 }
-test('model: 48 unique questions, balanced 12 quick questions and 16 per category',()=>{
- assert.equal(M.QUESTIONS.length,48);
- assert.equal(new Set(M.QUESTIONS.map(x=>x.id)).size,48);
- for(const [pack,count] of [['quick',12],['all',48],['romantic',16],['funny',16],['deep',16]])assert.equal(M.getPack(pack).length,count);
+test('model: 80 unique questions, balanced 12 quick questions and 16 per category',()=>{
+ assert.equal(M.QUESTIONS.length,80);
+ assert.equal(new Set(M.QUESTIONS.map(x=>x.id)).size,80);
+ for(const [pack,count] of [['quick',12],['all',80],['romantic',16],['funny',16],['deep',16],['longdistance',16],['hard',16]])assert.equal(M.getPack(pack).length,count);
  for(const q of M.QUESTIONS)assert.ok(q.a&&q.b&&q.a!==q.b&&q.discuss);
 });
 test('matching and opposite answers compare correctly',()=>{
@@ -63,7 +63,7 @@ test('partner challenge loads prior selections without revealing them and compar
 });
 test('game content is visible to crawlers and referenced resources are present',()=>{
  assert.match(HTML,/<link rel="canonical" href="https:\/\/relationship.sbs\/tests\/would-you-rather-for-couples\/"/);
- assert.equal((HTML.match(/<li><strong>Would you rather/g)||[]).length,48);
+ assert.equal((HTML.match(/<li><strong>Would you rather/g)||[]).length,80);
  assert.match(HTML,/application\/ld\+json/);
  assert.match(HTML,/width=device-width,initial-scale=1/);
  assert.match(HTML,/prefers-reduced-motion/);
