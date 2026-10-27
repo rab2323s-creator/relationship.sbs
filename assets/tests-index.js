@@ -1,6 +1,16 @@
 /* tests-index.js — lightweight home index */
 window.TEST_INDEX = [
   {
+    "id": "would_you_rather_for_couples",
+    "slug": "would-you-rather-for-couples",
+    "title": "Would You Rather Questions for Couples: 48 Date Night Questions",
+    "blurb": "48 original romantic, funny and deep Would You Rather questions. Play separately, reveal comparisons and share a two-device date-night challenge. No sign-up.",
+    "time": "4–20 min",
+    "guide": "/blog/weekly-relationship-check-in/",
+    "intent": "quiz"
+  },
+
+  {
     "id": "am_i_being_catfished_quiz",
     "slug": "am-i-being-catfished-quiz",
     "title": "Am I Being Catfished? 15-Question Online Dating Safety Quiz",
