@@ -68,3 +68,22 @@ test('game content is visible to crawlers and referenced resources are present',
  assert.match(HTML,/width=device-width,initial-scale=1/);
  assert.match(HTML,/prefers-reduced-motion/);
 });
+// Regression test: the site uses light text on a dark theme. Never fall back to
+// white answer-card backgrounds while inheriting the site's light foreground.
+function luminance(hex){const rgb=hex.replace('#','').match(/.{2}/g).map(s=>parseInt(s,16)/255).map(x=>x<=.04045?x/12.92:((x+.055)/1.055)**2.4);return .2126*rgb[0]+.7152*rgb[1]+.0722*rgb[2];}
+function contrast(fg,bg){const a=luminance(fg),b=luminance(bg);return (Math.max(a,b)+.05)/(Math.min(a,b)+.05);}
+test('choice cards maintain readable dark-mode contrast on desktop and mobile',()=>{
+ assert.match(HTML,/\.wyr-shell\{color-scheme:dark;/);
+ assert.doesNotMatch(HTML,/var\(--card,#fff\)/);
+ for(const selector of ['wyr-choice','wyr-pack','wyr-btn','wyr-input']){
+  const rule=HTML.match(new RegExp('\\.'+selector+'\\\\{([^}]*)\\\\}'));
+  assert.ok(rule,'missing '+selector+' rule');
+  assert.match(rule[1],/background:var\(--wyr-surface\)/);
+  assert.match(rule[1],/color:var\(--wyr-text\)/);
+ }
+ assert.ok(contrast('#f3f6ff','#17223a')>=7,'regular text must have AAA-level contrast');
+ assert.ok(contrast('#ffffff','#2a3b63')>=7,'selected answer must remain clearly legible');
+ assert.ok(contrast('#ffffff','#4c5793')>=4.5,'primary button must remain readable');
+ assert.match(HTML,/@media\(max-width:760px\)/);
+ assert.match(HTML,/\.wyr-choicegrid\{grid-template-columns:1fr/);
+});
