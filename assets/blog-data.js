@@ -1230,13 +1230,13 @@ featured: true
   },
   {
     slug: "secure-attachment-habits",
-    title: "Secure Attachment Habits: What Secure Love Looks Like",
-    excerpt: "Secure attachment is not perfection—it’s consistency. These habits help you build stable love and trust.",
+    title: "How to Build Secure Attachment: 10 Daily Habits",
+    excerpt: "10 practical secure attachment habits for adults, with daily examples, scripts, and a step-by-step plan to build more secure relationships.",
     date: "2026-01-29",
-    readingMinutes: 7,
+    readingMinutes: 12,
     tags: ["Attachment", "Secure Attachment"],
     category: "Attachment",
-    cover: "/assets/img/blog/default.webp",
+    cover: "/assets/images/blog/secure-attachment-habits/secure-attachment-conversation.svg",
     featured: false
   },
   {
