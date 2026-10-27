@@ -1018,8 +1018,8 @@ window.BLOG_POSTS = [
   },
   {
   slug: "why-you-miss-someone-who-was-bad-for-you",
-  title: "Why You Miss Someone Who Was Bad For You (And Why It Feels So Hard to Let Go)",
-  excerpt: "A psychology-based explanation of why you miss someone who hurt you, how trauma bonding, emotional patterns, and attachment keep you connected, and what actually helps you break free.",
+  title: "Why Do I Miss Someone Who Treated Me Badly? 6 Reasons",
+  excerpt: "Why you can miss someone who treated you badly, even after a toxic breakup: six clear reasons and practical steps for letting go.",
   date: "2026-03-18",
   readingMinutes: 10,
   tags: ["Relationships", "Attachment", "Breakup"],
