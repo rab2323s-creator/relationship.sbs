@@ -76,10 +76,11 @@ test('choice cards maintain readable dark-mode contrast on desktop and mobile',(
  assert.match(HTML,/\.wyr-shell\{color-scheme:dark;/);
  assert.doesNotMatch(HTML,/var\(--card,#fff\)/);
  for(const selector of ['wyr-choice','wyr-pack','wyr-btn','wyr-input']){
-  const rule=HTML.match(new RegExp('\\.'+selector+'\\\\{([^}]*)\\\\}'));
-  assert.ok(rule,'missing '+selector+' rule');
-  assert.match(rule[1],/background:var\(--wyr-surface\)/);
-  assert.match(rule[1],/color:var\(--wyr-text\)/);
+  const start=HTML.indexOf('.'+selector+'{');
+  assert.ok(start>=0,'missing '+selector+' rule');
+  const rule=HTML.slice(start,HTML.indexOf('}',start)+1);
+  assert.match(rule,/background:var\(--wyr-surface\)/);
+  assert.match(rule,/color:var\(--wyr-text\)/);
  }
  assert.ok(contrast('#f3f6ff','#17223a')>=7,'regular text must have AAA-level contrast');
  assert.ok(contrast('#ffffff','#2a3b63')>=7,'selected answer must remain clearly legible');
