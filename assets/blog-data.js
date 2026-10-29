@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "date-night-ideas-for-couples",
+  title: "65 Date Night Ideas for Couples: Fun, Romantic & At Home",
+  excerpt: "65 original date night ideas for couples: romantic, fun, cheap and at-home plans with realistic budgets, timing, supplies and conversation starters.",
+  date: "2026-10-30",
+  readingMinutes: 24,
+  tags: ["Date Night Ideas", "Date Night Ideas for Couples", "Romantic Date Night Ideas", "At Home Date Night Ideas", "Cheap Date Night Ideas", "Couples Activities", "Fun Date Night Ideas"],
+  category: "Dating",
+  cover: "/assets/images/blog/date-night-ideas-for-couples/two-lamps-one-evening.svg",
+  featured: true
+},
+
+{
   slug: "questions-to-ask-your-crush-over-text",
   title: "60 Questions to Ask Your Crush Over Text That Actually Flow",
   excerpt: "60 questions to ask your crush over text: first messages, funny, flirty and deep ideas, with a natural follow-up for every question and five sample conversations.",
