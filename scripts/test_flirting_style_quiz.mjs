@@ -36,7 +36,7 @@ test("search page renders the game immediately after its title",()=>{
  assert.ok(HTML.indexOf('id="flirtQuiz"')>HTML.indexOf("<h1>"));
  assert.ok(HTML.indexOf('id="flirtQuiz"')<HTML.indexOf('class="fs-article"'));
  assert.ok(HTML.includes("@media(max-width:700px)"));
- const json=JSON.parse(HTML.match(/<script type="application\\/ld\\+json">([\\s\\S]*?)<\\/script>/)[1]);
+ const json=JSON.parse(HTML.split('<script type="application/ld+json">')[1].split('</script>')[0]);
  assert.equal(json["@graph"].find(x=>x["@type"]==="FAQPage").mainEntity.length,15);
  assert.equal(json["@graph"].find(x=>x["@type"]==="WebApplication").isAccessibleForFree,true);
 });
