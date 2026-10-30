@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "how-to-flirt-in-person",
+  title: "How to Flirt in Person: 15 Natural Ways (Without Being Awkward)",
+  excerpt: "Learn how to flirt face-to-face with 15 natural ways, real conversation examples, body-language guidance, shy-person advice, and respectful ways to ask someone out.",
+  date: "2026-10-30",
+  readingMinutes: 20,
+  tags: ["How to Flirt", "How to Flirt in Person", "Flirting Without Being Awkward", "Flirting Body Language", "Dating Confidence", "How to Flirt with Your Crush", "Face-to-Face Conversation"],
+  category: "Dating",
+  cover: "/assets/images/blog/how-to-flirt-in-person/the-conversation-by-the-window.svg",
+  featured: true
+},
+
+{
   slug: "date-night-ideas-for-couples",
   title: "65 Date Night Ideas for Couples: Fun, Romantic & At Home",
   excerpt: "65 original date night ideas for couples: romantic, fun, cheap and at-home plans with realistic budgets, timing, supplies and conversation starters.",
