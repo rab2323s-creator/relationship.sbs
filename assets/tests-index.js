@@ -1,6 +1,16 @@
 /* tests-index.js — lightweight home index */
 window.TEST_INDEX = [
   {
+    "id": "relationship_readiness_quiz",
+    "slug": "am-i-ready-for-a-relationship",
+    "title": "Am I Ready for a Relationship? Free 18-Question Quiz",
+    "blurb": "18 original dating-readiness scenarios with automatic next questions, 5 personal dimensions, a reflection percentage and 5 nuanced results. Free, private and no sign-up.",
+    "time": "3–5 min",
+    "guide": "/blog/signs-you-are-a-rebound/",
+    "intent": "quiz"
+  },
+
+  {
     "id": "flirting_style_quiz",
     "slug": "flirting-style-quiz",
     "title": "Flirting Style Quiz: What's Your Flirting Style?",
