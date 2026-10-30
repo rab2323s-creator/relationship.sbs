@@ -34,7 +34,7 @@ function act(a){
  if(a==="share"){if(navigator.share){navigator.share({title:"How Well Do You Know Your Partner?",text:"Guess my answers in this 20-question couples quiz!",url:share(token)}).catch(()=>{});}else copy(share(token));return;}
  if(a==="local"){guesses=Array(20).fill(null);phase="guess";index=0;resetHash();render();return;}
  if(a==="summary"){const result=M.compare(answers,guesses);let t="We guessed "+result.matches+"/20 preferences in How Well Do You Know Your Partner? Try it: "+base;if(navigator.share){navigator.share({title:"Our couples quiz",text:t}).catch(()=>{});}else copy(t);return;}
- if(a==="switch"){answers=guesses.map((v,i)=>v===4?answers[i]:v);guesses=Array(20).fill(null);phase="answer";index=0;token=null;resetHash();render();return;}
+ if(a==="switch"){answers=Array(20).fill(null);guesses=Array(20).fill(null);phase="answer";index=0;token=null;resetHash();render();return;}
  if(a==="restart"){answers=Array(20).fill(null);guesses=Array(20).fill(null);phase="answer";index=0;token=null;resetHash();render();}
 }
 try{let frag=location.hash.match(/^#challenge=([^&]+)$/);let incoming=frag?decodeURIComponent(frag[1]):null;if(incoming){let decoded=M.decode(incoming);if(decoded){answers=decoded;token=incoming;phase="guess";index=0;}else{status("This challenge link is invalid. Start a new quiz.");}}}catch(_){}
