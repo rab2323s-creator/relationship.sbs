@@ -1,6 +1,16 @@
 /* tests-index.js — lightweight home index */
 window.TEST_INDEX = [
   {
+    "id": "flirting_style_quiz",
+    "slug": "flirting-style-quiz",
+    "title": "Flirting Style Quiz: What's Your Flirting Style?",
+    "blurb": "20 original face-to-face dating scenarios reveal your Sincere, Playful, Polite, Traditional and Physical flirting tendencies, with a practical profile and honest limits.",
+    "time": "3–5 min",
+    "guide": "/blog/how-to-flirt-in-person/",
+    "intent": "quiz"
+  },
+
+  {
     "id": "how_well_do_you_know_your_partner",
     "slug": "how-well-do-you-know-your-partner",
     "title": "How Well Do You Know Your Partner? Free 20-Question Couples Quiz",

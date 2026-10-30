@@ -87,6 +87,9 @@ jobs:
       - name: Test two-player Would You Rather game and sharing
         run: node --test scripts/test_couples_rather_game.mjs
 
+      - name: Test flirting style quiz scoring and interactive navigation
+        run: node --test scripts/test_flirting_style_quiz.mjs
+
       - name: Run static SEO audit
         run: python scripts/seo_audit.py
 
