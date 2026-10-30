@@ -3,6 +3,19 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "age-gap-relationships",
+  title: "Age Gap Relationships: Is 10, 15 or 20 Years Too Much?",
+  excerpt: "Is a 10, 15 or 20-year age gap too much? Research, healthy signs, power, family, money, parenting and plans for different life stages.",
+  date: "2026-10-30",
+  readingMinutes: 20,
+  tags: ["Age Gap Relationships", "Age Gap Relationship", "10 Year Age Gap Relationship", "15 Year Age Difference", "20 Year Age Gap Relationship", "Dating Someone Older", "Age Difference in Marriage"],
+  category: "Dating & Relationships",
+  cover: "/assets/images/blog/age-gap-relationships/two-calendars-one-table.svg",
+  featured: true
+},
+
+
+{
   slug: "platonic-relationship-meaning",
   title: "Platonic Relationship Meaning: 9 Signs & Real Examples",
   excerpt: "What makes love platonic? Explore 9 signs, real examples, romantic vs platonic love, intimacy, friendship boundaries, and changing feelings.",
