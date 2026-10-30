@@ -3,6 +3,19 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "how-to-break-up-with-someone-you-live-with",
+  title: "How to Break Up With Someone You Live With: 12-Step Plan",
+  excerpt: "Breaking up when you live together? A practical 12-step plan for shared leases, rent, moving out, belongings, children, pets, digital privacy and a printable 30-item checklist.",
+  date: "2026-10-30",
+  readingMinutes: 22,
+  tags: ["How to Break Up With Someone You Live With", "Breaking Up When Living Together", "Shared Lease Breakup", "Moving Out After Breakup", "Splitting Bills After Breakup", "Boundary Scripts Printable"],
+  category: "Breakups & Shared Housing",
+  cover: "/assets/images/blog/how-to-break-up-with-someone-you-live-with/the-last-key-on-the-table.svg",
+  featured: true
+},
+
+
+{
   slug: "age-gap-relationships",
   title: "Age Gap Relationships: Is 10, 15 or 20 Years Too Much?",
   excerpt: "Is a 10, 15 or 20-year age gap too much? Research, healthy signs, power, family, money, parenting and plans for different life stages.",
