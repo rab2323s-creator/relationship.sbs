@@ -90,6 +90,9 @@ jobs:
       - name: Test flirting style quiz scoring and interactive navigation
         run: node --test scripts/test_flirting_style_quiz.mjs
 
+      - name: Test relationship readiness model and mobile quiz UI
+        run: node --test scripts/test_relationship_readiness.mjs
+
       - name: Run static SEO audit
         run: python scripts/seo_audit.py
 
