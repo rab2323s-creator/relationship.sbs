@@ -1,6 +1,16 @@
 /* tests-index.js — lightweight home index */
 window.TEST_INDEX = [
   {
+    "id": "how_well_do_you_know_your_partner",
+    "slug": "how-well-do-you-know-your-partner",
+    "title": "How Well Do You Know Your Partner? Free 20-Question Couples Quiz",
+    "blurb": "Answer 20 questions about yourself, send a private challenge link and see how many of your preferences your partner can guess. Real comparisons, no love-compatibility score.",
+    "time": "3–6 min per person",
+    "guide": "/blog/weekly-relationship-check-in/",
+    "intent": "quiz"
+  },
+
+  {
     "id": "would_you_rather_for_couples",
     "slug": "would-you-rather-for-couples",
     "title": "Would You Rather Questions for Couples: 80 Date Night Questions",
