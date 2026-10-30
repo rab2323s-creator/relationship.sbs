@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "second-date-ideas",
+  title: "35 Second Date Ideas That Are Fun, Romantic & Not Awkward",
+  excerpt: "35 second date ideas with realistic cost and time estimates, what to talk about, seven invitation texts, safety guidance, and plans for different first-date experiences.",
+  date: "2026-10-30",
+  readingMinutes: 23,
+  tags: ["Second Date Ideas", "Fun Second Date Ideas", "Romantic Second Dates", "Cheap Second Date Ideas", "Second Date Questions", "What to Do on a Second Date", "Second Date Tips"],
+  category: "Dating",
+  cover: "/assets/images/blog/second-date-ideas/the-green-ticket-at-dusk.svg",
+  featured: true
+},
+
+{
   slug: "how-to-flirt-in-person",
   title: "How to Flirt in Person: 15 Natural Ways (Without Being Awkward)",
   excerpt: "Learn how to flirt face-to-face with 15 natural ways, real conversation examples, body-language guidance, shy-person advice, and respectful ways to ask someone out.",
