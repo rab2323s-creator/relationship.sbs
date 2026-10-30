@@ -29,7 +29,7 @@ Q('the-label','direction','After two good dates, someone asks what you are looki
 ['I will say whatever they want so they keep seeing me.',0,'Matching their answer could hide your actual intentions.'],
 ['I know a few things I want, though I need time on the rest.',2,'You have useful direction without a fixed script.'],
 ['I hope they never ask, because I do not want to consider it.',1,'Avoiding the question may leave both people guessing.']]),
-Q('familiar-smile','openness','A new person's smile reminds you of someone from your past. What do you notice?',[
+Q('familiar-smile','openness','A new person’s smile reminds you of someone from your past. What do you notice?',[
 ['I start measuring everything against the old relationship.',0,'The past may still be setting the standard for someone new.'],
 ['I notice it and stay curious about who this person actually is.',3,'You can recognize a memory without letting it define them.'],
 ['I catch myself comparing, then try to return to the present.',2,'You are developing room for an individual first impression.'],
@@ -87,7 +87,7 @@ Q('ordinary-disagreement','boundaries','After a pleasant first date, the other p
 Q('ex-memory','openness','Someone from the past crosses your mind while you prepare for a first date.',[
 ['I notice the memory and return to whether I want to meet this person.',3,'A memory does not have to decide your present choices.'],
 ['I wonder whether I am betraying my past by meeting someone.',1,'Old loyalties or grief may still shape how you approach dating.'],
-['I compare the new person's entire future to my past.',0,'The first meeting may be carrying an impossible comparison.'],
+['I compare the new person’s entire future to my past.',0,'The first meeting may be carrying an impossible comparison.'],
 ['I feel mixed but can allow this date to be its own experience.',2,'You can hold uncertainty while exploring a fresh connection.']]),
 Q('independent-life','capacity','Someone you like becomes available on the one evening you have protected for rest.',[
 ['I can keep my rest and propose another time.',3,'You can be interested without offering every available moment.'],
