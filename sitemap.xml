@@ -518,7 +518,7 @@
   </url>
   <url>
     <loc>https://relationship.sbs/tests/</loc>
-    <lastmod>2026-10-27</lastmod>
+    <lastmod>2026-10-30</lastmod>
   </url>
   <url>
     <loc>https://relationship.sbs/tests/am-i-a-good-partner-quiz/</loc>
@@ -649,6 +649,10 @@
     <lastmod>2026-10-08</lastmod>
   </url>
   <url>
+    <loc>https://relationship.sbs/tests/how-well-do-you-know-your-partner/</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
     <loc>https://relationship.sbs/tests/jealousy-test/</loc>
     <lastmod>2026-10-01</lastmod>
   </url>
@@ -702,7 +706,7 @@
   </url>
   <url>
     <loc>https://relationship.sbs/tests/relationship-compatibility-test/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-10-30</lastmod>
   </url>
   <url>
     <loc>https://relationship.sbs/tests/relationship-trauma/</loc>
@@ -770,14 +774,10 @@
   </url>
   <url>
     <loc>https://relationship.sbs/tools/love-calculator/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-30</lastmod>
   </url>
   <url>
     <loc>https://relationship.sbs/tools/text-decoder/</loc>
     <lastmod>2026-10-13</lastmod>
-  </url>
-  <url>
-    <loc>https://relationship.sbs/tests/how-well-do-you-know-your-partner/</loc>
-    <lastmod>2026-10-30</lastmod>
   </url>
 </urlset>
