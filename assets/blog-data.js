@@ -3,6 +3,19 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "platonic-relationship-meaning",
+  title: "Platonic Relationship Meaning: 9 Signs & Real Examples",
+  excerpt: "What makes love platonic? Explore 9 signs, real examples, romantic vs platonic love, intimacy, friendship boundaries, and changing feelings.",
+  date: "2026-10-30",
+  readingMinutes: 19,
+  tags: ["Platonic Relationship", "Platonic Love", "Platonic Relationship Meaning", "Platonic vs Romantic Relationship", "Platonic Intimacy", "Platonic Friendship", "Friendship Boundaries"],
+  category: "Friendship & Boundaries",
+  cover: "/assets/images/blog/platonic-relationship-meaning/two-chairs-one-light.svg",
+  featured: true
+},
+
+
+{
   slug: "second-date-ideas",
   title: "35 Second Date Ideas That Are Fun, Romantic & Not Awkward",
   excerpt: "35 second date ideas with realistic cost and time estimates, what to talk about, seven invitation texts, safety guidance, and plans for different first-date experiences.",
