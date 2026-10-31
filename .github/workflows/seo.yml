@@ -93,6 +93,9 @@ jobs:
       - name: Test relationship readiness model and mobile quiz UI
         run: node --test scripts/test_relationship_readiness.mjs
 
+      - name: Test crush quiz scoring, interaction and mobile markup
+        run: node --test scripts/test_crush_quiz.mjs
+
       - name: Run static SEO audit
         run: python scripts/seo_audit.py
 
