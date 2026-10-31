@@ -1,6 +1,16 @@
 /* tests-index.js — lightweight home index */
 window.TEST_INDEX = [
   {
+    "id": "do_i_have_a_crush_quiz",
+    "slug": "do-i-have-a-crush",
+    "title": "Do I Have a Crush? Free 16-Question Crush Quiz",
+    "blurb": "Wondering if you like someone romantically or as a friend? 16 original situations explore closeness, attraction, curiosity and attention, with five nuanced results and an instant percentage.",
+    "time": "3–4 min",
+    "guide": "/blog/platonic-relationship-meaning/",
+    "intent": "quiz"
+  },
+
+  {
     "id": "relationship_readiness_quiz",
     "slug": "am-i-ready-for-a-relationship",
     "title": "Am I Ready for a Relationship? Free 18-Question Quiz",
