@@ -129,7 +129,7 @@ return {...d,score,items};
 const score=Math.round(areas.reduce((s,d)=>s+d.score*d.weight,0));
 const byId=id=>areas.find(d=>d.id===id).score;
 const range=Math.max(...areas.map(d=>d.score))-Math.min(...areas.map(d=>d.score));
-const split=score>=34&&score<81&&(range>=66||(byId("romance")>=67&&byId("focus")<=33));
+const split=score>=20&&score<81&&((range>=66&&byId("romance")>=67)||(byId("romance")>=67&&byId("focus")<=33));
 let key;
 if(split)key="mixed";
 else if(score>=73&&byId("romance")>=50)key="clear";
