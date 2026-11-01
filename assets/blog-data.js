@@ -3,6 +3,19 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "what-is-an-open-relationship",
+  title: "What Is an Open Relationship? Meaning, Rules & Boundaries",
+  excerpt: "What is an open relationship? Compare open relationships, polyamory and monogamy, and learn consent, 12 rules, cheating boundaries, STI safety, jealousy and what to do when a partner says no.",
+  date: "2026-11-01",
+  readingMinutes: 24,
+  tags: ["What Is an Open Relationship", "Open Relationship Meaning", "Open Relationship Rules", "Open Relationship Boundaries", "Open Relationship vs Polyamory", "Is Open Relationship Cheating", "Consensual Non-Monogamy"],
+  category: "Dating & Relationships",
+  cover: "/assets/images/blog/what-is-an-open-relationship/the-open-door-and-two-chairs.svg",
+  featured: true
+},
+
+
+{
   slug: "how-to-kiss-for-the-first-time",
   title: "How to Kiss for the First Time: 10 Easy Steps & Tips",
   excerpt: "How to kiss for the first time: 10 easy steps, a visual guide, natural ways to ask, gentle lip techniques, mistakes to avoid and what to do afterward.",
