@@ -1,6 +1,15 @@
 /* tests-index.js — lightweight home index */
 window.TEST_INDEX = [
   {
+    "id": "partner_cheating_warning_signs_quiz",
+    "slug": "is-my-partner-cheating-quiz",
+    "title": "Is My Partner Cheating? Free 18-Question Warning Signs Quiz",
+    "blurb": "18 questions on observable warning signs, broken agreements, unexplained changes and trust. Get an instant 0–100 concern score, five percentages and personalized advice—not an infidelity probability.",
+    "time": "4–6 min",
+    "guide": "/blog/why-do-people-cheat/",
+    "intent": "quiz"
+  },
+  {
     "id": "am_i_gay_self_discovery_quiz",
     "slug": "am-i-gay-quiz",
     "title": "Am I Gay Quiz? Free 18-Question Sexuality Self-Discovery Test",
