@@ -15,28 +15,30 @@ q.options.forEach((opt,i)=>{const el=button(options,opt[0],()=>pick(i),"sc-choic
 if(shouldFocus)focusQuiz();}
 function section(parent,title){const el=add(parent,"section","sc-section");add(el,"h3","",title);return el;}
 function showResult(){
-locked=false;const r=model.calculate(answers);root.replaceChildren();
-const card=add(root,"section","sc-results sd-result");card.setAttribute("aria-label","Your attraction reflection result");
-add(card,"p","sc-result-kicker","Your result — based on your answers");
-const heading=add(card,"h2","sc-result-title",r.summary.title);heading.tabIndex=-1;
-const answer=add(card,"section","sd-result-box");
-add(answer,"p","sd-result-label","THE SHORT ANSWER");
-add(answer,"p","sd-result-answer",r.summary.answer);
-add(answer,"p","sd-result-boundary","Does this tell you whether you are gay? No. It reflects the feelings you described. Only you can decide whether a label fits, and you can take your time.");
-const details=section(card,"What you actually answered");
-add(details,"p","","These are four of your own responses. They show where the summary came from—not a hidden personality score.");
-const evidence=add(details,"ul","sc-evidence sd-answer-list");r.summary.examples.forEach(item=>{const li=add(evidence,"li");add(li,"strong","",item.label);add(li,"span","",item.answer);});
-const focus=section(card,"Your next step: "+r.profile.title);
-add(focus,"p","",r.profile.intro);
-const questions=section(card,"Three helpful questions");const ol=add(questions,"ol","sc-next");r.profile.questions.forEach(q=>add(ol,"li","",q));
-const next=section(card,"What to do next");const list=add(next,"ul","sc-evidence");r.profile.next.forEach(t=>add(list,"li","",t));
-const method=section(card,"How we got this result");add(method,"p","","The main headline summarizes the answers you gave about possible romantic or physical interest, friendship and attraction across genders. It doesn't assign an orientation or calculate a percentage. Question 18 chooses only the reflection topic and suggestions shown afterward; it cannot change the main summary.");
-const related=section(card,"Helpful reading");const l=add(related,"a","sc-guide-link","Am I in love with my same-sex best friend? Explore feelings without assuming a label.");l.href="/blog/in-love-with-same-sex-best-friend/";
-const actions=add(card,"div","sc-result-actions");
-button(actions,"Review my answers",()=>{index=0;showQuestion(true)},"sc-restart");
-button(actions,"Start over and clear answers",()=>{answers=Array(N).fill(null);index=0;showQuestion(true)},"sc-back");
-add(card,"p","sc-fineprint","Original educational reflection, not a validated sexual-orientation measure. No orientation, gender identity or diagnosis can be decided from your answers. The quiz code keeps your responses in this page's temporary memory only; a reload clears them. General website analytics and privacy practices are separate.");
-focusQuiz();
+locked=false;const r=model.calculate(answers);root.replaceChildren();const card=add(root,"section","sc-results sd-result");card.setAttribute("aria-label","Your quiz result with percentages");
+add(card,"p","sc-result-kicker","Your results — 18 questions completed");
+const heading=add(card,"h2","sc-result-title",r.result.title);heading.tabIndex=-1;
+const total=add(card,"div","sc-score-area sd-score-area");
+add(total,"p","sc-score-label","Your highest answer category");const big=add(total,"div","sc-score");
+add(big,"span","sc-score-number",String(r.primary.percent));add(big,"span","sc-score-out","%");
+add(total,"p","sd-score-name",r.primary.name);
+add(total,"p","sc-score-note","Share of six attraction-related answer choices. This is NOT a percentage of being gay or a sexual-orientation probability.");
+add(card,"p","sc-result-intro",r.result.explanation);
+const breakdown=section(card,"Your five percentage scores");
+add(breakdown,"p","","Each bar shows how many of your six direct attraction answers fell in that category. The five bars sum to 100%. A 0% means no selected answers in that category, not no attraction in real life.");
+r.scores.forEach(s=>{const div=add(breakdown,"div","sc-dimension sd-dimension"),top=add(div,"div","sc-dimension-top");add(top,"strong","",s.name);add(top,"strong","",s.percent+"%");
+const bar=add(div,"div","sc-meter");bar.setAttribute("role","meter");bar.setAttribute("aria-label",s.name+" share of responses");bar.setAttribute("aria-valuemin","0");bar.setAttribute("aria-valuemax","100");bar.setAttribute("aria-valuenow",String(s.percent));add(bar,"span").style.width=s.percent+"%";
+add(div,"p","sc-dimension-description",s.count+" out of 6 answers.");});
+const why=section(card,"Why you got this result");add(why,"p","","These are the actual six answers behind the chart.");
+const ev=add(why,"ul","sc-evidence sd-evidence");r.evidence.forEach(q=>{const li=add(ev,"li");add(li,"strong","",q.question);add(li,"span","","You chose: “"+q.answer+"”");});
+const extra=section(card,"Your next step: "+r.profile.title);add(extra,"p","",r.profile.intro);
+const thought=section(card,"Three questions to think about"),ol=add(thought,"ol","sc-next");r.profile.questions.forEach(q=>add(ol,"li","",q));
+const next=section(card,"What to do next"),list=add(next,"ul","sc-evidence");r.profile.next.forEach(t=>add(list,"li","",t));
+const note=section(card,"How the scores work");add(note,"p","",r.method);
+const more=section(card,"Related reading"),link=add(more,"a","sc-guide-link","Am I In Love With My Same-Sex Best Friend?");link.href="/blog/in-love-with-same-sex-best-friend/";
+const actions=add(card,"div","sc-result-actions");button(actions,"Review my answers",()=>{index=0;showQuestion(true)},"sc-restart");
+button(actions,"Retake quiz — clear answers",()=>{answers=Array(N).fill(null);index=0;showQuestion(true)},"sc-back");
+add(card,"p","sc-fineprint","Educational, non-validated reflection, not an orientation diagnosis or probability. This quiz does not submit or persist your answers; general website privacy practices may differ.");focusQuiz();
 }
 showQuestion(false);
 })();

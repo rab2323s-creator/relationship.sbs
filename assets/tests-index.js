@@ -4,7 +4,7 @@ window.TEST_INDEX = [
     "id": "am_i_gay_self_discovery_quiz",
     "slug": "am-i-gay-quiz",
     "title": "Am I Gay Quiz? Free 18-Question Sexuality Self-Discovery Test",
-    "blurb": "18 private questions about romantic attraction, physical feelings, friendships, patterns and labels. Get a supportive reflection—not a sexual orientation diagnosis, prediction or percentage.",
+    "blurb": "18 private questions about romantic attraction, physical feelings, friendships, patterns and labels. See five answer-based percentage bars and personalized reflection—not a sexual-orientation diagnosis or probability.",
     "time": "4–6 min",
     "guide": "/blog/in-love-with-same-sex-best-friend/",
     "intent": "quiz"
