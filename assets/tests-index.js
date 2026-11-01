@@ -1,6 +1,17 @@
 /* tests-index.js — lightweight home index */
 window.TEST_INDEX = [
   {
+    "id": "am_i_gay_self_discovery_quiz",
+    "slug": "am-i-gay-quiz",
+    "title": "Am I Gay Quiz? Free 18-Question Sexuality Self-Discovery Test",
+    "blurb": "18 private questions about romantic attraction, physical feelings, friendships, patterns and labels. Get a supportive reflection—not a sexual orientation diagnosis, prediction or percentage.",
+    "time": "4–6 min",
+    "guide": "/blog/in-love-with-same-sex-best-friend/",
+    "intent": "quiz"
+  },
+
+
+  {
     "id": "do_i_have_a_crush_quiz",
     "slug": "do-i-have-a-crush",
     "title": "Do I Have a Crush? Free 16-Question Crush Quiz",
