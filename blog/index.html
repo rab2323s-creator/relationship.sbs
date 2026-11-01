@@ -26,6 +26,7 @@
   <meta name="twitter:image" content="https://relationship.sbs/assets/og/relationship-tests-tools-guides.webp" />
 
   <link rel="stylesheet" href="/assets/styles.css" />
+  <link rel="stylesheet" href="/assets/discovery.css" />
 
   <script defer src="/assets/shared.js"></script>
   <script defer src="/assets/blog-data.js?v=20261030-second-date"></script>
@@ -345,328 +346,38 @@
   </style>
 </head>
 
-<body>
+<body class="discovery-page blog-page">
   <header id="siteHeader"></header>
 
   <main class="wrap">
-    <section class="card prose"><h2>11 Signs You’re a Rebound</h2><p>Dating someone fresh out of a relationship? Read the <a href="/blog/signs-you-are-a-rebound/">11 rebound relationship signs</a>, the differences between grief and genuine connection, and what to ask your new partner.</p></section>
-    <section class="card prose"><h2>Moving in Together Checklist: 30 Questions</h2><p>Planning to share a home? Use the <a href="/blog/moving-in-together-checklist/">printable moving in together checklist</a> to discuss rent, chores, visitors, pets, privacy and what happens if plans change.</p></section>
-    <section class="card prose"><h2>How to Talk About Money With Your Partner Without Fighting</h2><p>Learn how to discuss spending, saving, debt and fair shared expenses with practical scripts in our <a href="/blog/how-to-talk-about-money-with-your-partner/">couples money conversation guide</a>.</p></section>
-    <section class="hero" style="grid-template-columns: 1fr;">
+    <section class="hero">
       <div class="heroCard">
-        <h1 style="margin:0 0 10px;">Relationship Advice &amp; Psychology Guides</h1>
-        <p style="margin:0;color:var(--muted);">
-          Expert relationship advice on attachment styles, texting psychology, emotional safety,
-          dating red flags, breakup recovery, communication, and healthy boundaries.
-        </p>
-
-        <p class="introCopy">
-          Explore practical, psychology-based guides that explain why people pull away,
-          what anxious or avoidant patterns look like, how to set boundaries without guilt,
-          how to read mixed signals, and what helps create healthier communication in modern relationships.
-        </p>
-
-        <div class="pills" style="margin-top:14px;">
-          <span class="pill">Attachment styles explained simply</span>
-          <span class="pill">Texting, mixed signals &amp; dating patterns</span>
-          <span class="pill">Healthy boundaries &amp; emotional safety</span>
+        <span class="eyebrow">The relationship journal</span>
+        <h1>Thoughtful advice for every stage of connection.</h1>
+        <p>Discover grounded guides on love, dating, communication, emotional safety and navigating difficult moments. Find clarity at your own pace.</p>
+        <div class="blogToolbar" aria-label="Filter relationship articles">
+          <input id="qInput" class="control" type="search" placeholder="Search articles, topics, questions..." autocomplete="off" aria-label="Search articles">
+          <select id="categorySelect" class="control" aria-label="Category"><option value="">All categories</option></select>
+          <select id="sortSelect" class="control" aria-label="Sort articles"><option value="newest">Newest first</option><option value="oldest">Oldest first</option><option value="readTime">Quick reads</option><option value="title">Title A–Z</option></select>
+          <button id="clearBtn" class="btn secondary" type="button">Clear</button>
         </div>
-
-        <div class="quickSearches" aria-label="Popular searches">
-          <a class="miniLink" href="/blog/anxious-attachment-signs/">anxious attachment signs</a>
-          <a class="miniLink" href="/blog/dismissive-avoidant-attachment/">dismissive avoidant attachment</a>
-          <a class="miniLink" href="/blog/avoidant-attachment-texting/">avoidant attachment texting</a>
-          <a class="miniLink" href="/blog/healthy-boundaries-script/">healthy boundaries in relationships</a>
-          <a class="miniLink" href="/blog/gaslighting-in-relationships/">gaslighting in relationships</a>
-          <a class="miniLink" href="/blog/situationship-signs/">situationship signs</a>
-          <a class="miniLink" href="/blog/no-contact-after-breakup/">no contact after breakup</a>
-          <a class="miniLink" href="/blog/why-you-miss-someone-who-was-bad-for-you/">why you miss someone who hurt you</a>
-          <a class="miniLink" href="/blog/what-does-k-mean/">what does K mean in texting</a>
-          <a class="miniLink" href="/blog/emotional-safety-in-relationships/">emotional safety in relationships</a>
-          <a class="miniLink" href="/blog/emotional-permanence-in-relationships/">emotional permanence</a>
-          <a class="miniLink" href="/blog/relationship-trauma/">relationship trauma</a>
-          <a class="miniLink" href="/blog/chatgpt-relationship-advice/">ChatGPT relationship advice</a>
-          <a class="miniLink" href="/blog/emotionally-attached-to-ai/">emotionally attached to AI</a>
-          <a class="miniLink" href="/blog/push-pull-relationship-pattern/">push-pull relationship pattern</a>
-          <a class="miniLink" href="/blog/why-dont-i-trust-my-partner/">why don’t I trust my partner</a>
-        </div>
-
-        <div class="longIntro">
-          <p style="margin:0 0 12px;">This page brings together clear, practical relationship guides on attachment styles, texting behavior, emotional safety, healthy communication, boundaries, breakup recovery, and modern dating patterns. Use the topics and filters to find the guide that best matches what you are dealing with.</p>
-          <p style="margin:0 0 12px;">Related topics are grouped together so it is easier to move from one question to the next and find deeper guidance when you need it.</p>
-          <p style="margin:0;">The result is a cleaner guide library that helps you move from a specific question to related articles, tests, and tools without losing context.</p>
-        </div>
-
-        <div class="blogToolbar" aria-label="Blog Filters">
-          <input id="qInput" class="control" type="search" placeholder="Search relationship guides..." autocomplete="off" />
-          <select id="categorySelect" class="control">
-            <option value="">All categories</option>
-          </select>
-          <select id="sortSelect" class="control">
-            <option value="newest">Newest</option>
-            <option value="oldest">Oldest</option>
-            <option value="readTime">Reading time</option>
-            <option value="title">Title</option>
-          </select>
-          <button id="clearBtn" class="control" style="cursor:pointer;">Clear</button>
-        </div>
-
-        <div id="tagsRow" class="tagsRow"></div>
-        <div class="small" id="statsLine" style="margin-top:10px;"></div>
+        <div id="tagsRow" class="tagsRow" aria-label="Article topics"></div>
+        <div id="statsLine" class="small" aria-live="polite"></div>
       </div>
     </section>
-
-    <section class="card">
-      <h2 class="sectionTitle">Start with the topic that matches your situation</h2>
-      <p class="muted" style="margin:0;">
-        Browse by real relationship question so you can find the most relevant article faster.
-      </p>
-
-      <p class="muted" style="margin:1rem 0;"><strong>New for couples:</strong> <a href="/blog/date-night-ideas-for-couples/"><strong>65 Date Night Ideas for Couples</strong></a> — romantic, at-home, cheap and adventurous plans with costs and timing.</p>
-      <p class="muted" style="margin:1rem 0;"><strong>New for dating:</strong> <a href="/blog/how-to-flirt-in-person/"><strong>How to Flirt in Person: 15 Natural Ways</strong></a> — face-to-face examples, shy-person tips, body language, and respectful ways to ask someone out.</p>
-      <p class="muted" style="margin:1rem 0;"><strong>New for second dates:</strong> <a href="/blog/second-date-ideas/"><strong>35 Second Date Ideas</strong></a> — romantic, fun, affordable and rainy-day plans, plus the best questions to ask and texts to suggest date two.</p>
-      <div class="topicGrid">
-        <article class="card hubCard">
-          <h3>Attachment Styles</h3>
-          <p>
-            Learn how anxious attachment, avoidant attachment, and secure attachment affect texting,
-            closeness, conflict, emotional regulation, and relationship stability.
-          </p>
-          <div class="linkList">
-            <a href="/blog/what-is-attachment-style/">What Is Attachment Style? (A Simple Guide)</a>
-            <a href="/blog/anxious-attachment-signs/">Anxious Attachment Signs: How to Recognize Them</a>
-            <a href="/blog/avoidant-attachment-texting/">Avoidant Attachment and Texting: Why They Pull Away</a>
-            <a href="/blog/secure-attachment-habits/">How to Build Secure Attachment: 10 Daily Habits</a>
-          </div>
-        </article>
-
-        <article class="card hubCard">
-          <h3>Texting, Mixed Signals &amp; Dating Clarity</h3>
-          <p class="muted" style="margin:.3rem 0 .7rem">New: <a href="/blog/talking-stage-meaning/"><strong>Talking Stage Meaning: How Long It Lasts &amp; 9 Signs It’s Going Somewhere</strong></a> — a practical guide to early dating, momentum and mutual intentions.</p>
-          <p>
-            Understand overthinking texts, short replies, mixed signals, dating app red flags,
-            and situationships that leave people emotionally confused or stuck.
-          </p>
-          <div class="linkList">
-            <a href="/blog/stop-overthinking-texts/">How to Stop Overthinking Text Messages</a>
-            <a href="/blog/dry-texting-meaning/">Dry Texting: Meaning, Examples &amp; How to Respond</a>
-            <a href="/blog/left-on-read-meaning/">Left on Read: Meaning &amp; What to Text Next</a>
-            <a href="/blog/breadcrumbing-in-dating/"><strong>Breadcrumbing in Dating: 7 Signs, Texting Cycle &amp; How to Respond</strong></a>
-            <a href="/blog/what-does-k-mean/">What Does “K” Mean in Texting? (And What to Reply)</a>
-            <a href="/blog/red-flags-dating-apps/">Red Flags on Dating Apps You Should Watch For</a>
-            <a href="/blog/ai-dating-bots/"><strong>Am I Talking to an AI Bot on a Dating App? 12 Warning Signs</strong></a>
-            <a href="/blog/ai-dating-profile-photos/"><strong>Are AI Photos Allowed on Tinder, Hinge &amp; Bumble? 2026 Rules</strong></a>
-            <a href="/blog/chatgpt-dating-profile-prompts/"><strong>ChatGPT Dating Profile Prompts: 30 Hinge, Tinder &amp; Bumble Examples</strong></a>
-            <a href="/blog/love-bombing/"><strong>Love Bombing vs Genuine Affection: 15 Signs, Texting Examples &amp; What Happens Next</strong></a>
-            <a href="/blog/future-faking/"><strong>Future Faking in Relationships: 7 Signs &amp; the Calendar Test</strong></a>
-            <a href="/blog/situationship-signs/"><strong>Is He Serious About You or Just Wasting Your Time? 7 Signs</strong></a>
-          </div>
-        </article>
-
-        <article class="card hubCard">
-          <h3>Boundaries, Communication &amp; Conflict</h3>
-          <p>
-            Build healthier communication with clearer needs, more secure repair, stronger trust,
-            and boundaries that protect connection without becoming control.
-          </p>
-          <div class="linkList">
-            <a href="/blog/healthy-boundaries-script/">Healthy Boundaries Script: What to Say (Without Guilt)</a>
-            <a href="/blog/boundaries-vs-control/">Boundaries vs Control: How to Tell the Difference</a>
-            <a href="/blog/red-flags-vs-boundaries/">Red Flags vs Boundaries: What’s the Difference?</a>
-            <a href="/blog/mental-load-in-relationships/"><strong>Mental Load in Relationships: Why “Just Tell Me What to Do” Isn’t Helping</strong></a>
-            <a href="/blog/communication-needs/">Communication Needs: What Healthy Couples Ask For</a>
-            <a href="/blog/stonewalling-in-a-relationship/"><strong>Stonewalling in a Relationship: 10 Signs, Examples &amp; What to Say</strong></a>
-            <a href="/blog/fair-fighting-rules/">Fair Fighting Rules: How to Argue Without Damage</a>
-          </div>
-        </article>
-
-        <article class="card hubCard">
-          <h3>Emotional Safety &amp; Relationship Psychology</h3>
-          <p>
-            Explore deeper psychology guides on emotional safety, gaslighting, emotional exhaustion,
-            limerence, emotional unavailability, and the patterns that shape trust and attachment.
-          </p>
-          <div class="linkList">
-            <a href="/blog/emotional-safety-in-relationships/">Why Emotional Safety Matters More Than Communication in Relationships</a>
-            <a href="/blog/relationship-trauma/"><strong>Relationship Trauma: 12 Signs Your Past Relationship Still Affects You</strong></a>
-            <a href="/blog/gaslighting-in-relationships/">Gaslighting in Relationships: Signs, Examples, and How to Stop Doubting Yourself</a>
-            <a href="/blog/emotionally-exhausted-in-a-relationship/">Emotionally Exhausted in a Relationship? Causes, Signs, and What Helps</a>
-            <a href="/blog/limerence-explained/">Limerence Explained: The Psychology, Brain Science, and How to Stop Obsessing Over Someone</a>
-            <a href="/blog/retroactive-jealousy/"><strong>Retroactive Jealousy: 12 Signs, Partner’s Past &amp; How to Stop the Loop</strong></a>
-            <a href="/blog/emotional-unavailability/">Emotional Unavailability: Signs and What It Means</a>
-            <a href="/blog/emotionally-unavailable-husband/"><strong>Emotionally Unavailable Husband: 11 Signs, Why He Shuts Down &amp; What to Do</strong></a>
-            <a href="/blog/silent-divorce/"><strong>Silent Divorce: 12 Signs You’re Emotionally Separated but Still Married</strong></a>
-            <a href="/blog/ai-cheating-in-relationships/"><strong>Is Talking to an AI Chatbot Cheating? 9 Signs It Crosses the Line</strong></a>
-            <a href="/blog/emotional-cheating/"><strong>Emotional Cheating: 17 Signs, Texting Examples &amp; Friendship vs Affair</strong></a>
-            <a href="/blog/micro-cheating/"><strong>Micro-Cheating: 17 Signs, Examples &amp; Where the Line Really Is</strong></a>
-            <a href="/blog/trust-building-actions/">Trust Building Actions: How Trust Is Built Daily</a>
-          </div>
-        </article>
-
-        <article class="card hubCard">
-          <h3>Love, Intimacy &amp; Long-Term Relationships</h3>
-          <p>
-            Read about closeness, love languages, intimacy changes, and the emotional dynamics
-            that influence long-term connection and relationship satisfaction.
-          </p>
-          <div class="linkList">
-            <a href="/blog/intimacy-changes-long-term-relationships/">Why Intimacy Changes in Long-Term Relationships (And What It Really Means)</a>
-            <a href="/blog/love-language-explained/">The 5 Love Languages Explained: Meaning, Examples &amp; Research</a>
-            <a href="/blog/love-language-self-assessment/">Love Language Self-Assessment: How You Give &amp; Receive Love</a>
-            <a href="/tests/love-language/">Take the Free Love Language Test</a>
-          </div>
-        </article>
-
-        <article class="card hubCard">
-          <h3>Breakups, Healing &amp; Next Steps</h3>
-          <p>
-            Find recovery-focused guides about no contact, emotional healing, relationship fatigue,
-            and how to regain clarity after painful or confusing dynamics.
-          </p>
-          <div class="linkList">
-            <a href="/blog/why-does-my-ex-watch-my-stories-but-never-text-me/"><strong>Why Does My Ex Watch My Stories But Never Text Me? A Story-View Evidence Guide</strong></a>
-            <a href="/blog/how-to-get-over-a-breakup/"><strong>How to Get Over a Breakup: What to Do in the First 30 Days</strong></a>
-            <a href="/blog/no-contact-after-breakup/">No Contact After a Breakup: Does It Work?</a>
-            <a href="/blog/emotionally-exhausted-in-a-relationship/">Emotionally Exhausted in a Relationship? Causes, Signs, and What Helps</a>
-            <a href="/blog/limerence-explained/">Limerence Explained: The Psychology, Brain Science, and How to Stop Obsessing Over Someone</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="card">
-      <h2 class="sectionTitle">Featured relationship guides</h2><p><a href="/blog/love-has-won-cult-of-mother-god/"><strong>Love Has Won: The Cult of Mother God — The True Story of Amy Carlson</strong></a> — A fact-checked HBO documentary explainer examining spiritual influence, family relationships and the search for belonging.</p><p><a href="/blog/help-im-in-a-secret-relationship/"><strong>Help! I'm in a Secret Relationship!</strong></a> — Why partners hide a relationship, when privacy becomes painful, and what to say next.</p>
-      <p class="muted" style="margin:0;">
-        These are high-intent topics readers actively search for when they need fast clarity and practical advice.
-      </p>
-
-      <div class="featuredSplit">
-        <article class="card hubCard">
-          <h3>Most searched attachment &amp; communication topics</h3>
-          <div class="quietList">
-            <a href="/blog/anxious-attachment-signs/">Anxious Attachment Signs: How to Recognize Them</a>
-            <a href="/blog/avoidant-attachment-texting/">Avoidant Attachment and Texting: Why They Pull Away</a>
-            <a href="/blog/healthy-boundaries-script/">Healthy Boundaries Script: What to Say (Without Guilt)</a>
-            <a href="/blog/stop-overthinking-texts/">How to Stop Overthinking Text Messages</a>
-            <a href="/blog/what-does-k-mean/">What Does “K” Mean in Texting? (And What to Reply)</a>
-            <a href="/blog/communication-needs/">Communication Needs: What Healthy Couples Ask For</a>
-          </div>
-        </article>
-
-        <article class="card hubCard">
-          <h3>Deep-dive relationship psychology</h3>
-          <p class="muted" style="margin:.25rem 0 .8rem"><a href="/blog/dreaming-about-your-ex/"><strong>New: Why Do I Keep Dreaming About My Ex?</strong></a> — research on former partners in dreams, even years later.</p>
-          <div class="quietList">
-            <a href="/blog/gaslighting-in-relationships/">Gaslighting in Relationships: Signs, Examples, and How to Stop Doubting Yourself</a>
-            <a href="/blog/emotional-safety-in-relationships/">Why Emotional Safety Matters More Than Communication in Relationships</a>
-            <a href="/blog/emotionally-exhausted-in-a-relationship/">Emotionally Exhausted in a Relationship? Causes, Signs, and What Helps</a>
-            <a href="/blog/limerence-explained/">Limerence Explained: The Psychology, Brain Science, and How to Stop Obsessing Over Someone</a>
-            <a href="/blog/emotional-unavailability/">Emotional Unavailability: Signs and What It Means</a>
-            <a href="/blog/no-contact-after-breakup/">No Contact After a Breakup: Does It Work?</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="card prose">
-      <h2 class="sectionTitle">Relationship advice that is practical, clear, and easy to use</h2>
-      <p class="seoBlock">
-        This guide library covers attachment styles, relationship anxiety, avoidant behavior,
-        emotional safety, dating red flags, breakup recovery, healthy communication, texting psychology,
-        boundaries in relationships, love languages, trust building, and modern dating patterns.
-        Every guide is designed to answer a specific search question clearly and help visitors move from confusion to action.
-      </p>
-      <p style="margin:0;">The result is a cleaner guide library that helps you move from a specific question to related articles, tests, and tools without losing context.</p>
-    </section>
-
-    <section class="card">
-      <div id="featuredArea" class="grid" style="margin:0;"></div>
-<p class="muted"><a href="/blog/how-to-end-a-friendship/"><strong>How to End a Friendship Respectfully: What to Say and What Happens Next</strong></a> — Clear words for ending a friendship, and a practical plan for the shared social world afterward.</p>
-<div aria-label="Latest digital relationship guides"><p class="muted"><a href="/blog/partner-always-on-phone-phubbing/"><strong>My Partner Is Always on Their Phone: Phubbing and What to Do</strong></a> — Partner always on their phone? Understand phubbing, start a calmer conversation, and try a practical phone agreement with room for work, care and real life.</p><p class="muted"><a href="/blog/should-couples-share-location/"><strong>Should Couples Share Their Location? Privacy, Consent and Boundaries</strong></a> — Should couples share their location? Decide what works for you with clear consent, practical boundaries, alternatives to tracking and an agreement you can adapt.</p></div>
-
-      <hr />
-
-      <p class="muted" style="margin:0 0 10px"><a href="/blog/interfaith-relationships-before-marriage/"><strong>New: Interfaith Relationships Before Marriage</strong></a> — 12 questions on children, holidays, rituals, family expectations and religious freedom.</p>
-      <p class="muted" style="margin:0 0 10px"><a href="/blog/chronic-illness-and-relationships/"><strong>New: Chronic Illness and Relationships</strong></a> — practical guidance on supporting a partner, caregiver burnout, intimacy, roles and autonomy.</p>
-      <p class="muted" style="margin:0 0 10px"><a href="/blog/dating-someone-in-recovery/"><strong>New: Dating Someone in Recovery</strong></a> — trust, boundaries, supporting sobriety and safer decisions when plans change.</p>
-      <p class="muted" style="margin:0 0 10px"><a href="/blog/partner-lost-job-relationship/"><strong>New: My Partner Lost Their Job</strong></a> — how to deal with money, resentment, shared chores and unemployment stress while protecting your relationship.</p>
-      <p class="muted" style="margin:0 0 10px"><a href="/blog/talking-stage-meaning/"><strong>New: Talking Stage Meaning</strong></a> — how long this early dating phase can last, nine signs it's progressing, and how to ask for clarity.</p>
-      <p class="muted" style="margin:0 0 10px"><a href="/blog/dating-after-divorce/"><strong>New: Dating After Divorce</strong></a> — when to date again, first dates, dating at 40, parenting and beginning a new relationship.</p>
-<p class="muted" style="margin:0 0 10px"><a href="/blog/taking-a-break-in-a-relationship/"><strong>New: Taking a Break in a Relationship</strong></a> — seven clear rules for contact, exclusivity, timing, and deciding what comes after a pause.</p>
-      <h2 class="sectionTitle">All relationship guides</h2><p class="muted"><a href="/blog/dating-someone-with-kids/"><strong>New: Dating Someone With Kids</strong></a> — when to meet children, co-parenting boundaries, and respectful dating plans.</p>
-      <p class="muted" style="margin:0;">
-        Browse all articles by topic, keyword, category, or reading time.
-      </p>
-
+    <section class="blog-library">
+      <div class="section-intro"><span class="eyebrow">Editor’s picks</span><h2>Start with these conversations</h2><p>Featured guides on topics our readers often explore.</p></div>
+      <div id="featuredArea" class="grid"></div>
+      <div class="section-header-row"><div class="section-intro"><span class="eyebrow">Browse the journal</span><h2>Explore all relationship guides</h2><p>Use the search and filters above to narrow down the articles.</p></div><a class="btn secondary small" href="/tests/">Explore quizzes ↗</a></div>
       <div id="postsGrid" class="postsGrid" aria-live="polite"></div>
-      <div id="emptyState" class="callout" hidden style="margin-top:14px;">
-        No matching results. Try a different keyword or filter.
-      </div>
-
-      <div id="pagination" class="pagination"></div>
+      <div id="emptyState" class="callout" hidden>No matching articles. Try another keyword or category.</div>
+      <nav id="pagination" class="pagination" aria-label="Article pages"></nav>
     </section>
-
-    <section class="card">
-      <h2 class="sectionTitle">Useful next steps</h2>
-      <p class="muted" style="margin:0;">
-        Move from reading to action with the site’s live tools and tests.
-      </p>
-
-      <div class="topicGrid" style="margin-top:14px;">
-        <div class="card hubCard">
-          <h3>Attachment &amp; avoidant texting tools</h3>
-          <p>
-            Help visitors understand deeper patterns behind closeness, pursuit, distance, and mixed signals.
-          </p>
-          <div class="linkList">
-            <a href="/tests/attachment-style/">Take the Attachment Style Test</a>
-            <a href="/tests/avoidant-texting/">Take the Avoidant Texting Test</a>
-            <a href="/tools/text-decoder/">Use the Text Decoder</a>
-          </div>
-        </div>
-
-        <div class="card hubCard">
-          <h3>Communication, conflict &amp; boundaries tests</h3>
-          <p>
-            Great follow-up tools for readers exploring communication breakdowns, conflict patterns, and emotional pressure.
-          </p>
-          <div class="linkList">
-            <a href="/tests/conflict-style/">Take the Conflict Style Test</a>
-            <a href="/tests/toxic-relationship/">Take the Toxic Relationship Test</a>
-            <a href="/tests/emotional-manipulation/">Take the Emotional Manipulation Test</a>
-          </div>
-        </div>
-
-        <div class="card hubCard">
-          <h3>Emotional safety, availability &amp; healing tests</h3>
-          <p>
-            Useful for readers navigating emotional distance, narcissistic patterns, trauma bonds, or chronic relationship confusion.
-          </p>
-          <div class="linkList">
-            <a href="/tests/emotional-availability/">Take the Emotional Availability Test</a>
-            <a href="/tests/narcissistic-relationship/">Take the Narcissistic Relationship Test</a>
-            <a href="/tests/trauma-bond/">Take the Trauma Bond Test</a>
-            <a href="/tests/are-you-settling/">Take the Are You Settling? Test</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="card prose">
-      <h2 class="sectionTitle">Popular relationship questions answered on this page</h2>
-      <div class="faqList">
-        <a href="/blog/anxious-attachment-signs/">What are the signs of anxious attachment?</a>
-        <a href="/blog/avoidant-attachment-texting/">Why do avoidant people pull away over text?</a>
-        <a href="/blog/healthy-boundaries-script/">How do you set healthy boundaries without guilt?</a>
-        <a href="/blog/gaslighting-in-relationships/">What does gaslighting in a relationship look like?</a>
-        <a href="/blog/situationship-signs/">How to know if he wants a relationship or is wasting your time?</a>
-        <a href="/blog/breadcrumbing-in-dating/">What is the breadcrumbing texting cycle, and how do you respond?</a>
-        <a href="/blog/no-contact-after-breakup/">Does no contact after a breakup really work?</a>
-        <a href="/blog/emotional-safety-in-relationships/">Why is emotional safety so important in relationships?</a>
-        <a href="/blog/what-does-k-mean/">What does “K” mean in texting?</a>
-        <a href="/blog/dry-texting-meaning/">What does dry texting mean, and how should you respond?</a>
-        <a href="/blog/left-on-read-meaning/">What does it mean when someone leaves you on read?</a>
-      </div>
+    <section class="spotlight">
+      <span class="eyebrow">Go from reading to reflection</span>
+      <h2>Want to explore your own patterns?</h2>
+      <p>Try a free relationship quiz to turn what you've read into a practical next step.</p>
+      <a class="btn" href="/tests/">Find a relationship test ↗</a>
     </section>
   </main>
 
