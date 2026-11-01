@@ -3,6 +3,19 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "when-to-say-i-love-you",
+  title: "When to Say I Love You: How Soon Is Too Soon?",
+  excerpt: "When should you say I love you? Read 2026 survey findings, compare one-month and three-month timing, spot 7 signs you're ready and learn what to say if they don't say it back.",
+  date: "2026-11-01",
+  readingMinutes: 19,
+  tags: ["When to Say I Love You", "How Soon Is Too Soon to Say I Love You", "When to Say I Love You for the First Time", "Is One Month Too Soon to Say I Love You", "How to Say I Love You", "Didn't Say I Love You Back"],
+  category: "Dating & Relationships",
+  cover: "/assets/images/blog/when-to-say-i-love-you/three-words-at-the-window.svg",
+  featured: true
+},
+
+
+{
   slug: "how-to-break-up-with-someone-you-live-with",
   title: "How to Break Up With Someone You Live With: 12-Step Plan",
   excerpt: "Breaking up when you live together? A practical 12-step plan for shared leases, rent, moving out, belongings, children, pets, digital privacy and a printable 30-item checklist.",
