@@ -3,6 +3,19 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "how-to-kiss-for-the-first-time",
+  title: "How to Kiss for the First Time: 10 Easy Steps & Tips",
+  excerpt: "How to kiss for the first time: 10 easy steps, a visual guide, natural ways to ask, gentle lip techniques, mistakes to avoid and what to do afterward.",
+  date: "2026-11-01",
+  readingMinutes: 19,
+  tags: ["How to Kiss for the First Time", "How to Kiss", "First Kiss Tips", "First Kiss for Beginners", "How to Kiss Properly", "How to Ask to Kiss Someone"],
+  category: "Dating & Relationships",
+  cover: "/assets/images/blog/how-to-kiss-for-the-first-time/the-blue-umbrella-before-the-first-kiss.svg",
+  featured: true
+},
+
+
+{
   slug: "when-to-say-i-love-you",
   title: "When to Say I Love You: How Soon Is Too Soon?",
   excerpt: "When should you say I love you? Read 2026 survey findings, compare one-month and three-month timing, spot 7 signs you're ready and learn what to say if they don't say it back.",
