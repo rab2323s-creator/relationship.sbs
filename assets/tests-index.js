@@ -1,5 +1,14 @@
 /* tests-index.js — lightweight home index */
-window.TEST_INDEX = [
+  {
+    "id": "should_i_date_a_coworker",
+    "slug": "should-i-date-a-coworker",
+    "title": "Should I Date a Coworker? Free 16-Question Workplace Romance Quiz",
+    "blurb": "16 realistic workplace romance decisions, five percentage areas, five results and an independent supervisor/promotion power warning. Free, private, no sign-up.",
+    "time": "3–5 min",
+    "guide": "/blog/dating-a-coworker/",
+    "intent": "quiz"
+  },
+
   {
     "id": "partner_cheating_warning_signs_quiz",
     "slug": "is-my-partner-cheating-quiz",
