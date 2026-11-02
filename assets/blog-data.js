@@ -3,6 +3,19 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "should-you-get-a-prenup",
+  title: "Should I Get a Prenup? 12 Questions Before Marriage",
+  excerpt: "Should you get a prenup before marriage? Learn who needs one, what it can protect, 12 questions, red flags, legal limits, costs and scripts for a fair money conversation.",
+  date: "2026-11-02",
+  readingMinutes: 30,
+  tags: ["Should I Get a Prenup", "Prenuptial Agreement", "Prenup Before Marriage", "What Does a Prenup Protect", "Is a Prenup a Red Flag", "Marriage Money Questions"],
+  category: "Dating & Relationships",
+  cover: "/assets/images/blog/should-you-get-a-prenup/the-blue-ledger-before-the-wedding.svg",
+  featured: true
+},
+
+
+{
   slug: "living-apart-together",
   title: "Living Apart Together (LAT): Meaning, Pros & Cons, Rules",
   excerpt: "What is living apart together? Explore LAT relationships, married couples living separately, pros and cons, 12 two-home rules, costs and the latest research.",
