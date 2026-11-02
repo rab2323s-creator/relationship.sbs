@@ -1,0 +1,204 @@
+/* Relationship.sbs — The Heart & Story editorial identity
+   Layered over discovery.css. Scoped: home / blog / tests collection pages only.
+   Intentional visual direction: warm ivory, wine, blush, cinematic imagery and serif display. */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap');
+body.discovery-page {
+  --bg:#fcf8f6; --text:#35242b; --muted:#73676a; --muted2:#887b80;
+  --accent:#922f4d; --accent2:#b55469; --shadow:0 16px 52px rgba(103,47,57,.085);
+  background:#fcf8f6; color:#35242b;
+  font-family:'DM Sans',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+}
+.discovery-page h1,.discovery-page h2,.discovery-page .topic-link h3,
+.discovery-page .read-card h3,.discovery-page .test-feature h3,
+.discovery-page .postsGrid .tile h3,.discovery-page #featuredArea h2,
+.discovery-page .heroCard h2 {font-family:'Playfair Display',Georgia,'Times New Roman',serif; letter-spacing:-.026em;}
+.discovery-page .wrap{max-width:1260px;padding:27px 28px 42px;}
+.discovery-page .top{background:rgba(255,252,250,.96);border-bottom:1px solid #f1e5e8;box-shadow:0 4px 30px rgba(69,27,37,.025)}
+.discovery-page .top .wrap{padding-top:17px;padding-bottom:17px;}
+.discovery-page .brand{font-family:'Playfair Display',Georgia,serif;font-size:20px;color:#622b42;letter-spacing:-.04em;}
+.discovery-page .brand .logo{width:35px;height:35px;box-shadow:none}
+.discovery-page .nav a{font-weight:700;color:#775f67;border-radius:999px}
+.discovery-page .nav a:hover{background:#fae9ed;color:#8f2f4c}
+.discovery-page .footer{color:#7f6d74}
+.discovery-page .footer a{color:#795865}
+.discovery-page .eyebrow{color:#aa526b;font-weight:800;font-size:11px;letter-spacing:.19em}
+.discovery-page .hero{padding:22px 0 30px;gap:20px}
+.discovery-page .hero h1{font-size:clamp(2.45rem,5.25vw,5.1rem);line-height:1.065;letter-spacing:-.048em;color:#52293d;max-width:18ch}
+.discovery-page .hero p{color:#766971;font-size:16px;line-height:1.85}
+.discovery-page .btn{background:#93334f;border-color:#93334f;color:#fff;border-radius:999px;padding:13px 22px;font-size:13px;box-shadow:0 10px 24px rgba(147,51,79,.15);}
+.discovery-page .btn:hover{background:#72243a;border-color:#72243a;color:#fff}
+.discovery-page .btn.secondary{background:#fffaf9;color:#743c4d;border-color:#e7cdd4;box-shadow:none}
+.discovery-page .btn.secondary:hover{background:#fcebf0;color:#702c42;border-color:#dab4c1}
+.discovery-page .btn.small{padding:10px 16px;border-radius:999px}
+.discovery-page .pills{gap:8px}
+.discovery-page .pill{background:rgba(255,255,255,.66);color:#875a6b;border-color:#edcfd7;border-radius:999px;font-size:11px;font-weight:700}
+.discovery-page .section-intro{margin:38px 0 20px}
+.discovery-page .section-intro h2,.discovery-page .section-header-row h2{color:#572d41;font-size:clamp(29px,3.15vw,39px);font-weight:700;line-height:1.24;letter-spacing:-.038em;margin:8px 0}
+.discovery-page .section-intro p,.discovery-page .section-header-row p{color:#806f76}
+.discovery-page .card,.discovery-page .tile,.discovery-page .mini{background:#fffdfb;border-color:#f0e1e5}
+.discovery-page .card,.discovery-page .tile{border-radius:24px}
+.discovery-page .tile{padding:23px;border:1px solid #ecdde1}
+.discovery-page .tile:hover{border-color:#d9a9b9;box-shadow:0 15px 35px rgba(124,55,76,.075)}
+.discovery-page .tile h3{font-family:'Playfair Display',Georgia,serif;color:#502c3b;font-size:20px;line-height:1.37}
+.discovery-page .tile p{color:#81727a}
+.discovery-page .tile .badge,.discovery-page .badge{background:#faedf0;color:#a14963;border-color:#efd4dc}
+.discovery-page .grid{gap:20px}
+.discovery-page .control,.discovery-page input.control,.discovery-page select.control{border:1px solid #e6cad3;border-radius:15px;background:#fffdfa;color:#573641}
+.discovery-page .control:focus{border-color:#a23b59;box-shadow:0 0 0 3px rgba(161,67,94,.13)}
+.discovery-page .tag{background:#fffdfc;border:1px solid #e9cad4;color:#8a5263}
+.discovery-page .tag[aria-pressed=true],.discovery-page .tag:hover{background:#f9e8ee;border-color:#b85f7a;color:#772a45}
+.discovery-page .spotlight{background:#662f49;border-radius:34px;position:relative;overflow:hidden;padding:44px}
+.discovery-page .spotlight::after{content:'♡';font-family:Georgia,serif;font-size:270px;line-height:1;position:absolute;right:26px;top:-74px;color:rgba(255,255,255,.075);pointer-events:none}
+.discovery-page .spotlight h2{font-size:clamp(27px,3vw,40px);max-width:18ch;line-height:1.2}
+.discovery-page .spotlight p{color:#f2d9e1;max-width:55ch;font-size:15px;line-height:1.75}
+.discovery-page .spotlight .eyebrow{color:#f2bdca}
+.discovery-page .spotlight .btn{position:relative;z-index:1;background:#fff7f7;color:#712d44;border-color:#fff7f7;box-shadow:none}
+.discovery-page .spotlight .btn:hover{background:#f5dee5}
+.discovery-page :focus-visible{outline:3px solid #a63d5c;outline-offset:3px}
+.discovery-page .section-header-row{align-items:center}
+.discovery-page .section-header-row h2{margin:5px 0 9px}
+
+/* One unmistakable cinematic, photographic hero */
+.home-page .romance-home-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.93fr);gap:0;min-height:560px;margin:21px 0 0;background:linear-gradient(115deg,#fae8e9 0%,#fffbf9 100%);border:1px solid #f0dce0;border-radius:35px;overflow:hidden;box-shadow:0 24px 60px rgba(109,57,69,.095);position:relative}
+.home-page .romance-home-hero::before{content:'♡';font:330px/.8 Georgia,serif;color:rgba(178,93,119,.075);position:absolute;left:-60px;bottom:-65px;pointer-events:none}
+.home-page .hero-copy{padding:clamp(35px,5vw,73px) clamp(30px,5vw,67px);display:flex;flex-direction:column;align-items:flex-start;justify-content:center;position:relative;z-index:2}
+.home-page .hero-copy .hero-brow{display:inline-flex;align-items:center;gap:12px;color:#a34763;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:900}
+.home-page .hero-copy .hero-brow::before{content:'';width:23px;height:1px;background:#b46a83}
+.home-page .hero-copy h1{font:600 clamp(43px,5.15vw,74px)/1.055 'Playfair Display',Georgia,serif;letter-spacing:-.053em;color:#562b42;max-width:13ch;margin:23px 0}
+.home-page .hero-copy h1 em{font-style:italic;font-weight:500;color:#b44d70}
+.home-page .hero-copy p{font-size:16px;line-height:1.8;color:#785c68;max-width:48ch;margin:0}
+.home-page .hero-copy .row{margin:27px 0 0;gap:10px}
+.home-page .hero-copy .soft-trust{margin-top:25px;font-size:12px;font-weight:700;color:#98667b;display:flex;gap:12px;align-items:center}
+.home-page .soft-trust span{width:7px;height:7px;border-radius:50%;background:#bd7890}
+.home-page .hero-visual{position:relative;min-width:0;min-height:500px;overflow:hidden;isolation:isolate;background:#8a5360}
+.home-page .hero-visual img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:center center}
+.home-page .hero-visual::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(62,28,41,0) 40%,rgba(64,24,42,.47) 100%);pointer-events:none}
+.home-page .hero-visual .visual-caption{position:absolute;left:34px;right:34px;bottom:38px;z-index:2;color:#fff;font-family:'Playfair Display',Georgia,serif;font-size:clamp(25px,2.8vw,37px);line-height:1.2;letter-spacing:-.025em;text-shadow:0 2px 16px rgba(30,0,0,.3);max-width:17ch}
+.home-page .hero-photo-decoration{position:absolute;top:25px;right:30px;border:1px solid rgba(255,255,255,.7);color:#fff;padding:12px 17px;border-radius:99px;backdrop-filter:blur(9px);background:rgba(80,33,49,.26);z-index:1;font:italic 17px Georgia,serif}
+.home-page .trust-ribbon{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin:-17px 38px 34px;position:relative;z-index:3;background:#fffefa;border:1px solid #f1e3e5;border-radius:23px;box-shadow:0 15px 36px rgba(105,49,66,.07);overflow:hidden}
+.home-page .trust-ribbon div{display:flex;align-items:center;gap:11px;padding:20px 19px;border-right:1px solid #f1e3e5}
+.home-page .trust-ribbon div:last-child{border-right:0}
+.home-page .trust-ribbon strong{font-size:13px;color:#674253;white-space:normal}
+.home-page .trust-ribbon i{font-style:normal;color:#ae5b76;font-size:24px}
+.home-page .discovery-topic-grid{gap:18px;margin-top:17px}
+.home-page .topic-link{border-radius:25px;min-height:208px;padding:26px 28px;background:#f7e9eb;border-color:#edd4da;position:relative;overflow:hidden}
+.home-page .topic-link:nth-child(2){background:#ece3ee;border-color:#e4d3e6}
+.home-page .topic-link:nth-child(3){background:#f6e8e0;border-color:#e9d7ca}
+.home-page .topic-link::after{content:'♡';font:120px Georgia,serif;position:absolute;right:-4px;top:-23px;color:rgba(149,55,87,.08)}
+.home-page .topic-link:nth-child(2)::after{content:'✦';right:12px;top:-17px}
+.home-page .topic-link:nth-child(3)::after{content:'❧';right:9px;top:-9px}
+.home-page .topic-link h3{font-size:26px;letter-spacing:-.025em;color:#602e45}
+.home-page .topic-link span{color:#9c536c}
+.home-page .topic-link p{color:#795e69}
+.home-page .topic-link strong{color:#95455f}
+.home-page #tests{padding:15px 0 3px}
+.home-page #testsGrid{grid-template-columns:repeat(3,minmax(0,1fr));gap:19px}
+.home-page #testsGrid .tile{padding:0;overflow:hidden;border-top:0 !important}
+.home-page #testsGrid .tile::before{content:'';height:176px;display:block;background-size:cover;background-position:center;filter:saturate(.93)}
+.home-page #testsGrid .tile:nth-child(1)::before{background-image:url('/assets/og/anxious-attachment-signs.webp')}
+.home-page #testsGrid .tile:nth-child(2)::before{background-image:url('/assets/og/love-language.jpg')}
+.home-page #testsGrid .tile:nth-child(3)::before{background-image:url('/assets/og/emotional-exhaustion-relationship-repair-and-balance.webp')}
+.home-page #testsGrid .tile:nth-child(4)::before{background-image:url('/assets/og/narcissistic-relationship.webp')}
+.home-page #testsGrid .tile:nth-child(5)::before{background-image:url('/assets/og/are-you-settling.webp')}
+.home-page #testsGrid .tile:nth-child(6)::before{background-image:url('/assets/og/intimacy-changes-long-term-relationships.webp')}
+.home-page #testsGrid .tile .meta{margin:21px 22px 10px}
+.home-page #testsGrid .tile h3{margin:0 22px 10px;font-size:21px}
+.home-page #testsGrid .tile p{margin:0 22px 18px}
+.home-page #testsGrid .tile .row{margin:0 22px 22px}
+.home-page .home-reads{margin-top:38px}
+.home-page .read-card{border-color:#f0dfe4;border-radius:25px}
+.home-page .read-card img{aspect-ratio:1.56;transition:transform .35s ease}
+.home-page .read-card:hover img{transform:scale(1.02)}
+.home-page .read-card .read-body{padding:24px}
+.home-page .read-card .read-body h3{font-size:24px;color:#5e3346}
+.home-page .read-card .read-more{color:#a04362}
+
+/* Article index: cinematic visual masthead; separate article cards */
+.blog-page .hero{grid-template-columns:1fr !important}
+.blog-page .hero .heroCard{padding:clamp(28px,4vw,56px);padding-right: min(39%,480px);border-radius:34px;min-height:360px;position:relative;overflow:hidden;background:#f6e6eb}
+.blog-page .hero .heroCard::before{display:block;content:'';position:absolute;inset:0 0 0 auto;width:39%;background:url('/assets/og/intimacy-changes-long-term-relationships.webp') center/cover no-repeat;mask:none}
+.blog-page .hero .heroCard::after{content:'';position:absolute;right:32%;top:0;height:100%;width:15%;pointer-events:none;background:linear-gradient(90deg,#f6e6eb,transparent)}
+.blog-page .hero .heroCard>*{position:relative;z-index:2}
+.blog-page .hero h1{font-size:clamp(39px,4.1vw,59px);max-width:20ch;margin-top:16px;margin-bottom:13px}
+.blog-page .hero p{max-width:63ch}
+.blog-page .blogToolbar{margin-top:31px;grid-template-columns:minmax(0,1.35fr) minmax(150px,.75fr) minmax(130px,.65fr) auto}
+.blog-page .miniLink{background:#fff7f8;border-color:#edd2dc;color:#99556a}
+.blog-page #tagsRow{max-height:49px;gap:7px}
+.blog-page #featuredArea{gap:20px}
+.blog-page #featuredArea .featured-post{border-radius:25px;border:1px solid #f0e1e5}
+.blog-page #featuredArea .featured-post img{aspect-ratio:1.9}
+.blog-page #featuredArea .featured-post .prose{padding:25px}
+.blog-page #featuredArea .featured-post h2{font-size:27px;color:#5b3045;line-height:1.28}
+.blog-page .postsGrid{gap:20px}
+.blog-page .postsGrid .tile{border-color:#f0e1e5}
+.blog-page .postsGrid .tile .postImg{aspect-ratio:1.68}
+.blog-page .postsGrid .tile .post-body{padding:22px}
+.blog-page .postsGrid .post-meta{color:#a75570}
+.blog-page .postsGrid .tile h3{font-size:20px}
+.blog-page .postsGrid .read-more{color:#a04362}
+
+/* Tests index: visual editorial cards & image-backed hero */
+.tests-page .hero{grid-template-columns:1fr !important}
+.tests-page .hero .heroCard:first-child{position:relative;overflow:hidden;background:#fae9ee;min-height:380px;padding:clamp(30px,5vw,65px);padding-right:40%;border-radius:35px}
+.tests-page .hero .heroCard:first-child::before{display:block;position:absolute;content:'';inset:0 0 0 auto;width:41%;background:url('/assets/og/love-language-self-assessment-og.webp') center/cover no-repeat;mask:none}
+.tests-page .hero .heroCard:first-child::after{content:'';position:absolute;right:32%;top:0;width:17%;height:100%;background:linear-gradient(90deg,#fae9ee,transparent)}
+.tests-page .hero .heroCard:first-child>*{position:relative;z-index:2}
+.tests-page .hero .heroCard:first-child h1{max-width:15ch;font-size:clamp(41px,4.5vw,64px)}
+.tests-page .hero .heroCard:last-child{padding:20px 30px;background:#fff9f7;border-radius:20px;border-color:#efdce3}
+.tests-page .hero .heroCard:last-child h2{font-family:'Playfair Display',Georgia,serif;color:#622f47;font-size:24px}
+.tests-page .hero .heroCard:last-child p{color:#806c77;margin-bottom:0}
+.tests-page .test-featured-grid{gap:20px}
+.tests-page .test-feature{padding:0;border-radius:27px;overflow:hidden;border:1px solid #efdce3;background:#fffdfa}
+.tests-page .test-feature:nth-child(2),.tests-page .test-feature:nth-child(3){background:#fffdfa}
+.tests-page .test-feature::before{content:'';height:160px;display:block;background-position:center;background-size:cover}
+.tests-page .test-feature:nth-child(1)::before{background-image:url('/assets/og/anxious-attachment-signs.webp')}
+.tests-page .test-feature:nth-child(2)::before{background-image:url('/assets/og/emotional-safety-nervous-system-honesty.webp')}
+.tests-page .test-feature:nth-child(3)::before{background-image:url('/assets/og/emotional-exhaustion-relationship-repair-and-balance.webp')}
+.tests-page .test-feature .feature-mark{padding:24px 25px 0;color:#a24a65}
+.tests-page .test-feature h3{padding:0 25px;margin:12px 0;font-size:26px;color:#5b3045}
+.tests-page .test-feature p{padding:0 25px;color:#806f75}
+.tests-page .test-feature .btn{margin:0 25px 25px}
+.tests-page .test-search-row{background:#f8ebef;border:1px solid #efdde3}
+.tests-page .test-count{color:#9d536b}
+.tests-page #all-tests .tile{border-left:3px solid #e4b8c7}
+.tests-page #all-tests .tile:nth-child(3n+2){border-left-color:#cfaed2}
+.tests-page #all-tests .tile:nth-child(3n+3){border-left-color:#e5b69b}
+
+/* Tablets and small viewports */
+@media(max-width:1050px){
+  .home-page .romance-home-hero{min-height:500px}
+  .home-page .hero-copy{padding:40px}
+  .home-page .hero-copy h1{font-size:55px}
+  .home-page .trust-ribbon{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .home-page .trust-ribbon div:nth-child(2){border-right:0}
+  .home-page .trust-ribbon div:nth-child(-n+2){border-bottom:1px solid #f1e3e5}
+  .blog-page .blogToolbar{grid-template-columns:1fr 1fr}
+}
+@media(max-width:750px){
+  .discovery-page .wrap{padding:18px 16px 35px}
+  .discovery-page .top .wrap{padding:15px 16px}
+  .discovery-page .brand{font-size:17px}
+  .discovery-page .nav a{font-size:12px;padding:9px 6px}
+  .home-page .romance-home-hero{grid-template-columns:1fr;border-radius:27px;margin-top:12px}
+  .home-page .hero-copy{padding:34px 26px 30px}
+  .home-page .hero-copy h1{font-size:clamp(42px,10vw,62px);margin:18px 0;max-width:15ch}
+  .home-page .hero-copy p{font-size:14px}
+  .home-page .hero-visual{height:310px;min-height:310px}
+  .home-page .hero-visual .visual-caption{left:23px;bottom:25px;font-size:26px}
+  .home-page .trust-ribbon{margin:-10px 10px 29px;border-radius:18px}
+  .home-page .trust-ribbon div{padding:16px 12px;gap:7px}
+  .home-page .trust-ribbon strong{font-size:11px}
+  .home-page .trust-ribbon i{font-size:19px}
+  .home-page #testsGrid,.home-page .read-grid,.home-page .discovery-topic-grid,.tests-page .test-featured-grid{grid-template-columns:1fr}
+  .home-page #testsGrid .tile::before{height:185px}
+  .blog-page .hero .heroCard,.tests-page .hero .heroCard:first-child{padding:30px 24px 260px;min-height:0}
+  .blog-page .hero .heroCard::before,.tests-page .hero .heroCard:first-child::before{top:auto;bottom:0;left:0;right:0;width:100%;height:240px}
+  .blog-page .hero .heroCard::after,.tests-page .hero .heroCard:first-child::after{left:0;right:0;top:auto;bottom:200px;width:100%;height:70px;background:linear-gradient(180deg,#f6e6eb,transparent)}
+  .tests-page .hero .heroCard:first-child::after{background:linear-gradient(180deg,#fae9ee,transparent)}
+  .blog-page .hero h1,.tests-page .hero .heroCard:first-child h1{font-size:clamp(40px,9vw,53px)}
+  .blog-page .blogToolbar{grid-template-columns:1fr}
+  .discovery-page .section-intro h2,.discovery-page .section-header-row h2{font-size:29px}
+  .discovery-page .spotlight{padding:31px 24px}
+  .discovery-page .spotlight::after{font-size:155px;right:4px;top:-40px}
+}
+@media(prefers-reduced-motion:reduce){.home-page .read-card img{transition:none}}
