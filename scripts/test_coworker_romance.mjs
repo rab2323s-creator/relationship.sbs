@@ -104,3 +104,31 @@ test("Back navigates without losing earlier answer and restart clears all",()=>{
  const retry=walk(root).find(x=>x.className==="sc-restart");assert.ok(retry);retry.handlers.click();
  assert.ok(walk(root).some(x=>x.className.includes("sc-counter")&&x.textContent==="Question 1 of 16"));
 });
+
+test("published HTML has exactly the reference quiz CSS and a visible initial loading card",()=>{
+ const quiz=readFileSync(new URL("../tests/should-i-date-a-coworker/index.html",import.meta.url),"utf8");
+ const reference=readFileSync(new URL("../tests/ready-to-move-in-together/index.html",import.meta.url),"utf8");
+ const getCss=s=>s.match(/<style>([\\s\\S]*?)<\\/style>/)[1];
+ assert.equal(getCss(quiz),getCss(reference),"Quiz CSS must match the referenced test exactly");
+ assert.ok(quiz.includes('class="sc-quiz-card" role="status"'));
+ assert.equal((quiz.match(/<h1>/g)||[]).length,1);
+ assert.ok(quiz.indexOf('id="coworkerQuiz"')<quiz.indexOf('class="sc-editorial"'));
+ assert.ok(quiz.includes('data-coworker-quiz="model"'));
+ assert.ok(quiz.includes('data-coworker-quiz="app"'));
+});
+test("browser-like execution of both actual inline scripts renders Q1 and instant results at answer 16",()=>{
+ const page=readFileSync(new URL("../tests/should-i-date-a-coworker/index.html",import.meta.url),"utf8");
+ const blocks=[...page.matchAll(/<script data-coworker-quiz="(?:model|app)">([\\s\\S]*?)<\\/script>/g)].map(x=>x[1]);
+ assert.equal(blocks.length,2);
+ const root=new Element("div");
+ const document={createElement:(tag)=>new Element(tag),getElementById:(id)=>id==="coworkerQuiz"?root:null};
+ const sandbox={document,matchMedia:()=>({matches:true})};sandbox.window=sandbox;
+ blocks.forEach((code,i)=>new vm.Script(code,{filename:"quiz-inline-"+i}).runInNewContext(sandbox));
+ assert.ok(walk(root).some(x=>x.className.includes("sc-counter")&&x.textContent==="Question 1 of 16"));
+ for(let i=0;i<16;i++)answer(root,i===4?2:0);
+ const nodes=walk(root);
+ assert.ok(nodes.some(x=>x.textContent==="Power Imbalance Warning"));
+ assert.ok(nodes.some(x=>x.textContent.includes("Power imbalance warning — independent of your score")));
+ assert.equal(nodes.filter(x=>x.attrs.role==="meter").length,5);
+ assert.ok(nodes.some(x=>x.className.includes("sc-score-number")&&Number(x.textContent)>80));
+});
