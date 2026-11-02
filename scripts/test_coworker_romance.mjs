@@ -108,7 +108,7 @@ test("Back navigates without losing earlier answer and restart clears all",()=>{
 test("published HTML has exactly the reference quiz CSS and a visible initial loading card",()=>{
  const quiz=readFileSync(new URL("../tests/should-i-date-a-coworker/index.html",import.meta.url),"utf8");
  const reference=readFileSync(new URL("../tests/ready-to-move-in-together/index.html",import.meta.url),"utf8");
- const getCss=s=>s.match(/<style>([\\s\\S]*?)<\\/style>/)[1];
+ const getCss=s=>s.match(/<style>([\s\S]*?)<\/style>/)[1];
  assert.equal(getCss(quiz),getCss(reference),"Quiz CSS must match the referenced test exactly");
  assert.ok(quiz.includes('class="sc-quiz-card" role="status"'));
  assert.equal((quiz.match(/<h1>/g)||[]).length,1);
@@ -118,7 +118,7 @@ test("published HTML has exactly the reference quiz CSS and a visible initial lo
 });
 test("browser-like execution of both actual inline scripts renders Q1 and instant results at answer 16",()=>{
  const page=readFileSync(new URL("../tests/should-i-date-a-coworker/index.html",import.meta.url),"utf8");
- const blocks=[...page.matchAll(/<script data-coworker-quiz="(?:model|app)">([\\s\\S]*?)<\\/script>/g)].map(x=>x[1]);
+ const blocks=[...page.matchAll(/<script data-coworker-quiz="(?:model|app)">([\s\S]*?)<\/script>/g)].map(x=>x[1]);
  assert.equal(blocks.length,2);
  const root=new Element("div");
  const document={createElement:(tag)=>new Element(tag),getElementById:(id)=>id==="coworkerQuiz"?root:null};
