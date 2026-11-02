@@ -106,14 +106,14 @@
     featured.forEach((p) => {
       const a = document.createElement("a");
       a.href = `/blog/${p.slug}/`;
-      a.className = "card";
+      a.className = "card featured-post";
       a.style.textDecoration = "none";
-      a.style.display = "grid";
-      a.style.gridTemplateColumns = "1fr 1fr";
+      a.style.display = "flex";
+      a.style.flexDirection = "column";
       a.style.gap = "14px";
       a.style.alignItems = "stretch";
       a.style.overflow = "hidden";
-      a.style.borderRadius = "24px";
+      a.style.borderRadius = "22px";
 
       const img = document.createElement("img");
       img.className = "postImg";
@@ -121,7 +121,7 @@
       img.alt = p.title || "Blog post cover";
       img.loading = "lazy";
       img.style.margin = "0";
-      img.style.borderRadius = "18px";
+      img.style.borderRadius = "0";
 
       const content = document.createElement("div");
       content.className = "prose";
@@ -208,11 +208,11 @@
           <img class="postImg" src="${coverSrc}" alt="${escapeHtml(p.title)}" loading="lazy" />
         </a>
 
-        <div class="meta small" style="margin-bottom:10px;">
+        <div class="post-body"><div class="post-meta">
           <span>${p.updatedDate ? "Updated " + fmtDate(p.updatedDate) : fmtDate(p.date)}</span>
-          <span>•</span>
+          <span> · </span>
           <span>${p.readingMinutes || 5} min</span>
-          <span>•</span>
+          <span> · </span>
           <span>${escapeHtml(p.category || "General")}</span>
         </div>
 
@@ -222,10 +222,7 @@
 
         <p class="muted" style="margin:0 0 12px;">${escapeHtml(p.excerpt || "")}</p>
 
-        <div class="row" style="gap:8px; flex-wrap:wrap;">
-          ${(p.tags || []).slice(0, 3).map(tag =>
-            `<button type="button" class="badge" data-tag="${escapeHtml(tag)}">${escapeHtml(tag)}</button>`
-          ).join("")}
+        <span class="read-more">Read article ↗</span>
         </div>
       `;
 
