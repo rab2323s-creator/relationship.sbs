@@ -35,73 +35,128 @@
   <script defer src="/assets/blog-data.js?v=20261030-second-date"></script>
   <script defer src="/assets/blog-index.js"></script>
 
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"CollectionPage",
-    "name":"Relationship Advice & Psychology Guides",
-    "url":"https://relationship.sbs/blog/",
-    "description":"Relationship advice and psychology guides about attachment styles, texting behavior, emotional safety, healthy boundaries, breakups, and dating red flags.",
-    "inLanguage":"en",
-    "isPartOf":{
-      "@type":"WebSite",
-      "name":"relationship.sbs",
-      "url":"https://relationship.sbs/"
-    },
-    "publisher":{
-      "@type":"Organization",
-      "name":"relationship.sbs",
-      "url":"https://relationship.sbs/"
-    },
-    "about":[
-      {"@type":"Thing","name":"Relationship Advice"},
-      {"@type":"Thing","name":"Attachment Styles"},
-      {"@type":"Thing","name":"Texting Psychology"},
-      {"@type":"Thing","name":"Healthy Boundaries"},
-      {"@type":"Thing","name":"Emotional Safety"},
-      {"@type":"Thing","name":"Dating Red Flags"},
-      {"@type":"Thing","name":"Breakup Recovery"}
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
+  <script type="application/ld+json" data-landing-schema="v2">
+{
   "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "Relationship Advice: Featured Guides",
-  "itemListElement": [
+  "@graph": [
     {
-      "@type": "ListItem",
-      "position": 1,
-      "url": "https://relationship.sbs/blog/avoidant-attachment-texting/",
-      "name": "Avoidant Attachment and Texting"
+      "@type": "CollectionPage",
+      "@id": "https://relationship.sbs/blog/#webpage",
+      "url": "https://relationship.sbs/blog/",
+      "name": "Relationship Advice & Psychology Guides",
+      "description": "Practical relationship advice and psychology guides on attachment, dating, boundaries, communication, emotional safety and breakups.",
+      "inLanguage": "en",
+      "isAccessibleForFree": true,
+      "isPartOf": {
+        "@id": "https://relationship.sbs/#website"
+      },
+      "publisher": {
+        "@id": "https://relationship.sbs/#org"
+      },
+      "breadcrumb": {
+        "@id": "https://relationship.sbs/blog/#breadcrumbs"
+      },
+      "mainEntity": {
+        "@id": "https://relationship.sbs/blog/#featured-guides"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Relationship advice"
+        },
+        {
+          "@type": "Thing",
+          "name": "Avoidant attachment and texting"
+        },
+        {
+          "@type": "Thing",
+          "name": "Healthy boundaries"
+        },
+        {
+          "@type": "Thing",
+          "name": "AI and relationship trust"
+        },
+        {
+          "@type": "Thing",
+          "name": "Emotional needs"
+        },
+        {
+          "@type": "Thing",
+          "name": "Dating"
+        }
+      ],
+      "keywords": "relationship advice, avoidant texting patterns, avoidant attachment texting, boundary scripts, healthy boundaries, AI cheating in relationships"
     },
     {
-      "@type": "ListItem",
-      "position": 2,
-      "url": "https://relationship.sbs/blog/healthy-boundaries-script/",
-      "name": "Healthy Boundaries: What to Say"
+      "@type": "BreadcrumbList",
+      "@id": "https://relationship.sbs/blog/#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://relationship.sbs/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Relationship Advice & Psychology Guides",
+          "item": "https://relationship.sbs/blog/"
+        }
+      ]
     },
     {
-      "@type": "ListItem",
-      "position": 3,
-      "url": "https://relationship.sbs/blog/ai-cheating-in-relationships/",
-      "name": "AI Cheating in Relationships"
-    },
-    {
-      "@type": "ListItem",
-      "position": 4,
-      "url": "https://relationship.sbs/blog/communication-needs/",
-      "name": "How to Communicate Emotional Needs"
+      "@type": "ItemList",
+      "@id": "https://relationship.sbs/blog/#featured-guides",
+      "name": "Featured relationship advice and psychology guides",
+      "numberOfItems": 4,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "WebPage",
+            "@id": "https://relationship.sbs/blog/avoidant-attachment-texting/",
+            "name": "Avoidant attachment and texting",
+            "url": "https://relationship.sbs/blog/avoidant-attachment-texting/"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "WebPage",
+            "@id": "https://relationship.sbs/blog/healthy-boundaries-script/",
+            "name": "Healthy boundaries: what to say",
+            "url": "https://relationship.sbs/blog/healthy-boundaries-script/"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "WebPage",
+            "@id": "https://relationship.sbs/blog/ai-cheating-in-relationships/",
+            "name": "AI cheating in relationships",
+            "url": "https://relationship.sbs/blog/ai-cheating-in-relationships/"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "WebPage",
+            "@id": "https://relationship.sbs/blog/communication-needs/",
+            "name": "How to communicate emotional needs",
+            "url": "https://relationship.sbs/blog/communication-needs/"
+          }
+        }
+      ]
     }
   ]
 }
   </script>
-
-  
-
-  <style>
+<style>
     /* Small, page-specific layout helpers (kept compatible with existing design system) */
     .blogToolbar{
       display:grid;
