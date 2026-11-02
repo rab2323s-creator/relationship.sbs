@@ -34,15 +34,210 @@
   <link rel="preload" as="image" href="/assets/og/intimacy-changes-long-term-relationships.webp" />
   <meta name="theme-color" content="#fcf8f6" />
 
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"WebSite",
-    "name":"relationship.sbs",
-    "url":"https://relationship.sbs/",
-    "inLanguage":"en",
-    "description":"Free relationship tests, quizzes and practical psychology guides about attachment styles, communication, boundaries, dating and emotional well-being."
-  }
+  <script type="application/ld+json" data-landing-schema="v2">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://relationship.sbs/#website",
+      "url": "https://relationship.sbs/",
+      "name": "relationship.sbs",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://relationship.sbs/#org"
+      },
+      "description": "Free relationship tests, quizzes and psychology guides on attachment, communication, dating and trust."
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://relationship.sbs/#org",
+      "url": "https://relationship.sbs/",
+      "name": "relationship.sbs",
+      "logo": {
+        "@id": "https://relationship.sbs/#logo"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "editorial",
+          "email": "info@relationship.sbs",
+          "availableLanguage": [
+            "en"
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://relationship.sbs/#logo",
+      "url": "https://relationship.sbs/assets/logo.svg",
+      "contentUrl": "https://relationship.sbs/assets/logo.svg",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://relationship.sbs/#webpage",
+      "url": "https://relationship.sbs/",
+      "name": "Free Relationship Tests & Psychology Guides",
+      "description": "Free relationship quizzes and practical psychology guides about attachment, trust, emotional availability, communication and dating.",
+      "inLanguage": "en",
+      "isAccessibleForFree": true,
+      "isPartOf": {
+        "@id": "https://relationship.sbs/#website"
+      },
+      "publisher": {
+        "@id": "https://relationship.sbs/#org"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://relationship.sbs/assets/og/intimacy-changes-long-term-relationships.webp"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Relationship tests"
+        },
+        {
+          "@type": "Thing",
+          "name": "Relationship advice"
+        },
+        {
+          "@type": "Thing",
+          "name": "Attachment styles"
+        },
+        {
+          "@type": "Thing",
+          "name": "Emotional availability"
+        },
+        {
+          "@type": "Thing",
+          "name": "Communication in relationships"
+        },
+        {
+          "@type": "Thing",
+          "name": "Healthy boundaries"
+        }
+      ],
+      "keywords": "free relationship tests, relationship quizzes, relationship psychology guides, attachment style test, relationship anxiety test, emotional availability test",
+      "mainEntity": [
+        {
+          "@id": "https://relationship.sbs/#featured-tests"
+        },
+        {
+          "@id": "https://relationship.sbs/#featured-guides"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://relationship.sbs/#featured-tests",
+      "name": "Featured relationship tests",
+      "numberOfItems": 6,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "WebPage",
+            "@id": "https://relationship.sbs/tests/attachment-style/",
+            "name": "Attachment Style Test: Anxious, Avoidant, Secure or Fearful?",
+            "url": "https://relationship.sbs/tests/attachment-style/"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "WebPage",
+            "@id": "https://relationship.sbs/tests/love-language/",
+            "name": "Free Love Language Test: What’s My Love Language?",
+            "url": "https://relationship.sbs/tests/love-language/"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "WebPage",
+            "@id": "https://relationship.sbs/tests/conflict-style/",
+            "name": "Conflict Style Test: How Do You Handle Arguments?",
+            "url": "https://relationship.sbs/tests/conflict-style/"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "WebPage",
+            "@id": "https://relationship.sbs/tests/toxic-relationship/",
+            "name": "Toxic Relationship Test: Am I in a Toxic Relationship?",
+            "url": "https://relationship.sbs/tests/toxic-relationship/"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "WebPage",
+            "@id": "https://relationship.sbs/tests/are-you-settling/",
+            "name": "Are You Settling in Your Relationship? 15-Question Test",
+            "url": "https://relationship.sbs/tests/are-you-settling/"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "item": {
+            "@type": "WebPage",
+            "@id": "https://relationship.sbs/tests/fear-of-intimacy/",
+            "name": "Fear of Intimacy Test: Are You Afraid of Emotional Closeness?",
+            "url": "https://relationship.sbs/tests/fear-of-intimacy/"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://relationship.sbs/#featured-guides",
+      "name": "Featured psychology guides",
+      "numberOfItems": 3,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "WebPage",
+            "@id": "https://relationship.sbs/blog/anxious-attachment-signs/",
+            "name": "Anxious attachment signs and what they mean",
+            "url": "https://relationship.sbs/blog/anxious-attachment-signs/"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "WebPage",
+            "@id": "https://relationship.sbs/blog/avoidant-attachment-texting/",
+            "name": "Why avoidant partners pull away over text",
+            "url": "https://relationship.sbs/blog/avoidant-attachment-texting/"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "WebPage",
+            "@id": "https://relationship.sbs/blog/emotional-safety-in-relationships/",
+            "name": "What emotional safety really looks like",
+            "url": "https://relationship.sbs/blog/emotional-safety-in-relationships/"
+          }
+        }
+      ]
+    }
+  ]
+}
   </script>
 </head>
 <body class="discovery-page home-page">
@@ -209,30 +404,7 @@
         <div class="muted">Yes—each result creates a clean share link.</div>
       </div>
 
-      <script type="application/ld+json">
-      {
-        "@context":"https://schema.org",
-        "@type":"FAQPage",
-        "mainEntity":[
-          {
-            "@type":"Question",
-            "name":"Is this a diagnosis?",
-            "acceptedAnswer":{"@type":"Answer","text":"No. This is educational self-reflection content, not medical advice."}
-          },
-          {
-            "@type":"Question",
-            "name":"Do I need an account?",
-            "acceptedAnswer":{"@type":"Answer","text":"No. Everything runs in your browser."}
-          },
-          {
-            "@type":"Question",
-            "name":"Can I share my result?",
-            "acceptedAnswer":{"@type":"Answer","text":"Yes—each result creates a clean share link."}
-          }
-        ]
-      }
-      </script>
-    </section>
+      </section>
 
     <section class="card prose" style="margin-top:18px;">
       <h2>Popular guides</h2>
