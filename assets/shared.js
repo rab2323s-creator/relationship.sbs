@@ -123,6 +123,8 @@
   function ensureEntitySchema(){
     const head = document.head;
     if (!head || document.querySelector('script[data-site-entity-schema="1"]')) return;
+    // Hub pages have complete static JSON-LD: prevent duplicate WebPage and Organization nodes.
+    if (document.querySelector('script[type="application/ld+json"][data-landing-schema="v2"]')) return;
 
     const origin = window.location.origin;
     const path = window.location.pathname.replace(/\/{2,}/g, "/");
