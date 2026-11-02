@@ -3,6 +3,19 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "dating-a-coworker",
+  title: "Dating a Coworker: Is It a Bad Idea? 12 Rules & Risks",
+  excerpt: "Thinking of dating a coworker? Learn 12 practical rules, workplace romance policies, when to tell HR, how to ask without pressure and what happens after a breakup.",
+  date: "2026-11-02",
+  readingMinutes: 25,
+  tags: ["Dating a Coworker", "Dating Someone You Work With", "Workplace Romance", "Dating Your Boss", "Workplace Dating Policy", "Asking a Coworker Out"],
+  category: "Dating & Relationships",
+  cover: "/assets/images/blog/dating-a-coworker/two-coffee-cups-after-five.svg",
+  featured: true
+},
+
+
+{
   slug: "what-is-an-open-relationship",
   title: "What Is an Open Relationship? Meaning, Rules & Boundaries",
   excerpt: "What is an open relationship? Compare open relationships, polyamory and monogamy, and learn consent, 12 rules, cheating boundaries, STI safety, jealousy and what to do when a partner says no.",
