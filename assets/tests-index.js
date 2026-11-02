@@ -1,4 +1,15 @@
 /* tests-index.js — lightweight home index */
+window.TEST_INDEX = [
+  {
+    "id": "should_we_get_a_dog_together",
+    "slug": "should-we-get-a-dog-together",
+    "title": "Should We Get a Dog Together? 18-Question Couples Readiness Quiz",
+    "blurb": "18 realistic questions on daily time, duties, vet bills, housing, dog welfare and breakup care. Six percentage bars, instant result and independent welfare alerts.",
+    "time": "4–6 min",
+    "guide": "/blog/moving-in-together-checklist/",
+    "intent": "quiz"
+  },
+
   {
     "id": "should_i_date_a_coworker",
     "slug": "should-i-date-a-coworker",
