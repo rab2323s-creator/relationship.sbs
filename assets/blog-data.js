@@ -3,6 +3,19 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "living-apart-together",
+  title: "Living Apart Together (LAT): Meaning, Pros & Cons, Rules",
+  excerpt: "What is living apart together? Explore LAT relationships, married couples living separately, pros and cons, 12 two-home rules, costs and the latest research.",
+  date: "2026-11-02",
+  readingMinutes: 28,
+  tags: ["Living Apart Together", "LAT Relationship", "Married but Living Separately", "Living Apart Together Pros and Cons", "Couples Living Apart by Choice", "Living Apart Together Rules"],
+  category: "Dating & Relationships",
+  cover: "/assets/images/blog/living-apart-together/two-windows-one-evening.svg",
+  featured: true
+},
+
+
+{
   slug: "dating-a-coworker",
   title: "Dating a Coworker: Is It a Bad Idea? 12 Rules & Risks",
   excerpt: "Thinking of dating a coworker? Learn 12 practical rules, workplace romance policies, when to tell HR, how to ask without pressure and what happens after a breakup.",
