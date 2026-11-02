@@ -60,6 +60,9 @@ jobs:
       - name: Test marriage readiness scoring and critical overrides
         run: node --test scripts/test_marriage_readiness.mjs
 
+      - name: Test coworker romance quiz, inline results and power-imbalance safeguards
+        run: node --test scripts/test_coworker_romance.mjs
+
       - name: Test move-in readiness scoring and profiles
         run: node --test scripts/test_move_in_readiness.mjs
 
