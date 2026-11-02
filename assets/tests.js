@@ -3,6 +3,18 @@
 */
 window.TESTS = [
   {
+    "id":"should_we_get_a_dog_together",
+    "slug":"should-we-get-a-dog-together",
+    "title":"Should We Get a Dog Together? 18-Question Couples Readiness Quiz",
+    "blurb":"18 realistic dog adoption and shared care scenarios with six readiness percentages and a personalized result.",
+    "time":"4–6 min",
+    "intent":"quiz",
+    "keywords":["should we get a dog together","couples dog quiz","are we ready for a dog quiz","getting a puppy with your partner"],
+    "scales":["time","sharing","budget","housing","welfare","future"],
+    "questions":[]
+  },
+
+  {
     "id": "attachment",
     "slug": "attachment-style",
     "title": "Attachment Style Test: Anxious, Avoidant, Secure or Fearful?",
