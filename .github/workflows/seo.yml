@@ -60,6 +60,9 @@ jobs:
       - name: Test marriage readiness scoring and critical overrides
         run: node --test scripts/test_marriage_readiness.mjs
 
+      - name: Test couples dog quiz inline results, six percentages and welfare safeguards
+        run: node --test scripts/test_dog_together_readiness.mjs
+
       - name: Test coworker romance quiz, inline results and power-imbalance safeguards
         run: node --test scripts/test_coworker_romance.mjs
 
