@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "meaningful-romantic-gifts",
+  title: "35 Meaningful Romantic Gift Ideas for Your Partner (Any Budget)",
+  excerpt: "Explore 35 original romantic gift ideas with approximate budgets, practical steps, thoughtful personalization tips and a free Love Gift Finder.",
+  date: "2026-11-04",
+  readingMinutes: 27,
+  tags: ["Meaningful Romantic Gifts", "Romantic Gift Ideas", "Gifts for Boyfriend", "Gifts for Girlfriend", "Thoughtful Personalized Gifts", "DIY Romantic Gifts", "Long-Distance Gifts"],
+  category: "Dating & Relationships",
+  cover: "/assets/images/blog/meaningful-romantic-gifts/the-ordinary-tuesday-museum.svg",
+  featured: true
+},
+
+{
   slug: "should-you-get-a-prenup",
   title: "Should I Get a Prenup? 12 Questions Before Marriage",
   excerpt: "Should you get a prenup before marriage? Learn who needs one, what it can protect, 12 questions, red flags, legal limits, costs and scripts for a fair money conversation.",
