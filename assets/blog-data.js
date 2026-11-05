@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "anniversary-gifts-by-year",
+  title: "Anniversary Gifts by Year: Traditional, Modern & Unique Ideas (1–60)",
+  excerpt: "Find the traditional and modern anniversary gift for every year from 1 to 60, with 180 thoughtful buy, DIY and experience options, estimated budgets and a free interactive gift finder.",
+  date: "2026-11-05",
+  readingMinutes: 35,
+  tags: ["Anniversary Gifts by Year", "Wedding Anniversary Gifts", "Traditional Anniversary Gifts", "Modern Anniversary Gifts", "1st Anniversary Gifts", "5 Year Anniversary", "25th Wedding Anniversary", "Golden Anniversary", "DIY Anniversary Gifts"],
+  category: "Dating & Relationships",
+  cover: "/assets/images/blog/anniversary-gifts-by-year/anniversary-gifts-by-year-romantic-milestones.svg",
+  featured: true
+},
+
+{
   slug: "meaningful-romantic-gifts",
   title: "35 Meaningful Romantic Gift Ideas for Your Partner (Any Budget)",
   excerpt: "Explore 35 original romantic gift ideas with approximate budgets, practical steps, thoughtful personalization tips and a free Love Gift Finder.",
