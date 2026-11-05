@@ -10,7 +10,7 @@ window.BLOG_POSTS = [
   readingMinutes: 35,
   tags: ["Anniversary Gifts by Year", "Wedding Anniversary Gifts", "Traditional Anniversary Gifts", "Modern Anniversary Gifts", "1st Anniversary Gifts", "5 Year Anniversary", "25th Wedding Anniversary", "Golden Anniversary", "DIY Anniversary Gifts"],
   category: "Dating & Relationships",
-  cover: "/assets/images/blog/anniversary-gifts-by-year/anniversary-gifts-by-year-romantic-milestones.svg",
+  cover: "/assets/images/blog/anniversary-gifts-by-year/anniversary-gifts-by-year-romantic-couple.webp",
   featured: true
 },
 
