@@ -10,7 +10,7 @@ window.BLOG_POSTS = [
   readingMinutes: 27,
   tags: ["Meaningful Romantic Gifts", "Romantic Gift Ideas", "Gifts for Boyfriend", "Gifts for Girlfriend", "Thoughtful Personalized Gifts", "DIY Romantic Gifts", "Long-Distance Gifts"],
   category: "Dating & Relationships",
-  cover: "/assets/images/blog/meaningful-romantic-gifts/the-ordinary-tuesday-museum.svg",
+  cover: "/assets/images/blog/meaningful-romantic-gifts/meaningful-romantic-gifts-memory-box.webp",
   featured: true
 },
 
