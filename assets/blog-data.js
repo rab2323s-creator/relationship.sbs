@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "soft-launch-relationship",
+  title: "Soft Launch vs. Hard Launch Relationship: Meaning, Examples, Captions & When to Post",
+  excerpt: "What does soft launching a relationship mean? Compare soft and hard launch posts, 12 Instagram photo ideas, 40 original captions, when to post, and how to respect privacy and consent.",
+  date: "2026-11-07",
+  readingMinutes: 27,
+  tags: ["Soft Launch Relationship", "Hard Launch Relationship", "Soft Launch vs Hard Launch", "Soft Launch Meaning in Dating", "Instagram Soft Launch", "Soft Launch Captions", "When to Post Your Relationship", "Relationship Privacy"],
+  category: "Dating & Relationships",
+  cover: "/assets/images/blog/soft-launch-relationship/two-ways-to-share-a-relationship.svg",
+  featured: true
+},
+
+{
   slug: "what-to-talk-about-on-a-first-date",
   title: "What to Talk About on a First Date: 50 Natural Conversation Starters",
   excerpt: "Not sure what to talk about on a first date? Explore 50 natural conversation starters, easy follow-ups, real dialogue and low-pressure ways to avoid awkward silences.",
