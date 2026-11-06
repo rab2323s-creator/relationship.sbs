@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "how-to-meet-people-without-dating-apps",
+  title: "How to Meet People Without Dating Apps: 15 Real-Life Ways to Find Love",
+  excerpt: "How to meet singles in real life without dating apps: 15 practical places, natural conversation openers, respectful ways to ask someone out, and a realistic 30-day offline dating plan.",
+  date: "2026-11-07",
+  readingMinutes: 28,
+  tags: ["How to Meet People Without Dating Apps", "How to Meet Singles in Real Life", "Offline Dating", "Where to Meet Singles", "How to Meet Someone Organically", "Find a Partner Without Dating Apps", "Dating Without Apps"],
+  category: "Dating & Relationships",
+  cover: "/assets/images/blog/how-to-meet-people-without-dating-apps/meeting-people-offline.svg",
+  featured: true
+},
+
+{
   slug: "soft-launch-relationship",
   title: "Soft Launch vs. Hard Launch Relationship: Meaning, Examples, Captions & When to Post",
   excerpt: "What does soft launching a relationship mean? Compare soft and hard launch posts, 12 Instagram photo ideas, 40 original captions, when to post, and how to respect privacy and consent.",
