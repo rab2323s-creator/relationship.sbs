@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "what-to-talk-about-on-a-first-date",
+  title: "What to Talk About on a First Date: 50 Natural Conversation Starters",
+  excerpt: "Not sure what to talk about on a first date? Explore 50 natural conversation starters, easy follow-ups, real dialogue and low-pressure ways to avoid awkward silences.",
+  date: "2026-11-06",
+  readingMinutes: 22,
+  tags: ["What to Talk About on a First Date","First Date Conversation Starters","First Date Questions","Fun First Date Questions","Avoid Awkward Silence","Dating Communication"],
+  category: "Dating & Relationships",
+  cover: "/assets/images/blog/what-to-talk-about-on-a-first-date/first-date-conversation.svg",
+  featured: true
+},
+
+{
   slug: "anniversary-gifts-by-year",
   title: "Anniversary Gifts by Year: Traditional, Modern & Unique Ideas (1–60)",
   excerpt: "Find the traditional and modern anniversary gift for every year from 1 to 60, with 180 thoughtful buy, DIY and experience options, estimated budgets and a free interactive gift finder.",
