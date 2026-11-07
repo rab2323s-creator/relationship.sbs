@@ -1,6 +1,16 @@
 /* tests-index.js — lightweight home index */
 window.TEST_INDEX = [
   {
+    "id": "should_i_ask_them_out",
+    "slug": "should-i-ask-them-out",
+    "title": "Should I Ask Them Out? Free 18-Question Dating Quiz",
+    "blurb": "18 real-life scenarios on dating intentions, shared conversation, context, timing, consent and handling a no, with six scores and five personalized results. Free and private.",
+    "time": "4–6 min",
+    "guide": "/blog/how-to-flirt-in-person/",
+    "intent": "quiz"
+  },
+
+  {
     "id": "should_we_get_a_dog_together",
     "slug": "should-we-get-a-dog-together",
     "title": "Should We Get a Dog Together? 18-Question Couples Readiness Quiz",
