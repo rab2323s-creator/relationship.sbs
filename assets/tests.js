@@ -3,6 +3,31 @@
 */
 window.TESTS = [
   {
+    "id": "should_i_ask_them_out",
+    "slug": "should-i-ask-them-out",
+    "title": "Should I Ask Them Out? Free 18-Question Dating Quiz",
+    "blurb": "18 real-life scenarios on dating intentions, shared conversation, context, timing, consent and handling a no, with six scores and five personalized results. Free and private.",
+    "time": "4–6 min",
+    "intent": "quiz",
+    "keywords": [
+      "should i ask them out quiz",
+      "should i ask him out quiz",
+      "should i ask her out quiz",
+      "should i make the first move",
+      "should i go on a date with him"
+    ],
+    "scales": [
+      "intent",
+      "reciprocity",
+      "context",
+      "timing",
+      "consent",
+      "response"
+    ],
+    "questions": []
+  },
+
+  {
     "id":"should_we_get_a_dog_together",
     "slug":"should-we-get-a-dog-together",
     "title":"Should We Get a Dog Together? 18-Question Couples Readiness Quiz",
