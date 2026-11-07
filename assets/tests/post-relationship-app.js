@@ -1,0 +1,38 @@
+/* Original consent-first relationship sharing quiz. One question at a time; same card and results style as move-in readiness. */
+(function(){"use strict";
+const model=window.PostRelationshipModel,root=document.getElementById("postRelationshipQuiz");if(!model||!root)return;
+const N=model.questions.length;let answers=Array(N).fill(null),index=0,busy=false;
+const make=(tag,cls,txt)=>{const el=document.createElement(tag);if(cls)el.className=cls;if(txt!==undefined)el.textContent=txt;return el;};
+const add=(parent,tag,cls,txt)=>{const el=make(tag,cls,txt);parent.appendChild(el);return el;};
+const btn=(parent,label,fn,cls)=>{const el=add(parent,"button",cls,label);el.type="button";el.addEventListener("click",fn);return el;};
+function focus(){const h=root.querySelector('[tabindex="-1"]');if(h)h.focus({preventScroll:true});const reduced=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;root.scrollIntoView({block:"start",behavior:reduced?"auto":"smooth"});}
+function choose(i){if(busy)return;busy=true;answers[index]=i;if(index===N-1){renderResults();return;}index++;renderQuestion(true);}
+function renderQuestion(shouldFocus){busy=false;root.replaceChildren();const q=model.questions[index],card=add(root,"section","sc-quiz-card");card.setAttribute("aria-label","Question "+(index+1)+" of "+N);
+const top=add(card,"div","sc-quiz-top");add(top,"span","sc-counter","Question "+(index+1)+" of "+N);if(index>0)btn(top,"← Back",()=>{index--;renderQuestion(true);},"sc-back");
+const progress=add(card,"div","sc-progress");progress.setAttribute("role","progressbar");progress.setAttribute("aria-label","Quiz progress");progress.setAttribute("aria-valuemin","0");progress.setAttribute("aria-valuemax",String(N));progress.setAttribute("aria-valuenow",String(index+1));add(progress,"span","sc-progress-fill").style.width=((index+1)/N*100)+"%";
+add(card,"p","mi-dimension-label",model.dimensions.find(x=>x.id===q.dimension).name);
+const heading=add(card,"h2","sc-question",q.prompt);heading.tabIndex=-1;
+const options=add(card,"div","sc-options");options.setAttribute("role","group");options.setAttribute("aria-label","Choose the answer closest to your situation");q.options.forEach((option,i)=>{const b=btn(options,option[0],()=>choose(i),"sc-choice");if(answers[index]===i)b.classList.add("sc-choice-selected");});if(shouldFocus)focus();}
+function section(parent,title){const item=add(parent,"section","sc-section");add(item,"h3","",title);return item;}
+function meter(parent,d){const wrap=add(parent,"div","sc-dimension"),top=add(wrap,"div","sc-dimension-top");add(top,"strong","",d.name);add(top,"span","",d.score+"/100");const bar=add(wrap,"div","sc-meter");bar.setAttribute("role","meter");bar.setAttribute("aria-label",d.name);bar.setAttribute("aria-valuemin","0");bar.setAttribute("aria-valuemax","100");bar.setAttribute("aria-valuenow",String(d.score));add(bar,"span").style.width=d.score+"%";add(wrap,"p","sc-dimension-description",d.summary);}
+function renderResults(){busy=false;let result;try{result=model.calculate(answers);}catch(error){renderQuestion(true);return;}
+root.replaceChildren();const card=add(root,"section","sc-results");card.setAttribute("aria-label","Should I post my relationship quiz results");
+add(card,"p","sc-result-kicker","Your private relationship-sharing decision profile");
+const h=add(card,"h2","sc-result-title",result.profile.title);h.tabIndex=-1;
+const score=add(card,"div","sc-score-area");add(score,"p","sc-score-label","Shared posting-plan clarity from your answers");
+const large=add(score,"div","sc-score");add(large,"span","sc-score-number",String(result.score));add(large,"span","sc-score-out","/100");add(score,"p","sc-score-note","An educational reflection score—not permission, a relationship-quality rating or a guarantee that posting is safe.");
+add(card,"p","sc-result-intro",result.profile.sub+" "+result.profile.intro);
+if(result.vetoes.length){const note=add(card,"div","sc-safety-note");add(note,"h3","","Consent or safety comes before the score");add(note,"p","","At least one answer describes missing permission or an identifiable safety concern. Do not share the photo, tag, hint, video or location now. Even 100/100 elsewhere cannot override someone's no or make an unsafe post acceptable.");}
+else if(result.pressures.length||result.unknowns.length){const note=add(card,"div","sc-safety-note");add(note,"h3","","Talk before publishing");add(note,"p","","One or more details remain disputed, pressured or unconfirmed. Show your partner the actual image, caption, tags and audience. Choose no post while agreement is unresolved.");}
+const dims=section(card,"Your six relationship-posting dimensions");add(dims,"p","","Each bar describes three of your answers. The score cannot establish how serious your relationship is.");result.dims.forEach(d=>meter(dims,d));
+const why=section(card,"Why you received this result");const ul=add(why,"ul","sc-evidence");result.evidence.forEach(e=>{const li=add(ul,"li");add(li,"strong","",e.insight);add(li,"span","","For “"+e.prompt+"”, you chose: “"+e.choice+"”");});
+const steps=section(card,"Your personalized next steps");const ol=add(steps,"ol","sc-next");result.profile.steps.forEach(x=>add(ol,"li","",x));result.weaker.slice(0,2).forEach(d=>add(ol,"li","",d.action));
+const talk=section(card,"A simple conversation you can have");add(talk,"p","sc-script",result.profile.script);
+const check=section(card,"Before anything goes online");add(check,"p","","Confirm mutual and current consent for the exact post, identify who can view it, remove any accidental face, voice, geotag, address or identifying detail, agree on tags and comments, and discuss what happens if either person changes their mind. A Close Friends Story can still be saved or shared.");
+const method=section(card,"How this quiz calculates its result");add(method,"p","","This original educational model includes 18 questions across six three-question areas. Answer values are 0, 1, 3 or 4 points, converted to six 0–100 bars. Weighted areas: motivation 12%, relationship clarity 16%, specific consent 24%, privacy and safety 20%, launch-style agreement 16%, and after-post teamwork 12%. A no-consent or safety flag always overrides the number. Other unresolved or pressured answers trigger a conversation-first result. Soft and hard launch outcomes require a consistent, mutually agreed visibility pattern. The scoring is not scientifically validated.");
+const read=section(card,"Learn the difference before choosing a post");const links=[["Soft Launch vs. Hard Launch: Examples, Captions & Timing","/blog/soft-launch-relationship/"],["Private vs. Secret Relationship","/blog/help-im-in-a-secret-relationship/"],["Should Couples Share Location?","/blog/should-couples-share-location/"],["Boundaries vs. Control","/blog/boundaries-vs-control/"]];const list=add(read,"ul","sc-next");links.forEach(([label,url])=>{const item=add(list,"li");const a=add(item,"a","",label);a.href=url;});
+const actions=add(card,"div","sc-result-actions");btn(actions,"Retake the 18 questions",()=>{answers=Array(N).fill(null);index=0;renderQuestion(true);},"sc-restart");
+add(card,"p","sc-fineprint","Free and private: your quiz answers remain in temporary browser-tab memory, aren't sent to our server and are cleared on reload. This is not a diagnostic or predictive assessment. Consent, privacy, and safety override every score.");
+focus();}
+renderQuestion(false);
+})();

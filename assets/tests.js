@@ -3,6 +3,33 @@
 */
 window.TESTS = [
   {
+    "id": "should_i_post_my_relationship",
+    "slug": "should-i-post-my-relationship",
+    "title": "Should I Post My Relationship? Free 18-Question Quiz",
+    "blurb": "18 realistic decisions about Instagram relationship posts, exact consent, tags, safety and soft or hard launch. Six clarity bars and four personalized results; free, private, no sign-up.",
+    "time": "4–6 min",
+    "intent": "quiz",
+    "keywords": [
+      "should i post my relationship",
+      "should i hard launch my relationship",
+      "soft launch relationship quiz",
+      "should i post my boyfriend",
+      "instagram official relationship",
+      "should i post my girlfriend",
+      "soft launch vs hard launch quiz"
+    ],
+    "scales": [
+      "purpose",
+      "clarity",
+      "consent",
+      "safety",
+      "visibility",
+      "teamwork"
+    ],
+    "questions": []
+  },
+
+  {
     "id": "should_i_ask_them_out",
     "slug": "should-i-ask-them-out",
     "title": "Should I Ask Them Out? Free 18-Question Dating Quiz",
