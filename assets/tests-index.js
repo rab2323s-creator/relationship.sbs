@@ -1,6 +1,16 @@
 /* tests-index.js — lightweight home index */
 window.TEST_INDEX = [
   {
+    "id": "should_i_post_my_relationship",
+    "slug": "should-i-post-my-relationship",
+    "title": "Should I Post My Relationship? Free 18-Question Quiz",
+    "blurb": "18 realistic decisions about Instagram relationship posts, exact consent, tags, safety and soft or hard launch. Six clarity bars and four personalized results; free, private, no sign-up.",
+    "time": "4–6 min",
+    "guide": "/blog/soft-launch-relationship/",
+    "intent": "quiz"
+  },
+
+  {
     "id": "should_i_ask_them_out",
     "slug": "should-i-ask-them-out",
     "title": "Should I Ask Them Out? Free 18-Question Dating Quiz",
