@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "dating-someone-with-different-political-views",
+  title: "Dating Someone With Different Political Views: Can It Work? 9 Signs",
+  excerpt: "Can a relationship survive different political views? Explore 9 signs it can work, the difference between policies and core values, 2025–2026 studies, real dealbreakers, and what to say.",
+  date: "2026-11-08",
+  readingMinutes: 28,
+  tags: ["Dating Someone With Different Political Views", "Political Compatibility in Relationships", "Political Differences in Marriage", "Liberal Conservative Relationship", "Democrat Republican Dating", "Different Values in a Relationship", "Politics Dealbreaker Dating", "Can a Relationship Survive Political Differences"],
+  category: "Dating & Relationships",
+  cover: "/assets/images/blog/dating-someone-with-different-political-views/two-ballots-and-a-kitchen-table.svg",
+  featured: true
+},
+
+{
   slug: "floodlighting-in-dating",
   title: "What Is Floodlighting in Dating? 9 Signs, Examples & What to Do",
   excerpt: "What is floodlighting in dating? See 9 signs of oversharing too soon, examples of what to say, and clear differences from love bombing, trauma dumping and healthy vulnerability.",
