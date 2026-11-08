@@ -1,6 +1,16 @@
 /* tests-index.js — lightweight home index */
 window.TEST_INDEX = [
   {
+    "id": "am_i_too_picky_quiz",
+    "slug": "am-i-too-picky-quiz",
+    "title": "Am I Too Picky in Dating? Free 18-Question Quiz",
+    "blurb": "18 original dating decisions on high standards, attraction, checklist rigidity, values mismatch and personal boundaries. Six clarity scores and five personalized results; free and private.",
+    "time": "4–5 min",
+    "guide": "/tests/are-you-settling/",
+    "intent": "quiz"
+  },
+
+  {
     "id": "dating_app_burnout_quiz",
     "slug": "dating-app-burnout-quiz",
     "title": "Dating App Burnout Quiz: Are You Tired of Swiping? (15 Questions)",
