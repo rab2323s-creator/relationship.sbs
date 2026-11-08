@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "floodlighting-in-dating",
+  title: "What Is Floodlighting in Dating? 9 Signs, Examples & What to Do",
+  excerpt: "What is floodlighting in dating? See 9 signs of oversharing too soon, examples of what to say, and clear differences from love bombing, trauma dumping and healthy vulnerability.",
+  date: "2026-11-08",
+  readingMinutes: 22,
+  tags: ["Floodlighting in Dating","Floodlighting Meaning","Floodlighting Signs","Floodlighting Examples","Oversharing on a First Date","Floodlighting vs Love Bombing","Floodlighting vs Trauma Dumping","Dating Vulnerability","Dating Boundaries"],
+  category: "Dating & Relationships",
+  cover: "/assets/images/blog/floodlighting-in-dating/two-cups-and-the-unfolded-napkin.svg",
+  featured: true
+},
+
+{
   slug: "how-to-meet-people-without-dating-apps",
   title: "How to Meet People Without Dating Apps: 15 Real-Life Ways to Find Love",
   excerpt: "How to meet singles in real life without dating apps: 15 practical places, natural conversation openers, respectful ways to ask someone out, and a realistic 30-day offline dating plan.",
