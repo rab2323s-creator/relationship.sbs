@@ -1,0 +1,12 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+import {createRequire} from "node:module";
+const require=createRequire(import.meta.url);
+const m=require("../assets/tests/dating-app-burnout-data.js");
+const fill=v=>Array(15).fill(v);
+test("Fifteen original questions, five distinct 3-question domains, four ordered answer choices",()=>{assert.equal(m.questions.length,15);assert.equal(m.dimensions.length,5);m.dimensions.forEach(d=>assert.equal(m.questions.filter(q=>q.dimension===d.id).length,3));m.questions.forEach(q=>{assert.equal(q.options.length,4);assert.deepEqual(q.options.map(x=>x.value),[0,1,2,3]);});});
+test("Four outcome bands are reachable with transparent score thresholds",()=>{for(const [value,key,score] of [[0,"healthy",0],[1,"swiping",33],[2,"exhausted",67],[3,"reset",100]]){const r=m.calculate(fill(value));assert.equal(r.profileKey,key);assert.equal(r.score,score);assert.equal(r.dimensions.length,5);}});
+test("Score and dimensions respond to selected answers; lower means less strain",()=>{const a=fill(0);a[0]=3;const r=m.calculate(a);assert.ok(r.score>0&&r.score<30);assert.equal(r.dimensions.find(d=>d.id==="energy").score,33);assert.equal(r.evidence.length,1);});
+test("Personalized actions name strained dimensions, rest signal tracks chosen answer",()=>{const a=fill(0);a[4]=3;a[9]=3;a[13]=3;const r=m.calculate(a);assert.equal(r.byStrain[0].id,"recovery");assert.equal(r.recoveryChoice,3);assert.equal(r.actions.length,3);});
+test("Invalid, incomplete, NaN and out-of-range responses are rejected",()=>{assert.equal(m.valid(fill(null)),false);assert.equal(m.valid(fill(4)),false);assert.equal(m.valid(fill(1.5)),false);assert.throws(()=>m.calculate(Array(14).fill(1)));assert.throws(()=>m.calculate(fill(4)));});
+test("The educational result does not claim to diagnose addiction or mental illness",()=>{const text=JSON.stringify({profiles:m.profiles,dimensions:m.dimensions});assert.equal(/diagnos(es|ed) you with|proves you have/i.test(text),false);});

@@ -1,6 +1,16 @@
 /* tests-index.js — lightweight home index */
 window.TEST_INDEX = [
   {
+    "id": "dating_app_burnout_quiz",
+    "slug": "dating-app-burnout-quiz",
+    "title": "Dating App Burnout Quiz: Are You Tired of Swiping? (15 Questions)",
+    "blurb": "15 original questions on exhaustion after swiping, match numbness, chat fatigue, dating pace and recovery. Five scores, four tailored results and a 7-day reset. Free and private.",
+    "time": "3–4 min",
+    "guide": "/blog/dating-app-addiction/",
+    "intent": "quiz"
+  },
+
+  {
     "id": "should_i_post_my_relationship",
     "slug": "should-i-post-my-relationship",
     "title": "Should I Post My Relationship? Free 18-Question Quiz",
