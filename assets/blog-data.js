@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "friendfluence-dating",
+  title: "What Is Friendfluence in Dating? Meaning, Examples & 2026 Trends",
+  excerpt: "What does friendfluence mean? Explore the group chat test, Tinder Double Date and Group Hangouts, two-man dating, 2026 research, private-message boundaries and what friends should never decide for you.",
+  date: "2026-11-08",
+  readingMinutes: 29,
+  tags: ["Friendfluence Meaning", "Friendfluence Dating", "Friendfluence 2026", "Friends Influence Dating", "Group Chat Test Dating", "Tinder Double Date", "Tinder Group Hangouts", "Two Man Dating", "Group Dating 2026", "Double Dating Trend", "Friends Approval in Dating"],
+  category: "Dating & Relationships",
+  cover: "/assets/images/blog/friendfluence-dating/four-cups-and-the-blue-phone.svg",
+  featured: true
+},
+
+{
   slug: "dating-someone-with-different-political-views",
   title: "Dating Someone With Different Political Views: Can It Work? 9 Signs",
   excerpt: "Can a relationship survive different political views? Explore 9 signs it can work, the difference between policies and core values, 2025–2026 studies, real dealbreakers, and what to say.",
