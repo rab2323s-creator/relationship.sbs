@@ -148,17 +148,28 @@
   <header id="siteHeader"></header>
 
   <main class="wrap">
-    <!-- Above-the-fold: strong on-page content (prevents thin content) -->
+    <!-- Put the interactive quiz immediately after the title and short introduction. -->
     <article class="card prose" id="top">
       <h1>Trauma Bonding Test: Are You Trauma Bonded?</h1>
-      <h2>Explore Signs of a Trauma Bond With a Free 15-Question Quiz</h2>
+      <p>Take this free <strong>15-question trauma bonding test</strong> to explore repeated hurt and relief, emotional attachment, and push-pull relationship patterns.</p>
+      <p class="small muted">Get instant educational results for self-reflection. This quiz is not a diagnosis and cannot determine whether a relationship is abusive.</p>
+    </article>
 
-      <p>Wondering if you are trauma bonded or caught in a push-pull relationship? Take this free <strong>15-question trauma bonding test</strong> to reflect on repeated hurt and relief, emotional attachment, and difficulty letting go.</p>
+    <!-- Quiz mount point: interactive test begins before all long-form SEO content. -->
+    <section class="card" id="quiz" aria-label="Trauma Bonding Test">
+      <div id="quizRoot" data-slug="trauma-bond"></div>
+      <noscript>
+        <div class="prose" style="padding: 1rem;">
+          <h2>Start the Trauma Bond Quiz</h2>
+          <p>This quiz requires JavaScript to run. Please enable JavaScript to take the interactive test and see your results.</p>
+          <p>If you can’t enable JavaScript, use the preview questions below to reflect on your relationship patterns.</p>
+        </div>
+      </noscript>
+    </section>
 
-      <p>Get instant, educational results to better understand your relationship patterns. This trauma bond quiz supports self-reflection; it cannot diagnose a condition or determine whether a relationship is abusive.</p>
-
-      <p><a class="btn" href="#quiz">Start the Free Trauma Bonding Test</a></p>
-
+    <!-- Educational content stays readable and indexable below the quiz. -->
+    <section class="card prose" id="about-trauma-bonding">
+      <h2>Understanding Trauma Bonding</h2>
       <nav aria-label="On-page navigation">
         <ul>
           <li><a href="#quiz">Start the quiz</a></li>
@@ -210,12 +221,9 @@
         If you are exploring lingering effects of a past relationship rather than attachment to someone currently
         causing harm, the <a href="/tests/relationship-trauma/">Relationship Trauma Test</a> may be a better fit.
       </p>
-    </article>
+    </section>
 
-    <!-- Quiz mount point (JS renders interactive quiz here) -->
-    <section class="card" id="quiz" aria-label="Trauma Bond Quiz">
-      <div id="quizRoot" data-slug="trauma-bond"></div>
-<section class="card prose">
+    <section class="card prose">
   <h2>Read the research-informed guide</h2>
   <p>If your answers point to a repeated pattern of harm, relief, self-blame, isolation, or difficulty leaving, read <a href="/blog/trauma-bonding/"><strong>Trauma Bonding: 12 Signs, Why It’s So Hard to Leave &amp; How to Break the Cycle</strong></a>. It explains how traumatic bonding differs from anxious attachment, toxic conflict, and ordinary push-pull dynamics.</p>
 </section>
@@ -225,17 +233,7 @@
   <p class="small muted">Educational self-reflection only. Results describe patterns in your answers and are not a diagnosis.</p>
   <div class="row" style="flex-wrap:wrap;"><a class="btn small secondary" href="/blog/why-you-miss-someone-who-was-bad-for-you/">Why you can miss someone who hurt you</a><a class="btn small secondary" href="/tests/toxic-relationship/">Toxic Relationship Test</a><a class="btn small secondary" href="/tests/emotional-manipulation/">Emotional Manipulation Test</a></div>
 </section>
-
-
-      <noscript>
-        <div class="prose" style="padding: 1rem;">
-          <h2>Start the Trauma Bond Quiz</h2>
-          <p>This quiz requires JavaScript to run. Please enable JavaScript to take the interactive test and see your results.</p>
-          <p>If you can’t enable JavaScript, use the preview questions below to reflect on your relationship patterns.</p>
-        </div>
-      </noscript>
-    </section>
-
+    
     <section class="card prose" id="how-it-works">
       <h2>How This 2-Minute Quiz Works</h2>
       <ol>
