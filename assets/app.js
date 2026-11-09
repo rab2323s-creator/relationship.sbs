@@ -1195,7 +1195,7 @@
 
       <section id="resultCard" class="card hidden"></section>
 
-      ${editorialLanding ? "" : `
+      ${(editorialLanding || test.hideShellFaq) ? "" : `
       <section class="card prose">
         <h2>FAQ</h2>
         <div id="faqList"></div>

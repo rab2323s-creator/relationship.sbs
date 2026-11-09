@@ -17,6 +17,8 @@
     time: "4–5 min",
     intent: "quiz",
     compactShell: true,
+    // The full FAQ is present as crawlable HTML below the quiz; avoid a duplicate in the quiz shell.
+    hideShellFaq: true,
     keywords: [
       "codependency test",
       "codependent test",
