@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "self-sabotaging-relationships",
+  title: "Self-Sabotaging Relationships: 12 Signs & How to Stop",
+  excerpt: "Why do I sabotage my relationships? Learn 12 common self-sabotage signs, a clear trigger-to-result cycle, what research says, and a practical 14-day plan.",
+  date: "2026-11-10",
+  readingMinutes: 15,
+  tags: ["Self Sabotaging Relationships", "Why Do I Sabotage My Relationships", "Signs of Self Sabotage in Relationships", "How to Stop Self Sabotaging a Relationship", "Pushing Someone Away When Things Get Serious", "Relationship Sabotage Cycle", "Relationship Anxiety", "Defensiveness", "Trust Issues"],
+  category: "Relationship Psychology & Self-Awareness",
+  cover: "/assets/og/relationship-tests-tools-guides.webp",
+  featured: true
+},
+
+{
   slug: "fearful-avoidant-attachment",
   title: "Fearful-Avoidant Attachment: 12 Signs, Triggers & How to Heal",
   excerpt: "Fearful-avoidant attachment explained: 12 signs, intimacy triggers, fearful vs dismissive vs anxious attachment, and practical steps toward more secure habits.",
