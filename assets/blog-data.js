@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "resentment-in-relationships",
+  title: "Resentment in Relationships: 10 Signs & How to Let Go",
+  excerpt: "Resentment in relationships: 10 signs, common causes, a repair-versus-ongoing-harm table, six useful scripts and a two-week review plan.",
+  date: "2026-11-10",
+  readingMinutes: 13,
+  tags: ["Resentment in Relationships", "Resentment in Marriage", "How to Let Go of Resentment", "Resentment Towards Husband", "Signs of Resentment in a Relationship", "How to Overcome Resentment in a Relationship", "Unresolved Hurt", "Emotional Exhaustion", "Mental Load"],
+  category: "Marriage & Relationship Psychology",
+  cover: "/assets/og/relationship-tests-tools-guides.webp",
+  featured: true
+},
+
+{
   slug: "self-sabotaging-relationships",
   title: "Self-Sabotaging Relationships: 12 Signs & How to Stop",
   excerpt: "Why do I sabotage my relationships? Learn 12 common self-sabotage signs, a clear trigger-to-result cycle, what research says, and a practical 14-day plan.",
