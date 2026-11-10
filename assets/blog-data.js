@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "fearful-avoidant-attachment",
+  title: "Fearful-Avoidant Attachment: 12 Signs, Triggers & How to Heal",
+  excerpt: "Fearful-avoidant attachment explained: 12 signs, intimacy triggers, fearful vs dismissive vs anxious attachment, and practical steps toward more secure habits.",
+  date: "2026-11-10",
+  readingMinutes: 21,
+  tags: ["Fearful Avoidant Attachment", "Fearful Avoidant Signs", "Disorganized Attachment in Adults", "Fearful Avoidant Triggers", "Fearful vs Dismissive Avoidant", "How to Heal Fearful Avoidant Attachment", "Attachment Anxiety and Avoidance", "Secure Attachment"],
+  category: "Attachment & Relationship Psychology",
+  cover: "/assets/og/relationship-tests-tools-guides.webp",
+  featured: true
+},
+
+{
   slug: "friendfluence-dating",
   title: "What Is Friendfluence in Dating? Meaning, Examples & 2026 Trends",
   excerpt: "What does friendfluence mean? Explore the group chat test, Tinder Double Date and Group Hangouts, two-man dating, 2026 research, private-message boundaries and what friends should never decide for you.",
