@@ -1,6 +1,16 @@
 /* tests-index.js — lightweight home index */
 window.TEST_INDEX = [
   {
+    "id": "emotional_maturity_test",
+    "slug": "emotional-maturity-test",
+    "title": "Emotional Maturity Test: Am I Emotionally Immature? (20 Questions)",
+    "blurb": "20 original scenarios across five emotional maturity skills with five percentage indicators, an overall educational score and two targeted exercises. Free, private and safety-aware.",
+    "time": "5–6 min",
+    "guide": "/blog/communication-needs/",
+    "intent": "quiz"
+  },
+
+  {
     "id": "am_i_self_sabotaging_my_relationship",
     "slug": "am-i-self-sabotaging-my-relationship",
     "title": "Am I Self-Sabotaging My Relationship? Free 18-Question Quiz",
