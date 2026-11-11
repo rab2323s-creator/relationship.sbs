@@ -66,6 +66,9 @@ jobs:
       - name: Test coworker romance quiz, inline results and power-imbalance safeguards
         run: node --test scripts/test_coworker_romance.mjs
 
+      - name: Test self-sabotage scoring, result UI and safety override
+        run: node --test scripts/test_self_sabotage_quiz.mjs
+
       - name: Test move-in readiness scoring and profiles
         run: node --test scripts/test_move_in_readiness.mjs
 

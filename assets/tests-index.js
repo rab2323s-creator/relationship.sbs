@@ -1,6 +1,16 @@
 /* tests-index.js — lightweight home index */
 window.TEST_INDEX = [
   {
+    "id": "am_i_self_sabotaging_my_relationship",
+    "slug": "am-i-self-sabotaging-my-relationship",
+    "title": "Am I Self-Sabotaging My Relationship? Free 18-Question Quiz",
+    "blurb": "18 realistic situations about withdrawal, reassurance tests, defensiveness, conflict escalation and repair. Five educational behavioral indicators with a safety-first result and practical next steps.",
+    "time": "4–5 min",
+    "guide": "/blog/self-sabotaging-relationships/",
+    "intent": "quiz"
+  },
+
+  {
     "id": "am_i_too_picky_quiz",
     "slug": "am-i-too-picky-quiz",
     "title": "Am I Too Picky in Dating? Free 18-Question Quiz",
