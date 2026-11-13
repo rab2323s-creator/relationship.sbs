@@ -3,6 +3,19 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "emotional-invalidation-in-relationships",
+  title: "Emotional Invalidation in Relationships: 12 Signs, Examples & How to Respond",
+  excerpt: "Emotional invalidation in relationships: 12 signs, 15 side-by-side response examples, how it differs from gaslighting and practical scripts to feel heard.",
+  date: "2026-11-13",
+  readingMinutes: 13,
+  tags: ["Emotional Invalidation in Relationships", "Emotional Invalidation Examples", "Signs of Emotional Invalidation", "Partner Dismisses My Feelings", "Emotional Invalidation vs Gaslighting", "How to Validate Your Partner's Feelings", "Emotional Safety", "Relationship Communication"],
+  category: "Marriage & Relationship Psychology",
+  cover: "/assets/og/relationship-tests-tools-guides.webp",
+  featured: true
+},
+
+
+{
   slug: "how-to-apologize-to-your-partner",
   title: "How to Apologize to Your Partner: 7 Steps, Real Examples & What to Avoid",
   excerpt: "How to apologize to your partner sincerely: seven steps, six real examples, a private interactive apology builder and a realistic trust-repair plan.",
