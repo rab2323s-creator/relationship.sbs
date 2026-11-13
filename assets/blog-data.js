@@ -3,6 +3,19 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "how-to-apologize-to-your-partner",
+  title: "How to Apologize to Your Partner: 7 Steps, Real Examples & What to Avoid",
+  excerpt: "How to apologize to your partner sincerely: seven steps, six real examples, a private interactive apology builder and a realistic trust-repair plan.",
+  date: "2026-11-13",
+  readingMinutes: 14,
+  tags: ["How to Apologize to Your Partner", "How to Apologize Sincerely in a Relationship", "Apology Examples for Relationships", "How to Say Sorry to Your Boyfriend", "How to Apologize to Your Girlfriend", "How to Apologize After Hurting Someone", "Repair After Hurt", "Trust"],
+  category: "Marriage & Relationship Psychology",
+  cover: "/assets/og/relationship-tests-tools-guides.webp",
+  featured: true
+},
+
+
+{
   slug: "weaponized-incompetence-in-relationships",
   title: "Weaponized Incompetence in Relationships: 12 Signs, Examples & What to Do",
   excerpt: "Weaponized incompetence: 12 signs, ADHD and inexperience differences, real examples, six scripts, a task ownership audit and a 14-day action plan.",
