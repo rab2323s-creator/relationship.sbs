@@ -3,6 +3,19 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "weaponized-incompetence-in-relationships",
+  title: "Weaponized Incompetence in Relationships: 12 Signs, Examples & What to Do",
+  excerpt: "Weaponized incompetence: 12 signs, ADHD and inexperience differences, real examples, six scripts, a task ownership audit and a 14-day action plan.",
+  date: "2026-11-13",
+  readingMinutes: 15,
+  tags: ["Weaponized Incompetence in Relationships", "Weaponized Incompetence Examples", "Weaponized Incompetence Husband", "Signs of Weaponized Incompetence", "Weaponized Incompetence vs ADHD", "How to Deal With Weaponized Incompetence", "Mental Load", "Resentment in Relationships"],
+  category: "Marriage & Relationship Psychology",
+  cover: "/assets/og/relationship-tests-tools-guides.webp",
+  featured: true
+},
+
+
+{
   slug: "resentment-in-relationships",
   title: "Resentment in Relationships: 10 Signs & How to Let Go",
   excerpt: "Resentment in relationships: 10 signs, common causes, a repair-versus-ongoing-harm table, six useful scripts and a two-week review plan.",
