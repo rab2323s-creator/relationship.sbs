@@ -1,6 +1,17 @@
 /* tests-index.js — lightweight home index */
 window.TEST_INDEX = [
   {
+    "id": "is_my_relationship_healthy",
+    "slug": "is-my-relationship-healthy",
+    "title": "Is My Relationship Healthy? Free 20-Question Relationship Health Quiz",
+    "blurb": "20 original real-life questions, five answer-based health indicators, strengths, two growth priorities and independent safety alerts. Free, private and no sign-up.",
+    "time": "4–6 min",
+    "guide": "/blog/emotional-safety-in-relationships/",
+    "intent": "quiz"
+  },
+
+
+  {
     "id": "emotional_maturity_test",
     "slug": "emotional-maturity-test",
     "title": "Emotional Maturity Test: Am I Emotionally Immature? (20 Questions)",
