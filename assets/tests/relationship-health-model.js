@@ -8,7 +8,7 @@ const valid=a=>Array.isArray(a)&&a.length===20&&a.every((v,i)=>Number.isInteger(
 const percent=n=>Math.round(Math.max(0,Math.min(100,n)));
 const calculate=function calculate(answers){
  if(!valid(answers))throw Error("Please complete all 20 questions.");
- const scored=dims.map(d=>{const entries=questions.flatMap((item,index)=>item.dimension===d.id?[{index,question:item,option:item.options[answers[index]],points:item.options[answers[index]][1]}]:[]);const score=percent(entries.reduce((sum,entry)=>sum+entry.points,0)/16*100);return {...d,score,entries};});
+ const scored=dimensions.map(d=>{const entries=questions.flatMap((item,index)=>item.dimension===d.id?[{index,question:item,option:item.options[answers[index]],points:item.options[answers[index]][1]}]:[]);const score=percent(entries.reduce((sum,entry)=>sum+entry.points,0)/16*100);return {...d,score,entries};});
  const overall=percent(scored.reduce((s,d)=>s+d.score,0)/5);
  const safety=questions.flatMap((item,index)=>item.options[answers[index]][3]==="safety"?[{index,question:item.prompt,choice:item.options[answers[index]][0]}]:[]);
  const lows=questions.flatMap((item,index)=>item.options[answers[index]][1]<=1?[{index,dimension:item.dimension,question:item.prompt,choice:item.options[answers[index]]}]:[]);
