@@ -1,6 +1,17 @@
 /* tests-index.js — lightweight home index */
 window.TEST_INDEX = [
   {
+    "id": "communication_style_quiz",
+    "slug": "communication-style-quiz",
+    "title": "Communication Style Quiz: Are You Assertive, Passive, Aggressive or Passive-Aggressive?",
+    "blurb": "20 everyday scenarios about expressing needs and opinions, four percentage shares, a primary and secondary style, practical scripts and a seven-day plan.",
+    "time": "4–5 min",
+    "guide": "/blog/communication-needs/",
+    "intent": "quiz"
+  },
+
+
+  {
     "id": "is_my_relationship_healthy",
     "slug": "is-my-relationship-healthy",
     "title": "Is My Relationship Healthy? Free 20-Question Relationship Health Quiz",
