@@ -109,7 +109,7 @@ window.BLOG_POSTS = [
   readingMinutes: 22,
   tags: ["Floodlighting in Dating","Floodlighting Meaning","Floodlighting Signs","Floodlighting Examples","Oversharing on a First Date","Floodlighting vs Love Bombing","Floodlighting vs Trauma Dumping","Dating Vulnerability","Dating Boundaries"],
   category: "Dating & Relationships",
-  cover: "/assets/images/blog/floodlighting-in-dating/two-cups-and-the-unfolded-napkin.svg",
+  cover: "/assets/og/floodlighting-in-dating-meaning-examples.webp",
   featured: true
 },
 
