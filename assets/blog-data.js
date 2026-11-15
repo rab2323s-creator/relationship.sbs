@@ -1018,7 +1018,7 @@ window.BLOG_POSTS = [
     readingMinutes: 20,
     tags: ["Dating", "Cuffing Season", "Modern Dating", "Relationships", "Dating Slang"],
     category: "Dating",
-    cover: "/assets/og/relationship-tests-tools-guides.webp",
+    cover: "/assets/og/cuffing-season-meaning-start-end-dates.webp",
     featured: true
   },
   {
