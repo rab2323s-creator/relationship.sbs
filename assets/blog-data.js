@@ -1012,8 +1012,8 @@ window.BLOG_POSTS = [
   },
   {
     slug: "cuffing-season",
-    title: "Cuffing Season: Meaning, Dates & 9 Signs You’re Being Cuffed",
-    excerpt: "What cuffing season means, when it starts and ends, the October-to-spring timeline, 9 signs you’re being cuffed, and how to tell seasonal comfort from a real relationship.",
+    title: "Cuffing Season: Meaning, When It Starts & Ends",
+    excerpt: "What is cuffing season? Learn when it starts and ends, its October-to-spring timeline, what being cuffed means, and 9 signs of a seasonal relationship.",
     date: "2026-10-06",
     readingMinutes: 20,
     tags: ["Dating", "Cuffing Season", "Modern Dating", "Relationships", "Dating Slang"],
