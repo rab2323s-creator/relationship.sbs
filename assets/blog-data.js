@@ -133,7 +133,7 @@ window.BLOG_POSTS = [
   readingMinutes: 27,
   tags: ["Soft Launch Relationship", "Hard Launch Relationship", "Soft Launch vs Hard Launch", "Soft Launch Meaning in Dating", "Instagram Soft Launch", "Soft Launch Captions", "When to Post Your Relationship", "Relationship Privacy"],
   category: "Dating & Relationships",
-  cover: "/assets/images/blog/soft-launch-relationship/two-ways-to-share-a-relationship.svg",
+  cover: "/assets/og/soft-launch-vs-hard-launch-relationship-meaning.webp",
   featured: true
 },
 
