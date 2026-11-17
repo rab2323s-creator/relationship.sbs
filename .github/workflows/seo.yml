@@ -116,6 +116,9 @@ jobs:
       - name: Test baby name finder data, search and sharing
         run: node --test scripts/test_baby_name_finder.mjs
 
+      - name: Smoke-test 20k baby name finder browser initialization and interactions
+        run: node --test scripts/test_baby_name_browser.mjs
+
       - name: Run static SEO audit
         run: python scripts/seo_audit.py
 
