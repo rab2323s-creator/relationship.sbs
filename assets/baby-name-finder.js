@@ -32,6 +32,16 @@ function letterOptions(){
  const select=$("initialSelect");
  select.append(...letters.map(letter=>{const option=document.createElement("option");option.value=letter;option.textContent=letter;return option}));
 }
+function labelMeaningCounts(){
+ const counts={};
+ for(const name of state.names)for(const tag of name.t)counts[tag]=(counts[tag]||0)+1;
+ for(const opt of $("meaningSelect").options){
+  if(opt.value==="all")continue;
+  const label=opt.dataset.baseLabel||opt.textContent.replace(/\\s*\\(\\d+\\)$/,"");
+  opt.dataset.baseLabel=label;
+  opt.textContent=label+" ("+(counts[opt.value]||0)+")";
+ }
+}
 function originOptions(){
  const origins=[...new Set(state.names.map(n=>n.o))].sort((a,b)=>a.localeCompare(b,"en"));
  const select=$("originSelect");
@@ -265,7 +275,7 @@ async function load(){
   const [db,regions]=await Promise.all([response.json(),rankings.json()]);
   state.regions=core.validateRegionData(regions);
   state.names=core.validateDatabase(db);
-  state.loaded=true;restoreStorage();originOptions();letterOptions();
+  state.loaded=true;restoreStorage();originOptions();letterOptions();labelMeaningCounts();
   $("datasetSize").textContent=formatNumber(db.total);
   $("loadingState").hidden=true;
   renderRegion();renderExplore();renderSaved();openShared();
