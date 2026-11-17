@@ -22,7 +22,9 @@
   function filterNames(names,filters={}){
     const q=keyOf(filters.query);
     const gender=filters.gender||"all",meaning=filters.meaning||"all",origin=filters.origin||"all",sort=filters.sort||"popular";
-    let output=names.filter(n=>(gender==="all"||n.g===gender||n.g==="unisex"&&(gender==="boy"||gender==="girl"))&&(meaning==="all"||n.t.includes(meaning))&&(origin==="all"||n.o===origin)&&(q===""||[n.n,n.m,n.o].some(s=>keyOf(s).includes(q))));
+    const letter=filters.letter||"all",length=filters.length||"all";
+    const isLengthMatch=n=>length==="all"||(length==="short"&&n.n.length<=4)||(length==="medium"&&n.n.length>=5&&n.n.length<=6)||(length==="long"&&n.n.length>=7);
+    let output=names.filter(n=>(gender==="all"||n.g===gender||n.g==="unisex"&&(gender==="boy"||gender==="girl"))&&(meaning==="all"||n.t.includes(meaning))&&(origin==="all"||n.o===origin)&&(letter==="all"||n.n.toUpperCase().startsWith(letter))&&isLengthMatch(n)&&(q===""||[n.n,n.m,n.o].some(s=>keyOf(s).includes(q))));
     output.sort((a,b)=>sort==="az"?a.n.localeCompare(b.n,"en"):sort==="za"?b.n.localeCompare(a.n,"en"):sort==="rare"?(a.c-b.c)||a.n.localeCompare(b.n,"en"):(b.c-a.c)||a.n.localeCompare(b.n,"en"));
     return output;
   }
@@ -48,9 +50,27 @@
     try{parsed=token.split("~").map(decodeURIComponent)}catch(e){return []}
     return sanitizePicks(parsed,validNames);
   }
+  function parsePartnerLink(value,validNames,expectedOrigin,expectedPath){
+    if(typeof value!=="string"||!value.trim()||value.length>2400)return [];
+    try{
+      const url=new URL(value.trim());
+      if(url.origin!==expectedOrigin||url.pathname!==expectedPath)return [];
+      const token=url.searchParams.get("partner");
+      if(!token)return [];
+      return fromUrlToken(token,validNames);
+    }catch(e){return []}
+  }
+  function makePickDeck(names,count=12,random=Math.random){
+    const copy=[...names];
+    for(let i=copy.length-1;i>0;i--){
+      const j=Math.max(0,Math.min(i,Math.floor(random()*(i+1))));
+      [copy[i],copy[j]]=[copy[j],copy[i]];
+    }
+    return copy.slice(0,Math.min(Math.max(count,0),copy.length));
+  }
   function intersection(a,b){
     const right=new Set(b);
     return a.filter(n=>right.has(n));
   }
-  return {MAX_PICKS,escapeHtml,keyOf,validateDatabase,filterNames,sanitizePicks,toUrlToken,fromUrlToken,intersection};
+  return {MAX_PICKS,escapeHtml,keyOf,validateDatabase,filterNames,sanitizePicks,toUrlToken,fromUrlToken,parsePartnerLink,makePickDeck,intersection};
 });
