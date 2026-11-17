@@ -257,3 +257,64 @@ test("related parenthood quiz links directly to the finder without changing its 
  assert(quiz.includes('href="/tools/baby-name-finder/"'));
  assert(quiz.includes('rel="canonical" href="https://relationship.sbs/tests/do-i-want-kids-quiz/"'));
 });
+
+test("Baby Name Finder schema describes real app features, sources and visible FAQs",()=>{
+ const block=html.split('<script type="application/ld+json">')[1]?.split("</script>")[0];
+ assert(block,"Page must include valid JSON-LD");
+ const graph=JSON.parse(block)["@graph"];
+ const appEntity=graph.find(x=>x["@type"]==="WebApplication");
+ const page=graph.find(x=>x["@type"]==="WebPage");
+ const faq=graph.find(x=>x["@type"]==="FAQPage");
+ const image=graph.find(x=>x["@type"]==="ImageObject");
+ assert(appEntity&&page&&faq&&image,"All connected entities must exist");
+ assert.equal(appEntity.name,"Baby Name Finder");
+ assert.equal(appEntity.isAccessibleForFree,true);
+ assert.equal(appEntity.offers.price,"0");
+ assert(appEntity.featureList.some(x=>x.includes("20,000")));
+ assert(appEntity.featureList.some(x=>x.includes("shortlists")));
+ assert(appEntity.description.includes("documented meanings"));
+ assert.equal(appEntity.mainEntityOfPage["@id"],page["@id"]);
+ assert.equal(page.mainEntity["@id"],appEntity["@id"]);
+ assert.equal(page.hasPart["@id"],faq["@id"]);
+ assert.equal(appEntity.image["@id"],image["@id"]);
+ assert.equal(faq.mainEntity.length,7);
+ for(const q of faq.mainEntity){
+  assert(html.includes("<summary>"+q.name+"</summary>"));
+  assert(q.acceptedAnswer.text.length>35);
+ }
+ const imgPath="assets/images/baby-name-finder-card.webp";
+ assert(fs.existsSync(path.join(root,imgPath)),"Card image file must exist before deployment");
+ assert(fs.statSync(path.join(root,imgPath)).size>1000);
+ assert.equal(image.contentUrl,"https://relationship.sbs/"+imgPath);
+ assert(html.includes('name="twitter:image" content="'+image.contentUrl+'"'));
+ assert(html.includes('property="og:image" content="'+image.contentUrl+'"'));
+});
+
+test("home tool card has accessible image and exact matching destinations",()=>{
+ const homepage=read("index.html");
+ const style=read("assets/seo-landing.css");
+ assert(homepage.includes('class="baby-feature-card"'));
+ assert(homepage.includes('src="/assets/images/baby-name-finder-card.webp"'));
+ assert(homepage.includes('alt="Baby Name Finder: browse 20,000 baby names and save your favorites"'));
+ assert(homepage.includes('loading="lazy" decoding="async"'));
+ assert(homepage.includes('width="1200" height="630"'));
+ assert(homepage.includes('href="/tools/baby-name-finder/"'));
+ assert(homepage.includes('Baby Name Finder — Search 20,000 Names'));
+ assert(style.includes('.discovery-page .baby-feature-card'));
+ assert(style.includes('@media(max-width:800px)'));
+});
+
+test("editorial baby-name internal links are topical, indexable and absolute-path safe",()=>{
+ const relevant=[
+  "blog/interfaith-relationships-before-marriage/index.html",
+  "blog/partner-doesnt-want-kids-but-i-do/index.html",
+  "tests/are-we-ready-for-marriage/index.html",
+  "blog/age-gap-relationships/index.html",
+  "tests/do-i-want-kids-quiz/index.html"
+ ];
+ for(const page of relevant){
+  const content=read(page);
+  assert(content.includes('href="/tools/baby-name-finder/"'),"Missing link: "+page);
+  assert(!content.includes('rel="canonical" href="https://relationship.sbs/tools/baby-name-finder/"'),"Wrong canonical: "+page);
+ }
+});
