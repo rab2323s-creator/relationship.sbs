@@ -282,7 +282,7 @@ test("Baby Name Finder schema describes real app features, sources and visible F
   assert(html.includes("<summary>"+q.name+"</summary>"));
   assert(q.acceptedAnswer.text.length>35);
  }
- const imgPath="assets/images/baby-name-finder-card.webp";
+ const imgPath="assets/images/baby-name-finder-20000-baby-names-for-couples.webp";
  assert(fs.existsSync(path.join(root,imgPath)),"Card image file must exist before deployment");
  assert(fs.statSync(path.join(root,imgPath)).size>1000);
  assert.equal(image.contentUrl,"https://relationship.sbs/"+imgPath);
@@ -294,7 +294,7 @@ test("home tool card has accessible image and exact matching destinations",()=>{
  const homepage=read("index.html");
  const style=read("assets/seo-landing.css");
  assert(homepage.includes('class="baby-feature-card"'));
- assert(homepage.includes('src="/assets/images/baby-name-finder-card.webp"'));
+ assert(homepage.includes('src="/assets/images/baby-name-finder-20000-baby-names-for-couples.webp"'));
  assert(homepage.includes('alt="Baby Name Finder: browse 20,000 baby names and save your favorites"'));
  assert(homepage.includes('loading="lazy" decoding="async"'));
  assert(homepage.includes('width="1200" height="630"'));
