@@ -14,7 +14,12 @@
     for(const n of db.names){
       if(!n||typeof n.n!=="string"||!n.n.trim()||(n.m!==null&&(typeof n.m!=="string"||!n.m.trim()))||(n.o!==null&&(typeof n.o!=="string"||!n.o.trim()))||(n.m===null)!==(n.o===null)||!["boy","girl","unisex"].includes(n.g)||!Number.isInteger(n.c)||n.c<5||!Number.isInteger(n.r)||n.r<1||!Array.isArray(n.t)||n.t.some(t=>typeof t!=="string"||!t))throw Error("Invalid baby name row");
       if(!n.m&&n.t.length)throw Error("Unverified meaning must not have meaning tags");
-      if(n.u!==undefined&&n.u!==null&&(!["F","M"].includes(n.u.s)||!Number.isInteger(n.u.c)||n.u.c<5||!Number.isInteger(n.u.r)||n.u.r<1||n.u.d!==undefined&&!Number.isInteger(n.u.d)))throw Error("Invalid 2025 popularity row");
+      if(n.u!==undefined&&n.u!==null){
+        if(!["F","M"].includes(n.u.s)||!Number.isInteger(n.u.c)||n.u.c<5||!Number.isInteger(n.u.r)||n.u.r<1)throw Error("Invalid 2025 popularity row");
+        const hasPrevious=Object.prototype.hasOwnProperty.call(n.u,"p");
+        const hasDelta=Object.prototype.hasOwnProperty.call(n.u,"d");
+        if(hasPrevious!==hasDelta||(hasPrevious&&(!Number.isInteger(n.u.p)||n.u.p<5||!Number.isInteger(n.u.d)||n.u.p+n.u.d!==n.u.c)))throw Error("Invalid 2024 comparison");
+      }
       const k=keyOf(n.n);
       if(unique.has(k))throw Error("Duplicate baby name: "+n.n);
       unique.add(k);
