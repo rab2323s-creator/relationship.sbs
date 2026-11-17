@@ -80,7 +80,17 @@ function card(n){
  '<div class="baby-card-foot"><span>US births in '+(n.u?'2025':'2020 (fallback)')+'</span><strong>'+formatNumber(usInfo(n).c)+'</strong></div>'+
  (n.u&&Number.isInteger(n.u.d)?'<div class="baby-card-trend">'+(n.u.d>0?'↑ +':n.u.d<0?'↓ ':'→ ')+formatNumber(Math.abs(n.u.d))+' births vs 2024 · US only</div>':'')+'</article>';
 }
+function updateAdvancedFilterCount(){
+ const f=state.filters;
+ const count=Number(f.meaning!=="all")+Number(f.letter!=="all")+Number(f.length!=="all")+Number(f.sort!=="popular")+Number(f.documented);
+ const counter=$("advancedFilterCount");
+ if(!counter)return;
+ counter.hidden=count===0;
+ counter.textContent=count?String(count):"";
+ counter.setAttribute("aria-label",count+" active advanced filters");
+}
 function renderExplore(){
+ updateAdvancedFilterCount();
  if(!state.loaded)return;
  state.filtered=core.filterNames(state.names,state.filters);
  $("resultsCount").textContent=formatNumber(state.filtered.length)+" names found";
