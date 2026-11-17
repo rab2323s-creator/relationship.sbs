@@ -42,7 +42,7 @@
     const gender=filters.gender||"all",meaning=filters.meaning||"all",origin=filters.origin||"all",sort=filters.sort||"popular";
     const letter=filters.letter||"all",length=filters.length||"all";
     const isLengthMatch=n=>length==="all"||(length==="short"&&n.n.length<=4)||(length==="medium"&&n.n.length>=5&&n.n.length<=6)||(length==="long"&&n.n.length>=7);
-    let output=names.filter(n=>(gender==="all"||n.g===gender||n.g==="unisex"&&(gender==="boy"||gender==="girl"))&&(meaning==="all"||n.t.includes(meaning))&&(origin==="all"||n.o===origin)&&(letter==="all"||n.n.toUpperCase().startsWith(letter))&&isLengthMatch(n)&&(q===""||[n.n,n.m,n.o].some(s=>keyOf(s).includes(q))));
+    let output=names.filter(n=>(gender==="all"||n.g===gender||n.g==="unisex"&&(gender==="boy"||gender==="girl"))&&(meaning==="all"||n.t.includes(meaning))&&(!filters.documented||Boolean(n.m&&n.o))&&(origin==="all"||n.o===origin)&&(letter==="all"||n.n.toUpperCase().startsWith(letter))&&isLengthMatch(n)&&(q===""||[n.n,n.m,n.o].some(s=>keyOf(s).includes(q))));
     output.sort((a,b)=>sort==="az"?a.n.localeCompare(b.n,"en"):sort==="za"?b.n.localeCompare(a.n,"en"):sort==="rare"?((a.u?.c??a.c)-(b.u?.c??b.c))||a.n.localeCompare(b.n,"en"):((b.u?.c??b.c)-(a.u?.c??a.c))||a.n.localeCompare(b.n,"en"));
     return output;
   }
