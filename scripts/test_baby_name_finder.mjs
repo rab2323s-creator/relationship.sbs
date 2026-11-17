@@ -224,12 +224,12 @@ test("source notes disclose meaning coverage and regional differences",()=>{
 test("search-first SEO keeps a single accurate heading, stable canonical and accurate schema",()=>{
  const title=html.match(/<title>([^<]+)<\/title>/)?.[1];
  assert.equal(title,"Baby Name Finder – Search 20,000 Names | Free Tool");
- const headings=[...html.matchAll(/<h1\\b[^>]*>([\\s\\S]*?)<\\/h1>/g)];
+ const headings=html.split("<h1 ").slice(1);
  assert.equal(headings.length,1);
- assert(headings[0][1].includes("Baby Name Finder: Explore 20,000 Baby Names"));
+ assert(headings[0].includes("Baby Name Finder: Explore 20,000 Baby Names"));
  assert(html.includes('content="Search 20,000 baby names by gender, starting letter'));
  assert(html.includes('<link rel="canonical" href="https://relationship.sbs/tools/baby-name-finder/">'));
- const json=html.match(/<script type="application\\/ld\\+json">([\\s\\S]*?)<\\/script>/)?.[1];
+ const json=html.split('<script type="application/ld+json">')[1]?.split("</script>")[0];
  const graph=JSON.parse(json)["@graph"];
  assert.equal(graph.find(x=>x["@type"]==="WebApplication").name,"Baby Name Finder");
  assert(!title.includes("Names & Meanings"));
@@ -245,7 +245,7 @@ test("search and gender stay above collapsible advanced filters; results precede
  assert(position('id="originSelect"')>position('id="advancedFilters"'));
  assert(html.includes('<div class="baby-field" hidden><label for="originSelect">'));
  assert(html.includes('id="advancedFilterCount" hidden'));
- const ids=[...html.matchAll(/\\bid="([^"]+)"/g)].map(m=>m[1]);
+ const ids=[...html.matchAll(/id="([^"]+)"/g)].map(m=>m[1]);
  assert.equal(new Set(ids).size,ids.length);
  assert(css.includes('.baby-more-filters>summary'));
  assert(css.includes('@media(max-width:720px)'));
