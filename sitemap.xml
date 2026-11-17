@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://relationship.sbs/</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-17</lastmod>
   </url>
   <url>
     <loc>https://relationship.sbs/about/</loc>
@@ -923,6 +923,10 @@
   <url>
     <loc>https://relationship.sbs/tests/would-you-rather-for-couples/</loc>
     <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://relationship.sbs/tools/baby-name-finder/</loc>
+    <lastmod>2026-11-17</lastmod>
   </url>
   <url>
     <loc>https://relationship.sbs/tools/love-calculator/</loc>
