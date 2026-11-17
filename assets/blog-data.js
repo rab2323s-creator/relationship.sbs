@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "beautiful-baby-girl-names",
+  title: "Beautiful Baby Girl Names: Classic, Modern & Unique Ideas",
+  excerpt: "Discover 80+ beautiful baby girl name ideas: timeless classics, modern picks, nature names, short choices and documented meanings, plus a free shortlist tool.",
+  date: "2026-11-17",
+  readingMinutes: 15,
+  tags: ["Beautiful Baby Girl Names", "Classic Girl Names", "Modern Baby Girl Names", "Unique Baby Girl Names", "Short Girl Names", "Nature Inspired Girl Names", "Baby Girl Names With Meanings", "Baby Names for Couples"],
+  category: "Baby Names & Family",
+  cover: "/assets/images/baby-name-finder-20000-baby-names-for-couples.webp",
+  featured: true
+},
+
+{
   slug: "emotional-invalidation-in-relationships",
   title: "Emotional Invalidation in Relationships: 12 Signs, Examples & How to Respond",
   excerpt: "Emotional invalidation in relationships: 12 signs, 15 side-by-side response examples, how it differs from gaslighting and practical scripts to feel heard.",
