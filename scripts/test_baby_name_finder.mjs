@@ -428,3 +428,42 @@ test("international-first finder removes statistical and region UI without losin
  assert(read("assets/data/BABY_NAMES_SOURCES.md").includes("SSA"),"Preserve private technical provenance");
  assert(json("assets/data/baby-names-20k-manifest.json").popularityYear===2025,"Retain raw dataset unchanged");
 });
+
+
+test("new beautiful girl names article is indexed in blog and linked to the finder",()=>{
+ const article=read("blog/beautiful-baby-girl-names/index.html");
+ const blogData=read("assets/blog-data.js");
+ assert(article.includes('<link rel="canonical" href="https://relationship.sbs/blog/beautiful-baby-girl-names/">'));
+ assert.equal((article.match(/<h1\b/g)||[]).length,1);
+ assert(article.includes("Beautiful Baby Girl Names: Classic, Modern &amp; Unique Ideas"));
+ assert(article.includes('meta name="robots" content="index,follow'));
+ assert(article.includes('href="/tools/baby-name-finder/"'));
+ assert(html.includes('href="/blog/beautiful-baby-girl-names/"'));
+ assert(blogData.includes('slug: "beautiful-baby-girl-names"'));
+ assert(blogData.includes('category: "Baby Names & Family"'));
+ assert(article.includes('src="/assets/images/baby-name-finder-20000-baby-names-for-couples.webp"'));
+ assert(fs.existsSync(path.join(root,"assets/images/baby-name-finder-20000-baby-names-for-couples.webp")));
+ const schema=JSON.parse(article.split('<script type="application/ld+json">')[1].split("</script>")[0]);
+ const entities=schema["@graph"];
+ assert(entities.some(x=>x["@type"]==="BlogPosting"&&x.datePublished==="2026-11-17"));
+ const faq=entities.find(x=>x["@type"]==="FAQPage");
+ assert.equal(faq.mainEntity.length,9);
+ for(const q of faq.mainEntity)assert(article.includes("<summary>"+q.name+"</summary>"));
+ for(const section of ["classic","modern","elegant","short","nature","distinctive","international","meaning","letters","pairings","choose","together","faq"]){
+  assert(article.includes('id="'+section+'"'),"Missing content section "+section);
+ }
+ const toc=[...article.matchAll(/<a href="#([^"]+)">/g)].map(x=>x[1]);
+ for(const id of toc)assert(article.includes('id="'+id+'"'),"Broken article jump link #"+id);
+ const cards=[...article.matchAll(/<div class="bg-name"><h3>([^<]+)<\/h3>/g)].map(x=>x[1]);
+ assert(cards.length>=50,"Substantive name examples required");
+ for(const label of cards){
+  const actual=nameMap.get(core.keyOf(label));
+  assert(actual,"Name is absent from 20k catalog: "+label);
+  assert.equal(actual.g,"girl","Article girl name classified differently: "+label);
+ }
+ const documented=[["Belle","beauty, beautiful"],["Mabel","lovable"],["Farah","joy"],["Nova","new"],["Florence","flowering, flourishing"],["Violet","violet"],["Thea","goddess"],["Esme","esteemed"],["Maeve","intoxicating"],["Lucia","light"],["Zara","flower"],["Cora","maiden"]];
+ for(const [label,gloss] of documented){
+  assert.equal(nameMap.get(core.keyOf(label))?.m,gloss,"Unverified meaning gloss: "+label);
+  assert(article.includes("<th scope=\"row\">"+label+"</th>"),"Meaning missing from published article: "+label);
+ }
+});
