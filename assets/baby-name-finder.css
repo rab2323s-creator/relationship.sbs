@@ -161,3 +161,6 @@ body.baby-page{background:#faf7f5;color:#302c31}
  .baby-region-lists{grid-template-columns:1fr}
  .baby-region-lists li{font-size:13px}
 }
+
+.baby-meaning-source{display:inline-block;margin-top:10px;color:#965475;font-size:11px;text-decoration:underline;text-underline-offset:2px;font-weight:680}
+.baby-meaning-source:hover{color:#633851}
