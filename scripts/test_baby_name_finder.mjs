@@ -72,3 +72,34 @@ test("SEO metadata, canonical, structured data and app landmarks",()=>{
  assert(html.includes('id="errorState"'));
  assert(html.includes('name="description"'));
 });
+
+test("initial and length filters keep exact matching name lengths",()=>{
+ const letters=core.filterNames(names,{letter:"A"});
+ assert(letters.length>0);
+ assert(letters.every(n=>n.n.startsWith("A")));
+ const short=core.filterNames(names,{length:"short"});
+ assert(short.length>0&&short.every(n=>n.n.length<=4));
+ const mid=core.filterNames(names,{length:"medium"});
+ assert(mid.length>0&&mid.every(n=>n.n.length>=5&&n.n.length<=6));
+ const long=core.filterNames(names,{length:"long"});
+ assert(long.length>0&&long.every(n=>n.n.length>=7));
+});
+test("partner links must be from the exact tool origin and path",()=>{
+ const picks=[names[0].n,names[1].n];
+ const link="https://relationship.sbs/tools/baby-name-finder/?partner="+core.toUrlToken(picks,names);
+ const expected=["relationship.sbs","tools"];
+ assert.deepEqual(core.parsePartnerLink(link,names,"https://relationship.sbs","/tools/baby-name-finder/"),picks.map(n=>n.toLowerCase()));
+ assert.deepEqual(core.parsePartnerLink(link,names,"https://evil.example","/tools/baby-name-finder/"),[]);
+ assert.deepEqual(core.parsePartnerLink(link,names,"https://relationship.sbs","/tools/love-calculator/"),[]);
+ assert.deepEqual(core.parsePartnerLink("javascript:alert(1)",names,"https://relationship.sbs","/tools/baby-name-finder/"),[]);
+});
+test("quick-pick deck never repeats and caps to available names",()=>{
+ const deck=core.makePickDeck(names,12,()=>.5);
+ assert.equal(deck.length,12);
+ assert.equal(new Set(deck.map(n=>n.n)).size,12);
+ assert.equal(core.makePickDeck(names.slice(0,3),12,()=>.5).length,3);
+});
+test("second edition interaction controls are included",()=>{
+ const html=fs.readFileSync(path.join(root,"tools/baby-name-finder/index.html"),"utf8");
+ for(const id of ["initialSelect","lengthSelect","startQuickPick","quickPickStage","quickPickSave","partnerLinkForm","partnerLinkInput"])assert(html.includes('id="'+id+'"'));
+});
