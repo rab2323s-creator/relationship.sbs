@@ -37,7 +37,7 @@ function labelMeaningCounts(){
  for(const name of state.names)for(const tag of name.t)counts[tag]=(counts[tag]||0)+1;
  for(const opt of $("meaningSelect").options){
   if(opt.value==="all")continue;
-  const label=opt.dataset.baseLabel||opt.textContent.replace(/\\s*\\(\\d+\\)$/,"");
+  const label=opt.dataset.baseLabel||opt.textContent;
   opt.dataset.baseLabel=label;
   opt.textContent=label+" ("+(counts[opt.value]||0)+")";
  }
