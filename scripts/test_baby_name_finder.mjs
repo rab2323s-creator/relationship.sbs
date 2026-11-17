@@ -441,8 +441,8 @@ test("new beautiful girl names article is indexed in blog and linked to the find
  assert(html.includes('href="/blog/beautiful-baby-girl-names/"'));
  assert(blogData.includes('slug: "beautiful-baby-girl-names"'));
  assert(blogData.includes('category: "Baby Names & Family"'));
- assert(article.includes('src="/assets/images/baby-name-finder-20000-baby-names-for-couples.webp"'));
- assert(fs.existsSync(path.join(root,"assets/images/baby-name-finder-20000-baby-names-for-couples.webp")));
+ assert(article.includes('src="/assets/images/blog/beautiful-baby-girl-names/beautiful-baby-girl-names-parents-choosing-names.webp"'));
+ assert(fs.existsSync(path.join(root,"assets/images/blog/beautiful-baby-girl-names/beautiful-baby-girl-names-parents-choosing-names.webp")));
  const schema=JSON.parse(article.split('<script type="application/ld+json">')[1].split("</script>")[0]);
  const entities=schema["@graph"];
  assert(entities.some(x=>x["@type"]==="BlogPosting"&&x.datePublished==="2026-11-17"));
@@ -484,8 +484,8 @@ test("cool boy names editorial page has verified name ideas, exact meanings, SEO
  assert(!html.includes("compare the usage counts"));
  assert(blogData.includes('slug: "cool-baby-boy-names"'));
  assert(blogData.includes('category: "Baby Names & Family"'));
- assert(article.includes('src="/assets/images/baby-name-finder-20000-baby-names-for-couples.webp"'));
- assert(fs.existsSync(path.join(root,"assets/images/baby-name-finder-20000-baby-names-for-couples.webp")));
+ assert(article.includes('src="/assets/images/blog/cool-baby-boy-names/cool-baby-boy-names-parents-choosing-names.webp"'));
+ assert(fs.existsSync(path.join(root,"assets/images/blog/cool-baby-boy-names/cool-baby-boy-names-parents-choosing-names.webp")));
  for(const stylesheet of ["/article-ltr.css","/assets/digital-relationship-guides.css"]){
   assert(article.includes('href="'+stylesheet+'"'));
  }
@@ -529,4 +529,51 @@ test("cool boy names editorial page has verified name ideas, exact meanings, SEO
  }
  assert(article.includes("min-width:540px")&&article.includes("@media(max-width:710px)"));
  assert(!article.includes("Most used in the US"));
+});
+
+
+test("two blog hero photos match HTML, index cards, social previews and structured data",()=>{
+ const posts=[
+  {slug:"beautiful-baby-girl-names",label:"girl"},
+  {slug:"cool-baby-boy-names",label:"boy"}
+ ];
+ const blogData=read("assets/blog-data.js");
+ for(const {slug,label} of posts){
+  const htmlPage=read("blog/"+slug+"/index.html");
+  const imgPath="/assets/images/blog/"+slug+"/"+slug+"-parents-choosing-names.webp";
+  const absolute="https://relationship.sbs"+imgPath;
+  const file=path.join(root,imgPath.slice(1));
+  assert(fs.existsSync(file),"Dedicated hero image is missing: "+file);
+  const data=fs.readFileSync(file);
+  assert(data.length>10000,"Hero image is suspiciously small: "+slug);
+  assert.equal(data.toString("ascii",0,4),"RIFF","Invalid WebP container: "+slug);
+  assert.equal(data.toString("ascii",8,12),"WEBP","Not a WebP image: "+slug);
+  const hero=htmlPage.match(/<img class="b[b g]-hero-image"[^>]*>/)?.[0]||htmlPage.match(/<img class="(?:bg|bb)-hero-image"[^>]*>/)?.[0];
+  assert(hero,"Hero is missing: "+slug);
+  assert(hero.includes('src="'+imgPath+'"'),"Hero src mismatch: "+slug);
+  assert(hero.includes('alt="Expectant parents'),"Descriptive alt missing: "+slug);
+  assert(hero.includes('width="1200" height="630"'),"Image dimensions missing: "+slug);
+  assert(hero.includes('fetchpriority="high"')&&hero.includes('loading="eager"'),"Hero priority missing: "+slug);
+  for(const tag of [
+   '<meta property="og:image" content="'+absolute+'">',
+   '<meta property="og:image:secure_url" content="'+absolute+'">',
+   '<meta property="og:image:type" content="image/webp">',
+   '<meta name="twitter:image" content="'+absolute+'">'
+  ])assert(htmlPage.includes(tag),"Social image metadata missing: "+tag);
+  assert(htmlPage.includes('property="og:image:alt"'),"OG descriptive image missing: "+slug);
+  assert(htmlPage.includes('name="twitter:image:alt"'),"Twitter descriptive image missing: "+slug);
+  const graph=JSON.parse(htmlPage.split('<script type="application/ld+json">')[1].split("</script>")[0])["@graph"];
+  const image=graph.find(x=>x["@type"]==="ImageObject");
+  const post=graph.find(x=>x["@type"]==="BlogPosting");
+  assert(image&&post,"Missing structured data: "+slug);
+  assert.equal(image.contentUrl,absolute);
+  assert.equal(image.url,absolute);
+  assert.equal(image.encodingFormat,"image/webp");
+  assert.equal(image.width,1200);assert.equal(image.height,630);
+  assert.equal(post.image["@id"],image["@id"]);
+  assert(blogData.includes('slug: "'+slug+'"'),"Blog listing missing: "+slug);
+  const entry=blogData.slice(blogData.indexOf('slug: "'+slug+'"'),blogData.indexOf('slug: "'+slug+'"')+900);
+  assert(entry.includes('cover: "'+imgPath+'"'),"Blog thumbnail mismatch: "+slug);
+  assert(!htmlPage.includes("/assets/images/baby-name-finder-20000-baby-names-for-couples.webp"),"Old image in article: "+slug);
+ }
 });

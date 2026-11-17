@@ -10,7 +10,7 @@ window.BLOG_POSTS = [
   readingMinutes: 17,
   tags: ["Cool Baby Boy Names", "Modern Baby Boy Names", "Short Boy Names", "Unique Baby Boy Names", "Strong Boy Names", "Baby Boy Names With Meanings", "Classic Boy Names", "Boy Names A-Z"],
   category: "Baby Names & Family",
-  cover: "/assets/images/baby-name-finder-20000-baby-names-for-couples.webp",
+  cover: "/assets/images/blog/cool-baby-boy-names/cool-baby-boy-names-parents-choosing-names.webp",
   featured: true
 },
 
@@ -22,7 +22,7 @@ window.BLOG_POSTS = [
   readingMinutes: 15,
   tags: ["Beautiful Baby Girl Names", "Classic Girl Names", "Modern Baby Girl Names", "Unique Baby Girl Names", "Short Girl Names", "Nature Inspired Girl Names", "Baby Girl Names With Meanings", "Baby Names for Couples"],
   category: "Baby Names & Family",
-  cover: "/assets/images/baby-name-finder-20000-baby-names-for-couples.webp",
+  cover: "/assets/images/blog/beautiful-baby-girl-names/beautiful-baby-girl-names-parents-choosing-names.webp",
   featured: true
 },
 
