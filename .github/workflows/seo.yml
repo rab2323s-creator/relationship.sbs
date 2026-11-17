@@ -116,6 +116,9 @@ jobs:
       - name: Test baby name finder data, search and sharing
         run: node --test scripts/test_baby_name_finder.mjs
 
+      - name: Reconcile all 20k baby names to archived 2024/2025 SSA and dictionary sources
+        run: node --test scripts/test_baby_name_source_integrity.mjs
+
       - name: Smoke-test 20k baby name finder browser initialization and interactions
         run: node --test scripts/test_baby_name_browser.mjs
 
