@@ -63,7 +63,7 @@ function card(n){
  return '<article class="baby-name-card" data-name="'+safeText(key)+'">'+
  '<div class="baby-name-card-top"><span class="baby-origin-badge">'+safeText(n.o)+'</span>'+
  '<button class="baby-heart'+(saved?' is-saved':'')+'" type="button" data-heart="'+safeText(key)+'" aria-pressed="'+String(saved)+'" aria-label="'+(saved?'Remove ':'Save ')+safeText(n.n)+(saved?' from':' to')+' favorites" title="'+(saved?'Remove from':'Save to')+' favorites">'+(saved?'♥':'♡')+'</button></div>'+
- '<h4>'+safeText(n.n)+'</h4><p class="baby-card-meaning">'+safeText(n.m)+'</p>'+
+ '<h4>'+safeText(n.n)+'</h4><p class="baby-card-meaning">'+safeText(n.m)+'</p>'+ '<a class="baby-meaning-source" href="https://en.wiktionary.org/w/index.php?search='+encodeURIComponent(n.n)+'" target="_blank" rel="noopener noreferrer" aria-label="Research the etymology of '+safeText(n.n)+' on Wiktionary">Research meaning ↗</a>'+
  '<div class="baby-card-tags"><span>'+safeText(n.g==="unisex"?"Unisex":n.g==="girl"?"Mostly girls":"Mostly boys")+'</span>'+tags.map(t=>'<span>'+safeText(t)+'</span>').join("")+'</div>'+
  regionDescription(n)+
  '<div class="baby-card-foot"><span>US births in '+(n.u?'2025':'2020 (fallback)')+'</span><strong>'+formatNumber(usInfo(n).c)+'</strong></div>'+
