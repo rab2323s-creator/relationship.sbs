@@ -233,8 +233,51 @@ function surprise(){
  $("surpriseSpotlight").innerHTML='<div><span class="baby-eyebrow">A NAME TO CONSIDER</span><h3>'+safeText(choice.n)+'</h3><p>'+(choice.m?safeText(choice.m):'Meaning not yet documented')+'</p><small>'+(choice.o?safeText(choice.o)+' roots · ':'')+formatNumber(usInfo(choice).c)+' US births in '+(choice.u?'2025':'2020')+'</small></div><button type="button" class="baby-heart'+(state.saved.includes(core.keyOf(choice.n))?' is-saved':'')+'" data-heart="'+safeText(core.keyOf(choice.n))+'" aria-label="Save '+safeText(choice.n)+' to favorites" aria-pressed="'+String(state.saved.includes(core.keyOf(choice.n)))+'">'+(state.saved.includes(core.keyOf(choice.n))?'♥':'♡')+'</button>';
  $("surpriseSpotlight").scrollIntoView({behavior:"smooth",block:"nearest"});
 }
+function browseFromGuide(link){
+ const action=link.dataset.babyBrowse;
+ const nextGender=link.dataset.babyGender||"all";
+ if(!["name","gender","letter","meaning","together"].includes(action))return;
+ if(action==="letter"&&!/^[A-Z]$/.test(link.dataset.babyLetter||""))return;
+ if(action==="name"&&!/^[A-Za-z]{2,40}$/.test(link.dataset.babyName||""))return;
+ if(action==="together"){
+  selectTab("together");
+ }else{
+  const filters={query:"",gender:nextGender,meaning:"all",origin:"all",sort:"popular",letter:"all",length:"all",documented:false};
+  if(action==="letter")filters.letter=link.dataset.babyLetter;
+  if(action==="name")filters.query=link.dataset.babyName;
+  if(action==="meaning")filters.documented=true;
+  state.filters=filters;
+  $("nameSearch").value=filters.query;
+  $("initialSelect").value=filters.letter;
+  $("meaningSelect").value=filters.meaning;
+  $("sortSelect").value=filters.sort;
+  $("lengthSelect").value=filters.length;
+  $("originSelect").value=filters.origin;
+  $("meaningOnly").checked=filters.documented;
+  $("advancedFilters").open=action==="letter"||action==="meaning";
+  document.querySelectorAll("[data-gender]").forEach(btn=>{
+   const selected=btn.dataset.gender===filters.gender;
+   btn.classList.toggle("is-selected",selected);
+   btn.setAttribute("aria-pressed",String(selected));
+  });
+  document.querySelectorAll("[data-baby-browse='letter']").forEach(a=>{
+   const active=a.dataset.babyLetter===filters.letter&&a.dataset.babyGender===filters.gender;
+   a.classList.toggle("is-selected",active);
+   if(active)a.setAttribute("aria-current","true");else a.removeAttribute("aria-current");
+  });
+  state.visible=18;
+  $("surpriseSpotlight").hidden=true;
+  selectTab("explore");
+  renderExplore();
+ }
+ $("babyFinder").scrollIntoView({behavior:"smooth",block:"start"});
+ if(action!=="together")$("nameSearch").focus({preventScroll:true});
+}
 function bind(){
  document.addEventListener("click",e=>{
+  const guide=e.target.closest("[data-baby-browse]");
+  if(guide){e.preventDefault();browseFromGuide(guide);return}
+
   const heart=e.target.closest("[data-heart]");
   if(heart){toggleFavorite(heart.dataset.heart);return}
   const goto=e.target.closest("[data-goto]");if(goto){selectTab(goto.dataset.goto);return}

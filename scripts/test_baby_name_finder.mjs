@@ -223,11 +223,11 @@ test("source notes disclose meaning coverage and regional differences",()=>{
 
 test("search-first SEO keeps a single accurate heading, stable canonical and accurate schema",()=>{
  const title=html.match(/<title>([^<]+)<\/title>/)?.[1];
- assert.equal(title,"Baby Name Finder – Search 20,000 Names | Free Tool");
+ assert.equal(title,"Baby Name Finder: 20,000 Girl &amp; Boy Names | Free");
  const headings=html.split("<h1 ").slice(1);
  assert.equal(headings.length,1);
- assert(headings[0].includes("Baby Name Finder: Explore 20,000 Baby Names"));
- assert(html.includes('content="Search 20,000 baby names by gender, starting letter'));
+ assert(headings[0].includes("Baby Name Finder: 20,000 Baby Girl &amp; Boy Names"));
+ assert(html.includes('content="Find baby girl, boy and gender-neutral names from 20,000 options.'));
  assert(html.includes('<link rel="canonical" href="https://relationship.sbs/tools/baby-name-finder/">'));
  const json=html.split('<script type="application/ld+json">')[1]?.split("</script>")[0];
  const graph=JSON.parse(json)["@graph"];
@@ -272,12 +272,12 @@ test("Baby Name Finder schema describes real app features, sources and visible F
  assert.equal(appEntity.offers.price,"0");
  assert(appEntity.featureList.some(x=>x.includes("20,000")));
  assert(appEntity.featureList.some(x=>x.includes("shortlists")));
- assert(appEntity.description.includes("documented meanings"));
+ assert(appEntity.description.includes("documented linguistic meanings"));
  assert.equal(appEntity.mainEntityOfPage["@id"],page["@id"]);
  assert.equal(page.mainEntity["@id"],appEntity["@id"]);
  assert.equal(page.hasPart["@id"],faq["@id"]);
  assert.equal(appEntity.image["@id"],image["@id"]);
- assert.equal(faq.mainEntity.length,7);
+ assert.equal(faq.mainEntity.length,12);
  for(const q of faq.mainEntity){
   assert(html.includes("<summary>"+q.name+"</summary>"));
   assert(q.acceptedAnswer.text.length>35);
@@ -316,5 +316,70 @@ test("editorial baby-name internal links are topical, indexable and absolute-pat
   const content=read(page);
   assert(content.includes('href="/tools/baby-name-finder/"'),"Missing link: "+page);
   assert(!content.includes('rel="canonical" href="https://relationship.sbs/tools/baby-name-finder/"'),"Wrong canonical: "+page);
+ }
+});
+
+
+test("approved baby girl and boy search intent stays above the functional finder",()=>{
+ assert(html.includes("Baby Name Finder: 20,000 Baby Girl &amp; Boy Names"));
+ assert(html.includes("Looking for beautiful baby girl names, cool baby boy names, or gender-neutral ideas?"));
+ assert(html.includes("Free Baby Name Finder · Search A–Z · Save &amp; Compare Names"));
+ assert(html.indexOf('id="babyFinder"')>html.indexOf('id="heroTitle"'));
+ assert(html.indexOf('class="baby-discovery"')>html.indexOf('id="babyFinder"'));
+ assert(html.indexOf('class="baby-discovery"')>html.indexOf('id="resultCards"'));
+ assert(html.indexOf('class="baby-discovery"')>html.indexOf('id="panelTogether"'));
+ assert(html.indexOf('class="baby-discovery"')<html.indexOf('class="baby-editorial"'));
+ assert(html.indexOf('class="baby-faq"')>html.indexOf('class="baby-discovery"'));
+});
+
+test("A-Z browsing has 52 accessible category-specific real-name links",()=>{
+ const letters="ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+ for(const gender of ["girl","boy"]){
+  const matches=[...html.matchAll(new RegExp('data-baby-browse="letter" data-baby-gender="'+gender+'" data-baby-letter="([A-Z])"','g'))].map(m=>m[1]);
+  assert.deepEqual(matches,letters);
+  for(const letter of letters){
+   assert(names.some(n=>(n.g===gender||n.g==="unisex")&&n.n.startsWith(letter)),"Missing real name "+gender+" "+letter);
+  }
+ }
+ assert(app.includes('function browseFromGuide(link)'));
+ assert(app.includes('link.dataset.babyLetter'));
+ assert(app.includes('state.filters=filters'));
+ assert(css.includes('.baby-alphabet-letters'));
+ assert(css.includes('@media(max-width:720px)'));
+});
+
+test("all advertised example names and selected documented meanings exist in the catalog",()=>{
+ const expected={
+  girl:["Olivia","Aurora","Violet","Lily","Charlotte","Eleanor","Alice","Clara","Ada","Arabella","Amelia","Ava"],
+  boy:["Kai","Milo","Axel","Finn","Liam","Noah","Oliver","Theodore","Arthur","Felix","Ezra","Rowan","Asher"],
+  unisex:["Quinn","Riley"]
+ };
+ for(const [gender,examples] of Object.entries(expected)){
+  for(const label of examples){
+   const item=nameMap.get(core.keyOf(label));
+   assert(item,"Name not found: "+label);
+   assert.equal(item.g,gender,label+" category differs");
+  }
+ }
+ for(const [name,gloss] of [["Violet","violet"],["Axel","father + peace"],["Riley","rye + clearing, meadow"]]){
+  assert.equal(nameMap.get(core.keyOf(name)).m,gloss,"Meaning not documented as displayed: "+name);
+ }
+ for(const name of ["Olivia","Violet","Charlotte","Ada","Kai","Milo","Liam","Arthur","Axel","Riley"]){
+  assert(html.includes('data-baby-name="'+name+'"'));
+ }
+ assert(!html.includes("Top 1000 Baby Girl Names"),"Don't imply a ranking we don't publish");
+});
+
+test("reader questions are on-page, source-safe and represented in FAQPage schema",()=>{
+ const faq=JSON.parse(html.split('<script type="application/ld+json">')[1].split("</script>")[0])["@graph"].find(x=>x["@type"]==="FAQPage");
+ for(const question of [
+  "What's a good name for a boy?",
+  "What is a cool name for a boy?",
+  "What are beautiful baby girl names?",
+  "What are classic girl names?",
+  "How do I find baby names that start with A?"
+ ]){
+  assert(html.includes("<summary>"+question+"</summary>"));
+  assert(faq.mainEntity.some(x=>x.name===question&&x.acceptedAnswer.text.length>50));
  }
 });

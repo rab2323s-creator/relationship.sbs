@@ -132,3 +132,55 @@ test("advanced filters report active selections and reset without disrupting sea
  assert.equal(ui.get("advancedFilterCount").hidden,true);
  assert.equal(ui.get("resultsCount").textContent,"20,000 names found");
 });
+
+
+test("editorial A–Z guide activates real girl and boy search filters",async()=>{
+ const ui=createHarness();
+ await waitFor(()=>ui.get("resultsCount").textContent==="20,000 names found");
+ const makeLink=(gender,letter)=>({dataset:{babyBrowse:"letter",babyGender:gender,babyLetter:letter}});
+ const fire=link=>{
+  let prevented=false;
+  ui.clickListeners.get("click")({
+   target:{closest(selector){return selector==="[data-baby-browse]"?link:null}},
+   preventDefault(){prevented=true}
+  });
+  assert(prevented,"Guide click should prevent hash-only navigation");
+ };
+ fire(makeLink("girl","A"));
+ assert.equal(ui.get("initialSelect").value,"A");
+ assert.equal(ui.get("advancedFilters").open,true);
+ assert.equal(ui.get("advancedFilterCount").textContent,"1");
+ assert(ui.get("resultCards").innerHTML.includes("<h4>"));
+ assert(!ui.get("resultCards").innerHTML.includes("<h4>Liam</h4>"));
+ assert(ui.get("resultsCount").textContent!=="20,000 names found");
+ fire(makeLink("boy","Z"));
+ assert.equal(ui.get("initialSelect").value,"Z");
+ assert.equal(ui.get("nameSearch").value,"");
+ assert(ui.get("resultsCount").textContent.endsWith("names found"));
+ assert(ui.get("resultCards").innerHTML.includes("baby-name-card"));
+});
+
+test("editorial example, meanings and couples links preserve operational finder state",async()=>{
+ const ui=createHarness();
+ await waitFor(()=>ui.get("resultsCount").textContent==="20,000 names found");
+ const fire=dataset=>ui.clickListeners.get("click")({
+  target:{closest(selector){return selector==="[data-baby-browse]"?{dataset}:null}},
+  preventDefault(){}
+ });
+ fire({babyBrowse:"name",babyGender:"girl",babyName:"Violet"});
+ assert.equal(ui.get("nameSearch").value,"Violet");
+ assert(ui.get("resultCards").innerHTML.includes("<h4>Violet</h4>"));
+ fire({babyBrowse:"meaning"});
+ assert.equal(ui.get("meaningOnly").checked,true);
+ assert.equal(ui.get("advancedFilters").open,true);
+ assert.equal(ui.get("nameSearch").value,"");
+ assert(ui.get("resultsCount").textContent.includes("names found"));
+ fire({babyBrowse:"together"});
+ assert.equal(ui.get("panelTogether").hidden,false);
+ assert.equal(ui.get("panelExplore").hidden,true);
+ fire({babyBrowse:"gender",babyGender:"boy"});
+ assert.equal(ui.get("panelExplore").hidden,false);
+ assert.equal(ui.get("panelTogether").hidden,true);
+ assert.equal(ui.get("initialSelect").value,"all");
+ assert.equal(ui.get("meaningOnly").checked,false);
+});

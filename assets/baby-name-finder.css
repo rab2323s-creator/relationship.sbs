@@ -259,3 +259,42 @@ body.baby-page{background:#faf7f5;color:#302c31}
  .baby-tabbar{gap:14px}
  .baby-tab{font-size:11px}
 }
+
+/* Editorial search-intent discovery, placed after the working finder. */
+.baby-discovery{margin:18px 0 45px;scroll-margin-top:24px}
+.baby-discovery-intro{text-align:center;max-width:790px;margin:0 auto 25px}
+.baby-discovery-intro h2,.baby-alphabet-intro h2{font:600 clamp(29px,3.6vw,43px)/1.14 Georgia,"Times New Roman",serif;letter-spacing:-.035em;color:#3f303c;margin:10px 0 12px;text-wrap:balance}
+.baby-discovery-intro>p,.baby-alphabet-intro>p{color:#756873;line-height:1.7;font-size:14px;margin:0}
+.baby-discovery-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.baby-discovery-card{position:relative;display:flex;flex-direction:column;align-items:flex-start;min-width:0;padding:clamp(21px,2.7vw,32px);border:1px solid #ebdce3;border-radius:22px;background:#fffdfc;box-shadow:0 7px 27px rgba(76,36,57,.045)}
+.baby-discovery-card--girl{background:linear-gradient(147deg,#fff8fa,#fffefb)}
+.baby-discovery-card--boy{background:linear-gradient(147deg,#f9f8fc,#fffcfa)}
+.baby-discovery-card--meaning{background:linear-gradient(147deg,#fcf8f4,#fffdfb)}
+.baby-discovery-card--couples{background:linear-gradient(147deg,#fff6fa,#fffcfa)}
+.baby-discovery-tag{font-size:10px;font-weight:850;letter-spacing:.13em;color:#a05b7e}
+.baby-discovery-card h3,.baby-discovery-card h2{font:600 clamp(24px,2.55vw,31px)/1.2 Georgia,"Times New Roman",serif;letter-spacing:-.025em;color:#51364a;margin:12px 0 15px}
+.baby-discovery-card p{font-size:14px;line-height:1.74;color:#675966;margin:0 0 12px}
+.baby-discovery-card p strong{font-weight:750;color:#4c3946}
+.baby-example-names{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 20px}
+.baby-example-names a{display:inline-flex;align-items:center;justify-content:center;min-height:38px;padding:8px 13px;border-radius:999px;border:1px solid #e6d2dd;background:#fff;color:#844d6b;font-size:13px;font-weight:750;text-decoration:none;transition:background .2s,border-color .2s}
+.baby-example-names a:hover{background:#f7eaf0;border-color:#ccadbe}
+.baby-discovery-action{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:44px;padding:11px 16px;margin-top:auto;border-radius:11px;color:#fff!important;background:#89516f;text-decoration:none;font-size:13px;font-weight:800;text-align:center;transition:background .2s}
+.baby-discovery-action:hover{background:#693950}
+.baby-alphabet{margin:21px 0;padding:clamp(20px,3vw,33px);border:1px solid #e8d8e1;border-radius:23px;background:linear-gradient(155deg,#fcf8fa,#fdfcfb)}
+.baby-alphabet-intro{max-width:800px;margin-bottom:25px}
+.baby-alphabet-intro h2{font-size:clamp(27px,3.1vw,37px)}
+.baby-alphabet-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:23px}
+.baby-alphabet-group{min-width:0;padding:20px;background:#fff;border:1px solid #ece2e6;border-radius:17px}
+.baby-alphabet-group h3{font:600 clamp(21px,2vw,26px)/1.24 Georgia,"Times New Roman",serif;color:#4e3645;margin:0 0 9px}
+.baby-alphabet-group p{font-size:12px;line-height:1.65;color:#7a6a75;margin:0 0 17px}
+.baby-alphabet-letters{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:7px}
+.baby-alphabet-letters a{display:flex;align-items:center;justify-content:center;min-width:0;min-height:42px;padding:6px 2px;border:1px solid #ebdce3;border-radius:9px;background:#fdfafd;color:#704660;font-weight:800;font-size:13px;text-decoration:none;transition:background .2s,color .2s,border-color .2s}
+.baby-alphabet-letters a:hover,.baby-alphabet-letters a.is-selected{background:#89516f;border-color:#89516f;color:#fff}
+.baby-discovery a:focus-visible{outline:3px solid #9e5f83;outline-offset:3px}
+.baby-discovery-pair--secondary{margin-top:20px}
+.baby-couples-steps{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 21px}
+.baby-couples-steps span{padding:9px 12px;border-radius:9px;background:#f4e7ed;color:#754962;font-size:12px;font-weight:750}
+@media(max-width:900px){.baby-alphabet-grid{grid-template-columns:1fr}.baby-alphabet-group{padding:17px}}
+@media(max-width:720px){.baby-discovery{margin:8px 0 35px}.baby-discovery-intro{margin-bottom:19px}.baby-discovery-intro h2{font-size:30px}.baby-discovery-pair{grid-template-columns:1fr;gap:13px}.baby-discovery-card{padding:22px 19px;border-radius:17px}.baby-discovery-card h3,.baby-discovery-card h2{font-size:25px}.baby-alphabet{padding:19px 15px;margin:14px 0;border-radius:18px}.baby-alphabet-grid{gap:14px}.baby-alphabet-group{padding:15px}.baby-alphabet-letters{gap:6px}.baby-alphabet-letters a{min-height:44px}.baby-discovery-action{width:100%}.baby-example-names a{min-height:42px}}
+@media(max-width:350px){.baby-alphabet-letters{grid-template-columns:repeat(6,minmax(0,1fr))}}
+@media(prefers-reduced-motion:reduce){.baby-example-names a,.baby-discovery-action,.baby-alphabet-letters a{transition:none}}
