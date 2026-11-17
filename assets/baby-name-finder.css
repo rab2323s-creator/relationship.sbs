@@ -298,3 +298,12 @@ body.baby-page{background:#faf7f5;color:#302c31}
 @media(max-width:720px){.baby-discovery{margin:8px 0 35px}.baby-discovery-intro{margin-bottom:19px}.baby-discovery-intro h2{font-size:30px}.baby-discovery-pair{grid-template-columns:1fr;gap:13px}.baby-discovery-card{padding:22px 19px;border-radius:17px}.baby-discovery-card h3,.baby-discovery-card h2{font-size:25px}.baby-alphabet{padding:19px 15px;margin:14px 0;border-radius:18px}.baby-alphabet-grid{gap:14px}.baby-alphabet-group{padding:15px}.baby-alphabet-letters{gap:6px}.baby-alphabet-letters a{min-height:44px}.baby-discovery-action{width:100%}.baby-example-names a{min-height:42px}}
 @media(max-width:350px){.baby-alphabet-letters{grid-template-columns:repeat(6,minmax(0,1fr))}}
 @media(prefers-reduced-motion:reduce){.baby-example-names a,.baby-discovery-action,.baby-alphabet-letters a{transition:none}}
+
+/* Contextual navigation beside the breadcrumb: keep real hierarchy separate. */
+.baby-breadcrumb{flex-wrap:wrap;column-gap:13px;row-gap:8px}
+.baby-breadcrumb-trail,.baby-breadcrumb-links{display:inline-flex;align-items:center;flex-wrap:wrap;gap:10px}
+.baby-breadcrumb-links{margin-left:auto;gap:7px}
+.baby-breadcrumb-links a{display:inline-flex;align-items:center;justify-content:center;min-height:34px;padding:7px 13px;border:1px solid #e9dbe3;border-radius:999px;background:#fff;color:#80516b;font-size:12px;font-weight:740;text-decoration:none}
+.baby-breadcrumb-links a:hover{background:#f9edf3;border-color:#d6bdcb}
+.baby-breadcrumb a:focus-visible{outline:3px solid #9e5f83;outline-offset:3px}
+@media(max-width:520px){.baby-breadcrumb{align-items:flex-start;gap:9px 12px}.baby-breadcrumb-links{margin-left:0;width:100%}.baby-breadcrumb-links a{min-height:38px;padding:8px 14px}}
