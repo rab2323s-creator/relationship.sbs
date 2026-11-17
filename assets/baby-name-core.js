@@ -13,6 +13,7 @@
     const unique=new Set();
     for(const n of db.names){
       if(!n||typeof n.n!=="string"||!n.n.trim()||typeof n.m!=="string"||!n.m.trim()||typeof n.o!=="string"||!n.o.trim()||!["boy","girl","unisex"].includes(n.g)||!Number.isFinite(n.c)||n.c<5||!Number.isFinite(n.r)||n.r<1||!Array.isArray(n.t))throw Error("Invalid baby name row");
+      if(n.u!==undefined&&n.u!==null&&(!["F","M"].includes(n.u.s)||!Number.isInteger(n.u.c)||n.u.c<5||!Number.isInteger(n.u.r)||n.u.r<1||n.u.d!==undefined&&!Number.isInteger(n.u.d)))throw Error("Invalid 2025 popularity row");
       const k=keyOf(n.n);
       if(unique.has(k))throw Error("Duplicate baby name: "+n.n);
       unique.add(k);
@@ -25,7 +26,7 @@
     const letter=filters.letter||"all",length=filters.length||"all";
     const isLengthMatch=n=>length==="all"||(length==="short"&&n.n.length<=4)||(length==="medium"&&n.n.length>=5&&n.n.length<=6)||(length==="long"&&n.n.length>=7);
     let output=names.filter(n=>(gender==="all"||n.g===gender||n.g==="unisex"&&(gender==="boy"||gender==="girl"))&&(meaning==="all"||n.t.includes(meaning))&&(origin==="all"||n.o===origin)&&(letter==="all"||n.n.toUpperCase().startsWith(letter))&&isLengthMatch(n)&&(q===""||[n.n,n.m,n.o].some(s=>keyOf(s).includes(q))));
-    output.sort((a,b)=>sort==="az"?a.n.localeCompare(b.n,"en"):sort==="za"?b.n.localeCompare(a.n,"en"):sort==="rare"?(a.c-b.c)||a.n.localeCompare(b.n,"en"):(b.c-a.c)||a.n.localeCompare(b.n,"en"));
+    output.sort((a,b)=>sort==="az"?a.n.localeCompare(b.n,"en"):sort==="za"?b.n.localeCompare(a.n,"en"):sort==="rare"?((a.u?.c??a.c)-(b.u?.c??b.c))||a.n.localeCompare(b.n,"en"):((b.u?.c??b.c)-(a.u?.c??a.c))||a.n.localeCompare(b.n,"en"));
     return output;
   }
   function sanitizePicks(values,validNames){
