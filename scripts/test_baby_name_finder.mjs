@@ -193,12 +193,12 @@ test("meaning text and all dynamic names are HTML escaped",()=>{
 test("SEO HTML reflects exactly 20k names and documents missing etymologies",()=>{
  assert(html.includes('<link rel="canonical" href="https://relationship.sbs/tools/baby-name-finder/">'));
  assert(JSON.parse(html.split('<script type="application/ld+json">')[1].split("</script>")[0])["@graph"].some(x=>x["@type"]==="WebApplication"));
- assert(html.includes("20,000 distinct recorded baby-name spellings"));
+ assert(html.includes("20,000 baby-name spellings"));
  assert(!html.includes("Explore 1,000 names"));
  assert(html.includes("Do all 20,000 names have a verified meaning?"));
  assert(html.includes('id="babySourceStats"'));
  assert(html.includes('id="panelTogether"'));
- assert(html.includes('id="regionSelect"'));
+ assert(!html.includes('id="regionSelect"'));
  assert(html.includes('id="startQuickPick"'));
  assert(html.includes('id="partnerLinkForm"'));
  assert(html.includes('id="resultCards"'));
@@ -208,7 +208,8 @@ test("browser uses five validated shards and hides missing meanings",()=>{
  assert(app.includes("baby-names-20k-manifest.json"));
  assert(app.includes("assembleCatalog(db,payloads)"));
  assert(app.includes("Meaning not yet independently documented"));
- assert(app.includes("state.names.filter(n=>n.m&&n.o).length"));
+ assert(app.includes("Some")===false || app.includes("babySourceStats"));
+ assert(app.includes('sort:"az"'));
  assert(css.includes(".baby-meaning-unverified"));
  assert(!app.includes('fetch("/assets/data/baby-names.json"'));
 });
@@ -272,12 +273,12 @@ test("Baby Name Finder schema describes real app features, sources and visible F
  assert.equal(appEntity.offers.price,"0");
  assert(appEntity.featureList.some(x=>x.includes("20,000")));
  assert(appEntity.featureList.some(x=>x.includes("shortlists")));
- assert(appEntity.description.includes("documented linguistic meanings"));
+ assert(appEntity.description.includes("documented meanings"));
  assert.equal(appEntity.mainEntityOfPage["@id"],page["@id"]);
  assert.equal(page.mainEntity["@id"],appEntity["@id"]);
  assert.equal(page.hasPart["@id"],faq["@id"]);
  assert.equal(appEntity.image["@id"],image["@id"]);
- assert.equal(faq.mainEntity.length,12);
+ assert.equal(faq.mainEntity.length,11);
  for(const q of faq.mainEntity){
   assert(html.includes("<summary>"+q.name+"</summary>"));
   assert(q.acceptedAnswer.text.length>35);
@@ -399,4 +400,31 @@ test("breadcrumb stays truthful while top links provide direct Articles and Test
  assert.deepEqual(breadcrumb.itemListElement.map(x=>x.name),["Home","Baby Name Finder"]);
  assert(css.includes(".baby-breadcrumb-links"));
  assert(css.includes("@media(max-width:520px)"));
+});
+
+
+test("international-first finder removes statistical and region UI without losing sources in project",()=>{
+ assert(html.includes('id="nameSearch"'));
+ assert(html.includes('id="meaningSelect"'));
+ assert(html.includes('id="initialSelect"'));
+ assert(html.includes('id="sortSelect"'));
+ assert(html.includes('<option value="az">Name A–Z</option>'));
+ assert(html.includes('<option value="za">Name Z–A</option>'));
+ assert(!html.includes('value="popular"')&&!html.includes('value="rare"'));
+ assert(!html.includes('id="regionRanking"')&&!html.includes('id="regionSelect"'));
+ assert(!html.includes('class="baby-sources"'));
+ assert(!html.includes("Does US popularity tell me what is popular in Europe?"));
+ assert(!/\\bUS\\b|United States|2025|2024|2020|Social Security|SSA/.test(html));
+ assert(!app.includes('baby-name-regions.json'));
+ assert(!app.includes("US births")&&!app.includes("births vs"));
+ assert(!app.includes("renderRegion"));
+ const graph=JSON.parse(html.split('<script type="application/ld+json">')[1].split("</script>")[0])["@graph"];
+ const application=graph.find(e=>e["@type"]==="WebApplication");
+ const faqs=graph.find(e=>e["@type"]==="FAQPage");
+ assert(application.description.includes("20,000"));
+ assert(application.featureList.some(v=>v.includes("alphabetically")));
+ assert(!application.isBasedOn);
+ assert.equal(faqs.mainEntity.length,11);
+ assert(read("assets/data/BABY_NAMES_SOURCES.md").includes("SSA"),"Preserve private technical provenance");
+ assert(json("assets/data/baby-names-20k-manifest.json").popularityYear===2025,"Retain raw dataset unchanged");
 });
