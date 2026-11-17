@@ -119,3 +119,16 @@ test("browser shows a genuine load failure if any of five catalog shards fails",
  assert.equal(ui.get("loadingState").hidden,true);
  assert(ui.get("resultsCount").textContent!=="20,000 names found");
 });
+
+test("advanced filters report active selections and reset without disrupting search",async()=>{
+ const ui=createHarness();
+ await waitFor(()=>ui.get("resultsCount").textContent==="20,000 names found");
+ assert.equal(ui.get("advancedFilterCount").hidden,true);
+ const first=ui.get("initialSelect"); first.value="L";first.fire("change");
+ assert.equal(ui.get("advancedFilterCount").textContent,"1");
+ assert.equal(ui.get("advancedFilterCount").hidden,false);
+ assert(ui.get("resultCards").innerHTML.includes("baby-name-card"));
+ ui.get("clearFilters").fire("click");
+ assert.equal(ui.get("advancedFilterCount").hidden,true);
+ assert.equal(ui.get("resultsCount").textContent,"20,000 names found");
+});
