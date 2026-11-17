@@ -26,7 +26,7 @@ test("gender filters include unisex as options, exact unisex only in Both",()=>{
  assert(core.filterNames(names,{gender:"unisex"}).every(n=>n.g==="unisex"));
 });
 test("every meaning filter returns a matching concept",()=>{
- for(const meaning of ["love","strength","nature","light","faith","peace","joy","hope"]){
+ for(const meaning of ["love","strength","nature","light","faith","peace","joy","hope","beauty"]){
   const items=core.filterNames(names,{meaning});
   assert(items.every(n=>n.t.includes(meaning)));
  }
@@ -164,4 +164,12 @@ test("official 2025 year labels and comparison controls are present",()=>{
  }
  assert(html.includes("United States · SSA 2025"));
  assert(html.includes("Germany · GfdS 2025"));
+});
+
+test("beauty classification traces recorded meaning words and filter lists coverage",()=>{
+ const beauties=core.filterNames(names,{meaning:"beauty"});
+ assert.equal(beauties.length,12);
+ assert(beauties.every(n=>/\b(beauty|beautiful|lovely|pretty|handsome|graceful|elegant)\b/i.test(n.m)));
+ const html=fs.readFileSync(path.join(root,"tools/baby-name-finder/index.html"),"utf8");
+ assert(html.includes('<option value="beauty">Beauty & elegance</option>'));
 });
