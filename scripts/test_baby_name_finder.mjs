@@ -383,3 +383,20 @@ test("reader questions are on-page, source-safe and represented in FAQPage schem
   assert(faq.mainEntity.some(x=>x.name===question&&x.acceptedAnswer.text.length>50));
  }
 });
+
+test("breadcrumb stays truthful while top links provide direct Articles and Tests navigation",()=>{
+ const nav=html.match(/<nav class="baby-breadcrumb"[\s\S]*?<\/nav>/)?.[0];
+ assert(nav,"Top breadcrumb/navigation missing");
+ assert(nav.includes('href="/"'));
+ assert(nav.includes('aria-current="page">Baby Name Finder'));
+ assert(nav.includes('href="/blog/">Articles</a>'));
+ assert(nav.includes('href="/tests/">Tests</a>'));
+ assert(nav.indexOf('href="/blog/"')<html.indexOf('id="heroTitle"'));
+ assert(nav.indexOf('href="/tests/"')<html.indexOf('id="heroTitle"'));
+ assert(!nav.includes('href="/tools/"'),"Do not link an unbuilt Tools hub");
+ const graph=JSON.parse(html.split('<script type="application/ld+json">')[1].split("</script>")[0])["@graph"];
+ const breadcrumb=graph.find(x=>x["@type"]==="BreadcrumbList");
+ assert.deepEqual(breadcrumb.itemListElement.map(x=>x.name),["Home","Baby Name Finder"]);
+ assert(css.includes(".baby-breadcrumb-links"));
+ assert(css.includes("@media(max-width:520px)"));
+});
