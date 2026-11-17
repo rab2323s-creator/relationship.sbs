@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "cool-baby-boy-names",
+  title: "Cool Baby Boy Names: Modern, Short & Unique Ideas",
+  excerpt: "Explore 90+ cool baby boy name ideas by style: modern, short, strong, classic, nature-inspired and unique-feeling, with 14 checked meanings and a free shortlist tool.",
+  date: "2026-11-17",
+  readingMinutes: 17,
+  tags: ["Cool Baby Boy Names", "Modern Baby Boy Names", "Short Boy Names", "Unique Baby Boy Names", "Strong Boy Names", "Baby Boy Names With Meanings", "Classic Boy Names", "Boy Names A-Z"],
+  category: "Baby Names & Family",
+  cover: "/assets/images/baby-name-finder-20000-baby-names-for-couples.webp",
+  featured: true
+},
+
+{
   slug: "beautiful-baby-girl-names",
   title: "Beautiful Baby Girl Names: Classic, Modern & Unique Ideas",
   excerpt: "Discover 80+ beautiful baby girl name ideas: timeless classics, modern picks, nature names, short choices and documented meanings, plus a free shortlist tool.",
