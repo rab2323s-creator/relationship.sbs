@@ -108,8 +108,19 @@ jobs:
       - name: Test crush quiz scoring, interaction and mobile markup
         run: node --test scripts/test_crush_quiz.mjs
 
+      - name: Syntax check baby name finder browser scripts
+        run: |
+          node --check assets/baby-name-core.js
+          node --check assets/baby-name-finder.js
+
       - name: Test baby name finder data, search and sharing
         run: node --test scripts/test_baby_name_finder.mjs
+
+      - name: Reconcile all 20k baby names to archived 2024/2025 SSA and dictionary sources
+        run: node --test scripts/test_baby_name_source_integrity.mjs
+
+      - name: Smoke-test 20k baby name finder browser initialization and interactions
+        run: node --test scripts/test_baby_name_browser.mjs
 
       - name: Run static SEO audit
         run: python scripts/seo_audit.py

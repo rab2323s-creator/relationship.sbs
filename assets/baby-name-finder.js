@@ -2,7 +2,7 @@
 "use strict";
 const core=window.BabyNameCore;
 const $=id=>document.getElementById(id);
-const state={names:[],filtered:[],saved:[],partner:[],visible:18,loaded:false,filters:{query:"",gender:"all",meaning:"all",origin:"all",sort:"popular"},tab:"explore"};
+const state={names:[],filtered:[],saved:[],partner:[],regions:[],region:"us",visible:18,loaded:false,filters:{query:"",gender:"all",meaning:"all",origin:"all",sort:"popular",letter:"all",length:"all",documented:false},tab:"explore",deck:[],deckIndex:0};
 const KEY="relationship.sbs:baby-name-favorites:v1";
 const lookup=()=>new Map(state.names.map(n=>[core.keyOf(n.n),n]));
 const safeText=core.escapeHtml;
@@ -27,23 +27,58 @@ function openShared(){
     else toast("This shared shortlist could not be read.");
   }
 }
-function updateHashSafe(){
-  if(location.search.includes("partner="))return;
+function letterOptions(){
+ const letters=[...new Set(state.names.map(n=>n.n[0].toUpperCase()))].sort();
+ const select=$("initialSelect");
+ select.append(...letters.map(letter=>{const option=document.createElement("option");option.value=letter;option.textContent=letter;return option}));
+}
+function labelMeaningCounts(){
+ const counts={};
+ for(const name of state.names)for(const tag of name.t)counts[tag]=(counts[tag]||0)+1;
+ for(const opt of $("meaningSelect").options){
+  if(opt.value==="all")continue;
+  const label=opt.dataset.baseLabel||opt.textContent;
+  opt.dataset.baseLabel=label;
+  opt.textContent=label+" ("+(counts[opt.value]||0)+")";
+ }
 }
 function originOptions(){
- const origins=[...new Set(state.names.map(n=>n.o))].sort((a,b)=>a.localeCompare(b,"en"));
+ const origins=[...new Set(state.names.map(n=>n.o).filter(Boolean))].sort((a,b)=>a.localeCompare(b,"en"));
  const select=$("originSelect");
  select.append(...origins.map(origin=>{const option=document.createElement("option");option.value=origin;option.textContent=origin;return option}));
 }
 function formatNumber(n){return new Intl.NumberFormat("en-US").format(n)}
+function regionChoice(){return state.regions.find(r=>r.id===state.region)}
+function usInfo(n){return n.u||{c:n.c,r:n.r,d:null,p:null}}
+function regionDescription(n){
+ const region=regionChoice();
+ if(!region||region.id==="us")return "";
+ const entry=core.regionEntry(n.n,n.g,region);
+ if(!entry)return "";
+ return '<div class="baby-region-hit"><strong>'+safeText(region.label)+' #'+entry.rank+'</strong><span>'+region.year+' verified top-ten'+(entry.grouped?' · grouped variants':'')+'</span></div>';
+}
+function renderRegion(){
+ const region=regionChoice(),panel=$("regionRanking");
+ if(!region||region.id==="us"){panel.hidden=true;return}
+ panel.hidden=false;
+ $("regionRankingTitle").textContent=region.label+" · most popular names";
+ $("regionRankingNote").textContent=region.coverage+". Not in the top 10 does not mean a name is rare.";
+ $("regionSourceLink").href=region.source;
+ const block=(label,items)=>'<section><h4>'+label+'</h4><ol>'+items.map(e=>'<li><span class="baby-rank-no">'+e.rank+'</span><span>'+safeText(e.names.join(" / "))+'</span>'+ (e.grouped?'<small>Grouped spellings</small>':'')+'</li>').join("")+'</ol></section>';
+ $("regionRankingLists").innerHTML=block("Girls",region.girls)+block("Boys",region.boys);
+}
+
 function card(n){
  const key=core.keyOf(n.n),saved=state.saved.includes(key), tags=n.t.slice(0,2);
+ const meaning=n.m?'<p class="baby-card-meaning">'+safeText(n.m)+'</p><a class="baby-meaning-source" href="https://en.wiktionary.org/w/index.php?search='+encodeURIComponent(n.n)+'" target="_blank" rel="noopener noreferrer" aria-label="Research the etymology of '+safeText(n.n)+' on Wiktionary">Research meaning ↗</a>':'<p class="baby-card-meaning baby-meaning-unverified">Meaning not yet independently documented</p>';
  return '<article class="baby-name-card" data-name="'+safeText(key)+'">'+
- '<div class="baby-name-card-top"><span class="baby-origin-badge">'+safeText(n.o)+'</span>'+
+ '<div class="baby-name-card-top"><span class="baby-origin-badge">'+(n.o?safeText(n.o):'Origin not confirmed')+'</span>'+
  '<button class="baby-heart'+(saved?' is-saved':'')+'" type="button" data-heart="'+safeText(key)+'" aria-pressed="'+String(saved)+'" aria-label="'+(saved?'Remove ':'Save ')+safeText(n.n)+(saved?' from':' to')+' favorites" title="'+(saved?'Remove from':'Save to')+' favorites">'+(saved?'♥':'♡')+'</button></div>'+
- '<h4>'+safeText(n.n)+'</h4><p class="baby-card-meaning">'+safeText(n.m)+'</p>'+
+ '<h4>'+safeText(n.n)+'</h4>'+meaning+
  '<div class="baby-card-tags"><span>'+safeText(n.g==="unisex"?"Unisex":n.g==="girl"?"Mostly girls":"Mostly boys")+'</span>'+tags.map(t=>'<span>'+safeText(t)+'</span>').join("")+'</div>'+
- '<div class="baby-card-foot"><span>US births in 2020</span><strong>'+formatNumber(n.c)+'</strong></div></article>';
+ regionDescription(n)+
+ '<div class="baby-card-foot"><span>US births in '+(n.u?'2025':'2020 (fallback)')+'</span><strong>'+formatNumber(usInfo(n).c)+'</strong></div>'+
+ (n.u&&Number.isInteger(n.u.d)?'<div class="baby-card-trend">'+(n.u.d>0?'↑ +':n.u.d<0?'↓ ':'→ ')+formatNumber(Math.abs(n.u.d))+' births vs 2024 · US only</div>':'')+'</article>';
 }
 function renderExplore(){
  if(!state.loaded)return;
@@ -80,6 +115,16 @@ function renderComparison(){
  $("matchNames").innerHTML=chips(common);
  $("matchTitle").textContent=common.length?common.length+" name"+(common.length===1?"":"s")+" you both love":"The names you both love";
  $("matchHelp").textContent=common.length?"Beautiful! These names appear on both shortlists.":state.partner.length?"No matches yet — try exploring a few more names together.":"Open a partner's link to compare their saved names with yours.";
+ const ideas=$("babyCommonGround");
+ const canRecommend=state.saved.length>0&&state.partner.length>0;
+ ideas.hidden=!canRecommend;
+ if(canRecommend){
+  const themes=core.meaningfulCommonThemes(state.saved,state.partner,state.names);
+  const themeText=[...themes.meanings.map(x=>x+" meanings"),...themes.origins.map(x=>x+" roots")];
+  $("babySharedThemes").textContent=themeText.length?"Shared interests: "+themeText.join(", ")+".":"No identical favorites yet. Here are fresh ideas chosen using aspects of both shortlists.";
+  const picks=core.suggestCompromises(state.saved,state.partner,state.names,6);
+  $("babyCompromiseCards").innerHTML=picks.map(x=>card(x.name)).join("");
+ }
  $("shareFromCompare").disabled=!state.saved.length;
 }
 function syncHeartButtons(key){
@@ -118,10 +163,42 @@ function selectTab(tab){
  if(tab!=="explore")$("babyFinder").scrollIntoView({behavior:"smooth",block:"start"});
 }
 function resetFilters(){
- state.filters={query:"",gender:"all",meaning:"all",origin:"all",sort:"popular"};
- $("nameSearch").value="";$("meaningSelect").value="all";$("originSelect").value="all";$("sortSelect").value="popular";
+ state.filters={query:"",gender:"all",meaning:"all",origin:"all",sort:"popular",letter:"all",length:"all",documented:false};
+ $("nameSearch").value="";$("meaningSelect").value="all";$("originSelect").value="all";$("sortSelect").value="popular";$("initialSelect").value="all";$("lengthSelect").value="all";$("meaningOnly").checked=false;
  document.querySelectorAll("[data-gender]").forEach(el=>{const yes=el.dataset.gender==="all";el.classList.toggle("is-selected",yes);el.setAttribute("aria-pressed",String(yes))});
  state.visible=18;$("surpriseSpotlight").hidden=true;renderExplore();
+}
+function importPartnerUrl(raw){
+ const picked=core.parsePartnerLink(raw,state.names,location.origin,location.pathname);
+ if(!picked.length){toast("No valid partner shortlist found. Paste a link from this baby-name finder.");return false;}
+ state.partner=picked;renderComparison();toast("Partner's names loaded. Compare your favorites below.");return true;
+}
+function startQuickPick(){
+ if(!state.loaded||!state.filtered.length){toast("No names match your filters. Try a broader search.");return}
+ state.deck=core.makePickDeck(state.filtered,12);state.deckIndex=0;
+ $("quickPickStage").hidden=false;$("startQuickPick").textContent="Restart game";showQuickPick();
+}
+function showQuickPick(){
+ const box=$("quickPickName");
+ if(state.deckIndex>=state.deck.length){
+  $("quickPickProgress").textContent="All "+state.deck.length+" names explored";
+  box.innerHTML='<strong>Lovely choices!</strong><p>Review your favorites or try another round.</p>';
+  $("quickPickSave").hidden=true;$("quickPickSkip").hidden=true;return;
+ }
+ const n=state.deck[state.deckIndex];
+ $("quickPickProgress").textContent=(state.deckIndex+1)+" of "+state.deck.length;
+ box.innerHTML='<strong>'+safeText(n.n)+'</strong><p>'+(n.m?safeText(n.m):'Meaning not yet documented')+'</p><small>'+(n.o?safeText(n.o)+' roots':'Origin not yet confirmed')+'</small>';
+ $("quickPickSave").hidden=false;$("quickPickSkip").hidden=false;
+ $("quickPickSave").textContent=state.saved.includes(core.keyOf(n.n))?"♥ Already saved · Next":"♡ Love this name";
+}
+function advanceQuickPick(save){
+ const n=state.deck[state.deckIndex];if(!n)return;
+ const key=core.keyOf(n.n);
+ if(save&&!state.saved.includes(key)){
+  if(state.saved.length>=core.MAX_PICKS){toast("Your shortlist is full. Remove a name to add another.");return}
+  state.saved.push(key);saveToStorage();renderSaved();syncHeartButtons(key);
+ }
+ state.deckIndex++;showQuickPick();
 }
 function copyShareUrl(){
  if(!state.saved.length){toast("Save a name first to create a shortlist.");return}
@@ -143,7 +220,7 @@ function surprise(){
  if(!state.filtered.length){toast("Try relaxing your filters first.");return}
  const choice=state.filtered[Math.floor(Math.random()*state.filtered.length)];
  $("surpriseSpotlight").hidden=false;
- $("surpriseSpotlight").innerHTML='<div><span class="baby-eyebrow">A NAME TO CONSIDER</span><h3>'+safeText(choice.n)+'</h3><p>'+safeText(choice.m)+'</p><small>'+safeText(choice.o)+' roots · '+formatNumber(choice.c)+' US births in 2020</small></div><button type="button" class="baby-heart'+(state.saved.includes(core.keyOf(choice.n))?' is-saved':'')+'" data-heart="'+safeText(core.keyOf(choice.n))+'" aria-label="Save '+safeText(choice.n)+' to favorites" aria-pressed="'+String(state.saved.includes(core.keyOf(choice.n)))+'">'+(state.saved.includes(core.keyOf(choice.n))?'♥':'♡')+'</button>';
+ $("surpriseSpotlight").innerHTML='<div><span class="baby-eyebrow">A NAME TO CONSIDER</span><h3>'+safeText(choice.n)+'</h3><p>'+(choice.m?safeText(choice.m):'Meaning not yet documented')+'</p><small>'+(choice.o?safeText(choice.o)+' roots · ':'')+formatNumber(usInfo(choice).c)+' US births in '+(choice.u?'2025':'2020')+'</small></div><button type="button" class="baby-heart'+(state.saved.includes(core.keyOf(choice.n))?' is-saved':'')+'" data-heart="'+safeText(core.keyOf(choice.n))+'" aria-label="Save '+safeText(choice.n)+' to favorites" aria-pressed="'+String(state.saved.includes(core.keyOf(choice.n)))+'">'+(state.saved.includes(core.keyOf(choice.n))?'♥':'♡')+'</button>';
  $("surpriseSpotlight").scrollIntoView({behavior:"smooth",block:"nearest"});
 }
 function bind(){
@@ -155,14 +232,24 @@ function bind(){
   const gender=e.target.closest("[data-gender]");
   if(gender){state.filters.gender=gender.dataset.gender;state.visible=18;document.querySelectorAll("[data-gender]").forEach(btn=>{const active=btn===gender;btn.classList.toggle("is-selected",active);btn.setAttribute("aria-pressed",String(active))});renderExplore()}
  });
- for(const [id,k] of [["meaningSelect","meaning"],["originSelect","origin"],["sortSelect","sort"]]){
+ for(const [id,k] of [["meaningSelect","meaning"],["originSelect","origin"],["sortSelect","sort"],["initialSelect","letter"],["lengthSelect","length"]]){
   $(id).addEventListener("change",e=>{state.filters[k]=e.target.value;state.visible=18;$("surpriseSpotlight").hidden=true;renderExplore()});
  }
  let searchTimer; $("nameSearch").addEventListener("input",e=>{clearTimeout(searchTimer);const v=e.target.value;searchTimer=setTimeout(()=>{state.filters.query=v;state.visible=18;$("surpriseSpotlight").hidden=true;renderExplore()},90)});
  $("clearFilters").addEventListener("click",resetFilters);
  $("resetEmpty").addEventListener("click",resetFilters);
  $("loadMore").addEventListener("click",()=>{state.visible+=18;renderExplore()});
+ $("regionSelect").addEventListener("change",e=>{
+ state.region=e.target.value;renderRegion();renderExplore();renderSaved();
+ });
+ $("meaningOnly").addEventListener("change",e=>{state.filters.documented=!!e.target.checked;state.visible=18;renderExplore()});
  $("surpriseBtn").addEventListener("click",surprise);
+ $("startQuickPick").addEventListener("click",startQuickPick);
+ $("quickPickClose").addEventListener("click",()=>{$("quickPickStage").hidden=true;$("startQuickPick").textContent="Start choosing →"});
+ $("quickPickSkip").addEventListener("click",()=>advanceQuickPick(false));
+ $("quickPickSave").addEventListener("click",()=>advanceQuickPick(true));
+ $("partnerLinkForm").addEventListener("submit",e=>{e.preventDefault();importPartnerUrl($("partnerLinkInput").value)});
+
  $("shareShortlist").addEventListener("click",copyShareUrl);
  $("shareFromCompare").addEventListener("click",copyShareUrl);
  $("clearShortlist").addEventListener("click",()=>{
@@ -182,14 +269,25 @@ function bind(){
 async function load(){
  $("errorState").hidden=true;$("loadingState").hidden=false;
  try{
-  const response=await fetch("/assets/data/baby-names.json",{cache:"default"});
-  if(!response.ok)throw Error("HTTP "+response.status);
-  const db=await response.json();
-  state.names=core.validateDatabase(db);
-  state.loaded=true;restoreStorage();originOptions();
+  const [manifestResponse,rankingsResponse]=await Promise.all([
+    fetch("/assets/data/baby-names-20k-manifest.json",{cache:"default"}),
+    fetch("/assets/data/baby-name-regions.json",{cache:"default"})
+  ]);
+  if(!manifestResponse.ok||!rankingsResponse.ok)throw Error("Catalog manifest or region request failed");
+  const [db,regions]=await Promise.all([manifestResponse.json(),rankingsResponse.json()]);
+  const parts=core.validateManifest(db);
+  const payloads=await Promise.all(parts.map(async part=>{
+    const response=await fetch(part.path,{cache:"default"});
+    if(!response.ok)throw Error("Could not load catalog shard: "+part.path);
+    return response.json();
+  }));
+  state.regions=core.validateRegionData(regions);
+  state.names=core.assembleCatalog(db,payloads);
+  state.loaded=true;restoreStorage();$("originSelect").length=1;$("initialSelect").length=1;originOptions();letterOptions();labelMeaningCounts();
   $("datasetSize").textContent=formatNumber(db.total);
+  $("babySourceStats").textContent=formatNumber(state.names.filter(n=>n.m&&n.o).length)+" of "+formatNumber(db.total)+" names have a source-attributed meaning and linguistic root. Undocumented fields are never guessed.";
   $("loadingState").hidden=true;
-  renderExplore();renderSaved();openShared();
+  renderRegion();renderExplore();renderSaved();openShared();
  }catch(e){
   console.error("Baby name collection error",e);
   $("loadingState").hidden=true;$("errorState").hidden=false;
