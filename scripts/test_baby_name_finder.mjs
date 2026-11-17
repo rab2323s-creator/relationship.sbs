@@ -192,7 +192,7 @@ test("meaning text and all dynamic names are HTML escaped",()=>{
 
 test("SEO HTML reflects exactly 20k names and documents missing etymologies",()=>{
  assert(html.includes('<link rel="canonical" href="https://relationship.sbs/tools/baby-name-finder/">'));
- assert(html.includes('"@type":"WebApplication"'));
+ assert(JSON.parse(html.split('<script type="application/ld+json">')[1].split("</script>")[0])["@graph"].some(x=>x["@type"]==="WebApplication"));
  assert(html.includes("20,000 distinct recorded baby-name spellings"));
  assert(!html.includes("Explore 1,000 names"));
  assert(html.includes("Do all 20,000 names have a verified meaning?"));
