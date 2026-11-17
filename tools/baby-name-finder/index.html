@@ -88,6 +88,8 @@
               <option value="joy">Joy & happiness</option>
               <option value="hope">Hope & wishes</option>
             </select></div>
+            <div class="baby-field"><label for="initialSelect">Starts with</label><select id="initialSelect"><option value="all">Any letter</option></select></div>
+            <div class="baby-field"><label for="lengthSelect">Name length</label><select id="lengthSelect"><option value="all">Any length</option><option value="short">Short · 2–4 letters</option><option value="medium">Medium · 5–6 letters</option><option value="long">Long · 7+ letters</option></select></div>
             <div class="baby-field"><label for="originSelect">Linguistic roots</label><select id="originSelect"><option value="all">All origins</option></select><small>Origins describe language roots, not where a name is popular today.</small></div>
             <div class="baby-field"><label for="sortSelect">Sort names</label><select id="sortSelect">
               <option value="popular">Most used in the US (2020)</option>
@@ -100,6 +102,14 @@
 
           <div class="baby-results-area">
             <div class="baby-results-toolbar"><div><p class="baby-results-caption">A CURATED COLLECTION</p><h3 id="resultsCount" aria-live="polite">Loading names…</h3></div><button id="surpriseBtn" type="button" class="baby-outline-button">✧ Surprise me</button></div>
+            <section class="baby-quick-pick" aria-labelledby="quickPickTitle">
+              <div class="baby-quick-header"><div><span class="baby-eyebrow">CAN'T DECIDE?</span><h3 id="quickPickTitle">The quick-pick game</h3><p>One name at a time. Love it, or move on—no pressure.</p></div><button type="button" class="baby-outline-button" id="startQuickPick">Start choosing →</button></div>
+              <div id="quickPickStage" class="baby-quick-stage" hidden>
+                <div class="baby-quick-progress"><span id="quickPickProgress" aria-live="polite">1 of 12</span><button id="quickPickClose" class="baby-link-button" type="button">Close game</button></div>
+                <div id="quickPickName" class="baby-quick-name" aria-live="polite"></div>
+                <div class="baby-quick-controls"><button type="button" id="quickPickSkip" class="baby-outline-button">Not for me →</button><button type="button" id="quickPickSave" class="baby-primary-button">♡ Save this name</button></div>
+              </div>
+            </section>
             <div id="surpriseSpotlight" class="baby-spotlight" hidden aria-live="polite"></div>
             <div id="loadingState" class="baby-loading" role="status">Opening the name collection…</div>
             <div id="errorState" class="baby-empty" hidden role="alert"><h3>We couldn't load the names.</h3><p>Please check your connection and try again.</p><button type="button" id="retryLoad" class="baby-primary-button">Try again</button></div>
@@ -122,6 +132,11 @@
         <div class="baby-secondary-pane">
           <div class="baby-pane-title"><div><span class="baby-eyebrow">TWO PEOPLE. ONE NAME.</span><h2>Find the names you agree on.</h2><p>Share your picks, let your partner choose theirs, and compare. No account or server needed.</p></div></div>
           <ol class="baby-steps"><li><span>01</span><strong>Choose your favorites</strong><p>Heart names in Discover names.</p></li><li><span>02</span><strong>Send your shortlist</strong><p>Copy a private-by-design link containing just the name choices.</p></li><li><span>03</span><strong>See your shared picks</strong><p>Your partner chooses names in their browser and sees the overlap.</p></li></ol>
+          <form class="baby-partner-import" id="partnerLinkForm">
+            <label for="partnerLinkInput">Have a shortlist link from your partner?</label>
+            <div class="baby-partner-import-row"><input type="url" id="partnerLinkInput" inputmode="url" autocomplete="off" placeholder="Paste the link your partner sent…" aria-describedby="partnerLinkHelp"><button type="submit" class="baby-outline-button">Compare lists</button></div>
+            <p id="partnerLinkHelp" class="baby-fine-print">Accepts links to this Baby Name Finder only. Your partner's list stays in this browser and is not sent to a server.</p>
+          </form>
           <div class="baby-compare-grid"><div class="baby-compare-card"><h3>Names I've saved <span id="myPicksCount">0</span></h3><div id="myPicks" class="baby-chip-wrap"></div><button type="button" id="shareFromCompare" class="baby-primary-button">Copy link with my picks</button></div><div class="baby-compare-card"><h3>Partner's shared names <span id="partnerPicksCount">0</span></h3><div id="partnerPicks" class="baby-chip-wrap"></div><p class="baby-fine-print">To compare, open the shortlist link your partner sent you. The link holds their name picks, not private account data.</p></div></div>
           <div class="baby-match-card"><span class="baby-eyebrow">YOUR MATCHES</span><h3 id="matchTitle">The names you both love</h3><p id="matchHelp">Open a partner's link to compare their saved names with yours.</p><div id="matchNames" class="baby-chip-wrap"></div></div>
         </div>
