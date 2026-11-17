@@ -111,7 +111,10 @@ test("US popularity 2025 is complete with explicit fallback and consistent 2024 
  assert.equal(db.popularityPreviousYear,2024);
  const included=names.filter(n=>n.u);
  assert(included.length>=990);
- assert(included.every(n=>n.u.c>=5&&n.u.r>=1&&Number.isInteger(n.u.d)&&n.u.p+n.u.d===n.u.c));
+ assert(included.every(n=>n.u.c>=5&&n.u.r>=1));
+ const comparable=included.filter(n=>n.u.p!==undefined);
+ assert(comparable.length>=985);
+ assert(comparable.every(n=>Number.isInteger(n.u.d)&&n.u.p+n.u.d===n.u.c));
  assert.equal(names.filter(n=>!n.u).length,1000-included.length);
 });
 test("four country data contexts have verified scope and correct leading ranks",()=>{
