@@ -1,4 +1,39 @@
-# Baby Name Finder — source and editorial notes
+# Baby Name Finder — source, provenance and quality notes
+
+## Current catalog: 20,000 names (November 2026)
+
+The current production-candidate release is **version 2**, supplied by \`assets/data/baby-names-20k-manifest.json\` and five deterministic 4,000-name shards (\`baby-names-20k-01.json\` through \`baby-names-20k-05.json\`), totaling **exactly 20,000 unique case-insensitive name spellings**.
+
+- **Original 1,000 names preserved:** the earlier \`assets/data/baby-names.json\` remains unchanged as a historic archive and backwards-compatibility reference. Its etymological glosses, roots, tags and 2020 audit trail remain unchanged.
+- **19,000 additional names:** the highest-count name spellings in the published US 2025 Social Security national registration data, excluding the existing 1,000 (and retaining a deterministic alphabetical tie-breaker). They are not invented strings or generated combinations.
+- **Birth counts:** 19,999 names have 2025 national reported-sex counts; one preserved name absent from 2025 retains a visibly labeled 2020 fallback. Where the same spelling and reported-sex category also appears in the 2024 records, its absolute count change is shown; an absent comparison is **not interpreted as zero**.
+- **Gender filter:** "girl", "boy" and "unisex" are descriptive labels derived from the available US reported-sex counts for a name spelling. They are **not** claims about individual gender identity or culturally universal conventions.
+- **Meanings and linguistic origins:** **2,704/20,000 names have paired, source-attributed glosses and linguistic-root labels; 17,296 do not.** All new sourced glosses were selected verbatim (apart from whitespace cleanup) from Wiktionary-attributed \`meanings.json\`, \`native-meanings.json\` or \`extra-meanings.json\` records published in Lullabyte's research repository. Any name without both fields receives \`m:null\`, \`o:null\` and empty meaning tags. **There are no invented meanings or inferred origins.** Sourced does **not** mean individually checked by a trained etymologist.
+- **Categorization:** semantic tags are assigned only when a source gloss contains matching English lexical concepts. Do not mistake untagged names for names that cannot express those concepts in other languages.
+- **Privacy:** existing browser-only shortlist storage and URL-based partner comparison remain unchanged. No profile, account or remote matching database was added.
+- **Accessibility and delivery:** the browser loads a small manifest and five shards in parallel, then validates row count, schema and uniqueness before showing results; it rejects partial downloads rather than presenting them as complete. The 2025 European top-ten ranking snapshots remain separate.
+
+### Current authoritative sources and working snapshots
+
+- US Social Security Administration: https://www.ssa.gov/oact/babynames/limits.html
+- 2025 underlying text snapshot: https://github.com/moisesvasquez/us-baby-names/blob/main/data/raw/yob2025.txt
+- 2024 underlying text snapshot: https://github.com/moisesvasquez/us-baby-names/blob/main/data/raw/yob2024.txt
+- Original preserved 2020 text snapshot: https://github.com/hackerb9/ssa-baby-names/blob/main/raw-data/yob2020.txt
+- Wiktionary (dictionary licensing and editorial histories): https://en.wiktionary.org/
+- Working etymology collection: https://github.com/suhxnitiwari/baby-name-maker/tree/main/data
+- Adapted source glosses and their selection in the catalog are subject to **CC BY-SA 4.0** attribution/share-alike where applicable: https://creativecommons.org/licenses/by-sa/4.0/
+
+The US count reflects a **single spelling in a single year and reported-sex class**. Minor-sex entries may be suppressed below the SSA reporting threshold. The full 20,000-name collection is **not** the top 20,000 US names in unaltered order: it includes the preserved earlier 1,000. Nor does the catalog contain complete national frequency data for the United Kingdom, France or Germany—those geographies have separate, sourced top-ten snapshots only.
+
+### Reproducibility, checks and known limitations
+
+The source data used for this update was retrieved in November 2026. Selection of 19,000 new names: parse all \`yob2025.txt\` entries, group by case-insensitive display spelling, take the larger reported-sex count per name, exclude the original 1,000 names, sort by descending count with an alphabetical tie-breaker, then take the first 19,000. Two 2025 registrations under different reported-sex classifications for the same spelling count as **one** display name. The selected 19,000 have a majority-class birth count of at least seven in the 2025 dataset.
+
+The quality gate validates five shard sizes, 20,000 unique case-insensitive spellings, positive published birth counts, consistent documented/undocumented fields, dataset provenance and key functional behavior, including all previously saved names, filters, name suggestions, safe partner-link handling and website metadata. This is a machine-checkable **integrity guarantee**, **not a guarantee that every dictionary etymology is definitive**. Full expert linguistic review of every name and manual visual QA across browsers remain out of scope for this iteration.
+
+---
+
+## Historical 1,000-name release and earlier field definitions (archive)
 
 ## Dataset contents
 
