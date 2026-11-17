@@ -43,7 +43,7 @@ function labelMeaningCounts(){
  }
 }
 function originOptions(){
- const origins=[...new Set(state.names.map(n=>n.o))].sort((a,b)=>a.localeCompare(b,"en"));
+ const origins=[...new Set(state.names.map(n=>n.o).filter(Boolean))].sort((a,b)=>a.localeCompare(b,"en"));
  const select=$("originSelect");
  select.append(...origins.map(origin=>{const option=document.createElement("option");option.value=origin;option.textContent=origin;return option}));
 }
@@ -70,10 +70,11 @@ function renderRegion(){
 
 function card(n){
  const key=core.keyOf(n.n),saved=state.saved.includes(key), tags=n.t.slice(0,2);
+ const meaning=n.m?'<p class="baby-card-meaning">'+safeText(n.m)+'</p><a class="baby-meaning-source" href="https://en.wiktionary.org/w/index.php?search='+encodeURIComponent(n.n)+'" target="_blank" rel="noopener noreferrer" aria-label="Research the etymology of '+safeText(n.n)+' on Wiktionary">Research meaning ↗</a>':'<p class="baby-card-meaning baby-meaning-unverified">Meaning not yet independently documented</p>';
  return '<article class="baby-name-card" data-name="'+safeText(key)+'">'+
- '<div class="baby-name-card-top"><span class="baby-origin-badge">'+safeText(n.o)+'</span>'+
+ '<div class="baby-name-card-top"><span class="baby-origin-badge">'+(n.o?safeText(n.o):'Origin not confirmed')+'</span>'+
  '<button class="baby-heart'+(saved?' is-saved':'')+'" type="button" data-heart="'+safeText(key)+'" aria-pressed="'+String(saved)+'" aria-label="'+(saved?'Remove ':'Save ')+safeText(n.n)+(saved?' from':' to')+' favorites" title="'+(saved?'Remove from':'Save to')+' favorites">'+(saved?'♥':'♡')+'</button></div>'+
- '<h4>'+safeText(n.n)+'</h4><p class="baby-card-meaning">'+safeText(n.m)+'</p>'+ '<a class="baby-meaning-source" href="https://en.wiktionary.org/w/index.php?search='+encodeURIComponent(n.n)+'" target="_blank" rel="noopener noreferrer" aria-label="Research the etymology of '+safeText(n.n)+' on Wiktionary">Research meaning ↗</a>'+
+ '<h4>'+safeText(n.n)+'</h4>'+meaning+
  '<div class="baby-card-tags"><span>'+safeText(n.g==="unisex"?"Unisex":n.g==="girl"?"Mostly girls":"Mostly boys")+'</span>'+tags.map(t=>'<span>'+safeText(t)+'</span>').join("")+'</div>'+
  regionDescription(n)+
  '<div class="baby-card-foot"><span>US births in '+(n.u?'2025':'2020 (fallback)')+'</span><strong>'+formatNumber(usInfo(n).c)+'</strong></div>'+
@@ -186,7 +187,7 @@ function showQuickPick(){
  }
  const n=state.deck[state.deckIndex];
  $("quickPickProgress").textContent=(state.deckIndex+1)+" of "+state.deck.length;
- box.innerHTML='<strong>'+safeText(n.n)+'</strong><p>'+safeText(n.m)+'</p><small>'+safeText(n.o)+' roots</small>';
+ box.innerHTML='<strong>'+safeText(n.n)+'</strong><p>'+(n.m?safeText(n.m):'Meaning not yet documented')+'</p><small>'+(n.o?safeText(n.o)+' roots':'Origin not yet confirmed')+'</small>';
  $("quickPickSave").hidden=false;$("quickPickSkip").hidden=false;
  $("quickPickSave").textContent=state.saved.includes(core.keyOf(n.n))?"♥ Already saved · Next":"♡ Love this name";
 }
@@ -219,7 +220,7 @@ function surprise(){
  if(!state.filtered.length){toast("Try relaxing your filters first.");return}
  const choice=state.filtered[Math.floor(Math.random()*state.filtered.length)];
  $("surpriseSpotlight").hidden=false;
- $("surpriseSpotlight").innerHTML='<div><span class="baby-eyebrow">A NAME TO CONSIDER</span><h3>'+safeText(choice.n)+'</h3><p>'+safeText(choice.m)+'</p><small>'+safeText(choice.o)+' roots · '+formatNumber(choice.c)+' US births in 2020</small></div><button type="button" class="baby-heart'+(state.saved.includes(core.keyOf(choice.n))?' is-saved':'')+'" data-heart="'+safeText(core.keyOf(choice.n))+'" aria-label="Save '+safeText(choice.n)+' to favorites" aria-pressed="'+String(state.saved.includes(core.keyOf(choice.n)))+'">'+(state.saved.includes(core.keyOf(choice.n))?'♥':'♡')+'</button>';
+ $("surpriseSpotlight").innerHTML='<div><span class="baby-eyebrow">A NAME TO CONSIDER</span><h3>'+safeText(choice.n)+'</h3><p>'+(choice.m?safeText(choice.m):'Meaning not yet documented')+'</p><small>'+(choice.o?safeText(choice.o)+' roots · ':'')+formatNumber(usInfo(choice).c)+' US births in '+(choice.u?'2025':'2020')+'</small></div><button type="button" class="baby-heart'+(state.saved.includes(core.keyOf(choice.n))?' is-saved':'')+'" data-heart="'+safeText(core.keyOf(choice.n))+'" aria-label="Save '+safeText(choice.n)+' to favorites" aria-pressed="'+String(state.saved.includes(core.keyOf(choice.n)))+'">'+(state.saved.includes(core.keyOf(choice.n))?'♥':'♡')+'</button>';
  $("surpriseSpotlight").scrollIntoView({behavior:"smooth",block:"nearest"});
 }
 function bind(){
@@ -267,15 +268,21 @@ function bind(){
 async function load(){
  $("errorState").hidden=true;$("loadingState").hidden=false;
  try{
-  const [response,rankings]=await Promise.all([
-    fetch("/assets/data/baby-names.json",{cache:"default"}),
+  const [manifestResponse,rankingsResponse]=await Promise.all([
+    fetch("/assets/data/baby-names-20k-manifest.json",{cache:"default"}),
     fetch("/assets/data/baby-name-regions.json",{cache:"default"})
   ]);
-  if(!response.ok||!rankings.ok)throw Error("Data request failed");
-  const [db,regions]=await Promise.all([response.json(),rankings.json()]);
+  if(!manifestResponse.ok||!rankingsResponse.ok)throw Error("Catalog manifest or region request failed");
+  const [db,regions]=await Promise.all([manifestResponse.json(),rankingsResponse.json()]);
+  const parts=core.validateManifest(db);
+  const payloads=await Promise.all(parts.map(async part=>{
+    const response=await fetch(part.path,{cache:"default"});
+    if(!response.ok)throw Error("Could not load catalog shard: "+part.path);
+    return response.json();
+  }));
   state.regions=core.validateRegionData(regions);
-  state.names=core.validateDatabase(db);
-  state.loaded=true;restoreStorage();originOptions();letterOptions();labelMeaningCounts();
+  state.names=core.assembleCatalog(db,payloads);
+  state.loaded=true;restoreStorage();$("originSelect").length=1;$("initialSelect").length=1;originOptions();letterOptions();labelMeaningCounts();
   $("datasetSize").textContent=formatNumber(db.total);
   $("loadingState").hidden=true;
   renderRegion();renderExplore();renderSaved();openShared();
