@@ -108,6 +108,9 @@ jobs:
       - name: Test crush quiz scoring, interaction and mobile markup
         run: node --test scripts/test_crush_quiz.mjs
 
+      - name: Test baby name finder data, search and sharing
+        run: node --test scripts/test_baby_name_finder.mjs
+
       - name: Run static SEO audit
         run: python scripts/seo_audit.py
 
