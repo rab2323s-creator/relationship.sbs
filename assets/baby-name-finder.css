@@ -279,3 +279,8 @@ body.baby-page{background:#faf7f5;color:#302c31}
 .baby-breadcrumb-links a:hover{background:#f9edf3;border-color:#d6bdcb}
 .baby-breadcrumb a:focus-visible{outline:3px solid #9e5f83;outline-offset:3px}
 @media(max-width:520px){.baby-breadcrumb{align-items:flex-start;gap:9px 12px}.baby-breadcrumb-links{margin-left:0;width:100%}.baby-breadcrumb-links a{min-height:38px;padding:8px 14px}}
+
+/* Read-more link: editorial guide supports, rather than displaces, name search. */
+.baby-discovery-card .baby-girl-guide-link{display:block;margin:0 0 16px;color:#835071;font-size:13px;font-weight:750;line-height:1.55;text-decoration:underline;text-underline-offset:3px}
+.baby-discovery-card .baby-girl-guide-link:hover{color:#5e3150}
+.baby-discovery-card .baby-girl-guide-link:focus-visible{outline:3px solid #9e5f83;outline-offset:3px}
