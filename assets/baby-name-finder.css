@@ -164,3 +164,7 @@ body.baby-page{background:#faf7f5;color:#302c31}
 
 .baby-meaning-source{display:inline-block;margin-top:10px;color:#965475;font-size:11px;text-decoration:underline;text-underline-offset:2px;font-weight:680}
 .baby-meaning-source:hover{color:#633851}
+
+.baby-source-stats{font-size:11px;line-height:1.6;margin-top:13px;color:#745867;background:#f6eef1;border:1px solid #e9dce2;padding:12px;border-radius:11px}
+.baby-card-meaning.baby-meaning-unverified{color:#857983;font-style:italic}
+.baby-card-meaning.baby-meaning-unverified::before{content:"ⓘ ";font-style:normal;color:#a7758c}
