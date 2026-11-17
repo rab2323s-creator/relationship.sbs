@@ -2,7 +2,7 @@
 "use strict";
 const core=window.BabyNameCore;
 const $=id=>document.getElementById(id);
-const state={names:[],filtered:[],saved:[],partner:[],regions:[],region:"us",visible:18,loaded:false,filters:{query:"",gender:"all",meaning:"all",origin:"all",sort:"popular",letter:"all",length:"all"},tab:"explore",deck:[],deckIndex:0};
+const state={names:[],filtered:[],saved:[],partner:[],regions:[],region:"us",visible:18,loaded:false,filters:{query:"",gender:"all",meaning:"all",origin:"all",sort:"popular",letter:"all",length:"all",documented:false},tab:"explore",deck:[],deckIndex:0};
 const KEY="relationship.sbs:baby-name-favorites:v1";
 const lookup=()=>new Map(state.names.map(n=>[core.keyOf(n.n),n]));
 const safeText=core.escapeHtml;
@@ -163,8 +163,8 @@ function selectTab(tab){
  if(tab!=="explore")$("babyFinder").scrollIntoView({behavior:"smooth",block:"start"});
 }
 function resetFilters(){
- state.filters={query:"",gender:"all",meaning:"all",origin:"all",sort:"popular",letter:"all",length:"all"};
- $("nameSearch").value="";$("meaningSelect").value="all";$("originSelect").value="all";$("sortSelect").value="popular";$("initialSelect").value="all";$("lengthSelect").value="all";
+ state.filters={query:"",gender:"all",meaning:"all",origin:"all",sort:"popular",letter:"all",length:"all",documented:false};
+ $("nameSearch").value="";$("meaningSelect").value="all";$("originSelect").value="all";$("sortSelect").value="popular";$("initialSelect").value="all";$("lengthSelect").value="all";$("meaningOnly").checked=false;
  document.querySelectorAll("[data-gender]").forEach(el=>{const yes=el.dataset.gender==="all";el.classList.toggle("is-selected",yes);el.setAttribute("aria-pressed",String(yes))});
  state.visible=18;$("surpriseSpotlight").hidden=true;renderExplore();
 }
@@ -242,6 +242,7 @@ function bind(){
  $("regionSelect").addEventListener("change",e=>{
  state.region=e.target.value;renderRegion();renderExplore();renderSaved();
  });
+ $("meaningOnly").addEventListener("change",e=>{state.filters.documented=!!e.target.checked;state.visible=18;renderExplore()});
  $("surpriseBtn").addEventListener("click",surprise);
  $("startQuickPick").addEventListener("click",startQuickPick);
  $("quickPickClose").addEventListener("click",()=>{$("quickPickStage").hidden=true;$("startQuickPick").textContent="Start choosing →"});
