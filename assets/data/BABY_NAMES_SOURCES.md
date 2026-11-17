@@ -46,3 +46,36 @@ Favorites are stored locally in the browser (if enabled), under the storage key 
 Source snapshot date: November 2026. Dataset year: 2020; do not present the counts as current popularity. The 1,000-name list is static in this release. A later update should (1) record the SSA file and publication year, (2) recheck Wiktionary provenance and CC BY-SA requirements, (3) review anomalous meanings and gender assignments, and (4) run \`node --test scripts/test_baby_name_finder.mjs\`.
 
 Attribution and licensing does not transfer ownership of SSA records or the site's original UI and code. Data compilation and adapted Wiktionary-derived glosses are available under CC BY-SA 4.0.
+
+
+## 2025 popularity update (November 2026)
+
+This release retains the original, fixed 1,000-name set and its 2020 snapshot in fields \`c\`, \`r\` and \`s\` solely for traceability. It adds \`u\` for **2025 SSA** popularity: \`u.s\` is the 2025 more-frequent SSA reported sex category; \`u.c\` the 2025 birth count for that category; \`u.r\` the corresponding 2025 position in that sex-sorted SSA listing; \`u.p\` 2024 count for the same spelling and sex category; \`u.d\` the difference 2025 minus 2024. Missing \`u\` denotes a name not present in the public 2025 file and falls back to a clearly labeled 2020 count. \`gy\` gives the year for the displayed gender-based grouping.
+
+**Official origin of figures:** https://www.ssa.gov/oact/babynames/limits.html
+
+**Machine-readable working snapshots:**
+- 2025: https://github.com/moisesvasquez/us-baby-names/blob/main/data/raw/yob2025.txt
+- 2024: https://github.com/moisesvasquez/us-baby-names/blob/main/data/raw/yob2024.txt
+
+Counts are reported for each spelling and registered sex, not a European popularity index. Because national datasets omit very-low-count records (threshold generally five births per sex), absence cannot be interpreted as zero births. The stored \`r\` or \`u.r\` is the position in the corresponding count-ordered record list (the display does not use those values as a country ranking outside the US). \`u.d\` compares counts in the **same** SSA sex category.
+
+### Regional top-ten snapshots
+
+\`assets/data/baby-name-regions.json\` contains a **deliberately limited** 2025 top-ten dataset (both reported sex groups) for three distinct geographies:
+
+| Region | Publisher and scope | Interpretation |
+| --- | --- | --- |
+| England and Wales (not UK-wide) | ONS https://www.ons.gov.uk/releases/babynamesinenglandandwales2025 | exact-spelling 2025 top-ten first names, no implied ranking beyond ten |
+| France | INSEE https://www.insee.fr/fr/statistiques/8595099 | 2025 top-ten first names, preserved accents/spelling, rounded counts omitted here |
+| Germany | GfdS https://gfds.de/die-beliebtesten-vornamen-2025/ | 2025 top-ten **first** names; select phonetic/orthographic spelling variants grouped by the publisher |
+
+The U.S. dataset is deeper; the others are **top-ten only**. A European name without a displayed rank is outside this imported top ten, **not necessarily uncommon**. Do not describe this snapshot as all of Europe or as a complete UK, France or Germany name catalogue. Germany's Sophia/Sofia or Matheo/Mattheo/Mateo/Matteo appear as **one combined rank**, and must not be presented as separate rankings or counts. Dates reflect **2025 births reported in 2026**.
+
+### Couple suggestions
+
+The matching algorithm first finds the exact intersection of each partner's locally saved names. For compromise suggestions, it compares **source-derived** meaning tags, source-recorded linguistic roots, and average spelling length of each shortlist. It excludes all names already selected by either partner and applies a deterministic score to remaining candidates. Scores are solely for ordering suggestions and are **never displayed as psychological compatibility or quantified relationship success**. Neither choice nor the partner's preferences are uploaded to an application server. Shared links convey the actual selected name spellings.
+
+### Editorial caveat
+
+The 1,000 original dictionary glosses are source-derived and not individually language-expert verified. No name meaning was revised in this update without verifying a language-specific source. Do not imply the new popularity data independently validates etymological claims. Broader multi-country coverage and comprehensive manual etymology validation remain separate future work.
