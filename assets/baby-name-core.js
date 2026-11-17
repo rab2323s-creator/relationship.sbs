@@ -96,9 +96,12 @@
   }
   function regionEntry(name,sex,region){
     if(!region||region.id==="us")return null;
-    const column=sex==="girl"?"girls":sex==="boy"?"boys":null;
-    if(!column)return null;
-    return region[column].find(entry=>entry.names.some(candidate=>normalizeName(candidate)===normalizeName(name)))||null;
+    const columns=sex==="girl"?["girls"]:sex==="boy"?["boys"]:sex==="unisex"?["girls","boys"]:[];
+    for(const column of columns){
+      const found=region[column].find(entry=>entry.names.some(candidate=>normalizeName(candidate)===normalizeName(name)));
+      if(found)return found;
+    }
+    return null;
   }
   function meaningfulCommonThemes(ours,theirs,names){
     const byKey=new Map(names.map(n=>[keyOf(n.n),n]));
