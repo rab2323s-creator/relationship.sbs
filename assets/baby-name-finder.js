@@ -2,7 +2,7 @@
 "use strict";
 const core=window.BabyNameCore;
 const $=id=>document.getElementById(id);
-const state={names:[],filtered:[],saved:[],partner:[],visible:18,loaded:false,filters:{query:"",gender:"all",meaning:"all",origin:"all",sort:"popular"},tab:"explore"};
+const state={names:[],filtered:[],saved:[],partner:[],visible:18,loaded:false,filters:{query:"",gender:"all",meaning:"all",origin:"all",sort:"popular",letter:"all",length:"all"},tab:"explore",deck:[],deckIndex:0};
 const KEY="relationship.sbs:baby-name-favorites:v1";
 const lookup=()=>new Map(state.names.map(n=>[core.keyOf(n.n),n]));
 const safeText=core.escapeHtml;
@@ -29,6 +29,11 @@ function openShared(){
 }
 function updateHashSafe(){
   if(location.search.includes("partner="))return;
+}
+function letterOptions(){
+ const letters=[...new Set(state.names.map(n=>n.n[0].toUpperCase()))].sort();
+ const select=$("initialSelect");
+ select.append(...letters.map(letter=>{const option=document.createElement("option");option.value=letter;option.textContent=letter;return option}));
 }
 function originOptions(){
  const origins=[...new Set(state.names.map(n=>n.o))].sort((a,b)=>a.localeCompare(b,"en"));
@@ -118,10 +123,42 @@ function selectTab(tab){
  if(tab!=="explore")$("babyFinder").scrollIntoView({behavior:"smooth",block:"start"});
 }
 function resetFilters(){
- state.filters={query:"",gender:"all",meaning:"all",origin:"all",sort:"popular"};
- $("nameSearch").value="";$("meaningSelect").value="all";$("originSelect").value="all";$("sortSelect").value="popular";
+ state.filters={query:"",gender:"all",meaning:"all",origin:"all",sort:"popular",letter:"all",length:"all"};
+ $("nameSearch").value="";$("meaningSelect").value="all";$("originSelect").value="all";$("sortSelect").value="popular";$("initialSelect").value="all";$("lengthSelect").value="all";
  document.querySelectorAll("[data-gender]").forEach(el=>{const yes=el.dataset.gender==="all";el.classList.toggle("is-selected",yes);el.setAttribute("aria-pressed",String(yes))});
  state.visible=18;$("surpriseSpotlight").hidden=true;renderExplore();
+}
+function importPartnerUrl(raw){
+ const picked=core.parsePartnerLink(raw,state.names,location.origin,location.pathname);
+ if(!picked.length){toast("No valid partner shortlist found. Paste a link from this baby-name finder.");return false;}
+ state.partner=picked;renderComparison();toast("Partner's names loaded. Compare your favorites below.");return true;
+}
+function startQuickPick(){
+ if(!state.loaded||!state.filtered.length){toast("No names match your filters. Try a broader search.");return}
+ state.deck=core.makePickDeck(state.filtered,12);state.deckIndex=0;
+ $("quickPickStage").hidden=false;$("startQuickPick").textContent="Restart game";showQuickPick();
+}
+function showQuickPick(){
+ const box=$("quickPickName");
+ if(state.deckIndex>=state.deck.length){
+  $("quickPickProgress").textContent="All "+state.deck.length+" names explored";
+  box.innerHTML='<strong>Lovely choices!</strong><p>Review your favorites or try another round.</p>';
+  $("quickPickSave").hidden=true;$("quickPickSkip").hidden=true;return;
+ }
+ const n=state.deck[state.deckIndex];
+ $("quickPickProgress").textContent=(state.deckIndex+1)+" of "+state.deck.length;
+ box.innerHTML='<strong>'+safeText(n.n)+'</strong><p>'+safeText(n.m)+'</p><small>'+safeText(n.o)+' roots</small>';
+ $("quickPickSave").hidden=false;$("quickPickSkip").hidden=false;
+ $("quickPickSave").textContent=state.saved.includes(core.keyOf(n.n))?"♥ Already saved · Next":"♡ Love this name";
+}
+function advanceQuickPick(save){
+ const n=state.deck[state.deckIndex];if(!n)return;
+ const key=core.keyOf(n.n);
+ if(save&&!state.saved.includes(key)){
+  if(state.saved.length>=core.MAX_PICKS){toast("Your shortlist is full. Remove a name to add another.");return}
+  state.saved.push(key);saveToStorage();renderSaved();syncHeartButtons(key);
+ }
+ state.deckIndex++;showQuickPick();
 }
 function copyShareUrl(){
  if(!state.saved.length){toast("Save a name first to create a shortlist.");return}
@@ -155,7 +192,7 @@ function bind(){
   const gender=e.target.closest("[data-gender]");
   if(gender){state.filters.gender=gender.dataset.gender;state.visible=18;document.querySelectorAll("[data-gender]").forEach(btn=>{const active=btn===gender;btn.classList.toggle("is-selected",active);btn.setAttribute("aria-pressed",String(active))});renderExplore()}
  });
- for(const [id,k] of [["meaningSelect","meaning"],["originSelect","origin"],["sortSelect","sort"]]){
+ for(const [id,k] of [["meaningSelect","meaning"],["originSelect","origin"],["sortSelect","sort"],["initialSelect","letter"],["lengthSelect","length"]]){
   $(id).addEventListener("change",e=>{state.filters[k]=e.target.value;state.visible=18;$("surpriseSpotlight").hidden=true;renderExplore()});
  }
  let searchTimer; $("nameSearch").addEventListener("input",e=>{clearTimeout(searchTimer);const v=e.target.value;searchTimer=setTimeout(()=>{state.filters.query=v;state.visible=18;$("surpriseSpotlight").hidden=true;renderExplore()},90)});
@@ -163,6 +200,12 @@ function bind(){
  $("resetEmpty").addEventListener("click",resetFilters);
  $("loadMore").addEventListener("click",()=>{state.visible+=18;renderExplore()});
  $("surpriseBtn").addEventListener("click",surprise);
+ $("startQuickPick").addEventListener("click",startQuickPick);
+ $("quickPickClose").addEventListener("click",()=>{$("quickPickStage").hidden=true;$("startQuickPick").textContent="Start choosing →"});
+ $("quickPickSkip").addEventListener("click",()=>advanceQuickPick(false));
+ $("quickPickSave").addEventListener("click",()=>advanceQuickPick(true));
+ $("partnerLinkForm").addEventListener("submit",e=>{e.preventDefault();importPartnerUrl($("partnerLinkInput").value)});
+
  $("shareShortlist").addEventListener("click",copyShareUrl);
  $("shareFromCompare").addEventListener("click",copyShareUrl);
  $("clearShortlist").addEventListener("click",()=>{
@@ -186,7 +229,7 @@ async function load(){
   if(!response.ok)throw Error("HTTP "+response.status);
   const db=await response.json();
   state.names=core.validateDatabase(db);
-  state.loaded=true;restoreStorage();originOptions();
+  state.loaded=true;restoreStorage();originOptions();letterOptions();
   $("datasetSize").textContent=formatNumber(db.total);
   $("loadingState").hidden=true;
   renderExplore();renderSaved();openShared();
