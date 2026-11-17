@@ -467,3 +467,66 @@ test("new beautiful girl names article is indexed in blog and linked to the find
   assert(article.includes("<th scope=\"row\">"+label+"</th>"),"Meaning missing from published article: "+label);
  }
 });
+
+test("cool boy names editorial page has verified name ideas, exact meanings, SEO and crosslinks",()=>{
+ const article=read("blog/cool-baby-boy-names/index.html");
+ const sister=read("blog/beautiful-baby-girl-names/index.html");
+ const blogData=read("assets/blog-data.js");
+ const uri="https://relationship.sbs/blog/cool-baby-boy-names/";
+ assert(article.includes('<link rel="canonical" href="'+uri+'">'));
+ assert.equal((article.match(/<h1\\b/g)||[]).length,1);
+ assert(article.includes("Cool Baby Boy Names: Modern, Short &amp; Unique Ideas"));
+ assert(article.includes('meta name="robots" content="index,follow'));
+ assert(article.includes('href="/tools/baby-name-finder/"'));
+ assert(article.includes('href="/blog/beautiful-baby-girl-names/"'));
+ assert(sister.includes('href="/blog/cool-baby-boy-names/"'));
+ assert(html.includes('href="/blog/cool-baby-boy-names/"'));
+ assert(!html.includes("compare the usage counts"));
+ assert(blogData.includes('slug: "cool-baby-boy-names"'));
+ assert(blogData.includes('category: "Baby Names & Family"'));
+ assert(article.includes('src="/assets/images/baby-name-finder-20000-baby-names-for-couples.webp"'));
+ assert(fs.existsSync(path.join(root,"assets/images/baby-name-finder-20000-baby-names-for-couples.webp")));
+ for(const stylesheet of ["/article-ltr.css","/assets/digital-relationship-guides.css"]){
+  assert(article.includes('href="'+stylesheet+'"'));
+ }
+ const graph=JSON.parse(article.split('<script type="application/ld+json">')[1].split("</script>")[0])["@graph"];
+ const page=graph.find(x=>x["@type"]==="WebPage");
+ const blogPost=graph.find(x=>x["@type"]==="BlogPosting");
+ const breadcrumb=graph.find(x=>x["@type"]==="BreadcrumbList");
+ const faqs=graph.find(x=>x["@type"]==="FAQPage");
+ assert(page&&blogPost&&breadcrumb&&faqs);
+ assert.equal(blogPost.headline,"Cool Baby Boy Names: Modern, Short & Unique Ideas");
+ assert.equal(blogPost.datePublished,"2026-11-17");
+ assert.deepEqual(breadcrumb.itemListElement.map(x=>x.name),["Home","Blog","Cool Baby Boy Names"]);
+ assert.equal(faqs.mainEntity.length,12);
+ for(const q of faqs.mainEntity)assert(article.includes("<summary>"+q.name+"</summary>"),"FAQ missing in HTML: "+q.name);
+ for(const id of ["quick-answer","styles","modern","short","distinctive","classic","strong","nature","vintage","international","meaning","letters","pairings","checklist","together","faq","related"]){
+  assert(article.includes('id="'+id+'"'),"Missing section: "+id);
+ }
+ for(const jump of [...article.matchAll(/<a href="#([^"]+)">/g)].map(x=>x[1])){
+  assert(article.includes('id="'+jump+'"'),"Broken on-page link: "+jump);
+ }
+ const cards=[...article.matchAll(/<div class="bb-name"><h3>([^<]+)<\\/h3>/g)].map(x=>x[1]);
+ assert.equal(cards.length,94);
+ for(const label of cards){
+  const n=nameMap.get(core.keyOf(label));
+  assert(n,"Not in the 20k catalog: "+label);
+  assert(["boy","unisex"].includes(n.g),"Name not grouped as boy/unisex in catalog: "+label);
+ }
+ const meaningRows=[...article.matchAll(/<tr><th scope="row">([^<]+)<\\/th><td>([^<]+)<\\/td><td>([^<]+)<\\/td><\\/tr>/g)];
+ assert.equal(meaningRows.length,14);
+ for(const row of meaningRows){
+  const name=nameMap.get(core.keyOf(row[1]));
+  assert(name,"Unknown named meaning: "+row[1]);
+  assert.equal(name.m,row[2],"Meaning mismatch: "+row[1]);
+  assert.equal(name.o,row[3],"Root mismatch: "+row[1]);
+ }
+ const letterRows=[...article.matchAll(/<div><strong>([A-Z])<\\/strong> — <span>([^<]+)<\\/span><\\/div>/g)];
+ assert.equal(letterRows.length,16);
+ for(const [,letter,list] of letterRows)for(const label of list.split(", ")){
+  const name=nameMap.get(core.keyOf(label));
+  assert(name&&["boy","unisex"].includes(name.g)&&label.startsWith(letter),"Invalid A-Z name example: "+label);
+ }
+ assert(article.includes("min-width:540px")&&article.includes("@media(max-width:710px)"));
+ assert(!article.includes("Most used in the US"));
+});
