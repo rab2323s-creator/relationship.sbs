@@ -474,7 +474,7 @@ test("cool boy names editorial page has verified name ideas, exact meanings, SEO
  const blogData=read("assets/blog-data.js");
  const uri="https://relationship.sbs/blog/cool-baby-boy-names/";
  assert(article.includes('<link rel="canonical" href="'+uri+'">'));
- assert.equal((article.match(/<h1\\b/g)||[]).length,1);
+ assert.equal((article.match(/<h1\b/g)||[]).length,1);
  assert(article.includes("Cool Baby Boy Names: Modern, Short &amp; Unique Ideas"));
  assert(article.includes('meta name="robots" content="index,follow'));
  assert(article.includes('href="/tools/baby-name-finder/"'));
@@ -506,14 +506,14 @@ test("cool boy names editorial page has verified name ideas, exact meanings, SEO
  for(const jump of [...article.matchAll(/<a href="#([^"]+)">/g)].map(x=>x[1])){
   assert(article.includes('id="'+jump+'"'),"Broken on-page link: "+jump);
  }
- const cards=[...article.matchAll(/<div class="bb-name"><h3>([^<]+)<\\/h3>/g)].map(x=>x[1]);
+ const cards=[...article.matchAll(/<div class="bb-name"><h3>([^<]+)<\/h3>/g)].map(x=>x[1]);
  assert.equal(cards.length,94);
  for(const label of cards){
   const n=nameMap.get(core.keyOf(label));
   assert(n,"Not in the 20k catalog: "+label);
   assert(["boy","unisex"].includes(n.g),"Name not grouped as boy/unisex in catalog: "+label);
  }
- const meaningRows=[...article.matchAll(/<tr><th scope="row">([^<]+)<\\/th><td>([^<]+)<\\/td><td>([^<]+)<\\/td><\\/tr>/g)];
+ const meaningRows=[...article.matchAll(/<tr><th scope="row">([^<]+)<\/th><td>([^<]+)<\/td><td>([^<]+)<\/td><\/tr>/g)];
  assert.equal(meaningRows.length,14);
  for(const row of meaningRows){
   const name=nameMap.get(core.keyOf(row[1]));
@@ -521,7 +521,7 @@ test("cool boy names editorial page has verified name ideas, exact meanings, SEO
   assert.equal(name.m,row[2],"Meaning mismatch: "+row[1]);
   assert.equal(name.o,row[3],"Root mismatch: "+row[1]);
  }
- const letterRows=[...article.matchAll(/<div><strong>([A-Z])<\\/strong> — <span>([^<]+)<\\/span><\\/div>/g)];
+ const letterRows=[...article.matchAll(/<div><strong>([A-Z])<\/strong> — <span>([^<]+)<\/span><\/div>/g)];
  assert.equal(letterRows.length,16);
  for(const [,letter,list] of letterRows)for(const label of list.split(", ")){
   const name=nameMap.get(core.keyOf(label));
