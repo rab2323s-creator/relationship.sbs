@@ -284,6 +284,7 @@ async function load(){
   state.names=core.assembleCatalog(db,payloads);
   state.loaded=true;restoreStorage();$("originSelect").length=1;$("initialSelect").length=1;originOptions();letterOptions();labelMeaningCounts();
   $("datasetSize").textContent=formatNumber(db.total);
+  $("babySourceStats").textContent=formatNumber(state.names.filter(n=>n.m&&n.o).length)+" of "+formatNumber(db.total)+" names have a source-attributed meaning and linguistic root. Undocumented fields are never guessed.";
   $("loadingState").hidden=true;
   renderRegion();renderExplore();renderSaved();openShared();
  }catch(e){
