@@ -42,7 +42,7 @@ function optionsFor(id){
 }
 function createHarness(failPath=null){
   const nodes=new Map(), storage=new Map();
-  for(const id of ["meaningSelect","originSelect","initialSelect","lengthSelect","sortSelect","regionSelect"]){
+  for(const id of ["meaningSelect","originSelect","initialSelect","lengthSelect","sortSelect"]){
     const select=new FakeNode(); select.options=optionsFor(id);select.value=select.options[0].value;nodes.set(id,select);
   }
   const get=id=>{if(!nodes.has(id))nodes.set(id,new FakeNode());return nodes.get(id)};
@@ -82,11 +82,11 @@ async function waitFor(predicate){
  throw Error("Browser simulation did not reach expected state");
 }
 
-test("browser boot loads and validates all 20,000 names and shows source coverage",async()=>{
+test("browser boot loads and validates all 20,000 names with a clean discovery interface",async()=>{
  const ui=createHarness();
  await waitFor(()=>ui.get("resultsCount").textContent==="20,000 names found");
  assert.equal(ui.get("datasetSize").textContent,"20,000");
- assert(ui.get("babySourceStats").textContent.includes("2,704 of 20,000"));
+ assert(ui.get("babySourceStats").textContent.includes("available meanings"));
  assert(ui.get("resultCards").innerHTML.includes("baby-name-card"));
  assert.equal(ui.get("loadingState").hidden,true);
  assert.equal(ui.get("errorState").hidden,true);
@@ -94,7 +94,7 @@ test("browser boot loads and validates all 20,000 names and shows source coverag
  assert(ui.get("meaningSelect").options.some(o=>o.textContent.includes("Love & affection (")));
 });
 
-test("client search, filtering, saved favorites and regional rankings work after loading 20k",async()=>{
+test("client search, A-Z sorting and saved favorites work after loading 20k",async()=>{
  const ui=createHarness();
  await waitFor(()=>ui.get("resultsCount").textContent==="20,000 names found");
  const search=ui.get("nameSearch");
@@ -107,10 +107,13 @@ test("client search, filtering, saved favorites and regional rankings work after
  const names=JSON.parse(ui.storage.get("relationship.sbs:baby-name-favorites:v1"));
  assert(names.includes("liam"));
  assert(ui.get("shortlistCards").innerHTML.includes("<h4>Liam</h4>"));
- const region=ui.get("regionSelect");region.value="de";region.fire("change");
- assert.equal(ui.get("regionRanking").hidden,false);
- assert(ui.get("regionRankingLists").innerHTML.includes("Sophia / Sofia"));
- assert(ui.get("regionSourceLink").href.startsWith("https://"));
+ const sort=ui.get("sortSelect");
+ assert.equal(sort.value,"az");
+ sort.value="za";sort.fire("change");
+ assert.equal(sort.value,"za");
+ assert(ui.get("resultCards").innerHTML.includes("baby-name-card"));
+ assert(!ui.get("resultCards").innerHTML.includes("US births"));
+ assert(!ui.get("resultCards").innerHTML.includes("births vs"));
 });
 
 test("browser shows a genuine load failure if any of five catalog shards fails",async()=>{
@@ -183,4 +186,19 @@ test("editorial example, meanings and couples links preserve operational finder 
  assert.equal(ui.get("panelTogether").hidden,true);
  assert.equal(ui.get("initialSelect").value,"all");
  assert.equal(ui.get("meaningOnly").checked,false);
+});
+
+
+test("simplified search does not depend on regional data and default sorting is alphabetical",async()=>{
+ const ui=createHarness("/assets/data/baby-name-regions.json");
+ await waitFor(()=>ui.get("resultsCount").textContent==="20,000 names found");
+ assert(ui.get("resultCards").innerHTML.includes("baby-name-card"));
+ assert(ui.get("resultCards").innerHTML.includes("Meaning not yet independently documented"));
+ assert(!ui.get("resultCards").innerHTML.includes("US births"));
+ const search=ui.get("nameSearch");search.value="Milo";search.fire("input");
+ await waitFor(()=>ui.get("resultsCount").textContent!=="20,000 names found");
+ assert(ui.get("resultCards").innerHTML.includes("<h4>Milo</h4>"));
+ ui.get("surpriseBtn").fire("click");
+ assert(!ui.get("surpriseSpotlight").innerHTML.includes("US births"));
+ assert(!ui.get("surpriseSpotlight").innerHTML.includes("2025"));
 });

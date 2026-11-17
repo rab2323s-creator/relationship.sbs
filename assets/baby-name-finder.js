@@ -2,7 +2,7 @@
 "use strict";
 const core=window.BabyNameCore;
 const $=id=>document.getElementById(id);
-const state={names:[],filtered:[],saved:[],partner:[],regions:[],region:"us",visible:18,loaded:false,filters:{query:"",gender:"all",meaning:"all",origin:"all",sort:"popular",letter:"all",length:"all",documented:false},tab:"explore",deck:[],deckIndex:0};
+const state={names:[],filtered:[],saved:[],partner:[],visible:18,loaded:false,filters:{query:"",gender:"all",meaning:"all",origin:"all",sort:"az",letter:"all",length:"all",documented:false},tab:"explore",deck:[],deckIndex:0};
 const KEY="relationship.sbs:baby-name-favorites:v1";
 const lookup=()=>new Map(state.names.map(n=>[core.keyOf(n.n),n]));
 const safeText=core.escapeHtml;
@@ -48,25 +48,6 @@ function originOptions(){
  select.append(...origins.map(origin=>{const option=document.createElement("option");option.value=origin;option.textContent=origin;return option}));
 }
 function formatNumber(n){return new Intl.NumberFormat("en-US").format(n)}
-function regionChoice(){return state.regions.find(r=>r.id===state.region)}
-function usInfo(n){return n.u||{c:n.c,r:n.r,d:null,p:null}}
-function regionDescription(n){
- const region=regionChoice();
- if(!region||region.id==="us")return "";
- const entry=core.regionEntry(n.n,n.g,region);
- if(!entry)return "";
- return '<div class="baby-region-hit"><strong>'+safeText(region.label)+' #'+entry.rank+'</strong><span>'+region.year+' verified top-ten'+(entry.grouped?' · grouped variants':'')+'</span></div>';
-}
-function renderRegion(){
- const region=regionChoice(),panel=$("regionRanking");
- if(!region||region.id==="us"){panel.hidden=true;return}
- panel.hidden=false;
- $("regionRankingTitle").textContent=region.label+" · most popular names";
- $("regionRankingNote").textContent=region.coverage+". Not in the top 10 does not mean a name is rare.";
- $("regionSourceLink").href=region.source;
- const block=(label,items)=>'<section><h4>'+label+'</h4><ol>'+items.map(e=>'<li><span class="baby-rank-no">'+e.rank+'</span><span>'+safeText(e.names.join(" / "))+'</span>'+ (e.grouped?'<small>Grouped spellings</small>':'')+'</li>').join("")+'</ol></section>';
- $("regionRankingLists").innerHTML=block("Girls",region.girls)+block("Boys",region.boys);
-}
 
 function card(n){
  const key=core.keyOf(n.n),saved=state.saved.includes(key), tags=n.t.slice(0,2);
@@ -76,13 +57,11 @@ function card(n){
  '<button class="baby-heart'+(saved?' is-saved':'')+'" type="button" data-heart="'+safeText(key)+'" aria-pressed="'+String(saved)+'" aria-label="'+(saved?'Remove ':'Save ')+safeText(n.n)+(saved?' from':' to')+' favorites" title="'+(saved?'Remove from':'Save to')+' favorites">'+(saved?'♥':'♡')+'</button></div>'+
  '<h4>'+safeText(n.n)+'</h4>'+meaning+
  '<div class="baby-card-tags"><span>'+safeText(n.g==="unisex"?"Unisex":n.g==="girl"?"Mostly girls":"Mostly boys")+'</span>'+tags.map(t=>'<span>'+safeText(t)+'</span>').join("")+'</div>'+
- regionDescription(n)+
- '<div class="baby-card-foot"><span>US births in '+(n.u?'2025':'2020 (fallback)')+'</span><strong>'+formatNumber(usInfo(n).c)+'</strong></div>'+
- (n.u&&Number.isInteger(n.u.d)?'<div class="baby-card-trend">'+(n.u.d>0?'↑ +':n.u.d<0?'↓ ':'→ ')+formatNumber(Math.abs(n.u.d))+' births vs 2024 · US only</div>':'')+'</article>';
+ '</article>';
 }
 function updateAdvancedFilterCount(){
  const f=state.filters;
- const count=Number(f.meaning!=="all")+Number(f.letter!=="all")+Number(f.length!=="all")+Number(f.sort!=="popular")+Number(f.documented);
+ const count=Number(f.meaning!=="all")+Number(f.letter!=="all")+Number(f.length!=="all")+Number(f.sort!=="az")+Number(f.documented);
  const counter=$("advancedFilterCount");
  if(!counter)return;
  counter.hidden=count===0;
@@ -173,8 +152,8 @@ function selectTab(tab){
  if(tab!=="explore")$("babyFinder").scrollIntoView({behavior:"smooth",block:"start"});
 }
 function resetFilters(){
- state.filters={query:"",gender:"all",meaning:"all",origin:"all",sort:"popular",letter:"all",length:"all",documented:false};
- $("nameSearch").value="";$("meaningSelect").value="all";$("originSelect").value="all";$("sortSelect").value="popular";$("initialSelect").value="all";$("lengthSelect").value="all";$("meaningOnly").checked=false;
+ state.filters={query:"",gender:"all",meaning:"all",origin:"all",sort:"az",letter:"all",length:"all",documented:false};
+ $("nameSearch").value="";$("meaningSelect").value="all";$("originSelect").value="all";$("sortSelect").value="az";$("initialSelect").value="all";$("lengthSelect").value="all";$("meaningOnly").checked=false;
  document.querySelectorAll("[data-gender]").forEach(el=>{const yes=el.dataset.gender==="all";el.classList.toggle("is-selected",yes);el.setAttribute("aria-pressed",String(yes))});
  state.visible=18;$("surpriseSpotlight").hidden=true;renderExplore();
 }
@@ -230,7 +209,7 @@ function surprise(){
  if(!state.filtered.length){toast("Try relaxing your filters first.");return}
  const choice=state.filtered[Math.floor(Math.random()*state.filtered.length)];
  $("surpriseSpotlight").hidden=false;
- $("surpriseSpotlight").innerHTML='<div><span class="baby-eyebrow">A NAME TO CONSIDER</span><h3>'+safeText(choice.n)+'</h3><p>'+(choice.m?safeText(choice.m):'Meaning not yet documented')+'</p><small>'+(choice.o?safeText(choice.o)+' roots · ':'')+formatNumber(usInfo(choice).c)+' US births in '+(choice.u?'2025':'2020')+'</small></div><button type="button" class="baby-heart'+(state.saved.includes(core.keyOf(choice.n))?' is-saved':'')+'" data-heart="'+safeText(core.keyOf(choice.n))+'" aria-label="Save '+safeText(choice.n)+' to favorites" aria-pressed="'+String(state.saved.includes(core.keyOf(choice.n)))+'">'+(state.saved.includes(core.keyOf(choice.n))?'♥':'♡')+'</button>';
+ $("surpriseSpotlight").innerHTML='<div><span class="baby-eyebrow">A NAME TO CONSIDER</span><h3>'+safeText(choice.n)+'</h3><p>'+(choice.m?safeText(choice.m):'Meaning not yet documented')+'</p><small>'+(choice.o?safeText(choice.o)+' roots':'Origin not yet confirmed')+'</small></div><button type="button" class="baby-heart'+(state.saved.includes(core.keyOf(choice.n))?' is-saved':'')+'" data-heart="'+safeText(core.keyOf(choice.n))+'" aria-label="Save '+safeText(choice.n)+' to favorites" aria-pressed="'+String(state.saved.includes(core.keyOf(choice.n)))+'">'+(state.saved.includes(core.keyOf(choice.n))?'♥':'♡')+'</button>';
  $("surpriseSpotlight").scrollIntoView({behavior:"smooth",block:"nearest"});
 }
 function browseFromGuide(link){
@@ -242,7 +221,7 @@ function browseFromGuide(link){
  if(action==="together"){
   selectTab("together");
  }else{
-  const filters={query:"",gender:nextGender,meaning:"all",origin:"all",sort:"popular",letter:"all",length:"all",documented:false};
+  const filters={query:"",gender:nextGender,meaning:"all",origin:"all",sort:"az",letter:"all",length:"all",documented:false};
   if(action==="letter")filters.letter=link.dataset.babyLetter;
   if(action==="name")filters.query=link.dataset.babyName;
   if(action==="meaning")filters.documented=true;
@@ -292,9 +271,6 @@ function bind(){
  $("clearFilters").addEventListener("click",resetFilters);
  $("resetEmpty").addEventListener("click",resetFilters);
  $("loadMore").addEventListener("click",()=>{state.visible+=18;renderExplore()});
- $("regionSelect").addEventListener("change",e=>{
- state.region=e.target.value;renderRegion();renderExplore();renderSaved();
- });
  $("meaningOnly").addEventListener("change",e=>{state.filters.documented=!!e.target.checked;state.visible=18;renderExplore()});
  $("surpriseBtn").addEventListener("click",surprise);
  $("startQuickPick").addEventListener("click",startQuickPick);
@@ -322,25 +298,21 @@ function bind(){
 async function load(){
  $("errorState").hidden=true;$("loadingState").hidden=false;
  try{
-  const [manifestResponse,rankingsResponse]=await Promise.all([
-    fetch("/assets/data/baby-names-20k-manifest.json",{cache:"default"}),
-    fetch("/assets/data/baby-name-regions.json",{cache:"default"})
-  ]);
-  if(!manifestResponse.ok||!rankingsResponse.ok)throw Error("Catalog manifest or region request failed");
-  const [db,regions]=await Promise.all([manifestResponse.json(),rankingsResponse.json()]);
+  const manifestResponse=await fetch("/assets/data/baby-names-20k-manifest.json",{cache:"default"});
+   if(!manifestResponse.ok)throw Error("Catalog manifest request failed");
+   const db=await manifestResponse.json();
   const parts=core.validateManifest(db);
   const payloads=await Promise.all(parts.map(async part=>{
     const response=await fetch(part.path,{cache:"default"});
     if(!response.ok)throw Error("Could not load catalog shard: "+part.path);
     return response.json();
   }));
-  state.regions=core.validateRegionData(regions);
   state.names=core.assembleCatalog(db,payloads);
   state.loaded=true;restoreStorage();$("originSelect").length=1;$("initialSelect").length=1;originOptions();letterOptions();labelMeaningCounts();
   $("datasetSize").textContent=formatNumber(db.total);
-  $("babySourceStats").textContent=formatNumber(state.names.filter(n=>n.m&&n.o).length)+" of "+formatNumber(db.total)+" names have a source-attributed meaning and linguistic root. Undocumented fields are never guessed.";
+  $("babySourceStats").textContent="Explore names with available meanings, or browse every name by sound, spelling and first letter.";
   $("loadingState").hidden=true;
-  renderRegion();renderExplore();renderSaved();openShared();
+  renderExplore();renderSaved();openShared();
  }catch(e){
   console.error("Baby name collection error",e);
   $("loadingState").hidden=true;$("errorState").hidden=false;

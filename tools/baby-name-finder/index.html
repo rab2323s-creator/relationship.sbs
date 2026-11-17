@@ -67,11 +67,11 @@
           },
           {
             "@type": "Thing",
-            "name": "US baby name popularity"
+            "name": "Choosing baby names as a couple"
           },
           {
             "@type": "Thing",
-            "name": "Choosing baby names as a couple"
+            "name": "Baby names by first letter"
           }
         ],
         "keywords": "baby name finder, baby girl names, baby boy names, baby names A-Z, classic girl names, cool boy names, baby name meanings, baby names for couples",
@@ -88,7 +88,7 @@
         "operatingSystem": "Any",
         "isAccessibleForFree": true,
         "inLanguage": "en",
-        "description": "Free Baby Name Finder with 20,000 recorded girl, boy and gender-neutral names; browse by first letter A–Z, recorded US popularity, name length and documented linguistic meanings, and save or compare favorites with a partner.",
+        "description": "Free Baby Name Finder to explore 20,000 girl, boy and gender-neutral name ideas, browse A–Z, filter by name length and documented meanings, save favorites and compare shortlists with a partner.",
         "offers": {
           "@type": "Offer",
           "price": "0",
@@ -97,10 +97,10 @@
           "url": "https://relationship.sbs/tools/baby-name-finder/"
         },
         "featureList": [
-          "Search 20,000 distinct recorded baby names",
-          "Browse girl and boy names by starting letter A–Z",
-          "Filter names by US birth-registration category, length, popularity and documented meanings",
-          "Explore selected girl, boy and gender-neutral name examples",
+          "Explore 20,000 baby-name spellings",
+          "Browse girl, boy and gender-neutral name ideas",
+          "Search by name, starting letter A–Z, length and available meanings",
+          "Sort names alphabetically A–Z or Z–A",
           "Save favorite names locally without an account",
           "Share and compare two partners' shortlists with a link"
         ],
@@ -122,19 +122,7 @@
           "@id": "https://relationship.sbs/tools/baby-name-finder/#image"
         },
         "keywords": "baby name finder, baby girl names, baby boy names, gender-neutral baby names, baby name meanings, baby names by starting letter, baby names for couples",
-        "softwareHelp": "https://relationship.sbs/tools/baby-name-finder/#faqTitle",
-        "isBasedOn": [
-          {
-            "@type": "CreativeWork",
-            "name": "US Social Security Administration baby name data",
-            "url": "https://www.ssa.gov/oact/babynames/limits.html"
-          },
-          {
-            "@type": "CreativeWork",
-            "name": "English Wiktionary name etymology entries",
-            "url": "https://en.wiktionary.org/"
-          }
-        ]
+        "softwareHelp": "https://relationship.sbs/tools/baby-name-finder/#faqTitle"
       },
       {
         "@type": "BreadcrumbList",
@@ -220,7 +208,7 @@
             "name": "Do all 20,000 names have a verified meaning?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "No. All 20,000 names are linked to published US birth records, but only a subset has source-attributed meaning and language-root entries. When meaning or origin is not documented, the tool says so instead of guessing. Meaning and origin filters search only documented entries."
+              "text": "No. Documented meanings and language roots are available for only some names. Others remain searchable and can be saved to your favorites. Meaning filters include names with available documentation."
             }
           },
           {
@@ -229,14 +217,6 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "No. Etymological explanations may differ by language, source and naming tradition. Treat the glosses as a starting point, and verify a final choice using the cited dictionary source and speakers familiar with the language."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Does US popularity tell me what is popular in Europe?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No. We show US Social Security 2025 figures separately from verified 2025 national top-ten ranks for England and Wales (ONS), France (INSEE), and Germany (GfdS). German ranks may group spellings. A name missing from a top-ten list may still be widely used."
             }
           },
           {
@@ -260,7 +240,7 @@
             "name": "What is a cool name for a boy?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Cool is a matter of taste. Kai, Milo, Axel and Finn are short options you might like. Search for them in the tool, then explore more boy names by letter, length or recorded US popularity."
+              "text": "Cool is a matter of taste. Kai, Milo, Axel and Finn are short options you might like. Search for them in the tool, then explore more boy names by letter, length or meaning."
             }
           },
           {
@@ -337,13 +317,13 @@
                 <button type="button" data-gender="boy" aria-pressed="false">Boys</button>
                 <button type="button" data-gender="unisex" aria-pressed="false">Both</button>
               </div>
-              <small>Based on US birth registrations in 2025 where available (2020 otherwise); not gender identity.</small>
+              <small>Browse name ideas by category; naming traditions vary across cultures and families.</small>
             </fieldset>
             <details class="baby-more-filters" id="advancedFilters">
               <summary>More filters <span class="baby-active-count" id="advancedFilterCount" hidden></span><span aria-hidden="true" class="baby-more-chevron"></span></summary>
               <div class="baby-advanced-inner">
-                <p class="baby-filter-help">Refine by first letter, meaning, length or popularity.</p>
-                <div class="baby-source-stats" id="babySourceStats" aria-live="polite">Meanings are shown only when a dictionary-backed entry is available.</div>
+                <p class="baby-filter-help">Refine by first letter, name meaning, length or alphabetical order.</p>
+                <div class="baby-source-stats" id="babySourceStats" aria-live="polite">Some names have documented meanings; you can save any name you love.</div>
             <div class="baby-field"><label for="meaningSelect">A meaning you love</label><select id="meaningSelect">
               <option value="all">Any meaning</option>
               <option value="love">Love & affection</option>
@@ -359,16 +339,8 @@
             <div class="baby-field"><label for="initialSelect">Starts with</label><select id="initialSelect"><option value="all">Any letter</option></select></div>
             <div class="baby-field"><label for="lengthSelect">Name length</label><select id="lengthSelect"><option value="all">Any length</option><option value="short">Short · 2–4 letters</option><option value="medium">Medium · 5–6 letters</option><option value="long">Long · 7+ letters</option></select></div>
             <div class="baby-field"><label class="baby-source-checkbox" for="meaningOnly"><input type="checkbox" id="meaningOnly"><span>Only names with a documented meaning &amp; origin</span></label></div>
-            <div class="baby-field" hidden><label for="originSelect">Linguistic roots</label><select id="originSelect"><option value="all">All origins</option></select><small>Origins describe language roots, not where a name is popular today.</small></div>
-            <div class="baby-field"><label for="regionSelect">Explore popularity in</label><select id="regionSelect">
-              <option value="us">United States · SSA 2025</option>
-              <option value="ew">England & Wales · ONS 2025</option>
-              <option value="fr">France · INSEE 2025</option>
-              <option value="de">Germany · GfdS 2025</option>
-            </select><small>US records are broad; European rankings here cover the verified top 10 only.</small></div>
+            <div class="baby-field" hidden><label for="originSelect">Linguistic roots</label><select id="originSelect"><option value="all">All origins</option></select><small>Language roots are not a name’s only cultural association.</small></div>
             <div class="baby-field"><label for="sortSelect">Sort names</label><select id="sortSelect">
-              <option value="popular">Most used in the US (2025)</option>
-              <option value="rare">Less used in the US (2025)</option>
               <option value="az">Name A–Z</option>
               <option value="za">Name Z–A</option>
             </select></div>
@@ -379,10 +351,6 @@
 
           <div class="baby-results-area">
             <div class="baby-results-toolbar"><div><p class="baby-results-caption">A CURATED COLLECTION</p><h3 id="resultsCount" aria-live="polite">Loading names…</h3></div><button id="surpriseBtn" type="button" class="baby-outline-button">✧ Surprise me</button></div>
-            <section class="baby-region-ranking" id="regionRanking" aria-label="Regional popularity overview" hidden>
-              <div class="baby-region-heading"><div><span class="baby-eyebrow">OFFICIAL 2025 DATA</span><h3 id="regionRankingTitle">Regional baby names</h3><p id="regionRankingNote"></p></div><a href="#" id="regionSourceLink" target="_blank" rel="noopener noreferrer">View official source ↗</a></div>
-              <div id="regionRankingLists" class="baby-region-lists"></div>
-            </section>
             <div id="surpriseSpotlight" class="baby-spotlight" hidden aria-live="polite"></div>
             <div id="loadingState" class="baby-loading" role="status">Opening the name collection…</div>
             <div id="errorState" class="baby-empty" hidden role="alert"><h3>We couldn't load the names.</h3><p>Please check your connection and try again.</p><button type="button" id="retryLoad" class="baby-primary-button">Try again</button></div>
@@ -442,7 +410,7 @@
           <span class="baby-discovery-tag">GIRL NAME IDEAS</span>
           <h3 id="girlIdeasTitle">Baby Girl Names: Beautiful, Classic &amp; Unique Ideas</h3>
           <p><strong>Beautiful baby girl names</strong> might include Olivia, Aurora, Violet and Lily. For a timeless, <strong>classic girl names</strong> shortlist, start with Charlotte, Eleanor, Alice or Clara.</p>
-          <p>Looking for <strong>unique girl names</strong>? Try lesser-used choices such as Ada or Arabella, then switch to <em>Less used in the US</em> in the filters. Popularity changes by place, and no name is guaranteed unique.</p>
+          <p>Looking for <strong>unique girl names</strong>? Try Ada or Arabella, then explore different first letters, lengths and sounds. What feels distinctive depends on your family, language and community.</p>
           <div class="baby-example-names" aria-label="Search example girl names">
             <a href="#babyFinder" data-baby-browse="name" data-baby-name="Olivia" data-baby-gender="girl" aria-label="Find Olivia in the Baby Name Finder">Olivia</a>
             <a href="#babyFinder" data-baby-browse="name" data-baby-name="Violet" data-baby-gender="girl" aria-label="Find Violet in the Baby Name Finder">Violet</a>
@@ -454,7 +422,7 @@
         <article class="baby-discovery-card baby-discovery-card--boy" aria-labelledby="boyIdeasTitle">
           <span class="baby-discovery-tag">BOY NAME IDEAS</span>
           <h3 id="boyIdeasTitle">Baby Boy Names: Cool, Popular &amp; Unique Ideas</h3>
-          <p>For <strong>cool baby boy names</strong>, explore Kai, Milo, Axel and Finn. Liam, Noah, Oliver and Theodore are among the widely used boys’ names in our US birth dataset.</p>
+          <p>For <strong>cool baby boy names</strong>, explore Kai, Milo, Axel and Finn. Liam, Noah, Oliver and Theodore offer more styles to consider.</p>
           <p>Prefer <strong>unique boy names</strong>? Consider Arthur, Felix, Ezra or Rowan, then compare the usage counts. An unusual-sounding name may still be common in another community.</p>
           <div class="baby-example-names" aria-label="Search example boy names">
             <a href="#babyFinder" data-baby-browse="name" data-baby-name="Kai" data-baby-gender="boy" aria-label="Find Kai in the Baby Name Finder">Kai</a>
@@ -542,7 +510,7 @@
         <article class="baby-discovery-card baby-discovery-card--meaning" aria-labelledby="meaningIdeasTitle">
           <span class="baby-discovery-tag">MEANING &amp; LANGUAGE</span>
           <h2 id="meaningIdeasTitle">Baby Name Meanings: Names With Beautiful Meanings</h2>
-          <p>Explore names with <strong>documented meanings</strong>: Violet has a recorded gloss of “violet,” Axel is associated with “father + peace,” and Riley with “rye + clearing, meadow” in our sources. These are linguistic explanations, not promises about a child’s personality.</p>
+          <p>Explore names with <strong>documented meanings</strong>: Violet has a recorded gloss of “violet,” Axel is associated with “father + peace,” and Riley with “rye + clearing, meadow” in the recorded meanings shown here. These are linguistic explanations, not promises about a child’s personality.</p>
           <p>Meanings are available for only part of the collection; the finder clearly marks names without a documented entry. For <strong>gender-neutral baby names</strong>, you can also explore Quinn and Riley.</p>
           <div class="baby-example-names" aria-label="Search examples with documented meanings">
             <a href="#babyFinder" data-baby-browse="name" data-baby-name="Violet" data-baby-gender="girl" aria-label="Find Violet in the Baby Name Finder">Violet</a>
@@ -569,24 +537,22 @@
         <article><span>02</span><h3>Consider how it travels</h3><p>Say each name aloud in the languages your family uses. Ask how others might pronounce or spell it, and check whether the name works comfortably with your surname.</p></article>
         <article><span>03</span><h3>Give each other room</h3><p>Make shortlists independently, then look for overlaps. A name one partner dislikes need not become an argument; explore what the other partner loves about it.</p></article>
       </div>
-      <div class="baby-article"><h2>Search Baby Names by Letter, Gender and Popularity</h2><p>Start with the search box to find a name or a word in a documented meaning. Choose Girls, Boys or Both to narrow the list, then open <strong>More filters</strong> to browse baby names by first letter, length or popularity in US birth records. Use “Most used” to explore familiar names, or “Less used” to find names with lower recorded US counts. A lower count is not proof that a name is rare in every region or language.</p><h2>What do baby name meanings and origins actually tell you?</h2><p>Name meanings are usually shorthand for etymology: the word, language or older name from which a modern name developed. One name can have several plausible histories, especially when it is used across languages or shares a spelling with another name. A meaning is not a personality prediction, and cultures sometimes interpret the same name differently.</p><p>This finder includes <strong>20,000 distinct recorded baby-name spellings</strong>. The original 1,000-name set is preserved, and 19,000 additional names were selected from 2025 US Social Security records. Not every name has a verified etymology: those without a documented source are clearly labeled and are excluded from meaning and origin filters. Meanings shown here come from source-attributed English Wiktionary-derived records and still require individual editorial review. The name count is the count of names in this tool, not the number of names registered in any country. Each card's US usage count refers to births registered under that spelling and the recorded sex category with the higher count in 2025 (or a labeled 2020 fallback). Country comparisons show verified 2025 top-ten ranks for England and Wales, France, and Germany only. These rankings are not Europe-wide; German lists group some spelling variants, unlike the exact-spelling lists used elsewhere.</p><p>Meaning filters are intentionally conservative. A name is shown in the “nature” or “love” group when its recorded gloss matches explicitly defined meaning concepts, not because its style simply feels natural or romantic. For names with uncertain or competing explanations, independently verify the linked etymology before making a final decision.</p><h2>Choose Baby Names Together: Compare Your Favorites</h2><p>Try a first pass with no discussion: each parent saves around ten names. Then share a shortlist, identify the names you both selected, and talk about why those work. If there is no overlap, compare qualities—short versus long, familiar versus uncommon, traditional versus modern—rather than trying to win support for a single favorite.</p><p>You can also revisit <a href="/tests/do-i-want-kids-quiz/">your thoughts about parenthood</a> and explore other <a href="/blog/">relationship guides</a>. Choosing a name is one of many meaningful family decisions you can make as a team.</p></div>
+      <div class="baby-article"><h2>Search Baby Names by Letter, Gender and Style</h2><p>Start with the search box to look for a name or a word in an available meaning. Choose Girls, Boys or Both, then open <strong>More filters</strong> to browse by first letter, name length or meaning. Sort A–Z or Z–A to scan the collection at your own pace. The same name may be used in different ways across languages and cultures.</p><h2>What do baby name meanings and origins actually tell you?</h2><p>Meanings are short explanations of a name’s linguistic history. Some names have more than one possible root, especially when they appear across languages or share a spelling. This finder includes <strong>20,000 baby-name spellings</strong>, with documented meanings and language roots shown where available. A missing meaning does not make a name less meaningful to your family.</p><p>Names that share a sound or spelling may have different histories. Treat meaning tags as starting points for discovery, not predictions about personality, and think about how a name is pronounced in the languages used at home.</p><h2>Choose Baby Names Together: Compare Your Favorites</h2><p>Try making separate shortlists first: each parent saves around ten names. Share your favorites, look for names on both lists and talk about the sounds, meanings or family connections you each love. If there is no overlap, compare qualities such as short versus long or classic versus modern rather than trying to win support for a single favorite.</p><p>You can also revisit <a href="/tests/do-i-want-kids-quiz/">your thoughts about parenthood</a> and explore other <a href="/blog/">relationship guides</a>. Choosing a name is one of many meaningful family decisions you can make as a team.</p></div>
     </section>
 
     <section class="baby-faq" aria-labelledby="faqTitle"><span class="baby-eyebrow">COMMON QUESTIONS</span><h2 id="faqTitle">Baby Name Finder FAQs</h2>
       <details><summary>Is this baby name finder free?</summary><p>Yes. You can explore the names, save favorites and share a shortlist without creating an account or paying a fee.</p></details>
       <details><summary>Can I search baby names by starting letter?</summary><p>Yes. Open More filters and choose the first letter you want. You can combine this with the name search and the girl, boy or gender-neutral options.</p></details>
       <details><summary>Can I use it with my spouse or partner?</summary><p>Yes. Save your favorite names, copy a shortlist link and send it to your partner. When they open your link, they can save their own picks and see which names overlap.</p></details>
-      <details><summary>Do all 20,000 names have a verified meaning?</summary><p>No. All 20,000 names are linked to published US birth records, but only a subset has source-attributed meaning and language-root entries. When meaning or origin is not documented, the tool says so instead of guessing. Meaning and origin filters search only documented entries.</p></details>
+      <details><summary>Do all 20,000 names have a verified meaning?</summary><p>No. Documented meanings and language roots are available for only some names. Others remain searchable and can be saved to your favorites. Meaning filters include names with available documentation.</p></details>
       <details><summary>Are the name meanings always definitive?</summary><p>No. Etymological explanations may differ by language, source and naming tradition. Treat the glosses as a starting point, and verify a final choice using the cited dictionary source and speakers familiar with the language.</p></details>
-      <details><summary>Does US popularity tell me what is popular in Europe?</summary><p>No. We show US Social Security 2025 figures separately from verified 2025 national top-ten ranks for England and Wales (ONS), France (INSEE), and Germany (GfdS). German ranks may group spellings. A name missing from a top-ten list may still be widely used.</p></details>
       <details><summary>Where are my saved names stored?</summary><p>Your favorites are saved locally in your browser when storage is available. A share link contains only the selected names in its address. Anyone who receives the link can read those names. We do not store a shared shortlist on a server.</p></details>
       <details><summary>What's a good name for a boy?</summary><p>A good boy name is one that suits your family's languages, surname and preferences. Liam, Noah and Oliver are examples to consider. You can also compare shorter options or documented meanings in the Baby Name Finder.</p></details>
-      <details><summary>What is a cool name for a boy?</summary><p>Cool is a matter of taste. Kai, Milo, Axel and Finn are short options you might like. Search for them in the tool, then explore more boy names by letter, length or recorded US popularity.</p></details>
+      <details><summary>What is a cool name for a boy?</summary><p>Cool is a matter of taste. Kai, Milo, Axel and Finn are short options you might like. Search for them in the tool, then explore more boy names by letter, length or meaning.</p></details>
       <details><summary>What are beautiful baby girl names?</summary><p>Olivia, Aurora, Violet and Lily are examples of girl names that some families find beautiful. Browse the girl names collection to compare their sounds, spellings and documented meanings where available.</p></details>
       <details><summary>What are classic girl names?</summary><p>Charlotte, Eleanor, Alice and Clara are examples of classic-style girl names. What feels traditional depends on your language and culture, so use the finder to compare names with your own family's preferences.</p></details>
       <details><summary>How do I find baby names that start with A?</summary><p>Use the Girl Names or Boy Names A–Z letter guide above and select A. It opens the search tool with the matching category and first-letter filter. You can do the same for every letter through Z.</p></details>
     </section>
-    <section class="baby-sources"><h2>Sources & editorial method</h2><p><strong>US name counts:</strong> <a href="https://www.ssa.gov/oact/babynames/limits.html" rel="noopener noreferrer">Social Security Administration</a>, 2025 and 2024 national records, with a labeled 2020 fallback for the one preserved legacy name missing from 2025 records (US public data; the dataset suppresses names with fewer than five registrations per recorded sex). <strong>Etymology:</strong> short, source-derived glosses from <a href="https://en.wiktionary.org/" rel="noopener noreferrer">English Wiktionary</a> (CC BY-SA 4.0), assembled through the <a href="https://github.com/suhxnitiwari/baby-name-maker" rel="noopener noreferrer">Lullabyte name-research dataset</a>. Read the <a href="https://github.com/rab2323s-creator/relationship.sbs/blob/main/assets/data/BABY_NAMES_SOURCES.md" rel="noopener noreferrer">data notes</a> after publication. The roots are linguistic and are not assertions of a name's exclusive national origin. 2025 European data: <a href="https://www.ons.gov.uk/releases/babynamesinenglandandwales2025" rel="noopener noreferrer">ONS</a>, <a href="https://www.insee.fr/fr/statistiques/8595099" rel="noopener noreferrer">INSEE</a>, and <a href="https://gfds.de/die-beliebtesten-vornamen-2025/" rel="noopener noreferrer">GfdS</a>. Last checked for this release: November 2026.</p></section>
   </main>
   <footer id="siteFooter"></footer>
   <script defer src="/assets/shared.js"></script>
