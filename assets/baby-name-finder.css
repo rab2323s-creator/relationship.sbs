@@ -1,0 +1,103 @@
+/* Baby Name Finder: scoped, responsive editorial design */
+body.baby-page{background:#faf7f5;color:#302c31}
+.baby-page .baby-wrap{max-width:1240px;margin:auto;padding:22px 26px 90px}
+.baby-page a{color:inherit}
+.baby-page button,.baby-page input,.baby-page select{font:inherit}
+.baby-page button{cursor:pointer}
+.baby-page button:disabled{opacity:.45;cursor:not-allowed}
+.baby-page :focus-visible{outline:3px solid #9e5f83;outline-offset:3px}
+.baby-breadcrumb{display:flex;align-items:center;gap:11px;color:#736770;font-size:13px;margin:6px 0 36px}
+.baby-breadcrumb a:hover{text-decoration:underline}
+.baby-hero{position:relative;isolation:isolate;overflow:hidden;text-align:center;padding:78px 20px 74px;border-radius:32px;background:#f5e9e6;border:1px solid #eadedc}
+.baby-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 12% 12%,#fff8f5 0%,transparent 44%),radial-gradient(circle at 86% 76%,#f2dbd8 0%,transparent 40%);z-index:-1}
+.baby-hero-art{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:-1}
+.baby-art-orb{position:absolute;display:block;border-radius:50%;filter:blur(1px)}
+.baby-art-orb-one{width:280px;height:280px;left:-130px;top:130px;background:linear-gradient(120deg,#ffefdc,#ecc3ce);opacity:.6}
+.baby-art-orb-two{width:210px;height:210px;right:-95px;top:-50px;background:linear-gradient(135deg,#e6bdc9,#f2ebe3);opacity:.7}
+.baby-art-spark{position:absolute;color:#c48d9c;font-size:50px}
+.baby-art-spark-one{left:17%;top:25%;transform:rotate(15deg)}.baby-art-spark-two{right:17%;bottom:22%}
+.baby-kicker,.baby-eyebrow{font-size:11px;font-weight:850;letter-spacing:.16em;color:#955979;text-transform:uppercase}
+.baby-kicker{display:inline-flex;align-items:center;gap:9px}
+.baby-kicker-dot{width:8px;height:8px;border-radius:50%;background:#bf8196;box-shadow:0 0 0 5px #f5dce4}
+.baby-hero h1{font-family:Georgia,"Times New Roman",serif;font-weight:500;font-size:clamp(43px,6.6vw,80px);line-height:1.08;letter-spacing:-.048em;color:#372b34;margin:24px 0}
+.baby-hero h1 em{font-weight:400;color:#a76685}
+.baby-hero>p{max-width:675px;margin:0 auto;color:#655860;font-size:clamp(16px,2vw,18px);line-height:1.7}
+.baby-hero-meta{display:flex;justify-content:center;align-items:center;gap:13px;color:#84747b;font-size:13px;margin:22px 0 30px}
+.baby-scroll-link,.baby-primary-button{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:#8c4e70;color:#fff!important;padding:13px 22px;border:1px solid #8c4e70;border-radius:13px;text-decoration:none;font-weight:750;font-size:14px;transition:background .16s,transform .16s}
+.baby-scroll-link:hover,.baby-primary-button:hover{background:#733956;transform:translateY(-1px)}
+.baby-tool{margin:36px 0 72px;border:1px solid #ecdfdf;border-radius:28px;background:#fff;box-shadow:0 24px 90px rgba(79,40,60,.07);overflow:hidden;scroll-margin-top:24px}
+.baby-tool-head{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:35px 38px 25px}
+.baby-tool-head h2,.baby-pane-title h2,.baby-editorial-heading h2,.baby-faq h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(28px,3.6vw,42px);letter-spacing:-.035em;font-weight:500;color:#3c2d36;line-height:1.14;margin:9px 0}
+.baby-tool-head p,.baby-pane-title p{margin:0;color:#786d73;font-size:14px;line-height:1.65}
+.baby-dataset-note{min-width:120px;display:flex;flex-direction:column;align-items:center;padding:13px 18px;background:#fbf1f2;border:1px solid #f2e2e6;border-radius:18px}
+.baby-dataset-note strong{font-family:Georgia,serif;font-weight:500;font-size:28px;color:#854c68}.baby-dataset-note span{font-size:11px;color:#846e7a}
+.baby-tabbar{display:flex;gap:22px;border-bottom:1px solid #efe7e7;padding:0 38px;overflow-x:auto}
+.baby-tab{background:none;border:0;border-bottom:3px solid transparent;padding:18px 0 16px;color:#746b71;font-weight:700;font-size:14px;white-space:nowrap}
+.baby-tab.is-active{border-bottom-color:#a86683;color:#86455f}
+.baby-count-pill{background:#f6e9ec;color:#995572;border-radius:100px;padding:3px 7px;font-size:11px;margin-left:5px}
+.baby-panel[hidden],.baby-empty[hidden],.baby-spotlight[hidden],.baby-toast[hidden],.baby-loading[hidden]{display:none!important}
+.baby-app-grid{display:grid;grid-template-columns:280px minmax(0,1fr)}
+.baby-filters{padding:28px 24px;background:#fcfaf9;border-right:1px solid #efe7e7}
+.baby-filter-top{display:flex;align-items:center;justify-content:space-between;gap:6px}.baby-filter-top h3{font-family:Georgia,serif;color:#382e36;margin:0;font-size:24px;font-weight:500}
+.baby-link-button,.baby-text-action{padding:6px 0;background:none;border:0;color:#954e6f;font-size:12px;font-weight:750}.baby-link-button:hover,.baby-text-action:hover{text-decoration:underline}
+.baby-field{padding:0;border:0;margin:25px 0 0;min-width:0}
+.baby-field label,.baby-field legend{display:block;color:#3f3940;font-size:13px;font-weight:750;margin-bottom:10px;padding:0}
+.baby-field small{display:block;color:#978b91;font-size:11px;line-height:1.6;margin-top:8px}
+.baby-search-wrap{position:relative}.baby-search-icon{position:absolute;top:9px;left:12px;font-size:23px;line-height:1;color:#a17c8b;pointer-events:none}
+.baby-field input,.baby-field select{width:100%;min-height:44px;background:#fff;border:1px solid #e6dadc;border-radius:11px;color:#3f353a;padding:10px 12px;font-size:13px}
+.baby-field input{padding-left:35px}.baby-field input::placeholder{color:#9d9298}.baby-field select{padding-right:20px}
+.baby-segment{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+.baby-segment button{border:1px solid #e7dadd;background:#fff;border-radius:10px;padding:10px 4px;color:#73646b;font-size:12px;font-weight:720}
+.baby-segment button.is-selected{color:#873f60;background:#f5e7ec;border-color:#c995aa}
+.baby-help-box{margin-top:30px;background:#f4e8eb;padding:20px;border-radius:17px;color:#765365}
+.baby-help-box>span{font-size:26px}.baby-help-box strong{display:block;margin:8px 0;color:#633f53}.baby-help-box p{font-size:12px;line-height:1.65;margin:0 0 12px}
+.baby-results-area{padding:28px 30px 35px;min-width:0}
+.baby-results-toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:22px}
+.baby-results-caption{margin:0 0 5px;color:#aa8e9a;font-size:10px;font-weight:800;letter-spacing:.13em}
+.baby-results-toolbar h3{margin:0;color:#483d42;font-size:21px;font-family:Georgia,serif;font-weight:500}
+.baby-outline-button{border:1px solid #e6cbd5;border-radius:11px;background:#fff;color:#92506c;padding:11px 15px;font-size:12px;font-weight:780}
+.baby-outline-button:hover{background:#f9eff2}
+.baby-name-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.baby-name-card{border:1px solid #eee4e5;border-radius:17px;padding:20px;min-width:0;background:#fff;transition:box-shadow .2s,border-color .2s}
+.baby-name-card:hover{border-color:#d9b8c5;box-shadow:0 8px 25px rgba(122,74,95,.08)}
+.baby-name-card-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.baby-origin-badge{font-size:10px;font-weight:730;color:#986b7e;background:#fbf1f3;border-radius:100px;padding:6px 9px;max-width:80%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.baby-heart{display:grid;place-items:center;width:36px;height:36px;flex-shrink:0;border-radius:50%;border:1px solid #efdee4;background:#fff;color:#b47490;font-size:23px;line-height:1}
+.baby-heart.is-saved{background:#fae4ea;color:#a14d72;border-color:#ddacbd}
+.baby-name-card h4{font-family:Georgia,serif;font-size:clamp(24px,3vw,31px);font-weight:500;letter-spacing:-.035em;color:#3c2d35;margin:17px 0 8px}
+.baby-card-meaning{color:#756971;line-height:1.5;font-size:13px;min-height:40px;margin:0}
+.baby-card-tags{display:flex;flex-wrap:wrap;gap:5px;margin:14px 0 16px;min-height:23px}
+.baby-card-tags span{font-size:10px;font-weight:680;padding:5px 8px;border:1px solid #ede4e5;border-radius:30px;color:#85747c;text-transform:capitalize}
+.baby-card-foot{padding-top:12px;border-top:1px solid #f3eced;display:flex;align-items:center;justify-content:space-between;gap:7px}
+.baby-card-foot span{font-size:11px;color:#93838b}.baby-card-foot strong{font-size:13px;color:#745062}
+.baby-load-more{display:block;width:100%;padding:14px;margin-top:20px;border:1px solid #e7cbd7;border-radius:12px;background:#fbf4f6;color:#88485f;font-size:13px;font-weight:750}
+.baby-loading,.baby-empty{text-align:center;padding:60px 16px;color:#796f74}.baby-empty h3{font-family:Georgia,serif;font-weight:500;color:#4e3945;font-size:24px;margin:7px}.baby-empty p{font-size:14px;line-height:1.6}
+.baby-spotlight{display:flex;justify-content:space-between;align-items:center;gap:20px;border-radius:16px;background:#f7eaf0;padding:20px 24px;margin-bottom:20px;border:1px solid #e9ccda}
+.baby-spotlight h3{font-size:30px;font-family:Georgia,serif;color:#653954;font-weight:500;margin:8px 0}.baby-spotlight p{margin:0 0 8px;font-size:14px;color:#705869}.baby-spotlight small{font-size:11px;color:#916f82}
+.baby-secondary-pane{padding:38px}.baby-pane-title{display:flex;align-items:center;justify-content:space-between;gap:25px;margin-bottom:27px}
+.baby-pane-actions{display:flex;flex-wrap:wrap;gap:9px}.baby-pane-actions button{font-size:12px}
+.baby-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;padding:0;list-style:none;margin:26px 0}
+.baby-steps li{background:#fcf6f7;border:1px solid #f0e2e5;border-radius:17px;padding:22px}
+.baby-steps li>span{font-family:Georgia,serif;font-size:28px;color:#b57d98;display:block;margin-bottom:12px}.baby-steps strong{font-size:14px;color:#4c3a43}.baby-steps p{font-size:12px;line-height:1.6;color:#81727a;margin:8px 0 0}
+.baby-compare-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.baby-compare-card{padding:24px;border:1px solid #ece0e2;border-radius:18px;min-width:0}
+.baby-compare-card h3{margin:0 0 17px;font-family:Georgia,serif;font-size:22px;color:#4e3745;font-weight:500}
+.baby-compare-card h3 span{font:750 12px system-ui;color:#a66887;margin-left:6px}
+.baby-chip-wrap{display:flex;gap:7px;flex-wrap:wrap;min-height:46px;margin:0 0 18px}
+.baby-name-chip{display:inline-block;border-radius:30px;padding:9px 11px;background:#f9eff2;border:1px solid #ebdbe1;color:#824860;font-size:12px;font-weight:710;height:max-content}
+.baby-fine-print{font-size:12px;color:#97858d;line-height:1.65;margin:7px 0 0}
+.baby-match-card{margin-top:20px;border-radius:18px;padding:26px;background:#f4e8ed;border:1px solid #e8d5de}
+.baby-match-card h3{font:500 30px Georgia,serif;color:#603b4d;margin:10px 0}.baby-match-card p{font-size:13px;color:#876c7a;line-height:1.6}
+.baby-toast{position:fixed;z-index:80;bottom:25px;left:50%;transform:translateX(-50%);max-width:min(90vw,420px);border-radius:14px;background:#422d3c;color:#fff;padding:14px 22px;box-shadow:0 15px 50px rgba(29,14,22,.23);font-weight:650;font-size:13px;text-align:center}
+.baby-editorial{padding:30px 5px 0}.baby-editorial-heading{text-align:center;max-width:750px;margin:0 auto 35px}.baby-editorial-heading p{color:#756a70;line-height:1.7}
+.baby-advice-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
+.baby-advice-grid article{background:#fff;padding:25px;border:1px solid #eee3e5;border-radius:18px}
+.baby-advice-grid article span{color:#b7859a;font:normal 30px Georgia,serif}.baby-advice-grid article h3{font-family:Georgia,serif;font-size:22px;font-weight:500;color:#4b3540;margin:15px 0 8px}.baby-advice-grid article p{font-size:13px;line-height:1.75;color:#7a6d75;margin:0}
+.baby-article{max-width:810px;margin:58px auto 0;line-height:1.85;color:#675c63;font-size:15px}.baby-article h2{font-family:Georgia,serif;color:#42313d;font-size:29px;line-height:1.2;font-weight:500;margin:38px 0 12px}
+.baby-article a,.baby-sources a{color:#994c70;text-decoration:underline;text-underline-offset:3px}
+.baby-faq{margin:78px auto 0;max-width:810px}.baby-faq h2{margin-bottom:24px}.baby-faq details{padding:19px 0;border-bottom:1px solid #e7dce0}.baby-faq summary{font-size:15px;font-weight:760;color:#4b3844;cursor:pointer;list-style-position:outside}.baby-faq details p{color:#73656e;font-size:14px;line-height:1.75;margin:12px 0 0}
+.baby-sources{margin:70px auto 0;max-width:810px;border-top:1px solid #eadfe1;padding-top:23px}.baby-sources h2{font-size:17px;margin:0 0 9px;color:#4b3744}.baby-sources p{font-size:12px;color:#756a72;line-height:1.85;margin:0}
+@media(min-width:1000px){.baby-page .baby-wrap{padding-left:32px;padding-right:32px}}
+@media(max-width:900px){.baby-app-grid{grid-template-columns:240px minmax(0,1fr)}.baby-filters{padding:25px 17px}.baby-results-area{padding:25px 19px}.baby-name-grid{gap:10px}.baby-name-card{padding:15px}.baby-breadcrumb{margin-bottom:20px}}
+@media(max-width:720px){.baby-page .baby-wrap{padding:15px 14px 65px}.baby-hero{padding:60px 18px 53px;border-radius:22px}.baby-hero-art{opacity:.6}.baby-art-spark-one{left:4%}.baby-art-spark-two{right:3%}.baby-hero h1{font-size:clamp(39px,9vw,59px)}.baby-tool{border-radius:20px;margin-top:22px}.baby-tool-head{padding:26px 21px 19px}.baby-dataset-note{min-width:88px;padding:10px 7px}.baby-dataset-note strong{font-size:23px}.baby-tabbar{padding:0 19px;gap:22px}.baby-tab{font-size:12px;padding:16px 0 13px}.baby-app-grid{display:block}.baby-filters{border:0;border-bottom:1px solid #eee3e7;padding:22px}.baby-results-area{padding:24px 20px}.baby-field{margin-top:19px}.baby-steps,.baby-advice-grid{grid-template-columns:1fr}.baby-compare-grid{grid-template-columns:1fr}.baby-secondary-pane{padding:24px 20px}.baby-pane-title{display:block}.baby-pane-actions{margin-top:20px}.baby-steps{gap:8px}.baby-steps li{padding:16px}.baby-advice-grid{gap:10px}.baby-article{font-size:14px}.baby-editorial{padding:25px 3px}}
+@media(max-width:440px){.baby-hero-meta{gap:8px;font-size:11px}.baby-tool-head{gap:8px}.baby-tool-head h2{font-size:27px}.baby-tool-head p{font-size:12px}.baby-results-toolbar{flex-wrap:wrap}.baby-name-grid{grid-template-columns:1fr}.baby-name-card{padding:20px}.baby-name-card h4{font-size:30px}.baby-card-meaning{min-height:0}.baby-compare-card{padding:18px}.baby-scroll-link{width:100%;max-width:250px}}
+@media(prefers-reduced-motion:reduce){.baby-page *, .baby-page *::before,.baby-page *::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
