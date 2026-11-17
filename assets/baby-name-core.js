@@ -68,9 +68,69 @@
     }
     return copy.slice(0,Math.min(Math.max(count,0),copy.length));
   }
+
+  function normalizeName(value){
+    return keyOf(value).normalize("NFC");
+  }
+  function validateRegionData(data){
+    if(!data||data.year!==2025||!Array.isArray(data.regions)||data.regions.length!==4)throw Error("Invalid region data");
+    for(const region of data.regions){
+      if(!region.id||!region.label||region.year!==2025)throw Error("Invalid region");
+      if(region.id==="us")continue;
+      if(!region.source)throw Error("Missing region citation");
+      for(const sex of ["girls","boys"]){
+        if(!Array.isArray(region[sex])||region[sex].length!==10)throw Error("Incomplete verified top ten");
+        const seen=new Set();
+        region[sex].forEach((entry,i)=>{
+          if(entry.rank!==i+1||!Array.isArray(entry.names)||!entry.names.length)throw Error("Invalid reported rank");
+          for(const name of entry.names){
+            const key=normalizeName(name);
+            if(seen.has(key))throw Error("Duplicate regional name");
+            seen.add(key);
+          }
+        });
+      }
+    }
+    return data.regions;
+  }
+  function regionEntry(name,sex,region){
+    if(!region||region.id==="us")return null;
+    const column=sex==="girl"?"girls":sex==="boy"?"boys":null;
+    if(!column)return null;
+    return region[column].find(entry=>entry.names.some(candidate=>normalizeName(candidate)===normalizeName(name)))||null;
+  }
+  function meaningfulCommonThemes(ours,theirs,names){
+    const byKey=new Map(names.map(n=>[keyOf(n.n),n]));
+    const from=(keys,prop)=>new Set(keys.flatMap(key=>{
+      const row=byKey.get(keyOf(key));return row?(prop==="t"?row.t:[row.o]):[];
+    }));
+    const share=(a,b)=>[...a].filter(x=>b.has(x));
+    return {meanings:share(from(ours,"t"),from(theirs,"t")),origins:share(from(ours,"o"),from(theirs,"o"))};
+  }
+  function suggestCompromises(ours,theirs,names,limit=6){
+    if(!ours.length||!theirs.length)return [];
+    const byKey=new Map(names.map(n=>[keyOf(n.n),n]));
+    const both=new Set([...ours,...theirs].map(keyOf));
+    const mine=ours.map(x=>byKey.get(keyOf(x))).filter(Boolean);
+    const theirsRows=theirs.map(x=>byKey.get(keyOf(x))).filter(Boolean);
+    const overlap=meaningfulCommonThemes(ours,theirs,names);
+    const averageLength=rows=>rows.reduce((sum,n)=>sum+n.n.length,0)/Math.max(1,rows.length);
+    const avg=(averageLength(mine)+averageLength(theirsRows))/2;
+    return names.filter(n=>!both.has(keyOf(n.n))).map(n=>{
+      const tagMatches=overlap.meanings.filter(t=>n.t.includes(t)).length;
+      const originMatches=overlap.origins.includes(n.o)?1:0;
+      const mineTag=mine.some(row=>row.t.some(t=>n.t.includes(t)));
+      const theirTag=theirsRows.some(row=>row.t.some(t=>n.t.includes(t)));
+      const mineOrigin=mine.some(row=>row.o===n.o);
+      const theirOrigin=theirsRows.some(row=>row.o===n.o);
+      const score=tagMatches*8+originMatches*8+(mineTag&&theirTag?5:0)+(mineOrigin&&theirOrigin?5:0)+(mineTag?2:0)+(theirTag?2:0)+(mineOrigin?1:0)+(theirOrigin?1:0)+Math.max(0,3-Math.abs(n.n.length-avg));
+      return {name:n,score};
+    }).sort((a,b)=>b.score-a.score||b.name.c-a.name.c||a.name.n.localeCompare(b.name.n,"en"))
+      .slice(0,Math.max(0,Math.min(12,limit)));
+  }
   function intersection(a,b){
     const right=new Set(b);
     return a.filter(n=>right.has(n));
   }
-  return {MAX_PICKS,escapeHtml,keyOf,validateDatabase,filterNames,sanitizePicks,toUrlToken,fromUrlToken,parsePartnerLink,makePickDeck,intersection};
+  return {MAX_PICKS,escapeHtml,keyOf,validateDatabase,filterNames,sanitizePicks,toUrlToken,fromUrlToken,parsePartnerLink,makePickDeck,validateRegionData,regionEntry,meaningfulCommonThemes,suggestCompromises,intersection};
 });
