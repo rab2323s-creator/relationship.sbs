@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "new-years-eve-date-ideas",
+  title: "New Year's Eve Date Ideas for Couples (2026): 31 Romantic Ways to Celebrate",
+  excerpt: "31 original New Year's Eve date ideas for couples in 2026, with at-home dates, romantic midnight rituals, low-cost plans, long-distance celebrations, practical budgets and a free local date finder.",
+  date: "2026-11-19",
+  readingMinutes: 16,
+  tags: ["New Years Eve Date Ideas", "New Years Eve Date Ideas 2026", "New Years Eve Ideas for Couples", "Romantic New Years Eve Ideas", "New Years Eve Date Night at Home", "Cheap New Years Eve Date Ideas", "Long Distance New Years Eve Date Ideas"],
+  category: "Date Night Ideas",
+  cover: "/assets/images/blog/new-years-eve-date-ideas/new-years-eve-date-ideas-couples-midnight.svg",
+  featured: true
+},
+
+{
   slug: "christmas-gifts-for-boyfriend",
   title: "Christmas Gifts for Boyfriend 2026: 45 Thoughtful Ideas for Every Budget",
   excerpt: "45 original Christmas gift ideas for your boyfriend in 2026, from under $25 to special experiences, first Christmas, long-distance and last-minute picks, plus a free gift matcher.",

@@ -125,6 +125,9 @@ jobs:
       - name: Test Christmas gift article content, schema and matcher
         run: node --test scripts/test_christmas_gifts_article.mjs
 
+      - name: Test New Year's Eve date article content, schema and date finder
+        run: node --test scripts/test_new_years_eve_date_ideas.mjs
+
       - name: Run static SEO audit
         run: python scripts/seo_audit.py
 
