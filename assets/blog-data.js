@@ -10,7 +10,7 @@ window.BLOG_POSTS = [
   readingMinutes: 18,
   tags: ["Christmas Gifts for Boyfriend", "Christmas Gifts for Boyfriend 2026", "Cheap Christmas Gifts for Boyfriend", "Unique Christmas Gifts for Boyfriend", "First Christmas Gifts for Boyfriend", "Long Distance Christmas Gifts for Boyfriend", "Last Minute Christmas Gifts for Boyfriend", "Boyfriend Christmas Presents"],
   category: "Romantic Gifts & Relationships",
-  cover: "/assets/images/blog/christmas-gifts-for-boyfriend/christmas-gifts-for-boyfriend-2026.svg",
+  cover: "/assets/images/blog/christmas-gifts-for-boyfriend/christmas-gifts-for-boyfriend-thoughtful-christmas-present-ideas.webp",
   featured: true
 },
 
