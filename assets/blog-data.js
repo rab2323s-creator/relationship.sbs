@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "christmas-gifts-for-boyfriend",
+  title: "Christmas Gifts for Boyfriend 2026: 45 Thoughtful Ideas for Every Budget",
+  excerpt: "45 original Christmas gift ideas for your boyfriend in 2026, from under $25 to special experiences, first Christmas, long-distance and last-minute picks, plus a free gift matcher.",
+  date: "2026-11-18",
+  readingMinutes: 18,
+  tags: ["Christmas Gifts for Boyfriend", "Christmas Gifts for Boyfriend 2026", "Cheap Christmas Gifts for Boyfriend", "Unique Christmas Gifts for Boyfriend", "First Christmas Gifts for Boyfriend", "Long Distance Christmas Gifts for Boyfriend", "Last Minute Christmas Gifts for Boyfriend", "Boyfriend Christmas Presents"],
+  category: "Romantic Gifts & Relationships",
+  cover: "/assets/images/blog/christmas-gifts-for-boyfriend/christmas-gifts-for-boyfriend-2026.svg",
+  featured: true
+},
+
+{
   slug: "cool-baby-boy-names",
   title: "Cool Baby Boy Names: Modern, Short & Unique Ideas",
   excerpt: "Explore 90+ cool baby boy name ideas by style: modern, short, strong, classic, nature-inspired and unique-feeling, with 14 checked meanings and a free shortlist tool.",
