@@ -25,6 +25,6 @@ assert.equal(cancelled,true);assert.equal(out.children[0].textContent,"Three ide
 test("Same human hero is used in article, social cards, post registry and ImageObject",()=>{
 const file="romantic-new-years-eve-date-ideas-for-couples.webp";const imagePath="/assets/images/blog/new-years-eve-date-ideas/"+file;const url="https://relationship.sbs"+imagePath;
 assert.ok(page.includes('src="'+imagePath+'"'));assert.ok(page.includes('property="og:image" content="'+url+'"'));assert.ok(page.includes('property="og:image:secure_url" content="'+url+'"'));assert.ok(page.includes('name="twitter:image" content="'+url+'"'));
-assert.match(page,/property="og:image:type" content="image\\/webp"/);assert.ok(registry.includes('cover: "'+imagePath+'"'));assert.equal(get("ImageObject").contentUrl,url);assert.equal(get("ImageObject").encodingFormat,"image/webp");
+assert.ok(page.includes('property="og:image:type" content="image/webp"'));assert.ok(registry.includes('cover: "'+imagePath+'"'));assert.equal(get("ImageObject").contentUrl,url);assert.equal(get("ImageObject").encodingFormat,"image/webp");
 assert.ok(page.includes('alt="Couple celebrating a romantic New Year'));assert.ok(page.includes('name="twitter:image:alt"'));assert.ok(get("ImageObject").caption.length>40);
 });
