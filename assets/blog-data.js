@@ -10,7 +10,7 @@ window.BLOG_POSTS = [
   readingMinutes: 16,
   tags: ["New Years Eve Date Ideas", "New Years Eve Date Ideas 2026", "New Years Eve Ideas for Couples", "Romantic New Years Eve Ideas", "New Years Eve Date Night at Home", "Cheap New Years Eve Date Ideas", "Long Distance New Years Eve Date Ideas"],
   category: "Date Night Ideas",
-  cover: "/assets/images/blog/new-years-eve-date-ideas/new-years-eve-date-ideas-couples-midnight.svg",
+  cover: "/assets/images/blog/new-years-eve-date-ideas/romantic-new-years-eve-date-ideas-for-couples.webp",
   featured: true
 },
 
