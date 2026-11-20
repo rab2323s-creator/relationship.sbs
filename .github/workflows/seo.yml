@@ -11,6 +11,21 @@ permissions:
   contents: write
 
 jobs:
+  wedding-vows-focused:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout wedding vows article
+        uses: actions/checkout@v5
+      - name: Use Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      - name: Validate original article, links, schema and private editor
+        run: node --test scripts/test_wedding_vows_article.mjs
+      - name: Real Chromium narrow-screen and desktop checks
+        run: node scripts/test_wedding_vows_browser.mjs
+
   audit:
     runs-on: ubuntu-latest
     steps:
@@ -136,6 +151,12 @@ jobs:
 
       - name: Browser smoke test for aromantic article at mobile and desktop viewports
         run: node scripts/test_aromantic_browser.mjs
+
+      - name: Test wedding vows article, FAQ, schema, and local vow editor
+        run: node --test scripts/test_wedding_vows_article.mjs
+
+      - name: Browser smoke test wedding vows on compact and desktop screens
+        run: node scripts/test_wedding_vows_browser.mjs
 
       - name: Run static SEO audit
         run: python scripts/seo_audit.py
