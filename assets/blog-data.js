@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "aromantic-vs-asexual",
+  title: "Aromantic vs. Asexual: Meaning, Differences & Real Examples",
+  excerpt: "A research-informed guide to aromantic vs asexual meaning, aroace, romantic versus sexual attraction, greyromantic and demiromantic identities, relationship examples, a five-layer reflection framework and a private language explorer.",
+  date: "2026-11-20",
+  readingMinutes: 25,
+  tags: ["Aromantic vs Asexual", "Aromantic Meaning", "Aroace Meaning", "Aromantic Spectrum", "Romantic vs Sexual Attraction", "Greyromantic Meaning", "Demiromantic Meaning"],
+  category: "Identity & Attraction",
+  cover: "/assets/images/blog/aromantic-vs-asexual/two-kinds-of-attraction.svg",
+  featured: true
+},
+
+{
   slug: "meeting-your-partners-parents",
   title: "Meeting Your Partner's Parents for the First Time: Checklist, Questions & What to Bring",
   excerpt: "Meeting your boyfriend's or girlfriend's parents? A thoughtful 48-hour checklist, what to bring, 25 natural questions, research-informed conversation tips, awkward-question scripts and a free private planning tool.",
