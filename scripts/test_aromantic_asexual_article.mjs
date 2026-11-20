@@ -68,7 +68,7 @@ test("outgoing internal links and assets exist",()=>{
 });
 
 test("private tool handles every topic, copying and reset without network access",async()=>{
-  const output={children:[],textContent:"",appendChild(x){this.children.push(x)},querySelector(){return null}};
+  const output={children:[],_textContent:"",set textContent(value){this._textContent=value;this.children=[]},get textContent(){return this._textContent},appendChild(x){this.children.push(x)},querySelector(){return null}};
   const elems={topic:{value:"romantic"},setting:{value:"self"}};
   const form={elements:elems,addEventListener(name,fn){this[name]=fn},reset(){elems.topic.value="romantic";elems.setting.value="self"}};
   const copy={textContent:"",addEventListener(name,fn){this[name]=fn}};
