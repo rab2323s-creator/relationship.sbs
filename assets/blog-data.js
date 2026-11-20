@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "how-to-write-wedding-vows",
+  title: "How to Write Wedding Vows: Short Templates, Examples & a Personal Worksheet",
+  excerpt: "Write heartfelt wedding vows with an original fill-in template, short and non-religious examples, second-marriage promises, a printable-style worksheet and a free private 60/90/120-second vow writer.",
+  date: "2026-11-20",
+  readingMinutes: 25,
+  tags: ["How to Write Wedding Vows", "Wedding Vow Template", "Short Wedding Vows", "Personal Wedding Vows Examples", "Non Religious Wedding Vows", "Wedding Vows for Second Marriage"],
+  category: "Wedding Planning & Relationships",
+  cover: "/assets/images/blog/how-to-write-wedding-vows/the-vows-we-keep.svg",
+  featured: true
+},
+
+{
   slug: "aromantic-vs-asexual",
   title: "Aromantic vs. Asexual: Meaning, Differences & Real Examples",
   excerpt: "A research-informed guide to aromantic vs asexual meaning, aroace, romantic versus sexual attraction, greyromantic and demiromantic identities, relationship examples, a five-layer reflection framework and a private language explorer.",

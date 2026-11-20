@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="artTitle artDesc">
+<title id="artTitle">The vows we keep on ordinary days</title><desc id="artDesc">Original editorial illustration: an open handwritten vow book, two wedding rings, a pencil, and a delicate golden ribbon on a warm ivory and charcoal table.</desc>
+<defs><linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#29272e"/><stop offset=".52" stop-color="#554147"/><stop offset="1" stop-color="#836558"/></linearGradient><linearGradient id="paper" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#fff8ed"/><stop offset="1" stop-color="#efe2cd"/></linearGradient><linearGradient id="edge" x1="0" x2="1"><stop stop-color="#9a706a"/><stop offset=".52" stop-color="#dfb374"/><stop offset="1" stop-color="#8d6362"/></linearGradient><filter id="shadow"><feGaussianBlur stdDeviation="16"/></filter></defs>
+<rect width="1200" height="630" fill="url(#bg)"/><ellipse cx="598" cy="536" rx="490" ry="98" fill="#0b0911" opacity=".38" filter="url(#shadow)"/>
+<path d="M138 123Q363 76 596 129L600 541Q371 483 156 536Z" fill="#321f30" stroke="#c9ad8d" stroke-width="7"/>
+<path d="M600 129Q837 75 1061 125L1046 538Q823 485 600 541Z" fill="#3d2a31" stroke="#c9ad8d" stroke-width="7"/>
+<path d="M157 136Q374 96 591 144L595 517Q374 466 169 519Z" fill="url(#paper)"/>
+<path d="M606 143Q827 95 1041 137L1032 519Q820 465 604 518Z" fill="url(#paper)"/>
+<path d="M594 143Q610 266 601 521" stroke="#c39c78" stroke-width="8" opacity=".72" fill="none"/>
+<g fill="#745c61" opacity=".8" font-family="Georgia,serif" font-size="35"><text x="232" y="212">The story</text><text x="681" y="212">The promises</text></g>
+<g fill="none" stroke="#a18d85" stroke-width="4" stroke-linecap="round" opacity=".75">
+<path d="M220 258q95-17 279-4"/><path d="M221 290q115-14 282-3"/><path d="M223 322q100-18 263-4"/><path d="M225 352q81-16 260-3"/><path d="M224 395q109-14 275-5"/>
+<path d="M673 258q116-15 278-2"/><path d="M675 290q96-17 293-3"/><path d="M676 322q109-10 272-4"/><path d="M676 365q104-14 270-3"/><path d="M674 396q84-14 270-4"/></g>
+<g transform="translate(810 449)"><ellipse rx="53" ry="16" fill="#876250" opacity=".23"/><circle r="33" fill="none" stroke="#d1a15a" stroke-width="14"/><circle cx="77" cy="2" r="33" fill="none" stroke="#f6dca5" stroke-width="14"/><path d="M24-24q15-10 31-4" stroke="#fff8de" opacity=".7" stroke-width="4" fill="none"/></g>
+<path d="M136 83Q395 46 598 89T1088 83" stroke="url(#edge)" stroke-width="9" fill="none" opacity=".7"/>
+<g transform="translate(203 469) rotate(-21)"><rect x="0" y="0" width="12" height="125" rx="6" fill="#bb8f61"/><path d="M0 116h12l-6 22z" fill="#29262c"/><rect y="6" width="12" height="8" fill="#f1ce9f"/></g>
+<circle cx="1044" cy="96" r="10" fill="#e1bb79" opacity=".8"/><circle cx="1092" cy="144" r="6" fill="#d3b29c" opacity=".7"/>
+</svg>
