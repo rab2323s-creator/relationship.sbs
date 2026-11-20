@@ -19,7 +19,7 @@ window.addEventListener("load",function(){
   form.dispatchEvent(new Event("submit",{bubbles:true,cancelable:true}));
   if(!draft.value.includes("umbrella")||!draft.value.includes("I promise to listen")||!draft.value.includes("apologize"))issues.push("Vow writer failed");
   if(!stat.textContent.includes("words")||!stat.textContent.includes("seconds"))issues.push("Speaking time missing");
-  draft.value+="\nI keep choosing you.";draft.dispatchEvent(new Event("input",{bubbles:true}));
+  draft.value+="\\nI keep choosing you.";draft.dispatchEvent(new Event("input",{bubbles:true}));
   if(!stat.textContent.includes("words"))issues.push("Editing does not recalculate");
   var image=document.querySelector(".wv-hero-art");
   if(!image||!image.complete||image.naturalWidth<100)issues.push("Image failed to load");
