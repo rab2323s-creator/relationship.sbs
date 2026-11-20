@@ -3,6 +3,18 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "meeting-your-partners-parents",
+  title: "Meeting Your Partner's Parents for the First Time: Checklist, Questions & What to Bring",
+  excerpt: "Meeting your boyfriend's or girlfriend's parents? A thoughtful 48-hour checklist, what to bring, 25 natural questions, research-informed conversation tips, awkward-question scripts and a free private planning tool.",
+  date: "2026-11-20",
+  readingMinutes: 22,
+  tags: ["Meeting Your Partner's Parents for the First Time", "Meeting Boyfriend's Parents for the First Time", "Meeting Girlfriend's Parents for the First Time", "What to Bring When Meeting His Parents", "Questions to Ask Your Boyfriend's Parents", "Meeting the Parents for the First Time Etiquette"],
+  category: "Dating & Relationships",
+  cover: "/assets/images/blog/meeting-your-partners-parents/the-extra-place-at-the-table.svg",
+  featured: true
+},
+
+{
   slug: "new-years-eve-date-ideas",
   title: "New Year's Eve Date Ideas for Couples (2026): 31 Romantic Ways to Celebrate",
   excerpt: "31 original New Year's Eve date ideas for couples in 2026, with at-home dates, romantic midnight rituals, low-cost plans, long-distance celebrations, practical budgets and a free local date finder.",
