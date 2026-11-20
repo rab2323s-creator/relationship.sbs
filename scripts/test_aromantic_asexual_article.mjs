@@ -73,7 +73,7 @@ test("private tool handles every topic, copying and reset without network access
   const form={elements:elems,addEventListener(name,fn){this[name]=fn},reset(){elems.topic.value="romantic";elems.setting.value="self"}};
   const copy={textContent:"",addEventListener(name,fn){this[name]=fn}};
   const reset={textContent:"",addEventListener(name,fn){this[name]=fn}};
-  const doc={getElementById(id){return {aaExploreForm:form,aaResult:output,aaCopy:copy,aaReset:reset}[id]||null},createElement(tag){return {tagName:tag,textContent:"",children:[],appendChild(x){this.children.push(x)},setAttribute(){},focus(){},select(){}}}};
+  const doc={createTextNode(text){return {textContent:text}},getElementById(id){return {aaExploreForm:form,aaResult:output,aaCopy:copy,aaReset:reset}[id]||null},createElement(tag){return {tagName:tag,textContent:"",children:[],appendChild(x){this.children.push(x)},setAttribute(){},focus(){},select(){}}}};
   const writes=[];
   vm.runInNewContext(script,{document:doc,navigator:{clipboard:{writeText(value){writes.push(value);return Promise.resolve()}}}});
   for(const topic of ["romantic","sexual","libido","behavior","partner","boundary"]){
