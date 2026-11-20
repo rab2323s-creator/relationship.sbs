@@ -131,6 +131,12 @@ jobs:
       - name: Validate meeting-the-parents article, mobile markup and private planner
         run: node --test scripts/test_meeting_parents_article.mjs
 
+      - name: Validate aromantic and asexual article, inclusive language and interactive tool
+        run: node --test scripts/test_aromantic_asexual_article.mjs
+
+      - name: Browser smoke test for aromantic article at mobile and desktop viewports
+        run: node scripts/test_aromantic_browser.mjs
+
       - name: Run static SEO audit
         run: python scripts/seo_audit.py
 
