@@ -1,6 +1,16 @@
 /* tests-index.js — lightweight home index */
 window.TEST_INDEX = [
   {
+    "id": "elope_wedding_couple_decision",
+    "slug": "should-we-elope-or-have-a-wedding",
+    "title": "Should We Elope or Have a Wedding? Free Couples Decision Quiz",
+    "blurb": "18 original ceremony-format questions with solo or couple mode: four percentage shares, independent partner comparison and meaningful disagreements.",
+    "time": "5–6 min",
+    "guide": "/blog/how-to-write-wedding-vows/",
+    "intent": "quiz"
+  },
+
+  {
     "id": "am_i_aromantic_reflection",
     "slug": "am-i-aromantic-quiz",
     "title": "Am I Aromantic? Free 18-Question Aromantic Spectrum Quiz",

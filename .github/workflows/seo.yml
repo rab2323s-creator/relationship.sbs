@@ -11,6 +11,21 @@ permissions:
   contents: write
 
 jobs:
+  elope-wedding-focused:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout elopement couples decision quiz
+        uses: actions/checkout@v5
+      - name: Use Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      - name: Validate model, partner comparison, SEO and links
+        run: node --test scripts/test_elope_wedding_quiz.mjs
+      - name: Real browser complete solo and couple mode mobile and desktop
+        run: node scripts/test_elope_wedding_browser.mjs
+
   aromantic-quiz-focused:
     runs-on: ubuntu-latest
     timeout-minutes: 8
