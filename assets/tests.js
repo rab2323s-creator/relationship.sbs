@@ -3,6 +3,18 @@
 */
 window.TESTS = [
   {
+    "id": "elope_wedding_couple_decision",
+    "slug": "should-we-elope-or-have-a-wedding",
+    "title": "Should We Elope or Have a Wedding? Free Couples Decision Quiz",
+    "blurb": "18 private questions with independent partners, elopement versus micro wedding versus traditional wedding and later celebration percentages.",
+    "time": "5–6 min",
+    "intent": "quiz",
+    "keywords": ["should we elope quiz", "elope vs wedding quiz", "should i elope or have a wedding", "micro wedding vs elopement", "what kind of wedding should we have"],
+    "scales": ["private", "micro", "traditional", "hybrid"],
+    "questions": []
+  },
+
+  {
     "id": "am_i_aromantic_reflection",
     "slug": "am-i-aromantic-quiz",
     "title": "Am I Aromantic? Free 18-Question Aromantic Spectrum Quiz",
