@@ -6,10 +6,10 @@ function add(p,tag,cls,text){const x=el(tag,cls,text);p.append(x);return x}
 function btn(p,text,fn,cls){const x=add(p,"button",cls,text);x.type="button";x.addEventListener("click",fn);return x}
 function link(p,text,url,cls){const x=add(p,"a",cls,text);x.href=url;return x}
 function focus(){const h=root.querySelector('[tabindex="-1"]');if(h)h.focus({preventScroll:true});if(root.scrollIntoView){const reduced=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;root.scrollIntoView({block:"start",behavior:reduced?"auto":"smooth"})}}
-function reset(){person=0;step=0;locked=false;finished=false;answers=[Array(N).fill(null),Array(N).fill(null)];start(false)}
+function reset(){person=0;step=0;locked=false;finished=false;answers=[Array(N).fill(null),Array(N).fill(null)];question(true)}
 function card(cls){root.replaceChildren();return add(root,"section",cls)}
 function start(shouldFocus){const c=card("sc-quiz-card ew-start");add(c,"p","sc-result-kicker","Find your wedding format — not your marriage readiness");const h=add(c,"h2","sc-question","Should we elope or have a wedding?");h.tabIndex=-1;add(c,"p","ew-lead","Explore your ceremony style in 18 decisions, or compare your two answers independently. No account and no shared answers until both have finished.");
-const options=add(c,"div","ew-mode-actions");btn(options,"Just me — explore my preferences",()=>{mode="solo";reset();question(true)},"sc-choice");btn(options,"Both of us — answer separately",()=>{mode="couple";reset();question(true)},"sc-choice");
+const options=add(c,"div","ew-mode-actions");btn(options,"Just me — explore my preferences",()=>{mode="solo";reset()},"sc-choice");btn(options,"Both of us — answer separately",()=>{mode="couple";reset()},"sc-choice");
 add(c,"p","sc-fineprint","Both people should choose freely. Each person's answers are held temporarily in this browser tab; the tool does not send them to a server. No result is permission to ignore a partner's boundaries.");if(shouldFocus)focus();}
 function pick(i){if(locked)return;locked=true;answers[person][step]=i;if(step<N-1){step++;question(true)}else if(mode==="couple"&&person===0){handoff(true)}else result(true)}
 function question(shouldFocus){locked=false;const q=model.questions[step],d=model.domains.find(x=>x.id===q.domain),c=card("sc-quiz-card");c.setAttribute("aria-label","Question "+(step+1)+" of 18");const top=add(c,"div","sc-quiz-top");add(top,"span","sc-counter",(mode==="couple"?"Partner "+(person+1)+" · ":"")+"Question "+(step+1)+" of "+N);
