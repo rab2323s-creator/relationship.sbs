@@ -11,6 +11,21 @@ permissions:
   contents: write
 
 jobs:
+  aromantic-quiz-focused:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout aromantic self-reflection quiz
+        uses: actions/checkout@v5
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      - name: Test quiz question coverage, percentages, schema and internal links
+        run: node --test scripts/test_am_i_aromantic_quiz.mjs
+      - name: Real Chromium mobile and desktop test including complete quiz
+        run: node scripts/test_am_i_aromantic_browser.mjs
+
   wedding-vows-focused:
     runs-on: ubuntu-latest
     timeout-minutes: 8

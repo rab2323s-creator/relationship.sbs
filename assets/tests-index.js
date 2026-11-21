@@ -1,6 +1,16 @@
 /* tests-index.js — lightweight home index */
 window.TEST_INDEX = [
   {
+    "id": "am_i_aromantic_reflection",
+    "slug": "am-i-aromantic-quiz",
+    "title": "Am I Aromantic? Free 18-Question Aromantic Spectrum Quiz",
+    "blurb": "18 original, non-diagnostic romantic attraction questions, four independent answer-pattern percentages, an instant educational result and private reflection guidance.",
+    "time": "4–5 min",
+    "guide": "/blog/aromantic-vs-asexual/",
+    "intent": "quiz"
+  },
+
+  {
     "id": "communication_style_quiz",
     "slug": "communication-style-quiz",
     "title": "Communication Style Quiz: Are You Assertive, Passive, Aggressive or Passive-Aggressive?",
