@@ -3,6 +3,18 @@
 */
 window.TESTS = [
   {
+    "id": "am_i_aromantic_reflection",
+    "slug": "am-i-aromantic-quiz",
+    "title": "Am I Aromantic? Free 18-Question Aromantic Spectrum Quiz",
+    "blurb": "Explore romantic attraction without a label: 18 questions with four transparent reflection indicators and educational results. Free, private, no sign-up.",
+    "time": "4–5 min",
+    "intent": "quiz",
+    "keywords": ["am i aromantic quiz", "aromantic spectrum quiz", "aromantic test", "am i on the aromantic spectrum"],
+    "scales": ["attraction", "preferences", "closeness", "expectations"],
+    "questions": []
+  },
+
+  {
     "id": "should_i_post_my_relationship",
     "slug": "should-i-post-my-relationship",
     "title": "Should I Post My Relationship? Free 18-Question Quiz",
