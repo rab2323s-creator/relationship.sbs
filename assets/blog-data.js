@@ -3,6 +3,28 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "twin-flame-meaning",
+  title: "What Is a Twin Flame? Meaning, 12 Common Signs, Stages & Twin Flame vs. Soulmate",
+  excerpt: "What is a twin flame? Discover 12 common signs, 8 stages, separation, reunion and twin flame vs. soulmate. Learn what psychology actually says.",
+  date: "2026-11-24",
+  readingMinutes: 32,
+  tags: [
+    "Twin Flame Meaning",
+    "What Is a Twin Flame",
+    "Twin Flame Signs",
+    "Twin Flame Stages",
+    "Twin Flame vs Soulmate",
+    "Twin Flame Separation",
+    "Twin Flame Reunion",
+    "Twin Flame Connection",
+    "Twin Flame Psychology"
+  ],
+  category: "Relationship Psychology",
+  cover: "/assets/images/blog/twin-flame-meaning/two-lights-one-window.svg",
+  featured: true
+},
+
+{
   slug: "promise-ring-meaning",
   title: "What Is a Promise Ring? Meaning, Which Finger to Wear It On & When to Give One",
   excerpt: "What is a promise ring? Learn what it means, which finger to wear it on, how it differs from an engagement ring, and take the free readiness check.",

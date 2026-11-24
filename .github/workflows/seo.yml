@@ -191,6 +191,9 @@ jobs:
       - name: Test promise ring readiness, safety, schema and anchors
         run: node --test scripts/test_promise_ring_article.mjs
 
+      - name: Test twin flame article, reflection safety and schema
+        run: node --test scripts/test_twin_flame_article.mjs
+
       - name: Run static SEO audit
         run: python scripts/seo_audit.py
 
