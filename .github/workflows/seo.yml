@@ -188,6 +188,9 @@ jobs:
       - name: Browser smoke test wedding vows on compact and desktop screens
         run: node scripts/test_wedding_vows_browser.mjs
 
+      - name: Test promise ring readiness, safety, schema and anchors
+        run: node --test scripts/test_promise_ring_article.mjs
+
       - name: Run static SEO audit
         run: python scripts/seo_audit.py
 

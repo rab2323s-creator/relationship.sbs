@@ -3,6 +3,27 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "promise-ring-meaning",
+  title: "What Is a Promise Ring? Meaning, Which Finger to Wear It On & When to Give One",
+  excerpt: "What is a promise ring? Learn what it means, which finger to wear it on, how it differs from an engagement ring, and take the free readiness check.",
+  date: "2026-11-24",
+  readingMinutes: 23,
+  tags: [
+    "Promise Ring Meaning",
+    "What Is a Promise Ring",
+    "Promise Ring Finger",
+    "Promise Ring for Girlfriend",
+    "Promise Ring vs Engagement Ring",
+    "When to Give a Promise Ring",
+    "Promise Ring Rules",
+    "Romantic Commitment"
+  ],
+  category: "Love & Relationships",
+  cover: "/assets/images/blog/promise-ring-meaning/the-ring-on-the-kitchen-table.svg",
+  featured: true
+},
+
+{
   slug: "how-to-write-wedding-vows",
   title: "How to Write Wedding Vows: Short Templates, Examples & a Personal Worksheet",
   excerpt: "Write heartfelt wedding vows with an original fill-in template, short and non-religious examples, second-marriage promises, a printable-style worksheet and a free private 60/90/120-second vow writer.",
