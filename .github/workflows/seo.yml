@@ -56,6 +56,21 @@ jobs:
       - name: Real Chromium narrow-screen and desktop checks
         run: node scripts/test_wedding_vows_browser.mjs
 
+  best-friend-focused:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout friendship challenge
+        uses: actions/checkout@v5
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      - name: Validate challenge links, score, questions and schema
+        run: node --test scripts/test_best_friend_quiz.mjs
+      - name: Real Chromium mobile and desktop challenge and result checks
+        run: node scripts/test_best_friend_browser.mjs
+
   audit:
     runs-on: ubuntu-latest
     steps:

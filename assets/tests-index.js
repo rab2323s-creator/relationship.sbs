@@ -1,6 +1,16 @@
 /* tests-index.js — lightweight home index */
 window.TEST_INDEX = [
   {
+    "id": "best_friend_quiz",
+    "slug": "best-friend-quiz",
+    "title": "Best Friend Quiz: How Well Do Your Friends Know You?",
+    "blurb": "Create your free 20-question BFF friendship challenge. Share a link or play on one phone, reveal exact matches and five topic percentages, then optionally send a result link back.",
+    "time": "3–5 min each",
+    "guide": "/blog/how-to-make-friends-as-an-adult/",
+    "intent": "quiz"
+  },
+
+  {
     "id": "elope_wedding_couple_decision",
     "slug": "should-we-elope-or-have-a-wedding",
     "title": "Should We Elope or Have a Wedding? Free Couples Decision Quiz",
