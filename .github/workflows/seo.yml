@@ -194,6 +194,9 @@ jobs:
       - name: Test twin flame article, reflection safety and schema
         run: node --test scripts/test_twin_flame_article.mjs
 
+      - name: Test birthday wishes, message generator and article SEO
+        run: node --test scripts/test_birthday_wishes_article.mjs
+
       - name: Run static SEO audit
         run: python scripts/seo_audit.py
 

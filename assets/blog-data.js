@@ -3,6 +3,29 @@
 
 window.BLOG_POSTS = [
 {
+  slug: "birthday-wishes-for-boyfriend",
+  title: "150 Birthday Wishes for Your Boyfriend: Romantic, Heartfelt, Funny & Long-Distance Messages",
+  excerpt: "Find 150 birthday wishes for your boyfriend: heart-touching, romantic, funny, short and long-distance messages. Personalize and copy yours for free.",
+  date: "2026-11-25",
+  readingMinutes: 34,
+  tags: [
+    "Birthday Wishes for Boyfriend",
+    "Romantic Birthday Wishes for Boyfriend",
+    "Heart Touching Birthday Wishes for Boyfriend",
+    "Happy Birthday My Love",
+    "Birthday Message for Boyfriend",
+    "Long Distance Birthday Wishes for Boyfriend",
+    "Funny Birthday Wishes for Boyfriend",
+    "Birthday Paragraph for Boyfriend",
+    "Emotional Birthday Wishes for Boyfriend",
+    "Birthday Captions for Boyfriend"
+  ],
+  category: "Love & Relationships",
+  cover: "/assets/images/blog/birthday-wishes-for-boyfriend/the-letter-beside-the-cake.svg",
+  featured: true
+},
+
+{
   slug: "twin-flame-meaning",
   title: "What Is a Twin Flame? Meaning, 12 Common Signs, Stages & Twin Flame vs. Soulmate",
   excerpt: "What is a twin flame? Discover 12 common signs, 8 stages, separation, reunion and twin flame vs. soulmate. Learn what psychology actually says.",
