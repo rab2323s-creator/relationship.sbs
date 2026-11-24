@@ -1,6 +1,16 @@
 /* tests-index.js — lightweight home index */
 window.TEST_INDEX = [
   {
+    "id": "social_preference_quiz",
+    "slug": "introvert-or-extrovert-quiz",
+    "title": "Am I an Introvert, Extrovert or Ambivert? Take the Free Personality Quiz",
+    "blurb": "24 original everyday scenarios, three response shares, six social and dating indicators and an instant introvert, extrovert or ambivert profile. Free and private.",
+    "time": "4–6 min",
+    "guide": "/blog/how-to-make-friends-as-an-adult/",
+    "intent": "quiz"
+  },
+
+  {
     "id": "best_friend_quiz",
     "slug": "best-friend-quiz",
     "title": "Best Friend Quiz: How Well Do Your Friends Know You?",

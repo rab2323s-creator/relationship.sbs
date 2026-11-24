@@ -71,6 +71,21 @@ jobs:
       - name: Real Chromium mobile and desktop challenge and result checks
         run: node scripts/test_best_friend_browser.mjs
 
+  social-preference-focused:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout personality preference quiz
+        uses: actions/checkout@v5
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      - name: Validate scoring, 24 questions, schema and internal links
+        run: node --test scripts/test_social_preference_quiz.mjs
+      - name: Chromium mobile and desktop for all three results
+        run: node scripts/test_social_preference_browser.mjs
+
   audit:
     runs-on: ubuntu-latest
     steps:
